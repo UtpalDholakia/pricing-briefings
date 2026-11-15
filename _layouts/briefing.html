@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{% assign a = site.agents[page.agent] %}
+<article class="briefing">
+  <a class="back" href="{{ '/' | relative_url }}">← All briefings</a>
+  <div class="meta">
+    <span class="badge" style="--c: {{ a.color | default: '#666' }}">{{ a.name | default: page.agent }}</span>
+    <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%A, %B %-d, %Y" }}</time>
+  </div>
+  <h1>{{ page.title }}</h1>
+  {% if page.summary %}<p class="summary">{{ page.summary }}</p>{% endif %}
+  {% if page.tags %}<p class="tags">{% for t in page.tags %}<span>{{ t }}</span>{% endfor %}</p>{% endif %}
+  <div class="body">
+    {{ content }}
+  </div>
+</article>

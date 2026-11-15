@@ -1,0 +1,52 @@
+---
+layout: default
+---
+{% assign items = site.briefings | sort: "date" | reverse %}
+{% assign days = items | group_by_exp: "b", "b.date | date: '%Y-%m-%d'" %}
+
+<div class="filters" role="group" aria-label="Filter by agent">
+  <button class="on" data-agent="all">All</button>
+  {% for pair in site.agents %}
+    {% assign key = pair[0] %}
+    {% assign count = items | where: "agent", key | size %}
+    {% if count > 0 %}
+      <button data-agent="{{ key }}" style="--c: {{ pair[1].color }}">{{ pair[1].name }} <small>{{ count }}</small></button>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% if items.size == 0 %}
+  <p class="empty">No briefings yet. The first ones will appear here once an agent posts.</p>
+{% endif %}
+
+{% for day in days %}
+<section class="day">
+  <h2>{{ day.items[0].date | date: "%A, %B %-d, %Y" }}</h2>
+  <div class="cards">
+    {% for b in day.items %}
+      {% assign a = site.agents[b.agent] %}
+      <a class="card" href="{{ b.url | relative_url }}" data-agent="{{ b.agent }}" style="--c: {{ a.color | default: '#666' }}">
+        <span class="badge">{{ a.name | default: b.agent }}</span>
+        <h3>{{ b.title }}</h3>
+        {% if b.summary %}<p>{{ b.summary }}</p>{% endif %}
+      </a>
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}
+
+<script>
+  (function () {
+    var buttons = document.querySelectorAll('.filters button');
+    function apply(agent) {
+      buttons.forEach(function (b) { b.classList.toggle('on', b.dataset.agent === agent); });
+      document.querySelectorAll('.card').forEach(function (c) {
+        c.hidden = agent !== 'all' && c.dataset.agent !== agent;
+      });
+      document.querySelectorAll('.day').forEach(function (d) {
+        d.hidden = !d.querySelector('.card:not([hidden])');
+      });
+    }
+    buttons.forEach(function (b) { b.addEventListener('click', function () { apply(b.dataset.agent); }); });
+  })();
+</script>
