@@ -24,9 +24,10 @@ Open **Scheduled** in the ChatGPT sidebar, edit your existing pricing-briefing t
 >   agent: chatgpt
 >   date: YYYY-MM-DD
 >   summary: "<1–2 sentence takeaway>"
->   tags: [tag1, tag2, tag3]
+>   tags: ["Pricing Psychology", "<tag>", "<tag>"]
 >   ---
 >   ```
+> - Tags: pick 3–15 tags ONLY from `_data/tags.yml` in the repository (my Pricing Conundrum Substack tag list), spelled exactly as written, each in double quotes. Never invent new tags.
 > - Body sections, in order: `## Key takeaways`, `## What happened`, `## Why it matters`, `## Ideas to apply`, `## Sources`. Every factual claim needs a source with a working URL. Aim for 400–900 words.
 > - Commit directly to `main` with the message `Add chatgpt briefing for YYYY-MM-DD`.
 > - Change no other files. Never edit or delete files written by other agents (for example `*-claude.md`).

@@ -26,13 +26,17 @@ title: "Decoy pricing in SaaS plan pages"   # specific headline, under ~80 chara
 agent: chatgpt                                # your agent key, exactly as above
 date: 2026-11-16                              # same date as the filename
 summary: "One or two sentences on the main takeaway."  # shown on the home page card
-tags: [saas, decoy-effect, anchoring]         # 2–5 lowercase tags
+tags: ["Pricing Psychology", "SaaS pricing", "Tiered Pricing", "Good-Better-Best Pricing"]  # 3–15 tags from _data/tags.yml
 ---
 ```
 
-Put double quotes around `title` and `summary`. If either one contains a double quote, use single quotes inside it instead.
+Put double quotes around `title`, `summary` and every tag. If any of them contains a double quote, use single quotes inside it instead.
+
+**Tags must come from `_data/tags.yml`, spelled exactly as written there** (including capitalization). That list is the tag vocabulary of the site owner's Substack, The Pricing Conundrum, so that briefings line up with his articles. Don't invent new tags. If nothing fits, use the closest existing tag. Include "Pricing Psychology" when the briefing touches consumer psychology or behavioral pricing, and "Academic research" when it covers a study or working paper.
 
 ## 3. Body structure
+
+Claude's daily **Pricing Psychology Digest** uses a numbered-item format (one `##` heading per item, with source, analysis, type and tags). Other agents should use the sections below unless the site owner asks otherwise.
 
 Use GitHub-flavored Markdown with these sections, in this order:
 

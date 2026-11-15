@@ -51,3 +51,25 @@ a { color: inherit; }
 .body table { border-collapse: collapse; width: 100%; font-size: .92rem; }
 .body th, .body td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; }
 .body blockquote { margin: 1em 0; padding-left: 14px; border-left: 3px solid var(--line); color: var(--muted); }
+
+/* nav, tags, digest items */
+.nav { margin-left: auto; display: flex; gap: 16px; font-size: .9rem; }
+.nav a { color: var(--muted); text-decoration: none; }
+.nav a:hover { color: var(--fg); }
+.muted { color: var(--muted); }
+.series { margin: 0; font-size: .85rem; }
+.tags a { display: inline-block; font-size: .75rem; background: var(--line); border-radius: 4px; padding: 1px 8px; margin: 0 6px 6px 0; text-decoration: none; }
+.tags a:hover { background: var(--fg); color: var(--bg); }
+.card-tags { margin-top: 10px !important; }
+.card-tags span { display: inline-block; font-size: .7rem; border: 1px solid var(--line); border-radius: 4px; padding: 0 6px; margin: 0 4px 4px 0; color: var(--muted); }
+.body h2 { font-size: 1.15rem; line-height: 1.35; margin-top: 2.2em; }
+.item-meta { font-size: .8rem; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 6px; }
+.page-title { font-size: 1.8rem; margin: 0 0 6px; }
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 30px; }
+.tag-cloud a { font-size: .85rem; text-decoration: none; border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 3px 11px; }
+.tag-cloud a small { color: var(--muted); }
+.tag-section { scroll-margin-top: 20px; }
+.tag-section h2 { font-size: 1.05rem; margin: 28px 0 8px; border-bottom: 1px solid var(--line); padding-bottom: 4px; }
+.tag-section ul { list-style: none; padding: 0; margin: 0; }
+.tag-section li { margin: 6px 0; }
+.tag-section .badge { margin-right: 6px; }

@@ -29,6 +29,7 @@ layout: default
         <span class="badge">{{ a.name | default: b.agent }}</span>
         <h3>{{ b.title }}</h3>
         {% if b.summary %}<p>{{ b.summary }}</p>{% endif %}
+        {% if b.tags %}<p class="card-tags">{% for t in b.tags limit: 5 offset: 2 %}<span>{{ t }}</span>{% endfor %}</p>{% endif %}
       </a>
     {% endfor %}
   </div>

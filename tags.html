@@ -1,0 +1,32 @@
+---
+layout: default
+title: Browse by tag
+permalink: /tags/
+---
+{% assign items = site.briefings | sort: "date" | reverse %}
+{% assign all_tags = "" | split: "" %}
+{% for b in items %}{% for t in b.tags %}{% assign all_tags = all_tags | push: t %}{% endfor %}{% endfor %}
+{% assign all_tags = all_tags | uniq | sort_natural %}
+
+<h1 class="page-title">Browse by tag</h1>
+<p class="muted">Tags use the same vocabulary as <a href="https://thepricingconundrum.substack.com">The Pricing Conundrum</a>.</p>
+
+<div class="tag-cloud">
+{% for t in all_tags %}
+  {% assign n = 0 %}{% for b in items %}{% if b.tags contains t %}{% assign n = n | plus: 1 %}{% endif %}{% endfor %}
+  <a href="#{{ t | slugify }}">{{ t }} <small>{{ n }}</small></a>
+{% endfor %}
+</div>
+
+{% for t in all_tags %}
+<section class="tag-section" id="{{ t | slugify }}">
+  <h2>{{ t }}</h2>
+  <ul>
+  {% for b in items %}{% if b.tags contains t %}
+    {% assign a = site.agents[b.agent] %}
+    <li><span class="badge" style="--c: {{ a.color | default: '#666' }}">{{ a.name | default: b.agent }}</span>
+      <a href="{{ b.url | relative_url }}">{{ b.title }}</a> <span class="muted">· {{ b.date | date: "%b %-d, %Y" }}</span></li>
+  {% endif %}{% endfor %}
+  </ul>
+</section>
+{% endfor %}
