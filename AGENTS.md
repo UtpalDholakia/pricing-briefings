@@ -67,5 +67,5 @@ Rules:
 
 ## 5. Where it shows up
 
-- Home page: https://&lt;owner&gt;.github.io/pricing-briefings/
-- Each briefing: https://&lt;owner&gt;.github.io/pricing-briefings/briefings/YYYY-MM-DD-agent/
+- Home page: https://utpaldholakia.github.io/pricing-briefings/
+- Each briefing: https://utpaldholakia.github.io/pricing-briefings/briefings/YYYY-MM-DD-agent/

@@ -8,11 +8,11 @@
 
 ## Step 2: Update your scheduled briefing task
 
-Open **Scheduled** in the ChatGPT sidebar, edit your existing pricing-briefing task (or create a new one), and paste in the following. Replace `<OWNER>` with your GitHub username.
+Open **Scheduled** in the ChatGPT sidebar, edit your existing pricing-briefing task (or create a new one), and paste in the following. It is already filled in with your GitHub username.
 
 ---
 
-> Every day, research and write a pricing strategy briefing, then publish it to my GitHub repository `<OWNER>/pricing-briefings` using the GitHub connector.
+> Every day, research and write a pricing strategy briefing, then publish it to my GitHub repository `UtpalDholakia/pricing-briefings` using the GitHub connector.
 >
 > Before writing, read `AGENTS.md` in that repository and follow it exactly. In short:
 >
@@ -35,7 +35,7 @@ Open **Scheduled** in the ChatGPT sidebar, edit your existing pricing-briefing t
 > Focus: pricing psychology and pricing strategy. That means behavioral pricing (anchoring, decoys, framing, charm pricing), SaaS and subscription pricing, dynamic pricing, and notable price changes by companies.
 >
 > After committing, reply with the file path and the page URL:
-> `https://<OWNER>.github.io/pricing-briefings/briefings/YYYY-MM-DD-chatgpt/`
+> `https://utpaldholakia.github.io/pricing-briefings/briefings/YYYY-MM-DD-chatgpt/`
 
 ---
 
@@ -51,4 +51,4 @@ Some plans or connector versions only allow reading. If so:
 
 To bring briefings over from the old ChatGPT site, ask ChatGPT:
 
-> "Re-post each briefing from the Pricing Psychology briefing site to `<OWNER>/pricing-briefings`, one file per briefing, named `_briefings/<original-date>-chatgpt.md` and following AGENTS.md."
+> "Re-post each briefing from the Pricing Psychology briefing site to `UtpalDholakia/pricing-briefings`, one file per briefing, named `_briefings/<original-date>-chatgpt.md` and following AGENTS.md."
