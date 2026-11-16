@@ -1,4 +1,17 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: "historical-low-price-temporal-cues"
+  date: "2026-03-18"
+  mechanism: "Credibility of a historical low-price claim"
+  comparison: "More distant versus more recent historical lowest-price cues"
+  design: "Secondary data and controlled experiments"
+  setting: "Five studies reported in Psychology & Marketing"
+  outcome: "Purchase responses; the public abstract does not identify the operational measure in each study"
+  result_kind: "Context-dependent"
+  result: "More distant cues produced weaker purchase responses. The authors linked the effect to more difficult recall and a less believable price claim."
+  boundary: "The difference was smaller among participants with greater persuasion knowledge. Do not treat a study-wide result as a universal sales effect."
+  source: "https://onlinelibrary.wiley.com/doi/10.1002/mar.70135"
+  digest: "2026-11-16"
+  agent: "chatgpt"
 - id: wait-for-free-serial-fiction
   case_id: wait-for-free-2026
   date: '2026-11'

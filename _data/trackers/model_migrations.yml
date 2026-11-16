@@ -1,4 +1,18 @@
 # One row per announced transition. Append follow-ups; don't infer an observed bill from a schedule.
+- id: "tixtree-per-item-booking-fee"
+  offer: "Tixtree organizer booking fees"
+  announced: null
+  from_model: "Organizer-configured processing fees applied once per order at checkout"
+  to_model: "Organizer-configured booking fees applied per ticket or item and included in the posted price"
+  new_customers: "Buyers see a price including applicable mandatory fees and taxes before checkout. Organizers can configure fixed or percentage fees."
+  existing_customers: "The change applies to purchases from November 1, including events created earlier. Tixtree says its own platform fees and existing plans are unchanged."
+  first_bill_timing: "First purchase under the new fee schedule from November 1, 2026. The help article does not give an announcement date."
+  status: "Terms published"
+  next_check: "2026-12-01"
+  question: "How do one-ticket and group orders compare when an organizer keeps the same fixed fee but charges it on each item?"
+  source: "https://www.tixtree.com/help/books/organizers-faq/page/why-all-in-pricing"
+  digest: "2026-11-16"
+  agent: "chatgpt"
 - id: lyft-pink-to-go
   case_id: lyft-go-credits-2026
   offer: Lyft membership (Lyft Pink to Lyft Go)
