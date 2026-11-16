@@ -1,0 +1,74 @@
+{% assign long = site.data.trackers %}
+<section class="tracker longitudinal" id="price-panel">
+  <h2>What customers actually pay</h2>
+  <p class="muted">Repeat checks for fixed buyer profiles. Published terms and calculated totals are labeled separately from checkout quotes or verified bills. <a href="{{ '/tracker-methods/' | relative_url }}#price-panel">How to read and update the panel</a>.</p>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="Price panel">
+    <table>
+      <thead><tr><th scope="col">Offer &amp; buyer profile</th><th scope="col">Latest terms</th><th scope="col">Comparable amount</th><th scope="col">History &amp; next check</th></tr></thead>
+      <tbody>{% for p in long.price_panel %}
+        {% assign history = p.observations | sort: 'date' | reverse %}
+        {% assign latest = history | first %}
+        {% assign previous = history[1] %}
+        <tr id="panel-{{ p.id | escape }}">
+          <th scope="row">{{ p.offer | escape }}<br><span class="muted">{{ p.market | escape }} · {{ p.profile | escape }}</span></th>
+          <td>{% if latest %}<time datetime="{{ latest.date | escape }}">{{ latest.date | escape }}</time> · <span class="chip">{{ latest.basis | escape }}</span><br>
+            {% if latest.posted %}<strong>Posted:</strong> {{ latest.posted | escape }}<br>{% endif %}
+            {% if latest.first_payment %}<strong>First payment:</strong> {{ latest.first_payment | escape }}<br>{% endif %}
+            {% if latest.renewal %}<strong>Renewal:</strong> {{ latest.renewal | escape }}<br>{% endif %}
+            {% if latest.mandatory_fees %}<strong>Fees:</strong> {{ latest.mandatory_fees | escape }}<br>{% endif %}
+            {% if latest.included %}{{ latest.included | escape }}<br>{% endif %}
+            <a class="src" href="{{ latest.source | escape }}">source</a>{% if latest.primary_terms %} · <a class="src" href="{{ latest.primary_terms | escape }}">provider terms</a>{% endif %}
+            {% else %}No observation yet{% endif %}</td>
+          <td>{% if latest.amount != nil %}<strong>{{ p.currency | escape }} {{ latest.amount }}</strong> {{ p.unit | escape }}{% else %}Not measured{% endif %}
+            {% if latest.change == 'comparable' and previous.amount != nil and latest.amount != nil %}
+              <br><span class="muted">Previous: {{ p.currency | escape }} {{ previous.amount }} on {{ previous.date | escape }}{% if latest.amount == previous.amount %} (unchanged){% endif %}.</span>
+            {% elsif latest.change == 'break' %}<br><span class="chip">Comparison break</span>{% endif %}
+            {% if latest.note %}<br><span class="muted">{{ latest.note | escape }}</span>{% endif %}</td>
+          <td>{% if p.next_check %}<strong>Next check:</strong> <time datetime="{{ p.next_check | escape }}">{{ p.next_check | escape }}</time>{% endif %}
+            {% if history.size > 1 %}<details><summary>{{ history.size | minus: 1 }} earlier {% if history.size == 2 %}check{% else %}checks{% endif %}</summary>
+            <ul>{% for o in history offset:1 %}<li><time datetime="{{ o.date | escape }}">{{ o.date | escape }}</time> · {{ o.basis | escape }} · {% if o.amount != nil %}{{ p.currency | escape }} {{ o.amount }} {{ p.unit | escape }}{% else %}Not measured{% endif %}{% if o.posted %}<br>Posted: {{ o.posted | escape }}{% endif %}{% if o.first_payment %}<br>First payment: {{ o.first_payment | escape }}{% endif %}{% if o.renewal %}<br>Renewal: {{ o.renewal | escape }}{% endif %}{% if o.mandatory_fees %}<br>Fees: {{ o.mandatory_fees | escape }}{% endif %}{% if o.included %}<br>{{ o.included | escape }}{% endif %}{% if o.note %}<br>{{ o.note | escape }}{% endif %} · <a class="src" href="{{ o.source | escape }}">source</a>{% if o.primary_terms %} · <a class="src" href="{{ o.primary_terms | escape }}">provider terms</a>{% endif %}</li>{% endfor %}</ul></details>{% endif %}</td>
+        </tr>
+      {% endfor %}</tbody>
+    </table>
+  </div>
+</section>
+
+<section class="tracker longitudinal" id="pricing-evidence">
+  <h2>Pricing evidence and boundary conditions</h2>
+  <p class="muted">One row per tested comparison, including null results. Purchase intentions, observed behavior and model predictions are identified separately. <a href="{{ '/tracker-methods/' | relative_url }}#evidence">Evidence rules</a>.</p>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="Pricing evidence">
+    <table>
+      <thead><tr><th scope="col">Mechanism &amp; comparison</th><th scope="col">Design &amp; outcome</th><th scope="col">Result</th><th scope="col">Where it may not hold</th></tr></thead>
+      <tbody>{% assign studies = long.pricing_evidence | sort: 'date' | reverse %}{% for r in studies %}
+        <tr id="evidence-{{ r.id | escape }}">
+          <th scope="row">{{ r.mechanism | escape }}<br><span class="muted">{{ r.comparison | escape }}</span></th>
+          <td><span class="chip">{{ r.design | escape }}</span><br>{{ r.setting | escape }}<br><strong>Measured:</strong> {{ r.outcome | escape }}</td>
+          <td><span class="chip">{{ r.result_kind | escape }}</span> {{ r.result | escape }}</td>
+          <td>{{ r.boundary | escape }}{% if r.related_source %}<br><a class="src" href="{{ r.related_source | escape }}">related evidence</a>{% endif %}<br><time datetime="{{ r.date | escape }}">{{ r.date | escape }}</time> · <a class="src" href="{{ r.source | escape }}">source</a>{% if r.digest %} · <a class="src" href="{{ '/briefings/' | relative_url }}{{ r.digest }}-{{ r.agent | default: 'claude' | escape }}/">briefing</a>{% endif %}</td>
+        </tr>
+      {% endfor %}</tbody>
+    </table>
+  </div>
+</section>
+
+<section class="tracker longitudinal" id="model-migrations">
+  <h2>Pricing model migrations</h2>
+  <p class="muted">Transitions followed from announcement through the first affected bill or renewal. A published transition is not a verified billing outcome. <a href="{{ '/tracker-methods/' | relative_url }}#migrations">Migration rules</a>.</p>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="Pricing model migrations">
+    <table>
+      <thead><tr><th scope="col">Offer &amp; model change</th><th scope="col">New vs. existing customers</th><th scope="col">First affected bill</th><th scope="col">Follow-up &amp; evidence</th></tr></thead>
+      <tbody>{% assign moves = long.model_migrations | sort: 'announced' | reverse %}{% for m in moves %}
+        <tr id="migration-{{ m.id | escape }}">
+          <th scope="row">{{ m.offer | escape }}<br><span class="muted">{{ m.from_model | escape }} → {{ m.to_model | escape }}</span></th>
+          <td><strong>New:</strong> {{ m.new_customers | escape }}<br><strong>Existing:</strong> {{ m.existing_customers | escape }}</td>
+          <td>{{ m.first_bill_timing | escape }}<br><span class="chip">{{ m.status | escape }}</span><br>{{ m.observed_outcome | default: 'No comparable bill documented.' | escape }}</td>
+          <td>{% if m.next_check %}<strong>Next check:</strong> <time datetime="{{ m.next_check | escape }}">{{ m.next_check | escape }}</time><br>{% endif %}{{ m.question | escape }}<br>
+            <a class="src" href="{{ m.source | escape }}">announcement or terms</a>{% if m.outcome_source %} · <a class="src" href="{{ m.outcome_source | escape }}">outcome source</a>{% endif %}
+            {% if m.digest %} · <a class="src" href="{{ '/briefings/' | relative_url }}{{ m.digest }}-{{ m.agent | default: 'claude' | escape }}/">briefing</a>{% endif %}
+            {% for pid in m.panel_ids %} · <a class="src" href="#panel-{{ pid | escape }}">price panel: {{ pid | escape }}</a>{% endfor %}
+            {% if m.updates.size > 0 %}<details><summary>{{ m.updates.size }} follow-up {% if m.updates.size == 1 %}note{% else %}notes{% endif %}</summary><ul>{% assign updates = m.updates | sort: 'date' | reverse %}{% for u in updates %}<li><time datetime="{{ u.date | escape }}">{{ u.date | escape }}</time> {{ u.note | escape }} · <a class="src" href="{{ u.source | escape }}">source</a></li>{% endfor %}</ul></details>{% endif %}</td>
+        </tr>
+      {% endfor %}</tbody>
+    </table>
+  </div>
+</section>

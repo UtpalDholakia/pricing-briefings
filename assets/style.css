@@ -146,3 +146,19 @@ h1, h2, h3 { font-family: var(--serif-head); font-weight: 600; color: var(--fg);
 .story li { margin: 6px 0; }
 .questions { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 16px 20px 16px 44px; margin: 0; }
 .questions li { margin: 10px 0; line-height: 1.45; }
+
+/* Longitudinal tracker rows use accessible row headers without sticky header styling. */
+.longitudinal tbody th {
+  position: static;
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+  text-transform: none;
+  letter-spacing: normal;
+  min-width: 9rem;
+}
+.longitudinal tr[id] { scroll-margin-top: 230px; }
+.longitudinal td details { margin-top: .35rem; }
+.longitudinal td summary { cursor: pointer; color: var(--muted); }
+.longitudinal td ul { margin: .35rem 0 0; padding-left: 1rem; }
+.longitudinal td li + li { margin-top: .4rem; }

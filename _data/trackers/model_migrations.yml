@@ -1,0 +1,78 @@
+# One row per announced transition. Append follow-ups; don't infer an observed bill from a schedule.
+- id: hubspot-seats-to-credits
+  offer: HubSpot seats and credits
+  announced: '2026-10-15'
+  from_model: Committed spend allocated to seats and credits under the contract
+  to_model: Eligible spare seats convertible to credits during the term
+  new_customers: No standard new-customer bill or conversion rate established in this record.
+  existing_customers: Eligible customers can reallocate qualifying seats. This is not a reduction in the contracted commitment.
+  first_bill_timing: The allocation can change before renewal. The impact on the next invoice depends on the contract and credit usage.
+  status: Terms published
+  next_check: '2026-12-15'
+  question: Does conversion replace spending that would have occurred anyway, or add net new usage?
+  source: https://www.hubspot.com/company-news/flexible-pricing
+  digest: '2026-10-25'
+  agent: chatgpt
+- id: restaurant-com-membership
+  offer: Restaurant.com
+  announced: '2026-10-13'
+  from_model: Individual discounted dining certificates
+  to_model: Monthly or annual membership for access to offers
+  new_customers: USD 14 monthly or USD 99 annually on the announced terms. Restrictions vary by restaurant.
+  existing_customers: Previously purchased certificates remain valid; points can fund membership.
+  first_bill_timing: The announcement described the Oct 27 transition. Watch first cash renewal separately from enrollment funded with points.
+  status: Terms published
+  next_check: '2026-12-01'
+  question: How many members pay cash again after trying the program with existing points?
+  source: https://www.globenewswire.com/news-release/2026/10/13/3379700/0/en/giftify-announces-conversion-of-restaurant-com-to-membership-based-model-expanding-recurring-revenue-opportunity.html
+  digest: '2026-10-21'
+  agent: chatgpt
+- id: microsoft-family-storage-pool
+  offer: Microsoft 365 Family and Premium
+  announced: '2026-10-14'
+  from_model: Up to six separate 1 TB storage allowances
+  to_model: One 2 TB storage pool shared by the household
+  new_customers: Shared storage applies to new subscriptions from Oct 8, 2026.
+  existing_customers: Earlier subscriptions generally move at a qualifying renewal. Upgrading can bring the change forward.
+  first_bill_timing: Usually at the first renewal on or after May 2, 2027 for the earlier cohort. This is a benefit change, not an observed fee increase.
+  status: Existing-customer transition pending
+  next_check: '2027-05-15'
+  question: What does it cost, if anything, to restore the same usable storage for a household with several heavy users?
+  source: https://support.microsoft.com/en-us/onedrive/changes-to-microsoft-365-storage
+  digest: '2026-10-26'
+  agent: chatgpt
+- id: sharetribe-usage-credits
+  offer: Sharetribe marketplace plans
+  announced: '2026-10'
+  from_model: Lite, Pro or Extend plan plus transaction-volume charges
+  to_model: One Live operating plan for new customers plus infrastructure usage credits
+  new_customers: New live marketplaces choose the Live plan. The included monthly credits and usage above the allowance are separate from the base rate.
+  existing_customers: Existing Lite customers can keep the base plan. The transition to the new usage meter is separate and also affects existing customers.
+  first_bill_timing: The transition guide flags December for usage charges above the included credits. Announcement date is recorded at month precision.
+  status: Terms published
+  next_check: '2026-12-15'
+  question: How does the first usage bill differ for a marketplace with many conversations but few completed transactions?
+  source: https://www.sharetribe.com/help/en/articles/17106763-legacy-plans-and-pricing-transition-timeline
+  updates:
+    - date: '2026-10'
+      note: The October changelog separates base-plan grandfathering from the move to API and infrastructure usage credits. Date is month precision.
+      source: https://www.sharetribe.com/pricing/pricing-changelog/
+  digest: '2026-10-17'
+  agent: chatgpt
+- id: ttc-fare-cap
+  offer: Toronto Transit Commission monthly fare
+  announced: '2026-08-13'
+  from_model: Pay per trip or buy an eligible monthly pass upfront
+  to_model: Pay per trip with an automatic monthly cap on the same payment method
+  new_customers: Eligible customers using the same card or device reach the 2026 cap after 47 paid trips.
+  existing_customers: Selected monthly passes ended. Adult 12-month and post-secondary pass arrangements are distinct and not assumed to migrate.
+  first_bill_timing: The cap applied from Sep 1, 2026. No subscription renewal is required to receive it.
+  status: Provider-reported outcome
+  observed_outcome: TTC reported 595,000 no-charge trips after riders reached the cap in September. That count does not establish additional demand caused by the change.
+  outcome_source: https://www.ttc.ca/news/2026/October/TTC-customers-save-nearly-%242-million-in-first-month-of-fare-capping-program
+  next_check: '2026-12-15'
+  question: Watch the cap at New Year and compare frequent riders who use one payment method against the fixed panel profiles.
+  panel_ids: [ttc-30-trips, ttc-50-trips]
+  source: https://www.ttc.ca/news/2026/August/TTC-monthly-fare-capping-launches-September-1
+  digest: '2026-11-08'
+  agent: chatgpt

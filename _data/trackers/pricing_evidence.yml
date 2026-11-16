@@ -1,0 +1,55 @@
+# One row per comparison. Keep null results and identify the outcome actually measured.
+- id: cash-card-spending-replication
+  date: '2026-08-14'
+  mechanism: Pain of paying
+  comparison: Cash versus card payment
+  design: Preregistered replication program
+  setting: 13 replications, 32,371 participants across multiple paradigms
+  outcome: Payment pain, amount spent, willingness to pay
+  result_kind: Outcome-specific
+  result: Cash felt more painful than card. The direct payment-method effect was more reliable and larger for amount spent than for willingness to pay.
+  boundary: Relative cash and card use moderated the results. Do not apply the results as a universal sales uplift from card acceptance.
+  source: https://doi.org/10.1093/jcr/ucag027
+  related_source: https://gsbpreserve.stanford.edu/view/69501/a-mega-replication-of-the-effect-of-cash-versus-card-payment-on-pain-of-paying-magnitude-behavioral-outcomes-and-moderators
+  digest: '2026-10-31'
+  agent: chatgpt
+- id: divisibility-replication
+  date: '2026-06'
+  mechanism: Unit-price divisibility
+  comparison: Easily divisible multipack price versus a lower but less easily divisible price
+  design: Preregistered replication
+  setting: Four larger replications of three studies from the original paper
+  outcome: Consumer choice in the repeated study tasks
+  result_kind: Failed replication
+  result: None of the four replications reproduced the original result.
+  boundary: Challenges this multipack effect, not the broader idea that easier arithmetic can affect choice. Date is the June 2026 issue month, not the day the study ran.
+  source: https://experts.umn.edu/en/publications/brief-commentary-is-4-for-16-better-than-4-for-1530-testing-the-r/
+  digest: '2026-10-18'
+  agent: chatgpt
+- id: threshold-versus-cap
+  date: '2025-12-01'
+  mechanism: Fairness of discount restrictions
+  comparison: Minimum-spend threshold versus a cap on savings
+  design: Preregistered experiments, including field
+  setting: Seven studies comparing promotion designs
+  outcome: Offer preference, purchase intentions and field conversion
+  result_kind: Reversal by context
+  result: Shoppers tended to favor the threshold at low trigger amounts. Preference reversed at higher trigger amounts.
+  boundary: Equal maximum savings is not the same as equal perceived generosity. The trigger amount and outcome should be recorded when comparing studies.
+  source: https://ink.library.smu.edu.sg/lkcsb_research/7883/
+  digest: '2026-10-18'
+  agent: chatgpt
+- id: token-effort-promo-code
+  date: '2025-04-17'
+  mechanism: Token redemption effort
+  comparison: Enter one code for a 15% discount versus get the same discount automatically
+  design: Randomized field experiment
+  setting: Zoka Coffee online promotion, one field test in a larger study program
+  outcome: Observed purchase conversion
+  result_kind: Positive in this setting
+  result: The easy code condition converted more often than the automatic discount condition.
+  boundary: Other studies in the paper found that the advantage disappeared when redemption became effortful. A burdensome activation flow is a different treatment.
+  source: https://journals.sagepub.com/doi/10.1177/00222437251338050
+  related_source: https://foster.uw.edu/news/research-nidhi-agrawal-token-effort-effect/
+  digest: '2026-11-02'
+  agent: chatgpt

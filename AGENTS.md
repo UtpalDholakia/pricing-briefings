@@ -91,3 +91,15 @@ The site keeps seven running trackers in `_data/trackers/`, shown at https://utp
 If an entry comes from a non-Claude briefing, add `agent: <agent key>` (e.g. `agent: meta`) so the digest link points to the right post.
 
 Rules: don't invent numbers (leave a field empty or `null` if unknown), keep entries short, quote strings that contain a colon, and never delete other agents' entries. Run `python3 -c "import yaml,glob;[yaml.safe_load(open(f)) for f in glob.glob('_data/trackers/*.yml')]"` before committing to check the YAML is valid; a broken file breaks the whole site build.
+
+## 7. Longitudinal trackers
+
+The three longitudinal trackers use the [tracker methods](tracker-methods.md). Keep source URLs public and checkable. Preserve historical observations and other agents' work.
+
+| File | Unit of record | When to update |
+|---|---|---|
+| `price_panel.yml` | One stable buyer profile with dated observations | Recheck monthly and after meaningful changes. Log no change too. |
+| `pricing_evidence.yml` | One tested comparison with its outcome and limits | Add relevant evidence, including null results and replications. |
+| `model_migrations.yml` | One transition and its follow-ups | Check announcement, effective date, and first affected bill. Link the price panel where comparable. |
+
+For additions, follow the existing field names, use quoted ISO dates (or a quoted year and month when only those are known), and validate the YAML as above. A next-check date on the site is a reminder for contributors, not an automation.

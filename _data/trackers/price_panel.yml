@@ -1,0 +1,133 @@
+# Fixed profiles. Add the newest observation under the existing ID, including unchanged checks.
+- id: chewy-food
+  offer: Chewy+
+  market: United States
+  profile: Eligible new member, USD 600 per year on eligible food; no other spend
+  currency: USD
+  unit: annual fee before tax
+  next_check: '2026-12-15'
+  observations:
+    - date: '2026-11-15'
+      basis: Posted terms
+      change: baseline
+      posted: USD 59 per year
+      first_payment: USD 0 during the offered 30-day trial, then USD 59 before any applicable tax
+      renewal: Annual; future price not guaranteed
+      included: 5% rewards on eligible food under the published schedule
+      amount: 59
+      note: USD 30 in modeled rewards at the fixed spend. This is separate from the annual fee and assumes all purchases qualify and rewards are used at face value.
+      source: https://www.subscriptioninsider.com/blog/chewy-cuts-chewy-fee-refocuses-rewards-on-pet-essentials
+      primary_terms: https://www.chewy.com/app/membership/sign-up
+- id: chewy-other
+  offer: Chewy+
+  market: United States
+  profile: Eligible new member, USD 600 per year on products eligible for the 2% rate; no other spend
+  currency: USD
+  unit: annual fee before tax
+  next_check: '2026-12-15'
+  observations:
+    - date: '2026-11-15'
+      basis: Posted terms
+      change: baseline
+      posted: USD 59 per year
+      first_payment: USD 0 during the offered 30-day trial, then USD 59 before any applicable tax
+      renewal: Annual; future price not guaranteed
+      included: 2% rewards on other eligible purchases under the published schedule
+      amount: 59
+      note: USD 12 in modeled rewards at the fixed spend. This is separate from the annual fee and assumes all purchases qualify and rewards are used at face value.
+      source: https://www.subscriptioninsider.com/blog/chewy-cuts-chewy-fee-refocuses-rewards-on-pet-essentials
+      primary_terms: https://www.chewy.com/app/membership/sign-up
+- id: jetblue-early-december
+  offer: JetBlue first checked bag
+  market: U.S. domestic
+  profile: Main fare, one standard bag each way, Dec 3–6, prepaid at least 24 hours ahead, no bag waiver
+  currency: USD
+  unit: round-trip bag charge only
+  next_check: '2026-12-01'
+  observations:
+    - date: '2026-11-07'
+      basis: Schedule calculation
+      change: comparable
+      posted: USD 55 per direction for affected bookings from Nov 3
+      amount: 110
+      note: Early December became peak. The total covers the selected bag, not the ticket, and is not a checkout quote.
+      source: https://quietlychanged.com/changes/2026-11-07-jetblue-checked-bags-now-50-to-85-each-and-all-of-december-is-peak/
+      primary_terms: https://www.jetblue.com/legal/fees
+    - date: '2026-11-02'
+      basis: Prior schedule, reconstructed
+      change: baseline
+      posted: USD 45 per direction under the superseded schedule
+      amount: 90
+      note: The Nov 7 reconstruction places these dates outside the old peak period. This date marks the last booking day before the change, not an archived checkout quote.
+      source: https://quietlychanged.com/changes/2026-11-07-jetblue-checked-bags-now-50-to-85-each-and-all-of-december-is-peak/
+- id: jetblue-late-december
+  offer: JetBlue first checked bag
+  market: U.S. domestic
+  profile: Main fare, one standard bag each way, Dec 20–23, prepaid at least 24 hours ahead, no bag waiver
+  currency: USD
+  unit: round-trip bag charge only
+  next_check: '2026-12-01'
+  observations:
+    - date: '2026-11-07'
+      basis: Schedule calculation
+      change: comparable
+      posted: USD 55 per direction for affected bookings from Nov 3
+      amount: 110
+      note: This window was already peak. The total covers the selected bag, not the ticket, and is not a checkout quote.
+      source: https://quietlychanged.com/changes/2026-11-07-jetblue-checked-bags-now-50-to-85-each-and-all-of-december-is-peak/
+      primary_terms: https://www.jetblue.com/legal/fees
+    - date: '2026-11-02'
+      basis: Prior schedule, reconstructed
+      change: baseline
+      posted: USD 49 per direction under the superseded schedule
+      amount: 98
+      note: This date marks the last booking day before the change, not an archived checkout quote.
+      source: https://quietlychanged.com/changes/2026-11-07-jetblue-checked-bags-now-50-to-85-each-and-all-of-december-is-peak/
+- id: ttc-30-trips
+  offer: TTC adult pay-as-you-go fare
+  market: Toronto, Canada
+  profile: Adult, same physical PRESTO card, 30 distinct eligible trips in one calendar month
+  currency: CAD
+  unit: per calendar month
+  next_check: '2026-12-15'
+  observations:
+    - date: '2026-11-15'
+      basis: Schedule calculation
+      change: comparable
+      posted: CAD 3.30 per paid trip
+      included: Trips after 47 paid trips in the same month are included at no additional fare
+      amount: 99
+      note: 30 × CAD 3.30. Models a fixed trip pattern, not observed spending. Excludes the initial purchase of a fare card.
+      source: https://www.ttc.ca/riding-the-ttc/Updates/TTC-monthly-fare-capping
+      primary_terms: https://www.ttc.ca/Fares-and-passes
+    - date: '2026-09-04'
+      basis: Schedule calculation
+      change: baseline
+      posted: CAD 3.30 per paid trip
+      amount: 99
+      note: Same trip and card assumptions under the September schedule.
+      source: https://www.ttc.ca/news/2026/September/Back-to-school-on-the-TTC
+- id: ttc-50-trips
+  offer: TTC adult pay-as-you-go fare
+  market: Toronto, Canada
+  profile: Adult, same physical PRESTO card, 50 distinct eligible trips in one calendar month
+  currency: CAD
+  unit: per calendar month
+  next_check: '2026-12-15'
+  observations:
+    - date: '2026-11-15'
+      basis: Schedule calculation
+      change: comparable
+      posted: CAD 3.30 per paid trip
+      included: Trips after 47 paid trips in the same month are included at no additional fare
+      amount: 155.10
+      note: 47 × CAD 3.30, then three no-charge trips. Models a fixed trip pattern, not observed spending. Excludes initial card purchase.
+      source: https://www.ttc.ca/riding-the-ttc/Updates/TTC-monthly-fare-capping
+      primary_terms: https://www.ttc.ca/Fares-and-passes
+    - date: '2026-09-04'
+      basis: Schedule calculation
+      change: baseline
+      posted: CAD 3.30 per paid trip
+      amount: 155.10
+      note: Same trip and card assumptions under the September schedule.
+      source: https://www.ttc.ca/news/2026/September/Back-to-school-on-the-TTC

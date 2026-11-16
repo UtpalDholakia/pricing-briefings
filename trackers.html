@@ -7,7 +7,7 @@ permalink: /trackers/
 {% capture digest_base %}{{ '/briefings/' | relative_url }}{% endcapture %}
 
 <h1 class="page-title">Trackers</h1>
-<p class="muted">Running logs kept from the daily briefings, as raw material for future Pricing Conundrum pieces. Updated each morning.</p>
+<p class="muted">Cases, measurements and research evidence for future Pricing Conundrum pieces. <a href="{{ '/tracker-methods/' | relative_url }}">Tracker methods</a>.</p>
 
 <div class="tracker-toolbar">
   <nav class="tracker-nav">
@@ -18,8 +18,11 @@ permalink: /trackers/
     <a href="#laws">Pricing laws <small>{{ T.laws | size }}</small></a>
     <a href="#hidden">Hidden increases &amp; fees <small>{{ T.hidden_increases | size }}</small></a>
     <a href="#questions">Research questions <small>{{ T.questions | size }}</small></a>
+    <a href="#price-panel">What customers pay <small>{{ T.price_panel | size }}</small></a>
+    <a href="#pricing-evidence">Pricing evidence <small>{{ T.pricing_evidence | size }}</small></a>
+    <a href="#model-migrations">Model migrations <small>{{ T.model_migrations | size }}</small></a>
   </nav>
-  <input id="tracker-filter" type="search" placeholder="Filter all trackers (e.g. Starlink, fee, FTC)">
+  <input id="tracker-filter" type="search" aria-label="Filter all trackers" placeholder="Filter all trackers (e.g. Starlink, fee, FTC)">
 </div>
 
 <section class="tracker" id="explanations">
@@ -108,6 +111,8 @@ permalink: /trackers/
     <li><span>{{ q.question }}</span> <span class="muted small">— {{ q.context }}, <a class="src" href="{{ digest_base }}{{ q.digest }}-{{ q.agent | default: 'claude' }}/">{{ q.digest }}</a></span></li>{% endfor %}
   </ol>
 </section>
+
+{% include longitudinal-trackers.html %}
 
 <script>
   (function () {
