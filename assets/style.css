@@ -116,7 +116,7 @@ h1, h2, h3 { font-family: var(--serif-head); font-weight: 600; color: var(--fg);
 .tracker-nav a:hover { border-color: var(--fg); }
 .tracker-nav small { color: var(--muted); }
 #tracker-filter { width: 100%; max-width: 420px; font: inherit; font-size: .9rem; padding: 8px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card); }
-.tracker { scroll-margin-top: 170px; margin-top: 40px; }
+.tracker { scroll-margin-top: 230px; margin-top: 40px; }
 .tracker h2 { font-size: 1.5rem; margin: 0 0 4px; }
 .tracker > p.muted { margin: 0 0 14px; font-size: 1rem; }
 .table-wrap { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: 6px; }

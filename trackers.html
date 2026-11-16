@@ -44,7 +44,7 @@ permalink: /trackers/
       <td class="nowrap">{{ r.date }}</td><td><strong>{{ r.firm }}</strong></td><td>{{ r.change }}</td><td>{{ r.framing }}</td>
       <td>{{ r.backlash }} <a class="src" href="{{ r.source }}">source</a></td>
       {% assign rv = r.reversed | downcase %}
-      <td><span class="chip {% if rv contains 'yes' %}yes{% elsif rv contains 'partial' %}partial{% elsif rv contains 'no' %}no{% endif %}">{{ r.reversed }}</span></td>
+      <td><span class="chip {% if rv contains 'unknown' or rv contains 'pending' %}{% elsif rv contains 'yes' %}yes{% elsif rv contains 'partial' %}partial{% elsif rv contains 'no' %}no{% endif %}">{{ r.reversed }}</span></td>
     </tr>{% endfor %}</tbody>
   </table></div>
 </section>
