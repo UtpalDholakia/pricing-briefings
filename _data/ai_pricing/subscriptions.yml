@@ -1,0 +1,17 @@
+# AI pricing database: subscription tiers and allowance history.
+# Every row is confirmed on the provider page at each monthly snapshot; source_checked null = not yet confirmed.
+# Two more products (e.g. Claude Pro/Max, Gemini plans) are added at the 2026-12-01 snapshot, verified.
+- provider: OpenAI
+  provider_slug: openai
+  product: ChatGPT Pro
+  product_slug: chatgpt-pro
+  mechanism: flat-subscription
+  price_monthly_usd: 200
+  allowance: 10x Plus usage
+  allowance_previous: 20x Plus usage
+  allowance_changed: '2026-10-30'
+  unit: USD per month
+  source: https://openai.com/chatgpt/pricing/
+  source_checked: null
+  case_id: chatgpt-pro-allowance-2026
+  verification_note: Seeded from tracker facts (news coverage). Not yet checked on the provider page; source_checked stays null until the 2026-12-01 snapshot confirms it.

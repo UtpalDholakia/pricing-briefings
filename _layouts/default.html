@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}?v=6">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}?v=7">
 </head>
 <body>
   <header class="site-header">
@@ -22,6 +22,7 @@
       <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="on"{% endif %}>Briefings</a>
       <a href="{{ '/tags/' | relative_url }}" {% if page.url == '/tags/' %}class="on"{% endif %}>Browse by tag</a>
       <a href="{{ '/trackers/' | relative_url }}" {% if page.url == '/trackers/' %}class="on"{% endif %}>Trackers</a>
+      <a href="{{ '/ai-pricing/' | relative_url }}" {% if page.url == '/ai-pricing/' %}class="on"{% endif %}>AI pricing</a>
       <a href="{{ site.brand.substack }}">The Pricing Conundrum ↗</a>
     </nav>
   </header>

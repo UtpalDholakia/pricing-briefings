@@ -151,4 +151,41 @@ The three longitudinal trackers use the [tracker methods](tracker-methods.md). K
 | `pricing_evidence.yml` | One tested comparison with its outcome and limits | Add relevant evidence, including null results and replications. |
 | `model_migrations.yml` | One transition and its follow-ups | Check announcement, effective date, and first affected bill. Link the price panel where comparable. |
 
-For additions, follow the existing field names, use quoted ISO dates (or a quoted year and month when only those are known), and validate the YAML as above. A next-check date on the site is a reminder for contributors, not an automation. Where a longitudinal record concerns the same case as a section 6 tracker, add the same `case_id` to it.
+For additions, follow the existing field names, use quoted ISO dates (or a quoted year and month when only those are known), and validate the YAML as above. Claude's daily run checks every `price_panel.yml` profile and `model_migrations.yml` record whose `next_check` date has arrived, following the tracker methods, and logs a new observation (including "no change"). Where a longitudinal record concerns the same case as a section 6 tracker, add the same `case_id` to it.
+
+## 8. AI pricing database
+
+What AI products actually cost, as a time series. Page: https://utpaldholakia.github.io/pricing-briefings/ai-pricing/. Files in `_data/ai_pricing/` (not in `_data/trackers/`: trackers are event logs, this is a price series).
+
+| File | Contents |
+|---|---|
+| `providers.yml` | Registry: OpenAI, Anthropic, Google (Gemini), Meta (Llama API), Mistral, xAI, DeepSeek, Cohere, with each provider's own pricing page |
+| `snapshots/YYYY-MM-DD.yml` | One complete picture per date: up to 3 flagship/mid-tier models per provider, read from the provider's pricing page |
+| `subscriptions.yml` | Subscription tiers, seats, credit packs and allowance history |
+| `price_changes.yml` | Change log, newest first: every price, allowance, tier or mechanism change found with a source |
+
+- **Cadence and owner:** Claude takes a snapshot on the 1st of each month (first: 2026-12-01) and an out-of-cycle snapshot when a change is announced. Every number is read from the provider's own page on that date and stamped with `source_checked`. A snapshot is a check, not a copy-forward. Claude verifies disputed prices within 48 hours. Meta AI and ChatGPT flag changes they find and suggest `price_changes.yml` entries in their briefings; they don't edit the database.
+- **Scope:** 8 providers, at most 3 models per provider per snapshot, plus any model whose price changed. Utpal alone adds providers or changes scope.
+- **`mechanism` values:** `per-token` / `per-seat` / `credits` / `per-job` / `outcome-based` / `flat-subscription` / `usage-tier` / `free`. A model sold two ways gets two rows. For credits, record `price_per_credit` and `credit_exchange_rate` (what one credit buys) separately.
+- **`change_type` values:** `price-cut` / `price-rise` / `allowance-cut` / `allowance-rise` / `new-tier` / `tier-removed` / `mechanism-change` / `new-model` / `model-retired` / `credit-repricing` / `free-tier-change` / `other`. Detail goes in `what_changed`.
+- **Shared IDs:** use the same `case_id` as the trackers for the same case (e.g. `chatgpt-pro-allowance-2026`). One fact, one home: a price lives in the database and is linked from trackers and briefings, not retyped.
+- **The rule that must not be broken: never edit a past snapshot in place.** Add a new snapshot or a `price_changes.yml` entry. Never seed a price from news or memory; a price without a `source_checked` date is not a price.
+
+## 9. Deep dives
+
+One argument a month (two at most), 1,000–2,000 words, built from the trackers and the database. Files in `_cases/`, named `YYYY-MM-<slug>.md`, following `_cases/TEMPLATE.md`. Listed on the home page under Research.
+
+- **Sections, in order:** The claim (one bold sentence) · The evidence (numbers from the database, counts from the trackers, every claim linked) · The counter-evidence · What would change my mind · What to watch next · Review notes · Sources. Tags only from `_data/tags.yml`; no images or raw HTML.
+- **Process:** Claude proposes the month's dive in the first briefing of the month (from the top of the pipeline, with the question and 3 strongest cases), then drafts it with `status: draft`. Meta AI adds counter-cases or non-Western/consumer-voice cases under "Review notes" or in its briefing, without editing the rest. Utpal approves, requests changes, or rejects in chat.
+- **The rule that must not be broken: draft first, publish only on Utpal's say-so.** Only Utpal's approval moves `status` to `published`. After publication, correct errors only, with a dated correction note.
+
+## 10. Substack pipeline
+
+The path from a tracker question to a published Pricing Conundrum piece. File: `_data/substack/ideas.yml`, shown on the home page.
+
+- **`status` values:** `idea` / `outlining` / `drafting` / `ready` / `published` / `parked` (with `revisit_date`) / `dead` (with the reason in `notes`; never delete a dead idea).
+- **`source_type` values:** `question` / `deep-dive` / `briefing` / `tracker` / `utpal`. **`priority`:** `High` / `Medium` / `Low`; Utpal sets High, default Medium.
+- **Adding ideas:** Claude adds an idea in its daily run only when a briefing or tracker raises something genuinely essay-sized, and says so in one line ("Pipeline: added …"). Meta AI and ChatGPT suggest ideas in their briefings; Claude adds them. Don't bulk-import questions; Utpal promotes them.
+- **Monthly review:** in the first briefing of each month, alongside the monthly tracker digest, Claude lists the pipeline's state and proposes ideas to park, kill or promote; Utpal decides.
+- **Answering questions:** when an idea or piece answers a `questions.yml` question, set that question's `status: Answered` and `answered_by` to the link the same day.
+- **The rule that must not be broken: `published` only with a real Substack URL** (`published_url` and `published_date`), set on Utpal's confirmation.

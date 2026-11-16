@@ -9,7 +9,7 @@ permalink: /trackers/
 {% assign soon = site.time | date: '%s' | plus: 604800 | date: '%Y-%m-%d' %}
 
 <h1 class="page-title">Trackers</h1>
-<p class="muted">Running logs kept from the daily briefings, as longitudinal raw material for The Pricing Conundrum. Every entry has a source, a case ID that links it across trackers, and a follow-up date. Updated each morning. <a href="{{ '/tracker-methods/' | relative_url }}">Tracker methods</a>.</p>
+<p class="muted">Running logs kept from the daily briefings, as longitudinal raw material for The Pricing Conundrum. Every entry has a source, a case ID that links it across trackers, and a follow-up date. Updated each morning. <a href="{{ '/tracker-methods/' | relative_url }}">Tracker methods</a> · <a href="{{ '/ai-pricing/' | relative_url }}">AI pricing database</a> · <a href="{{ '/' | relative_url }}#pipeline">Substack pipeline</a>.</p>
 
 {% comment %} ---------- Summary numbers ---------- {% endcomment %}
 {% assign rev_yes = T.backlash | where: "reversed", "Yes" | size %}

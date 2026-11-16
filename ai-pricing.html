@@ -1,0 +1,72 @@
+---
+layout: default
+title: AI pricing database
+permalink: /ai-pricing/
+---
+{% assign D = site.data.ai_pricing %}
+{% assign snap_names = "" | split: "" %}
+{% for s in D.snapshots %}{% assign snap_names = snap_names | push: s[0] %}{% endfor %}
+{% assign snap_names = snap_names | sort | reverse %}
+{% assign latest_name = snap_names | first %}
+{% if latest_name %}{% assign latest = D.snapshots[latest_name] %}{% endif %}
+
+<h1 class="page-title">AI pricing database</h1>
+<p class="muted">What AI products actually cost, in what units and under what pricing mechanism, recorded as a monthly time series. {% if latest %}Prices verified from provider pricing pages on {{ latest.snapshot_date }}.{% else %}The first verified snapshot is due on 1 December 2026.{% endif %} Prices change; past snapshots are kept in the repository. <a href="{{ '/trackers/' | relative_url }}">Trackers</a> · <a href="https://github.com/UtpalDholakia/pricing-briefings/tree/main/_data/ai_pricing">data files</a></p>
+
+<section class="tracker" id="models">
+  <h2>Model prices{% if latest %} · snapshot {{ latest.snapshot_date }}{% endif %}</h2>
+  <p class="muted">Up to 3 flagship and mid-tier models per provider, read from each provider's own pricing page. USD per 1 million tokens unless stated.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Provider</th><th>Model</th><th>Mechanism</th><th>Input</th><th>Cached input</th><th>Output</th><th>Context</th><th>Checked</th></tr></thead>
+    <tbody>
+    {% if latest %}{% for m in latest.models %}<tr>
+      <td><strong>{{ m.provider }}</strong></td><td>{{ m.model }}</td><td><span class="chip">{{ m.mechanism }}</span></td>
+      <td>{% if m.input_price != nil %}${{ m.input_price }}{% endif %}</td><td>{% if m.cached_input_price != nil %}${{ m.cached_input_price }}{% endif %}</td><td>{% if m.output_price != nil %}${{ m.output_price }}{% endif %}</td>
+      <td>{{ m.context_window_tokens }}</td><td class="nowrap"><a class="src" href="{{ m.source }}">{{ m.source_checked }}</a></td>
+    </tr>{% endfor %}{% else %}
+      <tr><td colspan="8" class="muted">No verified snapshot yet. Claude takes the first one on 1 December 2026 from each provider's pricing page. No prices are shown until they have been checked at the source.</td></tr>
+    {% endif %}
+    </tbody>
+  </table></div>
+</section>
+
+<section class="tracker" id="subscriptions">
+  <h2>Subscription tiers</h2>
+  <p class="muted">Monthly plans, seats, credit packs and allowances, with allowance history. Rows without a "checked" date have not yet been confirmed on the provider's page.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Provider</th><th>Product</th><th>Mechanism</th><th>Price</th><th>Allowance (as stated)</th><th>Previous allowance</th><th>Checked</th></tr></thead>
+    <tbody>{% for s in D.subscriptions %}<tr>
+      <td><strong>{{ s.provider }}</strong></td><td>{{ s.product }} <a class="case" href="{{ '/trackers/' | relative_url }}">{{ s.case_id }}</a></td><td><span class="chip">{{ s.mechanism }}</span></td>
+      <td class="nowrap">{% if s.price_monthly_usd %}${{ s.price_monthly_usd }}/month{% endif %}</td><td>{{ s.allowance }}</td>
+      <td>{{ s.allowance_previous }}{% if s.allowance_changed %} <span class="muted small">(changed {{ s.allowance_changed }})</span>{% endif %}</td>
+      <td class="nowrap">{% if s.source_checked %}<a class="src" href="{{ s.source }}">{{ s.source_checked }}</a>{% else %}<span class="small warn">not yet verified</span>{% endif %}</td>
+    </tr>{% endfor %}</tbody>
+  </table></div>
+</section>
+
+<section class="tracker" id="changes">
+  <h2>Price and structure changes</h2>
+  <p class="muted">Every AI price, allowance, tier or mechanism change found with a source, newest first.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Date</th><th>Provider</th><th>Product / model</th><th>Change</th><th>Old → new</th><th>What changed</th></tr></thead>
+    <tbody>{% for c in D.price_changes %}<tr>
+      <td class="nowrap">{{ c.date }}</td><td><strong>{{ c.provider }}</strong></td><td>{{ c.product_or_model }} <a class="case" href="{{ '/trackers/' | relative_url }}">{{ c.case_id }}</a></td>
+      <td><span class="chip">{{ c.change_type }}</span>{% if c.magnitude_pct %} <span class="chip">{{ c.magnitude_pct }}%</span>{% endif %}</td>
+      <td>{{ c.old_value }} → {{ c.new_value }}</td>
+      <td>{{ c.what_changed }} <a class="src" href="{{ c.source }}">source</a>{% if c.agent and c.agent != 'claude' %} · <span class="agent">{{ c.agent }}</span>{% endif %}{% if c.verification_note %}<div class="small warn">{{ c.verification_note }}</div>{% endif %}</td>
+    </tr>{% endfor %}</tbody>
+  </table></div>
+</section>
+
+<section class="tracker" id="providers">
+  <h2>Providers tracked</h2>
+  <p class="muted">Eight providers, at most three models each per snapshot. Utpal decides any change to this list.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Provider</th><th>Tracked</th><th>Pricing page</th><th>Notes</th></tr></thead>
+    <tbody>{% for p in D.providers %}<tr>
+      <td><strong>{{ p.provider }}</strong></td><td>{{ p.products_tracked | join: ", " }}</td>
+      <td>{% if p.pricing_page %}<a class="src" href="{{ p.pricing_page }}">{{ p.pricing_page | remove: "https://" }}</a>{% endif %}{% unless p.pricing_page_verified %} <span class="small warn">to confirm</span>{% endunless %}</td>
+      <td class="small">{{ p.notes }}</td>
+    </tr>{% endfor %}</tbody>
+  </table></div>
+</section>

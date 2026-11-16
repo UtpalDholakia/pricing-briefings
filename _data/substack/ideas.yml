@@ -1,0 +1,160 @@
+# Substack pipeline for The Pricing Conundrum. Newest first by created.
+# status: idea / outlining / drafting / ready / published / parked / dead. priority: High / Medium / Low (Utpal sets High).
+# 'published' only with a real Substack URL. Never delete a dead idea; give the reason in notes. See AGENTS.md section 10.
+- created: '2026-11-15'
+  idea: Credits are a currency, and vendors control the exchange rate
+  idea_slug: credits-as-currency
+  source_type: deep-dive
+  source_ref: _cases/2026-12-credits-as-a-currency.md
+  question: When does partitioning (tokens, line items) signal fairness rather than obfuscation?
+  question_ref: questions.yml (2026-11-01)
+  case_ids:
+  - chatgpt-pro-allowance-2026
+  - openai-per-job-pricing-2026
+  - saas-credits-2026
+  status: drafting
+  priority: High
+  owner: claude
+  outline: 1. The allowance cut as a price rise in disguise. 2. Credits as a vendor currency. 3. Why buyers wanted an auditable unit. 4. What to watch.
+  draft_url: https://utpaldholakia.github.io/pricing-briefings/cases/2026-12-credits-as-a-currency/
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: Seeded from the deep-dive backlog; first deep dive, draft awaiting Utpal's approval.
+- created: '2026-11-15'
+  idea: Why do sellers reverse?
+  idea_slug: why-sellers-reverse
+  source_type: tracker
+  source_ref: _data/trackers/backlash.yml
+  question: 'What predicts whether a seller backs down after price backlash: magnitude, apology, monopoly, or who is watching?'
+  question_ref: null
+  case_ids:
+  - burry-substack-2026
+  - uniqlo-socks-2026
+  - sam-fender-tour-2026
+  - openai-per-job-pricing-2026
+  - starlink-congestion-2026
+  status: idea
+  priority: High
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: 'Backlash tracker on 2026-11-15: 7 of 11 resolved cases reversed at least partly (5 Yes, 2 Partial, 4 No). Needs more resolved cases before the counts carry weight.'
+- created: '2026-11-15'
+  idea: Who bears the cost when an AI agent shops for you?
+  idea_slug: ai-agent-shopper-cost
+  source_type: question
+  source_ref: _data/trackers/questions.yml
+  question: What reference prices do consumers learn when market anchors are set by pricing agents?
+  question_ref: questions.yml (2026-10-20)
+  case_ids:
+  - pricebench-2026
+  - artificial-shoppers-2026
+  - agents-steer-wealthy-2026
+  - united-blocks-ai-agents-2026
+  status: idea
+  priority: High
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: null
+- created: '2026-11-15'
+  idea: Do consumers draw the fairness line where NYC's law does?
+  idea_slug: nyc-fairness-line
+  source_type: question
+  source_ref: _data/trackers/questions.yml
+  question: 'Do consumers draw the fairness line where NYC''s law does: stated traits and own purchase history (fair) vs inferred traits (unfair)?'
+  question_ref: questions.yml (2026-11-15)
+  case_ids:
+  - us-surveillance-pricing-laws-2026
+  status: idea
+  priority: High
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: Watch for the NYC mayor's signature on Int. 891-A.
+- created: '2026-11-15'
+  idea: Do restaurant surcharges cannibalise tips?
+  idea_slug: surcharges-and-tips
+  source_type: question
+  source_ref: _data/trackers/questions.yml
+  question: Do restaurant surcharges and tips share one mental account, so that fees cannibalize tips?
+  question_ref: questions.yml (2026-11-10)
+  case_ids:
+  - earls-admin-fee-2026
+  - duffys-operations-charge-2026
+  - uca-terraza-fees-2026
+  - restaurant-surcharges-chicago-la-2026
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: null
+- created: '2026-11-15'
+  idea: Is a 'your price is personal' label better or worse than hidden variation?
+  idea_slug: personal-price-label
+  source_type: question
+  source_ref: _data/trackers/questions.yml
+  question: Is a 'your price is personal' label on the price tag better or worse for fairness than hidden variation?
+  question_ref: questions.yml (2026-11-12)
+  case_ids:
+  - sony-ps-store-pricing-2026
+  - ny-algorithmic-pricing-label-2026
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: null
+- created: '2026-11-15'
+  idea: Does showing a fare's cost breakdown build trust or invite disputes?
+  idea_slug: fare-cost-breakdown
+  source_type: question
+  source_ref: _data/trackers/questions.yml
+  question: Does showing a fare's cost breakdown build trust (dual entitlement) or invite disputes over each line?
+  question_ref: questions.yml (2026-11-04)
+  case_ids:
+  - india-aviation-fare-breakdown-2026
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: null
+- created: '2026-11-15'
+  idea: Do consumers feel entitled to a seller's efficiency gains?
+  idea_slug: entitled-to-efficiency-gains
+  source_type: question
+  source_ref: _data/trackers/questions.yml
+  question: Do consumers feel entitled to a seller's efficiency gains (ChatGPT Pro cut)?
+  question_ref: questions.yml (2026-10-29)
+  case_ids:
+  - chatgpt-pro-allowance-2026
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: null

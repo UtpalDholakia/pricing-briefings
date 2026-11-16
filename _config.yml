@@ -15,8 +15,16 @@ collections:
   briefings:
     output: true
     permalink: /briefings/:name/
+  cases:
+    output: true
+    permalink: /cases/:name/
 
 defaults:
+  - scope:
+      path: ""
+      type: cases
+    values:
+      layout: case
   - scope:
       path: ""
       type: briefings

@@ -1,0 +1,85 @@
+# AI pricing database: provider registry. Scope: 8 providers, max 3 models each per snapshot.
+# Adding a provider or changing scope: Utpal only. See AGENTS.md section 8.
+- provider: OpenAI
+  provider_slug: openai
+  pricing_page: https://openai.com/api/pricing/
+  docs_page: https://platform.openai.com/docs/pricing
+  products_tracked:
+  - API models
+  - ChatGPT subscriptions
+  currency: USD
+  added: '2026-11-15'
+  pricing_page_verified: false
+  notes: Pricing page URL from the spec; to be opened and confirmed at the first snapshot (2026-12-01).
+- provider: Anthropic
+  provider_slug: anthropic
+  pricing_page: https://www.anthropic.com/pricing
+  docs_page: null
+  products_tracked:
+  - API models
+  - Claude subscriptions
+  currency: USD
+  added: '2026-11-15'
+  pricing_page_verified: false
+  notes: Pricing page URL from the spec; to be opened and confirmed at the first snapshot (2026-12-01).
+- provider: Google (Gemini)
+  provider_slug: google
+  pricing_page: null
+  docs_page: null
+  products_tracked:
+  - API models
+  - Gemini subscriptions
+  currency: USD
+  added: '2026-11-15'
+  pricing_page_verified: false
+  notes: Pricing page URL to be located on the provider's own site and confirmed at the first snapshot (2026-12-01). If there is no public pricing page, say so here and do not track from press coverage.
+- provider: Meta (Llama API)
+  provider_slug: meta
+  pricing_page: null
+  docs_page: null
+  products_tracked:
+  - API models
+  currency: USD
+  added: '2026-11-15'
+  pricing_page_verified: false
+  notes: Pricing page URL to be located on the provider's own site and confirmed at the first snapshot (2026-12-01). If there is no public pricing page, say so here and do not track from press coverage.
+- provider: Mistral
+  provider_slug: mistral
+  pricing_page: null
+  docs_page: null
+  products_tracked:
+  - API models
+  currency: USD
+  added: '2026-11-15'
+  pricing_page_verified: false
+  notes: Pricing page URL to be located on the provider's own site and confirmed at the first snapshot (2026-12-01). If there is no public pricing page, say so here and do not track from press coverage.
+- provider: xAI
+  provider_slug: xai
+  pricing_page: null
+  docs_page: null
+  products_tracked:
+  - API models
+  currency: USD
+  added: '2026-11-15'
+  pricing_page_verified: false
+  notes: Pricing page URL to be located on the provider's own site and confirmed at the first snapshot (2026-12-01). If there is no public pricing page, say so here and do not track from press coverage.
+- provider: DeepSeek
+  provider_slug: deepseek
+  pricing_page: null
+  docs_page: null
+  products_tracked:
+  - API models
+  currency: USD
+  added: '2026-11-15'
+  pricing_page_verified: false
+  notes: Pricing page URL to be located on the provider's own site and confirmed at the first snapshot (2026-12-01). If there is no public pricing page, say so here and do not track from press coverage.
+- provider: Cohere
+  provider_slug: cohere
+  pricing_page: null
+  docs_page: null
+  products_tracked:
+  - API models
+  currency: USD
+  added: '2026-11-15'
+  pricing_page_verified: false
+  notes: Pricing page URL to be located on the provider's own site and confirmed at the first snapshot (2026-12-01). If there is no public pricing page, say so here and do not track from press coverage.

@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="briefing case">
+  <a class="back" href="{{ '/' | relative_url }}#deep-dives">← All deep dives</a>
+  {% if page.status != "published" %}
+  <div class="draft-banner"><strong>Draft, awaiting Utpal's approval.</strong> Not published as an argument. Status: {{ page.status }}.</div>
+  {% endif %}
+  <div class="meta"><span class="badge" style="--c: {{ site.agents[page.author].color | default: '#666' }}">Deep dive · {{ site.agents[page.author].name | default: page.author }}</span>
+    <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %-d, %Y" }}</time></div>
+  <h1>{{ page.title }}</h1>
+  {% if page.question %}<p class="summary"><strong>Question:</strong> {{ page.question }}</p>{% endif %}
+  {% if page.case_ids %}<p class="series">Cases: {% for c in page.case_ids %}<a class="case" href="{{ '/trackers/' | relative_url }}">{{ c }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>{% endif %}
+  {% if page.tags %}<p class="tags">{% for t in page.tags %}<a href="{{ '/tags/' | relative_url }}#{{ t | slugify }}">{{ t }}</a>{% endfor %}</p>{% endif %}
+  <div class="body">
+    {{ content }}
+  </div>
+</article>

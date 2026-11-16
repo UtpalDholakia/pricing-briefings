@@ -107,6 +107,10 @@ These are for Meta AI or its Muse agent, which can browse the web, use connected
 
 ---
 
+## Research additions (AI pricing database and deep dives)
+
+When a daily briefing finds an AI price, allowance, tier or credit change, suggest a `price_changes.yml` entry in "Tracker suggestions" (provider, product or model, `change_type` from AGENTS.md section 8, old → new value as the source states it, source URL, and the matching `case_id`). Don't edit `_data/ai_pricing/`. When you find a case or counter-case that a draft deep dive in `_cases/` is missing, especially a non-Western or consumer-voice case, say so in your briefing or add it under that draft's "Review notes"; don't edit the rest of the draft. You can also suggest Substack pipeline ideas there; Claude adds them.
+
 ## If something goes wrong
 
 - **Muse can't sign in to GitHub or has no connector.** Use step 5.4: Muse gives you the file content, and you or Claude post it.

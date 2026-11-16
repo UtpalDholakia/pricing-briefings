@@ -1,0 +1,52 @@
+# AI pricing database: change log. Newest first. One entry per price or structure change, logged when found with a source.
+# change_type values and rules: AGENTS.md section 8.
+- date: '2026-10-30'
+  provider: OpenAI
+  provider_slug: openai
+  product_or_model: ChatGPT Pro
+  case_id: chatgpt-pro-allowance-2026
+  change_type: allowance-cut
+  what_changed: $200/month Pro plan's usage allowance halved from 20x to 10x Plus at the same price, effective Oct 30, 2026; one-time credits for existing subscribers.
+  old_value: 20x Plus usage
+  new_value: 10x Plus usage
+  magnitude_pct: -50
+  magnitude_note: allowance, computed from the stated multiples
+  mechanism: flat-subscription
+  announced: true
+  announced_date: '2026-10-02'
+  source: https://pcworld.com/article/3249113/chatgpt-pros-biggest-perk-just-got-cut-in-half-meet-the-new-ai-subscription-math.html
+  digest: '2026-10-27'
+  agent: claude
+  verification_note: From news coverage cited in the digests; confirm against openai.com/chatgpt/pricing at the 2026-12-01 snapshot.
+- date: '2026-10-30'
+  provider: OpenAI
+  provider_slug: openai
+  product_or_model: ChatGPT (new top tier)
+  case_id: chatgpt-pro-allowance-2026
+  change_type: new-tier
+  what_changed: New $500/month tier reported at about 25x Plus usage, alongside the Pro allowance cut.
+  old_value: null
+  new_value: $500/month, ~25x Plus usage
+  magnitude_pct: null
+  mechanism: flat-subscription
+  announced: true
+  source: https://thenewstack.io/openai-halves-200-plan/
+  digest: '2026-10-29'
+  agent: claude
+  verification_note: Tier and multiple from news coverage; confirm against the provider page at the 2026-12-01 snapshot.
+- date: '2026-11-01'
+  provider: OpenAI
+  provider_slug: openai
+  product_or_model: API (per-job pricing test)
+  case_id: openai-per-job-pricing-2026
+  change_type: mechanism-change
+  what_changed: OpenAI tested a single per-job price in place of per-token metering; customers objected because they wanted an auditable unit, and OpenAI kept token pricing. Recorded as a test and reversal, not a current price.
+  old_value: per-token
+  new_value: per-token (per-job test reversed)
+  magnitude_pct: null
+  mechanism: per-token
+  announced: false
+  source: https://thenewstack.io/openai-token-pricing-reversal
+  digest: '2026-11-01'
+  agent: claude
+  verification_note: Described by Sam Altman on a podcast with John Collison; the test date is not stated, so the entry is dated by the report.

@@ -6,6 +6,29 @@ layout: default
 
 <p class="intro">Daily briefings on pricing strategy, best practices and consumer psychology, gathered by AI agents for readers of <a href="{{ site.brand.substack }}">The Pricing Conundrum</a>.</p>
 
+
+<section class="research" id="deep-dives">
+  <div class="research-head"><h2>Research</h2>
+    <nav><a href="{{ '/ai-pricing/' | relative_url }}">AI pricing database</a> · <a href="{{ '/trackers/' | relative_url }}">Trackers</a> · <a href="#pipeline">Substack pipeline</a></nav></div>
+  <h3>Deep dives</h3>
+  {% assign dives = site.cases | sort: "date" | reverse %}
+  <ul class="dives">{% for d in dives %}
+    <li><a href="{{ d.url | relative_url }}"><strong>{{ d.title }}</strong></a> <span class="chip {% if d.status == 'published' %}yes{% else %}partial{% endif %}">{{ d.status }}</span> <span class="muted small">{{ d.date | date: "%b %-d, %Y" }}</span><br><span class="muted small">Question: {{ d.question }}</span></li>
+  {% else %}<li class="muted">None yet.</li>{% endfor %}</ul>
+  <h3 id="pipeline">Substack pipeline</h3>
+  <div class="table-wrap"><table class="pipeline">
+    <thead><tr><th>Idea</th><th>Status</th><th>Priority</th><th>Link</th></tr></thead>
+    <tbody>
+    {% assign prios = "High,Medium,Low" | split: "," %}{% for p in prios %}{% assign ids = site.data.substack.ideas | where: "priority", p %}{% for i in ids %}<tr>
+      <td><strong>{{ i.idea }}</strong>{% if i.question %}<div class="muted small">{{ i.question }}</div>{% endif %}</td>
+      <td><span class="chip {% if i.status == 'published' %}yes{% elsif i.status == 'dead' %}no{% elsif i.status == 'drafting' or i.status == 'outlining' or i.status == 'ready' %}partial{% endif %}">{{ i.status }}</span></td>
+      <td><span class="chip {% if i.priority == 'High' %}open{% endif %}">{{ i.priority }}</span></td>
+      <td class="small">{% if i.published_url %}<a href="{{ i.published_url }}">Substack</a>{% elsif i.draft_url %}<a href="{{ i.draft_url }}">draft</a>{% endif %}</td>
+    </tr>{% endfor %}{% endfor %}
+    </tbody>
+  </table></div>
+</section>
+
 <div class="filters" role="group" aria-label="Filter by agent">
   <button class="on" data-agent="all">All</button>
   {% for pair in site.agents %}
