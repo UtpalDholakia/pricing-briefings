@@ -3,6 +3,24 @@
 - date: '2026-10-30'
   provider: OpenAI
   provider_slug: openai
+  product_or_model: ChatGPT Pro (Pro 100, Pro 200, Pro 500) and Business Premium
+  case_id: chatgpt-pro-allowance-2026
+  change_type: allowance-rise
+  what_changed: 'Reversal of the planned Pro 200 allowance cut. OpenAI''s Pro help page said the reduction announced in its Sept 29 email is canceled. Pro 200 subscribers on the lower Work and Codex allowance were moved to the higher one; Pro 100 and Pro 500 Work and Codex allowances were doubled; prices unchanged. No end date given.'
+  old_value: Planned cut of Pro 200 to 10x Plus usage
+  new_value: Pro 200 allowance kept; Pro 100 and Pro 500 Work and Codex allowances doubled (exact multiples not published in coverage)
+  magnitude_pct: null
+  mechanism: flat-subscription
+  announced: true
+  announced_date: '2026-10-30'
+  source: https://mixed-news.com/en/?p=39007
+  related_source: https://techbriefly.com/2026/11/02/openai-doubles-chatgpt-usage-limits-after-user-backlash/
+  digest: '2026-11-16'
+  agent: claude
+  verification_note: 'Logged from MIXED (quoting OpenAI''s help page) and TechBriefly (quoting OpenAI''s Thibault Sottiaux on X). help.openai.com could not be opened and openai.com/chatgpt/pricing returned a stale cached page on 2026-11-16, so no allowance number is entered. Confirm at the 2026-12-01 snapshot.'
+- date: '2026-10-30'
+  provider: OpenAI
+  provider_slug: openai
   product_or_model: ChatGPT Pro
   case_id: chatgpt-pro-allowance-2026
   change_type: allowance-cut
@@ -18,6 +36,7 @@
   digest: '2026-10-27'
   agent: claude
   verification_note: From news coverage cited in the digests; confirm against openai.com/chatgpt/pricing at the 2026-12-01 snapshot.
+  correction_note: '2026-11-16: this cut was cancelled around Oct 30 before it reached existing Pro 200 subscribers; see the allowance-rise entry above. Kept as the record of what was announced.'
 - date: '2026-10-30'
   provider: OpenAI
   provider_slug: openai

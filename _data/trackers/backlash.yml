@@ -32,8 +32,8 @@
   reaction_volume: null
   source: https://www.ticketnews.com/2026/11/noah-kahan-presale-prices-resale-caps-2027/
   digest: '2026-11-11'
-  last_checked: '2026-11-15'
-  follow_up_date: '2026-12-11'
+  last_checked: '2026-11-16'
+  follow_up_date: '2026-12-16'
 - case_id: earls-admin-fee-2026
   date: '2026-11-09'
   firm: Earls Kitchen + Bar (Denver)
@@ -48,8 +48,8 @@
   reaction_volume: null
   source: https://www.wfmd.com/2026/11/09/restaurant-admin-fees-spark-backlash-as-diners-question-what-theyre-paying-for/
   digest: '2026-11-10'
-  last_checked: '2026-11-15'
-  follow_up_date: '2026-12-09'
+  last_checked: '2026-11-16'
+  follow_up_date: '2026-12-16'
 - case_id: duffys-operations-charge-2026
   date: '2026-11-09'
   firm: Duffy's (Florida)
@@ -112,8 +112,8 @@
   reaction_volume: null
   source: https://www.foxnews.com/travel/cruise-passengers-criticize-new-program-identifying-early-tippers-board
   digest: '2026-11-04'
-  last_checked: '2026-11-15'
-  follow_up_date: '2026-12-04'
+  last_checked: '2026-11-16'
+  follow_up_date: '2026-12-16'
 - case_id: car-feature-subscriptions-2026
   date: '2026-11-04'
   firm: Automakers (VW, Subaru)
@@ -169,16 +169,17 @@
   change: Usage allowance halved at same $200 price
   framing: Efficiency gains
   backlash: Largely negative developer reaction
-  reversed: Partial
-  reversal_note: One-time credits
-  days_to_reversal: null
-  outcome_date: null
+  reversed: 'Yes'
+  reversal_note: 'Cut cancelled: OpenAI''s Pro help page said the reduction announced in its Sept 29 email is canceled; Pro 200 allowance kept and Pro 100/500 Work and Codex allowances doubled (reported Oct 30 to Nov 2). Earlier ''Partial / one-time credits'' value was wrong; corrected 2026-11-16. Days counted from this entry''s date; from the Sept 29 email the cut lasted about a month as an announcement and never took effect for existing Pro 200 users.'
+  days_to_reversal: 3
+  outcome_date: '2026-10-30'
   magnitude_pct: null
   reaction_volume: null
   source: https://thenewstack.io/openai-halves-200-plan/
   digest: '2026-10-29'
-  last_checked: '2026-11-15'
-  follow_up_date: '2026-11-26'
+  follow_up_source: https://mixed-news.com/en/?p=39007
+  last_checked: '2026-11-16'
+  follow_up_date: null
 - case_id: rogers-sportsnet-plus-2026
   date: '2026-10-26'
   firm: Rogers / Sportsnet+
@@ -226,8 +227,8 @@
   reaction_volume: null
   source: https://hoodline.com/2026/10/downtown-la-rooftop-spot-uca-terraza-slammed-over-surcharge-on-top-of-mandatory-tip
   digest: '2026-10-20'
-  last_checked: '2026-11-15'
-  follow_up_date: '2026-11-19'
+  last_checked: '2026-11-16'
+  follow_up_date: '2026-12-16'
 - case_id: uniqlo-socks-2026
   date: 2026-10
   firm: Uniqlo (Japan)

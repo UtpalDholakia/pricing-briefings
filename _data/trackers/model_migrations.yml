@@ -1,4 +1,23 @@
 # One row per announced transition. Append follow-ups; don't infer an observed bill from a schedule.
+- id: lyft-pink-to-go
+  case_id: lyft-go-credits-2026
+  offer: Lyft membership (Lyft Pink to Lyft Go)
+  announced: '2026-11-05'
+  from_model: 'Lyft Pink, and DashPass-linked ride benefits: instant percentage discounts (5% on eligible rides, 10% on scheduled airport rides, up to four discounted rides a month) plus free Priority Pickup upgrades'
+  to_model: 'Lyft Go with DashPass at USD 9.99 a month or USD 96 a year: 8% back in Lyft credits on base fare, capped at USD 40 earned a month, credits expire after 60 days and lapse if membership ends; Go Core at USD 4.99: 5% back, Lyft-only credits'
+  new_customers: Choose Go with DashPass or Go Core on the published terms.
+  existing_customers: 'Paid Pink members move automatically to Go with DashPass at their next renewal at their current price; DashPass ride benefits ended Nov 11 at 11:59 p.m. Pacific or on activating Go'
+  first_bill_timing: 'First Pink renewals after Nov 5 carry the new benefits at the old price; watch the first renewal at which a Pink price changes, if any'
+  status: Terms published
+  next_check: '2026-12-15'
+  question: 'Do riders treat 8% back in expiring, Lyft-only credits as worth less than an equal instant discount, and does it raise ride frequency?'
+  source: https://www.lyft.com/blog/posts/lyft-announces-lyftgo-membership-doordash
+  updates:
+    - date: '2026-11-05'
+      note: View from the Wing lists the lost benefits (10% airport discount, Priority Pickup upgrades) and the credit restrictions.
+      source: https://viewfromthewing.com/?p=259359
+  digest: '2026-11-16'
+  agent: claude
 - id: hubspot-seats-to-credits
   offer: HubSpot seats and credits
   announced: '2026-10-15'

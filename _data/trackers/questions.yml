@@ -1,5 +1,19 @@
 # Tracker: questions. Open research questions with status and priority.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- date: '2026-11-16'
+  question: 'Does approving an agent''s purchase with one biometric tap reduce the pain of paying relative to manual checkout, and do pre-approved category budgets work like mental-account limits?'
+  context: ChatGPT Wallet; JPMorgan agent card block
+  digest: '2026-11-16'
+  status: Open
+  priority: Medium
+  answered_by: null
+- date: '2026-11-16'
+  question: 'Do consumers value 8% back in expiring, platform-only credits at less than an equal instant discount, and does the credit raise visit frequency?'
+  context: Lyft Pink to Lyft Go
+  digest: '2026-11-16'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-15'
   question: 'Do consumers draw the fairness line where NYC''s law does: stated traits and own purchase history (fair) vs inferred traits (unfair)?'
   context: NYC Int. 891-A carve-outs

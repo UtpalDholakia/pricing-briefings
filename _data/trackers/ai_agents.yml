@@ -1,5 +1,25 @@
 # Tracker: ai_agents. AI shopping agents and pricing agents: research, firm policy, surveys, opinion.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: jpmorgan-agent-cards-2026
+  date: '2026-11-13'
+  kind: Firm policy
+  title: JPMorgan blocks AI agents that use a customer's Chase card number
+  who: JPMorgan Chase (reported by the WSJ, via PYMNTS)
+  finding: 'Agents given a Chase card number are declined; tokenized routes (Stripe Link one-time cards, network agentic tokens) remain, and merchants say the virtual card costs more to accept'
+  source: https://www.pymnts.com/news/2026/jpmorgan-stops-ai-agents-from-using-customer-credit-cards/
+  digest: '2026-11-16'
+  last_checked: '2026-11-16'
+  follow_up_date: '2026-12-16'
+- case_id: chatgpt-wallet-2026
+  date: '2026-11-13'
+  kind: Firm policy
+  title: ChatGPT Wallet lets OpenAI's agents check out for Pro users
+  who: OpenAI
+  finding: 'Cards stored once and tokenized; each purchase approved with Face ID or fingerprint after reviewing items and total; spending limits and category or time rules for pre-approved purchases are planned'
+  source: https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you
+  digest: '2026-11-16'
+  last_checked: '2026-11-16'
+  follow_up_date: '2026-12-16'
 - case_id: ning-ai-buyer-disclosure-2026
   date: '2026-11-12'
   kind: Agent research

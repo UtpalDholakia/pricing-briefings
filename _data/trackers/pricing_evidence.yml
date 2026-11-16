@@ -1,4 +1,34 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: wait-for-free-serial-fiction
+  case_id: wait-for-free-2026
+  date: '2026-11'
+  mechanism: Impatience-based self-selection (pay now or wait for free)
+  comparison: Standard paywall versus a 'wait for free' option on each chapter
+  design: Structural dynamic choice model estimated on platform data, with counterfactual simulations
+  setting: Online serial-fiction platform, 15 months, more than 10,000 novels and 1 million users
+  outcome: Simulated spending by patient and impatient readers
+  result_kind: Positive in this setting
+  result: 'In simulation, impatient readers (nearly two-thirds of purchases) spent 36% more with the option and patient readers about half as much; the revenue-maximizing design made about 30% of chapters (the weakest) wait-for-free. Cliffhangers and faster pacing pushed impatient readers to pay.'
+  boundary: Model outputs from observational data, not a field experiment. One platform and one content type.
+  source: https://insights.som.yale.edu/insights/to-get-users-to-pay-give-them-the-option-not-to
+  verification_note: 'Wang, Sudhir & Lee, Consumer Engagement with Sequential Content (SSRN working paper); reported via Yale Insights, Nov 4, 2026. Paper page not opened. Date is the report month.'
+  digest: '2026-11-16'
+  agent: claude
+- id: loan-rate-dispersion-beliefs
+  case_id: chile-loan-beliefs-2026
+  date: '2026'
+  mechanism: Biased beliefs about price dispersion
+  comparison: Tool showing rates similar borrowers received, versus a simple one-more-quote savings estimate, versus an instructional video
+  design: Randomized field experiment linked to regulator loan-level data
+  setting: 112,063 consumer-loan applicants in Chile, Nov 2021 to Jun 2023
+  outcome: Lenders searched, negotiation, offers received, interest rate
+  result_kind: Positive in this setting
+  result: '73.2% expected a lower rate than they got and 74.8% underestimated dispersion. The comparison tool raised negotiation by 38.7%, offers received by 13.1% and cut rates by 3.5%; among those who underestimated dispersion, negotiation rose 78%. The simple savings tool had no significant effect.'
+  boundary: Consumer credit in one country; effects concentrated among borrowers who underestimated dispersion, and those who overestimated it did not negotiate more.
+  source: https://insight.kellogg.northwestern.edu/article/for-loans-it-pays-to-compare
+  verification_note: 'Berwart, Higgins, Kulkarni & Truffa, Search and Negotiation with Biased Beliefs in Consumer Credit Markets (2026 working paper); figures from the Kellogg Insight summary (Nov 1, 2026), paper not opened.'
+  digest: '2026-11-16'
+  agent: claude
 - id: cash-card-spending-replication
   date: '2026-08-14'
   mechanism: Pain of paying

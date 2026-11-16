@@ -7,7 +7,8 @@
   product_slug: chatgpt-pro
   mechanism: flat-subscription
   price_monthly_usd: 200
-  allowance: 10x Plus usage
+  allowance: null
+  allowance_note: 'Corrected 2026-11-16. The planned cut from 20x to 10x Plus usage was cancelled around Oct 30 after backlash, and OpenAI reportedly doubled Work and Codex allowances on the other Pro tiers (see price_changes.yml). Coverage gives no current multiple, so allowance stays null until the provider page is read.'
   allowance_previous: 20x Plus usage
   allowance_changed: '2026-10-30'
   unit: USD per month

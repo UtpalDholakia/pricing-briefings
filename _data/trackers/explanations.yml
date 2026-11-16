@@ -175,14 +175,15 @@
   explanation: More efficient models mean users still get more done; one-time credits for existing subscribers
   category: Efficiency
   reaction: Largely negative among developers
-  outcome: Mitigated
-  outcome_note: One-time credits for existing subscribers
-  outcome_date: null
+  outcome: Reversed
+  outcome_note: 'Planned Pro 200 cut cancelled after developer backlash; allowances on other Pro tiers doubled (OpenAI help page via MIXED, Oct 30 to Nov 1). Corrected 2026-11-16 from ''Mitigated''.'
+  outcome_date: '2026-10-30'
   magnitude_pct: null
   source: https://thenewstack.io/openai-halves-200-plan/
   digest: '2026-10-29'
-  last_checked: '2026-11-15'
-  follow_up_date: '2026-11-26'
+  follow_up_source: https://mixed-news.com/en/?p=39007
+  last_checked: '2026-11-16'
+  follow_up_date: null
 - case_id: sam-fender-tour-2026
   date: '2026-10-27'
   firm: Sam Fender

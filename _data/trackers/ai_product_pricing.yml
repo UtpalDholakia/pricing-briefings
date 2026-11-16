@@ -1,5 +1,16 @@
 # Tracker: ai_product_pricing. How AI products themselves are priced.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: resolution-definition-2026
+  date: '2026-11'
+  kind: AI product pricing
+  title: 'Per-resolution AI support pricing: the definition is the price'
+  who: Rajesh Beri (The D*AI*LY Brief), comparing Intercom Fin, Zendesk and Salesforce Agentforce
+  finding: 'Fin bills customers who leave without asking for more help as resolved ($0.99); Zendesk bills only LLM-verified resolutions ($1.50-$2.00); Agentforce says abandoned sessions are not billed ($2), mainly in press statements'
+  source: https://www.beri.net/article/per-resolution-pricing-intercom-fin-vs-zendesk-vs-agentforce-resolution-definition-2026
+  digest: '2026-11-16'
+  verification_note: 'Article dated to November 2026 only; vendor pricing pages not checked directly'
+  last_checked: '2026-11-16'
+  follow_up_date: '2027-01-15'
 - case_id: genai-subscriptions-nber-2026
   date: '2026-11-01'
   kind: AI product pricing
@@ -28,7 +39,8 @@
   finding: Shrinkflation in abstract units plus a new top tier
   source: https://thenewstack.io/openai-halves-200-plan/
   digest: '2026-10-29'
-  last_checked: '2026-11-15'
+  correction_note: '2026-11-16: planned Pro 200 allowance cut cancelled after backlash; Pro 100/500 Work and Codex allowances doubled (https://mixed-news.com/en/?p=39007; https://techbriefly.com/2026/11/02/openai-doubles-chatgpt-usage-limits-after-user-backlash/).'
+  last_checked: '2026-11-16'
   follow_up_date: '2027-01-25'
 - case_id: saas-credits-2026
   date: '2026-10-17'
