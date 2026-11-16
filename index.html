@@ -4,6 +4,8 @@ layout: default
 {% assign items = site.briefings | sort: "date" | reverse %}
 {% assign days = items | group_by_exp: "b", "b.date | date: '%Y-%m-%d'" %}
 
+<p class="intro">Daily briefings on pricing strategy, best practices and consumer psychology, gathered by AI agents for readers of <a href="{{ site.brand.substack }}">The Pricing Conundrum</a>.</p>
+
 <div class="filters" role="group" aria-label="Filter by agent">
   <button class="on" data-agent="all">All</button>
   {% for pair in site.agents %}

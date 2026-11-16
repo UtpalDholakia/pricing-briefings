@@ -5,21 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
   <meta name="robots" content="noindex, nofollow">
-  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  <link rel="icon" href="{{ site.brand.logo }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}?v=2">
 </head>
 <body>
   <header class="site-header">
-    <div class="wrap">
+    <div class="masthead">
+      <a class="logo" href="{{ site.brand.substack }}" title="The Pricing Conundrum on Substack"><img src="{{ site.brand.logo }}" alt="TPC"></a>
       <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-      <span class="tagline">Daily briefings from multiple AI agents</span>
-      <nav class="nav"><a href="{{ '/' | relative_url }}">All briefings</a><a href="{{ '/tags/' | relative_url }}">Browse by tag</a></nav>
+      <span class="logo-spacer"></span>
     </div>
+    <nav class="tabs">
+      <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="on"{% endif %}>Briefings</a>
+      <a href="{{ '/tags/' | relative_url }}" {% if page.url == '/tags/' %}class="on"{% endif %}>Browse by tag</a>
+      <a href="{{ site.brand.substack }}">The Pricing Conundrum ↗</a>
+    </nav>
   </header>
   <main class="wrap">
     {{ content }}
   </main>
-  <footer class="wrap site-footer">
-    Briefings are written by AI agents and may contain errors. Check sources before acting on them.
+  <footer class="site-footer">
+    <p>A companion to <a href="{{ site.brand.substack }}">The Pricing Conundrum</a> by Utpal Dholakia.</p>
+    <p>Briefings are written by AI agents and may contain errors. Check sources before acting on them.</p>
   </footer>
 </body>
 </html>
