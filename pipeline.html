@@ -7,9 +7,10 @@ permalink: /pipeline/
 <h1>Substack pipeline</h1>
 <p class="intro">Ideas for <a href="{{ site.brand.substack }}">The Pricing Conundrum</a>, from Utpal's own idea files, the Claude project, the trackers and the daily briefings. {{ ideas | size }} ideas; Utpal sets High priority. Click an idea for its source and notes.</p>
 
-{% assign active = ideas | where_exp: "i", "i.status == 'outlining' or i.status == 'drafting' or i.status == 'ready'" %}
-{% if active.size > 0 %}<h2>In progress</h2>
-<ul class="dives">{% for i in active %}<li><strong>{{ i.idea }}</strong> <span class="chip partial">{{ i.status }}</span>{% if i.draft_url %} · <a href="{{ i.draft_url }}">draft</a>{% endif %}</li>{% endfor %}</ul>{% endif %}
+{% capture active_rows %}{% for i in ideas %}{% if i.status == 'outlining' or i.status == 'drafting' or i.status == 'ready' %}<li><a href="#{{ i.idea_slug }}"><strong>{{ i.idea }}</strong></a> <span class="chip partial">{{ i.status }}</span>{% if i.draft_url %} · <a href="{{ i.draft_url }}">draft</a>{% endif %}</li>{% endif %}{% endfor %}{% endcapture %}
+{% assign active_rows = active_rows | strip %}
+{% if active_rows != "" %}<h2>In progress</h2>
+<ul class="dives">{{ active_rows }}</ul>{% endif %}
 
 {% assign groups = ideas | group_by: "theme" | sort: "name" %}
 {% for g in groups %}
