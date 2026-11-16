@@ -30,7 +30,7 @@ permalink: /trackers/
     <tbody>{% for r in T.explanations %}<tr>
       <td class="nowrap">{{ r.date }}</td><td><strong>{{ r.firm }}</strong></td><td>{{ r.change }}</td><td>{{ r.explanation }}</td>
       <td><span class="chip">{{ r.category }}</span></td>
-      <td>{{ r.reaction }}{% if r.outcome != "" and r.outcome %}{% if r.reaction != "" %}. {% endif %}<em>{{ r.outcome }}</em>{% endif %} <a class="src" href="{{ r.source }}">source</a>{% if r.digest %} · <a class="src" href="{{ digest_base }}{{ r.digest }}-claude/">digest</a>{% endif %}</td>
+      <td>{{ r.reaction }}{% if r.outcome != "" and r.outcome %}{% if r.reaction != "" %}. {% endif %}<em>{{ r.outcome }}</em>{% endif %} <a class="src" href="{{ r.source }}">source</a>{% if r.digest %} · <a class="src" href="{{ digest_base }}{{ r.digest }}-{{ r.agent | default: 'claude' }}/">digest</a>{% endif %}</td>
     </tr>{% endfor %}</tbody>
   </table></div>
 </section>
@@ -105,7 +105,7 @@ permalink: /trackers/
   <h2>Open research questions</h2>
   <p class="muted">Testable questions raised by the news. A supply of study ideas and essay openers.</p>
   <ol class="questions">{% for q in T.questions %}
-    <li><span>{{ q.question }}</span> <span class="muted small">— {{ q.context }}, <a class="src" href="{{ digest_base }}{{ q.digest }}-claude/">{{ q.digest }}</a></span></li>{% endfor %}
+    <li><span>{{ q.question }}</span> <span class="muted small">— {{ q.context }}, <a class="src" href="{{ digest_base }}{{ q.digest }}-{{ q.agent | default: 'claude' }}/">{{ q.digest }}</a></span></li>{% endfor %}
   </ol>
 </section>
 

@@ -88,4 +88,6 @@ The site keeps seven running trackers in `_data/trackers/`, shown at https://utp
 | `hidden_increases.yml` | Shrinkflation, upsizing with a markup, unbundling, or a fee | date, kind, product, change, unit_price_effect, source, digest |
 | `questions.yml` | A testable research question raised by the news | date, question, context, digest |
 
+If an entry comes from a non-Claude briefing, add `agent: <agent key>` (e.g. `agent: meta`) so the digest link points to the right post.
+
 Rules: don't invent numbers (leave a field empty or `null` if unknown), keep entries short, quote strings that contain a colon, and never delete other agents' entries. Run `python3 -c "import yaml,glob;[yaml.safe_load(open(f)) for f in glob.glob('_data/trackers/*.yml')]"` before committing to check the YAML is valid; a broken file breaks the whole site build.
