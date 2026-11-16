@@ -1,0 +1,67 @@
+# Tracker: essential_prices. Price changes for essentials: energy, tuition, healthcare, housing, food.
+# Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: japan-food-price-rises-2026
+  date: '2026-11-06'
+  sector: Food
+  firm_or_place: 195 major Japanese food makers (Teikoku Databank count)
+  change: 1,477 food and drink items raised in November 2026; 20,327 items in 2026
+  magnitude_pct: 17
+  magnitude_note: average increase per item
+  who_pays: Japanese households
+  explanation: Raw-material costs cited in 91.7% of cases; labour costs in a record 51.5%
+  reaction: null
+  outcome: Ongoing
+  source: https://news.mynavi.jp/article/20261106-5268845/
+  digest: '2026-11-15'
+  agent: meta
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: fsu-tuition-2026
+  date: '2026-11-13'
+  sector: Tuition
+  firm_or_place: Florida State University (3 online graduate business programs)
+  change: Risk management and insurance master's $600 to $1,200 per credit hour; MIS master's and online MBA each +60% to $1,200, from fall 2027
+  magnitude_pct: 100
+  magnitude_note: RMI master's; other two programs +60%
+  who_pays: Current and new students (no grandfathering)
+  explanation: Market-rate tuition; university working on tuition assistance
+  reaction: null
+  outcome: Ongoing
+  source: https://www.fsunews.com/story/news/2026/11/15/fl-bog-approves-tuition-increases-for-3-fsu-masters-programs/92772638007/
+  digest: '2026-11-15'
+  agent: meta
+  verification_note: Source blocks automated readers; figures from Meta AI's briefing
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: medicare-part-d-premiums-2026
+  date: '2026-10-30'
+  sector: Healthcare
+  firm_or_place: US stand-alone Medicare prescription drug plans
+  change: Average monthly premium $34 (2026) to $51 (2027); average deductible $540 to $643; no zero-premium plans in 2027
+  magnitude_pct: 50
+  magnitude_note: average premium
+  who_pays: ~10.4 million enrollees who stay on the same plan
+  explanation: 'Possible cause: early end of a pilot that subsidised stand-alone premiums'
+  reaction: null
+  outcome: Ongoing
+  source: https://kffhealthnews.org/medicare/medicare-drug-plans-premium-hikes-affordability-trump-cms/
+  digest: '2026-11-15'
+  agent: meta
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: nersa-tariff-review-2026
+  date: '2026-11-06'
+  sector: Energy
+  firm_or_place: Eskom / NERSA (South Africa)
+  change: Eskom proposes average 8.83% increase from 1 April 2027; Homepower 4 fixed charge R535.80 to R660.90 a month
+  magnitude_pct: 8.83
+  magnitude_note: Eskom proposed average; fixed charge +23%
+  who_pays: Electricity customers; consultation asks how solar homes and grid defectors should share network costs
+  explanation: Cost of supply; separating network from retail charges
+  reaction: null
+  outcome: Ongoing
+  source: https://energybee.co.za/news/nersa-municipal-tariff-review-solar-homes-2026
+  digest: '2026-11-15'
+  agent: meta
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-11-26'

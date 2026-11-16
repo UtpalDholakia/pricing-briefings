@@ -1,0 +1,93 @@
+# Tracker: nonwestern_pricing. Pricing outside the US/UK/EU, preferably from local-language sources.
+# Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: diwali-smartphones-2026
+  date: '2026-11-12'
+  country: India
+  language: English
+  firm_or_place: Offline smartphone retailers (AIMRA data)
+  change: Diwali offline smartphone sales down 18-20% year on year despite festive discounts; ~60% of purchases on EMI
+  context: Diwali festive sales after memory-chip-driven price rises
+  source: https://www.mymobileindia.com/diwali-smartphone-sales-fall-20-as-rising-prices-hurt-demand/
+  digest: '2026-11-15'
+  agent: meta
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: profeco-buen-fin-2026
+  date: '2026-11-09'
+  country: Mexico
+  language: English (coverage of Spanish-language source)
+  firm_or_place: Profeco (federal consumer agency)
+  change: Price-history microsite for 490 products across ~400 stores; largest gap MXN 9,309
+  context: Buen Fin sales (Nov 13-17); targets pre-sale price inflation
+  source: https://particle.news/story/profeco-launches-pricecomparison-microsite-as-shoppers-rely-on-ai-ahead-of-el-buen-fin
+  digest: '2026-11-15'
+  agent: meta
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-11-17'
+- case_id: japan-food-price-rises-2026
+  date: '2026-11-06'
+  country: Japan
+  language: Japanese (translated)
+  firm_or_place: 195 major food makers
+  change: 1,477 items raised in November, average +17%; labour costs cited in a record 51.5%
+  context: Second straight year above 20,000 items raised
+  source: https://news.mynavi.jp/article/20261106-5268845/
+  digest: '2026-11-15'
+  agent: meta
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: saizeriya-apology-2026
+  date: '2026-11-09'
+  country: Japan
+  language: English (AFP)
+  firm_or_place: Uniqlo; Saizeriya
+  change: Uniqlo reversed a sock price rise; Saizeriya's president apologized for a 20-yen rise
+  context: Price-increase norms formed during three decades of deflation
+  source: https://www.malaymail.com/news/money/2026/11/09/in-japan-raising-prices-isnt-just-business-its-something-to-apologise-for/242444
+  digest: '2026-11-10'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: macromill-stealth-hikes-2026
+  date: '2026-10-26'
+  country: Japan
+  language: Japanese
+  firm_or_place: Macromill consumer survey (n=3,000)
+  change: 90% notice stealth price hikes; ~60% reject raised container bottoms vs smaller packs
+  context: Shrinkflation tolerance
+  source: https://prtimes.jp/main/html/rd/p/000000686.000000624.html
+  digest: '2026-10-28'
+  last_checked: '2026-11-15'
+  follow_up_date: null
+- case_id: india-magic-price-points-2026
+  date: '2026-10-20'
+  country: India
+  language: English
+  firm_or_place: FMCG brands (NielsenIQ data)
+  change: ₹5/₹10 pack share falling; ₹5 chips pack ~17g to 8g over time
+  context: Iconic low price points under cost pressure
+  source: https://outlookbusiness.com/corporate/fmcg-5-10-rupees-packs-costs-rising-brands-margins-declining-shrinkflation
+  digest: '2026-10-22'
+  last_checked: '2026-11-15'
+  follow_up_date: null
+- case_id: irdai-dynamic-pricing-2026
+  date: '2026-10-27'
+  country: India
+  language: English
+  firm_or_place: IRDAI (insurance regulator)
+  change: Chairman says digital insurance should have no dynamic pricing
+  context: Regulator drawing category lines for variable pricing
+  source: https://business-standard.com/amp/specials/bs-events/irdai-chief-dynamic-pricing-insurance-sector-bs-bfsi-summit-2026-126102700559_1.html
+  digest: '2026-11-02'
+  last_checked: '2026-11-15'
+  follow_up_date: null
+- case_id: india-aviation-fare-breakdown-2026
+  date: '2026-11-02'
+  country: India
+  language: English
+  firm_or_place: Airlines (Bharatiya Vayuyan Niyam rules)
+  change: Fare breakdown and cost-data filing required from January 2027
+  context: Cost-transparency approach to fares
+  source: https://www.theweek.in/news/biz-tech/2026/11/02/flight-tickets-to-get-cheaper-governments-new-aviation-rules-bring-ticket-fares-under-focus.html
+  digest: '2026-11-04'
+  last_checked: '2026-11-15'
+  follow_up_date: '2027-01-15'

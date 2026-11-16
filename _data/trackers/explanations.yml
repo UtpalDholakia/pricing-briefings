@@ -1,136 +1,230 @@
-# Tracker: explanations. Newest first. Edit by appending entries; see AGENTS.md section 6.
-- date: '2026-11-14'
+# Tracker: explanations. How sellers explain price changes.
+# Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: grocery-outlet-promotions-2026
+  date: '2026-11-14'
   firm: Grocery Outlet
   change: Phased out 'synthetic' promotions
   explanation: Value image comes from unpredictable branded opportunistic deals, not scheduled promotions
   category: Value / quality
   reaction: Investor call; traffic +2.4%, basket -1.9%
   outcome: Ongoing
+  outcome_note: null
+  outcome_date: null
+  magnitude_pct: null
   source: https://www.fool.com/earnings/call-transcripts/2026/11/11/grocery-outlet-go-q3-2026-earnings-call-transcript/
   digest: '2026-11-13'
-- date: '2026-11-10'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-14'
+- case_id: saizeriya-apology-2026
+  date: '2026-11-10'
   firm: Saizeriya (Japan)
   change: 20-yen rise on a menu item
   explanation: President publicly apologized and promised to look for ways to cut prices again; kept the ¥100 glass of wine
   category: Apology
   reaction: Public apology expected by customers
-  outcome: 'Partial: iconic price held'
+  outcome: Held
+  outcome_note: Increase kept, with a public apology; iconic ¥100 wine price held
+  outcome_date: null
+  magnitude_pct: null
   source: https://www.malaymail.com/news/money/2026/11/09/in-japan-raising-prices-isnt-just-business-its-something-to-apologise-for/242444
   digest: '2026-11-10'
-- date: '2026-11-07'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-10'
+- case_id: starlink-congestion-2026
+  date: '2026-11-07'
   firm: Starlink
   change: Existing subscribers moved to location-based dynamic monthly prices (up to ~20%, e.g. $130 to $156; some cuts)
   explanation: Prices follow local network capacity and demand, reviewed quarterly
   category: Capacity / market
   reaction: Backlash, especially from captive rural customers
   outcome: Ongoing
+  outcome_note: null
+  outcome_date: null
+  magnitude_pct: 20
   source: https://www.satelliteinternet.com/resources/starlink-introduces-dynamic-pricing/
   digest: '2026-11-07'
-- date: '2026-11-05'
+  magnitude_note: up to ~20%
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-07'
+- case_id: walmart-nga-pledge-2026
+  date: '2026-11-05'
   firm: Walmart (and the National Grocers Association)
   change: Public pledge not to personalize prices
   explanation: '''Price the product, not the person''; NGA: no personal data to charge a person more, ESLs as plain price tags'
   category: Pledge
   reaction: Skeptical commentary (Salon) that shoppers can't verify app prices
   outcome: Ongoing
+  outcome_note: null
+  outcome_date: null
+  magnitude_pct: null
   source: https://www.salon.com/2026/11/02/the-strange-new-math-behind-the-price-of-your-groceries/
   digest: '2026-11-05'
-- date: '2026-11-05'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-05'
+- case_id: ticketmaster-au-in-demand-2026
+  date: '2026-11-05'
   firm: Ticketmaster / Ticketek (Australia)
   change: '''In Demand'' seats ~A$50 above near-identical seats'
   explanation: Organisers set the prices; no real-time algorithmic surge
   category: Deflect to third party
   reaction: CHOICE 'Shonky' award
   outcome: Ongoing
+  outcome_note: null
+  outcome_date: null
+  magnitude_pct: null
   source: https://michaelwest.com.au/ticketing-giants-dealt-booby-prize-for-dynamic-pricing
   digest: '2026-11-05'
-- date: '2026-11-03'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-05'
+- case_id: damavandi-justification-study
+  date: '2026-11-03'
   firm: 'Research: Damavandi, Antia & Kopalle (J. Marketing)'
   change: Field experiment, 1,600 self-storage customers, 5% vs 15% increases
   explanation: Only 'market' justifications (scarce alternatives) cut attrition (~29.5%); cost and quality reasons did no better than none
   category: Evidence
-  reaction: ''
-  outcome: ''
+  reaction: null
+  outcome: null
+  outcome_note: null
+  outcome_date: null
+  magnitude_pct: null
   source: https://haslam.utk.edu/news/ut-haslam-researcher-finds-messaging-matters-in-price-increase-notifications/
   digest: '2026-11-03'
-- date: '2026-11-01'
+  last_checked: '2026-11-15'
+  follow_up_date: null
+- case_id: openai-per-job-pricing-2026
+  date: '2026-11-01'
   firm: OpenAI
   change: Tested a single per-job price instead of per-token metering
   explanation: 'Altman: tokens are a ''fake unit'', but buyers wanted to see what they pay for'
   category: Auditability
   reaction: Customer objections
-  outcome: Backed off; kept tokens
+  outcome: Reversed
+  outcome_note: Backed off; kept token pricing
+  outcome_date: null
+  magnitude_pct: null
   source: https://thenewstack.io/openai-token-pricing-reversal
   digest: '2026-11-01'
-- date: '2026-10-31'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-01'
+- case_id: hershey-mondelez-cocoa-2026
+  date: '2026-10-31'
   firm: Hershey; Mondelez
   change: No shelf-price cuts despite cocoa costs falling sharply
   explanation: 'Hershey: value strategy ''not about rolling back prices'' (targeted promos, pack changes, entry price points); Mondelez reinvests cocoa savings in brands'
-  category: Refusal to cut (rockets and feathers)
+  category: Refusal to cut
   reaction: Earnings calls
-  outcome: Ongoing
+  outcome: Held
+  outcome_note: No shelf-price cuts; promotions and pack changes instead
+  outcome_date: null
+  magnitude_pct: null
   source: https://www.fool.com/earnings/call-transcripts/2026/10/29/hershey-hsy-q3-2026-earnings-call-transcript/
   digest: '2026-10-31'
-- date: '2026-10-29'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-11-30'
+- case_id: chipotle-pricing-restraint-2026
+  date: '2026-10-29'
   firm: Chipotle
   change: 2026 pricing ~2% against ~3% cost inflation
   explanation: Deliberate ~100bp gap; increases tested against control restaurants so they can be rolled back
   category: Restraint
   reaction: Lower-income cohorts outperformed
   outcome: Ongoing
+  outcome_note: null
+  outcome_date: null
+  magnitude_pct: 2
   source: https://www.fool.com/earnings/call-transcripts/2026/10/29/chipotle-cmg-q3-2026-earnings-call-transcript/
   digest: '2026-10-29'
-- date: '2026-10-29'
+  magnitude_note: ~2% for 2026
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-11-28'
+- case_id: burry-substack-2026
+  date: '2026-10-29'
   firm: Michael Burry (Substack)
   change: $49 to $69/month for new subscribers only
   explanation: Higher price would protect community quality by deterring drive-by joiners who leak content
-  category: Screening / gatekeeping
+  category: Screening
   reaction: Reader pushback even though existing subscribers were grandfathered
-  outcome: Reversed within days, citing accessibility
+  outcome: Reversed
+  outcome_note: Reversed within days, citing accessibility
+  outcome_date: null
+  magnitude_pct: 41
   source: https://stocktwits.com/news-articles/markets/equity/michael-burry-cancels-substack-price-hike-plan-pushback-denies-money-grab/cZUdA8eRByd
   digest: '2026-10-29'
-- date: '2026-10-29'
+  magnitude_note: $49 to $69
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-11-28'
+- case_id: nestle-minis-germany-2026
+  date: '2026-10-29'
   firm: Nestlé (Germany)
   change: KitKat/Lion/Smarties minis 13 to 10 pieces under a 'new format' flag
   explanation: Pointed to a lower suggested retail price (EUR 4.79 to 3.79), though per-piece price still rose
   category: Lower list price
   reaction: Named 'misleading package of the month'
   outcome: Ongoing
+  outcome_note: null
+  outcome_date: null
+  magnitude_pct: null
   source: https://www.t-online.de/leben/aktuelles/id_101468062/mogelpackung-des-monats-nestle-versteckt-preiserhoehung-hinter-design.html
   digest: '2026-10-29'
-- date: '2026-10-27'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-11-28'
+- case_id: chatgpt-pro-allowance-2026
+  date: '2026-10-27'
   firm: OpenAI (ChatGPT Pro)
   change: $200 plan allowance halved (20x to 10x Plus) at same price; new $500 tier
   explanation: More efficient models mean users still get more done; one-time credits for existing subscribers
   category: Efficiency
   reaction: Largely negative among developers
-  outcome: Mitigated with credits
+  outcome: Mitigated
+  outcome_note: One-time credits for existing subscribers
+  outcome_date: null
+  magnitude_pct: null
   source: https://thenewstack.io/openai-halves-200-plan/
   digest: '2026-10-29'
-- date: '2026-10-27'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-11-26'
+- case_id: sam-fender-tour-2026
+  date: '2026-10-27'
   firm: Sam Fender
   change: 2027 stadium-tour prices (~£98-131 standing vs £65-88 last year)
   explanation: Artist said price rises should track only the cost of staging the show
   category: Cost
   reaction: Fan backlash after leak
-  outcome: 'Repriced: £85 standing, front-standing tier scrapped (old prices incl. fees, new excl.)'
+  outcome: Partially reversed
+  outcome_note: 'Repriced: £85 standing, front-standing tier scrapped (old prices incl. fees, new excl.)'
+  outcome_date: null
+  magnitude_pct: null
   source: https://faroutmagazine.co.uk/sam-fender-reveals-new-ticket-prices-for-2027-tour-condemning-own-prices/
   digest: '2026-10-27'
-- date: '2026-10-26'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-11-26'
+- case_id: restaurant-surcharges-chicago-la-2026
+  date: '2026-10-26'
   firm: Chicago/LA restaurants
   change: Kept 3-4% surcharges while raising menu prices up to 84%
   explanation: Surcharges originally presented as an alternative to menu increases
-  category: Cost (drifted)
+  category: Cost
   reaction: Reddit 'offenders list'
   outcome: Ongoing
+  outcome_note: 'Justification has drifted: surcharges kept while menu prices also rose'
+  outcome_date: null
+  magnitude_pct: null
   source: https://kitgraham.substack.com/p/squeezed-increased-menu-prices-and
   digest: '2026-10-26'
-- date: '2026-10-22'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-11-25'
+- case_id: united-middle-seat-2026
+  date: '2026-10-22'
   firm: United Airlines
   change: Charging to avoid the middle seat
   explanation: 'CEO Scott Kirby: avoiding the middle seat should cost extra (worst seat becomes the default)'
   category: Reference-point reframing
   reaction: Trade press
-  outcome: Tied to new economy product
+  outcome: Ongoing
+  outcome_note: Tied to a new economy product
+  outcome_date: null
+  magnitude_pct: null
   source: https://aerocrewnews.com/2026/10/18/united-ceo-avoiding-the-middle-seat-should-come-at-a-price/
   digest: '2026-10-22'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-11-21'

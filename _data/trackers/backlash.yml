@@ -1,127 +1,246 @@
-# Tracker: backlash. Newest first. Edit by appending entries; see AGENTS.md section 6.
-- date: '2026-11-11'
+# Tracker: backlash. Price backlash and whether the seller reversed.
+# Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: crochet-seller-reversal-2026
+  date: '2026-11-10'
+  firm: Crochet handbag seller (Instagram)
+  change: Raised bag prices from $175 to $175-225 after followers urged higher prices
+  framing: Followers' advice to charge more
+  backlash: Seller chose community over extra money
+  reversed: 'Yes'
+  reversal_note: Permanent reversal to $175, citing community over extra money
+  days_to_reversal: null
+  outcome_date: '2026-11-10'
+  magnitude_pct: null
+  reaction_volume: null
+  source: https://www.instagram.com/reel/DfisKGdNShB/
+  digest: '2026-11-15'
+  agent: meta
+  verification_note: Post confirmed (Nov 10, about not taking followers' pricing advice); dollar figures are spoken in the video and not independently checked
+  last_checked: '2026-11-15'
+  follow_up_date: null
+- case_id: noah-kahan-presale-2026
+  date: '2026-11-11'
   firm: Noah Kahan (presale)
   change: $300-500+ presale tickets ($405.50 + $81.10 fees in one checkout)
   framing: Artist backs resale caps at 110% of face
   backlash: Fans balked at primary prices
   reversed: Pending
+  reversal_note: null
   days_to_reversal: null
+  outcome_date: null
+  magnitude_pct: null
+  reaction_volume: null
   source: https://www.ticketnews.com/2026/11/noah-kahan-presale-prices-resale-caps-2027/
   digest: '2026-11-11'
-- date: '2026-11-09'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-11'
+- case_id: earls-admin-fee-2026
+  date: '2026-11-09'
   firm: Earls Kitchen + Bar (Denver)
   change: 3% admin fee (83 cents)
   framing: Admin fee on bill
   backlash: Reddit pile-on; diners say they cut tips to offset
   reversed: Unknown
+  reversal_note: null
   days_to_reversal: null
+  outcome_date: null
+  magnitude_pct: null
+  reaction_volume: null
   source: https://www.wfmd.com/2026/11/09/restaurant-admin-fees-spark-backlash-as-diners-question-what-theyre-paying-for/
   digest: '2026-11-10'
-- date: '2026-11-09'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-09'
+- case_id: duffys-operations-charge-2026
+  date: '2026-11-09'
   firm: Duffy's (Florida)
   change: 3% 'operations charge'
   framing: On menu but not shown properly on receipt
   backlash: Cited by state inspector under new disclosure rule
   reversed: 'Yes'
+  reversal_note: Fee dropped after state inspection citation
   days_to_reversal: null
+  outcome_date: null
+  magnitude_pct: null
+  reaction_volume: null
   source: https://www.wfmd.com/2026/11/09/restaurant-admin-fees-spark-backlash-as-diners-question-what-theyre-paying-for/
   digest: '2026-11-10'
-- date: '2026-11-07'
+  last_checked: '2026-11-15'
+  follow_up_date: null
+- case_id: starlink-congestion-2026
+  date: '2026-11-07'
   firm: Starlink
   change: Congestion-based monthly price increases 10-20%
   framing: Local capacity and demand
   backlash: Accusations of exploiting rural customers with no alternatives
   reversed: 'No'
+  reversal_note: null
   days_to_reversal: null
+  outcome_date: null
+  magnitude_pct: null
+  reaction_volume: null
   source: https://teslanorth.com/2026/11/08/starlink-price-hikes-spread-us-backlash/
   digest: '2026-11-09'
-- date: '2026-11-04'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-07'
+- case_id: sony-ps-store-pricing-2026
+  date: '2026-11-04'
   firm: Sony PlayStation Store
   change: Account-dependent Black Friday prices (~$5 gaps; 30% vs 60% discounts)
   framing: '''Price depends on your account (dynamic pricing)'' label'
   backlash: Players compare screenshots; boycott talk
-  reversed: No (Sony silent)
+  reversed: 'No'
+  reversal_note: Sony silent
   days_to_reversal: null
+  outcome_date: null
+  magnitude_pct: null
+  reaction_volume: null
   source: https://www.pushsquare.com/news/2026/11/ps5-dynamic-pricing-impacts-new-ps-store-black-friday-offers-roughly-usd5-variations-in-prices
   digest: '2026-11-05'
-- date: '2026-11-04'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-04'
+- case_id: carnival-crew-love-2026
+  date: '2026-11-04'
   firm: Carnival
   change: '''Crew Love'' stickers for guests who prepaid gratuities'
   framing: Recognition for prepaid tippers
   backlash: 'Split TikTok reaction: shaming vs recognition'
-  reversed: Pending (pilot)
+  reversed: Pending
+  reversal_note: Pilot
   days_to_reversal: null
+  outcome_date: null
+  magnitude_pct: null
+  reaction_volume: null
   source: https://www.foxnews.com/travel/cruise-passengers-criticize-new-program-identifying-early-tippers-board
   digest: '2026-11-04'
-- date: '2026-11-04'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-04'
+- case_id: car-feature-subscriptions-2026
+  date: '2026-11-04'
   firm: Automakers (VW, Subaru)
   change: Subscriptions to unlock hardware already in the car
   framing: Connected features
   backlash: Stated WTP for connected services fell 86% to 68% in a year
   reversed: 'No'
+  reversal_note: null
   days_to_reversal: null
+  outcome_date: null
+  magnitude_pct: null
+  reaction_volume: null
   source: https://fortune.com/2026/11/04/car-subscriptions-automakers-drivers-pushback/
   digest: '2026-11-11'
-- date: '2026-11-01'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-04'
+- case_id: openai-per-job-pricing-2026
+  date: '2026-11-01'
   firm: OpenAI
   change: Per-job price replacing token metering (test)
   framing: Simpler pricing
   backlash: Customers wanted an auditable unit
   reversed: 'Yes'
+  reversal_note: Kept token pricing
   days_to_reversal: null
+  outcome_date: null
+  magnitude_pct: null
+  reaction_volume: null
   source: https://thenewstack.io/openai-token-pricing-reversal
   digest: '2026-11-01'
-- date: '2026-10-29'
+  last_checked: '2026-11-15'
+  follow_up_date: null
+- case_id: burry-substack-2026
+  date: '2026-10-29'
   firm: Michael Burry (Substack)
   change: ~41% price rise for new subscribers
   framing: Protect community quality
   backlash: Reader pushback
-  reversed: Yes, within days
+  reversed: 'Yes'
+  reversal_note: Within days
   days_to_reversal: null
+  outcome_date: null
+  magnitude_pct: 41
+  reaction_volume: null
   source: https://stocktwits.com/news-articles/markets/equity/michael-burry-cancels-substack-price-hike-plan-pushback-denies-money-grab/cZUdA8eRByd
   digest: '2026-10-29'
-- date: '2026-10-27'
+  magnitude_note: $49 to $69, new subscribers only
+  last_checked: '2026-11-15'
+  follow_up_date: null
+- case_id: chatgpt-pro-allowance-2026
+  date: '2026-10-27'
   firm: OpenAI (ChatGPT Pro)
   change: Usage allowance halved at same $200 price
   framing: Efficiency gains
   backlash: Largely negative developer reaction
-  reversed: Partial (one-time credits)
+  reversed: Partial
+  reversal_note: One-time credits
   days_to_reversal: null
+  outcome_date: null
+  magnitude_pct: null
+  reaction_volume: null
   source: https://thenewstack.io/openai-halves-200-plan/
   digest: '2026-10-29'
-- date: '2026-10-26'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-11-26'
+- case_id: rogers-sportsnet-plus-2026
+  date: '2026-10-26'
   firm: Rogers / Sportsnet+
   change: Monday Night Hockey moved behind C$12.99/month add-on after ~30% price increase
   framing: Streaming exclusive
   backlash: 'Leafs fans revolt: what was included became an add-on'
   reversed: 'No'
+  reversal_note: null
   days_to_reversal: null
+  outcome_date: null
+  magnitude_pct: 30
+  reaction_volume: null
   source: https://www.iphoneincanada.ca/2026/10/21/leafs-fans-sportsnet-plus-monday-night-hockey-cost/
   digest: '2026-10-26'
-- date: '2026-10-24'
+  magnitude_note: ~30% earlier price increase; add-on C$12.99/month
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-11-25'
+- case_id: sam-fender-tour-2026
+  date: '2026-10-24'
   firm: Sam Fender
   change: Stadium tour price rise and premium front standing
   framing: Promoter-set tiers
   backlash: Fans compared with last year's prices
-  reversed: Partial (repriced, front standing scrapped)
+  reversed: Partial
+  reversal_note: Repriced; front-standing tier scrapped
   days_to_reversal: null
+  outcome_date: null
+  magnitude_pct: null
+  reaction_volume: null
   source: https://britbrief.co.uk/entertainment/music/sam-fender-cuts-ticket-prices-and-removes-front-standing.html
   digest: '2026-10-27'
-- date: '2026-10-20'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-11-23'
+- case_id: uca-terraza-fees-2026
+  date: '2026-10-20'
   firm: üca terraza (Los Angeles)
   change: 5% admin fee on top of mandatory 20% tip ($173 subtotal to $226)
   framing: Disclosed under California surcharge law
   backlash: Reddit calls it extortion
   reversed: Unknown
+  reversal_note: null
   days_to_reversal: null
+  outcome_date: null
+  magnitude_pct: null
+  reaction_volume: null
   source: https://hoodline.com/2026/10/downtown-la-rooftop-spot-uca-terraza-slammed-over-surcharge-on-top-of-mandatory-tip
   digest: '2026-10-20'
-- date: 2026-10
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-11-19'
+- case_id: uniqlo-socks-2026
+  date: 2026-10
   firm: Uniqlo (Japan)
   change: Basic sock price increase
-  framing: ''
+  framing: null
   backlash: Customer backlash (October increase)
-  reversed: Yes, within weeks
+  reversed: 'Yes'
+  reversal_note: Within weeks
   days_to_reversal: null
+  outcome_date: null
+  magnitude_pct: null
+  reaction_volume: null
   source: https://www.malaymail.com/news/money/2026/11/09/in-japan-raising-prices-isnt-just-business-its-something-to-apologise-for/242444
   digest: '2026-11-10'
+  last_checked: '2026-11-15'
+  follow_up_date: null

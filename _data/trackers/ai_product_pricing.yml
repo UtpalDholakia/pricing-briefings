@@ -1,0 +1,42 @@
+# Tracker: ai_product_pricing. How AI products themselves are priced.
+# Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: genai-subscriptions-nber-2026
+  date: '2026-11-01'
+  kind: AI product pricing
+  title: 'Generative-AI subscriptions: 2.9% pay, high churn'
+  who: Egan, Russel, Shi & Yao (NBER 35953)
+  finding: Card data on 174M consumers; retention 20-45%/year; switching spikes at model releases
+  source: https://www.nber.org/papers/w35953
+  digest: '2026-11-01'
+  last_checked: '2026-11-15'
+  follow_up_date: '2027-01-30'
+- case_id: openai-per-job-pricing-2026
+  date: '2026-11-01'
+  kind: AI product pricing
+  title: OpenAI backs off per-job pricing
+  who: OpenAI
+  finding: Buyers preferred auditable token metering over a simpler flat per-job price
+  source: https://thenewstack.io/openai-token-pricing-reversal
+  digest: '2026-11-01'
+  last_checked: '2026-11-15'
+  follow_up_date: '2027-01-30'
+- case_id: chatgpt-pro-allowance-2026
+  date: '2026-10-27'
+  kind: AI product pricing
+  title: ChatGPT Pro allowance halved; $500 tier added
+  who: OpenAI
+  finding: Shrinkflation in abstract units plus a new top tier
+  source: https://thenewstack.io/openai-halves-200-plan/
+  digest: '2026-10-29'
+  last_checked: '2026-11-15'
+  follow_up_date: '2027-01-25'
+- case_id: saas-credits-2026
+  date: '2026-10-17'
+  kind: AI product pricing
+  title: SaaS credits as a vendor-controlled currency
+  who: Deepak Gupta (Security Boulevard)
+  finding: Credits allow quiet exchange-rate changes and breakage; PricingSaaS later logs credits at 22% of tracked changes
+  source: https://securityboulevard.com/2026/10/how-to-buy-software-when-ai-breaks-pricing/
+  digest: '2026-10-21'
+  last_checked: '2026-11-15'
+  follow_up_date: '2027-01-15'

@@ -1,136 +1,228 @@
-# Tracker: laws. Newest first. Edit by appending entries; see AGENTS.md section 6.
-- jurisdiction: New York City
+# Tracker: laws. Pricing laws and rules by jurisdiction.
+# Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: us-surveillance-pricing-laws-2026
+  jurisdiction: New York City
   topic: Personalized pricing
   approach: Ban
   scope: Algorithmic prices using personal data to charge different people different prices; online and in-store; fines up to $1,000 per transaction
   carve_outs: Stated-trait discounts (e.g. veterans); loyalty tiers based on own purchase history; no inferred traits; marketplaces may not use purchase history to set reference prices
-  status: Passed Nov 12, 2026; awaits mayor
+  status: Passed
+  status_note: Passed Nov 12, 2026; awaits mayor's signature
   effective: One year after signing
+  enforcement: null
   source: https://dataprivacy.foxrothschild.com/2026/11/articles/general-privacy-data-security-news-developments/new-york-city-council-passes-surveillance-pricing-ban/
   updated: '2026-11-15'
-- jurisdiction: Seattle
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: us-surveillance-pricing-laws-2026
+  jurisdiction: Seattle
   topic: Personalized pricing
   approach: Ban
   scope: Algorithmic price discrimination; reaches electronic shelf labels
   carve_outs: Purchase-history discounts only if offered to groups; group size set by rulemaking (~March 2027)
-  status: Signed Oct 5, 2026
+  status: Enacted
+  status_note: Signed Oct 5, 2026
   effective: Sept 2027
+  enforcement: null
   source: https://kiro7.com/news/local/kiro-7-investigates-seattle-bans-surveillance-pricing-will-shoppers-lose-discounts/XAJH2NM7EZCW5N436Q2QIFBA6U
   updated: '2026-11-04'
-- jurisdiction: Maryland
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: us-surveillance-pricing-laws-2026
+  jurisdiction: Maryland
   topic: Personalized pricing
   approach: Ban
   scope: Data-driven dynamic pricing of certain foods and delivery; retailers must hold a price at least one business day
-  carve_outs: ''
+  carve_outs: null
   status: In force
+  status_note: null
   effective: '2026-10-01'
+  enforcement: null
   source: https://datamatters.sidley.com/2026/10/27/from-disclosures-to-prohibitions-the-new-legal-landscape-on-the-use-of-consumer-data-for-personalized-pricing/
   updated: '2026-11-10'
-- jurisdiction: New Jersey
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: us-surveillance-pricing-laws-2026
+  jurisdiction: New Jersey
   topic: Personalized pricing
   approach: Ban
   scope: Grocery and necessities; first private right of action; one-year moratorium on electronic shelf labels
-  carve_outs: ''
+  carve_outs: null
   status: Enacted
+  status_note: null
   effective: Aug 2027
+  enforcement: null
   source: https://datamatters.sidley.com/2026/10/27/from-disclosures-to-prohibitions-the-new-legal-landscape-on-the-use-of-consumer-data-for-personalized-pricing/
   updated: '2026-11-10'
-- jurisdiction: Connecticut
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: us-surveillance-pricing-laws-2026
+  jurisdiction: Connecticut
   topic: Personalized pricing
   approach: Ban + disclosure
   scope: Bans in some sectors; others may personalize only with a notice that personal data raised the price
-  carve_outs: ''
+  carve_outs: null
   status: Enacted
-  effective: ''
+  status_note: null
+  effective: null
+  enforcement: null
   source: https://datamatters.sidley.com/2026/10/27/from-disclosures-to-prohibitions-the-new-legal-landscape-on-the-use-of-consumer-data-for-personalized-pricing/
   updated: '2026-10-30'
-- jurisdiction: New York State
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: ny-algorithmic-pricing-label-2026
+  jurisdiction: New York State
   topic: Personalized pricing
   approach: Disclosure (label); broader ban pending
   scope: Mandated 'price set by an algorithm using your personal data' notice; One Fair Price package awaited the governor
-  carve_outs: ''
-  status: Label under Second Circuit challenge; sources disagree on the ban's status
-  effective: ''
+  carve_outs: null
+  status: Under challenge
+  status_note: Label under Second Circuit challenge; sources disagree on the broader ban's status
+  effective: null
+  enforcement: null
   source: https://www.courthousenews.com/retailers-slam-surveillance-pricing-warning-label-in-second-circuit-appeal/
   updated: '2026-10-31'
-- jurisdiction: Michigan
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: us-surveillance-pricing-laws-2026
+  jurisdiction: Michigan
   topic: Personalized pricing
   approach: Ban (bill)
   scope: Prices based on personal data
   carve_outs: Retailers want discounts, seasonal sales and supply-demand pricing exempted
-  status: Passed House; in Senate committee
-  effective: ''
+  status: Proposed
+  status_note: Passed House; in Senate committee
+  effective: null
+  enforcement: null
   source: https://www.dailypress.net/news/local-news/2026/11/bills-could-control-how-surveillance-pricing-impacts-what-you-pay-for-products/
   updated: '2026-11-07'
-- jurisdiction: Colorado
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: null
+  jurisdiction: Colorado
   topic: Personalized pricing
   approach: Ban (vetoed)
   scope: Would have penalized lower individualized prices too
-  carve_outs: ''
-  status: Vetoed by Gov. Polis
-  effective: ''
+  carve_outs: null
+  status: Vetoed
+  status_note: Vetoed by Gov. Polis
+  effective: null
+  enforcement: null
   source: https://keyt.com/news/money-and-business/cnn-business-consumer/2026/10/19/so-you-say-you-hate-surveillance-pricing/
   updated: '2026-10-20'
-- jurisdiction: US federal (FTC)
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: ftc-6b-personalized-pricing-2026
+  jurisdiction: US federal (FTC)
   topic: Personalized pricing
   approach: Policy statement + 6(b) study
   scope: 'Proposed policy: undisclosed personalized pricing may be deceptive where buyers expect one price'
-  carve_outs: ''
-  status: Policy proposed Aug 2026, not final; 6(b) responses due mid-Dec
-  effective: ''
+  carve_outs: null
+  status: Proposed
+  status_note: Policy statement proposed Aug 2026, not final; 6(b) responses due mid-Dec
+  effective: null
+  enforcement: null
   source: https://www.kirkland.com/publications/kirkland-alert/2026/11/ftc-and-states-signal-price-transparency-is-a-top-priority
   updated: '2026-11-09'
-- jurisdiction: European Union
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: eu-digital-fairness-act-2026
+  jurisdiction: European Union
   topic: Reference prices, drip pricing, dynamic pricing, virtual currencies
   approach: Blacklist + disclosure
   scope: Reference-price claims and drip pricing on per-se blacklist; real-money values for in-game currency; max-price disclosure for dynamic event ticketing; active consent before free trials convert
   carve_outs: Personalized pricing banned only where profiling harms minors or vulnerable consumers
-  status: Commission proposal Nov 11, 2026
+  status: Proposed
+  status_note: Commission proposal Nov 11, 2026
   effective: Unlikely before 2028
+  enforcement: null
   source: https://www.freshfields.com/en/our-thinking/briefings/2026/11/digital-fairness-act-the-eus-new-consumer-protection-rulebook-takes-shape
   updated: '2026-11-14'
-- jurisdiction: United Kingdom (CMA, DMCC Act)
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: uk-cma-drip-pricing-2026
+  jurisdiction: United Kingdom (CMA, DMCC Act)
   topic: Drip pricing and fees
   approach: All-in pricing with fines
   scope: Mandatory fees, incl. delivery, in headline price at every step; marketplaces include each seller's delivery charge
-  carve_outs: ''
-  status: Enforced; £5.1m+ in drip-pricing fines
+  carve_outs: null
+  status: In force
+  status_note: null
   effective: In force; subscription regime from Jan 2027
+  enforcement: £5.1m+ in drip-pricing fines; Wayfair £4.8m
   source: https://www.lewissilkin.com/insights/2026/11/03/cma-issues-warning-to-online-retailers-about-delivery-fees-102o7ck
   updated: '2026-11-06'
-- jurisdiction: Florida
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: null
+  jurisdiction: Florida
   topic: Restaurant fees
   approach: Disclosure
   scope: Amount and purpose of restaurant fees disclosed before ordering
-  carve_outs: ''
-  status: In force since July 2026
+  carve_outs: null
+  status: In force
+  status_note: In force since July 2026
   effective: 2026-07
+  enforcement: Duffy's location cited; fee dropped
   source: https://www.wfmd.com/2026/11/09/restaurant-admin-fees-spark-backlash-as-diners-question-what-theyre-paying-for/
   updated: '2026-11-10'
-- jurisdiction: Australia
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: au-card-surcharge-ban-2026
+  jurisdiction: Australia
   topic: Card surcharges; unfair trading
   approach: Ban
   scope: Card surcharges banned (cash discounts allowed); new unfair-trading law to follow
-  carve_outs: ''
-  status: Surcharge ban in force
+  carve_outs: null
+  status: In force
+  status_note: Surcharge ban in force; unfair-trading law from July 2027
   effective: 2026-10-01; unfair trading July 2027
+  enforcement: null
   source: https://www.abc.net.au/news/2026-11-10/shoppers-warned-dodgy-discounts-black-friday-sales/107365588
   updated: '2026-11-10'
-- jurisdiction: India (aviation)
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: null
+  jurisdiction: India (aviation)
   topic: Fare transparency
   approach: Cost breakdown disclosure
   scope: Airlines show fare breakdown and file cost data with DGCA
-  carve_outs: ''
-  status: Adopted
+  carve_outs: null
+  status: Enacted
+  status_note: null
   effective: Jan 2027
+  enforcement: null
   source: https://www.theweek.in/news/biz-tech/2026/11/02/flight-tickets-to-get-cheaper-governments-new-aviation-rules-bring-ticket-fares-under-focus.html
   updated: '2026-11-04'
-- jurisdiction: Canada (federal banks)
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: null
+  jurisdiction: Canada (federal banks)
   topic: Exit fees
   approach: Ban (proposed)
   scope: Investment-account transfer-out fees ($50-150)
-  carve_outs: ''
+  carve_outs: null
   status: Proposed
-  effective: ''
+  status_note: null
+  effective: null
+  enforcement: null
   source: https://www.fintech.ca/2026/11/05/fintechs-welcome-ottawas-proposed-ban-on-investment-transfer-fees/
   updated: '2026-11-08'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-12-15'
+- case_id: nersa-tariff-review-2026
+  jurisdiction: South Africa (NERSA)
+  topic: Electricity tariffs / solar
+  approach: Consultation
+  scope: Standardise 500+ municipal electricity charge types; separate network from retail charges; how rooftop solar, wheeling and grid defection are reflected in tariffs
+  carve_outs: null
+  status: Proposed
+  status_note: Consultation published Nov 6, 2026; comments close Dec 7, 2026; hearing Dec 14; Eskom 2027/28 retail tariff decision Nov 26, 2026
+  effective: null
+  enforcement: null
+  source: https://energybee.co.za/news/nersa-municipal-tariff-review-solar-homes-2026
+  updated: '2026-11-15'
+  agent: meta
+  digest: '2026-11-15'
+  last_checked: '2026-11-15'
+  follow_up_date: '2026-11-26'

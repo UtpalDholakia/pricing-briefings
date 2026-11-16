@@ -5,49 +5,100 @@ permalink: /trackers/
 ---
 {% assign T = site.data.trackers %}
 {% capture digest_base %}{{ '/briefings/' | relative_url }}{% endcapture %}
+{% assign today = site.time | date: '%Y-%m-%d' %}
+{% assign soon = site.time | date: '%s' | plus: 604800 | date: '%Y-%m-%d' %}
 
 <h1 class="page-title">Trackers</h1>
-<p class="muted">Cases, measurements and research evidence for future Pricing Conundrum pieces. <a href="{{ '/tracker-methods/' | relative_url }}">Tracker methods</a>.</p>
+<p class="muted">Running logs kept from the daily briefings, as longitudinal raw material for The Pricing Conundrum. Every entry has a source, a case ID that links it across trackers, and a follow-up date. Updated each morning. <a href="{{ '/tracker-methods/' | relative_url }}">Tracker methods</a>.</p>
+
+{% comment %} ---------- Summary numbers ---------- {% endcomment %}
+{% assign rev_yes = T.backlash | where: "reversed", "Yes" | size %}
+{% assign rev_part = T.backlash | where: "reversed", "Partial" | size %}
+{% assign rev_no = T.backlash | where: "reversed", "No" | size %}
+{% assign rev_open = T.backlash | size | minus: rev_yes | minus: rev_part | minus: rev_no %}
+{% assign rev_resolved = rev_yes | plus: rev_part | plus: rev_no %}
+{% assign rev_any = rev_yes | plus: rev_part %}
+<div class="stat-row">
+  <div class="stat"><span class="big">{{ rev_any }} of {{ rev_resolved }}</span><span class="lbl">resolved backlash cases reversed at least partly ({{ rev_yes }} Yes, {{ rev_part }} Partial, {{ rev_no }} No; {{ rev_open }} still Pending/Unknown)</span></div>
+  {% assign q_open = T.questions | where: "status", "Open" | size %}{% assign q_ans = T.questions | where: "status", "Answered" | size %}
+  <div class="stat"><span class="big">{{ q_ans }} / {{ T.questions | size }}</span><span class="lbl">research questions answered ({{ q_open }} open)</span></div>
+  {% assign st_open = T.stories | where: "status", "Open" | size %}
+  <div class="stat"><span class="big">{{ st_open }}</span><span class="lbl">open stories of {{ T.stories | size }}</span></div>
+</div>
 
 <div class="tracker-toolbar">
   <nav class="tracker-nav">
-    <a href="#explanations">Price-change explanations <small>{{ T.explanations | size }}</small></a>
-    <a href="#backlash">Backlash &amp; reversals <small>{{ T.backlash | size }}</small></a>
-    <a href="#stories">Ongoing stories <small>{{ T.stories | size }}</small></a>
-    <a href="#ai">AI shopping agents <small>{{ T.ai_agents | size }}</small></a>
-    <a href="#laws">Pricing laws <small>{{ T.laws | size }}</small></a>
-    <a href="#hidden">Hidden increases &amp; fees <small>{{ T.hidden_increases | size }}</small></a>
-    <a href="#questions">Research questions <small>{{ T.questions | size }}</small></a>
+    <a href="#followup">Follow-up queue</a>
+    <a href="#explanations">Explanations <small>{{ T.explanations | size }}</small></a>
+    <a href="#backlash">Backlash <small>{{ T.backlash | size }}</small></a>
+    <a href="#stories">Stories <small>{{ T.stories | size }}</small></a>
+    <a href="#essential">Essentials <small>{{ T.essential_prices | size }}</small></a>
+    <a href="#nonwestern">Outside US/UK/EU <small>{{ T.nonwestern_pricing | size }}</small></a>
+    <a href="#hidden">Hidden increases <small>{{ T.hidden_increases | size }}</small></a>
+    <a href="#laws">Laws <small>{{ T.laws | size }}</small></a>
+    <a href="#ai">AI agents <small>{{ T.ai_agents | size }}</small></a>
+    <a href="#aiprice">AI product pricing <small>{{ T.ai_product_pricing | size }}</small></a>
+    <a href="#questions">Questions <small>{{ T.questions | size }}</small></a>
     <a href="#price-panel">What customers pay <small>{{ T.price_panel | size }}</small></a>
     <a href="#pricing-evidence">Pricing evidence <small>{{ T.pricing_evidence | size }}</small></a>
     <a href="#model-migrations">Model migrations <small>{{ T.model_migrations | size }}</small></a>
   </nav>
-  <input id="tracker-filter" type="search" aria-label="Filter all trackers" placeholder="Filter all trackers (e.g. Starlink, fee, FTC)">
+  <input id="tracker-filter" type="search" aria-label="Filter all trackers" placeholder="Filter all trackers (e.g. Starlink, fee, FTC) or click a case ID">
 </div>
+
+{% comment %} ---------- Follow-up queue ---------- {% endcomment %}
+<section class="tracker" id="followup">
+  <h2>Follow-up queue</h2>
+  <p class="muted">Entries due for a "what happened next?" check by {{ soon }}. Claude checks these each morning before writing the digest.</p>
+  {% assign qnames = "explanations,backlash,stories,essential_prices,nonwestern_pricing,hidden_increases,laws" | split: "," %}
+  <div class="table-wrap"><table>
+    <thead><tr><th>Due</th><th>Tracker</th><th>Case</th><th>Current status</th><th>Last checked</th></tr></thead>
+    <tbody>
+    {% assign n_due = 0 %}
+    {% for name in qnames %}{% for r in T[name] %}
+      {% if r.follow_up_date and r.follow_up_date <= soon %}{% assign n_due = n_due | plus: 1 %}
+      <tr>
+        <td class="nowrap">{% if r.follow_up_date < today %}<span class="chip no">overdue</span> {% endif %}{{ r.follow_up_date }}</td>
+        <td>{{ name | replace: "_", " " }}</td>
+        <td><strong>{{ r.firm | default: r.story | default: r.jurisdiction | default: r.product | default: r.firm_or_place }}</strong> <a class="case" data-case="{{ r.case_id }}">{{ r.case_id }}</a></td>
+        <td>{{ r.reversed | default: r.outcome | default: r.status }}</td>
+        <td class="nowrap">{{ r.last_checked }}</td>
+      </tr>{% endif %}
+    {% endfor %}{% endfor %}
+    {% if n_due == 0 %}<tr><td colspan="5" class="muted">Nothing due this week.</td></tr>{% endif %}
+    </tbody>
+  </table></div>
+</section>
 
 <section class="tracker" id="explanations">
   <h2>How sellers explain price changes</h2>
-  <p class="muted">Live examples for the price-change communication series: what changed, the reason given, and how it landed.</p>
+  <p class="muted">Live examples for the price-change communication series: the change, the reason given, and the outcome.</p>
   <div class="table-wrap"><table>
-    <thead><tr><th>Date</th><th>Seller</th><th>Change</th><th>Explanation given</th><th>Type</th><th>Reaction / outcome</th></tr></thead>
+    <thead><tr><th>Date</th><th>Seller</th><th>Change</th><th>Explanation given</th><th>Category</th><th>Outcome</th></tr></thead>
     <tbody>{% for r in T.explanations %}<tr>
-      <td class="nowrap">{{ r.date }}</td><td><strong>{{ r.firm }}</strong></td><td>{{ r.change }}</td><td>{{ r.explanation }}</td>
+      <td class="nowrap">{{ r.date }}</td>
+      <td><strong>{{ r.firm }}</strong> <a class="case" data-case="{{ r.case_id }}">{{ r.case_id }}</a></td>
+      <td>{{ r.change }}{% if r.magnitude_pct %} <span class="chip">{{ r.magnitude_pct }}%{% if r.magnitude_note %} · {{ r.magnitude_note }}{% endif %}</span>{% endif %}</td>
+      <td>{{ r.explanation }}</td>
       <td><span class="chip">{{ r.category }}</span></td>
-      <td>{{ r.reaction }}{% if r.outcome != "" and r.outcome %}{% if r.reaction != "" %}. {% endif %}<em>{{ r.outcome }}</em>{% endif %} <a class="src" href="{{ r.source }}">source</a>{% if r.digest %} · <a class="src" href="{{ digest_base }}{{ r.digest }}-{{ r.agent | default: 'claude' }}/">digest</a>{% endif %}</td>
+      <td>{% if r.outcome %}<span class="chip {% if r.outcome == 'Reversed' %}yes{% elsif r.outcome == 'Partially reversed' or r.outcome == 'Mitigated' %}partial{% elsif r.outcome == 'Held' %}no{% endif %}">{{ r.outcome }}</span>{% endif %} {{ r.outcome_note }}{% if r.reaction %}<div class="small muted">Reaction: {{ r.reaction }}</div>{% endif %}
+        <div class="small"><a class="src" href="{{ r.source }}">source</a>{% if r.digest %} · <a class="src" href="{{ digest_base }}{{ r.digest }}-{{ r.agent | default: 'claude' }}/">digest</a>{% endif %}{% if r.agent %} · <span class="agent">{{ r.agent }}</span>{% endif %}</div></td>
     </tr>{% endfor %}</tbody>
   </table></div>
 </section>
 
 <section class="tracker" id="backlash">
   <h2>Backlash &amp; reversals</h2>
-  <p class="muted">Price controversies and whether the seller backed down. Over time, a dataset on what predicts a reversal.</p>
+  <p class="muted">Price controversies and whether the seller backed down. The reversal rate at the top is computed from these rows.</p>
   <div class="table-wrap"><table>
     <thead><tr><th>Date</th><th>Seller</th><th>Change</th><th>Framing</th><th>Backlash</th><th>Reversed?</th></tr></thead>
     <tbody>{% for r in T.backlash %}<tr>
-      <td class="nowrap">{{ r.date }}</td><td><strong>{{ r.firm }}</strong></td><td>{{ r.change }}</td><td>{{ r.framing }}</td>
-      <td>{{ r.backlash }} <a class="src" href="{{ r.source }}">source</a></td>
-      {% assign rv = r.reversed | downcase %}
-      <td><span class="chip {% if rv contains 'unknown' or rv contains 'pending' %}{% elsif rv contains 'yes' %}yes{% elsif rv contains 'partial' %}partial{% elsif rv contains 'no' %}no{% endif %}">{{ r.reversed }}</span></td>
+      <td class="nowrap">{{ r.date }}</td>
+      <td><strong>{{ r.firm }}</strong> <a class="case" data-case="{{ r.case_id }}">{{ r.case_id }}</a></td>
+      <td>{{ r.change }}{% if r.magnitude_pct %} <span class="chip">{{ r.magnitude_pct }}%</span>{% endif %}</td>
+      <td>{{ r.framing }}</td>
+      <td>{{ r.backlash }} <a class="src" href="{{ r.source }}">source</a>{% if r.agent %} · <span class="agent">{{ r.agent }}</span>{% endif %}{% if r.verification_note %}<div class="small warn">{{ r.verification_note }}</div>{% endif %}</td>
+      <td><span class="chip {% if r.reversed == 'Yes' %}yes{% elsif r.reversed == 'Partial' %}partial{% elsif r.reversed == 'No' %}no{% endif %}">{{ r.reversed }}</span>{% if r.reversal_note %}<div class="small muted">{{ r.reversal_note }}</div>{% endif %}{% if r.days_to_reversal %}<div class="small">{{ r.days_to_reversal }} days</div>{% endif %}</td>
     </tr>{% endfor %}</tbody>
   </table></div>
 </section>
@@ -57,10 +108,12 @@ permalink: /trackers/
   <p class="muted">Stories that recur across briefings, with the next milestone to watch.</p>
   <div class="story-grid">{% for s in T.stories %}
     <article class="story">
-      <div class="story-head"><span class="chip {% if s.status == 'Open' %}open{% endif %}">{{ s.status }}</span> <span class="muted small">since {{ s.started }}</span></div>
+      <div class="story-head"><span class="chip {% if s.status == 'Open' %}open{% endif %}">{{ s.status }}</span> <span class="muted small">since {{ s.started }} · checked {{ s.last_checked }}</span>{% if s.agent %} <span class="agent">{{ s.agent }}</span>{% endif %}</div>
       <h3>{{ s.story }}</h3>
+      <a class="case" data-case="{{ s.case_id }}">{{ s.case_id }}</a>
       <p class="small">{{ s.why_it_matters }}</p>
       <p class="next"><strong>Next:</strong> {{ s.next_milestone }}{% if s.milestone_date %} <span class="chip date">{{ s.milestone_date }}</span>{% endif %}</p>
+      {% if s.outcome_summary %}<p class="small"><strong>Outcome:</strong> {{ s.outcome_summary }}</p>{% endif %}
       <details><summary>{{ s.updates | size }} updates</summary><ul>
         {% assign ups = s.updates | sort: "date" | reverse %}{% for u in ups %}<li><span class="muted small">{{ u.date }}</span> {{ u.note }} <a class="src" href="{{ u.source }}">source</a></li>{% endfor %}
       </ul></details>
@@ -68,47 +121,96 @@ permalink: /trackers/
   </div>
 </section>
 
-<section class="tracker" id="ai">
-  <h2>AI shopping agents &amp; AI pricing</h2>
-  <p class="muted">Research papers, company moves and surveys on machine buyers, pricing agents and how AI products are priced.</p>
+<section class="tracker" id="essential">
+  <h2>Prices of essentials</h2>
+  <p class="muted">Energy, tuition, healthcare, housing and food: who pays, how much, and the reason given.</p>
   <div class="table-wrap"><table>
-    <thead><tr><th>Date</th><th>Kind</th><th>Title</th><th>Who</th><th>Finding</th></tr></thead>
-    <tbody>{% for r in T.ai_agents %}<tr>
-      <td class="nowrap">{{ r.date }}</td><td><span class="chip">{{ r.kind }}</span></td>
-      <td><a href="{{ r.source }}"><strong>{{ r.title }}</strong></a></td><td>{{ r.who }}</td><td>{{ r.finding }}</td>
+    <thead><tr><th>Date</th><th>Sector</th><th>Seller / place</th><th>Change</th><th>Who pays</th><th>Explanation</th></tr></thead>
+    <tbody>{% for r in T.essential_prices %}<tr>
+      <td class="nowrap">{{ r.date }}</td><td><span class="chip">{{ r.sector }}</span></td>
+      <td><strong>{{ r.firm_or_place }}</strong> <a class="case" data-case="{{ r.case_id }}">{{ r.case_id }}</a></td>
+      <td>{{ r.change }}{% if r.magnitude_pct %} <span class="chip">{{ r.magnitude_pct }}%{% if r.magnitude_note %} · {{ r.magnitude_note }}{% endif %}</span>{% endif %}</td>
+      <td>{{ r.who_pays }}</td>
+      <td>{{ r.explanation }} <a class="src" href="{{ r.source }}">source</a>{% if r.agent %} · <span class="agent">{{ r.agent }}</span>{% endif %}{% if r.verification_note %}<div class="small warn">{{ r.verification_note }}</div>{% endif %}</td>
     </tr>{% endfor %}</tbody>
   </table></div>
 </section>
 
-<section class="tracker" id="laws">
-  <h2>Pricing laws &amp; rules</h2>
-  <p class="muted">Personalized-pricing laws by jurisdiction, plus drip-pricing, fee and transparency rules. The carve-outs amount to a theory of fair price discrimination.</p>
+<section class="tracker" id="nonwestern">
+  <h2>Pricing outside the US, UK and EU</h2>
+  <p class="muted">Preferably from local-language sources, with the local context (festival, regulation, practice).</p>
   <div class="table-wrap"><table>
-    <thead><tr><th>Jurisdiction</th><th>Topic</th><th>Approach</th><th>Scope</th><th>Carve-outs</th><th>Status</th><th>Effective</th></tr></thead>
-    <tbody>{% for r in T.laws %}<tr>
-      <td><strong>{{ r.jurisdiction }}</strong></td><td>{{ r.topic }}</td><td><span class="chip">{{ r.approach }}</span></td>
-      <td>{{ r.scope }}</td><td>{{ r.carve_outs }}</td><td>{{ r.status }} <a class="src" href="{{ r.source }}">source</a></td><td class="nowrap">{{ r.effective }}</td>
+    <thead><tr><th>Date</th><th>Country</th><th>Seller / place</th><th>Change</th><th>Context</th><th>Source language</th></tr></thead>
+    <tbody>{% for r in T.nonwestern_pricing %}<tr>
+      <td class="nowrap">{{ r.date }}</td><td><strong>{{ r.country }}</strong></td>
+      <td>{{ r.firm_or_place }} <a class="case" data-case="{{ r.case_id }}">{{ r.case_id }}</a></td>
+      <td>{{ r.change }}</td><td>{{ r.context }}</td>
+      <td>{{ r.language }} <a class="src" href="{{ r.source }}">source</a>{% if r.agent %} · <span class="agent">{{ r.agent }}</span>{% endif %}</td>
     </tr>{% endfor %}</tbody>
   </table></div>
 </section>
 
 <section class="tracker" id="hidden">
   <h2>Hidden price increases &amp; fees</h2>
-  <p class="muted">Shrinkflation, upsizing with a markup, unbundling and fees, with the unit-price effect where known.</p>
+  <p class="muted">Shrinkflation, upsizing with a markup, unbundling, inflated reference prices and fees, with the size of the effect where known.</p>
   <div class="table-wrap"><table>
-    <thead><tr><th>Date</th><th>Kind</th><th>Product / seller</th><th>Change</th><th>Unit-price effect</th></tr></thead>
+    <thead><tr><th>Date</th><th>Kind</th><th>Product / seller</th><th>Change</th><th>Effect</th><th>Industry · place</th></tr></thead>
     <tbody>{% for r in T.hidden_increases %}<tr>
-      <td class="nowrap">{{ r.date }}</td><td><span class="chip">{{ r.kind }}</span></td><td><strong>{{ r.product }}</strong></td>
-      <td>{{ r.change }} <a class="src" href="{{ r.source }}">source</a></td><td>{{ r.unit_price_effect }}</td>
+      <td class="nowrap">{{ r.date }}</td><td><span class="chip">{{ r.kind }}</span></td>
+      <td><strong>{{ r.product }}</strong> <a class="case" data-case="{{ r.case_id }}">{{ r.case_id }}</a></td>
+      <td>{{ r.change }} <a class="src" href="{{ r.source }}">source</a>{% if r.agent %} · <span class="agent">{{ r.agent }}</span>{% endif %}{% if r.verification_note %}<div class="small warn">{{ r.verification_note }}</div>{% endif %}</td>
+      <td>{% if r.magnitude_pct %}<span class="chip">+{{ r.magnitude_pct }}%</span> {% endif %}{{ r.unit_price_effect }}{% if r.magnitude_note %}<div class="small muted">{{ r.magnitude_note }}</div>{% endif %}</td>
+      <td class="small">{{ r.industry }} · {{ r.geography }}</td>
+    </tr>{% endfor %}</tbody>
+  </table></div>
+</section>
+
+<section class="tracker" id="laws">
+  <h2>Pricing laws &amp; rules</h2>
+  <p class="muted">Personalized-pricing laws by jurisdiction, plus drip-pricing, fee, tariff and transparency rules. The carve-outs amount to a theory of fair price discrimination.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Jurisdiction</th><th>Topic</th><th>Approach</th><th>Scope</th><th>Carve-outs</th><th>Status</th><th>Effective</th></tr></thead>
+    <tbody>{% for r in T.laws %}<tr>
+      <td><strong>{{ r.jurisdiction }}</strong>{% if r.case_id %} <a class="case" data-case="{{ r.case_id }}">{{ r.case_id }}</a>{% endif %}</td><td>{{ r.topic }}</td><td><span class="chip">{{ r.approach }}</span></td>
+      <td>{{ r.scope }}</td><td>{{ r.carve_outs }}</td>
+      <td><span class="chip">{{ r.status }}</span> {{ r.status_note }}{% if r.enforcement %}<div class="small"><strong>Enforcement:</strong> {{ r.enforcement }}</div>{% endif %} <a class="src" href="{{ r.source }}">source</a>{% if r.agent %} · <span class="agent">{{ r.agent }}</span>{% endif %}</td>
+      <td class="nowrap">{{ r.effective }}</td>
+    </tr>{% endfor %}</tbody>
+  </table></div>
+</section>
+
+<section class="tracker" id="ai">
+  <h2>AI shopping agents</h2>
+  <p class="muted">Research, firm policy, surveys and opinion on machine buyers and pricing agents.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Date</th><th>Kind</th><th>Title</th><th>Who</th><th>Finding</th></tr></thead>
+    <tbody>{% for r in T.ai_agents %}<tr>
+      <td class="nowrap">{{ r.date }}</td><td><span class="chip">{{ r.kind }}</span></td>
+      <td><a href="{{ r.source }}"><strong>{{ r.title }}</strong></a> <a class="case" data-case="{{ r.case_id }}">{{ r.case_id }}</a></td><td>{{ r.who }}</td><td>{{ r.finding }}</td>
+    </tr>{% endfor %}</tbody>
+  </table></div>
+</section>
+
+<section class="tracker" id="aiprice">
+  <h2>AI product pricing</h2>
+  <p class="muted">How AI products themselves are priced: tokens, credits, plans and allowances.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Date</th><th>Title</th><th>Who</th><th>Finding</th></tr></thead>
+    <tbody>{% for r in T.ai_product_pricing %}<tr>
+      <td class="nowrap">{{ r.date }}</td>
+      <td><a href="{{ r.source }}"><strong>{{ r.title }}</strong></a> <a class="case" data-case="{{ r.case_id }}">{{ r.case_id }}</a></td><td>{{ r.who }}</td><td>{{ r.finding }}</td>
     </tr>{% endfor %}</tbody>
   </table></div>
 </section>
 
 <section class="tracker" id="questions">
   <h2>Open research questions</h2>
-  <p class="muted">Testable questions raised by the news. A supply of study ideas and essay openers.</p>
-  <ol class="questions">{% for q in T.questions %}
-    <li><span>{{ q.question }}</span> <span class="muted small">— {{ q.context }}, <a class="src" href="{{ digest_base }}{{ q.digest }}-{{ q.agent | default: 'claude' }}/">{{ q.digest }}</a></span></li>{% endfor %}
+  <p class="muted">Testable questions raised by the news, high priority first. When one is answered, the link to the answer goes here.</p>
+  <ol class="questions">
+  {% assign prios = "High,Medium,Low" | split: "," %}
+  {% for p in prios %}{% assign qs = T.questions | where: "priority", p %}{% for q in qs %}
+    <li><span class="chip {% if p == 'High' %}open{% endif %}">{{ p }}</span> <span class="chip {% if q.status == 'Answered' %}yes{% elsif q.status == 'Dead end' %}no{% endif %}">{{ q.status }}</span> <span>{{ q.question }}</span> <span class="muted small">({{ q.context }}, <a class="src" href="{{ digest_base }}{{ q.digest }}-{{ q.agent | default: 'claude' }}/">{{ q.digest }}</a>)</span>{% if q.answered_by %} <span class="small"><strong>Answered by:</strong> <a href="{{ q.answered_by }}">{{ q.answered_by }}</a></span>{% endif %}</li>
+  {% endfor %}{% endfor %}
   </ol>
 </section>
 
@@ -117,11 +219,15 @@ permalink: /trackers/
 <script>
   (function () {
     var box = document.getElementById('tracker-filter');
-    box.addEventListener('input', function () {
-      var q = box.value.trim().toLowerCase();
+    function apply(q) {
+      q = q.trim().toLowerCase();
       document.querySelectorAll('.tracker tbody tr, .story, .questions li').forEach(function (el) {
         el.hidden = q && el.textContent.toLowerCase().indexOf(q) === -1;
       });
+    }
+    box.addEventListener('input', function () { apply(box.value); });
+    document.querySelectorAll('a.case').forEach(function (a) {
+      a.addEventListener('click', function () { box.value = a.dataset.case; apply(box.value); box.scrollIntoView({ block: 'start' }); });
     });
   })();
 </script>

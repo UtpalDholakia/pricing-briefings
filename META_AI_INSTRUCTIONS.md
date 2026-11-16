@@ -89,7 +89,7 @@ These are for Meta AI or its Muse agent, which can browse the web, use connected
 >
 > ## Tracker suggestions
 >
-> <Optional. For any item that belongs in a tracker (price-change explanations, backlash and reversals, ongoing stories, AI shopping agents, pricing laws, hidden price increases and fees, research questions), list it as one bullet: tracker name, then the facts and source URL. Don't edit the tracker files yourself.>
+> <For any item that belongs in a tracker, list it as one bullet: tracker file name, a suggested `case_id` (reuse an existing one if the case is already in any tracker; search the files first), then the facts, using the allowed values in AGENTS.md section 6.2, and the source URL. Trackers: explanations.yml, backlash.yml, stories.yml, essential_prices.yml (energy, tuition, healthcare, housing, food), nonwestern_pricing.yml, hidden_increases.yml, laws.yml, ai_agents.yml, ai_product_pricing.yml, questions.yml. Prioritise essential_prices.yml and nonwestern_pricing.yml, which your lanes feed. Say if a source is a social-media post that may be hard to verify. Claude checks each suggestion against its source and adds it with `agent: meta`; don't edit the tracker files yourself.>
 > ```
 >
 > Formatting rules:

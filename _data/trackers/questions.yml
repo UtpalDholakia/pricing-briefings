@@ -1,145 +1,254 @@
-# Tracker: questions. Newest first. Edit by appending entries; see AGENTS.md section 6.
+# Tracker: questions. Open research questions with status and priority.
+# Newest first. Field rules and allowed values: AGENTS.md section 6.
 - date: '2026-11-15'
   question: 'Do consumers draw the fairness line where NYC''s law does: stated traits and own purchase history (fair) vs inferred traits (unfair)?'
   context: NYC Int. 891-A carve-outs
   digest: '2026-11-15'
+  status: Open
+  priority: High
+  answered_by: null
 - date: '2026-11-15'
   question: Does a mandated maximum-price disclosure in dynamic ticketing dampen or inflate willingness to pay?
   context: EU Digital Fairness Act
   digest: '2026-11-15'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-14'
   question: Do clip-to-activate coupons lower perceived savings relative to an equal price cut, and why?
   context: Heinemann & Gedenk, EMAC 2026
   digest: '2026-11-14'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-14'
   question: Do price-ending effects work mainly through fairness when a product already raises value concerns (small plates)?
   context: Yu, Liu, Kandampully & Huang
   digest: '2026-11-14'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-13'
   question: Does subscription churn after a price rise come from price sensitivity or from missing pause/downgrade options?
   context: Bango/3Gem survey
   digest: '2026-11-13'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-13'
   question: Do irregular, discovery-style deals shape store price image more than scheduled promotions?
   context: Grocery Outlet earnings call
   digest: '2026-11-13'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-12'
   question: Is a 'your price is personal' label on the price tag better or worse for fairness than hidden variation?
   context: Sony PS Store; Instacart tests
   digest: '2026-11-12'
+  status: Open
+  priority: High
+  answered_by: null
 - date: '2026-11-11'
   question: Does the BNPL justification effect inside couples change household spending, not just stated ease?
   context: Amozegar, Lynch & Barasch
   digest: '2026-11-11'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-11'
   question: Do drivers judge paying to unlock owned hardware as less fair than paying for new capability?
   context: Car feature subscriptions
   digest: '2026-11-11'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-10'
   question: Do restaurant surcharges and tips share one mental account, so that fees cannibalize tips? (Testable with POS data)
   context: Earls, Duffy's fee stories
   digest: '2026-11-13'
+  status: Open
+  priority: High
+  answered_by: null
 - date: '2026-11-10'
   question: Does frequent shelf-price change via ESLs erode price trust or reference prices, absent any price increase?
   context: UFCW push to ban ESLs
   digest: '2026-11-10'
+  status: Open
+  priority: High
+  answered_by: null
 - date: '2026-11-10'
   question: Is tolerance for price increases learned (Japan after deflation) and how fast does it adapt?
   context: Uniqlo, Saizeriya
   digest: '2026-11-10'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-09'
   question: Do market/capacity justifications still cut churn when the seller is a near-monopoly (Starlink in rural areas)?
   context: Damavandi et al. + Starlink
   digest: '2026-11-09'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-08'
   question: Do public 'we don't personalize prices' pledges reassure shoppers or remind them the practice exists?
   context: Walmart, NGA pledges
   digest: '2026-11-08'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-06'
   question: If left-digit bias is an attention threshold, how large are the hidden welfare costs of taxes and fees?
   context: Patel, arXiv 2611.05342
   digest: '2026-11-06'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-05'
   question: Do consumers blame the visible platform or the party that actually set the price (organisers vs Ticketmaster)?
   context: CHOICE Shonky awards
   digest: '2026-11-05'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-04'
   question: Does showing a fare's cost breakdown build trust (dual entitlement) or invite disputes over each line?
   context: India aviation rules
   digest: '2026-11-04'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-04'
   question: Does making tipping visible (Carnival stickers) raise prepayment or cause reactance?
   context: Carnival 'Crew Love'
   digest: '2026-11-04'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-03'
   question: Will retailers respond to all-in delivery rules by raising product prices or leaning harder on free-shipping thresholds?
   context: UK CMA open letter
   digest: '2026-11-03'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-02'
   question: How fast does perceived unfairness spread once account-level price differences are noticed?
   context: Sony PS Store
   digest: '2026-11-02'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-02'
   question: Which product features (essentialness, risk, purchase frequency) set fairness limits for dynamic pricing?
   context: IRDAI on insurance pricing
   digest: '2026-11-02'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-01'
   question: When does partitioning (tokens, line items) signal fairness rather than obfuscation?
   context: OpenAI per-job pricing reversal
   digest: '2026-11-01'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-10-31'
   question: Do reference prices adjust downward when the cost story behind a price increase reverses (cocoa)?
   context: Hershey, Mondelez
   digest: '2026-10-31'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-10-30'
   question: Does a 'your data raised this price' disclosure trigger backlash, reactance, or simple ignoring?
   context: Connecticut disclosure option
   digest: '2026-10-30'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-10-30'
   question: Do growing basic-economy fences eventually make the anchor fare feel like bait-and-switch?
   context: Thrifty Traveler upgrade premiums
   digest: '2026-10-30'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-10-29'
   question: Do consumers feel entitled to a seller's efficiency gains (ChatGPT Pro cut)?
   context: OpenAI allowance cut
   digest: '2026-10-29'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-10-29'
   question: Why does a price rise for new customers only draw backlash from insulated existing customers?
   context: Michael Burry Substack
   digest: '2026-10-29'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-10-28'
   question: Does the public judge personalized pricing by the median shopper or the worst-hit one?
   context: Durrmeyer, Fournel & Samano
   digest: '2026-10-28'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-10-28'
   question: Is an honest-but-smaller pack read as a price change while a pack built to look full is read as deception?
   context: Macromill Japan survey
   digest: '2026-10-28'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-10-27'
   question: Do firms protect 9-ending prices at the cost of margin, and where does the cost reappear (non-9 items, shrinkflation, fees)?
   context: Hirshman & Ignatenko
   digest: '2026-10-25'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-10-26'
   question: Why do people notice price increases but not the equally common price cuts in dynamic pricing?
   context: Decodo data via Fortune
   digest: '2026-10-26'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-10-22'
   question: Where does partitioned pricing end and drip pricing begin, in consumers' minds rather than courts'?
   context: US vs Canadian rulings
   digest: '2026-10-22'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-10-21'
   question: What fairness and price-level inferences does a 'set by an algorithm using your personal data' label trigger?
   context: NY label, Second Circuit
   digest: '2026-10-21'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-10-21'
   question: Do consumers prefer an honest base price plus a visible fee or a hidden markup with smaller fees?
   context: Olo delivery app
   digest: '2026-10-21'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-10-20'
   question: What reference prices do consumers learn when market anchors are set by pricing agents?
   context: Bichler et al.
   digest: '2026-10-20'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-10-20'
   question: Is the menu-price backlash threshold (~5%) a just-noticeable difference or a fairness threshold?
   context: Realytics US vs UK
   digest: '2026-10-20'
+  status: Open
+  priority: Medium
+  answered_by: null
