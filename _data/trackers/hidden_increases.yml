@@ -1,0 +1,211 @@
+# Tracker: hidden_increases. Newest first. Edit by appending entries; see AGENTS.md section 6.
+- date: '2026-11-12'
+  kind: Unbundling
+  product: Streaming and app subscriptions (survey)
+  change: 49% pay extra for features once included (ad-free, downloads, 4K)
+  unit_price_effect: ''
+  source: https://www.globenewswire.com/news-release/2026/11/12/3401696/0/en/more-than-one-in-five-americans-cancelled-a-subscription-after-a-price-rise.html
+  digest: '2026-11-13'
+- date: '2026-11-10'
+  kind: Fee
+  product: US hotels with resort fees (12-hotel audit)
+  change: Fees now in headline rate but rarely itemized
+  unit_price_effect: Fees median 14.9% of lowest nightly price
+  source: https://everything-pr.com/hotel-price-transparency-audit
+  digest: '2026-11-14'
+- date: '2026-11-09'
+  kind: Fee
+  product: Earls Kitchen + Bar (Denver)
+  change: 3% admin fee
+  unit_price_effect: +3% (taxed and tipped on)
+  source: https://www.wfmd.com/2026/11/09/restaurant-admin-fees-spark-backlash-as-diners-question-what-theyre-paying-for/
+  digest: '2026-11-10'
+- date: '2026-11-05'
+  kind: Fee
+  product: JetBlue checked bags
+  change: 1st bag $50 advance / $60 within 24h ($55/$70 peak); 2nd bag $70-85
+  unit_price_effect: ''
+  source: https://upgradedpoints.com/news/jetblue-checked-bag-fee-increase-november-2026/
+  digest: '2026-11-05'
+- date: '2026-11-04'
+  kind: Shrinkflation
+  product: Netto salad seasoning (store brand, Germany)
+  change: 10 g to 8 g, same price
+  unit_price_effect: +25%
+  source: https://www.markendetektive.de/2026/11/04/mogelpackung-oktober-2026-rewe-lorenz-lenor/
+  digest: '2026-11-04'
+- date: '2026-11-04'
+  kind: Shrinkflation
+  product: Ültje trail mix (Germany)
+  change: 200 g to 150 g, same price
+  unit_price_effect: +33%
+  source: https://www.markendetektive.de/2026/11/04/mogelpackung-oktober-2026-rewe-lorenz-lenor/
+  digest: '2026-11-04'
+- date: '2026-11-04'
+  kind: Upsizing with markup
+  product: Lenor fabric softener (Germany)
+  change: 1,239 ml to 1,491 ml; price rose more
+  unit_price_effect: +10.6%
+  source: https://www.markendetektive.de/2026/11/04/mogelpackung-oktober-2026-rewe-lorenz-lenor/
+  digest: '2026-11-05'
+- date: '2026-11-04'
+  kind: Unbundling
+  product: Car features (VW horsepower unlock, Subaru remote start)
+  change: Subscriptions for built-in hardware
+  unit_price_effect: ''
+  source: https://fortune.com/2026/11/04/car-subscriptions-automakers-drivers-pushback/
+  digest: '2026-11-11'
+- date: '2026-11-02'
+  kind: Fee
+  product: CarGurus listings (NYC)
+  change: '''Great Deal'' badges computed without mandatory fees'
+  unit_price_effect: Fees added ~$1,100 on average
+  source: https://www.nyc.gov/site/dca/news/71-26/mamdani-administration-sues-cargurus-deceiving-new-yorkers-ai-chatbot-hidden-junk-fees
+  digest: '2026-11-02'
+- date: '2026-10-30'
+  kind: Fee
+  product: Toast (restaurant software)
+  change: $0.99 online-order fee; undisclosed $150/month early termination fee
+  unit_price_effect: ''
+  source: https://ftc.gov/news-events/news/press-releases/2026/10/ftc-states-take-action-against-toast-inc-over-hidden-unauthorized-fees-deceptive-subscription
+  digest: '2026-11-06'
+- date: '2026-10-28'
+  kind: Shrinkflation
+  product: Hershey's Kisses party bag
+  change: 35.8 oz to 30 oz, shelf price up
+  unit_price_effect: 25 to 50 cents/oz
+  source: https://www.marketplace.org/story/2026/10/28/how-much-more-expensive-has-candy-really-gotten
+  digest: '2026-11-02'
+- date: '2026-10-28'
+  kind: Shrinkflation
+  product: Brach's candy corn
+  change: Smaller bag
+  unit_price_effect: Per-ounce price doubled
+  source: https://www.marketplace.org/story/2026/10/28/how-much-more-expensive-has-candy-really-gotten
+  digest: '2026-11-02'
+- date: '2026-10-27'
+  kind: Shrinkflation (abstract units)
+  product: ChatGPT Pro ($200/month)
+  change: 20x to 10x Plus usage
+  unit_price_effect: ~2x per unit of usage
+  source: https://pcworld.com/article/3249113/chatgpt-pros-biggest-perk-just-got-cut-in-half-meet-the-new-ai-subscription-math.html
+  digest: '2026-10-27'
+- date: '2026-10-26'
+  kind: Shrinkflation
+  product: Cheer detergent
+  change: 92 oz to 81 oz; same cap and dosing instructions
+  unit_price_effect: Fewer loads per jug
+  source: https://www.mouseprint.org/2026/10/26/here-we-shrink-again-fall-2026-part-2/
+  digest: '2026-10-28'
+- date: '2026-10-26'
+  kind: Shrinkflation
+  product: Old Spice
+  change: 3.3 oz to 3 oz
+  unit_price_effect: ''
+  source: https://www.mouseprint.org/2026/10/26/here-we-shrink-again-fall-2026-part-2/
+  digest: '2026-10-28'
+- date: '2026-10-26'
+  kind: Shrinkflation
+  product: Sara Lee bagels
+  change: 6 to 5
+  unit_price_effect: ''
+  source: https://www.mouseprint.org/2026/10/26/here-we-shrink-again-fall-2026-part-2/
+  digest: '2026-11-01'
+- date: '2026-10-26'
+  kind: Shrinkflation
+  product: Lucky Charms
+  change: Shrinks while keeping 'family size' label
+  unit_price_effect: ''
+  source: https://www.mouseprint.org/2026/10/26/here-we-shrink-again-fall-2026-part-2/
+  digest: '2026-10-28'
+- date: '2026-10-26'
+  kind: Shrinkflation
+  product: Fudgicles
+  change: 20 to 18
+  unit_price_effect: ''
+  source: https://www.mouseprint.org/2026/10/26/here-we-shrink-again-fall-2026-part-2/
+  digest: '2026-10-30'
+- date: '2026-10-20'
+  kind: Shrinkflation
+  product: India ₹5 chips packs
+  change: ~17 g to 8 g over time; ₹5/₹10 packs being retired
+  unit_price_effect: ''
+  source: https://outlookbusiness.com/corporate/fmcg-5-10-rupees-packs-costs-rising-brands-margins-declining-shrinkflation
+  digest: '2026-10-22'
+- date: '2026-10-20'
+  kind: Fee
+  product: Thuisbezorgd / Uber Eats (Netherlands)
+  change: Service, small-order and packaging fees revealed at end of checkout (often EUR 2-4)
+  unit_price_effect: ''
+  source: https://nltimes.nl/2026/10/20/uber-eats-thuisbezorgd-compensate-customers-extra-charges
+  digest: '2026-10-22'
+- date: '2026-10-20'
+  kind: Fee
+  product: üca terraza (Los Angeles)
+  change: 5% admin fee + mandatory 20% tip
+  unit_price_effect: $173 subtotal to $226
+  source: https://hoodline.com/2026/10/downtown-la-rooftop-spot-uca-terraza-slammed-over-surcharge-on-top-of-mandatory-tip
+  digest: '2026-10-20'
+- date: '2026-10-20'
+  kind: Fee
+  product: Chicago/LA restaurant surcharges
+  change: 3-4% surcharges kept while menu prices rose 4-84%
+  unit_price_effect: One check ~37% over subtotal after tax and tip
+  source: https://kitgraham.substack.com/p/squeezed-increased-menu-prices-and
+  digest: '2026-10-31'
+- date: '2026-10-19'
+  kind: Fee
+  product: Basic economy upgrade premium
+  change: Domestic $60-70 to $100+; transatlantic ~$150 to ~$240
+  unit_price_effect: ''
+  source: https://thriftytraveler.com/news/airlines/airlines-basic-economy-upcharges-2026/
+  digest: '2026-10-30'
+- date: '2026-10-17'
+  kind: Shrinkflation
+  product: Hershey's Kisses
+  change: 10 oz to 8.7 oz
+  unit_price_effect: ''
+  source: https://www.mouseprint.org/2026/10/17/here-we-shrink-again-fall-2026-part-1/
+  digest: '2026-10-20'
+- date: '2026-10-17'
+  kind: Shrinkflation
+  product: Ziploc freezer bags
+  change: 16 fewer per box
+  unit_price_effect: ''
+  source: https://www.mouseprint.org/2026/10/17/here-we-shrink-again-fall-2026-part-1/
+  digest: '2026-10-20'
+- date: '2026-10-17'
+  kind: Shrinkflation
+  product: Stop & Shop oatmeal (store brand)
+  change: 10 to 8 packets; calories per serving rose
+  unit_price_effect: ''
+  source: https://www.mouseprint.org/2026/10/17/here-we-shrink-again-fall-2026-part-1/
+  digest: '2026-10-21'
+- date: '2026-10-17'
+  kind: Shrinkflation
+  product: Dixie Ultra plates
+  change: 35 to 30
+  unit_price_effect: ''
+  source: https://www.mouseprint.org/2026/10/17/here-we-shrink-again-fall-2026-part-1/
+  digest: '2026-10-21'
+- date: '2026-10-14'
+  kind: Fee
+  product: Ticketmaster (FTC allegation)
+  change: Drip fees on tickets
+  unit_price_effect: Up to 44% over face price
+  source: https://www.allaboutadvertisinglaw.com/2026/10/court-allows-ftc-drip-pricing-lawsuit-against-ticketmaster-to-proceed.html
+  digest: '2026-10-20'
+- date: '2026-10-09'
+  kind: Fee
+  product: Greenway Auto Group (FTC settlement)
+  change: Mandatory add-on fees
+  unit_price_effect: 92% of buyers paid $3,350+ above advertised
+  source: https://www.retailconsumerproductslaw.com/2026/10/ftc-updates-october-5-october-9-2026/
+  digest: '2026-10-22'
+- date: '2026-10-06'
+  kind: Shrinkflation
+  product: Nestlé KitKat/Lion/Smarties minis (Germany)
+  change: 13 to 10 pieces; RRP EUR 4.79 to 3.79
+  unit_price_effect: ~+3% per piece
+  source: https://www.t-online.de/leben/aktuelles/id_101468062/mogelpackung-des-monats-nestle-versteckt-preiserhoehung-hinter-design.html
+  digest: '2026-10-30'

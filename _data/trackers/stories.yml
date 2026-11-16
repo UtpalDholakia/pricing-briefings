@@ -1,0 +1,170 @@
+# Tracker: stories. Newest first. Edit by appending entries; see AGENTS.md section 6.
+- story: FTC 6(b) study of personalized pricing and pay
+  status: Open
+  started: '2026-10-28'
+  next_milestone: Company responses due (45 days)
+  milestone_date: '2026-12-12'
+  why_it_matters: First regulator-compelled look at what firms feed into individualized prices, incl. A/B tests and disclosure wording; worker pay covered too
+  updates:
+  - date: '2026-10-28'
+    note: Orders sent to Delta, United, JetBlue, Uber, Lyft, DoorDash, Instacart, Target, Walmart
+    source: https://www.ftc.gov/news-events/news/press-releases/2026/10/ftc-launches-personalized-pricing-compensation-inquiry
+  - date: '2026-11-04'
+    note: 'Holland & Knight: orders request A/B tests, segmentation, disclosure screenshots back to 2021-23'
+    source: https://www.hklaw.com/en/insights/publications/2026/11/ftcs-section-6b-orders-on-personalized-pricing-and-pay-what-businesses
+  - date: '2026-11-06'
+    note: FTC chose a representative sample per industry (American Airlines not included)
+    source: https://www.wbtv.com/2026/11/06/ftc-did-not-request-surveillance-pricing-information-charlottes-largest-air-carrier/
+- story: EU Digital Fairness Act
+  status: Open
+  started: '2026-10-05'
+  next_milestone: Parliament and Council negotiation; application unlikely before 2028
+  milestone_date: null
+  why_it_matters: Puts reference-price claims and drip pricing on the per-se blacklist; real-money values for in-game currency; max-price disclosure for dynamic ticketing
+  updates:
+  - date: '2026-10-05'
+    note: 'EPRS briefing: proposal expected mid-November'
+    source: https://eprs.europarl.europa.eu/contents/publications/EPRS/2026/10/EPRS_BRI(2026)791529.html
+  - date: '2026-11-09'
+    note: 'Leaked draft: ten manipulative design traps to be blacklisted'
+    source: https://www.euronews.com/2026/11/09/eu-to-blacklist-ten-manipulative-online-design-traps-leaked-draft-shows
+  - date: '2026-11-11'
+    note: Commission adopts proposal; personalized pricing banned only where profiling harms minors/vulnerable consumers
+    source: https://www.freshfields.com/en/our-thinking/briefings/2026/11/digital-fairness-act-the-eus-new-consumer-protection-rulebook-takes-shape
+- story: Sony PlayStation Store account-level pricing
+  status: Open
+  started: '2026-10-29'
+  next_milestone: Sony statement; end of Black Friday sale
+  milestone_date: null
+  why_it_matters: Personalized discount depth disclosed on the price tag; a live test of peer-comparison fairness
+  updates:
+  - date: '2026-10-29'
+    note: Job listing to scale 'Intelligent Pricing'; PSprices tracks 190+ games in 70+ regions
+    source: https://thegamepost.com/playstation-store-dynamic-pricing-sony-intelligent-pricing-targeted-offers/
+  - date: '2026-11-04'
+    note: Black Friday sale shows account-dependent prices (Astro Bot $33.59 vs $39.59)
+    source: https://www.pushsquare.com/news/2026/11/ps5-dynamic-pricing-impacts-new-ps-store-black-friday-offers-roughly-usd5-variations-in-prices
+- story: Starlink congestion-based subscription pricing
+  status: Open
+  started: '2026-10-25'
+  next_milestone: Next quarterly price review
+  milestone_date: null
+  why_it_matters: Surge logic on an ongoing subscription; capacity justification vs captive customers
+  updates:
+  - date: '2026-10-25'
+    note: Late-October test in Kansas, Missouri, Nebraska
+    source: https://teslanorth.com/2026/11/08/starlink-price-hikes-spread-us-backlash/
+  - date: '2026-11-07'
+    note: Expanded to more states; increases up to ~20%, big-city new customers offered 30-50% off
+    source: https://www.satelliteinternet.com/resources/starlink-introduces-dynamic-pricing/
+  - date: '2026-11-12'
+    note: 'Light Reading: churn risk concentrated where fixed wireless is available'
+    source: https://lightreading.com/satellite/starlink-gets-faster-ahead-of-v3-launches-but-shift-to-dynamic-pricing-could-backfire
+- story: US city and state surveillance-pricing laws
+  status: Open
+  started: '2026-10-01'
+  next_milestone: NYC mayor's signature on Int. 891-A; Michigan Senate committee
+  milestone_date: null
+  why_it_matters: Carve-outs define which price differences lawmakers think are fair (see Pricing laws tracker)
+  updates:
+  - date: '2026-10-01'
+    note: Maryland food-retail ban takes effect
+    source: https://datamatters.sidley.com/2026/10/27/from-disclosures-to-prohibitions-the-new-legal-landscape-on-the-use-of-consumer-data-for-personalized-pricing/
+  - date: '2026-10-05'
+    note: Seattle signs ordinance (effective Sept 2027)
+    source: https://kiro7.com/news/local/kiro-7-investigates-seattle-bans-surveillance-pricing-will-shoppers-lose-discounts/XAJH2NM7EZCW5N436Q2QIFBA6U
+  - date: '2026-11-12'
+    note: NYC Council passes Int. 891-A
+    source: https://council.nyc.gov/press/2026/11/12/3339/
+- story: New York algorithmic-pricing disclosure label (NRF appeal)
+  status: Open
+  started: '2026-10-19'
+  next_milestone: Second Circuit decision
+  milestone_date: null
+  why_it_matters: Whether a mandated 'your personal data set this price' label survives, and what it does to fairness judgments
+  updates:
+  - date: '2026-10-19'
+    note: Oral argument; panel seemed skeptical of retailers
+    source: https://www.courthousenews.com/retailers-slam-surveillance-pricing-warning-label-in-second-circuit-appeal/
+- story: FTC v. Live Nation/Ticketmaster drip pricing
+  status: Open
+  started: '2026-10-14'
+  next_milestone: Litigation continues
+  milestone_date: null
+  why_it_matters: '''First contact'' theory: the headline price harms at search, not checkout; contrasts with Canadian and Maryland rulings'
+  updates:
+  - date: '2026-10-08'
+    note: 'Canada: Kuling v. Ticketmaster, fee shown next to face value is not drip pricing'
+    source: https://www.bennettjones.com/Insights/Blogs/2026/10/Federal-Court-Interprets-Drip-Pricing-No-Drip-No-Class
+  - date: '2026-10-14'
+    note: Motion to dismiss denied; '+Fees' label too vague
+    source: https://www.allaboutadvertisinglaw.com/2026/10/court-allows-ftc-drip-pricing-lawsuit-against-ticketmaster-to-proceed.html
+  - date: '2026-10-23'
+    note: Ontario court declines to certify class over Sirius XM asterisk pricing
+    source: https://bennettjones.com/Insights/Blogs/2026/10/Ontario-Court-Rejects-Drip-Pricing-Class-Action
+- story: FTC and 20 states v. Dollar General (shelf vs register prices)
+  status: Open
+  started: '2026-10-26'
+  next_milestone: Litigation
+  milestone_date: null
+  why_it_matters: Posted price as a promise; low-attention shoppers bear errors
+  updates:
+  - date: '2026-10-26'
+    note: Suit filed; 29,000+ price-honoring complaints
+    source: https://grocerydive.com/news/dollar-general-sued-ftc-alleged-deceptive-pricing/872885
+- story: FTC and 8 states v. Toast
+  status: Open
+  started: '2026-10-30'
+  next_milestone: Litigation
+  milestone_date: null
+  why_it_matters: Junk-fee and click-to-cancel enforcement reaches B2B software for restaurants
+  updates:
+  - date: '2026-10-30'
+    note: 'Complaint: unauthorized add-ons, undisclosed $150/month termination fee, $0.99 online order fee'
+    source: https://ftc.gov/news-events/news/press-releases/2026/10/ftc-states-take-action-against-toast-inc-over-hidden-unauthorized-fees-deceptive-subscription
+- story: Airline fare-coordination class actions (ATPCO 3Victors)
+  status: Open
+  started: '2026-11-03'
+  next_milestone: Litigation
+  milestone_date: null
+  why_it_matters: Consumer search behavior as a shared input to fares
+  updates:
+  - date: '2026-11-04'
+    note: Suits against seven airlines over Iris, PriceEye, DemandView tools
+    source: https://www.travelerstoday.com/articles/61249/20261111/fare-fixing-suits-against-seven-airlines-target-ai-tool-tracking-your-ticket-price.htm
+- story: UK CMA drip-pricing and delivery-fee enforcement
+  status: Open
+  started: '2026-10-14'
+  next_milestone: New subscription-contracts regime
+  milestone_date: '2027-01-01'
+  why_it_matters: First jurisdiction fining all-in-price violations at scale; shipping fees now covered
+  updates:
+  - date: '2026-10-14'
+    note: '18 months of direct powers: 7 of 8 online-pricing cases settled'
+    source: https://competitionandmarkets.blog.gov.uk/2026/10/14/direct-consumer-enforcement-18-months-on/
+  - date: '2026-10-16'
+    note: Wayfair fined £4.8m over fake countdown timers
+    source: https://www.lewissilkin.com/insights/2026/10/16/deal-or-no-deal-cma-fines-three-more-companies-using-its-new-consumer-powers-102o5m6
+  - date: '2026-11-02'
+    note: 'Open letter: mandatory delivery fees must be in the headline price'
+    source: https://www.gov.uk/government/publications/online-retailers-including-mandatory-delivery-fees-in-the-total-price/open-letter-to-online-retailers-including-mandatory-delivery-fees-in-the-total-price
+- story: Australia card-surcharge ban
+  status: Open
+  started: '2026-10-01'
+  next_milestone: New unfair-trading law
+  milestone_date: '2027-07-01'
+  why_it_matters: 'Natural experiment: surcharge for card vs discount for cash'
+  updates:
+  - date: '2026-10-14'
+    note: Queensland supermarket cash transactions up ~30% with 2% cash discount
+    source: https://www.smartcompany.com.au/finance/qld-supermarket-cash-up-30-percent-after-discount-card-surcharge-ban/
+- story: EU CPC action on in-game virtual currencies
+  status: Open
+  started: '2026-09-30'
+  next_milestone: Company commitments
+  milestone_date: null
+  why_it_matters: Token currencies treated as a pain-of-paying device in enforcement
+  updates:
+  - date: '2026-10-15'
+    note: Action against nine game companies incl. Supercell, King, Riot, Mojang
+    source: https://www.lewissilkin.com/insights/2026/10/15/eu-consumer-protection-network-launches-action-involving-nine-video-games-compani-102o5do

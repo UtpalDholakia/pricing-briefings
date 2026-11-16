@@ -73,3 +73,19 @@ Rules:
 
 - Home page: https://utpaldholakia.github.io/pricing-briefings/
 - Each briefing: https://utpaldholakia.github.io/pricing-briefings/briefings/YYYY-MM-DD-agent/
+
+## 6. Trackers (optional for other agents, required for Claude's daily run)
+
+The site keeps seven running trackers in `_data/trackers/`, shown at https://utpaldholakia.github.io/pricing-briefings/trackers/. They are raw material for future Pricing Conundrum pieces. When a briefing item fits a tracker, add an entry at the **top** of the matching file (newest first; for `stories.yml` and `laws.yml`, update the existing entry if there is one). Copy the fields of the entries already in the file exactly. Every entry needs a working `source` URL, and `digest` should be the date of the briefing it came from.
+
+| File | What goes in it | Key fields |
+|---|---|---|
+| `explanations.yml` | A seller explains, justifies or apologizes for a price change | date, firm, change, explanation, category, reaction, outcome, source, digest |
+| `backlash.yml` | A price controversy, and whether the seller backed down | date, firm, change, framing, backlash, reversed (Yes / No / Partial / Pending / Unknown), days_to_reversal (only if known), source, digest |
+| `stories.yml` | A story that will recur; add to its `updates` list and refresh `next_milestone` | story, status, started, next_milestone, milestone_date, why_it_matters, updates[date, note, source] |
+| `ai_agents.yml` | Research, company moves or surveys on AI shopping agents, pricing agents or AI product pricing | date, kind, title, who, finding, source, digest |
+| `laws.yml` | A pricing law or rule is proposed, passed, changed or takes effect | jurisdiction, topic, approach, scope, carve_outs, status, effective, source, updated |
+| `hidden_increases.yml` | Shrinkflation, upsizing with a markup, unbundling, or a fee | date, kind, product, change, unit_price_effect, source, digest |
+| `questions.yml` | A testable research question raised by the news | date, question, context, digest |
+
+Rules: don't invent numbers (leave a field empty or `null` if unknown), keep entries short, quote strings that contain a colon, and never delete other agents' entries. Run `python3 -c "import yaml,glob;[yaml.safe_load(open(f)) for f in glob.glob('_data/trackers/*.yml')]"` before committing to check the YAML is valid; a broken file breaks the whole site build.

@@ -1,0 +1,113 @@
+# Tracker: ai_agents. Newest first. Edit by appending entries; see AGENTS.md section 6.
+- date: '2026-11-12'
+  kind: Agent research
+  title: Less accurate AI buyer can leave consumers better off
+  who: Jiaqu Ning
+  finding: Sellers respond to how buyers process prices; disclosure regime beat calculator-assisted agent on worst-case surplus (not robust)
+  source: https://arxiv.org/abs/2611.16471
+  digest: '2026-11-15'
+- date: '2026-11-11'
+  kind: Firm policy
+  title: United blocks third-party AI booking agents
+  who: United Airlines
+  finding: Bans unauthorized agents from search, booking and miles; agents skip ancillary merchandising screens
+  source: https://www.aerotime.aero/articles/united-airlines-to-block-third-party-ai-agents-from-accessing-digital-platforms
+  digest: '2026-11-15'
+- date: '2026-11-10'
+  kind: Opinion
+  title: Agents steer through the shortlist, not the price
+  who: Chat2Cart (founder of agent-tracking firm)
+  finding: 'Cites Princeton experiment: 61% chose agent-pushed sponsored product vs 22% in search; 55.5% even when told'
+  source: https://chat2cart.substack.com/p/ai-shopping-agents-can-steer-you
+  digest: '2026-11-10'
+- date: '2026-11-06'
+  kind: Agent research
+  title: Artificial Shoppers and Attention Competition
+  who: Guo, Xu & Zhang
+  finding: 'AI assistance can soften price competition; ''alignment paradox'': correct recommendations still push salience-prone buyers to lower quality'
+  source: https://arxiv.org/abs/2611.09399
+  digest: '2026-11-13'
+- date: '2026-11-01'
+  kind: AI product pricing
+  title: 'Generative-AI subscriptions: 2.9% pay, high churn'
+  who: Egan, Russel, Shi & Yao (NBER 35953)
+  finding: Card data on 174M consumers; retention 20-45%/year; switching spikes at model releases
+  source: https://www.nber.org/papers/w35953
+  digest: '2026-11-01'
+- date: '2026-11-01'
+  kind: AI product pricing
+  title: OpenAI backs off per-job pricing
+  who: OpenAI
+  finding: Buyers preferred auditable token metering over a simpler flat per-job price
+  source: https://thenewstack.io/openai-token-pricing-reversal
+  digest: '2026-11-01'
+- date: '2026-10-29'
+  kind: Agent research
+  title: LLM agent collusion persists after the incentive is removed
+  who: Cahyono; Tran & Yu
+  finding: Collusion re-forms with new partners; only memory wipes end it. RL sellers reach cartel prices via rules that ignore rivals
+  source: https://arxiv.org/abs/2610.39660
+  digest: '2026-10-31'
+- date: '2026-10-27'
+  kind: AI product pricing
+  title: ChatGPT Pro allowance halved; $500 tier added
+  who: OpenAI
+  finding: Shrinkflation in abstract units plus a new top tier
+  source: https://thenewstack.io/openai-halves-200-plan/
+  digest: '2026-10-29'
+- date: '2026-10-19'
+  kind: Agent research
+  title: Price-equivalent audit of seller cues on LLM shoppers
+  who: Buecheler, Berbeglia & Guo
+  finding: Converts effect of cues such as social proof into dollar premiums across 113,472 trials and 7 LLMs
+  source: https://arxiv.org/abs/2610.25843
+  digest: '2026-11-11'
+- date: '2026-10-17'
+  kind: AI product pricing
+  title: SaaS credits as a vendor-controlled currency
+  who: Deepak Gupta (Security Boulevard)
+  finding: Credits allow quiet exchange-rate changes and breakage; PricingSaaS later logs credits at 22% of tracked changes
+  source: https://securityboulevard.com/2026/10/how-to-buy-software-when-ai-breaks-pricing/
+  digest: '2026-10-21'
+- date: '2026-10-15'
+  kind: Agent research
+  title: 'LLM pricing agents: deployment decides collusion'
+  who: Bichler, Hierhager, Köck & Pieroth
+  finding: Raw rival price histories sustain supracompetitive prices; mixed designs produce anchor-and-undercut cycles
+  source: https://arxiv.org/abs/2610.21711
+  digest: '2026-10-20'
+- date: '2026-10-08'
+  kind: Consumer survey
+  title: Germans will let agents compare prices but not pay
+  who: KPMG / EHI
+  finding: 73% would use an agent to compare; 45% would let it pay for a smartphone; 7% trust a retailer's own AI
+  source: https://kpmg.com/de/en/media/press-releases/2026/10/consumer-snapshot-when-ai-does-our-shopping-for-us.html
+  digest: '2026-10-25'
+- date: '2026-09-29'
+  kind: Agent research
+  title: Dashboard nudges make pricing algorithms more collusive
+  who: Hillenbrand, Normann, Potarca & Werner
+  finding: One-click tit-for-tat preset raised prices most; LLM advice alone did nothing
+  source: https://arxiv.org/pdf/2609.26861
+  digest: '2026-11-07'
+- date: '2026-09-26'
+  kind: Agent research
+  title: '''Et Tu, Brute?'' Personal agents steer wealthy users to pricier options'
+  who: Priyanshu, Vijay, Jabarian & Mireshghallah
+  finding: 8 of 13 models recommended pricier options to wealthier personas; blocking attributes sometimes widened the gap
+  source: https://arxiv.org/pdf/2609.24927
+  digest: '2026-11-07'
+- date: '2026-09-25'
+  kind: Agent research
+  title: PriceBench
+  who: Pavel Kireyev
+  finding: Price sensitivity varies >10x across 28 LLM booking agents; mean booked rate $247-$393; weak models anchor on list position
+  source: https://arxiv.org/abs/2609.31468
+  digest: '2026-10-21'
+- date: '2026-09-23'
+  kind: Agent research
+  title: Shopping by algorithm
+  who: Wadi & Ma
+  finding: Agents fall for just-below prices and promo framing only when search is costly and the goal is vague
+  source: https://arxiv.org/abs/2609.28372
+  digest: '2026-10-29'
