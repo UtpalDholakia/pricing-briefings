@@ -1,9 +1,699 @@
 # Substack pipeline for The Pricing Conundrum. Newest first by created.
 # status: idea / outlining / drafting / ready / published / parked / dead. priority: High / Medium / Low (Utpal sets High).
 # 'published' only with a real Substack URL. Never delete a dead idea; give the reason in notes. See AGENTS.md section 10.
+- created: '2026-11-16'
+  idea: Price change communication in the platform era (2008 to now)
+  idea_slug: price-change-platform-era
+  theme: Price-change communication series
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Eight Post Series on Communication of Price Increases across the ages.docx; Claude project 'Pricing pieces for my substack the Pricing Conundrum', chat 'Price Change Communication series' (Nov 6)
+  question: How did platforms, subscriptions and algorithms change who explains a price change, to whom, and with what justification?
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: 'Next post in the series; the Deregulation Era draft (Nov 6) ends with a teaser for it. Planned anchors: Netflix''s 2011 increase and the apology that followed, the SaaS ''we''ve grown with you'' letter, surge pricing, pandemic surcharges, and Michigan''s 2011 repeal of item pricing, which closes a loop from the stagflation post.'
+- created: '2026-11-16'
+  idea: What has changed in price-change communication, and what hasn't
+  idea_slug: price-change-capstone
+  theme: Price-change communication series
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Eight Post Series on Communication of Price Increases across the ages.docx (Post 8, optional capstone)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: Optional synthesis post. The original plan suggested reusing one comparison frame across the series (who communicates, to whom, the stated justification, the power relationship) so this post can compare eras directly. Could be folded into the platform-era post if the series runs long.
+- created: '2026-11-16'
+  idea: AI pricing is becoming an electricity tariff
+  idea_slug: ai-peak-load-pricing
+  theme: AI pricing
+  source_type: utpal
+  source_ref: Claude project 'Pricing pieces for my substack the Pricing Conundrum', chat '3 AI pricing Substack pieces ideas October 2026' (Oct 13), pitch doc 'Three new AI pricing pieces for The Pricing Conundrum'
+  question: When compute is scarce, should AI vendors ration by price or by queue?
+  question_ref: null
+  case_ids:
+  - starlink-congestion-2026
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: 'Third of the October trio; machine buyers and credence goods are written, this is the one left. Argument: compute is scarce at peak hours, so vendors must ration by price or by queue, and time-of-day rates, flex and priority tiers, and peak-hour limits amount to a utility rate book. Builds on the FIFA pieces and the 2015 HBR surge-pricing article. Research exists in the pitch doc; no brief saved yet. Re-check dated evidence before drafting, since capacity conditions move.'
+- created: '2026-11-16'
+  idea: Do menu descriptions work on AI ordering agents?
+  idea_slug: menu-descriptions-ai-agents
+  theme: AI shopping agents
+  source_type: utpal
+  source_ref: Claude project 'Pricing pieces for my substack the Pricing Conundrum', chat 'AI agent menu description study' (Nov 13); Claude Doc 'Do Menu Descriptions Work on AI Ordering Agents? A Study Proposal'
+  question: Will the menu language that sells to people also sell to an AI agent?
+  question_ref: null
+  case_ids:
+  - artificial-shoppers-2026
+  status: outlining
+  priority: Medium
+  owner: utpal
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: 'Joint study with a co-author, proposal written. Design: matched descriptions (plain, vague praise, sensory, informational, quality or sourcing) for four quick-service items, a price ladder to measure each description''s premium in dollars, two user goals, several models, and a human comparison panel. Preregistered prediction: vague praise adds little or nothing for agents while sourcing claims add the most. Spin-off idea from the same chat: AI ordering in China as a separate piece.'
+- created: '2026-11-16'
+  idea: What giveaway data says about how people value a prize
+  idea_slug: giveaway-prize-value
+  theme: Consumer psychology
+  source_type: utpal
+  source_ref: Claude project 'Pricing pieces for my substack the Pricing Conundrum', chat 'Dataset evaluation for Pricing Conundrum' (Oct 5); plan doc 'Giveaway data literature review and analysis plan'
+  question: null
+  question_ref: null
+  case_ids: []
+  status: parked
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: '2027-01-15'
+  notes: 'Utpal said he would think about it. Published platform data shows entry rates roughly flat across prize values, rising cost per entrant, single winners drawing more entrants than several, and experiences underperforming their stated value. Caveats recorded in the plan doc: vendor-produced, not replicable, revised after release, covers only that platform''s customers.'
+- created: '2026-11-16'
+  idea: When AI agents cancel subscriptions for you, who wins?
+  idea_slug: agents-cancel-subscriptions
+  theme: Subscriptions
+  source_type: utpal
+  source_ref: Claude project 'Pricing pieces for my substack the Pricing Conundrum', chat 'Substack pricing ideas brainstorm' (Sep 29), idea 1
+  question: If software never forgets to cancel, what happens to pricing that depends on inertia?
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: Starting point is a large paywall field experiment (Miller, Sahni and Strulov-Shlain) in which auto-renewing trials kept more payers early but deterred sign-ups, so fewer readers ever paid over 20 months. If agents remove forgetting, auto-renew loses on retention but may win on acquisition, because the people who avoided it for fear of being trapped no longer need to. Companion to ai-agent-shopper-cost. Check overlap with the finished autorenewal-consent piece.
+- created: '2026-11-16'
+  idea: One firm's cancellation sludge is every firm's problem
+  idea_slug: sludge-is-a-commons-problem
+  theme: Subscriptions
+  source_type: utpal
+  source_ref: Claude project 'Pricing pieces for my substack the Pricing Conundrum', chat 'Substack pricing ideas brainstorm' (Sep 29), ideas 2, 4 and 5; 2026 TPC Pieces/Ideas/Ideas for short pieces, 05292026.docx (the 'Delete account' button)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: 'If being trapped once makes people wary of every subscription, hard-to-cancel design pollutes the whole category, and click-to-cancel rules become something honest firms should want. Related threads to fold in: contract terms as a signal of the firm''s character, revenue from dormant subscribers as a liability, and exit-intent discounts that teach customers to threaten to leave. Check the status of the FTC rule before drafting.'
+- created: '2026-11-16'
+  idea: How pricing teams fool themselves
+  idea_slug: pricing-teams-fool-themselves
+  theme: Pricing organization
+  source_type: utpal
+  source_ref: Claude project 'Pricing pieces for my substack the Pricing Conundrum', chat 'Substack pricing ideas brainstorm' (Sep 29), ideas 3 and 8; 2026 TPC Pieces/Ideas/Lists of ideas for pricing posts, 04212026.docx (limits of A/B testing, several lists)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: 'Two mechanisms: analytics see only the customers who came in, never those a tactic deterred; and some tactics look good for a year and then turn negative after the people who chose them have moved on. Practical answer: long-running holdout groups. The A/B-testing limits idea appears in four separate AI-generated lists.'
+- created: '2026-11-16'
+  idea: John Deere must now price a tool it refused to sell
+  idea_slug: deere-repair-tool-pricing
+  theme: Current cases
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Claude Ideas, 09062026.docx (idea 2)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: An FTC order requires dealer-equivalent repair tools on fair and reasonable terms, with no price set. The manager must price a product whose purpose is to let customers bypass the firm's own parts and service business, with a regulator judging the number. Claude rated it the most original angle on that list. Verify the order's terms before drafting.
+- created: '2026-11-16'
+  idea: The first console generation whose prices go up
+  idea_slug: memory-shortage-console-prices
+  theme: Current cases
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Claude Ideas, 09062026.docx (idea 4)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: 'Two levels: memory makers deciding which customers to supply as AI demand absorbs capacity, and console makers whose long-standing pattern of falling hardware prices has broken. A mirror image of the experience-curve post. Figures in the idea file need verifying.'
+- created: '2026-11-16'
+  idea: 'Pricing restraint by a near-monopolist: TSMC''s overage surcharge'
+  idea_slug: tsmc-overage-surcharge
+  theme: Current cases
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Claude Ideas, 09062026.docx (idea 5)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: 'Reported plan: modest base increases plus a premium on orders above committed volume, a two-part tariff whose second part penalizes wanting more. Why would a supplier with that much power choose a restrained structure? Fits with the Lanzillotti restraint and Means pieces. Could pair with the console piece.'
+- created: '2026-11-16'
+  idea: Who pays for the AI boom's electricity?
+  idea_slug: ai-electricity-who-pays
+  theme: Essential prices
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Claude Ideas, 09062026.docx (idea 7)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: 'A cost-allocation problem in regulated tariffs: capacity prices rose sharply with data-center demand, and at least one utility shifted rates toward data centers after showing households paid more per kWh. The marginal customer is price-insensitive and the average customer votes. Sequel to the Griddy post. Links to the essential-prices tracker.'
+- created: '2026-11-16'
+  idea: 'When patients become the arbitrageurs: Trikafta and the buyers'' club'
+  idea_slug: trikafta-patient-arbitrage
+  theme: Essential prices
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Claude Ideas, 09062026.docx (idea 8)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: A patient-led buyers' club importing a low-cost generic of a very expensive cystic fibrosis drug. Arbitrage as the physical limit of price discrimination, with the twist that the arbitrageurs are the end users. Fills the healthcare gap Meta AI flagged. Verify current status and figures.
+- created: '2026-11-16'
+  idea: 'Shedding customers on purpose: Broadcom, VMware and Tesco'
+  idea_slug: broadcom-shedding-customers
+  theme: B2B pricing
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Claude Ideas, 09062026.docx (idea 9)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: Renewal increases large enough that a major customer is suing and migrating away. Is deliberately losing a large share of customers a coherent pricing strategy, and when does the exodus outrun the extra revenue? Enterprise licensing is absent from the archive. Trial reportedly set for 2027; good revisit point.
+- created: '2026-11-16'
+  idea: 'Designing B2B surcharges: war-risk fees in container shipping'
+  idea_slug: b2b-surcharge-pass-through
+  theme: B2B pricing
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Claude Ideas, 09062026.docx (idea 10)
+  question: null
+  question_ref: null
+  case_ids:
+  - ticketmaster-drip-ftc-2026
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: Surcharge versus base rate, contract pass-through, and the documented tendency of surcharges to outlive the cost that justified them. The B2B counterpart to the 2022 consumer surcharge post. A runner-up on the same list, Ticketmaster's fee 'waterbed', could become a short companion.
+- created: '2026-11-16'
+  idea: When constant repricing becomes the signal
+  idea_slug: repricing-frequency-signal
+  theme: AI pricing
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Ideas for AI pricing pieces 05232026.docx (Claude, idea 2); Claude project 'Pricing pieces for my substack the Pricing Conundrum', chat 'Follow-up ideas for pricing substack' (May 23)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: AI vendors restructure prices repeatedly and call it iteration toward fit. Customers may read the tempo itself as a sign the seller doesn't know what it is doing, even when each change is defensible. Pairs naturally with 'Every price has a life' and the backlash tracker.
+- created: '2026-11-16'
+  idea: AI add-ons inside incumbent bundles
+  idea_slug: ai-inside-the-bundle
+  theme: AI pricing
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Ideas for AI pricing pieces 05232026.docx (Claude, idea 5)
+  question: null
+  question_ref: null
+  case_ids:
+  - saas-credits-2026
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: Much AI is now sold inside existing suites, where the host product carries an established reference price. A paid AI add-on that customers can't see working or measure is a different psychological problem from a standalone AI tool. Draw on the bundling literature.
+- created: '2026-11-16'
+  idea: Discounts teach customers how to buy from you
+  idea_slug: discounts-teach-customers
+  theme: Promotions
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Ideas for a piece 06232026.docx (Claude idea 1; OpenAI ideas 5 and 'Your discount is teaching the customer'); 2026 TPC Pieces/Ideas/Lists of ideas for pricing posts, 04212026.docx (several lists)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: 'Recurs in at least five AI-generated lists. Angle: a discount works like tuition. It trains the timing, the channel and the reference price customers use afterward, so promotion problems are partly memory problems.'
+- created: '2026-11-16'
+  idea: Discount leakage is a governance problem, not a sales problem
+  idea_slug: discount-leakage-governance
+  theme: Pricing organization
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Lists of ideas for pricing posts, 04212026.docx (Meta 26, Grok 19, ChatGPT 14, Claude 18)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: The most repeated B2B idea across the lists. Locate the leak in approval rules, deal desks, incentives and coordination rather than in rep discipline. Ties to the pricing-capability pieces and the value-based-pricing-as-theater chat.
+- created: '2026-11-16'
+  idea: Willingness to pay is not a number
+  idea_slug: wtp-is-not-a-number
+  theme: Consumer psychology
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Ideas from Consumer Psych ACR Paris 2024, 06162026.docx (idea 6); 2026 TPC Pieces/Ideas/Lists of ideas for pricing posts, 04212026.docx (Claude 12, Perplexity 4)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: 'Research presented at ACR suggests stated willingness to pay runs below actual market prices even for likely buyers and with incentive-compatible methods. Practical payoff: when to distrust your own pricing research and how to debias it.'
+- created: '2026-11-16'
+  idea: Why cheaper goods hold their value better in resale
+  idea_slug: resale-value-paradox
+  theme: Consumer psychology
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Ideas from Consumer Psych ACR Paris 2024, 06162026.docx (idea 2)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: Ko, Nunes and Solinas report that higher-priced goods keep a smaller share of their original price on resale, which sits in tension with luxury brands engineering secondary-market premiums. Timely with the growth of recommerce.
+- created: '2026-11-16'
+  idea: The moral grammar of a price increase
+  idea_slug: moral-grammar-of-price-increases
+  theme: Price fairness
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Ideas from Consumer Psych ACR Paris 2024, 06162026.docx (idea 3; OpenAI idea 4)
+  question: null
+  question_ref: null
+  case_ids:
+  - damavandi-justification-study
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: 'Fairness has a structure: labor-cost reasons read as fairer than material-cost reasons, and cutting quality at the same price reads worse than an honest increase. A practical ranking of ways to raise effective prices with the least backlash. Test it against the explanations tracker.'
+- created: '2026-11-16'
+  idea: A free tier should teach value, not replace it
+  idea_slug: free-tier-teaches-value
+  theme: Startups and SaaS
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Ideas for Startup founder Entrepreneur posts, 05132026.docx (Gemini 2, Claude 1); 2026 TPC Pieces/Ideas/Lists of ideas for pricing posts, 04212026.docx (ChatGPT 30, Perplexity 50, Claude 20)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: 'Freemium appears in more lists than any other startup topic. Sharpest framing from the lists: free works when it teaches customers what the paid product is worth, and fails when it substitutes for it.'
+- created: '2026-11-16'
+  idea: How to price a product that has never existed
+  idea_slug: pricing-the-never-existed
+  theme: Startups and SaaS
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Ideas for Startup founder Entrepreneur posts, 05132026.docx (Claude 10)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: No comparables, no reference price, no usage data. A founder-facing piece that could use the teaching cases (Ironwood, Kaval, Sentinel) as worked examples.
+- created: '2026-11-16'
+  idea: What makes a pricing survey persuasive, or fatally flawed
+  idea_slug: pricing-survey-persuasive-or-flawed
+  theme: Legal and regulation
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Lists of ideas for legally oriented pricing posts, 04212026.docx (top pick in the Claude, Gemini, Perplexity and ChatGPT lists)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: Ranked first or second by every tool. Control groups, question wording, and what a survey can and cannot establish about consumer belief. The strike-through and drip pieces are done; this is the natural third in the legal-audience set.
+- created: '2026-11-16'
+  idea: Literally true, meaningfully misleading
+  idea_slug: literally-true-but-misleading
+  theme: Legal and regulation
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Lists of ideas for legally oriented pricing posts, 04212026.docx (Claude 6, Perplexity 1, ChatGPT 1)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: The gap between a price claim's literal accuracy and what consumers take from it. Could absorb the 'confusion is not inattention' and 'disclosure is not comprehension' ideas from the same file.
+- created: '2026-11-16'
+  idea: 'The circularity at the heart of value-based pricing: Scitovsky (1944)'
+  idea_slug: scitovsky-price-as-quality
+  theme: History of pricing thought
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Historical Customer Value piece ideas, 09212026.docx; 2026 TPC Pieces/Ideas/Lists of ideas for pricing posts, 04212026.docx (Meta 34, Perplexity 2, Claude 11)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: When buyers can't judge quality they infer it from price, so price stops being a measure of value and starts creating it. Appears in five separate lists. Follows the Dewey and Anderson pieces.
+- created: '2026-11-16'
+  idea: 'Before customers will pay, they must accept what paying means: Zelizer on life insurance'
+  idea_slug: zelizer-accepting-payment
+  theme: History of pricing thought
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Historical Customer Value piece ideas, 09212026.docx (ChatGPT 2, Sociology 13)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: Life insurance was once condemned as putting a price on death before it became respectable. Distinguishes seeing a benefit from accepting the commercial relationship that supplies it. Rated the strongest mix of story and concept on the list.
+- created: '2026-11-16'
+  idea: 'The customer''s unpaid labor belongs in the value equation: Becker (1965)'
+  idea_slug: becker-customer-unpaid-labor
+  theme: History of pricing thought
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Historical Customer Value piece ideas, 09212026.docx (ChatGPT 4)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: Customers spend time and effort to get value from a purchase, and that cost should enter pricing. Relevant to self-service, onboarding and AI tools that shift work to the buyer.
+- created: '2026-11-16'
+  idea: 'The engineer who priced a bridge and found consumer surplus: Dupuit (1844)'
+  idea_slug: dupuit-bridge-tolls
+  theme: History of pricing thought
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Historical Customer Value piece ideas, 09212026.docx (Economics 1)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: Dupuit worked out consumer surplus while setting tolls on public works, and showed why one uniform toll loses value that tiered tolls capture. An early, concrete case for price discrimination.
+- created: '2026-11-16'
+  idea: 'Why cost-plus won''t die: Hall and Hitch (1939)'
+  idea_slug: hall-hitch-full-cost
+  theme: History of pricing thought
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Lists of ideas for pricing posts, 04212026.docx (Grok 1, Perplexity 1, ChatGPT 54, Claude 2, Meta 7)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: 'The most frequently suggested historical topic: all five tools proposed it. Oxford interviews found managers priced at full cost plus a margin, against theory. A natural sequel to the Means and Lanzillotti pieces.'
+- created: '2026-11-16'
+  idea: What Gabor and Granger knew about price thresholds in the 1960s
+  idea_slug: gabor-granger-thresholds
+  theme: History of pricing thought
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Lists of ideas for pricing posts, 04212026.docx (Meta 30, Grok 4 and 11, Perplexity 4, Claude 8)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: Price-awareness and buy-response research before behavioral economics. Suggested by four tools. Links to the published left-digit history piece.
+- created: '2026-11-16'
+  idea: 'Skimming versus penetration at 75: Joel Dean''s ''Pricing a New Product'' (1950)'
+  idea_slug: joel-dean-new-product-pricing
+  theme: History of pricing thought
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Lists of ideas for pricing posts, 04212026.docx (Grok 5, Perplexity 3, Claude 5)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: Dean's argument had more nuance than the textbook pair it became. Pairs well with the never-existed product piece.
+- created: '2026-11-16'
+  idea: 'Pricing as an organizational routine: Cyert and March (1963)'
+  idea_slug: cyert-march-pricing-routines
+  theme: History of pricing thought
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Lists of ideas for pricing posts, 04212026.docx (Claude 10, Meta 42; Claude's top pick for differentiation)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: Treats prices as the output of rules of thumb, slack and internal bargaining. Claude's list ranked it the idea most likely to set the Substack apart.
+- created: '2026-11-16'
+  idea: Resale price maintenance as a pricing strategy question again
+  idea_slug: resale-price-maintenance-revisited
+  theme: History of pricing thought
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Lists of ideas for pricing posts, 04212026.docx (Meta 5 and 27, Grok 3 and 9, Perplexity 6, ChatGPT 47, Claude 6)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: Telser's service argument, the fair-trade laws, and what they suggest about MAP policies and platform price parity today.
+- created: '2026-11-16'
+  idea: Pricing fairness before Kahneman
+  idea_slug: fairness-before-kahneman
+  theme: History of pricing thought
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Lists of ideas for pricing posts, 04212026.docx (Grok 7, Perplexity 8, ChatGPT 43, Claude 46)
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: What industrial buyers, economists and moral philosophers said about fair prices before the 1986 studies everyone cites. Fits Utpal's preference for less-cited research.
+- created: '2026-11-16'
+  idea: How retailers taught us prices aren't negotiable, and how that is unravelling
+  idea_slug: how-prices-became-non-negotiable
+  theme: History of pricing thought
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Lists of ideas for pricing posts, 04212026.docx (Claude 50; ChatGPT 31, 'Digital sales is quietly bringing haggling back')
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: The long institutional story of the fixed posted price, and the return of negotiation through personalized offers, chat sales and AI agents. Bridges the history set and the AI-agent pieces.
+- created: '2026-11-16'
+  idea: How do you price it? Auction estimates for objects with no comparables
+  idea_slug: how-do-you-price-it-auctions
+  theme: Short pieces
+  source_type: utpal
+  source_ref: 2026 TPC Pieces/Ideas/Ideas for interesting mini-pieces on valuation.docx
+  question: null
+  question_ref: null
+  case_ids: []
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: 'A run of short follow-ups to the arbitrary-pricing piece: the duct-taped banana, a celebrity''s moustache comb, a statesman''s dentures, an Apollo sample bag. Each shows how an auction estimate becomes an anchor when there is nothing to compare against. ChatGPT''s strongest four are listed first in the file. Missoula glass is struck through in the file and left out.'
 - created: '2026-11-15'
   idea: Credits are a currency, and vendors control the exchange rate
   idea_slug: credits-as-currency
+  theme: AI pricing
   source_type: deep-dive
   source_ref: _cases/2026-12-credits-as-a-currency.md
   question: When does partitioning (tokens, line items) signal fairness rather than obfuscation?
@@ -24,6 +714,7 @@
 - created: '2026-11-15'
   idea: Why do sellers reverse?
   idea_slug: why-sellers-reverse
+  theme: Price fairness
   source_type: tracker
   source_ref: _data/trackers/backlash.yml
   question: 'What predicts whether a seller backs down after price backlash: magnitude, apology, monopoly, or who is watching?'
@@ -46,6 +737,7 @@
 - created: '2026-11-15'
   idea: Who bears the cost when an AI agent shops for you?
   idea_slug: ai-agent-shopper-cost
+  theme: AI shopping agents
   source_type: question
   source_ref: _data/trackers/questions.yml
   question: What reference prices do consumers learn when market anchors are set by pricing agents?
@@ -67,6 +759,7 @@
 - created: '2026-11-15'
   idea: Do consumers draw the fairness line where NYC's law does?
   idea_slug: nyc-fairness-line
+  theme: Legal and regulation
   source_type: question
   source_ref: _data/trackers/questions.yml
   question: 'Do consumers draw the fairness line where NYC''s law does: stated traits and own purchase history (fair) vs inferred traits (unfair)?'
@@ -85,6 +778,7 @@
 - created: '2026-11-15'
   idea: Do restaurant surcharges cannibalise tips?
   idea_slug: surcharges-and-tips
+  theme: Price fairness
   source_type: question
   source_ref: _data/trackers/questions.yml
   question: Do restaurant surcharges and tips share one mental account, so that fees cannibalize tips?
@@ -106,6 +800,7 @@
 - created: '2026-11-15'
   idea: Is a 'your price is personal' label better or worse than hidden variation?
   idea_slug: personal-price-label
+  theme: Legal and regulation
   source_type: question
   source_ref: _data/trackers/questions.yml
   question: Is a 'your price is personal' label on the price tag better or worse for fairness than hidden variation?
@@ -125,6 +820,7 @@
 - created: '2026-11-15'
   idea: Does showing a fare's cost breakdown build trust or invite disputes?
   idea_slug: fare-cost-breakdown
+  theme: Price fairness
   source_type: question
   source_ref: _data/trackers/questions.yml
   question: Does showing a fare's cost breakdown build trust (dual entitlement) or invite disputes over each line?
@@ -143,6 +839,7 @@
 - created: '2026-11-15'
   idea: Do consumers feel entitled to a seller's efficiency gains?
   idea_slug: entitled-to-efficiency-gains
+  theme: Price fairness
   source_type: question
   source_ref: _data/trackers/questions.yml
   question: Do consumers feel entitled to a seller's efficiency gains (ChatGPT Pro cut)?
@@ -157,4 +854,4 @@
   published_url: null
   published_date: null
   revisit_date: null
-  notes: null
+  notes: ' Reinforced 2026-11-16 by Utpal''s idea files: AI cost deflation as a fairness trap appears in the Gemini, ChatGPT and Perplexity AI-pricing lists (05232026), and a pitch on falling token prices and shorter AI contracts was the fourth, unused idea in the October AI trio.'

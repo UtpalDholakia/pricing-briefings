@@ -181,10 +181,11 @@ One argument a month (two at most), 1,000–2,000 words, built from the trackers
 
 ## 10. Substack pipeline
 
-The path from a tracker question to a published Pricing Conundrum piece. File: `_data/substack/ideas.yml`, shown on the home page.
+The path from a tracker question to a published Pricing Conundrum piece. File: `_data/substack/ideas.yml`. The full list is at /pipeline/, grouped by `theme`; the home page shows High-priority and in-progress ideas only.
 
 - **`status` values:** `idea` / `outlining` / `drafting` / `ready` / `published` / `parked` (with `revisit_date`) / `dead` (with the reason in `notes`; never delete a dead idea).
-- **`source_type` values:** `question` / `deep-dive` / `briefing` / `tracker` / `utpal`. **`priority`:** `High` / `Medium` / `Low`; Utpal sets High, default Medium.
+- **`theme`:** a short grouping label; reuse an existing one (e.g. `AI pricing`, `AI shopping agents`, `Price fairness`, `Subscriptions`, `History of pricing thought`, `Price-change communication series`, `Legal and regulation`, `Current cases`) before inventing a new one.
+- **`source_type` values:** `question` / `deep-dive` / `briefing` / `tracker` / `utpal` (Utpal's own idea files and Claude-project chats; `source_ref` names the file or chat). **`priority`:** `High` / `Medium` / `Low`; Utpal sets High, default Medium.
 - **Adding ideas:** Claude adds an idea in its daily run only when a briefing or tracker raises something genuinely essay-sized, and says so in one line ("Pipeline: added …"). Meta AI and ChatGPT suggest ideas in their briefings; Claude adds them. Don't bulk-import questions; Utpal promotes them.
 - **Monthly review:** in the first briefing of each month, alongside the monthly tracker digest, Claude lists the pipeline's state and proposes ideas to park, kill or promote; Utpal decides.
 - **Answering questions:** when an idea or piece answers a `questions.yml` question, set that question's `status: Answered` and `answered_by` to the link the same day.

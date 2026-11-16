@@ -183,3 +183,6 @@ a.case:hover { color: var(--accent); }
 .pipeline th { text-align: left; font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); padding: 8px 10px; border-bottom: 1px solid var(--line); }
 .pipeline td { padding: 8px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
 .draft-banner { margin: 16px 0 0; padding: 10px 14px; border: 1px solid #e6c98f; background: #fdf6e7; border-radius: 6px; font-family: var(--ui); font-size: .85rem; }
+.pipeline details summary { cursor: pointer; }
+.pipeline details p { margin: .35rem 0; }
+.pipeline tr:target { background: #fff6e0; }
