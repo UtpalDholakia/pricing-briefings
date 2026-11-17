@@ -38,6 +38,7 @@ permalink: /trackers/
     <a href="#laws">Laws <small>{{ T.laws | size }}</small></a>
     <a href="#ai">AI agents <small>{{ T.ai_agents | size }}</small></a>
     <a href="#aiprice">AI product pricing <small>{{ T.ai_product_pricing | size }}</small></a>
+    <a href="#b2b">B2B pricing <small>{{ T.b2b_pricing | size }}</small></a>
     <a href="#questions">Questions <small>{{ T.questions | size }}</small></a>
     <a href="#price-panel">What customers pay <small>{{ T.price_panel | size }}</small></a>
     <a href="#pricing-evidence">Pricing evidence <small>{{ T.pricing_evidence | size }}</small></a>
@@ -50,7 +51,7 @@ permalink: /trackers/
 <section class="tracker" id="followup">
   <h2>Follow-up queue</h2>
   <p class="muted">Entries due for a "what happened next?" check by {{ soon }}. Claude checks these each morning before writing the digest.</p>
-  {% assign qnames = "explanations,backlash,stories,essential_prices,nonwestern_pricing,hidden_increases,laws" | split: "," %}
+  {% assign qnames = "explanations,backlash,stories,essential_prices,nonwestern_pricing,hidden_increases,laws,b2b_pricing" | split: "," %}
   <div class="table-wrap"><table>
     <thead><tr><th>Due</th><th>Tracker</th><th>Case</th><th>Current status</th><th>Last checked</th></tr></thead>
     <tbody>
@@ -199,6 +200,23 @@ permalink: /trackers/
     <tbody>{% for r in T.ai_product_pricing %}<tr>
       <td class="nowrap">{{ r.date }}</td>
       <td><a href="{{ r.source }}"><strong>{{ r.title }}</strong></a> <a class="case" data-case="{{ r.case_id }}">{{ r.case_id }}</a></td><td>{{ r.who }}</td><td>{{ r.finding }}</td>
+    </tr>{% endfor %}</tbody>
+  </table></div>
+</section>
+
+<section class="tracker" id="b2b">
+  <h2>B2B and enterprise pricing</h2>
+  <p class="muted">Business and enterprise price changes. Almost all are published list prices; what buyers pay after negotiation is rarely disclosed.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Date</th><th>Firm · product</th><th>Change</th><th>Old → new</th><th>Mechanism</th><th>Price type</th><th>Effective</th></tr></thead>
+    <tbody>{% for r in T.b2b_pricing %}<tr>
+      <td class="nowrap">{{ r.date }}</td>
+      <td><strong>{{ r.firm }}</strong> · {{ r.product }} <a class="case" data-case="{{ r.case_id }}">{{ r.case_id }}</a>{% if r.related_case_id %} <a class="case" data-case="{{ r.related_case_id }}">{{ r.related_case_id }}</a>{% endif %}</td>
+      <td>{{ r.change }} <a class="src" href="{{ r.source }}">source</a>{% if r.agent %} · <span class="agent">{{ r.agent }}</span>{% endif %}{% if r.verification_note %}<div class="small warn">{{ r.verification_note }}</div>{% endif %}</td>
+      <td class="small">{% if r.old_price %}{{ r.old_price }} → {% endif %}{{ r.new_price }}{% if r.magnitude_pct %} <span class="chip">+{{ r.magnitude_pct }}%</span>{% endif %}{% if r.magnitude_note %}<div class="small muted">{{ r.magnitude_note }}</div>{% endif %}</td>
+      <td><span class="chip">{{ r.mechanism }}</span></td>
+      <td><span class="chip">{{ r.price_type }}</span>{% unless r.net_disclosed %}<div class="small muted">net not disclosed</div>{% endunless %}</td>
+      <td class="nowrap">{{ r.effective }}</td>
     </tr>{% endfor %}</tbody>
   </table></div>
 </section>

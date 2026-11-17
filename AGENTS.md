@@ -76,7 +76,7 @@ Rules:
 
 ## 6. Trackers (optional for other agents, required for Claude's daily run)
 
-The site keeps ten running case trackers in `_data/trackers/` (this section) plus three longitudinal measurement trackers (section 7), shown at https://utpaldholakia.github.io/pricing-briefings/trackers/. They are **longitudinal evidence** for future Pricing Conundrum pieces, so the rules below are about follow-through and comparability: every entry must be countable, linkable across trackers, and revisited until its outcome is known.
+The site keeps eleven running case trackers in `_data/trackers/` (this section) plus three longitudinal measurement trackers (section 7), shown at https://utpaldholakia.github.io/pricing-briefings/trackers/. They are **longitudinal evidence** for future Pricing Conundrum pieces, so the rules below are about follow-through and comparability: every entry must be countable, linkable across trackers, and revisited until its outcome is known.
 
 ### 6.1 Which tracker
 
@@ -91,6 +91,7 @@ The site keeps ten running case trackers in `_data/trackers/` (this section) plu
 | `laws.yml` | A pricing law or rule is proposed, passed, changed or takes effect (update the existing jurisdiction entry) | case_id, jurisdiction, topic, approach, scope, carve_outs, status, status_note, effective, enforcement, source, updated |
 | `ai_agents.yml` | AI shopping agents and pricing agents: research, firm policy, surveys, opinion | case_id, date, kind, title, who, finding, source, digest |
 | `ai_product_pricing.yml` | How AI products themselves are priced (tokens, credits, plans, allowances) | case_id, date, kind, title, who, finding, source, digest |
+| `b2b_pricing.yml` | Business and enterprise price changes (SaaS seats, cloud, licences, metered add-ons) | case_id, related_case_id, date, firm, product, change, old_price, new_price, effective, announced, mechanism, price_type, net_disclosed, magnitude_pct, source, digest |
 | `questions.yml` | A testable research question raised by the news | date, question, context, digest, status, priority, answered_by |
 
 **Every entry in every tracker except `questions.yml` also has** `last_checked` (date) and `follow_up_date` (date of the next "what happened next?" check, or `null` once resolved). Non-Claude entries add `agent: <agent key>` (e.g. `agent: meta`) so the digest link points to the right post.
@@ -108,12 +109,14 @@ Use only these values. Detail goes in the matching `_note` field, never in the v
 | `laws.status` | `Proposed` / `Passed` / `Enacted` / `In force` / `Vetoed` / `Under challenge` / `Withdrawn` | `status_note` |
 | `stories.status` | `Open` / `Closed` / `Dormant` | `status_note` |
 | `essential_prices.sector` | `Energy` / `Tuition` / `Healthcare` / `Housing` / `Food` | — |
+| `b2b_pricing.mechanism` | `seat-based` / `usage-based` / `credits` / `flat` / `outcome-based` | `change` or `magnitude_note` |
+| `b2b_pricing.price_type` | `list` / `net` / `quote` (set `net_disclosed: true` only when the source states what buyers actually pay) | `verification_note` |
 | `questions.status` | `Open` / `In progress` / `Answered` / `Dead end` | `answered_by` (URL of the briefing, paper or Substack piece) |
 | `questions.priority` | `High` / `Medium` / `Low` (set by Utpal; default `Medium`) | — |
 
 ### 6.3 Case IDs
 
-`case_id` is a lowercase slug such as `starlink-congestion-2026` or `burry-substack-2026`. Assign it when a case first appears in any tracker, and **reuse the same ID** whenever the same case appears in another tracker. Search the tracker files for the company name before creating a new ID. One case = one ID, even across ten trackers.
+`case_id` is a lowercase slug such as `starlink-congestion-2026` or `burry-substack-2026`. Assign it when a case first appears in any tracker, and **reuse the same ID** whenever the same case appears in another tracker. Search the tracker files for the company name before creating a new ID. One case = one ID, even across eleven trackers.
 
 ### 6.4 Follow-up routine (Claude's daily run)
 
