@@ -1,5 +1,21 @@
 # Tracker: essential_prices. Price changes for essentials: energy, tuition, healthcare, housing, food.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: laugfs-lpg-2026
+  date: '2026-11-13'
+  sector: Energy
+  firm_or_place: LAUGFS Gas PLC (Sri Lanka)
+  change: '12.5 kg LPG cylinder Rs 4,965 to Rs 6,740; 5 kg Rs 1,988 to Rs 2,720'
+  magnitude_pct: 35.7
+  magnitude_note: 12.5 kg cylinder, computed from the stated prices
+  who_pays: Sri Lankan households on LAUGFS cooking gas (about 10% share vs Litro's 90%, per one report)
+  explanation: Break-even price after world LPG, freight, insurance, exchange-rate and tax costs; apology for the shortage only
+  reaction: Consumer Affairs Authority summons; criticism in Parliament
+  outcome: Ongoing
+  source: https://www.newswire.lk/2026/11/14/laugfs-gas-ceo-apologises-for-shortage-defends-rs-1775-price-hike/
+  digest: '2026-11-17'
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
+  last_checked: '2026-11-17'
+  follow_up_date: '2026-12-17'
 - case_id: japan-food-price-rises-2026
   date: '2026-11-06'
   sector: Food

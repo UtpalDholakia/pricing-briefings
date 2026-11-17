@@ -393,6 +393,8 @@
   question_ref: null
   case_ids:
   - damavandi-justification-study
+  - tariff-refunds-2026
+  - laugfs-lpg-2026
   status: idea
   priority: Medium
   owner: null
@@ -401,7 +403,7 @@
   published_url: null
   published_date: null
   revisit_date: null
-  notes: 'Fairness has a structure: labor-cost reasons read as fairer than material-cost reasons, and cutting quality at the same price reads worse than an honest increase. A practical ranking of ways to raise effective prices with the least backlash. Test it against the explanations tracker.'
+  notes: 'Fairness has a structure: labor-cost reasons read as fairer than material-cost reasons, and cutting quality at the same price reads worse than an honest increase. A practical ranking of ways to raise effective prices with the least backlash. Test it against the explanations tracker. 2026-11-17: two new cases: tariff refunds (a named-cost justification that turns into an implied promise to cut when the cost is refunded) and LAUGFS Gas (apology for the shortage, a break-even defence of the price).'
 - created: '2026-11-16'
   idea: A free tier should teach value, not replace it
   idea_slug: free-tier-teaches-value
@@ -704,6 +706,7 @@
   - saas-credits-2026
   - lyft-go-credits-2026
   - resolution-definition-2026
+  - notion-credits-2026
   status: drafting
   priority: High
   owner: claude
@@ -712,7 +715,7 @@
   published_url: null
   published_date: null
   revisit_date: null
-  notes: 'Seeded from the deep-dive backlog; first deep dive, draft awaiting Utpal''s approval. 2026-11-16: the ChatGPT Pro allowance cut turned out to have been cancelled around Oct 30 (draft corrected); added Lyft Go (discount replaced by expiring, captive credits) as a consumer case and per-resolution AI support pricing (the unit''s definition sets the price) as an auditability case.'
+  notes: 'Seeded from the deep-dive backlog; first deep dive, draft awaiting Utpal''s approval. 2026-11-16: the ChatGPT Pro allowance cut turned out to have been cancelled around Oct 30 (draft corrected); added Lyft Go (discount replaced by expiring, captive credits) as a consumer case and per-resolution AI support pricing (the unit''s definition sets the price) as an auditability case. 2026-11-17: added Notion (two non-interchangeable credit balances, Standard and Select, from Nov 2) as a multiple-currency case.'
 - created: '2026-11-15'
   idea: Why do sellers reverse?
   idea_slug: why-sellers-reverse

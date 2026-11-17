@@ -1,4 +1,49 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: ai-vs-human-price-setter-fairness
+  case_id: ai-price-setter-2026
+  date: '2026-11-10'
+  mechanism: Attributions about who set a dynamic price (AI vs human) and inferred motive
+  comparison: Dynamic price attributed to an AI price setter versus a human price setter
+  design: Five experiments
+  setting: Journal of the Academy of Marketing Science (Kaplan, Minton & Lamberton)
+  outcome: Perceived price fairness and downstream responses
+  result_kind: Context-dependent
+  result: 'Consumers generally judged AI-set prices fairer, depending on their expertise, attitudes toward AI and the pricing motive'
+  boundary: 'Effect sizes and study details not checked (full text not read). Contrast with ai-set-just-below-prices, which finds the opposite main effect.'
+  source: https://link.springer.com/article/10.1007/s11747-026-01224-7
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
+  digest: '2026-11-17'
+  agent: claude
+- id: ai-set-just-below-prices
+  case_id: ai-price-setter-2026
+  date: '2026-10-16'
+  mechanism: Perceived manipulative intent when an AI sets a just-below price
+  comparison: AI- versus human-attributed prices, crossed with round versus just-below endings ($10.00 vs $9.99)
+  design: Two experiments
+  setting: 796 participants in Chile and the US; Journal of Consumer Affairs (Chacon & Limongi)
+  outcome: Purchase intention and recommendation likelihood
+  result_kind: Negative in this setting
+  result: 'Consumers responded less favorably to AI-set prices; with AI as the setter, round prices did better in study 1, a directional (non-significant) pattern in study 2; perceived manipulation mediated the response'
+  boundary: Student and online samples; stated intentions, not purchases. Full text not read.
+  source: https://onlinelibrary.wiley.com/doi/10.1111/joca.70080
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
+  digest: '2026-11-17'
+  agent: claude
+- id: partitioned-surcharge-magnitude
+  case_id: partitioned-fee-size-2026
+  date: '2026-11-06'
+  mechanism: Partitioned pricing; surcharge salience and fairness
+  comparison: Separately shown shipping fee versus an all-in price, small versus large fee (2x2)
+  design: Online experiment (n=433) plus a recall task
+  setting: Online fashion retail; Journal of Revenue and Pricing Management (Aichner & Dorigati)
+  outcome: Purchase intention, perceived offer fairness, recalled total cost
+  result_kind: Context-dependent
+  result: 'Partitioning raised purchase intention only when the fee was small; a large fee reversed the advantage through lower perceived fairness. Stating the surcharge as a percentage rather than a currency amount lowered recalled total cost'
+  boundary: Stated intentions in one category. Publication date shown inconsistently on the indexed page.
+  source: https://link.springer.com/article/10.1057/s41272-026-00643-z
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
+  digest: '2026-11-17'
+  agent: claude
 - id: "historical-low-price-temporal-cues"
   date: "2026-03-18"
   mechanism: "Credibility of a historical low-price claim"

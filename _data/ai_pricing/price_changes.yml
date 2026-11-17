@@ -1,5 +1,25 @@
 # AI pricing database: change log. Newest first. One entry per price or structure change, logged when found with a source.
 # change_type values and rules: AGENTS.md section 8.
+- date: '2026-12-01'
+  provider: Google
+  provider_slug: google
+  product_or_model: Gemini 4 Argon (Gemini Developer API, standard tier)
+  case_id: gemini-argon-intro-2026
+  change_type: price-rise
+  what_changed: 'Introductory API price ends on Nov 30; standard rates apply from Dec 1. Input $2.00 to $4.00, output (incl. thinking tokens) $10.00 to $20.00, cached input $0.10 to $0.20 per 1M tokens. Google Cloud lists the same step for global-region input.'
+  old_value: $2.00 input / $10.00 output per 1M tokens
+  new_value: $4.00 input / $20.00 output per 1M tokens
+  magnitude_pct: 100
+  magnitude_note: computed from the provider's stated rates
+  mechanism: per-token
+  announced: true
+  announced_date: null
+  source: https://ai.google.dev/gemini-api/docs/pricing
+  related_source: https://cloud.google.com/model-garden/pricing
+  digest: '2026-11-17'
+  agent: claude
+  suggested_by: meta (2026-11-16 briefing)
+  verification_note: 'Rates read from the search-indexed text of Google''s own pricing pages on 2026-11-17; a direct fetch was blocked in this session. Reported Flash rises for Jan 1, 2027 are not logged (secondary sources only). Confirm at the 2026-12-01 snapshot.'
 - date: '2026-10-30'
   provider: OpenAI
   provider_slug: openai

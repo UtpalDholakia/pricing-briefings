@@ -1,5 +1,42 @@
 # Tracker: ai_product_pricing. How AI products themselves are priced.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: notion-credits-2026
+  date: '2026-11-02'
+  kind: AI product pricing
+  title: Notion moves existing Business and Enterprise workspaces onto two credit balances
+  who: Notion; analysis by Steven Forth (Pricing Innovation)
+  finding: 'From Nov 2 (new workspaces from Oct 19) each seat gets 1,500 Standard credits (work where Notion picks the model) and 500 Select credits (chosen models, Custom Agents) a month; extra credits about $10 per 1,000; Custom Agents draw down in a fixed order across owner and workspace pools; Forth counts four pricing logics in under four years with seat and credit prices unchanged'
+  source: https://pricinginnovation.substack.com/p/notion-pricing-update
+  related_source: https://www.notion.com/en-gb/help/manage-ai-models-and-member-credit-spend
+  digest: '2026-11-17'
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
+  last_checked: '2026-11-17'
+  follow_up_date: '2026-12-02'
+- case_id: microsoft-2027-prices
+  date: '2026-11-06'
+  kind: AI product pricing
+  title: Microsoft 365 Copilot Business moves toward metered billing by default
+  who: Microsoft (CSP channel)
+  finding: 'Usage-based billing in Copilot Credits (reported as one cent each) to be on by default for new partner-bought Copilot Business subscriptions, expected Jan-Mar 2027; reported default caps differ (4,000 credits per user per month vs $10 per user); Microsoft docs list Cowork and Work IQ API as metered for now'
+  source: https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-overview-copilot-credits
+  related_source: https://www.2tolead.com/insights/microsoft-365-copilot-licensing-changes-december-2026
+  digest: '2026-11-16'
+  agent: meta
+  verification_note: 'Secondary sources disagree on start date and default cap; Microsoft page not opened directly (fetch blocked). Not entered in the AI pricing database.'
+  last_checked: '2026-11-17'
+  follow_up_date: '2027-01-15'
+- case_id: gemini-argon-intro-2026
+  date: '2026-12-01'
+  kind: AI product pricing
+  title: Gemini 4 Argon's introductory API price ends
+  who: Google
+  finding: 'Standard-tier input $2.00 to $4.00 and output $10.00 to $20.00 per 1M tokens from Dec 1; cached input $0.10 to $0.20; Flash rises reported for Jan 1, 2027 not confirmed on the provider page'
+  source: https://ai.google.dev/gemini-api/docs/pricing
+  digest: '2026-11-16'
+  agent: meta
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
+  last_checked: '2026-11-17'
+  follow_up_date: '2026-12-01'
 - case_id: resolution-definition-2026
   date: '2026-11'
   kind: AI product pricing

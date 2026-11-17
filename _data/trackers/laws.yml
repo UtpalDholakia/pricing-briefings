@@ -1,5 +1,22 @@
 # Tracker: laws. Pricing laws and rules by jurisdiction.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: uk-cma-microsoft-sms-2026
+  jurisdiction: United Kingdom (CMA)
+  topic: Business software licensing and bundling (strategic market status)
+  approach: Designation enabling conduct requirements
+  scope: Microsoft's business software ecosystem (productivity software, operating systems, databases, identity and security); remedies could govern licensing terms and bundling
+  carve_outs: null
+  status: Proposed
+  status_note: 'Investigation launched May 14, 2026; proposed designation consulted on from Oct 16 to Nov 13, 2026; decision due by February 2027'
+  effective: null
+  enforcement: null
+  source: https://gov.uk/government/consultations/proposed-decision-sms-investigation-into-microsofts-business-software-ecosystem
+  updated: '2026-11-17'
+  agent: meta
+  digest: '2026-11-16'
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
+  last_checked: '2026-11-17'
+  follow_up_date: '2027-02-14'
 - case_id: us-surveillance-pricing-laws-2026
   jurisdiction: New York City
   topic: Personalized pricing

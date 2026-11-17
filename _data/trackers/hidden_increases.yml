@@ -1,5 +1,21 @@
 # Tracker: hidden_increases. Shrinkflation, upsizing with a markup, unbundling, inflated reference prices and fees.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: airtel-299-2026
+  date: '2026-11-11'
+  kind: Shrinkflation
+  product: Airtel Rs 299 prepaid plan (India)
+  change: Returns at Rs 299 with 1 GB of data a day instead of the 1.5 GB a day in earlier Rs 299 listings; unlimited 5G not listed
+  unit_price_effect: Daily data -33% at the same price
+  magnitude_pct: null
+  magnitude_note: 'Validity of the earlier 1.5 GB plan not confirmed in today''s sources, so no per-GB price change is computed'
+  industry: Telecom
+  geography: India
+  source: https://www.thetechoutlook.com/telecom/airtel-reintroduces-inr-299-prepaid-plan-with-reduced-daily-data-and-no-unlimited-5g-benefit/
+  digest: '2026-11-16'
+  agent: meta
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
+  last_checked: '2026-11-17'
+  follow_up_date: '2026-12-17'
 - case_id: mtg-nauctis-collector-booster-2026
   date: '2026-11-15'
   kind: Shrinkflation

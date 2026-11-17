@@ -1,4 +1,20 @@
 # One row per announced transition. Append follow-ups; don't infer an observed bill from a schedule.
+- id: notion-ai-credits
+  case_id: notion-credits-2026
+  offer: Notion Business and Enterprise AI
+  announced: null
+  from_model: 'AI bundled into Business and Enterprise seats, drawing on shared workspace usage'
+  to_model: 'Per-seat monthly allotments of 1,500 Standard credits (Notion picks the model) and 500 Select credits (chosen model, Custom Agents), plus purchased credits at about $10 per 1,000'
+  new_customers: New workspaces on the credit model from Oct 19, 2026.
+  existing_customers: 'Existing Business and Enterprise workspaces moved on Nov 2, 2026; agents created before Nov 2 keep drawing on shared workspace credits; some discounted legacy arrangements (former Plus + AI) end'
+  first_bill_timing: 'First full billing month under credits after Nov 2; AI Meeting Notes start drawing Standard credits on Dec 1, 2026'
+  status: Terms published
+  next_check: '2026-12-02'
+  question: 'Do two non-interchangeable credit balances raise perceived complexity and lower usage relative to one pool?'
+  source: https://pricinginnovation.substack.com/p/notion-pricing-update
+  verification_note: 'Dates from secondary sources (Nuclino, Forth); Notion help pages seen only via search index; direct fetch blocked on 2026-11-17'
+  digest: '2026-11-17'
+  agent: claude
 - id: "tixtree-per-item-booking-fee"
   offer: "Tixtree organizer booking fees"
   announced: null

@@ -1,5 +1,51 @@
 # Tracker: stories. Ongoing stories; keep updates dated and close stories when they resolve.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: microsoft-2027-prices
+  story: Microsoft's 2027 price calendar
+  status: Open
+  started: '2026-09-09'
+  next_milestone: Power Apps Premium list price rise and local-currency realignment take effect
+  milestone_date: '2027-01-01'
+  why_it_matters: 'One vendor stacking list-price rises, an annual currency reset and a move to metered AI billing in one quarter: a test of how B2B buyers read bundled price changes'
+  last_checked: '2026-11-17'
+  follow_up_date: '2027-01-05'
+  closed_date: null
+  outcome_summary: null
+  updates:
+  - date: '2026-09-09'
+    note: 'Power Apps Premium $20 to $22 per user per month, 2,000-seat plan $12 to $14, from Jan 1, 2027; first list-price rise in over five years; existing terms keep their price to renewal'
+    source: https://www.microsoft.com/en-us/licensing/news/power-apps-premium-price-update
+  - date: '2026-11-06'
+    note: 'Copilot Business usage-based billing expected on by default for new CSP purchases in Jan-Mar 2027 (dates and caps differ across sources)'
+    source: https://www.2tolead.com/insights/microsoft-365-copilot-licensing-changes-december-2026
+  - date: '2026-11-15'
+    note: 'Annual local-currency realignment: India +15.7%, New Zealand +10%, China up to -8.5%, Australia and Norway cut, from Jan 1'
+    source: https://theregister.com/off-prem/2026/11/15/microsoft-lifts-indian-cloud-prices-by-15-percent-cuts-costs-in-china/5309993
+  digest: '2026-11-17'
+  verification_note: 'Azure rises of 8-17% from Feb 1, 2027 (Meta AI, via luby.co) not independently confirmed today. Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
+- case_id: tariff-refunds-2026
+  story: Who gets the tariff refunds after tariff-justified price rises
+  status: Open
+  started: '2026-08-24'
+  next_milestone: FTC response to the senators' Nov 11 letter; Logitech class action (N.D. Cal.)
+  milestone_date: null
+  why_it_matters: A cost-based justification turned into an implied promise; tests whether consumers expect prices to fall when the cited cost is refunded
+  last_checked: '2026-11-17'
+  follow_up_date: '2026-12-17'
+  closed_date: null
+  outcome_summary: null
+  updates:
+  - date: '2026-08-24'
+    note: Proposed class action says Logitech kept a $61M tariff refund while price rises of up to 25% stayed in place
+    source: https://www.theregister.com/legal/2026/08/24/logitech-hit-by-sueball-over-tariff-refunds/5291845
+  - date: '2026-08-28'
+    note: Walmart and e.l.f. say they will use refunds to cut prices; FedEx, UPS and DHL pledge to pass refunds on
+    source: https://www.npr.org/2026/08/28/nx-s1-5946782/businesses-getting-tariff-refunds-why-arent-consumers-getting-their-cut
+  - date: '2026-11-11'
+    note: Seven Senate Democrats ask the FTC to examine whether keeping refunds after tariff-justified price rises violates the FTC Act
+    source: https://www.warren.senate.gov/newsroom/press-releases/warren-colleagues-urge-ftc-to-crack-down-on-corporations-pocketing-consumers-tariff-refunds/
+  digest: '2026-11-17'
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
 - case_id: ftc-6b-personalized-pricing-2026
   story: FTC 6(b) study of personalized pricing and pay
   status: Open
@@ -238,14 +284,21 @@
   story: Profeco's Buen Fin price-history microsite (Mexico)
   status: Open
   started: '2026-11-09'
-  next_milestone: Buen Fin ends; Profeco enforcement / complaints reported
-  milestone_date: '2026-11-17'
+  next_milestone: Profeco's final Buen Fin complaint and refund tally
+  milestone_date: '2026-11-24'
   why_it_matters: A regulator publishing price histories to expose pre-sale price inflation, the inflated-reference-price problem the other trackers cover in the US and Europe
-  last_checked: '2026-11-15'
-  follow_up_date: '2026-11-17'
+  last_checked: '2026-11-17'
+  follow_up_date: '2026-11-24'
+  follow_up_source: https://www.cronica.com.mx/nacional/2026/11/15/en-dos-dias-profeco-recibe-72-quejas-durante-el-buen-fin-incumplir-promociones-y-precios-encabezan-reclamos/
   closed_date: null
   outcome_summary: null
   updates:
+  - date: '2026-11-15'
+    note: 'Interim: 72 complaints in two days, led by promotions and prices not honoured; about MXN 400,000 recovered; 2,115 consultations and 70 store inspections. 2025 full event: 311 complaints'
+    source: https://www.cronica.com.mx/nacional/2026/11/15/en-dos-dias-profeco-recibe-72-quejas-durante-el-buen-fin-incumplir-promociones-y-precios-encabezan-reclamos/
+  - date: '2026-11-14'
+    note: Day one complaints led by Sam's Club (6), then Walmart, First Cash and Elektra (2 each); MXN 229,000 recovered
+    source: https://expansion.mx/empresas/2026/11/14/sams-club-walmart-first-cash-elektra-quejas-un-dia-buen-fin
   - date: '2026-11-09'
     note: Microsite tracks weekly prices for 490 products across about 400 stores; largest gap MXN 9,309
     source: https://particle.news/story/profeco-launches-pricecomparison-microsite-as-shoppers-rely-on-ai-ahead-of-el-buen-fin

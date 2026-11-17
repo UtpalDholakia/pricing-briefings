@@ -1,5 +1,40 @@
 # Tracker: explanations. How sellers explain price changes.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: laugfs-lpg-2026
+  date: '2026-11-14'
+  firm: LAUGFS Gas PLC (Sri Lanka)
+  change: '12.5 kg LPG cylinder Rs 4,965 to Rs 6,740 (+Rs 1,775) from midnight Nov 13; 5 kg cylinder Rs 1,988 to Rs 2,720'
+  explanation: 'CEO apologised for a weeks-long shortage but defended the rise as a break-even price, not a profit-making one; cited world LPG prices, freight and insurance, the exchange rate, taxes, and obligations to shareholders and lenders'
+  category: Cost
+  reaction: 'Consumer Affairs Authority summoned officials (appeared Nov 16); a minister accused the firm in Parliament of timing the rise against budget relief; a lawsuit reported as likely'
+  outcome: Ongoing
+  outcome_note: 'Apology covered the shortage, not the price; increase held as of Nov 16'
+  outcome_date: null
+  magnitude_pct: 35.7
+  magnitude_note: 12.5 kg cylinder, computed from 1,775 / 4,965
+  source: https://www.newswire.lk/2026/11/14/laugfs-gas-ceo-apologises-for-shortage-defends-rs-1775-price-hike/
+  related_source: https://adaderana.lk/news/251747
+  digest: '2026-11-17'
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
+  last_checked: '2026-11-17'
+  follow_up_date: '2026-12-17'
+- case_id: tariff-refunds-2026
+  date: '2026-11-11'
+  firm: Large US importers that raised prices citing tariffs (coverage names e.g. Walmart, Target, Nike, Energizer, Apple)
+  change: Tariff-justified price increases kept in place after the tariffs were struck down and importers received refunds
+  explanation: Increases were attributed to tariff costs; refunds go to the importer of record, not to buyers
+  category: Cost
+  reaction: 'Seven Senate Democrats led by Sen. Warren asked the FTC (Nov 11) whether keeping refunds after raising prices on tariff grounds violates the FTC Act; class action against Logitech (Aug)'
+  outcome: Unknown
+  outcome_note: 'Mixed: FedEx and UPS refunding through portals; Walmart, Costco and e.l.f. say they will cut prices instead; Home Depot reported no plan'
+  outcome_date: null
+  magnitude_pct: null
+  source: https://www.warren.senate.gov/newsroom/press-releases/warren-colleagues-urge-ftc-to-crack-down-on-corporations-pocketing-consumers-tariff-refunds/
+  related_source: https://www.supplychainbrain.com/general-scm/regulation-compliance/article/16425536/ftc-urged-to-probe-companies-not-sharing-tariff-refunds-with-consumers
+  digest: '2026-11-17'
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
+  last_checked: '2026-11-17'
+  follow_up_date: '2026-12-17'
 - case_id: grocery-outlet-promotions-2026
   date: '2026-11-14'
   firm: Grocery Outlet

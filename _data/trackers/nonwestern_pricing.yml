@@ -1,5 +1,58 @@
 # Tracker: nonwestern_pricing. Pricing outside the US/UK/EU, preferably from local-language sources.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: laugfs-lpg-2026
+  date: '2026-11-13'
+  country: Sri Lanka
+  language: English (Sri Lankan press)
+  firm_or_place: LAUGFS Gas PLC
+  change: 12.5 kg LPG cylinder +Rs 1,775 (+35.7%) after a weeks-long shortage
+  context: CEO apologised for the shortage, called the price break-even; Consumer Affairs Authority summoned the firm
+  source: https://www.newswire.lk/2026/11/14/laugfs-gas-ceo-apologises-for-shortage-defends-rs-1775-price-hike/
+  digest: '2026-11-17'
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
+  last_checked: '2026-11-17'
+  follow_up_date: '2026-12-17'
+- case_id: microsoft-2027-prices
+  date: '2026-11-15'
+  country: India (also New Zealand, China, Australia, Norway)
+  language: English
+  firm_or_place: Microsoft (commercial cloud and on-premises licences)
+  change: 'From Jan 1, 2027: India cloud +15.7% and some on-premises up to +20%; New Zealand +10%; China cloud up to -8.5% (not Azure operated by 21Vianet); Australia cut (4% per Microsoft table, 4.5% per The Register); Norway cut'
+  context: First adjustment under Microsoft's move (announced July) from twice-yearly to once-a-year local-currency realignment against the US dollar
+  source: https://theregister.com/off-prem/2026/11/15/microsoft-lifts-indian-cloud-prices-by-15-percent-cuts-costs-in-china/5309993
+  related_source: https://tbreak.com/microsoft-commercial-cloud-pricing-currency-2027/
+  digest: '2026-11-17'
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
+  last_checked: '2026-11-17'
+  follow_up_date: '2027-01-05'
+- case_id: grab-vietnam-fees-2026
+  date: '2026-11-06'
+  country: Vietnam
+  language: English (Vietnamese press in English)
+  firm_or_place: Grab Vietnam
+  change: 'Combined platform and app fees capped at 32% of the passenger payment from Nov 10 (from maxima of about 40.6% on motorbike and 39.81% on car trips); about VND 3.9 billion repaid to drivers for over-deductions from Nov 5'
+  context: 'National Competition Commission review after drivers threatened to strike; over-deductions affected about 0.13% of trips since 2024, which Grab blamed on supply-demand swings or algorithm errors; per-trip fee breakdown added to the driver app'
+  source: https://vietnamnews.vn/economy/1803670/grab-cuts-fees-pledges-vnd2-95-trillion-after-competition-watchdog-review.html
+  related_source: https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/06/grab-to-cut-vietnam-driver-fees-and-will-pay-compensation-after-review
+  digest: '2026-11-16'
+  agent: meta
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
+  last_checked: '2026-11-17'
+  follow_up_date: '2026-12-17'
+- case_id: airtel-299-2026
+  date: '2026-11-11'
+  country: India
+  language: English
+  firm_or_place: Bharti Airtel (prepaid)
+  change: Rs 299 prepaid plan reintroduced with 1 GB a day for 28 days; earlier Rs 299 listings gave 1.5 GB a day; unlimited 5G not listed
+  context: Base unlimited plan had moved up after the cheapest 1 GB packs were withdrawn; sources differ on whether it is sold in all circles or only in the Airtel Thanks app
+  source: https://www.thetechoutlook.com/telecom/airtel-reintroduces-inr-299-prepaid-plan-with-reduced-daily-data-and-no-unlimited-5g-benefit/
+  related_source: https://techenclave.com/news/items/airtel-brings-back-its-299-prepaid-plan-with-1gb-a-day
+  digest: '2026-11-16'
+  agent: meta
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
+  last_checked: '2026-11-17'
+  follow_up_date: '2026-12-17'
 - case_id: diwali-smartphones-2026
   date: '2026-11-12'
   country: India
@@ -22,8 +75,10 @@
   source: https://particle.news/story/profeco-launches-pricecomparison-microsite-as-shoppers-rely-on-ai-ahead-of-el-buen-fin
   digest: '2026-11-15'
   agent: meta
-  last_checked: '2026-11-15'
-  follow_up_date: '2026-11-17'
+  follow_up_note: '2026-11-17: interim Profeco counts: 72 complaints in the first two days, led by promotions and prices not honoured; about MXN 400,000 recovered; Sam''s Club led day-one complaints (6). Final tally due after the Nov 17 close.'
+  follow_up_source: https://www.cronica.com.mx/nacional/2026/11/15/en-dos-dias-profeco-recibe-72-quejas-durante-el-buen-fin-incumplir-promociones-y-precios-encabezan-reclamos/
+  last_checked: '2026-11-17'
+  follow_up_date: '2026-11-24'
 - case_id: japan-food-price-rises-2026
   date: '2026-11-06'
   country: Japan
