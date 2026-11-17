@@ -132,6 +132,7 @@ Use only these values. Detail goes in the matching `_note` field, never in the v
 - **Never delete entries**, including other agents'. Correct mistakes in place with a note; merge duplicates under one `case_id`, keeping all source URLs.
 - If a source couldn't be opened or checked, say so in `verification_note`.
 - New entries go at the **top** of each list (newest first). Quote any string that contains a colon. Keep entries short.
+- A hypothesis hunt that finds something (section 13) is filed as a tracker entry first; the hypothesis then points at that entry. Never file evidence only in `hypotheses.yml`.
 - Validate before committing: `python3 scripts/validate.py` (see section 11). It must report 0 errors. A broken file breaks the whole site build.
 
 ### 6.6 Monthly tracker digest
@@ -207,7 +208,8 @@ These files connect the trackers, the evidence file and the database so the repo
 What the repository currently believes about pricing, and how it knows. File: `_data/claims.yml`; page: https://utpaldholakia.github.io/pricing-briefings/claims/. Claims point at evidence; they never copy it. The chain is: question (`questions.yml`) → evidence (`pricing_evidence.yml`, trackers) → claim (verdict revised over time) → deep dive (`_cases/`) → Substack piece (`ideas.yml`).
 
 - **A claim is one falsifiable sentence**, not a topic. "Surcharges are bad" is not a claim; "naming a specific cost in a price-rise explanation reduces backlash" is.
-- **Fields:** `claim_id` (lowercase slug, never renamed), `claim`, `status`, `confidence`, `confidence_note`, `mechanism_codes` (from `_data/mechanisms.yml`), `created`, `last_updated`, `evidence_for` and `evidence_against` (lists of `kind`, `ref`, `note`), `related_questions` (`question_id`s), `related_dives` (`_cases/` slugs), `status_history` and `agent`.
+- **Where claims come from.** Most new claims graduate from hypotheses (section 13): a prediction the daily runs hunted until a hunt found evidence. A claim needs at least one pointer directly on point; a candidate with none is a hypothesis or a question, not a claim.
+- **Fields:** `claim_id` (lowercase slug, never renamed), `claim`, `status`, `confidence`, `confidence_note`, `mechanism_codes` (from `_data/mechanisms.yml`), `test` (optional: what would settle it), `created`, `last_updated`, `evidence_for` and `evidence_against` (lists of `kind`, `ref`, `note`), `related_questions` (`question_id`s), `related_dives` (`_cases/` slugs), `status_history` and `agent`.
 - **Allowed values:** `status`: `Open` / `Supported` / `Contested` / `Refuted` / `Dead`. `confidence`: `High` / `Medium` / `Low`; it is independent of status (`Supported` with `Low` confidence is normal when evidence is thin). Evidence `kind`: `evidence` (a `pricing_evidence.yml` `id`), `tracker` (a `case_id`), `case` (a `_cases/` slug), `question` (a `question_id`), `briefing` (a briefing file name such as `2026-11-17-meta`, replaced by a tracker pointer once the item is filed). Every `ref` must resolve; `scripts/validate.py` checks this.
 - **Question IDs:** new `questions.yml` entries get a `question_id` (lowercase slug) so claims can point at them. Older questions get one when a claim first needs it; adding the ID never changes the question text.
 - **Verdict rules.** `Open` → `Supported` needs at least two independent pieces of evidence for, of different kinds (for example one study and one field case), and no credible evidence against; one study alone is never enough. → `Contested` when there is credible evidence on both sides (at least one piece for and one against), or two studies disagree. Evidence only against that falls short of the `Refuted` bar leaves a claim `Open`, with the lean stated in `confidence_note`; the same applies to evidence only for that falls short of `Supported`. → `Refuted` when the evidence against outweighs the evidence for, or a direct replication fails. → `Dead` when a claim proves untestable or is superseded (give the reason). Confidence follows the weight of evidence, not the count: one well-designed field study outweighs several anecdotes. A briefing item alone never moves a verdict.
@@ -215,3 +217,42 @@ What the repository currently believes about pricing, and how it knows. File: `_
 - **Maintenance.** Claude creates claims, files evidence pointers and proposes verdict changes. ChatGPT suggests literature evidence by `claim_id` in its briefing; Meta AI suggests field, non-Western and consumer-voice evidence by `claim_id` in its Tracker suggestions ("Claim evidence, `<claim_id>`, for/against: …"). Neither edits `claims.yml`. Claude adds a claim only when at least one piece of evidence bears on it; a claim with no evidence after 30 days goes back to `questions.yml` or is marked `Dead`.
 - **Reporting.** The monthly tracker digest (6.6) adds one line: claims whose status or confidence moved that month, with reasons, or "none moved". Bulk revision of verdicts belongs to the quarterly synthesis, not the monthly digest.
 
+## 13. Hypotheses: the daily hunt
+
+What the daily briefings go looking for. File: `_data/hypotheses.yml`; page: https://utpaldholakia.github.io/pricing-briefings/hypotheses/. A question asks; a hypothesis predicts **and states its test**, which is what makes it searchable; a claim is a verdict on evidence. "Do surcharges cannibalise tips?" is a question. "Surcharges and tips share one mental account, so fees cannibalise tips, testable with POS data" is a hypothesis.
+
+| Layer | What it is | Moves | Who confirms |
+|---|---|---|---|
+| Question (`questions.yml`) | An open research question | When answered | Utpal, via `answered_by` |
+| Hypothesis (`hypotheses.yml`) | A falsifiable prediction plus the observable test | Daily: hunted, hit, missed, graduated, killed | Claude, by the rules below; Utpal picks the pool |
+| Claim (`claims.yml`) | A verdict on the evidence | Slowly: only with new evidence and a history entry | Utpal, via `confirmed_by` |
+
+### 13.1 Fields and allowed values
+
+- `hypothesis_id` (lowercase slug, never renamed, never the same as any `claim_id`), `hypothesis` (one falsifiable sentence), `predicts` (the observable consequence: a number, a comparison, an event), `test` (how it would be checked). `predicts` and `test` must both be non-empty; an entry without a test is a question and goes in `questions.yml`.
+- `status`: `Testing` / `Graduated` / `Dead`. `confidence`: `High` / `Medium` / `Low`, the strength of the prior before hunting, not a verdict (most are `Low`).
+- `lanes`: the briefing lanes that should hunt it, using the lane names in the agents' instructions (e.g. `Meta-platform consumer voice`, `Outside the US/UK/EU`, `Industries the others ignore`, `Google-world and Asia`, `B2B and enterprise pricing`, `Primary documents instead of news`, `Small business and creator economy`). If no lane fits, use a pipeline theme name (e.g. `Subscriptions`) and say so in that day's digest.
+- `last_hunted` (date or `null`), `hunt_count`, `hunts` (append-only list of `date`, `agent`, `outcome`: `hit` / `miss`, one-line `note`). Every hunt is logged, hit or miss; `hunt_count` always equals the number of hunts and `last_hunted` the latest hunt date.
+- `evidence_for` / `evidence_against`: same pointer kinds and resolution rule as claims (section 12). `related_claim`: `null` until graduation, then the new `claim_id`. `related_questions`: `question_id`s. `created`, `agent` (who proposed it).
+- `history`: append-only; every status change adds `date`, `old_status`, `new_status`, `reason`, `source`.
+- Order in the file: Testing first (longest unhunted first), then Graduated, then Dead. Quote any string with a colon.
+
+### 13.2 The daily hunt
+
+1. **Cap.** At most **20** hypotheses in `Testing`. The validator fails a 21st until one graduates or dies. Don't fill empty slots to look busy; they are capacity for the next good proposal.
+2. **Picking.** Each daily run (Claude, ChatGPT, Meta AI) picks **up to 2** Testing hypotheses whose `lanes` match the day's lanes (ChatGPT: the day's theme), preferring the longest since `last_hunted` (`null` first). **Cool-down:** a hypothesis hunted by any agent yesterday is off-limits to every agent today, and one whose last hunt was a miss with no evidence rests **14 days**.
+3. **Hunting.** Run targeted searches for the hypothesis itself, not only the day's general queries. A `hit` is evidence directly on point: file it as a tracker or evidence entry first (section 6), then point the hypothesis at it. A `miss` is reported, not hidden.
+4. **Reporting.** Every briefing that hunts carries one line per hypothesis under "How this was found" (Meta AI), at the end of the post (ChatGPT) or under "Follow-ups" (Claude): `Hypothesis hunt: <hypothesis_id> — hit: <what, filed where>` or `Hypothesis hunt: <hypothesis_id> — miss: <what was searched>; next hunt after <date>`.
+5. **Logging.** Only Claude edits `hypotheses.yml`. In each daily run Claude reads the `Hypothesis hunt:` lines in all agents' briefings since its last run and logs every hunt (hit or miss), files the evidence pointers, and updates `last_hunted` and `hunt_count`.
+6. **Review after 3 empty hunts.** After 3 hunts with no evidence, Claude flags the hypothesis in that day's digest: keep hunting (with a reason) or mark it `Dead`. `python3 scripts/validate.py --hypotheses` lists them.
+7. **New hypotheses.** Any agent or Utpal may propose one in a briefing ("Hypothesis proposal: <sentence> — predicts: … — test: … — lanes: …"). Claude files it as `Testing` only if it states a test and the Testing count is under the cap; a proposal without a test is filed as a question instead.
+
+### 13.3 Graduation and death
+
+- **Graduation.** When a hunt returns evidence directly on point on at least one side, Claude creates a new claim in `claims.yml` (status `Open`, or `Contested` with credible evidence on both sides; never `Supported` on one hunt; section 12 verdict rules apply), sets the hypothesis to `Graduated` with `related_claim`, and adds history entries on both. A single consumer-voice post is a lead, not a graduation. Utpal decides contested graduations and confirms the claim's verdict as usual.
+- **No renaming.** Graduation always creates a new `claim_id` and leaves the hypothesis in place, marked `Graduated`, so its hunt history survives.
+- **Death.** A hypothesis dies when its test returns a clear negative, or after 3 empty hunts when no upcoming event could test it. Record the reason in `history` and keep any negative evidence in `evidence_against`; a dead hypothesis is knowledge too. Never delete an entry. Utpal can kill a hypothesis at any time; Claude records it.
+
+### 13.4 Ownership and reporting
+
+Claude owns `hypotheses.yml`, the page, the validator checks and graduation reviews. ChatGPT and Meta AI hunt hypotheses in their lanes and propose new ones in their briefings; neither edits the file. Utpal picks the pool. The monthly tracker digest (6.6) adds one line: hunts that month, hits and misses (the hit rate), graduations and deaths. The first quarterly synthesis (January 2027) reviews whether the hunt produces claims or only activity.

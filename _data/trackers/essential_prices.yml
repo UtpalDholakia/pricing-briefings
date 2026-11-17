@@ -1,5 +1,53 @@
 # Tracker: essential_prices. Price changes for essentials: energy, tuition, healthcare, housing, food.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: wvu-early-tuition-2026
+  date: '2026-11-13'
+  sector: Tuition
+  firm_or_place: West Virginia University (Board of Governors)
+  change: 'Fall 2027 baseline undergraduate tuition +$216 a semester (residents) and +$636 (non-residents); graduate +$252 and +$666; set months earlier than usual'
+  magnitude_pct: null
+  magnitude_note: dollar increases only; base tuition not stated in the release
+  who_pays: Students entering or continuing in 2027-28
+  explanation: 'Rates follow inflation and are set early so acceptance letters carry real tuition and merit-scholarship numbers; previously set the summer before each year'
+  reaction: 'President reports applications, admits and early deposits for Fall 2027 well ahead of previous years (university''s own statement, not linked to the early rates)'
+  outcome: Ongoing
+  source: https://wvutoday.wvu.edu/stories/2026/11/13/to-provide-certainty-wvu-sets-tuition-housing-dining-rates-for-next-academic-year
+  digest: '2026-11-17'
+  agent: meta
+  last_checked: '2026-11-17'
+  follow_up_date: '2027-01-17'
+- case_id: aca-2027-premiums-2026
+  date: '2026-11-06'
+  sector: Healthcare
+  firm_or_place: US ACA Marketplaces (KFF analysis of finalized 2027 rates)
+  change: 'Average benchmark silver premium +13% for 2027 (HealthCare.gov states +11%, state-based Marketplaces +16%), after +26% for 2026'
+  magnitude_pct: 13
+  magnitude_note: average benchmark silver premium, 2027
+  who_pays: Marketplace enrollees; CBO projects enrollment falling from 22.4 million (2025) to 13.1 million (2027)
+  explanation: 'Insurers cite a higher-than-usual rise in underlying care costs, plus the end of enhanced premium tax credits and the resulting risk-pool change; KFF estimates the latter added about 4 points in 2026 and a similar amount in 2027'
+  reaction: null
+  outcome: Ongoing
+  source: https://www.kff.org/affordable-care-act/9-things-to-watch-for-the-2027-aca-open-enrollment-period/
+  digest: '2026-11-17'
+  agent: meta
+  last_checked: '2026-11-17'
+  follow_up_date: '2026-12-17'
+- case_id: nepra-fuel-adjustment-2026
+  date: '2026-11-07'
+  sector: Energy
+  firm_or_place: NEPRA (Pakistan power regulator)
+  change: 'Rs2.37 per unit fuel price adjustment on November bills (CPPA asked for Rs2.56); concessional rate for extra industrial and agricultural use Rs22.98 to Rs25.30 per unit'
+  magnitude_pct: 10.1
+  magnitude_note: concessional industrial/agricultural rate, computed from the stated rates
+  who_pays: Electricity consumers nationwide, including K-Electric; industrial and agricultural users on the concessional rate
+  explanation: September fuel price adjustment; the concessional-rate rise passed on the chairman's casting vote, with two members' dissenting notes calling the Rs25.30 rate baseless
+  reaction: Dissent inside the regulator
+  outcome: Ongoing
+  source: https://customstoday.media/nepra-hikes-electricity-tariff-by-rs2-37-for-november-bills/
+  digest: '2026-11-17'
+  agent: meta
+  last_checked: '2026-11-17'
+  follow_up_date: '2026-12-17'
 - case_id: laugfs-lpg-2026
   date: '2026-11-13'
   sector: Energy

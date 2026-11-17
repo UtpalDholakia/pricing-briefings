@@ -1,0 +1,412 @@
+# Hypotheses: the daily search layer. AGENTS.md section 13.
+# One falsifiable prediction per entry, with the observable test that would settle it. Testing entries first (longest unhunted first), then Graduated, then Dead.
+# status: Testing / Graduated / Dead. confidence: High / Medium / Low (strength of the prior, not a verdict). At most 20 Testing.
+# Every hunt is logged (hit or miss). Graduation creates a new claim_id in claims.yml; a hypothesis is never renamed or deleted.
+# Seeded 2026-11-17 by Claude from Muse's 48 candidates under Spec F: 14 listed seeds plus 3 moved from the claims list at seeding.
+- hypothesis_id: labour-cost-fairer-than-material
+  hypothesis: A price rise blamed on labour costs is judged fairer than the same rise blamed on material costs.
+  predicts: Fairness ratings for an identical rise are higher when labour costs are named than when material costs are.
+  test: A vignette experiment ranking justifications (labour, materials, energy, demand) by fairness ratings for an identical rise.
+  status: Testing
+  confidence: Low
+  lanes:
+  - Industries the others ignore
+  - Meta-platform consumer voice
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+- hypothesis_id: fairness-judged-by-worst-hit
+  hypothesis: The public judges personalised pricing by the worst-hit shopper, not by the median shopper.
+  predicts: Fairness ratings of the same scheme fall more when the worst-case outcome is highlighted than when the median is.
+  test: A survey presenting the same pricing scheme with the median outcome versus the worst-case outcome highlighted, measuring fairness judgments.
+  status: Testing
+  confidence: Low
+  lanes:
+  - Outside the US/UK/EU
+  - Meta-platform consumer voice
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions:
+  - personalization-worst-hit-2026
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+- hypothesis_id: less-accurate-ai-buyer-better-off
+  hypothesis: A less accurate AI buyer can leave consumers better off than a fully accurate one, because sellers respond to how buyers process prices.
+  predicts: Consumer surplus is higher in a market of less accurate AI buyers than of fully accurate ones.
+  test: 'A field or lab market with AI buyers of varying accuracy, measuring consumer surplus rather than seller revenue. Hunt for a real test, not more simulations: the source simulation (ning-ai-buyer-disclosure-2026) is flagged as not robust.'
+  status: Testing
+  confidence: Low
+  lanes:
+  - Google-world and Asia
+  - B2B and enterprise pricing
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+- hypothesis_id: surcharge-bans-shift-costs
+  hypothesis: Banning a surcharge shifts the cost elsewhere (higher base prices, new fees) rather than removing it.
+  predicts: After the card-surcharge ban, Australian merchants' base prices or other fees rise by about the banned surcharge.
+  test: Australian merchant base prices and fee structures before and after the ban takes effect (au-card-surcharge-ban-2026).
+  status: Testing
+  confidence: Low
+  lanes:
+  - Primary documents instead of news
+  - Outside the US/UK/EU
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+- hypothesis_id: clip-coupons-lower-perceived-savings
+  hypothesis: Coupons that must be clipped or activated lower perceived savings relative to an equal price cut.
+  predicts: At equal face value, clip-to-activate coupons yield lower perceived savings (and redemption) than automatic coupons.
+  test: A field comparison of clip-to-activate versus automatic coupons at equal face value, measuring redemption and perceived savings.
+  status: Testing
+  confidence: Low
+  lanes:
+  - Industries the others ignore
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions:
+  - clip-coupons-savings-2026
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+- hypothesis_id: irregular-deals-shape-price-image
+  hypothesis: Irregular, discovery-style deals shape a store's price image more than scheduled promotions do.
+  predicts: Shoppers exposed mainly to irregular deals rate the store's price image lower (cheaper) than those exposed mainly to scheduled promotions.
+  test: A survey or panel comparing price image for shoppers exposed mainly to irregular deals versus mainly to scheduled promotions (start from grocery-outlet-promotions-2026).
+  status: Testing
+  confidence: Low
+  lanes:
+  - Industries the others ignore
+  - Small business and creator economy
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions:
+  - irregular-deals-price-image-2026
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+- hypothesis_id: churn-is-about-options
+  hypothesis: Subscription churn after a price rise comes as much from missing pause or downgrade options as from price sensitivity.
+  predicts: Risers offered pause or downgrade churn less than risers offered only cancel, at the same price rise.
+  test: Churn rates for risers offered pause/downgrade versus risers offered only cancel, at the same price rise. The one existing pointer (subscription-unbundling-survey-2026) is weak-fit and is not seeded as evidence.
+  status: Testing
+  confidence: Low
+  lanes:
+  - Industries the others ignore
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions:
+  - churn-pause-downgrade-2026
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+- hypothesis_id: one-tap-approval-dulls-pain
+  hypothesis: Approving an agent's purchase with one biometric tap reduces the pain of paying relative to manual checkout.
+  predicts: Spending is higher and post-purchase regret no lower with one-tap approval than with manual checkout of the same purchase.
+  test: A lab or field comparison of one-tap versus manual checkout for the same purchase, measuring spending and post-purchase regret.
+  status: Testing
+  confidence: Low
+  lanes:
+  - Google-world and Asia
+  - Meta-platform consumer voice
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions:
+  - one-tap-pain-of-paying-2026
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+- hypothesis_id: renewal-into-choice-beats-auto-renew
+  hypothesis: Making members actively choose a tier at renewal, instead of auto-renewing them, raises trust and does not lose more members than it keeps.
+  predicts: Landmark's renewal rate after the switch is no lower than its auto-renewal baseline, with fewer complaints.
+  test: 'Renewal and complaint rates after Landmark''s switch, against its own prior auto-renewal baseline. The case (landmark-loyalty-tier-election-2026) has no outcome yet: the hunt is the outcome.'
+  status: Testing
+  confidence: Low
+  lanes:
+  - Industries the others ignore
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+- hypothesis_id: list-is-not-what-buyers-pay
+  hypothesis: Published B2B list prices systematically overstate what enterprise buyers pay after negotiation.
+  predicts: In a dataset of actual deals, net prices sit materially below list in one software category.
+  test: A survey or dataset of actual net versus list prices in one software category. Existing b2b_pricing.yml entries show list-only visibility; they are the reason to hunt, not evidence.
+  status: Testing
+  confidence: Low
+  lanes:
+  - B2B and enterprise pricing
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+- hypothesis_id: renewal-uplifts-destroy-value
+  hypothesis: Enterprise renewal uplifts large enough to make a major customer sue and migrate destroy more revenue than the uplift adds.
+  predicts: For the affected accounts, revenue lost to exits exceeds revenue gained from the uplift on retained accounts.
+  test: The Broadcom trial outcome (reportedly 2027) and renewal revenue versus churn for the affected accounts.
+  status: Testing
+  confidence: Low
+  lanes:
+  - B2B and enterprise pricing
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+- hypothesis_id: shedding-customers-can-pay
+  hypothesis: Deliberately losing a large share of customers through renewal pricing can be a coherent strategy when the remaining customers pay much more.
+  predicts: Revenue from retained accounts after the uplift exceeds revenue lost to exits.
+  test: 'The same Broadcom outcome, read the other way: renewal revenue from retained accounts versus revenue lost to exits.'
+  status: Testing
+  confidence: Low
+  lanes:
+  - B2B and enterprise pricing
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+- hypothesis_id: surcharges-outlive-their-cost
+  hypothesis: B2B surcharges outlive the cost that justified them, becoming permanent margin.
+  predicts: A named surcharge (war-risk, fuel) is still charged, renamed or folded into the base rate after its stated cost falls.
+  test: Track a named surcharge after its stated cost falls, and record whether it is removed, renamed or absorbed.
+  status: Testing
+  confidence: Low
+  lanes:
+  - B2B and enterprise pricing
+  - Primary documents instead of news
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+- hypothesis_id: patients-become-arbitrageurs
+  hypothesis: When drug price gaps across countries are large enough, patients themselves become the arbitrageurs, importing low-cost generics.
+  predicts: Patient-led importing of a low-cost generic grows in volume and countries while the originator's price gap persists.
+  test: 'The Trikafta buyers'' club''s current status and figures, when verified. No repo evidence yet: the hunt starts from the Substack idea trikafta-patient-arbitrage.'
+  status: Testing
+  confidence: Low
+  lanes:
+  - Industries the others ignore
+  - Outside the US/UK/EU
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+- hypothesis_id: restraint-pays-for-monopolists
+  hypothesis: A near-monopolist that restrains its price (modest rises, two-part tariffs) earns more in the long run than one that exploits its position.
+  predicts: Dominant sellers with restrained rises show better multi-year revenue and retention than comparable dominant sellers with exploitative rises.
+  test: The TSMC overage-surcharge case once filed, plus a comparison of restrained versus exploitative rises by dominant sellers in explanations.yml.
+  status: Testing
+  confidence: Low
+  lanes:
+  - B2B and enterprise pricing
+  - Primary documents instead of news
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Moved from the claims list at seeding (Spec F re-judgment): flagged borderline; its only pointer (chipotle-pricing-restraint-2026) is a restraint case but not a near-monopolist, and its outcome is still Ongoing. Lead: the Substack idea tsmc-overage-surcharge.'
+    source: null
+- hypothesis_id: agents-kill-inertia-pricing
+  hypothesis: AI agents that cancel subscriptions for the buyer remove the inertia on which auto-renew pricing depends.
+  predicts: After agent-cancel tools become widely available, auto-renew retention falls (and acquisition may rise) relative to a matched control.
+  test: Retention and acquisition for a subscription after an agent-cancel tool becomes widely available, against a matched control.
+  status: Testing
+  confidence: Low
+  lanes:
+  - Google-world and Asia
+  - Meta-platform consumer voice
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Moved from the claims list at seeding (Spec F re-judgment): both pointers are off target (chatgpt-wallet-2026 is agent checkout, jpmorgan-agent-cards-2026 is a bank blocking agents'' card use); neither involves cancelling. Lead: the Substack idea agents-cancel-subscriptions.'
+    source: null
+- hypothesis_id: low-margin-sellers-opt-out
+  hypothesis: Sellers with near-zero unit margins rationally opt out of platform sale events rather than discounting at a loss.
+  predicts: Opt-out rates from a platform sale event are higher among low-margin resellers than among high-margin makers.
+  test: Opt-out rates and seller margins across a platform sale event, comparing low-margin resellers with high-margin makers.
+  status: Testing
+  confidence: Low
+  lanes:
+  - Small business and creator economy
+  - Meta-platform consumer voice
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Moved from the claims list at seeding (Spec F re-judgment): its tracker pointer (crochet-seller-reversal-2026) is a price reversal, not an opt-out, and the remaining pointers are single consumer-voice posts (briefings 2026-11-17-meta and 2026-11-16-meta), which are leads, not evidence.'
+    source: null

@@ -12,4 +12,4 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install pyyaml
-      - run: python3 scripts/validate.py --firms
+      - run: python3 scripts/validate.py --firms --hypotheses

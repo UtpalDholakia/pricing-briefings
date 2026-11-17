@@ -5,11 +5,12 @@ permalink: /claims/
 ---
 {% assign C = site.data.claims %}
 {% assign E = site.data.trackers.pricing_evidence %}
+{% assign H = site.data.hypotheses %}
 {% capture brief_base %}{{ '/briefings/' | relative_url }}{% endcapture %}
 {% capture case_base %}{{ '/cases/' | relative_url }}{% endcapture %}
 
 <h1 class="page-title">Claims</h1>
-<p class="muted">What the research base currently believes about pricing, one falsifiable claim at a time, with the evidence for and against and a dated history of verdicts. Agents propose verdicts; a verdict marked <span class="chip">proposed</span> awaits Utpal's confirmation. Evidence lives in the <a href="{{ '/trackers/' | relative_url }}">trackers</a> and the <a href="{{ '/trackers/' | relative_url }}#pricing-evidence">evidence file</a>; this page only points at it. Rules: AGENTS.md section 12.</p>
+<p class="muted">What the research base currently believes about pricing, one falsifiable claim at a time, with the evidence for and against and a dated history of verdicts. Agents propose verdicts; a verdict marked <span class="chip">proposed</span> awaits Utpal's confirmation. Evidence lives in the <a href="{{ '/trackers/' | relative_url }}">trackers</a> and the <a href="{{ '/trackers/' | relative_url }}#pricing-evidence">evidence file</a>; this page only points at it. Predictions still being hunted, without evidence yet, are on the <a href="{{ '/hypotheses/' | relative_url }}">hypotheses</a> page; a hypothesis graduates into a claim here when a hunt finds evidence. Rules: AGENTS.md sections 12 and 13.</p>
 
 {% assign statuses = "Supported,Contested,Open,Refuted,Dead" | split: "," %}
 <div class="stat-row">
@@ -32,6 +33,8 @@ permalink: /claims/
     <tr id="{{ c.claim_id }}">
       <td><strong>{{ c.claim }}</strong>
         <div class="small muted">{{ c.claim_id }}{% if c.mechanism_codes %} · {{ c.mechanism_codes | join: ", " }}{% endif %}</div>
+        {% if c.test %}<div class="small">Test: {{ c.test }}</div>{% endif %}
+        {% assign fromh = H | where: "related_claim", c.claim_id | first %}{% if fromh %}<div class="small">Graduated from hypothesis <a href="{{ '/hypotheses/' | relative_url }}#{{ fromh.hypothesis_id }}">{{ fromh.hypothesis_id }}</a></div>{% endif %}
         {% if c.related_questions.size > 0 %}<div class="small">Questions: {{ c.related_questions | join: ", " }}</div>{% endif %}
         {% if c.related_dives.size > 0 %}<div class="small">Deep dives: {% for d in c.related_dives %}<a href="{{ case_base }}{{ d }}/">{{ d }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</div>{% endif %}
       </td>

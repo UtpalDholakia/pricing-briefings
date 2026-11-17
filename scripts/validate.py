@@ -4,6 +4,7 @@
 Usage:
     python3 scripts/validate.py            # errors fail (exit 1); warnings are printed
     python3 scripts/validate.py --firms    # also print the firm registry report
+    python3 scripts/validate.py --hypotheses   # also print the hypothesis hunt report
 
 Checks (AGENTS.md sections 2, 6, 8, 10, 11):
   * every YAML file under _data/ parses
@@ -14,6 +15,10 @@ Checks (AGENTS.md sections 2, 6, 8, 10, 11):
   * firm registry (_data/firms.yml): unique IDs, listed case_ids exist, aliases match at least one entry (warning)
   * question_id slugs are unique; claims (_data/claims.yml): vocabularies, every evidence ref and related
     question/dive resolves, status_history is consistent with status, confirmed_by is null or 'utpal'
+  * hypotheses (_data/hypotheses.yml, AGENTS.md section 13): vocabularies, non-empty predicts and test,
+    at most 20 Testing, every evidence ref / related_claim / related question resolves, hunts consistent
+    with hunt_count and last_hunted (never in the future), Graduated entries name a claim, history consistent,
+    hypothesis_ids unique and never equal to a claim_id
 Needs only Python 3 and PyYAML.
 """
 import datetime
@@ -124,7 +129,8 @@ if isinstance(data.get("_data/mechanisms.yml"), list):
 all_case_ids = defaultdict(list)       # case_id -> [file]
 records_by_file = {}
 for path, d in data.items():
-    if path in ("_data/tags.yml", "_data/mechanisms.yml", "_data/firms.yml", "_data/claims.yml"):
+    if path in ("_data/tags.yml", "_data/mechanisms.yml", "_data/firms.yml", "_data/claims.yml",
+                "_data/hypotheses.yml"):
         continue
     recs = as_list(d)
     records_by_file[path] = recs
@@ -272,6 +278,7 @@ REF_KINDS = {
     "briefing": (briefing_slugs, "_briefings/ file name"),
 }
 claims = data.get("_data/claims.yml")
+claim_ids = set()
 if claims is not None:
     seen = set()
     for c in as_list(claims):
@@ -282,6 +289,7 @@ if claims is not None:
         if cid in seen:
             err(where, "duplicate claim_id")
         seen.add(cid)
+        claim_ids.add(cid)
         if not c.get("claim"):
             err(where, "missing claim sentence")
         if c.get("status") not in CLAIM_STATUS:
@@ -329,11 +337,128 @@ if claims is not None:
             if age > 30:
                 warn(where, "no evidence after 30 days: move it to questions.yml or mark it Dead")
 
+
+# ---------------------------------------------------------------- 6. hypotheses
+HYP_STATUS = {"Testing", "Graduated", "Dead"}
+HUNT_OUTCOME = {"hit", "miss"}
+TESTING_CAP = 20
+hyp_report = {"testing": 0, "unhunted": [], "review": []}
+
+
+def as_date(v):
+    if isinstance(v, datetime.date):
+        return v
+    try:
+        return datetime.date.fromisoformat(str(v))
+    except ValueError:
+        return None
+
+
+hyps = data.get("_data/hypotheses.yml")
+if hyps is not None:
+    if not isinstance(hyps, list):
+        err("_data/hypotheses.yml", "must be a list")
+        hyps = []
+    today = datetime.date.today()
+    seen = set()
+    for h in hyps:
+        if not isinstance(h, dict):
+            err("_data/hypotheses.yml", "every entry must be a mapping")
+            continue
+        hid = h.get("hypothesis_id")
+        where = f"_data/hypotheses.yml {hid}"
+        if not hid or not SLUG.match(str(hid)):
+            err(where, "hypothesis_id must be a lowercase slug")
+        if hid in seen:
+            err(where, "duplicate hypothesis_id")
+        if hid in claim_ids:
+            err(where, "hypothesis_id collides with a claim_id (graduation creates a new claim_id)")
+        seen.add(hid)
+        for k in ("hypothesis", "predicts", "test"):
+            if not str(h.get(k) or "").strip():
+                err(where, f"{k} is empty (no test, no hypothesis: move it to questions.yml)")
+        status = h.get("status")
+        if status not in HYP_STATUS:
+            err(where, f"status {status!r} not in allowed values")
+        if h.get("confidence") not in CONFIDENCE:
+            err(where, f"confidence {h.get('confidence')!r} not in allowed values")
+        if not h.get("agent") or h.get("agent") not in agents:
+            err(where, "agent missing or not in _config.yml agents")
+        if not h.get("lanes"):
+            err(where, "lanes is empty")
+        for ptr in (h.get("evidence_for") or []) + (h.get("evidence_against") or []):
+            kind, ref = ptr.get("kind"), ptr.get("ref")
+            if kind not in REF_KINDS:
+                err(where, f"evidence kind {kind!r} not in {sorted(REF_KINDS)}")
+            elif str(ref) not in REF_KINDS[kind][0]:
+                err(where, f"{kind} ref {ref!r} does not resolve ({REF_KINDS[kind][1]})")
+        rc = h.get("related_claim")
+        if rc is not None and rc not in claim_ids:
+            err(where, f"related_claim {rc!r} is not a claim_id")
+        if status == "Graduated" and not rc:
+            err(where, "a Graduated hypothesis must name its related_claim")
+        for q in h.get("related_questions") or []:
+            if q not in question_ids:
+                err(where, f"related question {q!r} has no matching question_id")
+        hunts = h.get("hunts") or []
+        if h.get("hunt_count") != len(hunts):
+            err(where, f"hunt_count {h.get('hunt_count')!r} does not equal the number of hunts ({len(hunts)})")
+        hunt_dates = []
+        for hu in hunts:
+            for k in ("date", "agent", "outcome", "note"):
+                if not hu.get(k):
+                    err(where, f"hunt entry missing {k}")
+            if hu.get("outcome") and hu["outcome"] not in HUNT_OUTCOME:
+                err(where, f"hunt outcome {hu['outcome']!r} not in {sorted(HUNT_OUTCOME)}")
+            if hu.get("agent") and hu["agent"] not in agents:
+                err(where, f"hunt agent {hu['agent']!r} not in _config.yml agents")
+            dd = as_date(hu.get("date"))
+            if dd:
+                hunt_dates.append(dd)
+        lh = h.get("last_hunted")
+        if lh is not None:
+            lhd = as_date(lh)
+            if not lhd:
+                err(where, f"last_hunted {lh!r} is not an ISO date")
+            elif lhd > today:
+                err(where, "last_hunted is in the future")
+            elif hunt_dates and lhd != max(hunt_dates):
+                err(where, "last_hunted does not equal the latest hunt date")
+        elif hunts:
+            err(where, "hunts are logged but last_hunted is null")
+        hist = h.get("history") or []
+        if not hist:
+            err(where, "history is empty")
+        else:
+            if hist[0].get("old_status") is not None:
+                err(where, "first history entry must have old_status: null")
+            if hist[-1].get("new_status") != status:
+                err(where, "status does not match the last history entry")
+            for e in hist:
+                for k in ("date", "new_status", "reason"):
+                    if not e.get(k):
+                        err(where, f"history entry missing {k}")
+        if status == "Testing":
+            hyp_report["testing"] += 1
+            hyp_report["unhunted"].append((str(lh) if lh else "never", hid))
+            has_evidence = bool(h.get("evidence_for") or h.get("evidence_against"))
+            misses = [hu for hu in hunts if hu.get("outcome") == "miss"]
+            if len(hunts) >= 3 and not has_evidence:
+                hyp_report["review"].append(hid)
+                warn(where, f"{len(hunts)} hunts and no evidence: review (keep hunting with a reason, or mark Dead)")
+    if hyp_report["testing"] > TESTING_CAP:
+        err("_data/hypotheses.yml", f"{hyp_report['testing']} hypotheses in Testing (cap is {TESTING_CAP})")
+
 # ---------------------------------------------------------------- output
 if "--firms" in sys.argv:
     print("Firm registry report (firm_id, entries, cases, first_seen, files):")
     for row in sorted(firm_report, key=lambda x: -x[1]):
         print("  ", *row)
+if "--hypotheses" in sys.argv and hyps is not None:
+    print(f"Hypotheses: {hyp_report['testing']} of {TESTING_CAP} Testing slots in use")
+    order = sorted(hyp_report["unhunted"], key=lambda x: (x[0] != "never", x[0]))
+    print("  longest unhunted:", ", ".join(f"{hid} ({d})" for d, hid in order[:5]) or "none")
+    print("  due a 3-hunt review:", ", ".join(hyp_report["review"]) or "none")
 for w in warnings:
     print("WARNING", w)
 for e in errors:

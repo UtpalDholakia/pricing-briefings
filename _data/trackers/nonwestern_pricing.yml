@@ -1,5 +1,29 @@
 # Tracker: nonwestern_pricing. Pricing outside the US/UK/EU, preferably from local-language sources.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: shoprime-black-friday-index-2026
+  date: '2026-11-17'
+  country: Brazil
+  language: Portuguese
+  firm_or_place: Shoprime Black Friday price index (5,812 offers, Nov 10-17)
+  change: '30.3% of advertised offers more than 5% below the product''s typical price (18.6% at the lowest price recorded); 48.9% within 5% of typical; 20.8% above typical'
+  context: Black Friday offers checked against each product's own price history
+  source: https://www.shoprime.com.br/black-friday/indice-de-precos
+  digest: '2026-11-17'
+  agent: meta
+  last_checked: '2026-11-17'
+  follow_up_date: '2026-12-17'
+- case_id: nepra-fuel-adjustment-2026
+  date: '2026-11-07'
+  country: Pakistan
+  language: English
+  firm_or_place: NEPRA (power regulator)
+  change: Rs2.37 per unit fuel adjustment on November bills; concessional industrial/agricultural rate Rs22.98 to Rs25.30 per unit
+  context: Concessional-rate decision passed on the chairman's casting vote; two members dissented, calling the rate baseless
+  source: https://customstoday.media/nepra-hikes-electricity-tariff-by-rs2-37-for-november-bills/
+  digest: '2026-11-17'
+  agent: meta
+  last_checked: '2026-11-17'
+  follow_up_date: '2026-12-17'
 - case_id: laugfs-lpg-2026
   date: '2026-11-13'
   country: Sri Lanka

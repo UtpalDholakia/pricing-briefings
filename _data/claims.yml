@@ -191,3 +191,899 @@
     proposed_by: claude
     confirmed_by: null
   agent: claude
+# Spec F seeds, 2026-11-17: 31 of Muse's 48 candidates (seed-first five first). Re-judgments are recorded in each status_history reason.
+- claim_id: personalization-pledges-reassure
+  claim: A public pledge not to personalise prices reassures shoppers rather than reminding them that personalisation is possible.
+  status: Open
+  confidence: Low
+  confidence_note: One instance of the pledge, no measured shopper response; the only recorded reaction is skeptical commentary that shoppers cannot verify app prices, which leans against.
+  mechanism_codes:
+  - personalization-fairness
+  - motive-attribution
+  test: An experiment showing the same offer with and without a visible no-personalisation pledge, measuring trust and purchase intention.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: walmart-nga-pledge-2026
+    note: Walmart and the National Grocers Association pledge not to personalise prices. The instance the claim is about; no reassurance measured.
+  evidence_against: []
+  related_questions:
+  - personalization-pledges-2026
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: fare-breakdown-builds-trust
+  claim: Showing a fare's cost breakdown builds trust rather than inviting disputes over each line.
+  status: Open
+  confidence: Low
+  confidence_note: One mandated breakdown, not yet in effect (January 2027); no trust or complaint data yet.
+  mechanism_codes:
+  - dual-entitlement
+  - reference-price
+  test: A field comparison of routes or sellers with and without an itemised breakdown, measuring complaints per booking as well as trust scores.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: india-aviation-fare-breakdown-2026
+    note: India's aviation rules require fare-component disclosure from January 2027. The instance; outcome unknown.
+  evidence_against: []
+  related_questions:
+  - fare-breakdown-trust-2026
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: threshold-beats-cap-low-only
+  claim: A minimum-spend threshold beats a cap on savings at low trigger amounts, and loses at high trigger amounts.
+  status: Open
+  confidence: Medium
+  confidence_note: Seven preregistered studies including field conversion, one paper; Supported needs a second independent kind of evidence.
+  mechanism_codes:
+  - transaction-utility
+  test: A field replication at trigger amounts above the original range, measuring conversion at equal maximum savings.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: evidence
+    ref: threshold-versus-cap
+    note: 'Seven studies incl. field: threshold preferred at low triggers; preference reversed at higher triggers.'
+  evidence_against: []
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: metering-beats-seats-for-ai
+  claim: Usage or credit metering beats seat pricing for AI products once agents do the work, because seats no longer measure use.
+  status: Contested
+  confidence: Low
+  confidence_note: Vendors are moving to metering, but buyers rejected a simpler unit in favour of auditable metering; the against case fits only partly (it is against opaque units, not metering as such).
+  mechanism_codes:
+  - usage-anxiety
+  - mental-accounting
+  test: Vendor revenue and buyer satisfaction for matched products sold by seat versus by meter, after agent usage becomes material.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: saas-credits-2026
+    note: Credit systems spreading across SaaS as agents do the work.
+  - kind: tracker
+    ref: microsoft-365-copilot-metered-2027
+    note: Microsoft switches metered Copilot credits on by default for new reseller purchases from 2027, on top of the seat licence.
+  evidence_against:
+  - kind: tracker
+    ref: openai-per-job-pricing-2026
+    note: 'Buyers rejected a single per-job price because they wanted an auditable unit. Partial fit: against opaque units, for auditable metering.'
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Contested
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: festival-discounts-fail-after-hikes
+  claim: Festival-sale discounts fail when earlier price hikes have already moved the reference price.
+  status: Open
+  confidence: Medium
+  confidence_note: One direct market outcome (Diwali) plus one institutional response to the same problem (Buen Fin); a market where pre-festival prices were flat is the missing comparison.
+  mechanism_codes:
+  - reference-price
+  - transaction-utility
+  test: Festival sales outcomes in a market where pre-festival prices were flat, against Diwali 2026 where they had risen.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: diwali-smartphones-2026
+    note: Diwali offline smartphone sales down 18-20% despite festive discounts, after memory-driven price rises.
+  - kind: tracker
+    ref: profeco-buen-fin-2026
+    note: Mexico's consumer agency published price histories for Buen Fin to expose pre-sale price inflation.
+  evidence_against: []
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: meta
+- claim_id: tariff-refund-entitlement
+  claim: When a seller justifies a price rise by naming a specific cost, buyers expect the price to fall when that cost is refunded, more than after an unspecified cost increase.
+  status: Open
+  confidence: Low
+  confidence_note: One case where the named cost was refunded and prices held, prompting a senators' letter; no measured buyer expectation.
+  mechanism_codes:
+  - dual-entitlement
+  - motive-attribution
+  test: An experiment varying the justification (named tariff cost vs unspecified costs) and then announcing a refund, measuring expected price cuts.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: tariff-refunds-2026
+    note: Importers kept tariff-justified rises after receiving refunds; senators asked the FTC to act.
+  evidence_against: []
+  related_questions:
+  - tariff-refund-expectations-2026
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: apology-needs-restraint
+  claim: An apology for a price rise reduces backlash only when paired with a concession or restraint, not on its own.
+  status: Open
+  confidence: Low
+  confidence_note: Two cases, both consistent with the claim; neither isolates the apology from other differences between them.
+  mechanism_codes:
+  - price-change-communication
+  - motive-attribution
+  test: Matched apology cases coded for whether a concession followed, compared on reversal and backlash outcomes in backlash.yml and explanations.yml.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: saizeriya-apology-2026
+    note: Apology paired with restraint (iconic ¥100 wine price held); increase kept without recorded backlash.
+  - kind: tracker
+    ref: laugfs-lpg-2026
+    note: Apology for the shortage only, no concession on the 35.7% rise; regulator summons and criticism in Parliament followed.
+  evidence_against: []
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: 'Seeded from Muse''s 48-candidate list under Spec F. Re-judged at seeding: LAUGFS moved from evidence against to evidence for: an apology without a concession followed by backlash is what the claim predicts; status stays Open.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: data-disclosure-backfires
+  claim: Telling a buyer "your data raised this price" triggers backlash or reactance rather than being ignored.
+  status: Open
+  confidence: Low
+  confidence_note: Two instances of the disclosure being mandated or studied; no measured buyer response yet.
+  mechanism_codes:
+  - personalization-fairness
+  - algorithm-attribution
+  test: A field or lab test of a data-use disclosure on a live price, measuring complaints, opt-outs and purchases, not just stated attitudes.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: ny-algorithmic-pricing-label-2026
+    note: New York's mandated personal-data pricing label, under appeal.
+  - kind: tracker
+    ref: ftc-6b-personalized-pricing-2026
+    note: FTC 6(b) study asks firms for disclosure wording and tests; responses due December.
+  evidence_against: []
+  related_questions:
+  - data-raised-price-disclosure-2026
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: nyc-fairness-line-drawn-by-consumers
+  claim: 'Consumers draw the fairness line where New York City''s law does: prices based on stated traits and own purchase history are fair, prices based on inferred traits are unfair.'
+  status: Open
+  confidence: Low
+  confidence_note: The pointer shows where lawmakers drew the line, not where consumers draw it.
+  mechanism_codes:
+  - personalization-fairness
+  test: A vignette study varying only the basis of the price difference (stated trait, own history, inferred trait) and measuring fairness ratings.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: us-surveillance-pricing-laws-2026
+    note: NYC Int. 891-A carve-outs allow stated-trait and own-history pricing, ban inferred traits.
+  evidence_against: []
+  related_questions:
+  - nyc-fairness-line-2026
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: 'Seeded from Muse''s 48-candidate list under Spec F. Re-judged at seeding: confidence lowered from Medium to Low, because the evidence is the law''s line, not consumers''.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: personal-price-label-worse
+  claim: A "your price is personal" label on a price tag is worse for fairness judgments than hidden variation.
+  status: Open
+  confidence: Low
+  confidence_note: One labelled case drew comparison and boycott talk; no hidden-variation comparison.
+  mechanism_codes:
+  - personalization-fairness
+  - motive-attribution
+  test: The same personalised price shown labelled, unlabelled, and uniform, measuring fairness and purchase intention.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: sony-ps-store-pricing-2026
+    note: Account-dependent Black Friday prices shown with a 'price depends on your account' label; players compared screenshots, boycott talk.
+  - kind: tracker
+    ref: ny-algorithmic-pricing-label-2026
+    note: Mandated labelled variation in New York.
+  evidence_against: []
+  related_questions:
+  - personal-price-label-2026
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: account-differences-spread-fast
+  claim: Once buyers notice account-level price differences, perceived unfairness spreads quickly beyond the first noticers.
+  status: Open
+  confidence: Low
+  confidence_note: One case with screenshot comparisons; no time series of how far it spread.
+  mechanism_codes:
+  - personalization-fairness
+  - reference-price
+  test: A time series of mentions or complaints after a discovered difference, compared with the baseline rate for the same seller.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: sony-ps-store-pricing-2026
+    note: Screenshot comparisons and boycott talk after buyers noticed account-level discounts.
+  evidence_against: []
+  related_questions:
+  - account-price-unfairness-spread-2026
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: algorithm-label-triggers-inferences
+  claim: A label saying a price was "set by an algorithm using your personal data" triggers both fairness judgments and price-level inferences (buyers infer the price is higher).
+  status: Open
+  confidence: Low
+  confidence_note: The label exists and is litigated; no measured inferences yet.
+  mechanism_codes:
+  - algorithm-attribution
+  - personalization-fairness
+  test: An experiment crossing label presence with price level, measuring fairness ratings and guessed prices.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: ny-algorithmic-pricing-label-2026
+    note: The mandated label whose effect the claim predicts.
+  evidence_against: []
+  related_questions:
+  - algorithm-label-inferences-2026
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: ai-agents-set-reference-prices
+  claim: When pricing agents set market anchors, consumers learn different reference prices than when humans set them.
+  status: Open
+  confidence: Low
+  confidence_note: Both pointers show agents setting or reacting to prices differently from humans; neither measures what consumers learn.
+  mechanism_codes:
+  - reference-price
+  - algorithm-attribution
+  test: A market simulation or field observation comparing reference prices learned in agent-priced versus human-priced markets for the same goods.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: pricebench-2026
+    note: LLM booking agents' price sensitivity varies more than tenfold; weak models anchor on list position.
+  - kind: tracker
+    ref: bichler-llm-pricing-agents-2026
+    note: LLM pricing agents sustain supracompetitive or anchor-and-undercut price paths depending on design.
+  evidence_against: []
+  related_questions:
+  - agent-set-reference-prices-2026
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: partitioning-vs-drip-boundary
+  claim: Consumers draw the line between partitioning and drip pricing on when the extra charge is revealed, not on what it is called.
+  status: Open
+  confidence: Low
+  confidence_note: Three late-reveal fee cases and the rules responding to them; no consumer judgment measured across reveal timing.
+  mechanism_codes:
+  - partitioned-pricing
+  - drip-pricing
+  test: The same fee shown upfront versus at checkout, measuring perceived fairness and abandonment, across fee types.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: dutch-delivery-fees-2026
+    note: Service, small-order and packaging fees revealed at the end of checkout.
+  - kind: tracker
+    ref: uk-cma-drip-pricing-2026
+    note: UK all-in pricing rule fines fees not in the headline price at every step.
+  - kind: tracker
+    ref: ticketmaster-drip-ftc-2026
+    note: 'FTC''s ''first contact'' theory: the headline price harms at search, not checkout.'
+  evidence_against: []
+  related_questions:
+  - partitioning-drip-boundary-2026
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: shrinkflation-draws-less-backlash
+  claim: A smaller pack at the same price draws less backlash than an equal per-unit price rise.
+  status: Open
+  confidence: Low
+  confidence_note: 'Lean against: evidence so far is only against (most consumers notice stealth hikes; a shrunk pack drew backlash), with no direct comparison.'
+  mechanism_codes:
+  - quantity-insensitivity
+  test: A matched pair of products, one shrunk and one repriced by the same per-unit amount, comparing complaints and sales.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for: []
+  evidence_against:
+  - kind: tracker
+    ref: macromill-stealth-hikes-2026
+    note: 'Japan survey (n=3,000): 90% notice stealth hikes; noticing is not backlash, but undercuts the premise.'
+  - kind: tracker
+    ref: mtg-nauctis-collector-booster-2026
+    note: Collector Booster cut from 15 to 12 cards at an unchanged $26.99; community backlash.
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: magic-price-points-force-shrink
+  claim: When a price point cannot move (₹5, ₹10), cost pressure shows up as smaller packs rather than higher prices.
+  status: Open
+  confidence: Medium
+  confidence_note: One strong field instance with market data; Supported needs a second kind of evidence or market.
+  mechanism_codes:
+  - quantity-insensitivity
+  - left-digit
+  test: Pack-size series for products pinned at iconic price points versus products free to reprice, over the same cost shock.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: india-magic-price-points-2026
+    note: ₹5/₹10 pack share falling; ₹5 chips pack about 17 g to 8 g over time.
+  evidence_against: []
+  related_questions:
+  - protect-price-endings-2026
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: upsizing-markup-reads-as-value
+  claim: A larger pack at a higher price with a higher per-unit price is read as value, not as a price rise.
+  status: Open
+  confidence: Low
+  confidence_note: Two instances of the tactic; no measurement of how buyers read them, and the Tesla case is a trim change rather than a pack.
+  mechanism_codes:
+  - quantity-insensitivity
+  - price-quality-inference
+  test: A choice experiment crossing pack size and per-unit price, measuring whether buyers notice the per-unit rise.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: lenor-upsizing-2026
+    note: Lenor bottle 1,239 ml to 1,491 ml with a 10.6% higher unit price.
+  - kind: tracker
+    ref: tesla-model-y-awd-2026
+    note: Cheapest AWD trim removed; AWD buyers trade up to a pricier trim (closest instance, partial fit).
+  evidence_against: []
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: inflated-reference-lifts-purchase
+  claim: An inflated reference price ("was R6,499") lifts purchase even when the reference price never actually held.
+  status: Open
+  confidence: Low
+  confidence_note: One instance of the tactic, no purchase data; one related study suggests less believable reference claims draw weaker responses.
+  mechanism_codes:
+  - reference-price
+  - transaction-utility
+  test: An experiment varying whether the reference price was ever charged, measuring purchase intention at the same sale price.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: sa-speaker-black-friday-2026
+    note: Speaker at R2,999, raised to R6,499, then advertised at R2,999 as a R3,500 saving.
+  evidence_against:
+  - kind: evidence
+    ref: historical-low-price-temporal-cues
+    note: 'Related, not direct: more distant historical-low cues were less believable and drew weaker purchase responses.'
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: meta
+- claim_id: all-in-rules-shift-prices
+  claim: Retailers respond to all-in pricing rules by raising product prices or leaning harder on free-shipping thresholds, rather than absorbing the disclosed fees.
+  status: Open
+  confidence: Low
+  confidence_note: The rule is in force; no before-and-after retailer price data yet.
+  mechanism_codes:
+  - drip-pricing
+  - partitioned-pricing
+  test: Product prices and threshold levels before and after an all-in rule takes effect, for the same retailers.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: uk-cma-drip-pricing-2026
+    note: UK all-in rules under the DMCC Act now cover delivery charges.
+  evidence_against: []
+  related_questions:
+  - all-in-rules-response-2026
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: discounts-teach-timing
+  claim: A discount trains customers when to buy, through which channel, and what reference price to use afterward, so promotion problems are partly memory problems.
+  status: Open
+  confidence: Low
+  confidence_note: One market where discounts failed after earlier hikes moved the reference; it does not isolate learned timing.
+  mechanism_codes:
+  - reference-price
+  - transaction-utility
+  test: A promotion-history experiment measuring whether past discount timing predicts when customers next buy at full price.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: diwali-smartphones-2026
+    note: Festive discounts failed to beat earlier hikes; sales fell 18-20%.
+  evidence_against: []
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: meta
+- claim_id: easy-code-beats-automatic
+  claim: Entering an easy promo code converts better than the same discount applied automatically.
+  status: Open
+  confidence: Medium
+  confidence_note: One randomised field experiment; the same paper bounds it (the advantage disappears when redemption is effortful).
+  mechanism_codes:
+  - impatience-self-selection
+  - transaction-utility
+  test: A replication varying redemption effort (one click vs multi-step) at the same discount value.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: evidence
+    ref: token-effort-promo-code
+    note: 'Randomised field experiment: the easy-code condition converted more often than the automatic discount.'
+  evidence_against: []
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: most-black-friday-deals-not-discounts
+  claim: Most advertised Black Friday "deals" are not discounts against the product's own price history.
+  status: Open
+  confidence: Medium
+  confidence_note: One market-year measured against price histories, plus one inflated-reference instance; a second market or year is needed.
+  mechanism_codes:
+  - reference-price
+  - transaction-utility
+  test: Repeat the price-history measurement in a second market and a second year.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: shoprime-black-friday-index-2026
+    note: 'Brazil 2026: 30.3% of 5,812 offers more than 5% below typical; 20.8% above typical.'
+  - kind: tracker
+    ref: sa-speaker-black-friday-2026
+    note: Advertised saving built on a pre-sale price rise.
+  evidence_against: []
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: 'Seeded from Muse''s 48-candidate list under Spec F. Re-judged at seeding: the Meta briefing pointer was replaced by the newly filed tracker case shoprime-black-friday-index-2026.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: meta
+- claim_id: expiring-credits-valued-less
+  claim: Consumers value expiring, platform-only credits at less than an equal instant discount.
+  status: Open
+  confidence: Low
+  confidence_note: One switch from instant discounts to expiring credits; no valuation data.
+  mechanism_codes:
+  - mental-accounting
+  - subscription-inertia
+  test: A choice experiment valuing expiring credits against instant discounts of equal face value, plus visit frequency after the switch.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: lyft-go-credits-2026
+    note: Lyft replaced instant ride discounts with 8% back in credits expiring after 60 days.
+  evidence_against: []
+  related_questions:
+  - expiring-credits-value-2026
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: silent-rises-draw-less-backlash
+  claim: A small, unannounced price rise draws less backlash than an announced rise of the same size.
+  status: Open
+  confidence: Low
+  confidence_note: One unannounced rise with no recorded backlash; the against pointer shows most consumers notice stealth hikes, which is not backlash (partial fit).
+  mechanism_codes:
+  - price-change-communication
+  - quantity-insensitivity
+  test: Matched silent versus announced rises of the same size, comparing complaints and churn.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: airtel-299-2026
+    note: Rs 299 plan returns with a third less daily data, no operator announcement cited.
+  evidence_against:
+  - kind: tracker
+    ref: macromill-stealth-hikes-2026
+    note: 90% of Japanese consumers notice stealth hikes; weakens the premise that silence hides the rise.
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: meta
+- claim_id: regulators-split-over-own-prices
+  claim: Energy regulators publicly split over prices they themselves set, when the cost allocation is contested.
+  status: Open
+  confidence: Low
+  confidence_note: One regulator split on a cost-allocation decision; the South African case is a consultation with no split yet.
+  mechanism_codes: []
+  test: The NERSA Eskom tariff decision due Nov 26, 2026, and whether its dissent pattern repeats.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: nepra-fuel-adjustment-2026
+    note: Pakistan's NEPRA raised the concessional industrial rate on the chairman's casting vote; two members dissented.
+  evidence_against: []
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: 'Seeded from Muse''s 48-candidate list under Spec F. Re-judged at seeding: nersa-tariff-review-2026 dropped as evidence (a consultation, no regulator split recorded); the Meta briefing pointer was replaced by the newly filed case nepra-fuel-adjustment-2026.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: meta
+- claim_id: tolerance-is-learned
+  claim: 'Tolerance for price increases is learned and adapts: after a deflationary period, even small rises feel large, and tolerance grows with exposure.'
+  status: Open
+  confidence: Medium
+  confidence_note: Three Japanese cases fit; all from one market, with no adaptation measured over time.
+  mechanism_codes:
+  - reference-price
+  - dual-entitlement
+  test: The same rise framed in Japan versus a high-inflation market, measuring backlash; or tolerance tracked across successive Japanese rises.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: japan-food-price-rises-2026
+    note: 1,477 items raised in November; second year above 20,000; labour now the cited driver.
+  - kind: tracker
+    ref: saizeriya-apology-2026
+    note: A 20-yen rise prompted a presidential apology.
+  - kind: tracker
+    ref: uniqlo-socks-2026
+    note: Basic sock rise reversed within weeks after backlash.
+  evidence_against: []
+  related_questions:
+  - price-rise-tolerance-learned-2026
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: meta
+- claim_id: new-customers-only-rises-draw-insulated-backlash
+  claim: A price rise for new customers only still draws backlash from existing customers who are insulated from it.
+  status: Open
+  confidence: Low
+  confidence_note: One case; a second new-customers-only rise is needed.
+  mechanism_codes:
+  - motive-attribution
+  - social-norms
+  test: A second case of a new-customers-only rise, measuring who complains.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: burry-substack-2026
+    note: $49 to $69 for new subscribers only; existing grandfathered readers pushed back; reversed within days.
+  evidence_against: []
+  related_questions:
+  - new-customer-only-rise-backlash-2026
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: entitled-to-efficiency-gains
+  claim: 'Consumers feel entitled to a seller''s efficiency gains: when a seller''s costs fall, buyers expect prices to fall too.'
+  status: Open
+  confidence: Low
+  confidence_note: One case where an efficiency framing for a cut failed and the cut was cancelled; the backlash may reflect loss of allowance rather than entitlement to the gain.
+  mechanism_codes:
+  - dual-entitlement
+  - motive-attribution
+  test: A vignette varying whether a cost fall comes from efficiency versus input prices, measuring expected price cuts.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: chatgpt-pro-allowance-2026
+    note: Allowance cut framed as efficiency gains drew developer backlash; cancelled within about three days.
+  evidence_against: []
+  related_questions:
+  - efficiency-gains-entitlement-2026
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: subsidy-expiry-drives-premiums
+  claim: Health-insurance premium rises after a subsidy expires are driven more by the expiry and the worsening risk pool than by underlying care costs.
+  status: Open
+  confidence: Low
+  confidence_note: 'Lean against: in the ACA case the subsidy expiry and risk-pool change add about 4 of 13 points and insurers also cite unusually fast care-cost growth; the Medicare evidence for is a possible cause only.'
+  mechanism_codes: []
+  test: The ACA 2027 open-enrollment outcome against the care-cost trend, and a decomposition of the Part D rise.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: medicare-part-d-premiums-2026
+    note: Part D premiums set to rise about 50% in 2027; a possible cause is the early end of a premium-subsidy pilot.
+  evidence_against:
+  - kind: tracker
+    ref: aca-2027-premiums-2026
+    note: ACA benchmark premiums +13% for 2027; KFF attributes about 4 points to the end of enhanced tax credits and risk-pool change; insurers also cite above-usual care-cost growth.
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: 'Seeded from Muse''s 48-candidate list under Spec F. Re-judged at seeding: the ACA briefing pointer was filed as tracker case aca-2027-premiums-2026 and moved to evidence against, since its source attributes most of the rise to other causes; the claim stays Open with a lean against, not Contested, because the evidence for is tentative.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: meta
+- claim_id: early-tuition-announcement-sells-certainty
+  claim: Announcing tuition early sells certainty itself, and changes enrolment behaviour in the announcer's favour.
+  status: Open
+  confidence: Low
+  confidence_note: One early announcement, with the university's own report of strong early applications and deposits; no comparison with later announcers.
+  mechanism_codes:
+  - price-change-communication
+  - reference-price
+  test: WVU applications and deposits for 2027-28 against prior years and against peer universities that announced later.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: wvu-early-tuition-2026
+    note: WVU set 2027-28 tuition months early so acceptance letters carry real numbers; reports applications and deposits ahead of previous years.
+  evidence_against: []
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: 'Seeded from Muse''s 48-candidate list under Spec F. Re-judged at seeding: fsu-tuition-2026 dropped as evidence (a contrast case, not an instance); the Meta briefing pointer was replaced by the newly filed case wvu-early-tuition-2026.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: meta
+- claim_id: solar-shifts-grid-costs
+  claim: When solar homes buy less power, the fixed cost of the grid falls on remaining customers unless tariffs are redesigned.
+  status: Open
+  confidence: Low
+  confidence_note: One regulator consultation built on this premise, with a 23% rise in a fixed charge proposed; no measured cost shift yet.
+  mechanism_codes: []
+  test: The NERSA Eskom tariff decision due Nov 26, 2026, and whether it separates wires charges from retail.
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: nersa-tariff-review-2026
+    note: South Africa's consultation asks how solar homes and grid defectors should share network costs; fixed charge proposed +23%.
+  evidence_against: []
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded from Muse's 48-candidate list under Spec F.
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: meta

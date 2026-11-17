@@ -1,0 +1,56 @@
+---
+layout: default
+title: Hypotheses
+permalink: /hypotheses/
+---
+{% assign H = site.data.hypotheses %}
+{% assign C = site.data.claims %}
+{% assign Q = site.data.trackers.questions %}
+{% assign E = site.data.trackers.pricing_evidence %}
+{% capture brief_base %}{{ '/briefings/' | relative_url }}{% endcapture %}
+{% capture claims_base %}{{ '/claims/' | relative_url }}{% endcapture %}
+{% assign testing = H | where: "status", "Testing" %}
+{% assign graduated = H | where: "status", "Graduated" %}
+{% assign dead = H | where: "status", "Dead" %}
+
+<h1 class="page-title">Hypotheses</h1>
+<p class="muted">What the daily briefings are hunting for. Each hypothesis is a falsifiable prediction plus the observable test that would settle it. Every morning each agent picks up to two in its lanes, searches for them and reports hits and misses. A hit files evidence; enough evidence graduates a hypothesis into a <a href="{{ claims_base }}">claim</a>; three evidence-free hunts trigger a review. Rules: AGENTS.md section 13.</p>
+
+<div class="stat-row">
+  <div class="stat"><span class="big">{{ testing.size }} of 20</span><span class="lbl">Testing slots in use</span></div>
+  <div class="stat"><span class="big">{{ graduated.size }}</span><span class="lbl">Graduated into claims</span></div>
+  <div class="stat"><span class="big">{{ dead.size }}</span><span class="lbl">Dead</span></div>
+</div>
+
+<section class="tracker" id="testing">
+  <h2>Testing <small class="muted">{{ testing.size }}</small></h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Hypothesis and prediction</th><th>Test</th><th>Lanes</th><th>Last hunted</th><th>Hunts</th></tr></thead>
+    <tbody>{% for h in testing %}
+    <tr id="{{ h.hypothesis_id }}">
+      <td><strong>{{ h.hypothesis }}</strong>
+        <div class="small">Predicts: {{ h.predicts }}</div>
+        <div class="small muted">{{ h.hypothesis_id }} · prior {{ h.confidence }}{% for q in h.related_questions %}{% assign qq = Q | where: "question_id", q | first %} · question: {% if qq %}<span title="{{ qq.question | escape }}">{{ q }}</span>{% else %}{{ q }}{% endif %}{% endfor %}</div>
+        {% assign evn = h.evidence_for.size | plus: h.evidence_against.size %}{% if evn > 0 %}<div class="small">Evidence: {% for p in h.evidence_for %}<span class="chip yes">for</span> {{ p.ref }} {% endfor %}{% for p in h.evidence_against %}<span class="chip no">against</span> {{ p.ref }} {% endfor %}</div>{% endif %}
+      </td>
+      <td class="small">{{ h.test }}</td>
+      <td class="small">{{ h.lanes | join: "; " }}</td>
+      <td class="small nowrap">{% if h.last_hunted %}{{ h.last_hunted }}{% else %}<span class="muted">never</span>{% endif %}</td>
+      <td class="small">{{ h.hunt_count }}{% if h.hunts.size > 0 %}{% assign lasthunt = h.hunts | last %}<div class="muted">last: {{ lasthunt.outcome }} ({{ lasthunt.agent }}) {{ lasthunt.note }}</div>{% endif %}</td>
+    </tr>{% endfor %}</tbody>
+  </table></div>
+</section>
+
+<section class="tracker" id="graduated">
+  <h2>Graduated <small class="muted">{{ graduated.size }}</small></h2>
+  {% if graduated.size == 0 %}<p class="muted small">None yet. A hypothesis graduates when a hunt returns evidence directly on point; the new claim then follows the confirmation rule.</p>{% else %}
+  <ul>{% assign gsorted = graduated | reverse %}{% for h in gsorted %}{% assign last = h.history | last %}
+    <li id="{{ h.hypothesis_id }}"><strong>{{ h.hypothesis }}</strong> → claim <a href="{{ claims_base }}#{{ h.related_claim }}">{{ h.related_claim }}</a> <span class="muted small">({{ last.date }})</span></li>{% endfor %}</ul>{% endif %}
+</section>
+
+<section class="tracker" id="dead">
+  <h2>Dead <small class="muted">{{ dead.size }}</small></h2>
+  {% if dead.size == 0 %}<p class="muted small">None yet.</p>{% else %}
+  <details><summary class="small">Show {{ dead.size }} dead hypotheses</summary><ul>{% for h in dead %}{% assign last = h.history | last %}
+    <li id="{{ h.hypothesis_id }}" class="small"><strong>{{ h.hypothesis }}</strong> <span class="muted">({{ last.date }}) {{ last.reason }}</span></li>{% endfor %}</ul></details>{% endif %}
+</section>

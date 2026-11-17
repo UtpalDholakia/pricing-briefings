@@ -9,7 +9,7 @@ layout: default
 
 <section class="research" id="deep-dives">
   <div class="research-head"><h2>Research</h2>
-    <nav><a href="{{ '/ai-pricing/' | relative_url }}">AI pricing database</a> · <a href="{{ '/trackers/' | relative_url }}">Trackers</a> · <a href="{{ '/claims/' | relative_url }}">Claims</a> · <a href="{{ '/firms/' | relative_url }}">Firm dossiers</a> · <a href="{{ '/pipeline/' | relative_url }}">Substack pipeline</a></nav></div>
+    <nav><a href="{{ '/ai-pricing/' | relative_url }}">AI pricing database</a> · <a href="{{ '/trackers/' | relative_url }}">Trackers</a> · <a href="{{ '/claims/' | relative_url }}">Claims</a> · <a href="{{ '/hypotheses/' | relative_url }}">Hypotheses</a> · <a href="{{ '/firms/' | relative_url }}">Firm dossiers</a> · <a href="{{ '/pipeline/' | relative_url }}">Substack pipeline</a></nav></div>
   <h3>Deep dives</h3>
   {% assign dives = site.cases | sort: "date" | reverse %}
   <ul class="dives">{% for d in dives %}

@@ -17,6 +17,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-16'
+  question_id: one-tap-pain-of-paying-2026
   question: 'Does approving an agent''s purchase with one biometric tap reduce the pain of paying relative to manual checkout, and do pre-approved category budgets work like mental-account limits?'
   context: ChatGPT Wallet; JPMorgan agent card block
   digest: '2026-11-16'
@@ -24,6 +25,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-16'
+  question_id: expiring-credits-value-2026
   question: 'Do consumers value 8% back in expiring, platform-only credits at less than an equal instant discount, and does the credit raise visit frequency?'
   context: Lyft Pink to Lyft Go
   digest: '2026-11-16'
@@ -31,6 +33,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-15'
+  question_id: nyc-fairness-line-2026
   question: 'Do consumers draw the fairness line where NYC''s law does: stated traits and own purchase history (fair) vs inferred traits (unfair)?'
   context: NYC Int. 891-A carve-outs
   digest: '2026-11-15'
@@ -45,6 +48,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-14'
+  question_id: clip-coupons-savings-2026
   question: Do clip-to-activate coupons lower perceived savings relative to an equal price cut, and why?
   context: Heinemann & Gedenk, EMAC 2026
   digest: '2026-11-14'
@@ -59,6 +63,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-13'
+  question_id: churn-pause-downgrade-2026
   question: Does subscription churn after a price rise come from price sensitivity or from missing pause/downgrade options?
   context: Bango/3Gem survey
   digest: '2026-11-13'
@@ -66,6 +71,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-13'
+  question_id: irregular-deals-price-image-2026
   question: Do irregular, discovery-style deals shape store price image more than scheduled promotions?
   context: Grocery Outlet earnings call
   digest: '2026-11-13'
@@ -73,6 +79,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-12'
+  question_id: personal-price-label-2026
   question: Is a 'your price is personal' label on the price tag better or worse for fairness than hidden variation?
   context: Sony PS Store; Instacart tests
   digest: '2026-11-12'
@@ -108,6 +115,7 @@
   priority: High
   answered_by: null
 - date: '2026-11-10'
+  question_id: price-rise-tolerance-learned-2026
   question: Is tolerance for price increases learned (Japan after deflation) and how fast does it adapt?
   context: Uniqlo, Saizeriya
   digest: '2026-11-10'
@@ -159,6 +167,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-03'
+  question_id: all-in-rules-response-2026
   question: Will retailers respond to all-in delivery rules by raising product prices or leaning harder on free-shipping thresholds?
   context: UK CMA open letter
   digest: '2026-11-03'
@@ -166,6 +175,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-02'
+  question_id: account-price-unfairness-spread-2026
   question: How fast does perceived unfairness spread once account-level price differences are noticed?
   context: Sony PS Store
   digest: '2026-11-02'
@@ -194,6 +204,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-10-30'
+  question_id: data-raised-price-disclosure-2026
   question: Does a 'your data raised this price' disclosure trigger backlash, reactance, or simple ignoring?
   context: Connecticut disclosure option
   digest: '2026-10-30'
@@ -208,6 +219,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-10-29'
+  question_id: efficiency-gains-entitlement-2026
   question: Do consumers feel entitled to a seller's efficiency gains (ChatGPT Pro cut)?
   context: OpenAI allowance cut
   digest: '2026-10-29'
@@ -215,6 +227,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-10-29'
+  question_id: new-customer-only-rise-backlash-2026
   question: Why does a price rise for new customers only draw backlash from insulated existing customers?
   context: Michael Burry Substack
   digest: '2026-10-29'
@@ -222,6 +235,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-10-28'
+  question_id: personalization-worst-hit-2026
   question: Does the public judge personalized pricing by the median shopper or the worst-hit one?
   context: Durrmeyer, Fournel & Samano
   digest: '2026-10-28'
@@ -236,6 +250,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-10-27'
+  question_id: protect-price-endings-2026
   question: Do firms protect 9-ending prices at the cost of margin, and where does the cost reappear (non-9 items, shrinkflation, fees)?
   context: Hirshman & Ignatenko
   digest: '2026-10-25'
@@ -250,6 +265,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-10-22'
+  question_id: partitioning-drip-boundary-2026
   question: Where does partitioned pricing end and drip pricing begin, in consumers' minds rather than courts'?
   context: US vs Canadian rulings
   digest: '2026-10-22'
@@ -257,6 +273,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-10-21'
+  question_id: algorithm-label-inferences-2026
   question: What fairness and price-level inferences does a 'set by an algorithm using your personal data' label trigger?
   context: NY label, Second Circuit
   digest: '2026-10-21'
@@ -271,6 +288,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-10-20'
+  question_id: agent-set-reference-prices-2026
   question: What reference prices do consumers learn when market anchors are set by pricing agents?
   context: Bichler et al.
   digest: '2026-10-20'

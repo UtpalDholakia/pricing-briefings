@@ -1,5 +1,19 @@
 # Tracker: hidden_increases. Shrinkflation, upsizing with a markup, unbundling, inflated reference prices and fees.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: shoprime-black-friday-index-2026
+  date: '2026-11-17'
+  kind: Inflated reference price
+  product: Advertised Black Friday offers in Brazil (Shoprime index, 5,812 offers)
+  change: 20.8% of offers priced above the product's typical price; only 30.3% more than 5% below it
+  unit_price_effect: 1,208 of 5,812 offers cost more than usual
+  magnitude_pct: null
+  industry: Retail (electronics and fashion worst)
+  geography: Brazil
+  source: https://www.shoprime.com.br/black-friday/indice-de-precos
+  digest: '2026-11-17'
+  agent: meta
+  last_checked: '2026-11-17'
+  follow_up_date: '2026-12-17'
 - case_id: airtel-299-2026
   date: '2026-11-11'
   kind: Shrinkflation
