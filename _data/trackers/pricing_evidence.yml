@@ -1,4 +1,18 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: "coupon-use-power-distance"
+  case_id: "coupon-use-power-distance-2026"
+  date: "2026-06-03"
+  mechanism: "Skepticism about the seller’s motives"
+  comparison: "Coupon response among people higher versus lower in acceptance of unequal power"
+  design: "Field studies, scanner panel and experiments"
+  setting: "Eight studies in the article by Koo, Lalwani and Sun, Journal of Marketing"
+  outcome: "Coupon use and related responses across different study designs"
+  result_kind: "Context-dependent"
+  result: "Higher acceptance of unequal power was associated with lower coupon use. The authors report evidence consistent with skepticism as a mechanism."
+  boundary: "A price-match guarantee reduced the gap in the research. The aggregate result does not justify inferring individual beliefs from geography."
+  source: "https://journals.sagepub.com/doi/abs/10.1177/00222429261458261?mi=ehikzz"
+  digest: "2026-11-17"
+  agent: "chatgpt"
 - id: ai-vs-human-price-setter-fairness
   case_id: ai-price-setter-2026
   date: '2026-11-10'
