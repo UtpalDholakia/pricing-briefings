@@ -87,6 +87,7 @@ CASE_TRACKERS = ["explanations", "backlash", "stories", "essential_prices", "non
 SLUG = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 DATEISH = re.compile(r"^\d{4}(-\d{2}(-\d{2})?)?$")
 FIRM_FIELDS = ("firm", "firm_or_place", "provider", "who", "offer")
+NOT_ENTRIES = {"providers.yml", "questions.yml"}  # registries and questions are not counted as firm entries
 
 
 def as_list(data):
@@ -216,17 +217,25 @@ if firms is not None:
         for c in cids:
             if c not in all_case_ids:
                 err(where, f"case_id {c!r} not found in any tracker or database file")
+        # An entry is one row in an event tracker or the AI pricing change log / subscriptions.
+        # Registries (providers.yml) and questions are not entries. The /firms/ page uses the same rule.
         matched, alias_hits = [], defaultdict(int)
         for path, recs in records_by_file.items():
+            if os.path.basename(path) in NOT_ENTRIES:
+                continue
             for r in recs:
                 if not isinstance(r, dict):
                     continue
-                hit = r.get("case_id") in cids or r.get("related_case_id") in cids
+                by_case = r.get("case_id") in cids or r.get("related_case_id") in cids
+                by_alias = False
                 for fld in FIRM_FIELDS:
                     if r.get(fld) in aliases:
                         alias_hits[r[fld]] += 1
-                        hit = True
-                if hit:
+                        by_alias = True
+                if by_alias and r.get("case_id") and r.get("case_id") not in cids:
+                    warn(where, f"entry {r.get('case_id')!r} in {os.path.basename(path)} matches an alias "
+                                f"but its case_id is not in case_ids (add it if the case is about this firm)")
+                if by_case or by_alias:
                     matched.append((path, r))
         for a in aliases:
             if not alias_hits[a]:
@@ -235,7 +244,8 @@ if firms is not None:
             warn(where, f"only {len(matched)} entries (dossier threshold is 3)")
         dates = sorted(str(r.get("date") or r.get("started") or r.get("announced") or "")
                        for _, r in matched if (r.get("date") or r.get("started") or r.get("announced")))
-        firm_report.append((fid, len(matched), dates[0] if dates else None,
+        n_cases = len({r.get("case_id") for _, r in matched if r.get("case_id")})
+        firm_report.append((fid, len(matched), n_cases, dates[0] if dates else None,
                             sorted({os.path.basename(p)[:-4] for p, _ in matched})))
 
 # ---------------------------------------------------------------- 5. questions and claims
@@ -321,7 +331,7 @@ if claims is not None:
 
 # ---------------------------------------------------------------- output
 if "--firms" in sys.argv:
-    print("Firm registry report (firm_id, entries, first_seen, files):")
+    print("Firm registry report (firm_id, entries, cases, first_seen, files):")
     for row in sorted(firm_report, key=lambda x: -x[1]):
         print("  ", *row)
 for w in warnings:

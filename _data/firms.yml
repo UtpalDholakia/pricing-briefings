@@ -1,6 +1,6 @@
 # Firm registry for dossiers. AGENTS.md section 11. Claude owns this file; other agents suggest additions in their briefings.
-# A firm enters at 3 entries across the trackers and the AI pricing database (counted by scripts/validate.py --firms).
-# case_ids: every case about this firm. aliases: exact strings used in firm / firm_or_place / provider / who / offer fields.
+# A firm enters at 3 entries (rows) across the trackers and the AI pricing database, counted by scripts/validate.py --firms;
+# providers.yml and questions are not entries. case_ids: every case about this firm (exhaustive; the validator warns on gaps). aliases: exact strings used in firm / firm_or_place / provider / who / offer fields.
 # When a new spelling appears in a tracker, add it here as an alias; never rename the tracker entry to match.
 # first_seen is recomputed by the validator report; do not guess it.
 - firm_id: microsoft

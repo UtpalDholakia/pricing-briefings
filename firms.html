@@ -1,0 +1,148 @@
+---
+layout: default
+title: Firm dossiers
+permalink: /firms/
+---
+{% comment %}
+  Generated at build time from _data/firms.yml and the tracker / AI pricing files. Never maintained by hand (AGENTS.md section 11).
+  An entry is one row in an event tracker, price_panel / model_migrations, price_changes.yml or subscriptions.yml whose case_id
+  or related_case_id is in the firm's case_ids, or whose firm / firm_or_place / provider / who / offer is one of its aliases.
+  Same rule as scripts/validate.py --firms. Registries (providers.yml) and questions are not entries.
+{% endcomment %}
+{% assign T = site.data.trackers %}
+{% assign A = site.data.ai_pricing %}
+{% assign today = site.time | date: '%Y-%m-%d' %}
+{% assign skip = "questions,pricing_evidence" | split: "," %}
+{% capture brief_base %}{{ '/briefings/' | relative_url }}{% endcapture %}
+{% capture claims_url %}{{ '/claims/' | relative_url }}{% endcapture %}
+
+<h1 class="page-title">Firm dossiers</h1>
+<p class="muted">Everything the research base knows about how a firm prices, assembled from the <a href="{{ '/trackers/' | relative_url }}">trackers</a>, the <a href="{{ '/ai-pricing/' | relative_url }}">AI pricing database</a>, the evidence file and the <a href="{{ claims_url }}">claims register</a> each time the site builds. A firm gets a dossier at 3 entries; the registry is <code>_data/firms.yml</code> (AGENTS.md section 11). Nothing here is typed by hand: correct the tracker entry, not the dossier.</p>
+
+{% assign sections = "" %}
+{% for f in site.data.firms %}
+  {% assign cids = f.case_ids | default: empty %}
+  {% assign aliases = f.aliases | default: empty %}
+  {% assign rows = "" %}{% assign airows = "" %}{% assign evrows = "" %}{% assign watch = "" %}
+  {% assign n = 0 %}{% assign by_tracker = "" %}{% assign rev_yes = 0 %}{% assign rev_part = 0 %}{% assign rev_no = 0 %}{% assign rev_open = 0 %}
+  {% assign maxabs = -1 %}{% assign maxm = nil %}{% assign maxcase = "" %}{% assign fcases = "" %}
+
+  {% comment %} ---- tracker timeline ---- {% endcomment %}
+  {% for pair in T %}{% assign tname = pair[0] %}
+    {% if skip contains tname %}{% continue %}{% endif %}
+    {% assign tn = 0 %}
+    {% for r in pair[1] %}
+      {% assign hit = false %}
+      {% if r.case_id and cids contains r.case_id %}{% assign hit = true %}{% endif %}
+      {% if r.related_case_id and cids contains r.related_case_id %}{% assign hit = true %}{% endif %}
+      {% if r.firm and aliases contains r.firm %}{% assign hit = true %}{% endif %}
+      {% if r.firm_or_place and aliases contains r.firm_or_place %}{% assign hit = true %}{% endif %}
+      {% if r.who and aliases contains r.who %}{% assign hit = true %}{% endif %}
+      {% if r.offer and aliases contains r.offer %}{% assign hit = true %}{% endif %}
+      {% if hit %}
+        {% assign n = n | plus: 1 %}{% assign tn = tn | plus: 1 %}
+        {% if r.case_id %}{% capture fcases %}{{ fcases }}|{{ r.case_id }}{% endcapture %}{% endif %}
+        {% assign d = r.date | default: r.started | default: r.announced | default: r.updated | default: r.observations.first.date | default: r.next_check | default: "" %}
+        {% assign headline = r.change | default: r.title | default: r.story | default: r.to_model | default: r.finding | default: r.scope | default: r.offer | default: r.product %}
+        {% assign st = r.reversed | default: r.outcome | default: r.status %}
+        {% if tname == "backlash" %}
+          {% if r.reversed == "Yes" %}{% assign rev_yes = rev_yes | plus: 1 %}{% elsif r.reversed == "Partial" %}{% assign rev_part = rev_part | plus: 1 %}{% elsif r.reversed == "No" %}{% assign rev_no = rev_no | plus: 1 %}{% else %}{% assign rev_open = rev_open | plus: 1 %}{% endif %}
+        {% endif %}
+        {% if r.magnitude_pct %}{% assign a = r.magnitude_pct | abs %}{% if a > maxabs %}{% assign maxabs = a %}{% assign maxm = r.magnitude_pct %}{% assign maxcase = r.case_id %}{% endif %}{% endif %}
+        {% assign key = d | append: "" %}{% if key == "" %}{% assign key = "0000" %}{% endif %}{% capture rows %}{{ rows }}@@R@@{{ key }}~~<tr><td class="nowrap">{{ d }}</td><td>{{ tname | replace: "_", " " }}</td><td>{{ headline | strip_html | truncate: 240 }}{% if r.case_id %} <span class="case">{{ r.case_id }}</span>{% endif %}{% if r.agent %} · <span class="agent">{{ r.agent }}</span>{% endif %}</td><td>{% if st %}<span class="chip {% if st == 'Yes' or st == 'Reversed' %}yes{% elsif st == 'No' or st == 'Held' %}no{% endif %}">{{ st }}</span>{% endif %}</td><td class="nowrap">{% if r.magnitude_pct %}{{ r.magnitude_pct }}%{% endif %}</td><td>{% if r.source %}<a class="src" href="{{ r.source }}">source</a>{% endif %}</td></tr>{% endcapture %}
+        {% assign wd = r.follow_up_date %}{% assign wlabel = "follow-up check" %}
+        {% if r.milestone_date %}{% assign wd = r.milestone_date %}{% assign wlabel = r.next_milestone | default: "story milestone" %}{% endif %}
+        {% if r.next_check %}{% assign wd = r.next_check %}{% assign wlabel = "scheduled recheck" %}{% endif %}
+        {% assign wds = wd | append: "" %}
+        {% if wd and wds >= today %}{% capture watch %}{{ watch }}@@R@@{{ wds }}~~<li><span class="nowrap">{{ wds }}</span>: {{ wlabel }} <span class="case">{{ r.case_id | default: r.id }}</span> <span class="muted">({{ tname | replace: "_", " " }})</span></li>{% endcapture %}{% endif %}
+      {% endif %}
+    {% endfor %}
+    {% if tn > 0 %}{% capture by_tracker %}{{ by_tracker }}{% if by_tracker != "" %} · {% endif %}{{ tname | replace: "_", " " }} {{ tn }}{% endcapture %}{% endif %}
+  {% endfor %}
+
+  {% comment %} ---- AI pricing database ---- {% endcomment %}
+  {% assign ain = 0 %}
+  {% assign aisrc = "price_changes,subscriptions" | split: "," %}
+  {% for an in aisrc %}{% for r in A[an] %}
+    {% assign hit = false %}
+    {% if r.case_id and cids contains r.case_id %}{% assign hit = true %}{% endif %}
+    {% if r.provider and aliases contains r.provider %}{% assign hit = true %}{% endif %}
+    {% if hit %}
+      {% assign n = n | plus: 1 %}{% assign ain = ain | plus: 1 %}
+      {% if r.case_id %}{% capture fcases %}{{ fcases }}|{{ r.case_id }}{% endcapture %}{% endif %}
+      {% assign d = r.date | default: r.source_checked | default: "" %}
+      {% assign key = d | append: "" %}{% if key == "" %}{% assign key = "0000" %}{% endif %}{% capture airows %}{{ airows }}@@R@@{{ key }}~~<tr><td class="nowrap">{{ d }}</td><td>{{ an | replace: "_", " " }}</td><td><strong>{{ r.product_or_model | default: r.product }}</strong> {% if r.change_type %}<span class="chip">{{ r.change_type }}</span>{% endif %} {{ r.what_changed | default: r.allowance_note | strip_html | truncate: 240 }}{% if r.case_id %} <span class="case">{{ r.case_id }}</span>{% endif %}</td><td class="nowrap">{% if r.magnitude_pct %}{{ r.magnitude_pct }}%{% endif %}</td><td>{% if r.source %}<a class="src" href="{{ r.source }}">source</a>{% endif %}</td></tr>{% endcapture %}
+    {% endif %}
+  {% endfor %}{% endfor %}
+  {% if ain > 0 %}{% capture by_tracker %}{{ by_tracker }}{% if by_tracker != "" %} · {% endif %}AI pricing database {{ ain }}{% endcapture %}{% endif %}
+
+  {% comment %} ---- evidence rows on this firm's cases ---- {% endcomment %}
+  {% for r in T.pricing_evidence %}{% if r.case_id and cids contains r.case_id %}
+    {% capture evrows %}{{ evrows }}<li><a href="{{ r.source }}">{{ r.id }}</a>: {{ r.result | truncate: 200 }} <span class="muted">({{ r.result_kind }})</span></li>{% endcapture %}
+  {% endif %}{% endfor %}
+
+  {% comment %} ---- claims pointing at this firm's cases ---- {% endcomment %}
+  {% assign fcase_list = fcases | split: "|" %}
+  {% assign claimrows = "" %}
+  {% for c in site.data.claims %}
+    {% assign ptrs = c.evidence_for | concat: c.evidence_against %}
+    {% assign chit = false %}
+    {% for p in ptrs %}{% if p.kind == "tracker" and fcase_list contains p.ref %}{% assign chit = true %}{% endif %}{% endfor %}
+    {% if chit %}{% capture claimrows %}{{ claimrows }}<li><a href="{{ claims_url }}#{{ c.claim_id }}">{{ c.claim }}</a> <span class="chip">{{ c.status }}</span> <span class="muted">{{ c.confidence }} confidence</span></li>{% endcapture %}{% endif %}
+  {% endfor %}
+
+  {% comment %} ---- open questions naming the firm ---- {% endcomment %}
+  {% assign qrows = "" %}
+  {% assign names = aliases | push: f.name %}
+  {% for q in T.questions %}{% if q.status == "Open" or q.status == "In progress" %}
+    {% assign qhit = false %}{% assign qtext = q.context | append: " " | append: q.question %}
+    {% for a in names %}{% if qtext contains a %}{% assign qhit = true %}{% endif %}{% endfor %}
+    {% if qhit %}{% capture qrows %}{{ qrows }}<li>{{ q.question }} <span class="muted small">({{ q.context }}, {{ q.date }})</span></li>{% endcapture %}{% endif %}
+  {% endif %}{% endfor %}
+
+  {% comment %} ---- assemble the section ---- {% endcomment %}
+  {% assign rowlist = rows | split: "@@R@@" | sort | reverse %}
+  {% assign ailist = airows | split: "@@R@@" | sort | reverse %}
+  {% assign watchlist = watch | split: "@@R@@" | sort %}
+  {% assign latest = "" %}{% assign alldates = rows | append: airows | split: "@@R@@" | sort | reverse %}
+  {% for x in alldates %}{% assign xd = x | split: "~~" | first %}{% if xd and xd != "" and xd != "0000" %}{% assign latest = xd %}{% break %}{% endif %}{% endfor %}
+  {% capture section %}
+<section class="tracker" id="{{ f.firm_id }}">
+  <h2>{{ f.name }} <small class="muted">{{ f.sector }}</small></h2>
+  {% if f.notes %}<p>{{ f.notes }}</p>{% endif %}
+  {% if n == 0 %}
+  <p class="small warn">No entries found. Check this firm's aliases and case_ids in _data/firms.yml.</p>
+  {% else %}
+  <p class="small"><strong>{{ n }} entries</strong> across {{ f.case_ids.size }} case IDs · {{ by_tracker }}{% if rev_yes > 0 or rev_part > 0 or rev_no > 0 or rev_open > 0 %} · Backlash reversals: {{ rev_yes }} Yes, {{ rev_part }} Partial, {{ rev_no }} No, {{ rev_open }} open{% endif %}{% if maxabs >= 0 %} · Biggest move: {{ maxm }}% ({{ maxcase }}){% endif %} · First seen {{ f.first_seen }}</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Date</th><th>Tracker</th><th>Change</th><th>Status</th><th>Size</th><th></th></tr></thead>
+    <tbody>{% for x in rowlist %}{% assign parts = x | split: "~~" %}{{ parts[1] }}{% endfor %}</tbody>
+  </table></div>
+  {% if ailist.size > 1 %}
+  <h3>AI pricing database</h3>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Date</th><th>File</th><th>Product and change</th><th>Size</th><th></th></tr></thead>
+    <tbody>{% for x in ailist %}{% assign parts = x | split: "~~" %}{{ parts[1] }}{% endfor %}</tbody>
+  </table></div>
+  {% endif %}
+  {% if evrows != "" %}<h3>Evidence</h3><ul class="small">{{ evrows }}</ul>{% endif %}
+  {% if claimrows != "" %}<h3>Claims this firm bears on</h3><ul class="small">{{ claimrows }}</ul>{% endif %}
+  {% if qrows != "" %}<h3>Open questions</h3><ul class="small">{{ qrows }}</ul>{% endif %}
+  <h3>What to watch</h3>
+  {% if watchlist.size > 1 %}<ul class="small">{% for x in watchlist %}{% assign parts = x | split: "~~" %}{{ parts[1] }}{% endfor %}</ul>{% else %}<p class="small muted">No dated check ahead.</p>{% endif %}
+  {% endif %}
+</section>
+  {% endcapture %}
+  {% assign padded = n | prepend: "0000" | slice: -4, 4 %}
+  {% capture sections %}{{ sections }}@@S@@{{ padded }}~~{{ f.firm_id }}~~{{ f.name }}~~{{ f.sector }}~~{{ n }}~~{{ latest }}~~{{ section }}{% endcapture %}
+{% endfor %}
+
+{% assign slist = sections | split: "@@S@@" | sort | reverse %}
+<div class="table-wrap"><table>
+  <thead><tr><th>Firm</th><th>Sector</th><th>Entries</th><th>Latest activity</th></tr></thead>
+  <tbody>{% for s in slist %}{% if s != "" %}{% assign p = s | split: "~~" %}
+    <tr><td><a href="#{{ p[1] }}"><strong>{{ p[2] }}</strong></a></td><td>{{ p[3] }}</td><td>{{ p[4] }}</td><td class="nowrap">{{ p[5] }}</td></tr>
+  {% endif %}{% endfor %}</tbody>
+</table></div>
+
+{% for s in slist %}{% if s != "" %}{% assign p = s | split: "~~" %}{{ p[6] }}{% endif %}{% endfor %}
