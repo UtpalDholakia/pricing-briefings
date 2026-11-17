@@ -71,9 +71,9 @@
   agent: claude
 - claim_id: cost-naming-reduces-backlash
   claim: Naming a specific cost in a price-rise explanation reduces backlash compared with an unspecified or market-based explanation.
-  status: Contested
+  status: Open
   confidence: Low
-  confidence_note: 'The only direct test in the repo points against: in a field experiment, market justifications cut attrition and cost justifications did not. No evidence for yet; tariff refunds suggest a named cost may also bind the seller later.'
+  confidence_note: 'Leans against. The only direct test in the repo, a field experiment, found market justifications cut attrition and cost justifications did not; whether its cost condition named a specific cost is unconfirmed. No evidence for yet; tariff refunds suggest a named cost may also bind the seller later.'
   mechanism_codes: [dual-entitlement, motive-attribution, price-change-communication]
   created: '2026-11-17'
   last_updated: '2026-11-17'
@@ -84,7 +84,7 @@
     note: 'Field experiment (J. Marketing): only market (scarce-alternatives) justifications reduced attrition; cost and quality justifications did not.'
   - kind: tracker
     ref: sam-fender-tour-2026
-    note: Cost-tracking explanation still met fan backlash; prices partly reversed.
+    note: 'Anecdote, not a comparison: a cost-tracking explanation still met fan backlash; prices partly reversed.'
   related_questions: [tariff-refund-expectations-2026]
   related_dives: []
   status_history:
@@ -95,19 +95,23 @@
     source: https://utpaldholakia.github.io/pricing-briefings/trackers/#explanations
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-17'
+    old_status: Contested
+    new_status: Open
+    reason: 'Review before confirmation: Contested needs credible evidence on both sides. Evidence only against, from one study of uncertain fit plus an anecdote, is short of Refuted, so Open with the lean noted (rule clarified in AGENTS.md section 12).'
+    source: https://utpaldholakia.github.io/pricing-briefings/claims/#cost-naming-reduces-backlash
+    proposed_by: claude
+    confirmed_by: null
   agent: claude
 - claim_id: credits-obscure-true-price
   claim: When a vendor prices in credits rather than currency, buyers underestimate what they pay, because the vendor sets the exchange rate.
   status: Open
   confidence: Low
-  confidence_note: 'The repo has cases where the exchange rate changed (allowances, credit draw-down rules) but no measurement of whether buyers misjudged what they paid; churn data and the per-job reversal suggest buyers notice and prefer metered units.'
+  confidence_note: 'The repo has cases where the exchange rate changed (allowances, credit draw-down rules) but no measurement of whether buyers misjudged what they paid; churn data and the per-job reversal suggest buyers notice and prefer metered units. The draft deep dive was removed from the evidence on 2026-11-17 (an argument for the claim is not evidence for it) and stays under related dives.'
   mechanism_codes: [mental-accounting, usage-anxiety]
   created: '2026-11-17'
   last_updated: '2026-11-17'
   evidence_for:
-  - kind: case
-    ref: 2026-12-credits-as-a-currency
-    note: Draft deep dive arguing that credits work as a vendor-controlled currency.
   - kind: tracker
     ref: chatgpt-pro-allowance-2026
     note: Allowance cut announced at an unchanged price, framed as efficiency (later cancelled).
@@ -134,9 +138,9 @@
   agent: claude
 - claim_id: small-surcharge-partitioning-helps
   claim: Showing a surcharge separately from the base price raises purchase intention only while the surcharge is small relative to the base price.
-  status: Contested
+  status: Open
   confidence: Low
-  confidence_note: 'One experiment supports the size boundary; field cases show even small restaurant fees (around 3%) drawing backlash, which suggests the fee''s label and recipient matter as well as its size.'
+  confidence_note: 'One experiment supports the size boundary. Restaurant fee backlash (earls-admin-fee-2026, uca-terraza-fees-2026) was removed as counter-evidence on 2026-11-17: those fees were revealed late (drip pricing), which does not test an upfront partitioned price against an all-in one. A field comparison of upfront partitioned and all-in prices is needed.'
   mechanism_codes: [partitioned-pricing, drip-pricing]
   created: '2026-11-17'
   last_updated: '2026-11-17'
@@ -144,13 +148,7 @@
   - kind: evidence
     ref: partitioned-surcharge-magnitude
     note: 'Aichner & Dorigati (n=433): partitioning helped with a small shipping fee and hurt with a large one, through fairness.'
-  evidence_against:
-  - kind: tracker
-    ref: earls-admin-fee-2026
-    note: A 3% 'admin fee' drew a Reddit pile-on and tip withholding.
-  - kind: tracker
-    ref: uca-terraza-fees-2026
-    note: Restaurant fees called extortion online.
+  evidence_against: []
   related_questions: []
   related_dives: []
   status_history:
@@ -159,6 +157,13 @@
     new_status: Contested
     reason: Lab evidence for the size boundary; field cases where small, poorly labelled fees still provoked backlash.
     source: https://utpaldholakia.github.io/pricing-briefings/briefings/2026-11-17-claude/
+    proposed_by: claude
+    confirmed_by: null
+  - date: '2026-11-17'
+    old_status: Contested
+    new_status: Open
+    reason: 'Review before confirmation: the two restaurant cases are drip pricing (fees revealed late), not tests of upfront partitioning, so they were removed as counter-evidence; one study for is not enough for Supported.'
+    source: https://utpaldholakia.github.io/pricing-briefings/claims/#small-surcharge-partitioning-helps
     proposed_by: claude
     confirmed_by: null
   agent: claude
