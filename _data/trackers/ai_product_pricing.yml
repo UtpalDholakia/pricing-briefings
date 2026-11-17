@@ -1,6 +1,7 @@
 # Tracker: ai_product_pricing. How AI products themselves are priced.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
 - case_id: notion-credits-2026
+  mechanism_codes: [mental-accounting, usage-anxiety]
   date: '2026-11-02'
   kind: AI product pricing
   title: Notion moves existing Business and Enterprise workspaces onto two credit balances

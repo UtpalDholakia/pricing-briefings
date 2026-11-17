@@ -3,6 +3,7 @@
   case_id: "coupon-use-power-distance-2026"
   date: "2026-06-03"
   mechanism: "Skepticism about the seller’s motives"
+  mechanism_codes: [motive-attribution]
   comparison: "Coupon response among people higher versus lower in acceptance of unequal power"
   design: "Field studies, scanner panel and experiments"
   setting: "Eight studies in the article by Koo, Lalwani and Sun, Journal of Marketing"
@@ -17,6 +18,7 @@
   case_id: ai-price-setter-2026
   date: '2026-11-10'
   mechanism: Attributions about who set a dynamic price (AI vs human) and inferred motive
+  mechanism_codes: [algorithm-attribution, motive-attribution]
   comparison: Dynamic price attributed to an AI price setter versus a human price setter
   design: Five experiments
   setting: Journal of the Academy of Marketing Science (Kaplan, Minton & Lamberton)
@@ -32,6 +34,7 @@
   case_id: ai-price-setter-2026
   date: '2026-10-16'
   mechanism: Perceived manipulative intent when an AI sets a just-below price
+  mechanism_codes: [algorithm-attribution, left-digit]
   comparison: AI- versus human-attributed prices, crossed with round versus just-below endings ($10.00 vs $9.99)
   design: Two experiments
   setting: 796 participants in Chile and the US; Journal of Consumer Affairs (Chacon & Limongi)
@@ -47,6 +50,7 @@
   case_id: partitioned-fee-size-2026
   date: '2026-11-06'
   mechanism: Partitioned pricing; surcharge salience and fairness
+  mechanism_codes: [partitioned-pricing]
   comparison: Separately shown shipping fee versus an all-in price, small versus large fee (2x2)
   design: Online experiment (n=433) plus a recall task
   setting: Online fashion retail; Journal of Revenue and Pricing Management (Aichner & Dorigati)
@@ -61,6 +65,7 @@
 - id: "historical-low-price-temporal-cues"
   date: "2026-03-18"
   mechanism: "Credibility of a historical low-price claim"
+  mechanism_codes: [reference-price]
   comparison: "More distant versus more recent historical lowest-price cues"
   design: "Secondary data and controlled experiments"
   setting: "Five studies reported in Psychology & Marketing"
@@ -75,6 +80,7 @@
   case_id: wait-for-free-2026
   date: '2026-11'
   mechanism: Impatience-based self-selection (pay now or wait for free)
+  mechanism_codes: [impatience-self-selection]
   comparison: Standard paywall versus a 'wait for free' option on each chapter
   design: Structural dynamic choice model estimated on platform data, with counterfactual simulations
   setting: Online serial-fiction platform, 15 months, more than 10,000 novels and 1 million users
@@ -104,6 +110,7 @@
 - id: cash-card-spending-replication
   date: '2026-08-14'
   mechanism: Pain of paying
+  mechanism_codes: [pain-of-paying]
   comparison: Cash versus card payment
   design: Preregistered replication program
   setting: 13 replications, 32,371 participants across multiple paradigms
@@ -118,6 +125,7 @@
 - id: divisibility-replication
   date: '2026-06'
   mechanism: Unit-price divisibility
+  mechanism_codes: [unit-price-processing]
   comparison: Easily divisible multipack price versus a lower but less easily divisible price
   design: Preregistered replication
   setting: Four larger replications of three studies from the original paper
@@ -131,6 +139,7 @@
 - id: threshold-versus-cap
   date: '2025-12-01'
   mechanism: Fairness of discount restrictions
+  mechanism_codes: [transaction-utility]
   comparison: Minimum-spend threshold versus a cap on savings
   design: Preregistered experiments, including field
   setting: Seven studies comparing promotion designs
@@ -144,6 +153,7 @@
 - id: token-effort-promo-code
   date: '2025-04-17'
   mechanism: Token redemption effort
+  mechanism_codes: [impatience-self-selection]
   comparison: Enter one code for a 15% discount versus get the same discount automatically
   design: Randomized field experiment
   setting: Zoka Coffee online promotion, one field test in a larger study program

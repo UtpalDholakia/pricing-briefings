@@ -14,6 +14,7 @@ Beyond the daily briefings, the repository is a research base for The Pricing Co
 - **Deep dives** (`_cases/`): one argued piece a month built from the trackers, drafted for Utpal's approval (AGENTS.md section 9).
 - **[Substack pipeline](https://utpaldholakia.github.io/pricing-briefings/#pipeline)**: ideas from question to published piece (`_data/substack/ideas.yml`, AGENTS.md section 10).
 - **[Trackers](https://utpaldholakia.github.io/pricing-briefings/trackers/)**: case trackers and longitudinal measurement trackers (AGENTS.md sections 6 and 7).
+- **Knowledge infrastructure**: a validator run on every commit (`scripts/validate.py`), a shared list of pricing-psychology mechanisms (`_data/mechanisms.yml`) and a firm registry for dossiers (`_data/firms.yml`) (AGENTS.md section 11).
 
 ## How it works
 

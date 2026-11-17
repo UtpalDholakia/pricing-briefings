@@ -1,0 +1,72 @@
+# Firm registry for dossiers. AGENTS.md section 11. Claude owns this file; other agents suggest additions in their briefings.
+# A firm enters at 3 entries across the trackers and the AI pricing database (counted by scripts/validate.py --firms).
+# case_ids: every case about this firm. aliases: exact strings used in firm / firm_or_place / provider / who / offer fields.
+# When a new spelling appears in a tracker, add it here as an alias; never rename the tracker entry to match.
+# first_seen is recomputed by the validator report; do not guess it.
+- firm_id: microsoft
+  name: Microsoft
+  sector: Enterprise software and cloud
+  case_ids:
+  - microsoft-2027-prices
+  - microsoft-power-apps-2027
+  - microsoft-azure-2027
+  - microsoft-365-copilot-metered-2027
+  - uk-cma-microsoft-sms-2026
+  aliases:
+  - Microsoft
+  - Microsoft (commercial cloud and on-premises licences)
+  - Microsoft 365 Family and Premium
+  first_seen: '2026-09-09'
+  notes: 'The 2027 price calendar: Power Apps list rise, annual local-currency reset, metered Copilot billing; UK CMA strategic-market-status case pending.'
+- firm_id: openai
+  name: OpenAI
+  sector: AI products
+  case_ids:
+  - chatgpt-pro-allowance-2026
+  - openai-per-job-pricing-2026
+  - chatgpt-wallet-2026
+  aliases:
+  - OpenAI
+  - OpenAI (ChatGPT Pro)
+  first_seen: '2026-10-27'
+  notes: 'Cancelled the ChatGPT Pro allowance cut after backlash; backed off per-job pricing; ChatGPT Wallet for agent checkout.'
+- firm_id: starlink
+  name: Starlink (SpaceX)
+  sector: Telecom
+  case_ids:
+  - starlink-congestion-2026
+  aliases:
+  - Starlink
+  first_seen: '2026-10-25'
+  notes: 'Location- and congestion-based residential pricing; increases held so far.'
+- firm_id: ticketmaster
+  name: Ticketmaster (Live Nation)
+  sector: Live events ticketing
+  case_ids:
+  - ticketmaster-drip-ftc-2026
+  - ticketmaster-au-in-demand-2026
+  aliases:
+  - Ticketmaster / Ticketek (Australia)
+  first_seen: '2026-10-14'
+  notes: 'FTC drip-pricing case in the US; CHOICE Shonky award for In Demand pricing in Australia.'
+- firm_id: hershey
+  name: Hershey
+  sector: Packaged food
+  case_ids:
+  - hershey-mondelez-cocoa-2026
+  - hershey-kisses-party-bag-2026
+  - hershey-kisses-2026
+  aliases:
+  - Hershey; Mondelez
+  first_seen: '2026-10-17'
+  notes: 'Cocoa-cost explanations alongside repeated pack-size cuts.'
+- firm_id: laugfs-gas
+  name: LAUGFS Gas (Sri Lanka)
+  sector: Energy (LPG)
+  case_ids:
+  - laugfs-lpg-2026
+  aliases:
+  - LAUGFS Gas PLC (Sri Lanka)
+  - LAUGFS Gas PLC
+  first_seen: '2026-11-13'
+  notes: 'Apologised for a shortage but defended a 35.7% cylinder price rise as break-even; Consumer Affairs Authority summons.'

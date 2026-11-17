@@ -46,3 +46,4 @@ exclude:
   - META_AI_INSTRUCTIONS.md
   - Gemfile
   - Gemfile.lock
+  - scripts

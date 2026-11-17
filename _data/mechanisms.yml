@@ -1,0 +1,92 @@
+# Shared vocabulary of consumer-psychology and pricing mechanisms. AGENTS.md section 11.
+# Any tracker entry, evidence row or (later) claim may carry `mechanism_codes: [code, ...]` using ONLY these codes.
+# `mechanism_codes` is distinct from the `mechanism` field in b2b_pricing.yml and the AI pricing database, which records how a price is charged (seat, usage, credits).
+# Add a code only when nothing below fits and at least two entries need it; say so in that day's digest. Never rename or delete a code.
+- code: reference-price
+  name: Reference prices and anchoring
+  definition: Buyers judge a price against a comparison point (past price, list price, crossed-out price, first number seen) and under-adjust from it.
+  related_tags: ["Price presentation", "Discounting", "Price Promotions"]
+- code: left-digit
+  name: Left-digit and just-below prices
+  definition: Prices ending in 9 or 99 are read by their leftmost digit; the ending can also signal a discount or a tactic.
+  related_tags: ["just-below pricing", "Processing Prices"]
+- code: partitioned-pricing
+  name: Partitioned pricing
+  definition: Splitting a price into a base and surcharges changes perceived total cost, fairness and purchase intention, depending on surcharge size and justification.
+  related_tags: ["Partitioned Pricing", "All-inclusive pricing"]
+- code: drip-pricing
+  name: Drip pricing and hidden fees
+  definition: Mandatory charges revealed late in the purchase exploit commitment and sunk search costs.
+  related_tags: ["Hidden Price Increases", "Disclosure", "Price transparency"]
+- code: quantity-insensitivity
+  name: Quantity insensitivity (shrinkflation)
+  definition: Buyers track package prices more closely than package sizes, so a smaller quantity at the same price is less noticed than an equal per-unit price rise.
+  related_tags: ["Shrinkflation", "Hidden Price Increases"]
+- code: unit-price-processing
+  name: Unit-price processing and divisibility
+  definition: How easily a price can be divided or compared per unit changes perceived value and comparison accuracy.
+  related_tags: ["Comprehension", "Price legibility", "Processing Prices"]
+- code: dual-entitlement
+  name: Dual entitlement (fairness of cost pass-through)
+  definition: Price rises that protect a seller's reference profit after a cost increase are accepted; rises that exploit demand or scarcity are judged unfair.
+  related_tags: ["Fairness", "Price Legitimacy Vocabulary", "price increases"]
+- code: motive-attribution
+  name: Inferred seller motive
+  definition: Buyers judge a price change by the motive they attribute to the seller (greed, survival, cost, manipulation); explanations work by shifting that attribution.
+  related_tags: ["Fairness", "Communicating prices", "PR & pricing"]
+- code: algorithm-attribution
+  name: Algorithm versus human price setter
+  definition: Who or what is believed to have set a price (an AI, a rule, a person) changes fairness and manipulation judgments.
+  related_tags: ["Algorithmic Pricing", "AI in Pricing", "Fairness"]
+- code: personalization-fairness
+  name: Fairness of personalized and discriminatory prices
+  definition: Different prices for different buyers are judged by the basis used (stated trait, purchase history, inferred data) and whether the variation is visible.
+  related_tags: ["Price discrimination", "Dynamic pricing", "Fairness"]
+- code: pain-of-paying
+  name: Pain of paying and payment coupling
+  definition: The felt cost of a purchase depends on payment form and timing; decoupling payment from consumption (cards, BNPL, auto-pay, one-tap approval) dulls it.
+  related_tags: ["Behavioral Economics", "Consumer decision making"]
+- code: mental-accounting
+  name: Mental accounting and captive currencies
+  definition: Money is treated differently by source and label; credits, tokens, points and gift balances are valued and spent unlike cash.
+  related_tags: ["Credit-based pricing", "Token pricing", "Rewards Program", "Loyalty Program"]
+- code: transaction-utility
+  name: Transaction utility and deal perception
+  definition: The perceived quality of the deal itself (the gap from the reference price) adds or subtracts value apart from the product.
+  related_tags: ["Discounting", "Price Promotions"]
+- code: context-effects
+  name: Decoys and choice-set effects
+  definition: Adding or removing an option (a decoy, a premium tier, a removed entry level) shifts choice among the rest.
+  related_tags: ["Tiered Pricing", "Good-Better-Best Pricing", "Packages"]
+- code: bundling
+  name: Bundling and unbundling
+  definition: Combining items under one price changes evaluation and obscures component prices; unbundling makes a previously free component salient as a fee.
+  related_tags: ["Bundles", "Price Bundling", "a-la-carte pricing"]
+- code: scarcity-urgency
+  name: Scarcity and urgency cues
+  definition: Countdown timers, limited stock and demand signals raise urgency and willingness to pay, and invite backlash when found to be false.
+  related_tags: ["High demand", "Dynamic pricing"]
+- code: price-quality-inference
+  name: Price as a quality signal
+  definition: Buyers infer quality, effort or exclusivity from a price level or a price change.
+  related_tags: ["Premiumization", "Price level", "Branding"]
+- code: subscription-inertia
+  name: Subscription inertia and auto-renewal
+  definition: Defaults, renewal timing and cancellation friction keep buyers paying after a price rise or after usage falls.
+  related_tags: ["subscription pricing", "Subscription Renewals"]
+- code: impatience-self-selection
+  name: Impatience and self-selection
+  definition: Buyers sort themselves by patience or effort (wait for free, clip a coupon, enter a code), letting sellers price-discriminate without targeting.
+  related_tags: ["Price discrimination", "Incentives"]
+- code: social-norms
+  name: Social norms and reciprocity in payment
+  definition: Tipping, pay-what-you-want and visible payments are driven by norms, observers and reciprocity as much as by value.
+  related_tags: ["Social processes", "Restaurant pricing"]
+- code: price-change-communication
+  name: Communicating a price change
+  definition: Timing, channel, apology, notice and the stated reason of a price change shape reaction separately from its size.
+  related_tags: ["Pricing Communication", "Changing price", "PR & pricing"]
+- code: usage-anxiety
+  name: Metering and usage anxiety
+  definition: Visible per-use charges or depleting allowances make each use feel costly (the taxi-meter effect), lowering use or raising preference for flat rates.
+  related_tags: ["Usage-based pricing", "Metered Pricing", "Flat-rate pricing"]

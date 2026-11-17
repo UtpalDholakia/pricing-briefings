@@ -132,7 +132,7 @@ Use only these values. Detail goes in the matching `_note` field, never in the v
 - **Never delete entries**, including other agents'. Correct mistakes in place with a note; merge duplicates under one `case_id`, keeping all source URLs.
 - If a source couldn't be opened or checked, say so in `verification_note`.
 - New entries go at the **top** of each list (newest first). Quote any string that contains a colon. Keep entries short.
-- Validate before committing: `python3 -c "import yaml,glob;[yaml.safe_load(open(f)) for f in glob.glob('_data/trackers/*.yml')]"`. A broken file breaks the whole site build.
+- Validate before committing: `python3 scripts/validate.py` (see section 11). It must report 0 errors. A broken file breaks the whole site build.
 
 ### 6.6 Monthly tracker digest
 
@@ -193,3 +193,12 @@ The path from a tracker question to a published Pricing Conundrum piece. File: `
 - **Monthly review:** in the first briefing of each month, alongside the monthly tracker digest, Claude lists the pipeline's state and proposes ideas to park, kill or promote; Utpal decides.
 - **Answering questions:** when an idea or piece answers a `questions.yml` question, set that question's `status: Answered` and `answered_by` to the link the same day.
 - **The rule that must not be broken: `published` only with a real Substack URL** (`published_url` and `published_date`), set on Utpal's confirmation.
+
+## 11. Knowledge infrastructure: validation, mechanisms, firm registry
+
+These files connect the trackers, the evidence file and the database so the repository accumulates knowledge rather than only logging events. Claude owns them; other agents suggest changes in their briefings.
+
+- **Validation (`scripts/validate.py`).** Checks that every `_data/` YAML file parses, every controlled-vocabulary field in sections 6, 8 and 10 uses an allowed value, briefing front matter is complete with tags from `_data/tags.yml`, `case_id`s are lowercase slugs, `mechanism_codes` exist, and the firm registry resolves. Run `python3 scripts/validate.py` before every commit to `_data/` or `_briefings/`; 0 errors is required. A GitHub Action (`.github/workflows/validate.yml`) runs it on every push to `main` and every pull request; a red check means the last commit needs fixing. When AGENTS.md adds or changes an allowed value, update the script in the same commit.
+- **Mechanism codes (`_data/mechanisms.yml`).** A shared list of consumer-psychology mechanisms (reference prices, partitioned pricing, dual entitlement, mental accounting and so on). Any tracker entry or evidence row may carry `mechanism_codes: [code, ...]` using only these codes; Claude adds them to its new entries and to every new `pricing_evidence.yml` row. This field is separate from `mechanism` in `b2b_pricing.yml` and the AI pricing database, which records how a price is charged. Add a code only when nothing fits and at least two entries need it, and say so in that day's digest. Never rename or delete a code.
+- **Firm registry (`_data/firms.yml`).** One row per firm with `firm_id`, `name`, `sector`, `case_ids` (every case about the firm), `aliases` (exact strings used for the firm in `firm`, `firm_or_place`, `provider`, `who` or `offer` fields), `first_seen` and a one-line `notes`. A firm enters when it reaches 3 entries across the trackers and database, counted by `python3 scripts/validate.py --firms`. When a new spelling of a firm appears, add it as an alias; never rename the tracker entry. Firm dossier pages will be generated from this registry, never maintained by hand. In the monthly digest, Claude lists firms added and firms one entry short of the threshold.
+
