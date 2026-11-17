@@ -1,6 +1,7 @@
 # Tracker: questions. Open research questions with status and priority.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
 - date: '2026-11-17'
+  question_id: ai-price-setter-fairness-2026
   question: 'When a dynamic price is attributed to an AI rather than a person, is it judged fairer or more manipulative, and does a just-below ending decide which?'
   context: Kaplan, Minton & Lamberton (JAMS) vs Chacon & Limongi (JCA)
   digest: '2026-11-17'
@@ -8,6 +9,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-17'
+  question_id: tariff-refund-expectations-2026
   question: 'If a seller justified a price rise by naming a specific cost, do buyers expect the price to fall when that cost is refunded, more than after an unspecified cost increase?'
   context: Tariff refunds kept after tariff-justified price rises; senators' letter to the FTC
   digest: '2026-11-17'
@@ -120,6 +122,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-08'
+  question_id: personalization-pledges-2026
   question: Do public 'we don't personalize prices' pledges reassure shoppers or remind them the practice exists?
   context: Walmart, NGA pledges
   digest: '2026-11-08'
@@ -141,6 +144,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-04'
+  question_id: fare-breakdown-trust-2026
   question: Does showing a fare's cost breakdown build trust (dual entitlement) or invite disputes over each line?
   context: India aviation rules
   digest: '2026-11-04'

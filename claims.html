@@ -1,0 +1,55 @@
+---
+layout: default
+title: Claims
+permalink: /claims/
+---
+{% assign C = site.data.claims %}
+{% assign E = site.data.trackers.pricing_evidence %}
+{% capture brief_base %}{{ '/briefings/' | relative_url }}{% endcapture %}
+{% capture case_base %}{{ '/cases/' | relative_url }}{% endcapture %}
+
+<h1 class="page-title">Claims</h1>
+<p class="muted">What the research base currently believes about pricing, one falsifiable claim at a time, with the evidence for and against and a dated history of verdicts. Agents propose verdicts; a verdict marked <span class="chip">proposed</span> awaits Utpal's confirmation. Evidence lives in the <a href="{{ '/trackers/' | relative_url }}">trackers</a> and the <a href="{{ '/trackers/' | relative_url }}#pricing-evidence">evidence file</a>; this page only points at it. Rules: AGENTS.md section 12.</p>
+
+{% assign statuses = "Supported,Contested,Open,Refuted,Dead" | split: "," %}
+<div class="stat-row">
+  {% for s in statuses %}{% assign n = C | where: "status", s | size %}
+  <div class="stat"><span class="big">{{ n }}</span><span class="lbl">{{ s }}</span></div>
+  {% endfor %}
+  {% assign ch = C | where: "confidence", "High" | size %}{% assign cm = C | where: "confidence", "Medium" | size %}{% assign cl = C | where: "confidence", "Low" | size %}
+  <div class="stat"><span class="big">{{ ch }} · {{ cm }} · {{ cl }}</span><span class="lbl">confidence High · Medium · Low</span></div>
+</div>
+
+{% for s in statuses %}
+{% assign group = C | where: "status", s %}
+{% if group.size > 0 %}
+<section class="tracker" id="{{ s | downcase }}">
+  <h2>{{ s }} <small class="muted">{{ group.size }}</small></h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Claim</th><th>Confidence</th><th>Evidence for</th><th>Evidence against</th><th>Verdict history</th></tr></thead>
+    <tbody>{% for c in group %}
+    {% assign last = c.status_history | last %}
+    <tr id="{{ c.claim_id }}">
+      <td><strong>{{ c.claim }}</strong>
+        <div class="small muted">{{ c.claim_id }}{% if c.mechanism_codes %} · {{ c.mechanism_codes | join: ", " }}{% endif %}</div>
+        {% if c.related_questions.size > 0 %}<div class="small">Questions: {{ c.related_questions | join: ", " }}</div>{% endif %}
+        {% if c.related_dives.size > 0 %}<div class="small">Deep dives: {% for d in c.related_dives %}<a href="{{ case_base }}{{ d }}/">{{ d }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</div>{% endif %}
+      </td>
+      <td><span class="chip">{{ c.confidence }}</span><div class="small muted">{{ c.confidence_note }}</div></td>
+      {% assign lists = "evidence_for,evidence_against" | split: "," %}
+      {% for lname in lists %}
+      <td class="small">{% assign ev = c[lname] %}{% if ev.size == 0 %}<span class="muted">none yet</span>{% endif %}
+        <ul>{% for p in ev %}<li>
+          {% if p.kind == "briefing" %}<a href="{{ brief_base }}{{ p.ref }}/">{{ p.ref }}</a>
+          {% elsif p.kind == "case" %}<a href="{{ case_base }}{{ p.ref }}/">{{ p.ref }}</a>
+          {% elsif p.kind == "evidence" %}{% assign row = E | where: "id", p.ref | first %}{% if row.source %}<a href="{{ row.source }}">{{ p.ref }}</a>{% else %}{{ p.ref }}{% endif %}
+          {% else %}<span class="case">{{ p.ref }}</span>{% endif %}
+          <span class="muted">({{ p.kind }})</span> {{ p.note }}</li>{% endfor %}</ul>
+      </td>
+      {% endfor %}
+      <td class="small">{% for h in c.status_history %}<div><span class="nowrap">{{ h.date }}</span>: {% if h.old_status %}{{ h.old_status }} → {% endif %}<strong>{{ h.new_status }}</strong> {% if h.confirmed_by %}<span class="chip yes">confirmed</span>{% else %}<span class="chip">proposed</span>{% endif %} <span class="muted">{{ h.reason }}</span>{% if h.source %} <a class="src" href="{{ h.source }}">source</a>{% endif %}</div>{% endfor %}</td>
+    </tr>{% endfor %}</tbody>
+  </table></div>
+</section>
+{% endif %}
+{% endfor %}

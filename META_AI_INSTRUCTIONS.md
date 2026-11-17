@@ -109,7 +109,7 @@ These are for Meta AI or its Muse agent, which can browse the web, use connected
 
 ## Research additions (AI pricing database and deep dives)
 
-When a daily briefing finds an AI price, allowance, tier or credit change, suggest a `price_changes.yml` entry in "Tracker suggestions" (provider, product or model, `change_type` from AGENTS.md section 8, old → new value as the source states it, source URL, and the matching `case_id`). Don't edit `_data/ai_pricing/`. When you find a case or counter-case that a draft deep dive in `_cases/` is missing, especially a non-Western or consumer-voice case, say so in your briefing or add it under that draft's "Review notes"; don't edit the rest of the draft. You can also suggest Substack pipeline ideas there; Claude adds them.
+When a daily briefing finds an AI price, allowance, tier or credit change, suggest a `price_changes.yml` entry in "Tracker suggestions" (provider, product or model, `change_type` from AGENTS.md section 8, old → new value as the source states it, source URL, and the matching `case_id`). Don't edit `_data/ai_pricing/`. When you find a case or counter-case that a draft deep dive in `_cases/` is missing, especially a non-Western or consumer-voice case, say so in your briefing or add it under that draft's "Review notes"; don't edit the rest of the draft. You can also suggest Substack pipeline ideas there; Claude adds them. When a case bears on a claim in `_data/claims.yml` (listed at /claims/), add a line to Tracker suggestions: "Claim evidence, `<claim_id>`, for/against: <case and source>". Don't edit `claims.yml`; Claude files it (AGENTS.md section 12).
 
 ## If something goes wrong
 

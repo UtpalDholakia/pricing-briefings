@@ -1,0 +1,188 @@
+# Claims register. AGENTS.md section 12. One falsifiable claim per entry, with its evidence and a dated verdict history.
+# status: Open / Supported / Contested / Refuted / Dead. confidence: High / Medium / Low (independent of status).
+# evidence kinds: evidence (pricing_evidence.yml id) / tracker (case_id) / case (_cases slug) / question (question_id) / briefing (YYYY-MM-DD-agent).
+# Agents propose verdicts; a status_history entry is confirmed only when Utpal confirms it (confirmed_by: utpal). Never delete a claim or a history entry.
+# Seeded 2026-11-17 by Claude from Muse's Spec D; seeds 5 and 6 of the spec were replaced because no evidence for or against them exists in the repo yet (they remain questions: personalization-pledges-2026, fare-breakdown-trust-2026).
+- claim_id: ai-attribution-changes-fairness-judgement
+  claim: A dynamic price attributed to an AI is judged differently, on fairness and intent, from the same price attributed to a person.
+  status: Open
+  confidence: Medium
+  confidence_note: 'Both studies in the repo find a difference, in opposite directions (AI fairer vs AI more manipulative); two studies of one kind are not enough for Supported under the verdict rules, and no field case tests it yet.'
+  mechanism_codes: [algorithm-attribution, motive-attribution, left-digit]
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: evidence
+    ref: ai-vs-human-price-setter-fairness
+    note: 'Kaplan, Minton & Lamberton (JAMS, 5 studies): AI-set prices generally judged fairer, moderated by expertise, AI attitudes and motive.'
+  - kind: evidence
+    ref: ai-set-just-below-prices
+    note: 'Chacon & Limongi (JCA, 2 studies): AI-set prices drew lower intentions; just-below endings read as manipulation.'
+  evidence_against: []
+  related_questions: [ai-price-setter-fairness-2026]
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Seeded; two studies agree a difference exists but disagree on its direction.
+    source: https://utpaldholakia.github.io/pricing-briefings/briefings/2026-11-17-claude/
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: sellers-reverse-under-public-backlash
+  claim: Sellers reverse a price rise at least partly when the backlash is public, attributable and covered beyond the seller's own channels.
+  status: Contested
+  confidence: Low
+  confidence_note: 'backlash.yml on 2026-11-17: 7 of 11 resolved cases reversed at least partly (6 Yes, 1 Partial, 4 No; 4 still Pending or Unknown). The tracker does not code whether backlash was public, attributable or widely covered, so the count does not test the condition; two widely covered cases held.'
+  mechanism_codes: [price-change-communication, motive-attribution]
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: tracker
+    ref: chatgpt-pro-allowance-2026
+    note: Allowance cut cancelled after public developer backlash.
+  - kind: tracker
+    ref: burry-substack-2026
+    note: Price-rise plan cancelled after reader pushback.
+  - kind: tracker
+    ref: uniqlo-socks-2026
+    note: Increase reversed after customer backlash.
+  - kind: tracker
+    ref: openai-per-job-pricing-2026
+    note: Per-job pricing dropped after customer objections.
+  evidence_against:
+  - kind: tracker
+    ref: starlink-congestion-2026
+    note: Widely covered accusations of exploiting rural customers; increases held.
+  - kind: tracker
+    ref: sony-ps-store-pricing-2026
+    note: Screenshot comparisons and boycott talk; no reversal.
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Contested
+    reason: Most resolved cases reversed, but two widely covered cases held, and the tracker cannot yet separate public from private backlash.
+    source: https://utpaldholakia.github.io/pricing-briefings/trackers/#backlash
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: cost-naming-reduces-backlash
+  claim: Naming a specific cost in a price-rise explanation reduces backlash compared with an unspecified or market-based explanation.
+  status: Contested
+  confidence: Low
+  confidence_note: 'The only direct test in the repo points against: in a field experiment, market justifications cut attrition and cost justifications did not. No evidence for yet; tariff refunds suggest a named cost may also bind the seller later.'
+  mechanism_codes: [dual-entitlement, motive-attribution, price-change-communication]
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for: []
+  evidence_against:
+  - kind: tracker
+    ref: damavandi-justification-study
+    note: 'Field experiment (J. Marketing): only market (scarce-alternatives) justifications reduced attrition; cost and quality justifications did not.'
+  - kind: tracker
+    ref: sam-fender-tour-2026
+    note: Cost-tracking explanation still met fan backlash; prices partly reversed.
+  related_questions: [tariff-refund-expectations-2026]
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Contested
+    reason: One field experiment and one field case against; nothing for.
+    source: https://utpaldholakia.github.io/pricing-briefings/trackers/#explanations
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: credits-obscure-true-price
+  claim: When a vendor prices in credits rather than currency, buyers underestimate what they pay, because the vendor sets the exchange rate.
+  status: Open
+  confidence: Low
+  confidence_note: 'The repo has cases where the exchange rate changed (allowances, credit draw-down rules) but no measurement of whether buyers misjudged what they paid; churn data and the per-job reversal suggest buyers notice and prefer metered units.'
+  mechanism_codes: [mental-accounting, usage-anxiety]
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: case
+    ref: 2026-12-credits-as-a-currency
+    note: Draft deep dive arguing that credits work as a vendor-controlled currency.
+  - kind: tracker
+    ref: chatgpt-pro-allowance-2026
+    note: Allowance cut announced at an unchanged price, framed as efficiency (later cancelled).
+  - kind: tracker
+    ref: notion-credits-2026
+    note: Two non-interchangeable credit balances with a fixed draw-down order.
+  evidence_against:
+  - kind: tracker
+    ref: openai-per-job-pricing-2026
+    note: Buyers rejected a simpler flat per-job price in favour of auditable token metering.
+  - kind: tracker
+    ref: genai-subscriptions-nber-2026
+    note: 'Card data on 174M consumers: high churn and switching suggest buyers respond to value changes.'
+  related_questions: []
+  related_dives: [2026-12-credits-as-a-currency]
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Open
+    reason: Cases and an argument, but no direct test of underestimation; indirect evidence on both sides.
+    source: https://utpaldholakia.github.io/pricing-briefings/cases/2026-12-credits-as-a-currency/
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: small-surcharge-partitioning-helps
+  claim: Showing a surcharge separately from the base price raises purchase intention only while the surcharge is small relative to the base price.
+  status: Contested
+  confidence: Low
+  confidence_note: 'One experiment supports the size boundary; field cases show even small restaurant fees (around 3%) drawing backlash, which suggests the fee''s label and recipient matter as well as its size.'
+  mechanism_codes: [partitioned-pricing, drip-pricing]
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for:
+  - kind: evidence
+    ref: partitioned-surcharge-magnitude
+    note: 'Aichner & Dorigati (n=433): partitioning helped with a small shipping fee and hurt with a large one, through fairness.'
+  evidence_against:
+  - kind: tracker
+    ref: earls-admin-fee-2026
+    note: A 3% 'admin fee' drew a Reddit pile-on and tip withholding.
+  - kind: tracker
+    ref: uca-terraza-fees-2026
+    note: Restaurant fees called extortion online.
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Contested
+    reason: Lab evidence for the size boundary; field cases where small, poorly labelled fees still provoked backlash.
+    source: https://utpaldholakia.github.io/pricing-briefings/briefings/2026-11-17-claude/
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: divisible-multipacks-sell-better
+  claim: Multipack prices that divide easily (4 for $16) are chosen more often than equivalent prices that are hard to divide (4 for $15.30).
+  status: Refuted
+  confidence: Medium
+  confidence_note: Four replications failed to reproduce the original effect; this refutes the multipack result, not the broader idea that easier arithmetic can affect choice.
+  mechanism_codes: [unit-price-processing]
+  created: '2026-11-17'
+  last_updated: '2026-11-17'
+  evidence_for: []
+  evidence_against:
+  - kind: evidence
+    ref: divisibility-replication
+    note: None of four replications reproduced the original result.
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Refuted
+    reason: Direct replications failed (verdict rule D.3).
+    source: https://experts.umn.edu/en/publications/brief-commentary-is-4-for-16-better-than-4-for-1530-testing-the-r/
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude

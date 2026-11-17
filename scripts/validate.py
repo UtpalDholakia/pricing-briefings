@@ -12,6 +12,8 @@ Checks (AGENTS.md sections 2, 6, 8, 10, 11):
   * case_id / related_case_id slug format
   * mechanism_codes exist in _data/mechanisms.yml
   * firm registry (_data/firms.yml): unique IDs, listed case_ids exist, aliases match at least one entry (warning)
+  * question_id slugs are unique; claims (_data/claims.yml): vocabularies, every evidence ref and related
+    question/dive resolves, status_history is consistent with status, confirmed_by is null or 'utpal'
 Needs only Python 3 and PyYAML.
 """
 import datetime
@@ -121,7 +123,7 @@ if isinstance(data.get("_data/mechanisms.yml"), list):
 all_case_ids = defaultdict(list)       # case_id -> [file]
 records_by_file = {}
 for path, d in data.items():
-    if path in ("_data/tags.yml", "_data/mechanisms.yml", "_data/firms.yml"):
+    if path in ("_data/tags.yml", "_data/mechanisms.yml", "_data/firms.yml", "_data/claims.yml"):
         continue
     recs = as_list(d)
     records_by_file[path] = recs
@@ -235,6 +237,87 @@ if firms is not None:
                        for _, r in matched if (r.get("date") or r.get("started") or r.get("announced")))
         firm_report.append((fid, len(matched), dates[0] if dates else None,
                             sorted({os.path.basename(p)[:-4] for p, _ in matched})))
+
+# ---------------------------------------------------------------- 5. questions and claims
+question_ids = set()
+for i, q in enumerate(as_list(data.get("_data/trackers/questions.yml"))):
+    qid = q.get("question_id") if isinstance(q, dict) else None
+    if qid is not None:
+        if not SLUG.match(str(qid)):
+            err(f"_data/trackers/questions.yml[{i}]", f"question_id {qid!r} is not a lowercase slug")
+        elif qid in question_ids:
+            err(f"_data/trackers/questions.yml[{i}]", f"duplicate question_id {qid!r}")
+        question_ids.add(qid)
+
+evidence_ids = {r.get("id") for r in as_list(data.get("_data/trackers/pricing_evidence.yml")) if isinstance(r, dict)}
+case_slugs = {os.path.basename(p)[:-3] for p in glob.glob("_cases/*.md")}
+briefing_slugs = {os.path.basename(p)[:-3] for p in glob.glob("_briefings/*.md")}
+CLAIM_STATUS = {"Open", "Supported", "Contested", "Refuted", "Dead"}
+CONFIDENCE = {"High", "Medium", "Low"}
+REF_KINDS = {
+    "evidence": (evidence_ids, "pricing_evidence.yml id"),
+    "tracker": (set(all_case_ids), "case_id in a tracker or database file"),
+    "case": (case_slugs, "_cases/ slug"),
+    "question": (question_ids, "question_id in questions.yml"),
+    "briefing": (briefing_slugs, "_briefings/ file name"),
+}
+claims = data.get("_data/claims.yml")
+if claims is not None:
+    seen = set()
+    for c in as_list(claims):
+        cid = c.get("claim_id")
+        where = f"_data/claims.yml {cid}"
+        if not cid or not SLUG.match(cid):
+            err(where, "claim_id must be a lowercase slug")
+        if cid in seen:
+            err(where, "duplicate claim_id")
+        seen.add(cid)
+        if not c.get("claim"):
+            err(where, "missing claim sentence")
+        if c.get("status") not in CLAIM_STATUS:
+            err(where, f"status {c.get('status')!r} not in allowed values")
+        if c.get("confidence") not in CONFIDENCE:
+            err(where, f"confidence {c.get('confidence')!r} not in allowed values")
+        if not c.get("agent") or c.get("agent") not in agents:
+            err(where, "agent missing or not in _config.yml agents")
+        for code in c.get("mechanism_codes") or []:
+            if code not in mechanisms:
+                err(where, f"mechanism code {code!r} is not in _data/mechanisms.yml")
+        pointers = (c.get("evidence_for") or []) + (c.get("evidence_against") or [])
+        for ptr in pointers:
+            kind, ref = ptr.get("kind"), ptr.get("ref")
+            if kind not in REF_KINDS:
+                err(where, f"evidence kind {kind!r} not in {sorted(REF_KINDS)}")
+            elif str(ref) not in REF_KINDS[kind][0]:
+                err(where, f"{kind} ref {ref!r} does not resolve ({REF_KINDS[kind][1]})")
+        for q in c.get("related_questions") or []:
+            if q not in question_ids:
+                err(where, f"related question {q!r} has no matching question_id")
+        for d in c.get("related_dives") or []:
+            if d not in case_slugs:
+                err(where, f"related dive {d!r} not found in _cases/")
+        hist = c.get("status_history") or []
+        if not hist:
+            err(where, "status_history is empty")
+        else:
+            if hist[0].get("old_status") is not None:
+                err(where, "first status_history entry must have old_status: null")
+            if hist[-1].get("new_status") != c.get("status"):
+                err(where, "status does not match the last status_history entry")
+            for h in hist:
+                for k in ("date", "new_status", "reason", "proposed_by"):
+                    if not h.get(k):
+                        err(where, f"status_history entry missing {k}")
+                if h.get("confirmed_by") not in (None, "utpal"):
+                    err(where, "confirmed_by must be null or 'utpal'")
+        if not pointers:
+            created = c.get("created")
+            try:
+                age = (datetime.date.today() - datetime.date.fromisoformat(str(created))).days
+            except ValueError:
+                age = 0
+            if age > 30:
+                warn(where, "no evidence after 30 days: move it to questions.yml or mark it Dead")
 
 # ---------------------------------------------------------------- output
 if "--firms" in sys.argv:
