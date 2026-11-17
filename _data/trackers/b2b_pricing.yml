@@ -1,0 +1,88 @@
+# Tracker: b2b_pricing. Business and enterprise price changes (list prices; net prices rarely disclosed).
+# Newest first. Common fields follow AGENTS.md section 6 (case_id, last_checked, follow_up_date, agent, verification_note).
+# mechanism: seat-based / usage-based / credits / flat / outcome-based. price_type: list / net / quote.
+# net_disclosed: false unless the source states what buyers actually pay after negotiation.
+- case_id: microsoft-365-copilot-metered-2027
+  related_case_id: microsoft-2027-prices
+  date: '2026-11-14'
+  firm: Microsoft
+  product: Microsoft 365 Copilot Business (partner/reseller purchases)
+  change: 'Usage-based billing switched on by default for new reseller purchases, Jan-Mar 2027; default limit 4,000 Copilot Credits per user per month at $0.01 a credit (up to $40 per user per month) on top of the $30 seat licence; a new purchase also switches the meter on for licences already in the tenant'
+  old_price: $30 per user per month seat licence, no default metering
+  new_price: $30 per user per month seat licence plus metered credits (default cap 4,000 credits, $0.01 each)
+  effective: '2027-01'
+  announced: null
+  mechanism: credits
+  price_type: list
+  net_disclosed: false
+  magnitude_pct: null
+  magnitude_note: Mechanism change; seat price unchanged, variable part depends on use
+  source: https://www.2tolead.com/insights/microsoft-365-copilot-licensing-changes-december-2026
+  digest: '2026-11-16'
+  agent: meta
+  verification_note: 'Claude''s 2026-11-17 search found sources disagreeing on the start date (Oct 19, Nov 2, Dec 1, or Jan-Mar 2027) and the default cap (4,000 credits vs $10 per user); the $30 seat price is as stated by Meta AI from 2toLead and not checked on Microsoft''s page.'
+  last_checked: '2026-11-17'
+  follow_up_date: '2027-01-15'
+- case_id: microsoft-azure-2027
+  related_case_id: microsoft-2027-prices
+  date: '2026-11-12'
+  firm: Microsoft
+  product: Azure virtual machines and storage; commercial cloud in Indian rupees
+  change: 'Azure VM and storage prices rise 8% to 17% from Feb 1, 2027 in seven regions (Dublin 17%, Singapore 8%); Indian-rupee commercial cloud prices +15.7% from Jan 1, 2027 (some on-premises products up to 20%)'
+  old_price: null
+  new_price: null
+  effective: '2027-01-01'
+  announced: null
+  mechanism: usage-based
+  price_type: list
+  net_disclosed: false
+  magnitude_pct: null
+  magnitude_note: 'Range 8-17% by region (Azure); 15.7% (India, rupee prices); multiple figures, so no single value entered'
+  source: https://luby.co/blog/microsofts-2027-price-changes-a-budget-checklist-for-it-leaders/
+  related_source: https://theregister.com/off-prem/2026/11/15/microsoft-lifts-indian-cloud-prices-by-15-percent-cuts-costs-in-china/5309993
+  digest: '2026-11-16'
+  agent: meta
+  verification_note: 'The India +15.7% figure is confirmed by The Register (Nov 15) as part of Microsoft''s annual local-currency realignment (it also covers New Zealand +10% and cuts in China, Australia and Norway). The Azure 8-17% regional rises were not confirmed in Claude''s 2026-11-17 searches; source is luby.co via Meta AI.'
+  last_checked: '2026-11-17'
+  follow_up_date: '2027-01-05'
+- case_id: salesforce-agentforce-coworker-2027
+  date: '2026-11-05'
+  firm: Salesforce
+  product: Agentforce Coworker licence
+  change: 'Dedicated Coworker licence listed at $50 per user per month, covering Coworker searches plus a pooled 30 MB indexing allowance per user per month (no rollover); work delegated to other agents bills on those agents'' terms (Flex Credits, $500 per 100,000)'
+  old_price: null
+  new_price: $50 per user per month
+  effective: null
+  announced: '2026-11-05'
+  mechanism: seat-based
+  price_type: list
+  net_disclosed: false
+  magnitude_pct: null
+  source: https://ctol.digital/news/salesforce-agentforce-coworker-pricing-tier/
+  digest: '2026-11-17'
+  agent: meta
+  verification_note: 'From Meta AI''s 2026-11-17 briefing; CTOL cites Salesforce''s pricing page and billing guide. Salesforce''s page not opened by Claude (direct fetch blocked on 2026-11-17).'
+  last_checked: '2026-11-17'
+  follow_up_date: '2026-12-17'
+- case_id: microsoft-power-apps-2027
+  related_case_id: microsoft-2027-prices
+  date: '2026-09-09'
+  firm: Microsoft
+  product: Power Apps Premium
+  change: '$20 to $22 per user per month; 2,000-seat-minimum plan $12 to $14; first list-price rise in more than five years; existing subscriptions keep their price to the end of the term'
+  old_price: $20 per user per month ($12 on the 2,000-seat plan)
+  new_price: $22 per user per month ($14 on the 2,000-seat plan)
+  effective: '2027-01-01'
+  announced: '2026-09-09'
+  mechanism: seat-based
+  price_type: list
+  net_disclosed: false
+  magnitude_pct: 10
+  magnitude_note: Standard plan, computed from $20 to $22; 2,000-seat plan +16.7%
+  source: https://luby.co/blog/microsofts-2027-price-changes-a-budget-checklist-for-it-leaders/
+  related_source: https://www.microsoft.com/en-us/licensing/news/power-apps-premium-price-update
+  digest: '2026-11-16'
+  agent: meta
+  verification_note: 'Prices match Microsoft''s licensing news (seen via search index on 2026-11-17); US Government increases capped at 10% a year.'
+  last_checked: '2026-11-17'
+  follow_up_date: '2027-01-05'
