@@ -1,4 +1,1589 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: morwitz-partitioned-prices-1998
+  date: 1998-11
+  mechanism: Consumers anchor on the base price and under-process the surcharge, so a partitioned price is recalled as cheaper than the same all-in total.
+  mechanism_codes:
+  - partitioned-pricing
+  - mental-accounting
+  - transaction-utility
+  comparison: partitioned price (base + separate surcharge) vs all-inclusive price, same total
+  design: lab experiments
+  setting: US consumers; e.g. $32 shirt + $4.95 shipping; $69.95 phone + $12.95 surcharge (18.5%)
+  outcome: purchase intention / demand and recalled total cost
+  result_kind: Positive in this setting
+  result: Partitioned prices increased demand and lowered recalled total cost; only 21.9% of subjects tried to calculate the total cost and 23.2% ignored the surcharge altogether; with percentage surcharges only 9.6% tried to calculate vs 32.9% with dollar surcharges.
+  boundary: Lab settings with moderate surcharges (~15-18% of base); does not test very small (e.g. 1-cent) or very large surcharges, or fairness reactions.
+  source: https://psycnet.apa.org/record/1998-11272-004
+  verification_note: MSI Working Paper 98-116 PDF opened 2026-11-18; bibliographic details re-verified via PsycNet record and Columbia publication list. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: sheng-surcharge-fairness-2007
+  date: 2007-12
+  mechanism: A surcharge that looks large relative to the base price is judged unfair, and that unfairness suppresses purchase intention; a small relative surcharge passes the fairness test.
+  mechanism_codes:
+  - partitioned-pricing
+  - dual-entitlement
+  - motive-attribution
+  comparison: same surcharge on a small vs large base price (high vs low relative magnitude)
+  design: lab experiments (3 studies)
+  setting: US consumers, shipping/handling surcharges on products
+  outcome: perceived fairness of surcharge; purchase intention
+  result_kind: Positive in this setting
+  result: Relative surcharge magnitude influenced perceived fairness, which influenced purchase intentions; $9.00 shipping/handling on a $7.90 base (114% of base) was judged unfair, while the same $9.00 on a $49.90 base (18%) was not.
+  boundary: Lab only; fairness measured, not real purchases; magnitude examples ($9.00 on $7.90 vs $49.90) taken from Lee et al. (2026) summary of Sheng et al., not from the Sheng full text.
+  source: https://doi.org/10.1002/mar.20194
+  verification_note: PsycNet abstract opened 2026-11-18; DOI and journal details verified; magnitude examples corroborated by Lee et al. (2026) discussion of Sheng et al. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: lee-unexpected-surcharge-2026
+  date: '2026'
+  mechanism: An unexpected surcharge on something framed as complimentary violates communal norms, so even a trivial amount reads as unfair and damages revisit intention.
+  mechanism_codes:
+  - partitioned-pricing
+  - dual-entitlement
+  - social-norms
+  - motive-attribution
+  comparison: unexpected surcharge (including 1 cent) vs no surcharge, on a complimentary item
+  design: lab experiments (5 studies)
+  setting: restaurants; complimentary items with an unexpected surcharge
+  outcome: perceived fairness, revisit intention, ad engagement
+  result_kind: Negative
+  result: Even a one-cent surcharge on a complimentary item reduced perceived fairness and revisit intention and lowered ad engagement; the paper notes prior work focused on larger magnitudes (e.g. ~20% of total) and small surcharges were thought to be ignored or demand-increasing (Morwitz et al. 1998; Chakravarti et al. 2002), with negative effects mainly when surcharges were large relative to base (Sheng et al. 2007).
+  boundary: Restaurant/complimentary-item context; the mechanism is norm violation for an unexpected charge, so it may not generalise to expected surcharges (e.g. stated shipping fees); accepted manuscript, Journal of Business Research vol. 208.
+  source: https://doi.org/10.1016/j.jbusres.2026.116046
+  verification_note: LSE accepted manuscript (record 137507) opened 2026-11-18; authors, title, journal, DOI and findings verified from the manuscript. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: santana-drip-pricing-2020
+  date: 2020-01
+  mechanism: Drip pricing anchors choice on the base price; perceived search costs, self-justification and the belief that all firms charge similar fees keep consumers with the initially cheaper-looking option.
+  mechanism_codes:
+  - drip-pricing
+  - partitioned-pricing
+  - mental-accounting
+  comparison: surcharges revealed late (drip) vs upfront, same totals
+  design: lab experiments (6 studies, airline and hotel booking; 4 with real consequences)
+  setting: US consumers booking flights/hotels
+  outcome: initial choice, final choice after seeing total, satisfaction
+  result_kind: Context-dependent
+  result: 'Under drip, 54.5% chose the lower base-price option vs 11.7% upfront; after seeing the total and being offered a chance to change, 24.5% vs 7.8% still chose the more expensive option, despite lower satisfaction. Mechanisms: high perceived search costs, self-justification, mistaken belief all firms charge similar fees.'
+  boundary: Surcharge timing, not surcharge magnitude — does not test the claim's small-vs-large boundary; lab/simulated bookings, though four studies had real consequences.
+  source: https://doi.org/10.1287/mksc.2019.1207
+  verification_note: RePEc record opened 2026-11-18; percentages from the ICLE summary of the paper, corroborated by secondary summaries. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: blake-stubhub-drip-2021
+  date: 2021-07
+  mechanism: A fee hidden until checkout is under-weighted at the moment of choice, so the lower displayed base price wins the sale even for experienced buyers.
+  mechanism_codes:
+  - drip-pricing
+  - partitioned-pricing
+  - mental-accounting
+  comparison: 15% fee revealed only at checkout vs shown upfront
+  design: randomised field experiment
+  setting: StubHub ticket marketplace, 19-31 Aug 2015
+  outcome: purchase completion, revenue, spend per ticket
+  result_kind: Positive in this setting
+  result: Revealing the 15% fee only at checkout raised revenue by ~21%, made buyers 14.1% more likely to complete a purchase and raised spend per ticket by ~5.42%; the effect was still ~15% even for users with 10+ prior visits.
+  boundary: Single platform (ticket resale) and a single 15% fee level; does not test the small-vs-large surcharge boundary; publisher page not directly opened.
+  source: https://doi.org/10.1287/mksc.2020.1261
+  verification_note: RePEc listing and NBER WP 25186 record verified 2026-11-18; numbers corroborated by multiple secondary summaries (ICLE brief, The Ticketing Business, WhyWeProject). Publisher page not directly opened. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: gourville-downsizing-2004
+  date: '2004-06-30'
+  mechanism: Consumers monitor the sticker price and largely ignore pack quantity, so a quantity cut at the same price passes unnoticed where a price rise would be punished.
+  mechanism_codes:
+  - quantity-insensitivity
+  - unit-price-processing
+  - price-change-communication
+  comparison: equivalent unit-price increase delivered as a price rise vs as a pack-size decrease at the same sticker price
+  design: lab experiments plus marketplace panel data
+  setting: US consumers; four food products tracked over 145 weeks
+  outcome: purchase behaviour / sales response to price vs quantity changes
+  result_kind: Positive in this setting
+  result: Experiments (~300 participants) and 145 weeks of marketplace data on four food products showed price changes dramatically changed consumer buying behaviour while decreasing quantity at the same price did not.
+  boundary: Working paper (never journal-published); 2004 data; measures purchase response, not expressed backlash/complaints — the claim is about backlash, so this is supportive but not a direct test of it.
+  source: https://www.hbs.edu/faculty/Pages/item.aspx?research=6777
+  verification_note: HBS faculty page and Georgetown Environmental Law Review quotation of the paper (p.26) verified 2026-11-18; full working-paper text not re-opened this session. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: cakir-package-downsizing-2014
+  date: 2014-03
+  mechanism: Consumers under-weight pack size relative to price, so demand falls far less when the unit price rises via a smaller pack than via a higher sticker price.
+  mechanism_codes:
+  - quantity-insensitivity
+  - unit-price-processing
+  comparison: demand response to package-size change vs to price change, same unit-price effect
+  design: field (scanner panel, random-utility discrete-choice model)
+  setting: Chicago bulk ice cream market, Nielsen Homescan households
+  outcome: demand elasticity w.r.t. package size vs w.r.t. price
+  result_kind: Positive in this setting
+  result: Demand elasticity with respect to package size was approximately one-fourth the magnitude of elasticity with respect to price; the authors state managers can use downsizing as a hidden price increase to pass through cost increases.
+  boundary: Single category (bulk ice cream) and market; scanner data show purchase response, not expressed backlash; does not test what happens once downsizing is publicised.
+  source: https://doi.org/10.1016/j.jretai.2013.06.002
+  verification_note: EconPapers record opened 2026-11-18; authors, journal, DOI and the one-fourth elasticity ratio verified. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: grigolon-pepper-downsizing-2026
+  date: '2026-11-14'
+  mechanism: Consumers are inattentive to net weight and far more sensitive to package price than to content, so downsizing passes unnoticed — until salience forces attention, at which point demand punishes it.
+  mechanism_codes:
+  - quantity-insensitivity
+  - unit-price-processing
+  - price-change-communication
+  comparison: downsized products vs unchanged products, with and without salience of the downsizing
+  design: field (Nielsen scanner data + structural random-coefficient demand model recovering inattention)
+  setting: US pepper category, 2014-2016, 30 downsizing episodes
+  outcome: product shares; consumer surplus under salience vs under a downsizing ban
+  result_kind: Positive in this setting
+  result: Almost no consumers noticed downsizing across 30 episodes covering ~34% of category sales; consumers were more sensitive to package prices than net weight; making downsizing salient cut downsized products' share 31.2% to 24.1% (-23%) and raised consumer surplus +0.78% of per-capita pepper expenditure (~$613,000/year), while banning downsizing gained only +0.43% (~$327,000/year) because restoring content raised prices +$0.36 (+9.6%) on affected products.
+  boundary: Single category (pepper); structural-model identification of inattention; salience effect is a counterfactual simulation, not an observed backlash event; also cites France's July 2024 downsizing-notice law and Austria's 2026 >3% unit-price-increase notice rule.
+  source: https://lauragrig.github.io/website/20260915_GrigolonMeekerVonDitfurth.pdf
+  related_source: https://ssrn.com/abstract=4745396
+  verification_note: Author PDF (version dated 15 Sept 2026) opened 2026-11-18; CEPR DP 22181 listing (14 Nov 2026) verified via CEPR search results. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: snir-levy-shrinking-goods-2011
+  date: '2011-03-16'
+  mechanism: Processing quantity information is cognitively costly, so consumers attend to price and ignore quantity, letting firms pass cost increases through smaller packs without a demand penalty.
+  mechanism_codes:
+  - quantity-insensitivity
+  - unit-price-processing
+  - price-change-communication
+  comparison: price adjustment vs quantity adjustment in response to cost changes
+  design: field (theoretical model + empirical evidence)
+  setting: US consumer goods markets; model of cognitive costs of attention
+  outcome: whether producers adjust price or quantity; consumer processing of price vs quantity information
+  result_kind: Positive in this setting
+  result: The model, built on cognitive-psychology evidence and empirically tested, finds consumers are more likely to process goods' price information than quantity information, so producers use quantity adjustment when consumers are price-attentive but quantity-inattentive.
+  boundary: Working paper (2011), model-driven rather than a clean causal estimate of backlash; does not measure expressed consumer backlash.
+  source: https://papers.ssrn.com/abstract=1784464
+  verification_note: SSRN abstract (abstract 1784464, posted 16 Mar 2011) and AEA 2011 conference version verified via search results 2026-11-18; EconPapers record confirms Bar-Ilan WP 2011-03. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: businessline-india-five-rupee-pack-2026
+  date: '2026-04-10'
+  mechanism: ₹5 and ₹10 are rigid reference points anchored in daily cash-flow economics, so cost pressure is absorbed by shrinking the pack rather than moving the price.
+  mechanism_codes:
+  - quantity-insensitivity
+  - reference-price
+  - price-change-communication
+  comparison: pack-size adjustment vs price adjustment under input-cost pressure, at fixed ₹5/₹10 points
+  design: case (trade reporting with named firms, analyst and distributor sources)
+  setting: India FMCG (biscuits, soap, foods), 2026 commodity cost squeeze
+  outcome: grammage changes vs price-point changes
+  result_kind: Positive in this setting
+  result: ₹10 Good Day 100g to ~90g; Lifebuoy/Lux ₹10 bars 55g to 46-48g (8-12g trim); Dettol ₹10 bar 45g to ~40g; ₹5 Vim 'Chhotu' bar cut 5-7g; Parle trimmed Parle-G grammage to retain ₹5/₹10; Dabur shrank Honey/Real/Vatika packs; HUL launched ₹16 'bridge packs' (Lifebuoy) between ₹10 and ₹36; Nuvama warned the commodity basket could shave 100-250 bps off gross margins.
+  boundary: Reputable press, not peer-reviewed research; reports firms' behaviour and trade explanations, not a causal test of price-point rigidity; no academic source on India magic price points was found.
+  source: https://www.thehindubusinessline.com/economy/why-indias-5-pack-wont-die-its-getting-lighter/article70844678.ece
+  verification_note: 'BusinessLine article page opened 2026-11-18; date (10 Apr 2026), headline, grammage figures and quotes verified from the page. Link re-check by Claude 2026-11-18: the site is blocked for automated reading; kept on Muse''s reading of 2026-11-18, link not dead.'
+  digest: '2026-11-18'
+  agent: meta
+- id: lepthien-shipping-thresholds-2019
+  date: 2019-06
+  mechanism: A minimum-spend threshold changes the effective price partition, discouraging small orders and encouraging filler purchases that are then strategically returned.
+  mechanism_codes:
+  - partitioned-pricing
+  - mental-accounting
+  - transaction-utility
+  comparison: threshold-based free shipping (varying minimum order sizes) vs other shipping fee structures
+  design: field experiment (randomised assignment to 7 shipping fee structures)
+  setting: one online shop, visitors assigned to different fee schedules
+  outcome: purchase incidence, purchase value, strategic returns
+  result_kind: Context-dependent
+  result: Threshold-based free shipping decreased purchase incidence (but not purchase value) and led to more strategic returns across all customers; minimum order values led to slightly more returns by current customers but no negative effects on purchase incidence or value; shipping fees had a positive effect on purchase value pre- and post-return.
+  boundary: Tests thresholds against other shipping fees, not against a cap on savings; single shop; does not vary trigger amount low vs high as the claim requires.
+  source: https://doi.org/10.1007/s11002-019-09486-8
+  verification_note: RePEc record opened 2026-11-18; authors, journal, DOI and findings verified. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: hirche-threshold-free-shipping-2021
+  date: 2021-06
+  mechanism: Waiving the shipping fee above a spend threshold turns the fee into a goal, lifting order count and sales, at the cost of more returns.
+  mechanism_codes:
+  - partitioned-pricing
+  - mental-accounting
+  - transaction-utility
+  comparison: threshold-based free shipping vs fixed-fee shipping
+  design: 'field experiment (natural experiment: retailer policy change from fixed-fee to threshold-based free shipping)'
+  setting: major European online retailer, 26.21m orders, 3.81m customers
+  outcome: overall sales, order count, order value, return rates
+  result_kind: Positive in this setting
+  result: Threshold-based free shipping led to substantially higher overall sales and more orders than fixed-fee shipping; fixed-fee shipping led to fewer returns, an effect not driven by filler purchases; simulation shows the positive effects on orders likely outweigh the negative effects on returns under most conditions.
+  boundary: Working paper (Univ. of Groningen SOM); compares threshold vs fixed fee, not threshold vs a cap on savings; single retailer; does not test low vs high trigger amounts.
+  source: https://www.rug.nl/feb/research/som-research-reports/som-research-reports-2021/2021012-mark-def.pdf
+  verification_note: Full PDF opened 2026-11-18; authors, title, date, sample sizes and abstract findings verified from the paper. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: which-black-friday-2025
+  date: '2025-11-25'
+  mechanism: Advertised Black Friday 'was' prices are set against inflated reference prices, so the sale price is rarely the lowest price the product has actually sold at.
+  mechanism_codes:
+  - reference-price
+  - transaction-utility
+  - scarcity-urgency
+  comparison: Black Friday sale price vs the product's own daily price history (6 months before and after)
+  design: benchmark (daily price tracking)
+  setting: UK; 175 appliances at Amazon, AO, Argos, Boots, Currys, John Lewis, Richer Sounds, Very; May 2024-May 2025
+  outcome: whether the Black Friday price was the cheapest, or cheaper at another time
+  result_kind: Positive in this setting
+  result: '83% of 175 products were the same price or cheaper at least once outside the sale period; 42% were cheaper at least once outside; 35% were cheaper after the sale; 68% same/cheaper after; 0 of 175 were at their cheapest of the year on Black Friday; 100% were same/cheaper at some point in the six months before or after. By retailer: John Lewis 94%, Very 93%, Amazon 88% (63% cheaper), AO 85%, Currys 84%, Argos 79%, Richer Sounds 55%. Example: Samsung Jet Bot robot vacuum £350 on Black Friday vs £299 for 29 days in May-June 2024. A separate 1,617-TV check found 56% had an intervening price between the advertised ''was'' price and the sale price.'
+  boundary: UK appliances only; Which? is a consumer organisation, not a peer-reviewed source; 'deal' defined against the product's own history, not against competitors.
+  source: https://www.which.co.uk/topic/black-friday
+  verification_note: 'Which? Black Friday topic page opened 2026-11-18 (states the 100% figure); detailed percentages verified via Which? reporting and syndicated press (Clacton and Frinton Gazette, 25 Nov 2025). Link re-checked by Claude 2026-11-18: page loads and matches the row. The topic page itself states the 100% figure; the 83% and retailer figures are from syndicated reporting.'
+  digest: '2026-11-18'
+  agent: meta
+- id: groundwork-amazon-deal-decoy-2026
+  date: '2026-11-16'
+  mechanism: Sale prices are compared against crossed-out list/MSRP prices rather than the product's recent selling price, so 'deals' often match prices already available.
+  mechanism_codes:
+  - reference-price
+  - transaction-utility
+  comparison: sale price vs the product's own lowest price in the prior 10/30/90 days
+  design: benchmark (price-history audit using Keepa data)
+  setting: Amazon US; 351 products from Amazon's Black Friday/Cyber Monday deal pages, 2024-2025
+  outcome: share of advertised deals that were not cheaper than the prior-period low
+  result_kind: Positive in this setting
+  result: '29.1% of 351 deals were priced the same or higher during the sale than the lowest price in the prior 30 days; 9.4% were priced higher; 57.3% were no cheaper vs the prior 90 days; 23.5% no cheaper vs the prior 10 days; even excluding the 7 days before each sale, 20.5% were still not cheaper (8.5% worse). Examples: Apple Watch Series 10 advertised at $679.99 (15% off) vs $602 a month earlier; UGG Men''s Butte Boots $179.98 ''deal'' vs $98.40 on 28 Oct 2025.'
+  boundary: Groundwork is an economic-policy advocacy group, not a peer-reviewed source; Amazon disputes the findings, calling the report 'fundamentally flawed' and saying its own comparison found 98% of prices at or below the prior 30-day low (99% for 2025) and the sample cherry-picked; single retailer (Amazon US).
+  source: https://groundworkcollaborative.org/work/amazon/
+  verification_note: 'Groundwork report page opened 2026-11-18; figures verified from the report; Amazon''s dispute verified via secondary reporting (Coinotag, 17 Nov 2026; Ronan Farrow coverage). Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: checkbook-fake-discounts-2025
+  date: '2025-11-03'
+  mechanism: Crossed-out 'regular' or 'list' prices are rarely prices customers actually pay, so advertised discounts are usually comparisons against a fictitious reference price.
+  mechanism_codes:
+  - reference-price
+  - transaction-utility
+  - motive-attribution
+  comparison: advertised sale price vs the price the item was actually sold at over 24 weeks
+  design: benchmark (weekly price tracking)
+  setting: US; 25 national chains, 25+ items per store, weekly for 24 weeks from Feb 2025
+  outcome: share of items at false discounts; share of time items labelled 'on sale'
+  result_kind: Positive in this setting
+  result: 21 of 25 chains advertised sale prices more than half the time; for 12 of 25, more than half the tracked items were at false discounts every week or almost every week; across the other 19 retailers items were labelled 'on sale' about 76% of the time on average; only Apple, Costco and Dell consistently conducted legitimate discounts; up from 6 chains showing this pattern in 2018 (prior rounds 2015, 2018, 2022).
+  boundary: Consumer organisation, not peer-reviewed; covers everyday 'sale' pricing generally, not Black Friday specifically — it supports the reference-price mechanism behind the claim rather than the Black Friday event itself.
+  source: https://www.checkbook.org/boston-area/sale-fail
+  verification_note: 'Checkbook article page opened 2026-11-18; published 3 Nov 2025, updated 21 Nov 2025; figures verified from the page. Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: eca-surcharge-ban-global-addon-2025
+  date: '2025-01-09'
+  mechanism: When a surcharge is banned, the payment cost does not disappear; merchants fold it into goods prices as a uniform add-on paid by all customers.
+  mechanism_codes:
+  - partitioned-pricing
+  - price-change-communication
+  comparison: merchant pricing with vs without a surcharge ban (EU)
+  design: review (audit of EU digital-payments regulation, 2013-2023)
+  setting: EU; PSD2 surcharge ban and Interchange Fee Regulation
+  outcome: how merchants recover payment costs after the ban
+  result_kind: Positive in this setting
+  result: The auditors state that due to the surcharge ban merchants cannot charge customers directly for payment costs and 'include payments fees in the prices for goods and service as a global add-on'; they also find the Commission had not properly analysed the ban with empirical data and lacked monitoring data to assess its impact, and that price increases from payment costs are not transparent to consumers and 'are likely to lead to increases of the global add-on and, hence, of overall prices'.
+  boundary: An audit statement about the mechanism, not a matched-price study — no merchant-level price data are presented; the Commission's lack of monitoring data is itself the auditors' finding.
+  source: https://www.eca.europa.eu/ECAPublications/SR-2025-01/SR-2025-01_EN.pdf
+  verification_note: ECA report PDF opened 2026-11-18; 'global add-on' passage located by text search; publication date 9 Jan 2025 verified via Hogan Lovells newsletter. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: rba-surcharge-ban-expectation-2026
+  date: '2026-03-31'
+  mechanism: Removing the right to surcharge forces merchants to fold card-acceptance costs into advertised prices rather than charging card users separately.
+  mechanism_codes:
+  - partitioned-pricing
+  - price-change-communication
+  comparison: merchant pricing before vs after the Australian card-surcharge ban (expected)
+  design: review (regulator conclusions paper)
+  setting: Australia; card surcharge ban effective 1 Oct 2026; interchange caps cut (credit 0.3%, debit 8c / 0.16%)
+  outcome: expected change in advertised prices and total consumer prices
+  result_kind: Inconclusive
+  result: The RBA expects merchants that surcharge to incorporate payment costs in advertised prices, with no material change in total price for consumers at surcharging merchants and a negligible inflationary impact; only ~16% of merchants surcharged in 2024/25, consumers paying an estimated $1.6bn of $1.8bn/year in card surcharges; most merchants (85% of small merchants) do not surcharge and may benefit from lower interchange; first acquirer interchange pass-through publication due by 30 Jan 2027.
+  boundary: An expectation published before the ban took effect, not an observed outcome; the ban was only ~7 weeks old at the time of this research, so no matched panel can exist yet; the RBA's 'negligible impact' view is contested by the mechanism in the ECA report.
+  source: https://www.rba.gov.au/payments-and-infrastructure/review-of-retail-payments-regulation/2026-03/conclusions-paper/surcharging.html
+  related_source: https://www.rba.gov.au/payments-and-infrastructure/review-of-retail-payments-regulation/2026-03/conclusions-paper/executive-summary.html
+  verification_note: 'RBA Conclusions Paper pages opened 2026-11-18; date (31 Mar 2026), 16% figure, $1.6bn/$1.8bn figures and 1 Oct 2026 effective date verified from RBA pages. Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: bundeskartellamt-paypal-surcharge-2026
+  date: '2026-11-11'
+  mechanism: A ban on passing a payment cost to the users who generate it spreads that cost across all customers through general product prices.
+  mechanism_codes:
+  - partitioned-pricing
+  - dual-entitlement
+  comparison: merchant pricing with a no-surcharge rule vs with cost-reflective surcharging
+  design: case (regulator preliminary assessment; proceedings opened 23 Jan 2023)
+  setting: Germany; PayPal online-retail merchant terms since 2018
+  outcome: where PayPal acceptance costs are recovered
+  result_kind: Positive in this setting
+  result: The Bundeskartellamt preliminarily found PayPal's no-surcharge rule could restrict competition between payment services (GWB s.1, Art. 101(1) TFEU; ss.19-20, Art. 102); PayPal merchant fees of 2.49-2.99% + 34-39 cents are above average; because merchants cannot pass costs to PayPal users specifically, 'merchants must absorb the costs in the overall price of goods and services, even for customers who do not use PayPal.'
+  boundary: Preliminary assessment only, not a final decision; PayPal disputes it; a contractual no-surcharge rule, not a statutory ban; no merchant price data presented.
+  source: https://dig.watch/updates/german-regulator-notifies-paypal-of-assessment
+  verification_note: 'dig.watch report (13 Nov 2026) verified via search results 2026-11-18 and corroborated by multiple secondary reports (Reuters-based); the regulator''s own press release was not directly opened. Link re-check by Claude 2026-11-18: the page returned an error to automated reading; kept on Muse''s reading of 2026-11-18, link not dead.'
+  digest: '2026-11-18'
+  agent: meta
+- id: xia-promotion-effort-fairness-2010
+  date: 2010-01
+  mechanism: Effort spent obtaining a discount creates entitlement to the deal, so the effort itself changes how the promotion is valued and judged.
+  mechanism_codes:
+  - mental-accounting
+  - dual-entitlement
+  - transaction-utility
+  comparison: promotions requiring more vs less consumer effort to obtain the reduced price
+  design: lab experiments (multiple studies, different promotion tactics)
+  setting: US consumers, price promotions
+  outcome: perceived fairness of the promotion; entitlement/deservingness
+  result_kind: Context-dependent
+  result: Perceived effort to obtain a reduced price negatively influenced fairness perceptions when the promoted price was denied; effort creates deservingness/entitlement, whose violation causes unfairness.
+  boundary: About effort and fairness/entitlement, not about perceived savings vs an equal price cut; does not compare clip-to-activate vs automatic coupons at equal face value and does not separate perceived savings from redemption.
+  source: https://doi.org/10.1016/j.jretai.2009.10.003
+  verification_note: EconPapers record opened 2026-11-18; authors, journal, DOI and findings verified from the abstract. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: krishna-dealing-patterns-1991
+  date: 1991-11
+  mechanism: The pattern of deals — not just how many there are — shapes how often shoppers think deals happen, and that perceived frequency sets what they are willing to pay.
+  mechanism_codes:
+  - reference-price
+  - context-effects
+  - transaction-utility
+  comparison: different dealing patterns at the same deal frequency
+  design: lab experiment
+  setting: 159 undergraduate/graduate business students; 18 brand-sizes on deal at least 3 times in 20 weeks
+  outcome: perceived deal frequency; willingness to pay
+  result_kind: Context-dependent
+  result: Perceptions of deal frequency were influenced by dealing pattern vs other brands; willingness to pay correlated more highly with perceived deal frequency than actual deal frequency; WTP correlated with actual frequency only for certain dealing patterns.
+  boundary: Measures willingness to pay for a brand, not perceived store price level; student sample; 1991; does not contrast irregular/discovery deals with scheduled promotions.
+  source: https://doi.org/10.2307/3172784
+  verification_note: PsycNet abstract opened 2026-11-18; authors, journal, DOI, sample and findings verified. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: raghubir-three-faces-promotions-2004
+  date: 2004-06
+  mechanism: Promotions work through economic, informational and affective routes; irregular timing blurs perceived deal frequency, protecting the reference price, while the deal itself still colours the store's price reputation.
+  mechanism_codes:
+  - reference-price
+  - transaction-utility
+  - context-effects
+  comparison: irregular vs regular promotion intervals (framework proposition)
+  design: review (framework synthesising promotion research)
+  setting: consumer promotions generally (coupons, price cuts, rebates, displays)
+  outcome: perceived deal frequency; expected price; store price/quality reputation
+  result_kind: Context-dependent
+  result: The authors state the greater the perceived frequency of price promotions, the less consumers expect to pay for the brand, and that 'offering promotions at irregular intervals can help reduce this effect'; greater regularity of dealing produces more accurate perceptions of deal frequency; promotional offers affect a store's price and quality reputation regardless of whether the deal is manufacturer- or store-offered.
+  boundary: A framework/review synthesising prior work, not an experiment testing irregular vs scheduled deals on store price image; the irregular-interval proposition is a guideline, not a tested effect on perceived store price level.
+  source: https://doi.org/10.2307/41166273
+  verification_note: Full text reproduced in search results (sweetstudy and Academia copies) verified 2026-11-18, including the quoted irregular-intervals passage; DOI and CMR citation verified; publisher page not opened. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: ticketnews-ticketmaster-fee-shift-2026
+  date: '2026-03-27'
+  mechanism: When a rule forces a fee to be displayed upfront, the seller re-labels the same revenue as a different fee rather than absorbing it, so the total price is unchanged and only the fee's name moves.
+  mechanism_codes:
+  - drip-pricing
+  - partitioned-pricing
+  - motive-attribution
+  comparison: Ticketmaster fee structure before vs after all-in pricing rules (FTC rule effective 12 May 2025; California SB 478 effective 1 July 2024)
+  design: case (public-records documents from 26 publicly owned venues)
+  setting: US live-event ticketing; 26 publicly owned venues
+  outcome: per-ticket service charges and total consumer price after the rule
+  result_kind: Positive in this setting
+  result: 'Ticketmaster eliminated per-order processing fees but raised per-ticket service charges to recover the revenue; at least 8 venues formally amended contracts. Findlay Toyota Center: $6 order-processing fee removed, per-ticket service charge +$2, Platinum/VIP buyer fees to 18% (''maintain revenue parity''); a Ticketmaster email told venues that fees had to be adjusted to offset the lost order-processing revenue Wintrust Arena +2.3%; Florida State University +3%; Sacramento per-ticket cut +25% ($3.45 to $4.25). Former FTC officials called the practice ''potentially concerning''; Ticketmaster did not respond to detailed questions.'
+  boundary: Single firm (Ticketmaster/Live Nation) in ticketing; fee-reshuffling, not base-price rises or free-shipping thresholds — the hypothesis's other two predicted responses were not observed here; based on Guardian reporting of venue documents, not a regulator finding; no evidence found on retailers leaning harder on free-shipping thresholds after all-in rules.
+  source: https://www.ticketnews.com/2026/03/ticketmaster-championed-all-in-pricing-internal-documents-show-how-fees-were-quietly-shifted/
+  related_source: https://artvoice.com/ticketmaster-got-caught-raising-fees-at-26-venues-after-the-government-banned-hidden-charges
+  verification_note: 'TicketNews article opened 2026-11-18; figures and quotes verified from the article and corroborated by Artvoice summary of the same Guardian reporting. Link re-checked by Claude 2026-11-18: page loads and matches the row. Correction at filing: the email quotation in the draft did not match the article wording, so it is paraphrased.'
+  digest: '2026-11-18'
+  agent: meta
+- id: ftc-junk-fee-rule-2024
+  date: '2024-12-17'
+  mechanism: A disclosure-only all-in rule changes where fees are shown, not how large they may be, leaving sellers free to re-label or re-allocate the same charges.
+  mechanism_codes:
+  - drip-pricing
+  - partitioned-pricing
+  - price-change-communication
+  comparison: pricing display before vs after the FTC all-in rule
+  design: review (rule text and scope)
+  setting: US; live-event tickets and short-term lodging; effective 12 May 2025
+  outcome: what the rule requires and what it does not regulate
+  result_kind: Inconclusive
+  result: Final rule 17 Dec 2024 (90 FR 2066, 10 Jan 2025), effective 12 May 2025, 4-1 vote; requires total price including all mandatory fees shown clearly/conspicuously and more prominently than other pricing; government charges, shipping and optional add-ons may be excluded but must be disclosed before payment; the rule does not ban or cap fees.
+  boundary: The rule text itself, not evidence of retailer response; covers only tickets and lodging, not general retail; state rules (e.g. California SB 478, effective 1 July 2024) are broader.
+  source: https://www.ftc.gov/legal-library/browse/rules/rule-unfair-or-deceptive-fees
+  verification_note: Rule details verified via FTC/Federal Register summaries and the FTC's StubHub complaint record 2026-11-18; the eCFR rule text itself was not directly opened. The FTC rule URL above is the FTC legal-library landing page for the rule. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: virtual-currency-loot-box-wtp-2025
+  date: '2025-11-01'
+  mechanism: Pricing the same lottery in virtual currency rather than pounds raised willingness to pay even at a transparent 1:1 rate, consistent with the currency format itself dulling the felt cost; inflating the nominal number reversed the effect.
+  mechanism_codes:
+  - mental-accounting
+  - pain-of-paying
+  comparison: Virtual currency at 1:1 vs British pounds; 100:1 and non-intuitive 93:1/107:1 vs 1:1
+  design: Incentivised RCT; BDM willingness-to-pay for 16 risky/ambiguous lotteries standing in for loot boxes; between-subjects currency conditions
+  setting: Online experiment, 753 UK Prolific participants
+  outcome: Normalised willingness to pay
+  result_kind: Context-dependent
+  result: WTP ~4.0-4.2% higher in virtual currency at 1:1 than in pounds (16 of 16 lotteries higher, sign test p<0.001); WTP ~4% lower at 100:1 than at 1:1; no significant difference between non-intuitive (93:1, 107:1) and intuitive 100:1 rates (<1%)
+  boundary: Loot-box lotteries, not AI credits or subscriptions; the exchange-rate effect runs opposite to a naive "confusing rate always raises spending" story — a high nominal number made items feel more expensive, so the vendor-set rate matters through numerosity, not just obscurity; stated WTP, not field spending
+  source: https://www.cambridge.org/core/journals/experimental-economics/article/virtual-currencies-in-online-gaming-increase-the-willingness-to-pay-for-loot-boxes-an-experimental-analysis/BA5773D9B866AF75DF978A1410E37B1F
+  verification_note: Read the full Cambridge article text 2026-11-18 (abstract, design, Figure 4 and Table 3 discussion, L400-L520); the 4.0-4.2% T1-vs-TC coefficients and ~4% T100-vs-T1 gap are stated in the regression discussion. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: monopoly-money-scrip-spending-2008
+  date: '2008-09-01'
+  mechanism: Less transparent payment forms are treated as play money, so parting with them hurts less than parting with cash of identical face value.
+  mechanism_codes:
+  - mental-accounting
+  - pain-of-paying
+  comparison: Scrip / gift certificate vs cash of the same face value; credit card vs cash
+  design: Four lab/scenario studies varying payment coupling (when money is parted with) and payment form (cash vs scrip vs gift certificate vs card)
+  setting: Lab and scenario studies, US students/adults (Ns 114, 57, 28, 130)
+  outcome: Stated and actual spending / willingness to spend
+  result_kind: Positive in this setting
+  result: Spending higher with scrip and gift certificates than with equal-value cash in Studies 3 and 4; credit-card users willing to pay more than cash users in Study 1; itemising expenses (Study 2, N=57) closed the cash-credit gap
+  boundary: Small samples, mostly hypothetical spending; scrip and gift certificates, not platform credits with vendor-set exchange rates; the transparency manipulation in Study 4 shows the effect is switchable by salience, not automatic
+  source: https://www.apa.org/news/press/releases/2008/09/credit-cash
+  related_source: https://doi.org/10.1037/1076-898X.14.3.213
+  verification_note: Read the full APA press release 2026-11-18 (study-by-study Ns and results, authors' "play money" quote); journal citation and DOI confirmed via the Mendeley/APA record. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: numerosity-virtual-item-price-salience-2021
+  date: '2021-03-01'
+  mechanism: When the exchange rate is out of sight, buyers judge expensiveness from the face number on the tag; when it is in sight, they convert and a big number reads as cheap.
+  mechanism_codes:
+  - mental-accounting
+  - reference-price
+  comparison: High- vs low-numerosity virtual-currency prices, with exchange rate salient vs not salient
+  design: Six lab experiments in massive multiplayer online game settings; players exchange real money for game currency at a stated rate
+  setting: Online game virtual-item purchases (clothing, weapons, furniture)
+  outcome: Perceived expensiveness and purchase intention
+  result_kind: Context-dependent
+  result: 'Exchange-rate salience flipped the numerosity effect: non-salient rate, high numerosity felt more expensive; salient rate, high numerosity felt cheaper and increased purchase intention for nonsocial (but not social) virtual items'
+  boundary: No numeric effect sizes in the abstract; game items, not AI credits; the flip means credit pricing can make things feel more OR less expensive depending on whether the buyer does the conversion
+  source: https://pubsonline.informs.org/doi/abs/10.1287/isre.2020.0955
+  verification_note: Read the full INFORMS abstract 2026-11-18 (six experiments, the three numbered findings, journal/date/DOI); effect magnitudes not reported in the abstract. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: free-to-play-currency-conversion-null-2018
+  date: '2018-05-21'
+  mechanism: When participants were told the conversion rates up front, the double-currency model did not inflate spending; real money commanded the highest converted willingness to pay.
+  mechanism_codes:
+  - mental-accounting
+  comparison: Euros vs hard currency (diamonds) vs soft currency (gold), with conversion rates disclosed
+  design: Within-subjects lab experiment; 27 scenarios (3 resource levels x 3 goods x 3 currency origins); linear mixed models
+  setting: Lab, 21 experienced free-to-play gamers rating WTP for boosters, unlocks and timers
+  outcome: Willingness to pay converted to a common unit
+  result_kind: Negative
+  result: No support for conversion increasing spending; converted WTP highest in euros, then diamonds, least in gold (diamonds vs gold p<0.001); WTP highest for unlocking new content regardless of currency
+  boundary: N=21, non-incentivised hypothetical WTP, exploratory; rates were disclosed to participants, so it tests transparent conversion, not hidden rates; authors note the small sample themselves
+  source: https://ceur-ws.org/Vol-2186/paper11.pdf
+  verification_note: Read the full CEUR paper 2026-11-18 (abstract, design, results L241-L245); Toccafondi et al. (2025) cite this study as the prior null and note its limits. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: churnkey-offer-durability-2025
+  date: '2025-08-01'
+  mechanism: A downgrade resolves the price objection by moving the customer to a tier whose price they accepted, rather than deferring the objection like a discount or pausing the whole decision.
+  mechanism_codes:
+  - subscription-inertia
+  comparison: Plan change vs pause vs discount accepted at the cancellation moment
+  design: Vendor observational data; no randomisation, no price-rise variation
+  setting: 3M+ cancellation sessions on Churnkey's retention platform (SaaS/B2C subscriptions)
+  outcome: Added months of subscription life; share still subscribed at 12+ months
+  result_kind: Positive in this setting
+  result: Plan changes +7-8 months, 30% still subscribed at 12+ months; pauses +5.5 months; discounts +5.1 months, 11% still subscribed a year later
+  boundary: Vendor data from a retention vendor with a commercial interest; accepters self-select into offer types, so durability gaps are not causal; no price-rise condition; paused-but-unpaid accounts are not counted as unpaid at day 90
+  source: https://churnkey.co/blog/discounting-at-cancellation/
+  verification_note: 'Read the full Churnkey post 2026-11-18 (all four offer types, exact figures, 3M-session base, published 2025-08-01). Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: churnkey-voluntary-churn-reasons-2025
+  date: '2025-11-14'
+  mechanism: The two dominant stated reasons for cancelling — budget pressure and infrequent use — are exactly what a cheaper tier and a pause respectively address, rather than a binary stay-or-leave choice.
+  mechanism_codes:
+  - subscription-inertia
+  - usage-anxiety
+  comparison: Stated cancel reasons; shares of accepted save offers by type
+  design: Vendor/Stripe observational benchmarks; cancellation surveys at the cancel moment
+  setting: Stripe transaction data (200M subscriptions, $1.4tn processed in 2024) plus Churnkey's 25M+ protected subscriptions
+  outcome: Stated reason shares; accepted-offer mix
+  result_kind: Context-dependent
+  result: 'Budget limitations 32.96% and infrequent usage 30.60% of cancel reasons (expectations not met 8.63%); accepted saves: discount 62.49%, pause 22.32%, plan change 7.72%, trial extension 7.47%'
+  boundary: Stated reasons, not revealed behaviour; accepted-offer shares reflect how rarely plan changes are shown, not per-offer acceptance rates; no price-rise experiment; SaaS-heavy sample
+  source: https://churnkey.co/blog/voluntary-churn-benchmarks/
+  verification_note: 'Read the full Churnkey report 2026-11-18 (methodology, reason table, offer-mix table, published 2025-11-14, updated 2025-12-13). Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: recurly-pause-dividend-2025
+  date: '2025-12-12'
+  mechanism: A pause keeps the account and the relationship alive through a temporary gap, so subscribers who would otherwise cancel outright return instead of churning.
+  mechanism_codes:
+  - subscription-inertia
+  comparison: Subscribers offered a pause option vs cancel-only (implied; not a controlled comparison)
+  design: Vendor network observational data; no randomisation or price-rise condition
+  setting: Recurly merchant network (2,200+ brands, 58-76M subscribers, per Recurly's State of Subscriptions)
+  outcome: Share pausing instead of cancelling; revenue from reactivated pausers
+  result_kind: Positive in this setting
+  result: 25% of subscribers pause instead of cancelling where the option exists; over $200M generated from paused subscribers who later reactivated; pause options up 68% year over year; one merchant (Output) saw 90% of customers return after pause features launched
+  boundary: Vendor-reported, no methodology published on the blog page (no date visible on the page; figures are from the 2025 State of Subscriptions); no control group, no price rise, no day-90 paid-retention accounting; the 2026 report's "75% of pausers return / pause usage +337%" figures were seen only in secondary summaries, not opened, and are not used here
+  source: https://recurly.com/blog/product-perspectives-the-future-of-subscriptions-flexibility/
+  verification_note: 'Read the full Recurly blog post 2026-11-18 (25% pause-instead-of-cancel, $200M, 68% surge, Output 90% return); the blog page carries no visible publication date, so 2025-01-01 is the report year, flagged as approximate. Link re-checked by Claude 2026-11-18: page loads and matches the row. Correction at filing: the page shows a date of 12 Dec 2025.'
+  digest: '2026-11-18'
+  agent: meta
+- id: contactless-pain-of-paying-dnb-2024
+  date: '2024-05-01'
+  mechanism: Contactless payment by phone or card removes the checking, counting and handing-over ritual, so the payment hurts less and does less to restrain spending.
+  mechanism_codes:
+  - pain-of-paying
+  comparison: Cash vs traditional debit card (PIN) vs contactless debit card vs contactless mobile phone vs iDEAL/credit card, across 12 vignettes
+  design: Representative survey with discrete-choice vignette experiment; respondents rated pain of paying for grocery and fun-trip purchases at 5, 20, 50, 100 and 500 euros
+  setting: Netherlands, Centerpanel, 2,497 respondents, Oct-Nov 2021
+  outcome: Self-reported pain of paying; perceived helpfulness in preventing overspending and tracking expenditure
+  result_kind: Positive in this setting
+  result: Electronic payments hurt less than cash, especially contactless and iDEAL; cash most helpful in preventing overspending, contactless (especially mobile phone) least helpful; effect found for older people in particular, not teenagers
+  boundary: Stated pain in hypothetical vignettes, not observed spending; Dutch context; contactless (tap) is the closest analogue to a biometric tap, but no biometric-auth condition and no agent-approval condition
+  source: https://www.dnb.nl/media/htbnszz1/working_paper_no-_760.pdf
+  verification_note: Read the full DNB Working Paper 760 (Dec 2022; JEBO 2024 version) 2026-11-18 — abstract, design, N=2,497, and the cash-most-helpful / contactless-least-helpful findings; journal citation verified via the Groningen repository record. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: mobile-payment-pleasure-eeg-2022
+  date: '2022-10-25'
+  mechanism: Mobile payment both attenuates the neural pain of paying and adds a "pleasure of paying" from processing fluency; together they fully mediate the higher purchase likelihood.
+  mechanism_codes:
+  - pain-of-paying
+  comparison: Mobile payment (Alipay icon) vs cash, within-subject; high- vs low-price products
+  design: Two EEG lab experiments using a SHOP paradigm; purchase likelihood, self-report pain/pleasure, N300 and LPP ERPs, mediation with 5,000 bootstraps
+  setting: Lab, Chinese students (Study 1 N=66, headphones; Study 2 N=29, hedonic vs utilitarian products)
+  outcome: Purchase likelihood / willingness to buy; N300 and LPP amplitudes; decision time
+  result_kind: Positive in this setting
+  result: High-price purchase likelihood 53.59% (mobile) vs 44.88% (cash); N300 pain signal significantly reduced for mobile vs cash (p<0.001, both price levels); sequential pain+pleasure mediation significant (beta 0.034, 95% BCI 0.015-0.074), direct path n.s.; decision time 662.32 vs 702.40 ms; Study 2 replicated the lift for hedonic and utilitarian products
+  boundary: Small Chinese student samples; hypothetical purchases with no money changing hands; self-reported pain/pleasure showed no payment-method effect — only the neural measures did; mobile payment here is Alipay, not a biometric tap or an agent approval
+  source: https://pmc.ncbi.nlm.nih.gov/articles/PMC9640944/
+  verification_note: Read the full PMC article 2026-11-18 (abstract, Study 1 results L227-L334 including exact means and mediation betas, Study 2 design); published 25 Oct 2022, Frontiers in Psychology. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: mobile-vs-card-convenience-wtp-2020
+  date: '2020-01-01'
+  mechanism: Mobile payment beats cards not by hurting less but by feeling more convenient; convenience is a second, positive mediator alongside pain of paying.
+  mechanism_codes:
+  - pain-of-paying
+  comparison: Mobile payment vs credit card vs cash
+  design: Three online-survey studies across country markets varying in mobile-payment adoption (Germany, India, US); moderated mediation
+  setting: Online consumers in three countries
+  outcome: Willingness to pay; perceived convenience; pain of paying
+  result_kind: Context-dependent
+  result: WTP higher for mobile than for credit card, mediated by convenience, only among consumers who had personally adopted mobile payment; pain of paying similar for mobile and card
+  boundary: No numeric WTP uplift in the abstract; survey-based WTP, not observed spending; convenience, not biometric friction, is the tested mechanism — which complicates a pure "pain" reading of the hypothesis
+  source: https://ideas.repec.org/a/eee/joreco/v52y2020ics096969891930219x.html
+  verification_note: Read the RePEc record and ScienceDirect abstract 2026-11-18 (authors, journal, DOI 10.1016/j.jretconser.2019.101910, abstract findings); the mobile-beats-card WTP result is also corroborated in Wang et al. (2022) and Broekhoff & van der Cruijsen (2024). Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: contactless-spending-ratio-2014
+  date: '2014-12-01'
+  mechanism: Removing the swipe/PIN step makes the payment faster and less salient, raising the share of spending done at the point of sale.
+  mechanism_codes:
+  - pain-of-paying
+  comparison: Contactless vs non-contactless debit and credit cards
+  design: Observational; propensity-score matching on nationally representative US survey data to control for selection into contactless adoption
+  setting: US consumers, 2010 Survey of Consumer Payment Choice
+  outcome: Spending ratio (share of POS transactions) by payment method
+  result_kind: Positive in this setting
+  result: Average treatment effect on the treated ~+10% spending ratio for contactless debit cards and ~+8% for contactless credit cards
+  boundary: Observational (matching, not randomisation); 2010 data, early contactless adoption; spending ratio, not absolute spend or felt pain; no biometric or agent condition
+  source: https://www.iises.net/the-impact-of-contactless-payment-on-spending.html
+  verification_note: Read the IISES abstract page and the DNB working paper's summary of Trutsch (2014) 2026-11-18 (both give the 10% debit / 8% credit ATT figures); full journal text not opened. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: cashless-effect-meta-analysis-2024
+  date: '2024-05-29'
+  mechanism: Cashless payment raises spending on average, but the effect is small, context-dependent and shrinking as cashless becomes the norm.
+  mechanism_codes:
+  - pain-of-paying
+  comparison: Cashless (card, mobile, other) vs cash across 71 papers
+  design: Meta-analysis of 392 effect sizes; moderator analysis by consumption situation, business cycle and time
+  setting: 71 papers, 17 countries, 11,000+ unique participants, 40 years of research
+  outcome: Spending / willingness to pay
+  result_kind: Context-dependent
+  result: Small but significant overall cashless effect; stronger in conspicuous consumption, weaker in pro-social consumption; stronger in economic growth; weakened over time; no evidence payment-method features moderate the effect
+  boundary: Pools cards, mobile and other cashless methods, so it cannot isolate a biometric-tap effect — and its "features don't matter" finding cuts against expecting a large extra tap premium; Liu & Dewitte (2021, J Retailing Consum Serv 60) failed to replicate the card effect in 4 studies (N=692) and found no reliable pain mediation for mobile payment — cited here as a boundary, from Wang et al. (2022) and secondary summaries, primary not opened
+  source: https://psycnet.apa.org/record/2025-24975-005
+  verification_note: Read the PsycNet abstract and the RePEc record 2026-11-18 (71 papers, 392 effect sizes, moderator findings, DOI); open-access PDF via Cash Essentials not line-checked. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: sophisticated-consumers-inertia-field-experiment-2026
+  date: '2026-05-01'
+  mechanism: Consumers anticipate their own future inertia, so an auto-renewing offer deters sign-up up front; forcing an active choice loses the inertia rent but wins back subscribers who would otherwise never join.
+  mechanism_codes:
+  - subscription-inertia
+  comparison: 'Auto-renewing vs auto-cancelling promotional subscriptions (2x2x2: renewal default x 2- vs 4-week promo x free vs 0.99 euro)'
+  design: Large-scale randomised field experiment at a European newspaper paywall, 20-month follow-up
+  setting: European daily newspaper, readers hitting the digital paywall, offers May-Aug 2018
+  outcome: Promo take-up, total subscribers, revenue
+  result_kind: Context-dependent
+  result: Auto-renewal lowered take-up 35% and total subscribers 23% over 20 months; auto-renewal takers ~7x more likely to continue after the promo; 53-75% monthly chance of not taking a desired action; auto-renewal and auto-cancel revenue-equivalent after one year, with fewer subscribers under auto-renewal
+  boundary: Newspaper promos, not tier choice at renewal of an existing membership; no trust or complaints measured; headline numbers are from the May 2026 final version (35%/23%); the March 2022 working paper reported 24% lower take-up and 9% avoiding subscribing at all for two years — version differences reflect sample/analysis updates, not error, but the coordinator should cite the final version
+  source: https://www.avnershlain.com/
+  related_source: http://legacy.bfistage.com/wp-content/uploads/2022/03/BFI_WP_2022-44-1.pdf
+  verification_note: 'Read the author''s page 2026-11-18 (forthcoming AER, final version May 2026, 35%/23% findings) and the BFI working paper abstract via search (2.1M readers, 7x continuation, 53-75% inertia, revenue equivalence after one year). Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: selling-subscriptions-card-replacement-2025
+  date: '2025-05-01'
+  mechanism: Auto-renewal earns its keep from inattention and switching costs; forcing an active choice at renewal strips that rent away.
+  mechanism_codes:
+  - subscription-inertia
+  comparison: Card-replacement months (active renewal required) vs ordinary months; attentive vs inertial counterfactuals
+  design: Natural experiment on card replacement (expiry/loss/theft) linked across old and new cards; two stylised models (inattention, switching costs)
+  setting: Ten popular US monthly subscription services, card-network transaction data, Aug 2017-Dec 2021
+  outcome: Cancellation/retention; seller revenue
+  result_kind: Negative
+  result: Sharp drop in retention in card-replacement months; inertia raises seller revenues by ~87% on average in the inattention model ("roughly double" in the abstract); attention parameter lambda averages 0.18 (range 0.04-0.50 across services)
+  boundary: The models cannot distinguish inattention from switching costs; estimates hold initial subscribers, prices and offerings fixed; ten large services only; it measures forced re-enrolment after card loss, not a designed tier-choice moment — and it says nothing about trust
+  source: https://www.aeaweb.org/articles?id=10.1257/aer.20231612
+  verification_note: Read the AEA abstract/citation page 2026-11-18 (abstract, AER 115(5):1650-71, DOI 10.1257/aer.20231612); the 87% inattention-model figure and lambda=0.18 are from the paper text as returned in search excerpts of the Stanford PDF, not re-checked line by line in the PDF. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: ftc-amazon-prime-settlement-2025
+  date: '2025-09-25'
+  mechanism: A cancellation maze converts inertia into retained revenue; the regulator's remedy is symmetry — exit must be as easy as entry.
+  mechanism_codes:
+  - subscription-inertia
+  comparison: 'Prime enrolment (1-2 clicks) vs cancellation ("Iliad": 4 pages, 6 clicks, 15 options)'
+  design: FTC enforcement action under the FTC Act and ROSCA; settled mid-trial, stipulated final order (3-0 Commission vote)
+  setting: Amazon Prime, US, 2023-2025 litigation
+  outcome: Settlement size; injunctive terms (clear decline button, conspicuous disclosures, same-method cancellation)
+  result_kind: Context-dependent
+  result: $1B civil penalty (largest ever for an FTC rule violation) + $1.5B consumer redress to an estimated 35M consumers; Amazon must disclose cost, billing frequency, auto-renewal and cancellation procedures, and provide an easy same-method cancellation
+  boundary: A settlement, not an adjudicated finding — Amazon did not admit the allegations and the Iliad description was never tested by a jury; the FTC's 2024 click-to-cancel rule itself was vacated by the Eighth Circuit on 8 July 2025 (Custom Communications v. FTC) on procedural grounds, so this settlement rests on ROSCA and Section 5, not on a rule; no trust or retention data
+  source: https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-secures-historic-25-billion-settlement-against-amazon
+  verification_note: Read the full FTC press release 2026-11-18 (penalty/redress figures, 35M consumers, injunctive terms, ROSCA basis); the Iliad 4-page/6-click/15-option detail is from the FTC's amended complaint (Sept 2023, paras 127-148) as quoted in the OECD US note and secondary summaries, not re-opened in the complaint itself. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: rocket-money-rowan-launch-2026
+  date: '2026-10-29'
+  mechanism: An agent that spots an unused subscription and cancels it on a one-word text reply removes the attention and effort costs that kept the subscription alive.
+  mechanism_codes:
+  - subscription-inertia
+  comparison: Agent-initiated cancellation vs consumer-initiated cancellation (no outcome comparison published)
+  design: Product launch; company disclosure in quarterly results
+  setting: Rocket Money (US personal-finance app), Rowan agent launched August 2026
+  outcome: Product existence and stated capability (no adoption, cancellation-volume or retention figures disclosed)
+  result_kind: Inconclusive
+  result: Rowan launched August 2026; cancels unused subscriptions and renegotiates bills via text after user approval; no user counts, cancellation counts or subscription-retention effects disclosed in the release
+  boundary: A launch announcement, not evidence of effect; no measurable adoption, no control group, no retention data; secondary reporting (Lokuna, Oct 2026) claims a subscription-management vendor saw cancellation requests rise ~1.8x year over year, but that figure was not verified against a primary source and is not used here
+  source: https://www.prnewswire.com/news-releases/rocket-companies-announces-third-quarter-2026-results-302924165.html
+  verification_note: 'Read the full PR Newswire release 2026-11-18 (Rowan paragraph in Company Highlights, L101-L103); launch month August 2026 and Anthropic partnership confirmed in the release. Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: openai-instant-checkout-acp-2025
+  date: '2025-09-29'
+  mechanism: A delegated-payment protocol lets an agent complete a purchase with a scoped, single-use token the agent never sees as a card number, collapsing checkout to a tap on "Buy" inside the conversation.
+  mechanism_codes:
+  - pain-of-paying
+  comparison: Agent checkout inside ChatGPT vs merchant-site checkout
+  design: Product/protocol launch announcement; no outcome data
+  setting: ChatGPT (700M+ weekly users per OpenAI), US Etsy sellers at launch, single-item purchases
+  outcome: Launch and protocol availability (no transaction volumes, conversion or adoption figures)
+  result_kind: Inconclusive
+  result: Instant Checkout live 29 Sept 2025 for US Etsy sellers; ACP open-sourced with Stripe; merchants pay a fee on completed purchases; user explicitly confirms each step and payment tokens are scoped to amount and merchant
+  boundary: This is the buying side of agentic commerce, not agent cancellation; and the March 2026 pullback — OpenAI saying the first version lacked flexibility and shifting to merchant-owned checkout/discovery — is corroborated by multiple secondary summaries but the March 24, 2026 OpenAI post itself was not directly opened, so treat the pullback as reported, not verified; trade press reported only ~12 Shopify merchants live at pullback (The Information, via secondary summaries, not verified)
+  source: https://openai.com/index/buy-it-in-chatgpt/
+  verification_note: 'Read the full OpenAI announcement 2026-11-18 (launch date, Etsy/Shopify scope, ACP/Stripe, merchant-of-record, confirmation and token-scoping details). Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: bank-block-ai-agents-2026
+  date: '2026-10-20'
+  mechanism: 'Banks re-impose the friction agents remove: an agent may read balances but may not move money, so agent-driven cancellation and switching stay gated by human approval and credential rules.'
+  mechanism_codes:
+  - subscription-inertia
+  comparison: Third-party agent access vs read-only open-banking access vs banks' own assistants
+  design: Legal summary of bank announcements (earnings calls, Bloomberg interviews, agreement updates), 13-20 Oct 2026
+  setting: Four largest US banks/brokers; Meta's Muse personal assistant (launched 8 Sept 2026) as the trigger
+  outcome: Bank policy positions; blocked-attempt counts (Schwab only)
+  result_kind: Context-dependent
+  result: JPMorgan (13 Oct) will not allow outside agents inside accounts ("rogue agents"); Schwab (16 Oct) blocks unauthorised agents moving money 10-20 times/week; Citi (16 Oct) bars third-party agent login/transactions; Wells Fargo (terms eff. 24 Nov 2026) permits agent use at the customer's sole risk; all four keep read-only data sharing and are building their own assistants
+  boundary: Law-firm client alert summarising press/earnings statements, not a study; counts are self-reported by one CEO; it concerns money movement and credential login, not subscription cancellation specifically — an agent that cancels via a merchant's own cancel flow may not need bank access at all; the CFPB Section 1033 open-banking rule that could legitimise agent access remains unsettled
+  source: https://www.hunton.com/insights/legal/major-banks-move-to-block-or-limit-customer-directed-ai-agents
+  verification_note: 'Read the full Hunton alert 2026-11-18 (dates, per-bank table, Schwab 10-20/week figure, read-only carve-outs, Section 1033 discussion). Link re-checked by Claude 2026-11-18: page loads and matches the row. The alert itself is dated 3 Nov 2026; the row date is the latest bank announcement.'
+  digest: '2026-11-18'
+  agent: meta
+- id: sekine-wada-japan-tweets-2025
+  date: '2025-07-14'
+  mechanism: After decades of near-zero inflation, Japanese households treated "prices do not rise" as a social norm; post-2021 inflation shocks measurably softened that norm, so the same size of price rise drew less unfavourable sentiment.
+  mechanism_codes:
+  - reference-price
+  - social-norms
+  comparison: Tweet/Nikkei/Economy-Watchers sentiment on price hikes, 2008-2009 vs 2021-2023; BoJ Opinion Survey
+  design: NLP sentiment analysis (lexicon + two deep-learning approaches) of 2,150,569 tweets mentioning price hikes, plus BoJ survey of ~4,000 people
+  setting: Japan, chronic-deflation era vs post-COVID/Ukraine inflation episode (CPI ~4% in 2022)
+  outcome: Acceptance of price hikes; unfavourable-minus-favourable diffusion index
+  result_kind: Positive in this setting
+  result: Accepting posts increased after 2021 for various goods (in 2008-09 only for specific goods such as tobacco); some posts showed positive feelings and mentioned salary hikes. BoJ unfavourable DI remained lower in the recent period despite higher perceived inflation than 2008-09.
+  boundary: Tweet authors are a selected, SNS-active population (2008-09 sample 100% sampling rate vs 18.7% in 2021-23); sentiment is stated, not purchase behaviour; authors note the comparison is between a short-lived 2008-09 surge and a sustained 2022-23 episode.
+  source: https://glecs.hias.hit-u.ac.jp/wp-content/uploads/2025/07/paper09.pdf
+  verification_note: 'Read full PDF (14 Jul 2025 version): abstract, Figure 2/BoJ survey discussion, Table 1 tweet counts, and conclusion all as quoted. Also published in revised form (31 Aug 2025, HIAS-E-150). Link not re-checked at filing (persistent identifier or institutional host).'
+  digest: '2026-11-18'
+  agent: meta
+- id: watanabe-japan-tolerance-survey-2022
+  date: '2022-07-01'
+  mechanism: 'Tolerance for a 10% rise is not fixed: after months of economy-wide rises, the share of Japanese consumers who would stay with the store rose from a minority to a majority, converging on Western levels (60%+).'
+  mechanism_codes:
+  - reference-price
+  - social-norms
+  comparison: Same survey question, Japan, Aug 2021 vs Apr 2022; Japan vs four Western countries
+  design: Repeated questionnaire survey by Tsutomu Watanabe (University of Tokyo), as reported by Hayakawa; BoJ Governor Kuroda cited the same research in a June 2022 lecture
+  setting: Japan, 2021-2022, core CPI rising from 0.8% to 2.1% year-on-year
+  outcome: Share saying they would continue shopping at the same store after a 10% price rise
+  result_kind: Positive in this setting
+  result: 43% would stay in Aug 2021 vs 56% in Apr 2022 (Western respondents 60%+ in 2021). Hayakawa notes the shift may partly reflect Ukraine-war framing, and warns tolerance may subside without wage rises.
+  boundary: Second-hand reporting of Watanabe's survey (not the survey paper itself); sample sizes not stated on the page; author flags the Ukraine framing effect and wage dependence as confounds.
+  source: https://www.tokyofoundation.org/research/detail.php?id=907
+  related_source: https://www.boj.or.jp/en/announcements/press/koen_2022/data/ko220606a2.pdf
+  verification_note: 'Read full Tokyo Foundation essay; the 43% (Aug 2021) and 56% (Apr 2022) figures and the Western 60%+ comparison are stated verbatim in the "Growing Tolerance of Price Increases" section. Watanabe''s underlying book is "What Are Prices?" (Kodansha, 2022, in Japanese). Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: jenkins-apology-backfires-2026
+  date: '2026-06-01'
+  mechanism: An apology does not merely soothe; it labels an experience as a failure, raising awareness of it. When customers had not noticed the failure, the apology reduced satisfaction, trust and repatronage; when they already knew, it raised warmth and honesty perceptions.
+  mechanism_codes:
+  - price-change-communication
+  comparison: Apology vs no apology vs mere notification, for service failures customers were vs were not aware of
+  design: Five experiments including a large-scale field experiment (n=3,083 delivery customers, delays up to 15 minutes)
+  setting: US food-delivery company (regional Uber Eats/Grubhub competitor); lab studies on grocery/technical glitches
+  outcome: Satisfaction, trust, recommendation intention, repatronage within 90 days
+  result_kind: Context-dependent
+  result: Apologised-to customers in the field study reordered less within 90 days and spent less, an estimated $65,171 revenue gap; notifications without apology did not produce the same dissatisfaction. Apologies increased satisfaction when customers already knew of the failure or had complained.
+  boundary: Failures were minor service delays, not price rises; no experiment tested apology + concession vs apology alone, so it supports "apology alone is insufficient/risky" rather than the concession pairing directly. Full JCR text paywalled; numbers verified via Northeastern/Phys.org reporting and the published abstract.
+  source: https://phys.org/news/2026-03-customer-backfire.html
+  related_source: https://belkcollege.charlotte.edu/2026/06/24/the-science-of-silence-when-saying-sorry-backfires/
+  verification_note: 'Read Phys.org/Northeastern report (13 Mar 2026) in full and the JCR abstract via EBSCO search result (DOI 10.1093/jcr/ucaf064, JCR 53(1) 1-21). The 74.8% vs 78.8% repurchase split comes from a secondary summary (ambscallcenter) and is NOT used in the result above; only the $65,171 figure, which Phys.org attributes directly to the researchers, is used. Link re-check by Claude 2026-11-18: the page returned an error to automated reading; kept on Muse''s reading of 2026-11-18, link not dead.'
+  digest: '2026-11-18'
+  agent: meta
+- id: wirtz-mattila-compensation-apology-2004
+  date: '2004-01-01'
+  mechanism: Recovery outcomes (compensation), procedures (speed) and interactional treatment (apology) have a joint effect on post-recovery satisfaction; no single element substitutes for the others.
+  mechanism_codes:
+  - price-change-communication
+  comparison: 2x2x2-style variation of compensation, recovery speed and apology in service-failure scenarios
+  design: Scenario-based lab experiment (n=187, restaurant context, failures without monetary cost to the consumer)
+  setting: Restaurant service failures (slow service / wrong order)
+  outcome: Post-recovery satisfaction, repurchase intent, negative word-of-mouth
+  result_kind: Context-dependent
+  result: Compensation added nothing when the response was immediate and apologetic, and failed to repair a delayed response without apology; it raised satisfaction only in mixed-bag recoveries. Satisfaction fully mediated the effects on repurchase intent and negative WOM.
+  boundary: Small lab sample, hypothetical scenarios, no monetary loss to the consumer (unlike a price rise, which is a monetary loss); 2004 study, pre-social-media backlash dynamics.
+  source: https://www.researchgate.net/publication/235315833_Consumer_responses_to_compensation_speed_of_recovery_and_apology_after_a_service_failure
+  verification_note: Read the ResearchGate abstract/record in full; findings as stated in the abstract and corroborated by the 2023 Tourism Management review table summarising the same paper (n=187, same conclusions). Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: customer-rage-apology-compensation-2013
+  date: '2013-12-01'
+  mechanism: A monetary remedy alone leaves most complainants dissatisfied; adding an apology on top of the money doubles satisfaction, suggesting the two remedies work jointly rather than either alone.
+  mechanism_codes: []
+  comparison: Monetary remedy only vs monetary remedy + apology (free remedy), among customers who complained
+  design: National telephone survey of ~1,000 US households (56m households had experienced a problem in the prior 12 months; 50% reported a problem, up from 32% in 1976)
+  setting: US consumer complaints across sectors, 2013 wave
+  outcome: Satisfaction with complaint handling
+  result_kind: Positive in this setting
+  result: Satisfaction 37% with monetary remedy alone vs 74% when an apology was added; 56% of complainants got no remedy at all; 68% of households reported customer rage (up from 60% in 2011).
+  boundary: Observational survey, not an experiment — firms that apologise may differ in other ways; no "apology only" cell is reported in the release, so it shows apology+money > money, not apology+money > apology; 2013 data.
+  source: https://news.asu.edu/content/new-customer-rage-study-out-holiday-shopping-season
+  verification_note: 'Read ASU News release and corroborating reports (CustomerZone360, Inside Self Storage, Bob Sullivan) — all agree on 37% vs 74% and the 1,000-household/56m-household figures. The underlying survey instrument is proprietary (CCMC), not published as a journal article. Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: xbox-live-gold-reversal-2021
+  date: '2021-01-23'
+  mechanism: A public, attributable announcement of a steep rise drew immediate, public backlash; the seller reversed the rise within hours and paired the reversal with a concession, matching the claim's conditions (public, attributable, covered beyond own channels).
+  mechanism_codes:
+  - dual-entitlement
+  - motive-attribution
+  - price-change-communication
+  comparison: Announced price rise vs same-day reversal after backlash
+  design: Case study from company statement + contemporaneous trade-press reporting
+  setting: Xbox Live Gold subscription, global gaming community, Jan 2021
+  outcome: Price rise withdrawn before it took effect (45-day notice period had not run)
+  result_kind: Positive in this setting
+  result: Rise announced 22 Jan (1-month +$1, 3-month +$5, 6-month to $59.99, 12-month effectively $60 to $120/yr); reversed late the same day after "an avalanche of negative feedback"; free-to-play multiplayer also unlocked without Gold.
+  boundary: The rise was reversed BEFORE it was ever charged (45-day notice), so this is a reversal of an announced rise, not of a rise customers had already paid. The concession (free-to-play unlock) was reportedly already in the works, per analyst Daniel Ahmad quoted in the same article.
+  source: https://www.gamespot.com/articles/microsoft-reverses-xbox-live-gold-price-increase-unlocks-free-to-play-games-for-everyone/1100-6486623/?ftag=CAD-01-10abi2f
+  verification_note: 'Read GameSpot article in full via search result; Microsoft''s quoted statement and the price figures ($9.99/$24.99/$39.99/$59.99 old; $10.99/$29.99/$59.99 new) verified there and corroborated by GamesRadar, Game Informer and Tom''s Guide reports of the same day. Link re-check by Claude 2026-11-18: the page returned an error to automated reading; kept on Muse''s reading of 2026-11-18, link not dead.'
+  digest: '2026-11-18'
+  agent: meta
+- id: wendys-dynamic-pricing-reversal-2024
+  date: '2024-02-27'
+  mechanism: A price-rise plan attributed to a named firm and amplified by national press and a rival's counter-campaign was abandoned within days; the seller reframed the plan as off-peak discounts instead.
+  mechanism_codes:
+  - dual-entitlement
+  - motive-attribution
+  - price-change-communication
+  comparison: Announced dynamic-pricing test vs walk-back within days
+  design: Case study from trade-press reporting of earnings call and company statements
+  setting: Wendy's, US fast food, Feb 2024
+  outcome: Plan abandoned before implementation; no peak-price test ever ran (per later reporting)
+  result_kind: Positive in this setting
+  result: Announcement 15 Feb 2024 (CEO Kirk Tanner, ~$20m digital menu boards, tests "beginning as early as 2025"); walk-back by 27 Feb 2024; a Mar 2024 HungerRush survey of ~1,000 diners found 81% would dodge peak prices.
+  boundary: The rise was never implemented — this is a reversal of an announcement, not of a charged price. Dynamic-pricing vendor Juicer discontinued its product that August, with founders saying clients feared "becoming the next Wendy's". The 81% survey figure is from a vendor survey, not peer-reviewed.
+  source: https://www.restaurantbusinessonline.com/technology/3-restaurant-tech-fads-faded
+  verification_note: 'Read Restaurant Business Online article (updated 16 Nov 2026) in full; dates and quotes verified there and corroborated by Inc. (Dec 2025) and Despoiler (Oct 2026) accounts of the same episode. Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: anderson-simester-promotion-depth-2004
+  date: '2004-02-01'
+  mechanism: 'A deep discount resets established customers'' reference price and teaches deal sensitivity: they buy less later at regular prices, so the promotion''s short-run lift overstates its value for the existing base.'
+  mechanism_codes:
+  - reference-price
+  - transaction-utility
+  comparison: Promotion catalog (~60% off) vs control catalog (~30% off), same products, random assignment
+  design: Three large-scale randomised field experiments at a US direct-mail catalog retailer of durable goods (books/software-like experience goods, ~450 products); ~2-year follow-up, average interpurchase time 48 weeks
+  setting: US catalog retail, 1999-2001
+  outcome: Future purchases (repeat-purchase rates, units, revenue) by first-time vs established customers
+  result_kind: Positive in this setting
+  result: Deeper discounts raised future purchases among first-time customers but reduced them among established customers; short-run metrics overstate demand change for established customers (prices set on short-run elasticity would be too low) and understate it for first-timers.
+  boundary: Durable-goods catalogs, 1999-2001, single firm; mechanism is discount depth, not a prior price hike followed by a festival discount — the mapping to the claim is via reference-price resetting, not a direct test. Dollar magnitudes from secondary summaries ($585 vs $734) could not be located in the extracted PDF text and are NOT used here.
+  source: https://www.kellogg.northwestern.edu/faculty/anderson_e/htm/personalpage_files/Papers/Long_Run_Effects_of_Promotion_Depth_on_New_versus_Established_Customers.pdf
+  verification_note: Read the full published PDF (abstract, design, discount depths ~30% control vs ~60% promotion, and the signed long-run effects). Corroborated by RePEc abstract and MIT Sloan Management Review summary (Summer 2004). Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: mazumdar-reference-price-review-2005
+  date: '2005-10-01'
+  mechanism: Consumers judge a sale price against an internal reference price built from prices previously paid and seen; when earlier hikes have moved that benchmark up, a festival discount measured off the old price no longer reads as a gain.
+  mechanism_codes:
+  - reference-price
+  comparison: Synthesis of behavioural experiments and panel-data reference-price models
+  design: Integrative literature review with testable propositions on reference-price formation, retrieval/use, and effects on choice and evaluation
+  setting: General consumer markets (review)
+  outcome: Internal reference price formation and updating; price judgments and purchase decisions
+  result_kind: Positive in this setting
+  result: Reference prices are updated through accumulated price observations and purchase experiences (adaptation-level theory); advertised/external reference prices assimilate into the internal reference, raising it; prior purchase history is a key antecedent.
+  boundary: A review, not a new experiment; it establishes the mechanism (reference updating) rather than testing festival discounts after hikes specifically.
+  source: https://www.researchgate.net/publication/236656727_Reference_Price_Research_Review_and_Propositions
+  verification_note: Read ResearchGate record and abstract in full; authors, journal, volume/pages (J. Marketing 69, Oct 2005, 84-102) verified via the SeekScholar full-text copy's front matter. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: india-ecommerce-prior-price-rule-2026
+  date: '2026-09-10'
+  mechanism: The regulator defines the legitimate reference for a discount as the lowest price actually charged in the prior 30 days, removing the seller's ability to hike first and then discount from the hiked price.
+  mechanism_codes:
+  - reference-price
+  comparison: Announced discount vs lowest price in the preceding 30 days (new legal baseline)
+  design: Statutory amendment to the Consumer Protection (E-Commerce) Rules, 2020
+  setting: India e-commerce (Amazon, Flipkart, quick commerce), in force 1 Jan 2027
+  outcome: Mandatory display of reduced price + prior price for any announced price reduction
+  result_kind: Positive in this setting
+  result: Prior price = lowest price offered in the 30 days before the announcement; rule announced 10 Sep 2026 alongside dark-pattern audits and sponsored-listing labels. In 2025 the National Consumer Helpline received 1,771,622 grievances, 511,196 (29%) e-commerce-related.
+  boundary: A rule, not evidence of effect — it shows the problem was recognised as widespread enough to legislate, not how often hikes precede sales or whether the rule changes buying. No enforcement data yet (in force Jan 2027).
+  source: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2308759&reg=48&lang=2
+  verification_note: 'Read the full PIB release; the 30-day prior-price definition and 1 Jan 2027 commencement are quoted verbatim. Gazette text (G.S.R. 789(E), 9 Sep 2026) corroborates via TaxGuru reproduction. Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: kff-aca-premium-decomposition-2026
+  date: '2026-11-06'
+  mechanism: Subsidy expiry worsens the risk pool (healthier enrollees leave; effectuated enrollment fell 12% to 19.2m by Feb 2026), adding ~4 points to premiums — but the bulk of the 2027 increase is underlying medical cost trend, not the expiry.
+  mechanism_codes: []
+  comparison: 2027 vs 2026 vs 2025 benchmark premiums; insurer-stated drivers in rate filings
+  design: KFF analysis of insurer rate filings (276 insurers, all states + DC, for proposed rates; finalised benchmark analysis)
+  setting: US ACA Marketplaces, 2027 open enrollment (from 1 Nov 2026)
+  outcome: Benchmark silver premium change; decomposition into medical trend vs risk-pool effect
+  result_kind: Negative
+  result: Finalised benchmark silver +13% for 2027 (HealthCare.gov states +11%, state-based +16%); proposed median +15%; risk-pool changes +~4pp in 2026 and a similar additional effect expected in 2027; median medical trend 10% vs ~8% average in recent years; benchmark premiums up 42% on average between 2025 and 2027.
+  boundary: Insurer-attributed decompositions are self-reported in filings (insurers have an interest in citing policy factors); "similar additional effect" for 2027 is an expectation, not a finalised figure; CBO projects enrollment falling from 22.4m (2025) to 13.1m (2027).
+  source: https://www.kff.org/affordable-care-act/9-things-to-watch-for-the-2027-aca-open-enrollment-period/
+  verification_note: 'Read the full KFF page; all figures above are from section 1 (premiums) and section 2 (enrollment), including the Nov 6 2026 correction note. Consistent with the repo''s existing against-row (aca-2027-premiums-2026) and extends it to finalised 2027 rates. Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: kff-part-d-premiums-2027
+  date: '2026-10-30'
+  mechanism: A temporary premium subsidy ($26/month in 2025, $16 in 2026 per MedPAC, plus a $50 annual-increase cap) held Part D premiums down; removing it exposes the underlying bid, so stayers face a step-change unrelated to their own drug costs.
+  mechanism_codes: []
+  comparison: 2027 vs 2026 stand-alone PDP premiums, stayers vs switchers; PDP vs Medicare Advantage drug plans
+  design: KFF analysis of CMS 2027 plan landscape/benefits data (June 2026 enrollment basis)
+  setting: US Medicare Part D stand-alone prescription drug plans, 2027
+  outcome: Average monthly PDP premium; share facing increases
+  result_kind: Context-dependent
+  result: 'Average PDP premium $34 (2026) to $51 (2027) if stayers keep plans (+50%, +$17); 76% (10.4m) of non-LIS enrollees pay more, 2.4m by >$50/month (vs 38,000 in 2026); no $0-premium PDPs available in 2027 (4.1m in $0 plans in 2026); CMS projects only $35 to $36 assuming switching. KFF: ending the demonstration "did not result in substantially higher across-the-board PDP premiums but still likely affected premium levels for 2027."'
+  boundary: The $51 figure assumes no switching; KFF expects the realised average to be lower after open-enrollment switching (as in 2026, when the realised average was $34 vs $44 projected). The subsidy effect is not cleanly separated from underlying bid growth in this analysis.
+  source: https://www.kff.org/medicare/medicare-part-d-premiums-and-cost-sharing-in-2027/
+  verification_note: Read the full KFF analysis; all figures from the takeaways and premiums sections. CMS's $35-to-$36 projection and KFF's $51 stayer projection are both stated, with KFF noting CMS did not explain its method. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: duggal-stent-price-reduction-maharashtra-2019
+  date: '2019-04-01'
+  mechanism: Capping the price of a high-margin device directly expanded access for low-income patients, with no observed withdrawal of drug-eluting stents — the access gain the NPPA cap was designed to produce.
+  mechanism_codes: []
+  comparison: Stent procedure volumes and affordability before vs after Maharashtra's 2014 price reductions (87 hospitals)
+  design: Observational study of procedure data from 87 public and private hospitals in Maharashtra
+  setting: Maharashtra, India, 2013-2015 (pre-dating the Feb 2017 national NPPA cap)
+  outcome: Number of patients undergoing stent procedures; share able to afford them; DES use
+  result_kind: Positive in this setting
+  result: Procedures with stents +43% after prices were slashed; affordability 40.7% (2013) to 71.3% (2015); DES cost fell from >₹100,000 to ₹29,600 under the national cap (~70% reduction).
+  boundary: State-level reductions, not the national cap itself; observational (no control state); procedure volume may partly reflect pent-up demand rather than a sustained access gain.
+  source: https://repository.ias.ac.in/120573/
+  related_source: https://biosocialmethods.isr.umich.edu/2019/04/23/brahmajee-nallamothu-3/
+  verification_note: Read the IAS repository record (authors, journal, DOI) and the Michigan BioSocial Methods summary of the same study; the 43%, 40.7%-to-71.3% and ₹100,000-to-₹29,600 figures appear in both. Full Circulation text paywalled. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: deo-stent-price-control-unintended-2020
+  date: '2020-02-01'
+  mechanism: When a price cap removes margin on a device, providers can recover profit by changing what they do clinically — here, steering patients toward the procedure that uses the capped device rather than its surgical alternative.
+  mechanism_codes: []
+  comparison: Change in PTCA volume vs change in CABG volume, before vs after Feb 2017 cap; private vs public hospitals
+  design: Empirical analysis of 25,769 insurance claims from 69 private + 7 public hospitals, Feb 2016-Feb 2018, in Karnataka's representative public insurance programme (patient price unchanged, isolating provider behaviour)
+  setting: Karnataka, India, 2016-2018
+  outcome: Average PTCA and CABG procedures per hospital per month
+  result_kind: Negative
+  result: Disproportionate post-cap rise in PTCA vs CABG equal to 6% of average PTCA volume and 28% of average CABG volume before the cap; the disproportionate rise occurred only among private hospitals.
+  boundary: One state's public-insurance claims; the authors infer profit-maximisation intent from the private-only pattern but cannot observe physician motives directly; long-run health outcomes not measured.
+  source: https://pubmed.ncbi.nlm.nih.gov/31887627/
+  verification_note: Read the full PubMed abstract (authors, affiliations ISB/IIM-A/Stanford Hoover/Carnegie Mellon, journal, DOI, sample sizes and the 6%/28% figures) in full. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: india-cancer-drug-margin-cap-2026
+  date: '2026-10-12'
+  mechanism: A 30%-of-MRP trade-margin cap attacks the gap between price-to-retailer and MRP directly; the government's own affidavit concedes hospital margins of 170-700%+ on cancer medicines and 100-1,000%+ on consumables.
+  mechanism_codes: []
+  comparison: Price-to-retailer vs MRP for cancer drugs (up to 10x) and devices
+  design: Government affidavit + Supreme Court proceedings (Kishan Chand Jain petition; bench of Justices Vikram Nath and Sandeep Mehta)
+  setting: India, Oct 2026; NPPA acting under para 19, Drugs (Prices Control) Order 2013
+  outcome: Announced 30% trade-margin cap; list of covered cancer medicines to be notified; expert committee to report in 10-15 days
+  result_kind: Inconclusive
+  result: Cap 30% of MRP; expected MRP reductions 20-70%; expected patient savings ~₹2,500 crore/year (government estimate); court pressed for wider application and questioned a 16% margin; next hearing 27 Oct 2026.
+  boundary: Announced, not yet notified or in effect at the time of reporting; savings and MRP cuts are government estimates, not observed outcomes; the Supreme Court's pushback may widen or stall the measure.
+  source: https://www.livelaw.in/top-stories/after-supreme-court-push-centre-to-cap-cancer-drug-margins-at-30-554311
+  verification_note: 'Read the full Live Law article; all figures (30%, 20-70%, ₹2,500 crore, ₹5,000 vs ₹25,000 stent, ₹11 vs ₹270 saline line, 170-700% margins) verified there. Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: nepra-split-vote-2026
+  date: '2026-11-06'
+  mechanism: 'The regulator publicly split over a price it itself sets because the cost allocation is contested: the dissenters'' own institutional calculation put marginal cost (Rs31.83) above the approved package price (Rs25.30), implying the shortfall falls on other consumers.'
+  mechanism_codes: []
+  comparison: Approved package rate Rs25.30 vs NEPRA's calculated marginal cost Rs31.83 vs prior rate Rs22.98
+  design: Regulator decision with published dissent (2-2 split, chairman's casting vote)
+  setting: Pakistan electricity, Nov 2026; Incremental Consumption Package (Roshan Economy Power Package, Nov 2025-Oct 2028)
+  outcome: Package rate raised 10.1% (Rs22.98 to Rs25.30) from Nov 2026 billing month, on an interim basis; separate Rs2.3673/unit fuel adjustment approved for Nov bills (~Rs25bn recovery)
+  result_kind: Positive in this setting
+  result: 2-2 split; Chairman Mukhtar endorsed the dissenters' reasoning in writing yet used his casting vote to approve; all four members criticised the Power Division for failing to supply verified marginal-cost data despite repeated reminders, with suspension threatened.
+  boundary: Second-hand reporting (KhabarWire synthesising Geo News/Profit/Dawn); the NEPRA decisions themselves are on nepra.org.pk but were not directly opened. The split is over the industrial package rate, while the fuel adjustment (Rs2.3673) was approved without a reported split.
+  source: https://khabarwire.com/blog/nepra-approves-september-fca-november-bills-2026-11-07/
+  verification_note: 'Read the full KhabarWire article; vote split, names, Rs31.83 vs Rs25.30 figures and the suspension warning all verified there, and corroborated by Asia Daily and Dawn (via mirror) reports of the same 6 Nov decisions. Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: cornell-save-your-seat-2026
+  date: '2026-06-25'
+  mechanism: Giving families a personalised, early price removes affordability uncertainty before they opt out of applying; the college's enrolment chief explicitly frames certainty as "a cushion" for first-generation and low-income students.
+  mechanism_codes:
+  - price-change-communication
+  comparison: Early personalised aid estimate (before application) vs standard FAFSA-timeline aid offer
+  design: Single-institution programme report, first year (launched 2025); no control group; post-enrolment analysis planned but not yet done
+  setting: Cornell College, Iowa (private liberal arts; ~25% Pell-eligible, ~30% students of colour), fall 2026 intake
+  outcome: Commitments after receiving an estimate; FAFSA submissions
+  result_kind: Positive in this setting
+  result: ~20,000 aid projections sent; nearly one-fifth of the incoming fall 2026 class committed after receiving a Save Your Seat estimate; roughly twice as many FAFSA submissions as the prior year; estimates largely matched eventual aid packages.
+  boundary: No causal identification — the students who engaged may have been more likely to enrol anyway; college-reported figures, not audited; the "price" here is a personalised aid estimate, not an announced tuition level (unlike WVU's early-tuition announcement in the repo).
+  source: https://www.insidehighered.com/news/student-success/college-experience/2026/06/25/can-price-first-admissions-improve-college
+  verification_note: 'Read the full Inside Higher Ed article; all figures (20,000 projections, one-fifth of the class, 5-6 months earlier, doubled FAFSA submissions) verified there, attributed to VP for Enrollment Management Wendy Beckemeyer. Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: sims-solar-cost-shift-2025
+  date: '2025-12-09'
+  mechanism: When fixed grid costs (debt service, O&M, administration) are recovered through per-kWh volumetric rates rather than fixed access fees, a solar adopter who buys less power stops contributing to fixed-cost recovery, so rates must rise for whoever remains.
+  mechanism_codes: []
+  comparison: Modelled TVA grid with vs without high-income solar adoption (battery-plus-solar, grid defection)
+  design: Agent-based computational economic model of the TVA transmission/retail market + choice experiment (n=2,307 TVA residential customers) on willingness to pay for rooftop solar; 30-year simulation to 2051
+  setting: Tennessee Valley Authority service area (16 customer service districts), one of the highest-poverty US regions
+  outcome: Low-income household electricity bills; solar adoption equity
+  result_kind: Positive in this setting
+  result: High-income solar adoption increases low-income bills by 10%; $7.8m/year additional cost to low-income households ($9.86/customer/year); by 2051 ~35% of high-income vs ~30% of LMI households adopt solar; bill savings to additional LMI adopters (~$976k) do not offset the $7.8m cost to non-adopters.
+  boundary: A simulation, not observed billing data — it assumes battery-plus-solar adopters defect from the grid; the 10% figure is model output for the TVA, not a measured tariff change; the authors note the death-spiral feedback can also pull LMI households into adoption, partly offsetting the effect.
+  source: https://pmc.ncbi.nlm.nih.gov/articles/PMC12687347/
+  verification_note: Read the full PMC article (abstract, introduction, methods, TVA application); all figures above are from the abstract and the Tennessee Tech summary of the same paper. Received Apr 2025, accepted Oct 2025, collection Dec 2025. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: nersa-solar-tariff-consultation-2026
+  date: '2026-11-06'
+  mechanism: Under rate-of-return regulation, allowed revenue is set independently of units sold, so if solar homes buy fewer units the same revenue must come from somewhere — NERSA's draft answers by recovering network costs per connection rather than per unit.
+  mechanism_codes: []
+  comparison: Volumetric recovery vs per-connection (R/PoD/month) recovery of network capital costs
+  design: Regulator consultation paper (46pp) + draft Cost of Supply Framework (52pp); comments close 7 Dec 2026, hearing 14 Dec 2026
+  setting: South African municipal and private electricity distributors; Eskom-direct residential tariffs 2027/28
+  outcome: Proposed tariff structure (wires separated from retail); Eskom Homepower 4 fixed charge
+  result_kind: Positive in this setting
+  result: NERSA asks how solar/wheeling/migration should be reflected "so that the remaining customers are not unduly burdened"; draft framework allocates network capital costs per point of delivery, recovered R/PoD/month; Eskom proposes Homepower 4 fixed charge R535.80 to R660.90/month (+23.3%, +242.6% over three years from R192.90) with per-unit rates trimmed, average increase 8.83%; a solar+battery home buying 200 units/month would see 53% of its bill as fixed charges vs 17% for a 900-unit non-solar home.
+  boundary: Consultation, not a decision — nothing is approved; the municipal framework has no rand figure yet; the Eskom decision due 26 Nov 2026 falls AFTER this research date (18 Nov), so the hypothesis's stated test cannot yet be scored. EnergyBee is a specialist news site, not NERSA itself, though it quotes the NERSA documents verbatim.
+  source: https://energybee.co.za/news/nersa-municipal-tariff-review-solar-homes-2026
+  verification_note: 'Read the full EnergyBee article; the quoted NERSA stakeholder question, the R/PoD/month framework language, the R535.80-to-R660.90 figures and the 26 Nov / 7 Dec / 14 Dec dates all verified there. Eskom figures corroborated by NERSA''s 2027/28 consultation paper as cited in the article. Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: hill-buyers-club-hepatitis-c-2017
+  date: '2017-10-01'
+  mechanism: When the price gap is ~65-200x and personal-use importation is lawful, patients organise themselves into buyers' clubs that route around the originator's price, and the imported generics work — so the arbitrage is not a one-off but a repeatable pathway.
+  mechanism_codes: []
+  comparison: Imported generic DAAs via buyers' clubs vs branded DAAs (trial SVR rates 90-95%)
+  design: Observational, retrospective analysis of patient-submitted results (surveys Mar 2016-Mar 2017, Imperial College London); 616 patients, 3 buyers' clubs (Australian incl. FixHepC, South-east Asian, Eastern European)
+  setting: 38 countries; generics manufactured in India, China, Bangladesh, Egypt
+  outcome: Sustained virological response (SVR12, i.e. cure); price paid
+  result_kind: Positive in this setting
+  result: 616 patients submitted results (199 Australian, 205 South-east Asian, 212 Eastern European clubs); SVR12 99% (247/250 evaluated); generic course $400-1,300 vs US branded sofosbuvir $84,000 for 12 weeks (profitable production cost calculated at $86). A FixHepC-only analysis showed 90% SVR overall.
+  boundary: Self-selected patients who submitted results (only 41% had SVR12 data); on-treatment analysis, not intention-to-treat; no data on how many buyers there were in total (denominator unknown), so growth cannot be measured from this paper alone.
+  source: https://pmc.ncbi.nlm.nih.gov/articles/PMC5632545/
+  verification_note: Read the full PMC article (abstract, methods, Tables 1-3, discussion); all figures above are from the article text, including the $84,000 vs $86 production-cost comparison and the 616-patient breakdown. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: beximco-trikafta-buyers-club-2026
+  date: '2026-06-22'
+  mechanism: Bangladesh's LDC exemption from pharmaceutical-patent enforcement under TRIPS lets Beximco manufacture the generic lawfully; the CF Buyers' Club (relaunched Oct 2025, Seattle) routes patients to it under personal-use import rules.
+  mechanism_codes: []
+  comparison: Triko $12,750/adult/yr vs Vertex Trikafta ~$370,000/yr
+  design: Company announcement of first dispensing; named-patient supply via buyers' club
+  setting: Dhaka, Bangladesh; patients travelling from 6 countries, Jun 2026
+  outcome: First patients receiving generic ETI; price; distribution channel
+  result_kind: Context-dependent
+  result: First doses collected 15 Jun 2026 (ceremony 16 Jun); patients from Slovakia, South Africa, Qatar, USA, UK, Bangladesh; $12,750 adult / $6,375 child per year (96% reduction); with a South African dose-reduction protocol, a child's annual cost falls below $2,000; initial production run was a two-year supply for "a few dozen patients" (per NYT reporting of Beximco COO Rabbur Reza).
+  boundary: This confirms the pathway exists, not its growth — the hypothesis's test explicitly requires verified import volumes or credible buyer counts, and none are published yet (named-patient basis, "few dozen" initial run). Company-issued announcement (interested party); bioequivalence results were pending at launch per the CF Buyers' Club 2025 Handbook.
+  source: https://beximco-pharma.com/cdn/bpl/reach-announcement/reach-announcement-londonstockexchange-22-june-2026.pdf
+  related_source: https://static1.squarespace.com/static/5cc48e3c241ff0000118781b/t/68fa981c0ec8407ebe932b70/1761253404972/CF+Buyers%E2%80%99+Club+2025+Handbook.pdf
+  verification_note: 'Read the full Beximco/RNS announcement; prices, dates, countries and the named-patient/CF Buyers'' Club wording verified there. The "few dozen patients" initial-run figure comes from NYT reporting (23 Jun 2026, via Telegraph247 syndication) and is flagged as such, not from the announcement. Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: prime-day-sellers-skip-discounts-2025
+  date: '2025-07-08'
+  mechanism: When input costs rise, the margin left after a platform-mandated discount disappears, so sellers rationally sit out the sale event rather than sell at a loss — the opt-out the hypothesis predicts, driven here by tariffs rather than baseline thin margins.
+  mechanism_codes: []
+  comparison: Prime Day 2025 discounting vs prior years (same sellers)
+  design: Trade-press reporting of seller interviews (Bloomberg); no systematic opt-out rates
+  setting: Amazon Prime Day, Jul 2025 (4-day event); US sellers facing Trump tariffs
+  outcome: Discount participation (qualitative)
+  result_kind: Inconclusive
+  result: Sellers "offering fewer discounts"; Upstream Brands offered none for the first time (50% aluminium tariff); Blueair reduced the number of products on sale from its usual ~30% discounts; ~25% of 1,000 surveyed US shoppers said they would skip the event over tariffs (Akeneo survey). No opt-out rate by seller margin is reported anywhere in the piece.
+  boundary: 'Anecdotal (two named sellers + unattributed "sellers"); the margin squeeze here is tariff-driven, not the hypothesis''s near-zero baseline margins; no within-category, within-event comparison of opt-out rates by margin; no accounting for platform-subsidised discounts — so the hypothesis''s test is NOT met. Amazon''s own Seller Central fee schedule (Japan, 2026: upfront fee charged even if the discount produces no sales) corroborates the cost side but was not used as a separate row.'
+  source: https://stockwatchindex.com/several-amazon-sellers-skip-offering-prime-day-discounts-as-trump/
+  verification_note: 'Read the full syndicated article; the Upstream Brands quote, Blueair detail, 60% third-party share and 25% shopper-skip figures verified there. Original reporting is Bloomberg via NY Post; the syndication page is the opened source. Link re-check by Claude 2026-11-18: the page returned an error to automated reading; kept on Muse''s reading of 2026-11-18, link not dead.'
+  digest: '2026-11-18'
+  agent: meta
+- id: kahneman-fairness-profit-seeking-1986
+  date: '1986-09-01'
+  mechanism: Dual entitlement — customers are entitled to the terms of the reference transaction and firms to their reference profit. An existing customer therefore experiences a new-customer-only rise as a violation of their reference terms (they see the higher price and infer their own terms are next, or that they are being treated worse), while a new customer has no reference transaction to violate.
+  mechanism_codes:
+  - dual-entitlement
+  - reference-price
+  comparison: Same price change framed as cost pass-through vs demand exploitation; ongoing relationship vs new transaction
+  design: Telephone surveys of randomly chosen adults in Toronto and Vancouver, 1984-85 (n=101-157 per question)
+  setting: Hypothetical vignettes (hardware store, grocer, landlord, employer)
+  outcome: Share judging each scenario fair/unfair
+  result_kind: Positive in this setting
+  result: 'Snow-shovel rise after blizzard unfair 82%; grocer passing on 30c wholesale rise acceptable 79%; landlord raising rent to cover costs acceptable 75%. Authors'' summary: acceptable to raise prices when profits are threatened; unfair to exploit shifts in demand.'
+  boundary: Stated fairness judgments in 1980s Canada, not observed backlash or churn; vignettes, not a test of new-customer-only pricing specifically — the new-vs-existing reference distinction is the authors' interpretation, and fairness perceptions were later shown (Urbany et al.) not always to predict behavioural intentions.
+  source: https://www.jstor.org/stable/1806070
+  verification_note: Figures and the dual-entitlement formulation verified against multiple independent summaries of the paper (including the abstract's two-sentence rule) and the JSTOR record; the paper itself is paywalled and the 82%/79%/75% figures are as consistently reported across sources. Sample sizes 101-157 per question per the paper's reporting. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: anderson-simester-price-antagonism-2010
+  date: '2010-05-01'
+  mechanism: Existing customers treat a better price offered to others as a breach of their reference transaction and retaliate quietly over time — fewer orders, not complaints — so a price that does not touch them directly still costs the firm their future business.
+  mechanism_codes:
+  - dual-entitlement
+  - reference-price
+  - transaction-utility
+  comparison: Deep-discount catalog (~62% off) vs shallow-discount catalog (~34% off), random assignment, among customers who had bought the same item in the prior 3 months at a higher price
+  design: 28-month randomised field experiment, 55,047 customers, mid-sized publishing/catalog retailer (~450 own-brand products); second replication at an apparel retailer (~110,000 customers)
+  setting: US catalog retail
+  outcome: Subsequent orders and revenue over 28 months
+  result_kind: Positive in this setting
+  result: Customers who saw a deeper discount on an item they had recently bought placed fewer subsequent orders; effect largest among the most valuable customers (most recent, highest-price prior purchases); second study found a smaller effect (2.4% fewer orders, per secondary synthesis). Both retailers stopped sending discount catalogs to recent buyers of the discounted items afterwards.
+  boundary: The treatment is a deeper discount for others, not a new-customer-only price rise — the direction of the price difference is reversed, so the mapping to the claim is by the shared mechanism (existing customers punish differential pricing) rather than a direct test. The 14.8%-fewer-orders / $90-less-revenue figures appear in secondary syntheses but could not be verified against the paywalled QJE text and are NOT used here; only the abstract-verified direction and the "largest among most valuable customers" finding are used.
+  source: https://ideas.repec.org/a/oup/qjecon/v125y2010i2p729-765..html
+  verification_note: Read the RePEc/IDEAS abstract in full (design, sample, direction, "largest among most valuable customers"); corroborated by the Mendeley record and EconPapers entry for the same article (QJE 125(2), 729-765). Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: duani-algorithmic-demographic-pricing-fairness
+  date: '2024-10-01'
+  mechanism: Algorithm-set demographic prices feel less personally judging and less exploitative than identical human-set prices, so the same discrimination is judged fairer.
+  mechanism_codes:
+  - algorithm-attribution
+  - personalization-fairness
+  - motive-attribution
+  comparison: Algorithm vs. human price-setter for demographic price discrimination (insurance, tickets, retail, hotel scenarios)
+  design: Four online experiments, between-subjects, MTurk/Prolific samples of 276–469 per study
+  setting: Hypothetical purchase scenarios (insurance, live-show tickets, retail, hotel)
+  outcome: Perceived fairness and purchase intentions
+  result_kind: Positive in this setting
+  result: Algorithm-set demographic discrimination rated fairer than human-set, with higher purchase intentions; effect attenuated for temporal (vs. demographic) discrimination and when discrimination served a prosocial goal. No effect sizes stated in the abstract/press summary read.
+  boundary: Hypothetical scenarios, not real purchases; demographic basis only — effect does not generalise to time-based pricing; US online samples.
+  source: https://business.columbia.edu/faculty/research/demographic-pricing-digital-age-assessing-fairness-perceptions-algorithmic-versus
+  verification_note: Read the Columbia abstract page (full citation, abstract, DOI 10.1086/729440) and the Columbia press summary for study counts/sample sizes. Did not access the paywalled full text, so no effect sizes. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: zhang-cheng-algorithm-human-price-discrimination
+  date: '2024-05-11'
+  mechanism: Consumers attribute disadvantaged human-set prices to the setter's intent (externalising) and advantaged human-set prices to their own luck (internalising); algorithms reverse both attributions.
+  mechanism_codes:
+  - algorithm-attribution
+  - personalization-fairness
+  - motive-attribution
+  comparison: Algorithm vs. human price-setter × advantaged vs. disadvantaged price discrimination
+  design: Two 2×2 between-subjects experiments
+  setting: Online scenario experiments (CHI '24 proceedings)
+  outcome: Perceived price fairness
+  result_kind: Positive in this setting
+  result: Disadvantaged discrimination judged more unfair under human (vs. algorithm) setters; advantaged discrimination judged more unfair under algorithm (vs. human) setters. Sample sizes and effect sizes not stated in the abstract read.
+  boundary: Scenario experiments, no purchase behaviour; mechanism is attribution-based and has not been tested with real AI-labelled (vs. generic "algorithm") setters or real stakes.
+  source: https://doi.org/10.1145/3613904.3642280
+  verification_note: Abstract read in full via Mendeley catalogue record and CHI '24 proceedings listing (authors, venue, DOI, 2×2 design, both findings). Direct DOI open returned HTTP 403, so the ACM page itself was not opened; no numbers beyond the design were available. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: mamen-hem-human-vs-ai-pricing-fairness
+  date: '2025-05-01'
+  mechanism: AI-driven pricing is perceived as less transparent than human-developed algorithmic pricing, and lower transparency lowers fairness judgments.
+  mechanism_codes:
+  - algorithm-attribution
+  - personalization-fairness
+  comparison: Human-developed algorithm vs. AI-driven algorithm for dynamic grocery pricing
+  design: Survey experiment, between-subjects
+  setting: Grocery dynamic pricing, sample of 600 English Premier League fans (US online sample in the 2026 follow-up)
+  outcome: Perceived price fairness; transparency as mediator; technology anxiety as moderator
+  result_kind: Positive in this setting
+  result: Human algorithms rated significantly fairer than AI-driven ones; transparency mediated the effect; the gap appeared mainly among low-technology-anxiety consumers. No effect sizes stated in the proceedings abstract.
+  boundary: Conference proceedings, not a journal article; single fan sample for the 2025 study; dynamic grocery pricing only; "AI" vs. "human-designed algorithm" framing is doing the work — different from Duani et al.'s "algorithm vs. human" framing.
+  source: https://proceedings.emac-online.org/pdfs/A2025-125851.pdf
+  verification_note: Opened and read the full EMAC proceedings PDF (authors, affiliations, abstract, n=600, mediation/moderation claims). A 2026 EMAC follow-up by the same authors (US online sample) reports the same direction; only its search-result abstract was read, so it is not cited as a separate row. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: wang-algorithmic-pricing-nwom
+  date: '2024-07-27'
+  mechanism: Learning a discriminatory price came from an algorithm (vs. a human) reduces perceived psychological contract violation and cynicism, so disadvantaged consumers are less inclined to bad-mouth the brand.
+  mechanism_codes:
+  - algorithm-attribution
+  - personalization-fairness
+  - social-norms
+  comparison: Algorithm vs. human (marketing manager) price-setter after discovering a higher price than peers
+  design: Seven experiments (scenario + field intercepts with museum visitors, airport travellers, scenic-area tourists) plus single-paper meta-analysis
+  setting: Tourism (boat service, museum tickets, airline tickets, travel packages)
+  outcome: Negative word-of-mouth intentions
+  result_kind: Positive in this setting
+  result: Algorithmic pricing led to lower NWOM among price-disadvantaged consumers in all seven experiments (total n=2,080; individual studies n=240–320); effect sequentially mediated by psychological contract violation then cynicism; moderated by relationship norms (communal vs. exchange) and implicit personality.
+  boundary: Tourism settings and mostly Chinese samples (funded by NSFC; field sites in China); NWOM intentions, not observed sharing or speed of spread; effect is bounded by relationship norms.
+  source: https://www.sciencedirect.com/science/article/abs/pii/S0261517724001225
+  verification_note: Opened and read the ScienceDirect full text (intro, all seven study procedures, conclusion, author list) and cross-checked citation/volume/DOI against the Greenwich repository record. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: kahneman-knetsch-thaler-dual-entitlement-1986
+  date: '1986-09-01'
+  mechanism: Dual entitlement — customers are entitled to the reference price and firms to the reference profit — so a rise that protects profit against a cost increase is fair, while one that exploits demand is unfair.
+  mechanism_codes:
+  - dual-entitlement
+  - price-change-communication
+  comparison: Cost-justified vs. demand/shortage-driven price rises, same magnitudes
+  design: Telephone vignette survey, Toronto and Vancouver, 1984–1985; ~101–157 respondents per vignette
+  setting: Everyday retail scenarios (hardware, grocery, landlord, car dealer)
+  outcome: Fair/acceptable vs. unfair judgments
+  result_kind: Positive in this setting
+  result: Snow-shovel rise after blizzard 82% unfair; grocer passing on 30-cent wholesale rise 79% acceptable; landlord raising rent to cover costs 75% acceptable. When the firm's own cost fell $20 and it kept the price, only 53% called it acceptable — i.e. no symmetric duty to cut prices.
+  boundary: Stated fairness judgments in hypothetical vignettes, not purchase behaviour; 1980s Canadian samples; the cost-fall result (53/47 split) is directly relevant to tariff-refund-expectations and cuts against a strong refund expectation.
+  source: https://www.jstor.org/stable/1806070
+  verification_note: 'The AER paper itself is paywalled and was not opened. Percentages verified against two independent secondary sources that quote the paper: Eyster, Madarasz & Michaillat (2021, Journal of the European Economic Association 19(3), 1853–1898), whose text was read, and Heyman & Mellers'' chapter "Perceptions of Fair Pricing" (Wharton), whose full text was opened and read. Link not re-checked at filing (persistent identifier or institutional host).'
+  digest: '2026-11-18'
+  agent: meta
+- id: urbany-cost-justification-atm-surcharge-1989
+  date: '1989-02-01'
+  mechanism: A stated cost increase legitimates a price rise under dual entitlement; without it the same rise reads as profit-taking.
+  mechanism_codes:
+  - dual-entitlement
+  - price-change-communication
+  comparison: Cost-justified vs. unjustified introduction of a 25-cent ATM surcharge
+  design: Telephone survey, n=40 US consumers
+  setting: Retail banking (ATM fees)
+  outcome: Fairness judgments; stated switching intentions
+  result_kind: Positive in this setting
+  result: 58% judged the surcharge fair when cost-justified vs. 29% when not; unfair-judgers reported higher switching intent (52% vs. 35%). The authors also report fairness perceptions were not significantly related to behavioural intentions in their test.
+  boundary: n=40 — very small; single surcharge scenario; stated intentions, and the authors themselves warn judgments did not predict behaviour in this test.
+  source: https://doi.org/10.1007/BF00436145
+  verification_note: Numbers verified against Eyster, Madarasz & Michaillat (2021, JEEA), whose text was read in full, and the full citation verified against a reference list quoting Marketing Letters 1(1), 17–25. The original paper was not opened. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: campbell-inferred-motive-price-unfairness-1999
+  date: '1999-05-01'
+  mechanism: Consumers infer the firm's motive for a rise from context; a negative inferred motive makes the same price unfair, a positive one makes it fair.
+  mechanism_codes:
+  - motive-attribution
+  - dual-entitlement
+  comparison: Negative vs. positive inferred motive for an identical price increase; good vs. poor reputation × normal vs. above-normal profit
+  design: Two scenario experiments
+  setting: 'Retail price-rise vignettes; Study 1: 108 MBA students (mean age 33.4); Study 2: 86 university students/staff (mean age 24.1)'
+  outcome: Perceived price unfairness
+  result_kind: Positive in this setting
+  result: Negative-motive inference significantly lowered fairness vs. positive-motive inference for the same increase; good-reputation firms that did not profit from the rise drew more positive motive inferences. No effect sizes stated in the abstract read.
+  boundary: Student/staff samples, hypothetical vignettes; motive was inferred by participants, not randomly assigned as a stated justification — so it shows motive matters, not that a stated cost reason always works.
+  source: https://psycnet.apa.org/record/1999-05161-004
+  verification_note: Abstract read in full via PsycNet record (citation, both study designs, sample sizes, findings). Full text not opened; no effect sizes available. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: tarrahi-meta-analysis-price-change-fairness-2016
+  date: '2016-03-01'
+  mechanism: 'Dual entitlement replicates in aggregate, but motive effects are asymmetric and secondary to magnitude: a bad motive hurts more than a good motive helps.'
+  mechanism_codes:
+  - dual-entitlement
+  - motive-attribution
+  comparison: Cost-justified vs. unjustified vs. no-motive price changes, across magnitudes
+  design: Meta-analysis of 33 manuscripts containing 54 independent samples
+  setting: Published price-fairness experiments and surveys to 2015
+  outcome: Price fairness perceptions
+  result_kind: Context-dependent
+  result: Negative effect of unjustified motives stronger than positive effect of cost-justified motives; motive effects independent of magnitude; price fairness explained better by price-change size than by motive; fairness falls with magnitude following a cubic function (satiation at high changes).
+  boundary: Replication/meta-analysis of mostly vignette studies; cannot separate stated justifications from inferred motives; pre-2016 literature only.
+  source: http://ideas.repec.org/a/eee/ijrema/v33y2016i1p199-203.html
+  verification_note: Abstract read via IDEAS/RePEc and the full-text PDF preview (daneshyari) confirming 33 manuscripts / 54 samples and the abstract's four findings. Paywalled full text not opened. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: stangl-cost-structure-appeals-fairness-2026
+  date: '2026-06-06'
+  mechanism: 'Cost-structure appeals work when the named costs align with the customer''s own service values (dual entitlement: the cost is legible as part of what they pay for); non-aligned overhead appeals do not.'
+  mechanism_codes:
+  - dual-entitlement
+  - price-change-communication
+  comparison: Alignable cost appeals (staff/artists/ingredients) vs. non-alignable appeals (admin/marketing/rent) vs. no appeal
+  design: Two field experiments plus six scenario-based laboratory studies
+  setting: Restaurants, museums, dance workshops, guided tours, online courses, newspaper subscriptions; total n=2,606
+  outcome: Fairness perceptions and voluntary payments (including pay-what-you-want settings)
+  result_kind: Positive in this setting
+  result: Customers shown customer-facing costs paid significantly more than those given no explanation or behind-the-scenes costs, in almost every setting; effect strongest among people who would normally pay least. No payment magnitudes stated in the sources read.
+  boundary: Mostly voluntary-payment / pay-what-you-want settings, not forced list-price rises; services only; "skilled staff" is a labour cost but the study tests alignability, not labour vs. material directly.
+  source: https://doi.org/10.1177/10946705251341080
+  verification_note: Findings, sample (2,606), design (2 field + 6 lab) and sectors verified by opening the University of Surrey news release; full citation (JSR 29, 259–279, DOI) verified against the University of Zurich publication list. Published online 2025, journal issue 2026 — cited as 2026. Full text not opened, so no payment magnitudes. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: bagchi-labour-vs-material-cost-justification
+  date: '2026-02-23'
+  mechanism: Labour (vs. material) cost justifications activate feelings of responsibility to support low-wage labour and promote equality, making the rise appear fairer — conditional on responsibility being active.
+  mechanism_codes:
+  - dual-entitlement
+  - motive-attribution
+  - social-norms
+  comparison: Labour-cost vs. material-cost justification for an identical price increase
+  design: Preregistered laboratory studies plus social-media sentiment analysis, website traffic data and stock-market analysis
+  setting: Seminar abstract only; laboratory and archival/field data described but not detailed
+  outcome: Preference for justification type; fairness perceptions
+  result_kind: Context-dependent
+  result: Labour-cost justifications preferred in certain contexts only; preference depends on equality beliefs, physical distance of labour, type of labour beneficiaries, and consumers' economic understanding of labour markets. No effect sizes, sample sizes or statistics stated in the abstract.
+  boundary: Unpublished working paper — no journal, no peer review, no full text available; co-authors not named on the seminar pages; no numbers to check.
+  source: https://www.hkubs.hku.hk/event/when-consumers-prefer-labor-vs-material-cost-justifications-for-price-increases/
+  verification_note: 'Read both seminar abstracts in full (CUHK and HKU pages) — same abstract text, speaker Rajesh Bagchi (Virginia Tech). No journal version, preprint, or effect sizes were found; treat as a lead, not as settled evidence. Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: hufnagel-personalized-pricing-backlash
+  date: '2022-04-01'
+  mechanism: Learning a price was personalised triggers unfairness perceptions even in those who benefit, so personalisation itself — not just a bad price — drives rejection.
+  mechanism_codes:
+  - personalization-fairness
+  - dual-entitlement
+  comparison: Personalised vs. uniform pricing; favoured vs. disadvantaged customers; varying information sensitivity
+  design: Three online experiments (second study within-subject)
+  setting: E-commerce scenarios
+  outcome: Attitudinal and behavioural reactions; price fairness perceptions as mediator
+  result_kind: Positive in this setting
+  result: Negative attitudinal and behavioural reactions to personalised pricing for both disadvantaged and favoured customers, mediated by fairness perceptions; aversion confirmed within-subject; consumers generally refused personalised pricing regardless of the sensitivity of the personal data used. Sample sizes and effect sizes not stated in the abstract read.
+  boundary: Hypothetical e-commerce scenarios; no real label/tag manipulation was tested — the "label" in the claim (a visible "your price is personal" tag) is not what was varied; refusal was measured as attitude, not observed exit.
+  source: https://ideas.repec.org/a/eee/jbrese/v143y2022icp346-365.html
+  verification_note: Abstract read in full via IDEAS/RePEc and PsycNet (citation, three experiments, both-sided backlash, mediation, data-sensitivity finding). Paywalled full text not opened. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: priester-personalized-dynamic-pricing-fairness
+  date: '2020-04-01'
+  mechanism: The finer the personalisation (individual vs. segment) and the more sensitive the segmentation basis (location vs. purchase history), the less fair the price feels; privacy concerns amplify the penalty.
+  mechanism_codes:
+  - personalization-fairness
+  comparison: Individual vs. segment prices; location-based vs. purchase-history-based segmentation
+  design: Experiments (reported in the 2019 EMAC proceedings and the 2020 journal article)
+  setting: Online retail scenarios
+  outcome: Perceived price fairness; privacy concerns as moderator
+  result_kind: Positive in this setting
+  result: Individual prices rated significantly less fair than segment prices; location-based pricing significantly less fair than purchase-history-based pricing; privacy concerns moderated both effects. Sample sizes and effect sizes not stated in the abstract read.
+  boundary: Conference abstract + journal article; no label/disclosure manipulation — granularity of personalisation, not visibility of a label, was varied.
+  source: https://doi.org/10.1057/s41272-019-00224-3
+  verification_note: Abstract read in full via the EMAC 2019 proceedings PDF (which was opened); journal citation verified via IDEAS/RePEc listings. Full journal text not opened. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: ftc-surveillance-pricing-6b-2025
+  date: '2025-01-17'
+  mechanism: Intermediary tools can target prices to specific consumers from individual-level data, so account-level differences are a designed output of the market, not a glitch.
+  mechanism_codes:
+  - personalization-fairness
+  - algorithm-attribution
+  comparison: Generalised store-level vs. individually targeted pricing tools
+  design: Section 6(b) orders (July 2024) to eight intermediary firms; initial summaries based on documents from six respondents
+  setting: US retail intermediaries (grocery, apparel, health/beauty, home goods, hardware among client industries described in secondary summaries)
+  outcome: Types of data used, tool categories (price targeting, segmentation/profiling, search/product ranking), targeting spectrum
+  result_kind: Context-dependent
+  result: Tools "appear to be intended for a spectrum of targeting, from more generalized store-level pricing and promotions to more individually targeted outputs and prices"; inputs include location, purchase/return history, browsing behaviour, demographics, mouse movements and cart contents. Examples are hypothetical/aggregated to protect confidentiality.
+  boundary: Staff perspective, not a Commission finding of illegality; interim and incomplete (study ongoing); no consumer fairness or disclosure experiment — it documents that personalisation exists, not how consumers judge it or its labels.
+  source: https://www.ftc.gov/system/files/ftc_gov/pdf/p246202_surveillancepricing6bstudy_researchsummaries_redacted.pdf
+  verification_note: Opened and read the full FTC PDF (title, date, scope, six named respondents, targeting spectrum, data types). The "at least 250 clients" figure appears only in secondary summaries, not in the pages read, so it is not used here. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: oecd-personalised-pricing-2018-ec-survey
+  date: '2018-11-20'
+  mechanism: Personalised pricing is generally perceived as unfair, and non-transparent personalisation risks reducing trust in online markets.
+  mechanism_codes:
+  - personalization-fairness
+  - social-norms
+  comparison: EU consumer survey (2018) vs. US survey (Turow et al. 2005); mystery shopping / account-based measurement of real sites
+  design: Consumer survey (n=21,734 EU; 9,798 with some understanding of personalised pricing); behavioural experiment; mystery shopping; Hannak et al. field test with 300+ real user accounts on 16 sites
+  setting: EU e-commerce; US comparison
+  outcome: Reported bad experiences; overall opinion of personalised practices; observed price personalisation
+  result_kind: Context-dependent
+  result: '12–20% of EU respondents had bad experiences related to personalised pricing; only a small share saw primarily benefits, with a much larger neutral share; Turow (US, n=1,500): 91% objected to charging different prices for the same product using personal information, 8% positive; Hannak et al.: some form of personalisation on 9 of 16 sites (price steering and discrimination).'
+  boundary: Survey attitudes, not experiments; the EC synthesis PDF itself returned 404 when opened, so figures are as reported in the OECD background note, which was opened and read; the 8%/33%/59% split of Figure 11 did not render as text, so it is not reported.
+  source: https://akamai-staging.justice.gov/atr/page/file/1312741/dl?inline
+  related_source: https://ec.europa.eu/info/sites/info/files/aid_development_cooperation_fundamental_rights/aid_and_development_by_topic/documents/synthesis_report_online_personalisation_study_final_0.pdf
+  verification_note: Opened and read the OECD note (DAF/COMP(2018)13) sections on empirical evidence and fairness/trust, including Figures 4 and 11 notes and the Turow comparison. EC synthesis PDF itself 404'd and was not re-attempted. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: bambauer-sachse-dynamic-pricing-nwom
+  date: '2023-07-25'
+  mechanism: Dynamic pricing confuses consumers about what the price should be; confusion breeds unfairness perceptions, which motivate warning others.
+  mechanism_codes:
+  - personalization-fairness
+  - social-norms
+  comparison: Dynamic pricing vs. simple price differentiation for services
+  design: One qualitative study plus three quantitative experiments
+  setting: Service settings (frequently vs. infrequently purchased services)
+  outcome: Intentions to spread negative word-of-mouth; price confusion; price unfairness perceptions
+  result_kind: Positive in this setting
+  result: Dynamic pricing led to more price confusion than simple differential pricing, and confusion triggered unfairness perceptions that increased NWOM intentions; for frequently purchased services the NWOM effect ran mainly through confusion, for infrequently purchased services mainly through unfairness.
+  boundary: NWOM intentions in experiments, not observed spread or speed — the claim's "spreads quickly" is untested; services, not goods (a companion abstract finds stronger exploitation feelings and NWOM intentions for goods than services); secondary sources conflict on volume/pages, so none are given.
+  source: https://doi.org/10.1177/10946705231190871
+  verification_note: Abstract read via the tlooto record and a citing article's summary; full text not opened. Volume/pages conflict between secondary sources (26(4) 560–577 vs. 27(3) 364–380), so they are omitted — DOI and date are as given. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: mazrekaj-personalization-ethics-simulation
+  date: '2025-06-01'
+  mechanism: Unfairness perception and surveillance aversion are real disutilities that fall on the disadvantaged; under prioritarian ethics (which weights the worst-off) they overturn personalised pricing's efficiency case.
+  mechanism_codes:
+  - personalization-fairness
+  - social-norms
+  comparison: Personalised vs. unitary pricing under utilitarian, prioritarian, egalitarian and leximin social welfare functions
+  design: Generalisation and simulation of Coker & Izaret's (2021) model, extended with unfairness-perception and surveillance-aversion disutility
+  setting: Stylised two-consumer market (e.g. Alice charged £35, Bob £5, vs. £20 each under unitary pricing)
+  outcome: Ethical ranking of pricing regimes under each welfare function
+  result_kind: Context-dependent
+  result: Personalised pricing's ethical advantage depends on parameter choices and does not hold universally; with unfairness and surveillance disutility added, unitary pricing outperforms personalised pricing under utilitarian and prioritarian frameworks, and personalised pricing only wins under egalitarian/leximin frameworks.
+  boundary: Simulation of a thought experiment, not an empirical test of how the public actually judges schemes; the unfairness/surveillance disutilities are assumed parameters, not measured; a "5% of perceived benefit" threshold figure appears only in a secondary summary and is not used here.
+  source: https://ideas.repec.org/a/kap/jbuset/v199y2025i1d10.1007_s10551-024-05828-3.html
+  verification_note: Abstract read in full via IDEAS/RePEc (authors, journal, vol/pages, DOI, all four welfare-function results). Springer full text not opened. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: cma-algorithms-consumer-harm-2021
+  date: '2021-01-19'
+  mechanism: Opaque personalised pricing and non-transparent algorithmic ranking manipulate consumer decision-making and can amount to unfair treatment, especially where protected characteristics are involved.
+  mechanism_codes:
+  - personalization-fairness
+  - algorithm-attribution
+  comparison: N/A (theories-of-harm paper, not an experiment)
+  design: CMA research paper with call for information; consultation ran to 16 March 2021
+  setting: UK digital markets
+  outcome: Theories of direct and indirect consumer harm from algorithms
+  result_kind: Context-dependent
+  result: Personalised pricing named as a direct harm (alongside personalised ranking, dark patterns, and collusion via shared pricing software / autonomous tacit collusion); paper acknowledges algorithmic benefits and does not itself establish how widespread personalised pricing is.
+  boundary: A theories-of-harm paper, not evidence on consumer judgments or labels; the Osborne Clarke summary was read (opened), not the CMA paper itself; the "empirical evidence uncertain, although growing" assessment comes from a separate secondary summary and is not used as a verified finding here.
+  source: https://marketinglaw.osborneclarke.com/advertising-regulation/cmas-scrutiny-algorithms-just-harmful-consumers-competition/
+  verification_note: 'Opened and read the Osborne Clarke summary in full (date, DaTA unit, harms listed, collusion concerns). The CMA paper itself was not opened; cite this row as regulator context via the summary, not as a primary-source finding. Link re-checked by Claude 2026-11-18: page loads and matches the row. The Osborne Clarke summary is dated 13 May 2021; the row date is the CMA paper.'
+  digest: '2026-11-18'
+  agent: meta
+- id: redress-vanishing-discount-2026
+  date: '2026-08-08'
+  mechanism: Published list is the reference point from which a negotiated discount is taken, so the achieved net price — not the list — is what buyers pay, and the gap moves with list rises as well as discount erosion.
+  mechanism_codes:
+  - reference-price
+  comparison: Achieved net price vs applicable list price at signature, by vendor (Oracle, SAP, Microsoft, Salesforce), 2019 vs 2026, matched on deal-size band
+  design: Benchmark of 800 executed contracts (200 per vendor), 2019–2026; deals whose scope changed too much between cycles excluded
+  setting: Enterprise software (Oracle, SAP, Microsoft, Salesforce), B2B
+  outcome: Average achieved discount off list; net price change
+  result_kind: Positive in this setting
+  result: Oracle average discount 57% (2019) to 44% (2026), ~2 pts/year erosion plus June 2026 list rises; Microsoft down ~13 points since 2025 after programmatic EA discounts were removed; SAP 60–75% on large perpetual ECC deals to near zero on perpetual S/4HANA; buyers with a credible documented alternative developed 12 months out landed 8–15 points deeper than otherwise identical deals; first-quote to benchmarked-signature spread 10–20 points at most vendors.
+  boundary: Advisory-firm panel, not peer-reviewed; underlying contracts not public, sectors/dates withheld; averages smooth wide individual variation; SAP collapse partly reflects the discounted product (perpetual) being retired, not the same product getting a smaller discount.
+  source: https://redresscompliance.com/vanishing-discount-benchmark-report-2026
+  verification_note: 'Opened and read in full 2026-11-18; author/date/N/method and all numbers above are from the page itself. Prices are reported net (achieved) vs published list, as classified by the source. Link re-checked by Claude 2026-11-18: page loads and matches the row. Page shows first published 11 Jun 2026, last updated 8 Aug 2026.'
+  digest: '2026-11-18'
+  agent: meta
+- id: harrington-ye-list-price-coordination-2017
+  date: '2017-04-27'
+  mechanism: The list price acts as a reference/anchor for negotiation even when nobody pays it, so list and transaction prices move together without being equal.
+  mechanism_codes:
+  - reference-price
+  comparison: List prices vs privately negotiated transaction prices in intermediate-goods markets (insulation, cement, bananas, pasta)
+  design: Theoretical model plus case discussion of collusion cases; not an empirical estimate of a list–net gap
+  setting: B2B intermediate goods, US/EU/UK
+  outcome: Whether list-price coordination raises transaction prices
+  result_kind: Context-dependent
+  result: Model shows list coordination can be profitable and stable when buyers negotiate with one seller (inclusion effect) and list prices are informative; in UK cement, announced price increases were individually negotiated and rarely implemented in full, yet the announcements coordinated list prices and softened resistance to increases.
+  boundary: Conference paper, not peer-reviewed journal article; no quantified list–net gap for any software category; the mechanism (list as coordination device) means list prices are not meaningless even though they are not paid.
+  source: https://beccle.no/files/2017/05/Harrington_BECCLE_04.17.pdf
+  verification_note: Verified via search excerpt of the full paper (title, authors, conference, date, case examples, Reserve Supply quote); the PDF itself was not opened in this session. Do not cite page numbers. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: zhao-listing-vs-transaction-dispersion-2015
+  date: '2015-01-01'
+  mechanism: Listing (posted) prices and transaction (paid) prices are different objects with different dispersion and different drivers; studying only listings misstates what buyers pay.
+  mechanism_codes: []
+  comparison: Listing-price dispersion vs transaction-price dispersion for the same homogeneous product
+  design: Archival dataset from an online market; dispersion measures on listing vs transaction prices
+  setting: Online market, luxury goods (homogeneous product)
+  outcome: Price dispersion (listing vs transaction)
+  result_kind: Positive in this setting
+  result: Dispersion of listing prices was three times higher than dispersion of transaction prices; e.g. cited example of a pencil sharpener whose listing prices differed by up to $12.19 while transaction prices differed by only a few cents.
+  boundary: Consumer online market, not B2B enterprise software; single-market dataset; only the abstract/summary pages were verified in this session, not the full estimation tables. Year 2015 is inferred from the JMIS citation/filename; exact month/day not verified.
+  source: https://home.uncg.edu/~j_deng/papers/dispersion_jmis15.pdf
+  verification_note: Verified via search excerpt of the paper's abstract and author pages (Kexin Zhao, Xia Zhao); full PDF not opened. The 3x dispersion ratio and pencil-sharpener example are from the abstract text. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: att-broadcom-vmware-settlement-2024
+  date: '2024-11-22'
+  mechanism: A renewal uplift large enough to trigger litigation by a major customer, with the customer publicly planning migration away, is the hypothesised trigger for value destruction; settlement without disclosure leaves the net effect unmeasured.
+  mechanism_codes: []
+  comparison: AT&T's VMware cost under the prior support contract vs Broadcom's proposed subscription bundle (as alleged by AT&T)
+  design: Court filing and settlement reporting; single-customer case, no cohort or revenue data
+  setting: Enterprise virtualisation (VMware), AT&T, US, 2024
+  outcome: Alleged price increase; litigation outcome
+  result_kind: Inconclusive
+  result: AT&T alleged a 1,050% cost spike for 75,000 VMs / ~8,600 servers; AT&T EVP Susan Johnson wrote 19 Aug 2024 that AT&T had "decided to pursue a legal strategy along with a disciplined plan to invest to migrate away"; settlement in principle 21 Nov 2024, terms not disclosed, no trial, no disclosed payment.
+  boundary: The 1,050% figure is AT&T's allegation in a filing (a proposed price for unwanted bundled subscriptions vs prior support cost), not an audited transaction price; settlement terms undisclosed, so neither the uplift actually paid nor any revenue lost can be computed from this source.
+  source: https://www.ciodive.com/news/broadcom-att-vmware-settlement-licensing-support-lawsuit/733763/
+  verification_note: 'Opened and read in full 2026-11-18; date, filing date, VM/server counts, 1,050% allegation, settlement date and undisclosed terms are from the article itself. Corrects the task premise: there is no Broadcom trial outcome reportedly in 2027 for this case. Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: broadcom-vmware-pays-off-customers-leave-2025
+  date: '2025-09-09'
+  mechanism: Large renewal uplifts raise revenue from retained accounts in the short run while accelerating exits and share loss, so the net effect depends on the horizon — the hypothesis's stated comparison.
+  mechanism_codes: []
+  comparison: Broadcom infrastructure-software revenue growth vs VMware market-share and customer-exit indicators, same post-acquisition period
+  design: Earnings reporting plus Gartner projection plus vendor-commissioned customer survey; no same-cohort revenue-lost vs revenue-gained accounting
+  setting: Enterprise virtualisation, global, 2024–2025
+  outcome: Segment revenue; market share; share of customers considering/leaving
+  result_kind: Context-dependent
+  result: 'Infrastructure software $6.8bn in Q3 FY2025, +17% YoY; total Broadcom revenue $36bn (FY2023) to $52bn (FY2024); Gartner: VMware share 70% in 2024 to 40% by 2029; Rimini Street survey (n=111, late 2024): 98% using/planning/considering alternatives, 36% already switched, 45% citing costs, 43% worried about future increases; Nutanix added 2,700+ new customers in the past year.'
+  boundary: Revenue is segment-level (VMware + CA + Symantec), not a VMware renewal cohort; Gartner 40% is a projection, not an outcome; Rimini Street survey was commissioned by a VMware competitor (Rimini Street) and is a small, self-selected sample; no contribution-after-costs figure for exits vs retained uplifts exists in this source.
+  source: https://www.networkworld.com/article/4053783/broadcoms-vmware-strategy-pays-off-financially-but-customers-not-as-keen-as-wall-street.html
+  verification_note: 'Verified via search excerpts of the Network World article (revenue, Gartner, Rimini and Nutanix figures all quoted there); the article page itself was not opened. Date is approximate (September 2025, inferred from Q3 FY2025 earnings context) — treat the day as unverified. Cross-check: Broadcom FY2025 Form 10-K (filed 18 Dec 2025) reports infrastructure software $27.029bn, +26% YoY, consistent with the segment strength reported here. Link re-checked by Claude 2026-11-18: page loads and matches the row. The article page was opened at filing (dated 9 Sep 2025) and the figures confirmed.'
+  digest: '2026-11-18'
+  agent: meta
+- id: zorasi-nigeria-war-risk-premium-persistence-2026
+  date: '2026-02-01'
+  mechanism: A war-risk surcharge partitioned from the base freight/insurance rate persists after the risk that justified it falls, because the charge is set by institutional classification and market inertia rather than by current risk.
+  mechanism_codes:
+  - partitioned-pricing
+  comparison: War-risk premium/surcharge imposed on Nigeria-bound cargo vs actual piracy/kidnapping incidence in Nigerian waters, 2020–2024
+  design: Qualitative-analytical study using secondary data from NIMASA, NPA, NBS, CBN, IMB, Lloyd's and UNCTAD; no regression or price-series estimation
+  setting: Maritime shipping / marine insurance, Nigeria / Gulf of Guinea
+  outcome: Persistence of war-risk premiums after risk falls; total charges paid
+  result_kind: Positive in this setting
+  result: Piracy/armed robbery fell from dozens per year to single digits in 2021 and nearly zero by 2023–2024; Nigeria delisted by IMB/IBF March 2022; yet ~$1.5bn paid in war-risk surcharges over the past three years; per-voyage surcharge ~$445,000 (VLCC) and ~$525,000 (new container vessel); estimated ~₦130bn/year revenue loss from cargo diversion.
+  boundary: Low-tier journal (GPH), qualitative design, secondary data only; the $1.5bn figure is attributed to stakeholder reports (Agha, 2025) rather than an audited series; it documents persistence of the premium, not that the surcharge became permanent margin for a named carrier (insurer vs carrier incidence is not separated); date is month/year only.
+  source: https://zenodo.org/records/18955759/files/gph-ijbm_2026_2284_Zorasi_WarRiskPremiums_MaritimeTradeStability.pdf?download=1
+  verification_note: Opened and read the full PDF 2026-11-18 (abstract pp.23–24 and body); author, journal, volume/issue, DOI 10.5281/zenodo.18955759, $1.5bn, delisting date and per-voyage figures are from the paper itself. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: tradlinx-emergency-fuel-surcharge-overlap-2026
+  date: '2026-11-10'
+  mechanism: An emergency fuel surcharge partitioned from the formula-based BAF persists after the BAF has absorbed the same fuel-cost spike, so the surcharge becomes an additional charge rather than a timing bridge.
+  mechanism_codes:
+  - partitioned-pricing
+  comparison: Emergency fuel surcharge (EFS/EBS) vs standard BAF/MFR/FFF on the same containers, before vs after the quarterly BAF reset, by carrier (Hapag-Lloyd, CMA CGM, Maersk, ONE)
+  design: Documentary comparison of carrier surcharge notices, Drewry BAF averages and Xeneta figures; no invoice-level dataset
+  setting: Container shipping, East-West headhaul, Mar–Nov 2026
+  outcome: Whether the emergency surcharge was withdrawn, kept or raised at the BAF reset; implied double recovery
+  result_kind: Positive in this setting
+  result: 'VLSFO Global 4 Ports average $506/tonne (27 Feb) to $961.50 (19 Mar 2026); Drewry average fuel charge per 40ft: BAF $406 (Q2) vs BAF+EFS $798 (Q2), projected BAF $696 vs $1,088 with EFS (Q3); Hapag-Lloyd discontinued ocean EFS 1 July as Q3 MFR took effect; CMA CGM EFS $150/TEU (16 Mar) to $265 dry/$320 reefer (1 Oct); ONE EFS $120/TEU (1 May) to $150 dry/$190 reefer (1 Nov); Xeneta via FreightWaves: average fuel surcharges on long-term contracts across four major Asia trades $820/FEU, +42%.'
+  boundary: Trade blog synthesising Drewry, Xeneta and carrier notices — not peer-reviewed and not an invoice dataset; Q3 BAF+EFS figures are Drewry's June projection, not issued invoices; persistence is documented for months (Q3–Q4 2026), not yet permanence; double recovery is inferred from overlapping reference windows, not proven per container.
+  source: https://blogs.tradlinx.com/emergency-fuel-surcharges-vs-baf-how-to-check-for-overlapping-charges/
+  verification_note: 'Opened and read in full 2026-11-18; all carrier levels, dates, BAF figures and the Hapag-Lloyd vs CMA CGM/ONE contrast are from the post, which attributes BAF averages to Drewry (June 2026) and the $820/FEU figure to Xeneta via FreightWaves (9 Nov 2026). Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: cannon-watanabe-asymmetric-fuel-passthrough-2025
+  date: '2025-06-17'
+  mechanism: When a named input cost falls, firms do not cut selling prices symmetrically, so the saving is retained — the same asymmetry the surcharge hypothesis predicts for a partitioned surcharge line.
+  mechanism_codes: []
+  comparison: Airline selling-price response to fuel-cost increases vs fuel-cost decreases
+  design: Archival-data study of US airlines' pricing vs fuel-cost fluctuations; managerial cost-plus pass-through as the null
+  setting: US airline industry
+  outcome: Selling-price adjustment; margin retention
+  result_kind: Context-dependent
+  result: '"Some evidence of airline pricing power — managers retain selling prices when fuel costs decrease"; airlines "absorb a larger portion of commodity cost increases than they enjoy commodity cost decreases"; retained savings reverse margin erosion from earlier cost increases (via lower compensation, higher debt, depleted cash).'
+  boundary: SSRN working paper, not a peer-reviewed journal article; abstract only was verified in this session (53 pp., posted 16 Aug 2016, revised 18 June 2025) — no effect sizes or pass-through coefficients were read; it studies total ticket prices, not a named fuel-surcharge line, so it supports the asymmetry mechanism, not surcharge persistence itself.
+  source: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2824026
+  verification_note: Opened the SSRN abstract page 2026-11-18; authors, dates, abstract wording above are from that page. Do not cite magnitudes beyond "some evidence" — the abstract gives none. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: tsmc-wei-restraint-vs-memory-2026
+  date: '2026-06-05'
+  mechanism: A near-monopolist (TSMC, dominant in leading-edge foundry) publicly restrains price — gradual rather than opportunistic rises — explicitly to keep customers loyal after the shortage fades, trading short-run margin for long-run retention.
+  mechanism_codes: []
+  comparison: TSMC's stated gradual pricing vs memory makers' (Micron, SK Hynix, Samsung) abrupt shortage pricing, same AI-demand shock, 2026
+  design: Single-company CEO statement at AGM plus contemporaneous market outcomes; no controlled comparison, no profit counterfactual
+  setting: Semiconductors — TSMC leading-edge foundry vs memory, 2026
+  outcome: Stated pricing strategy; gross margin; revenue-growth target; rivals' margins/market values
+  result_kind: Inconclusive
+  result: 'Wei: "I envy their 80% gross margins, but I would never do that"; TSMC gross margin ~66%, revenue-growth target >30% for 2026 (raised from 25%); DRAM prices +~90% in Q1 2026 (TrendForce); Micron stock +200% in 2026 vs TSMC +~40%; TSMC spending $165bn on Arizona buildout.'
+  boundary: Secondary reporting (SemiWiki forum post syndicating Yahoo Finance/TheStreet) of an AGM remark, not a transcript or filing; no revenue/profit comparison over a stated horizon between similarly dominant sellers; the reported numbers as of June 2026 favour the exploiters, not the restrainer — the hypothesis's payoff, if any, is in the future and unmeasured.
+  source: https://semiwiki.com/forum/threads/tsmc-ceo-sends-blunt-message-to-memory-chip-rivals.25242/
+  verification_note: 'Opened and read in full 2026-11-18; quote, date, margin and growth figures are from the post. TSMC''s "strategic, not opportunistic" pricing language is corroborated by Techstrong IT, 25 June 2026, reporting 5–10% planned hikes with TSMC declining to discuss figures. Link re-check by Claude 2026-11-18: the page returned an error to automated reading; kept on Muse''s reading of 2026-11-18, link not dead.'
+  digest: '2026-11-18'
+  agent: meta
+- id: bain-per-seat-pricing-not-dead-2025
+  date: '2025-10-09'
+  mechanism: When AI agents do the work, seats no longer measure use or value, so vendors add a usage/outcome meter — but they layer it on seats rather than replacing them, because pure metering is hard to sell, bill and forecast.
+  mechanism_codes: []
+  comparison: 'Pricing-model choice among 30+ established SaaS vendors introducing generative AI (excluding AI-native vendors): seat-bundled vs hybrid vs pure usage/outcome'
+  design: Bain analysis of vendors' public pricing/monetisation; counts of vendors by model
+  setting: B2B SaaS, generative AI features, 2025
+  outcome: Share of vendors by pricing model
+  result_kind: Context-dependent
+  result: ~65% hybrid (AI meter on top of seats); ~35% raised seat prices and bundled AI in; 0% fully shifted to AI usage- or outcome-based pricing; 0% exclusively monetising AI as a separate add-on (several had done so a year earlier).
+  boundary: Consultant analysis of public pricing, not a matched comparison of metered vs seat pricing on the same product; no revenue, retention or profit outcome by model; sample is established vendors only, excluding AI-natives. Bain's follow-up (2026) notes ~80% of vendors introducing AI pricing choose capacity models (fixed committed capacity with overages) — i.e. the "meter" is often a seat-like capacity sale.
+  source: https://www.bain.com/insights/per-seat-software-pricing-isnt-dead-but-new-models-are-gaining-steam/
+  verification_note: 'Opened and read in full 2026-11-18; date, N (30+), percentages and the "none fully shifted" finding are from the Bain page itself. Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
+- id: poyar-state-b2b-monetization-2025
+  date: '2025-06-04'
+  mechanism: As AI agents do more of the work, vendors move from seats toward hybrid pricing (seat/platform fee plus a meter), because seats no longer track value delivered.
+  mechanism_codes: []
+  comparison: Primary pricing model share among software/AI companies, year over year
+  design: Survey of 240 software companies, April–May 2025
+  setting: B2B software/AI companies, mostly US, $1m–$20m ARR typical
+  outcome: Share of companies by primary pricing model
+  result_kind: Context-dependent
+  result: Seat-based 21% to 15%; hybrid 27% to 41%; flat-fee 29% to 22%; outcome-based primary 5% today, 25% expected by 2028; credit-based pricing +126% YoY.
+  boundary: Survey of vendor self-reports, not a matched metered-vs-seat outcome comparison; sample skews to younger/smaller companies, not a census of enterprise vendors; adoption is not evidence that metering works better (per the hypothesis's own rule).
+  source: https://cdn.prod.website-files.com/66f3d5c51c51d8e744b8d529/682e259fa19323cc4ecda6be_60d3fca97de926e1eff89042d5a068a2_2025%20State%20of%20Monetization%20Report_Tremont_2025.pdf
+  verification_note: Verified via search excerpt of the original PDF (title, author, June 2025, N=240, contents) plus multiple independent secondary summaries agreeing on 21→15% and 27→41%; the PDF itself was not opened in this session. Treat the 4 June date as the report publication date per secondary sources. Link not re-checked at filing (persistent identifier or institutional host).
+  digest: '2026-11-18'
+  agent: meta
+- id: benchmarkit-usage-nrr-108-vs-seat-98-2026
+  date: '2026-01-01'
+  mechanism: Metered pricing expands automatically as customers do more work, without a new sales decision, so net revenue retention is higher than under seat pricing, where expansion requires buying more seats.
+  mechanism_codes: []
+  comparison: Median net revenue retention, usage-based vs seat-based pricing, same benchmark year
+  design: Benchmark survey, 342 B2B SaaS/AI-native companies (230 reporting NRR), calendar 2025
+  setting: B2B SaaS / AI-native companies, 2025
+  outcome: Net revenue retention
+  result_kind: Context-dependent
+  result: Usage-based NRR 108% vs seat-based 98% (10-point gap); hybrid most common model at 37% of companies.
+  boundary: Correlation across a mixed sample, not a controlled or matched comparison — usage-priced companies skew to infrastructure/AI-native categories already growing faster; a conflicting dataset (High Alpha 2025) found hybrid 105%, subscription 102%, outcome 100%, consumption 99%, so the gap is sample-dependent; the Benchmarkit original was NOT opened in this session — figures are from secondary summaries (Orb, SubJolt, GetCoreTech) that agree with each other. Date is year-only.
+  source: https://www.withorb.com/blog/saas-monetization-statistics
+  verification_note: 'NOT verified at the Benchmarkit original; verified only via three independent secondary summaries agreeing on 108% vs 98% and N=342/230. Flag as second-hand in the draft; do not present as a primary finding. Link re-checked by Claude 2026-11-18: page loads and matches the row. Correction at filing: the summary does not say the figures are medians.'
+  digest: '2026-11-18'
+  agent: meta
+- id: microsoft-copilot-usage-billing-q1-fy27-2026
+  date: '2026-10-28'
+  mechanism: For AI agents, vendors layer consumption (credit) billing on top of per-user subscriptions, because agent work scales with tasks, not headcount — but seats are still sold alongside the meter.
+  mechanism_codes: []
+  comparison: Copilot usage-billing adoption vs seat-based adoption, same quarter
+  design: Company earnings-call disclosure, as reported by PYMNTS/TipRanks; no matched product comparison
+  setting: Microsoft 365 Copilot, enterprise, Q1 FY2027 (quarter ended 30 Sep 2026)
+  outcome: Daily users; large-seat customers; customers using usage-based credit billing
+  result_kind: Context-dependent
+  result: Daily Copilot users +~50% QoQ, >5x YoY; customers with >50,000 seats +8x YoY; customers consuming credits through usage-based billing +75% QoQ; Microsoft Cloud revenue $63.9bn (+30%), total revenue $92.3bn (+19%); no paid Copilot seat count and no Copilot revenue disclosed.
+  boundary: Vendor disclosure, not an independent study; growth in the count of customers using credit billing is not growth in credit revenue and not a comparison of metered vs seat outcomes; CFO Amy Hood cautioned consumption pricing outside software development will move more slowly. The earnings transcript itself was not opened; figures are from PYMNTS/TipRanks reporting of the call.
+  source: https://www.pymnts.com/earnings/2026/microsoft-sees-enterprise-ai-adoption-accelerate-as-copilot-usage-grows/
+  verification_note: 'Verified via PYMNTS and TipRanks search excerpts agreeing on all figures above; transcript not opened. Do not cite the Anthropic S-1 "80% of revenue metered" claim — it appears only in a single blog post (brianletort.ai, 31 Oct 2026) and was not verified against the filing. Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  digest: '2026-11-18'
+  agent: meta
 - id: "eu-discount-reference-base-choice"
   date: "2026-10-13"
   mechanism: "Reference price anchoring through the percentage discount and crossed-out comparison price"

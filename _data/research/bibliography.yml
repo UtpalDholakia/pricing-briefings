@@ -1,0 +1,676 @@
+# Bibliography: one entry per source behind the evidence file. AGENTS.md section 12.
+# The evidence itself (finding, design, boundary) lives in _data/trackers/pricing_evidence.yml; this file only holds the citation and points at the rows (evidence_ids).
+# One source can back several rows (one row per comparison). Context-only sources have evidence_ids: [] and a note.
+- bib_id: duani-barasch-morwitz-2024
+  citation: Duani, Barasch & Morwitz (2024), "Demographic Pricing in the Digital Age", *JACR* 9(3)
+  url: https://business.columbia.edu/faculty/research/demographic-pricing-digital-age-assessing-fairness-perceptions-algorithmic-versus
+  evidence_ids:
+  - duani-algorithmic-demographic-pricing-fairness
+  added: '2026-11-18'
+  agent: meta
+- bib_id: zhang-cheng-2024
+  citation: Zhang & Cheng (2024), "I lose vs. I earn", *CHI '24*
+  url: https://doi.org/10.1145/3613904.3642280
+  evidence_ids:
+  - zhang-cheng-algorithm-human-price-discrimination
+  added: '2026-11-18'
+  agent: meta
+- bib_id: mamen-hem-2025
+  citation: Mamen & Hem (2025), "Exploring Consumer Perceptions of Fairness in Human-Developed vs. AI-Based Pricing Algorithms", *EMAC*
+  url: https://proceedings.emac-online.org/pdfs/A2025-125851.pdf
+  evidence_ids:
+  - mamen-hem-human-vs-ai-pricing-fairness
+  added: '2026-11-18'
+  agent: meta
+- bib_id: wang-et-al-2024
+  citation: Wang et al. (2024), "Who sets prices better?", *Tourism Management* 106
+  url: https://www.sciencedirect.com/science/article/abs/pii/S0261517724001225
+  evidence_ids:
+  - wang-algorithmic-pricing-nwom
+  added: '2026-11-18'
+  agent: meta
+- bib_id: kahneman-knetsch-thaler-1986
+  citation: Kahneman, Knetsch & Thaler (1986), "Fairness as a Constraint on Profit Seeking", *AER* 76(4)
+  url: https://www.jstor.org/stable/1806070
+  evidence_ids:
+  - kahneman-fairness-profit-seeking-1986
+  - kahneman-knetsch-thaler-dual-entitlement-1986
+  added: '2026-11-18'
+  agent: meta
+- bib_id: urbany-madden-dickson-1989
+  citation: Urbany, Madden & Dickson (1989), "All's Not Fair in Pricing", *Marketing Letters* 1(1)
+  url: https://doi.org/10.1007/BF00436145
+  evidence_ids:
+  - urbany-cost-justification-atm-surcharge-1989
+  added: '2026-11-18'
+  agent: meta
+- bib_id: campbell-1999
+  citation: Campbell (1999), "Perceptions of Price Unfairness", *JMR* 36(2)
+  url: https://psycnet.apa.org/record/1999-05161-004
+  evidence_ids:
+  - campbell-inferred-motive-price-unfairness-1999
+  added: '2026-11-18'
+  agent: meta
+- bib_id: tarrahi-eisend-dost-2016
+  citation: Tarrahi, Eisend & Dost (2016), "A meta-analysis of price change fairness perceptions", *IJRM* 33(1)
+  url: http://ideas.repec.org/a/eee/ijrema/v33y2016i1p199-203.html
+  evidence_ids:
+  - tarrahi-meta-analysis-price-change-fairness-2016
+  added: '2026-11-18'
+  agent: meta
+- bib_id: stangl-kastner-natter-2026
+  citation: Stangl, Kastner & Natter (2026), "The Impact of Cost Structure Appeals on Fairness Perceptions and Payments", *JSR* 29
+  url: https://doi.org/10.1177/10946705251341080
+  evidence_ids:
+  - stangl-cost-structure-appeals-fairness-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: bagchi-2026
+  citation: Bagchi (2026, working paper), "When Consumers Prefer Labor (vs. Material) Cost Justifications for Price Increases"
+  url: https://www.hkubs.hku.hk/event/when-consumers-prefer-labor-vs-material-cost-justifications-for-price-increases/
+  evidence_ids:
+  - bagchi-labour-vs-material-cost-justification
+  added: '2026-11-18'
+  agent: meta
+- bib_id: hufnagel-schwaiger-weritz-2022
+  citation: Hufnagel, Schwaiger & Weritz (2022), "Seeking the perfect price", *JBR* 143
+  url: https://ideas.repec.org/a/eee/jbrese/v143y2022icp346-365.html
+  evidence_ids:
+  - hufnagel-personalized-pricing-backlash
+  added: '2026-11-18'
+  agent: meta
+- bib_id: priester-robbert-roth-2020
+  citation: Priester, Robbert & Roth (2020), "A special price just for you", *JRPM* 19(2)
+  url: https://doi.org/10.1057/s41272-019-00224-3
+  evidence_ids:
+  - priester-personalized-dynamic-pricing-fairness
+  added: '2026-11-18'
+  agent: meta
+- bib_id: ftc-office-of-technology-2025
+  citation: 'FTC, Office of Technology (2025), "Surveillance Pricing 6(b) Study: Research Summaries"'
+  url: https://www.ftc.gov/system/files/ftc_gov/pdf/p246202_surveillancepricing6bstudy_researchsummaries_redacted.pdf
+  evidence_ids:
+  - ftc-surveillance-pricing-6b-2025
+  added: '2026-11-18'
+  agent: meta
+- bib_id: european-commission-2018
+  citation: European Commission (2018), "Consumer market study on online market segmentation", via OECD (2018)
+  url: https://akamai-staging.justice.gov/atr/page/file/1312741/dl?inline
+  evidence_ids:
+  - oecd-personalised-pricing-2018-ec-survey
+  added: '2026-11-18'
+  agent: meta
+- bib_id: bambauer-sachse-young-2023
+  citation: Bambauer-Sachse & Young (2023), "Consumers' intentions to spread negative word of mouth about dynamic pricing", *JSR*
+  url: https://doi.org/10.1177/10946705231190871
+  evidence_ids:
+  - bambauer-sachse-dynamic-pricing-nwom
+  added: '2026-11-18'
+  agent: meta
+- bib_id: mazrekaj-et-al-2025
+  citation: Mazrekaj et al. (2025), "Does Price Personalization Ethically Outperform Unitary Pricing?", *Journal of Business Ethics* 199(1)
+  url: https://ideas.repec.org/a/kap/jbuset/v199y2025i1d10.1007_s10551-024-05828-3.html
+  evidence_ids:
+  - mazrekaj-personalization-ethics-simulation
+  added: '2026-11-18'
+  agent: meta
+- bib_id: cma-2021
+  citation: 'CMA (UK) (2021), "Algorithms: How they can reduce competition and harm consumers"'
+  url: https://marketinglaw.osborneclarke.com/advertising-regulation/cmas-scrutiny-algorithms-just-harmful-consumers-competition/
+  evidence_ids:
+  - cma-algorithms-consumer-harm-2021
+  added: '2026-11-18'
+  agent: meta
+- bib_id: morwitz-greenleaf-johnson-1998
+  citation: Morwitz, Greenleaf & Johnson (1998), "Divide and Prosper", *JMR* 35(4)
+  url: https://psycnet.apa.org/record/1998-11272-004
+  evidence_ids:
+  - morwitz-partitioned-prices-1998
+  added: '2026-11-18'
+  agent: meta
+- bib_id: sheng-bao-pan-2007
+  citation: Sheng, Bao & Pan (2007), "Partitioning or Bundling?", *Psychology & Marketing* 24(12)
+  url: https://doi.org/10.1002/mar.20194
+  evidence_ids:
+  - sheng-surcharge-fairness-2007
+  added: '2026-11-18'
+  agent: meta
+- bib_id: lee-et-al-2026
+  citation: Lee et al. (2026), "When Size Doesn't Matter", *JBR* 208
+  url: https://doi.org/10.1016/j.jbusres.2026.116046
+  evidence_ids:
+  - lee-unexpected-surcharge-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: santana-dallas-morwitz-2020
+  citation: Santana, Dallas & Morwitz (2020), "Consumer Reactions to Drip Pricing", *Marketing Science* 39(1)
+  url: https://doi.org/10.1287/mksc.2019.1207
+  evidence_ids:
+  - santana-drip-pricing-2020
+  added: '2026-11-18'
+  agent: meta
+- bib_id: blake-et-al-2021
+  citation: Blake et al. (2021), "Price Salience and Product Choice", *Marketing Science* 40(4)
+  url: https://doi.org/10.1287/mksc.2020.1261
+  evidence_ids:
+  - blake-stubhub-drip-2021
+  added: '2026-11-18'
+  agent: meta
+- bib_id: rasch-th-ne-wenzel-2020
+  citation: Rasch, Thöne & Wenzel (2020), "Drip pricing and its regulation", *JEBO* 176
+  url: https://doi.org/10.1016/j.jebo.2020.04.007
+  evidence_ids: []
+  added: '2026-11-18'
+  agent: meta
+  note: Context source only; no evidence row (cited in the 2026-11-18 backfill review).
+- bib_id: sullivan-2017
+  citation: Sullivan (2017), "Economic Analysis of Hotel Resort Fees", FTC Bureau of Economics
+  url: https://www.ftc.gov/policy/reports/policy-reports/commission-staff-reports
+  evidence_ids: []
+  added: '2026-11-18'
+  agent: meta
+  note: Context source only; no evidence row (cited in the 2026-11-18 backfill review).
+- bib_id: gourville-koehler-2004
+  citation: Gourville & Koehler (2004), "Downsizing Price Increases", HBS Working Paper 04-01
+  url: https://www.hbs.edu/faculty/Pages/item.aspx?research=6777
+  evidence_ids:
+  - gourville-downsizing-2004
+  added: '2026-11-18'
+  agent: meta
+- bib_id: ak-r-balagtas-2014
+  citation: Çakır & Balagtas (2014), "Consumer Response to Package Downsizing", *Journal of Retailing* 90(1)
+  url: https://doi.org/10.1016/j.jretai.2013.06.002
+  evidence_ids:
+  - cakir-package-downsizing-2014
+  added: '2026-11-18'
+  agent: meta
+- bib_id: grigolon-meeker-von-ditfurth-2026
+  citation: Grigolon, Meeker & von Ditfurth (2026), "Does Peter Piper Pick Pepper Inattentively?", CEPR DP 22181
+  url: https://lauragrig.github.io/website/20260915_GrigolonMeekerVonDitfurth.pdf
+  evidence_ids:
+  - grigolon-pepper-downsizing-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: snir-levy-2011
+  citation: Snir & Levy (2011), "Shrinking Goods and Sticky Prices", Bar-Ilan WP 2011-03
+  url: https://papers.ssrn.com/abstract=1784464
+  evidence_ids:
+  - snir-levy-shrinking-goods-2011
+  added: '2026-11-18'
+  agent: meta
+- bib_id: the-hindu-businessline-2026
+  citation: The Hindu BusinessLine (10 Apr 2026), "Why India's ₹5 pack won't disappear, but getting smaller."
+  url: https://www.thehindubusinessline.com/economy/why-indias-5-pack-wont-die-its-getting-lighter/article70844678.ece
+  evidence_ids:
+  - businessline-india-five-rupee-pack-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: lepthien-clement-2019
+  citation: Lepthien & Clement (2019), "Shipping fee schedules and return behavior", *Marketing Letters* 30(2)
+  url: https://doi.org/10.1007/s11002-019-09486-8
+  evidence_ids:
+  - lepthien-shipping-thresholds-2019
+  added: '2026-11-18'
+  agent: meta
+- bib_id: hirche-gijsenberg-bijmolt-2021
+  citation: Hirche, Gijsenberg & Bijmolt (2021), "Asking Less, Getting More?", Univ. of Groningen SOM 2021012-MARK
+  url: https://www.rug.nl/feb/research/som-research-reports/som-research-reports-2021/2021012-mark-def.pdf
+  evidence_ids:
+  - hirche-threshold-free-shipping-2021
+  added: '2026-11-18'
+  agent: meta
+- bib_id: which-2025
+  citation: Which? (25 Nov 2025), "Most Black Friday deals the same price or cheaper at other times of the year."
+  url: https://www.which.co.uk/topic/black-friday
+  evidence_ids:
+  - which-black-friday-2025
+  added: '2026-11-18'
+  agent: meta
+- bib_id: groundwork-collaborative-2026
+  citation: Groundwork Collaborative (16 Nov 2026), "Deal or Decoy? Amazon's Deceptive Discounts."
+  url: https://groundworkcollaborative.org/work/amazon/
+  evidence_ids:
+  - groundwork-amazon-deal-decoy-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: consumers-checkbook-2025
+  citation: Consumers' Checkbook (3 Nov 2025), "Sale Prices Are Usually Fake Discounts."
+  url: https://www.checkbook.org/boston-area/sale-fail
+  evidence_ids:
+  - checkbook-fake-discounts-2025
+  added: '2026-11-18'
+  agent: meta
+- bib_id: european-court-of-auditors-2025
+  citation: European Court of Auditors (9 Jan 2025), Special Report 01/2025, "Digital payments in the EU"
+  url: https://www.eca.europa.eu/ECAPublications/SR-2025-01/SR-2025-01_EN.pdf
+  evidence_ids:
+  - eca-surcharge-ban-global-addon-2025
+  added: '2026-11-18'
+  agent: meta
+- bib_id: reserve-bank-of-australia-2026
+  citation: Reserve Bank of Australia (31 Mar 2026), "Review of Merchant Card Payment Costs and Surcharging — Conclusions Paper"
+  url: https://www.rba.gov.au/payments-and-infrastructure/review-of-retail-payments-regulation/2026-03/conclusions-paper/surcharging.html
+  evidence_ids:
+  - rba-surcharge-ban-expectation-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: bundeskartellamt-2026
+  citation: Bundeskartellamt (11 Nov 2026), preliminary assessment notified to PayPal, via dig.watch
+  url: https://dig.watch/updates/german-regulator-notifies-paypal-of-assessment
+  evidence_ids:
+  - bundeskartellamt-paypal-surcharge-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: xia-kukar-kinney-monroe-2010
+  citation: Xia, Kukar-Kinney & Monroe (2010), "Effects of Consumers' Efforts on Price and Promotion Fairness Perceptions", *Journal of Retailing* 86(1)
+  url: https://doi.org/10.1016/j.jretai.2009.10.003
+  evidence_ids:
+  - xia-promotion-effort-fairness-2010
+  added: '2026-11-18'
+  agent: meta
+- bib_id: krishna-1991
+  citation: Krishna (1991), "Effect of Dealing Patterns on Consumer Perceptions of Deal Frequency and Willingness to Pay", *JMR* 28(4)
+  url: https://doi.org/10.2307/3172784
+  evidence_ids:
+  - krishna-dealing-patterns-1991
+  added: '2026-11-18'
+  agent: meta
+- bib_id: raghubir-inman-grande-2004
+  citation: Raghubir, Inman & Grande (2004), "The Three Faces of Consumer Promotions", *California Management Review* 46(4)
+  url: https://doi.org/10.2307/41166273
+  evidence_ids:
+  - raghubir-three-faces-promotions-2004
+  added: '2026-11-18'
+  agent: meta
+- bib_id: ticketnews-2026
+  citation: TicketNews (27 Mar 2026), "Ticketmaster Championed 'All-In' Pricing; Internal Documents Show How Fees Were Quietly Shifted"
+  url: https://www.ticketnews.com/2026/03/ticketmaster-championed-all-in-pricing-internal-documents-show-how-fees-were-quietly-shifted/
+  evidence_ids:
+  - ticketnews-ticketmaster-fee-shift-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: ftc-2024
+  citation: FTC (final rule 17 Dec 2024; effective 12 May 2025), Rule on Unfair or Deceptive Fees, 16 CFR Part 464
+  url: https://www.ftc.gov/legal-library/browse/rules/rule-unfair-or-deceptive-fees
+  evidence_ids:
+  - ftc-junk-fee-rule-2024
+  added: '2026-11-18'
+  agent: meta
+- bib_id: toccafondi-di-paolo-di-guida-2025
+  citation: Toccafondi, Di Paolo & Di Guida (2025), "Virtual currencies in online gaming increase the willingness to pay for loot boxes", *Experimental Economics* 28(6)
+  url: https://www.cambridge.org/core/journals/experimental-economics/article/virtual-currencies-in-online-gaming-increase-the-willingness-to-pay-for-loot-boxes-an-experimental-analysis/BA5773D9B866AF75DF978A1410E37B1F
+  evidence_ids:
+  - virtual-currency-loot-box-wtp-2025
+  added: '2026-11-18'
+  agent: meta
+- bib_id: raghubir-srivastava-2008
+  citation: 'Raghubir & Srivastava (2008), "Monopoly Money", *Journal of Experimental Psychology: Applied* 14(3)'
+  url: https://www.apa.org/news/press/releases/2008/09/credit-cash
+  evidence_ids:
+  - monopoly-money-scrip-spending-2008
+  added: '2026-11-18'
+  agent: meta
+- bib_id: huang-lim-lin-2021
+  citation: Huang, Lim & Lin (2021), "Leveraging the Numerosity Effect", *Information Systems Research* 32(1)
+  url: https://pubsonline.informs.org/doi/abs/10.1287/isre.2020.0955
+  evidence_ids:
+  - numerosity-virtual-item-price-salience-2021
+  added: '2026-11-18'
+  agent: meta
+- bib_id: salminen-j-rvel-ravaja-2018
+  citation: Salminen, Järvelä & Ravaja (2018), "Economic decision-making in free-to-play games", *GamiFIN 2018*
+  url: https://ceur-ws.org/Vol-2186/paper11.pdf
+  evidence_ids:
+  - free-to-play-currency-conversion-null-2018
+  added: '2026-11-18'
+  agent: meta
+- bib_id: churnkey-2025
+  citation: Churnkey (1 Aug 2025), "Discounts don't devalue your brand (when done right)"
+  url: https://churnkey.co/blog/discounting-at-cancellation/
+  evidence_ids:
+  - churnkey-offer-durability-2025
+  added: '2026-11-18'
+  agent: meta
+- bib_id: churnkey-2025-b
+  citation: Churnkey (with Stripe) (14 Nov 2025), "Voluntary churn benchmarks and tactical advice"
+  url: https://churnkey.co/blog/voluntary-churn-benchmarks/
+  evidence_ids:
+  - churnkey-voluntary-churn-reasons-2025
+  added: '2026-11-18'
+  agent: meta
+- bib_id: recurly-2025
+  citation: 'Recurly (2025), "The Future of Subscriptions: Flexibility Above All" / 2025 State of Subscriptions'
+  url: https://recurly.com/blog/product-perspectives-the-future-of-subscriptions-flexibility/
+  evidence_ids:
+  - recurly-pause-dividend-2025
+  added: '2026-11-18'
+  agent: meta
+- bib_id: broekhoff-van-der-cruijsen-2024
+  citation: Broekhoff & van der Cruijsen (2024), "Paying in a blink of an eye", *JEBO* 221
+  url: https://www.dnb.nl/media/htbnszz1/working_paper_no-_760.pdf
+  evidence_ids:
+  - contactless-pain-of-paying-dnb-2024
+  added: '2026-11-18'
+  agent: meta
+- bib_id: wang-et-al-2022
+  citation: Wang et al. (2022), "Pleasure of paying when using mobile payment", *Frontiers in Psychology* 13:1004068
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9640944/
+  evidence_ids:
+  - mobile-payment-pleasure-eeg-2022
+  added: '2026-11-18'
+  agent: meta
+- bib_id: boden-maier-wilken-2020
+  citation: Boden, Maier & Wilken (2020), "The effect of credit card versus mobile payment on convenience and consumers' willingness to pay", *JRCS* 52
+  url: https://ideas.repec.org/a/eee/joreco/v52y2020ics096969891930219x.html
+  evidence_ids:
+  - mobile-vs-card-convenience-wtp-2020
+  added: '2026-11-18'
+  agent: meta
+- bib_id: tr-tsch-2014
+  citation: Trütsch (2014), "The Impact of Contactless Payment on Spending", *IJES* 3(4)
+  url: https://www.iises.net/the-impact-of-contactless-payment-on-spending.html
+  evidence_ids:
+  - contactless-spending-ratio-2014
+  added: '2026-11-18'
+  agent: meta
+- bib_id: schomburgk-belli-hoffmann-2024
+  citation: Schomburgk, Belli & Hoffmann (2024), "Less cash, more splash?", *Journal of Retailing* 100(3)
+  url: https://doi.org/10.1016/j.jretai.2024.05.003
+  evidence_ids:
+  - cashless-effect-meta-analysis-2024
+  added: '2026-11-18'
+  agent: meta
+- bib_id: miller-sahni-strulov-shlain-2026
+  citation: Miller, Sahni & Strulov-Shlain (2026), "Sophisticated Consumers with Inertia", forthcoming *AER*
+  url: https://www.avnershlain.com/
+  evidence_ids:
+  - sophisticated-consumers-inertia-field-experiment-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: einav-klopack-mahoney-2025
+  citation: Einav, Klopack & Mahoney (2025), "Selling Subscriptions", *AER* 115(5)
+  url: https://www.aeaweb.org/articles?id=10.1257/aer.20231612
+  evidence_ids:
+  - selling-subscriptions-card-replacement-2025
+  added: '2026-11-18'
+  agent: meta
+- bib_id: ftc-2025
+  citation: FTC (25 Sep 2025), "FTC Secures Historic $2.5 Billion Settlement Against Amazon"
+  url: https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-secures-historic-25-billion-settlement-against-amazon
+  evidence_ids:
+  - ftc-amazon-prime-settlement-2025
+  added: '2026-11-18'
+  agent: meta
+- bib_id: rocket-companies-2026
+  citation: Rocket Companies (29 Oct 2026), Q3 2026 results
+  url: https://www.prnewswire.com/news-releases/rocket-companies-announces-third-quarter-2026-results-302924165.html
+  evidence_ids:
+  - rocket-money-rowan-launch-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: openai-2025
+  citation: 'OpenAI (29 Sep 2025), "Buy it in ChatGPT: Instant Checkout and the Agentic Commerce Protocol"'
+  url: https://openai.com/index/buy-it-in-chatgpt/
+  evidence_ids:
+  - openai-instant-checkout-acp-2025
+  added: '2026-11-18'
+  agent: meta
+- bib_id: hunton-andrews-kurth-2026
+  citation: Hunton Andrews Kurth (Oct 2026), "Major Banks Move to Block or Limit Customer-Directed AI Agents"
+  url: https://www.hunton.com/insights/legal/major-banks-move-to-block-or-limit-customer-directed-ai-agents
+  evidence_ids:
+  - bank-block-ai-agents-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: redress-compliance-2026
+  citation: 'Redress Compliance (8 Aug 2026), "State of Enterprise Software Discounts 2026: 800 Contracts"'
+  url: https://redresscompliance.com/vanishing-discount-benchmark-report-2026
+  evidence_ids:
+  - redress-vanishing-discount-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: harrington-2017
+  citation: Harrington (with Ye) (2017), "Coordination on List Prices and Collusion in Negotiated Prices", BECCLE
+  url: https://beccle.no/files/2017/05/Harrington_BECCLE_04.17.pdf
+  evidence_ids:
+  - harrington-ye-list-price-coordination-2017
+  added: '2026-11-18'
+  agent: meta
+- bib_id: zhao-et-al-2015
+  citation: Zhao et al. (2015), "Online Price Dispersion Revisited", *JMIS*
+  url: https://home.uncg.edu/~j_deng/papers/dispersion_jmis15.pdf
+  evidence_ids:
+  - zhao-listing-vs-transaction-dispersion-2015
+  added: '2026-11-18'
+  agent: meta
+- bib_id: ashare-2024
+  citation: Ashare (22 Nov 2024), "Broadcom, AT&T reach settlement in VMware legal dispute", *CIO Dive*
+  url: https://www.ciodive.com/news/broadcom-att-vmware-settlement-licensing-support-lawsuit/733763/
+  evidence_ids:
+  - att-broadcom-vmware-settlement-2024
+  added: '2026-11-18'
+  agent: meta
+- bib_id: network-world-2025
+  citation: Network World (Sep 2025), "Broadcom's VMware strategy pays off financially, but customers not as keen as Wall Street"
+  url: https://www.networkworld.com/article/4053783/broadcoms-vmware-strategy-pays-off-financially-but-customers-not-as-keen-as-wall-street.html
+  evidence_ids:
+  - broadcom-vmware-pays-off-customers-leave-2025
+  added: '2026-11-18'
+  agent: meta
+- bib_id: zorasi-2026
+  citation: Zorasi (2026), "Persistent Imposition of War Risk Premiums on Nigerian-Bound Cargo", *GPH-IJBM* 9(2)
+  url: https://zenodo.org/records/18955759/files/gph-ijbm_2026_2284_Zorasi_WarRiskPremiums_MaritimeTradeStability.pdf?download=1
+  evidence_ids:
+  - zorasi-nigeria-war-risk-premium-persistence-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: tradlinx-2026
+  citation: Tradlinx (reviewed 10 Nov 2026), "Emergency Fuel Surcharges vs. BAF"
+  url: https://blogs.tradlinx.com/emergency-fuel-surcharges-vs-baf-how-to-check-for-overlapping-charges/
+  evidence_ids:
+  - tradlinx-emergency-fuel-surcharge-overlap-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: cannon-watanabe-2025
+  citation: Cannon & Watanabe (2025; posted 2016), "Do Firms Pass Commodity Cost Savings to Consumers?", SSRN
+  url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2824026
+  evidence_ids:
+  - cannon-watanabe-asymmetric-fuel-passthrough-2025
+  added: '2026-11-18'
+  agent: meta
+- bib_id: semiwiki-2026
+  citation: SemiWiki (5 Jun 2026), "TSMC CEO sends blunt message to memory chip rivals"
+  url: https://semiwiki.com/forum/threads/tsmc-ceo-sends-blunt-message-to-memory-chip-rivals.25242/
+  evidence_ids:
+  - tsmc-wei-restraint-vs-memory-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: bain-company-2025
+  citation: Bain & Company (9 Oct 2025), "Per-Seat Software Pricing Isn't Dead, but New Models Are Gaining Steam"
+  url: https://www.bain.com/insights/per-seat-software-pricing-isnt-dead-but-new-models-are-gaining-steam/
+  evidence_ids:
+  - bain-per-seat-pricing-not-dead-2025
+  added: '2026-11-18'
+  agent: meta
+- bib_id: poyar-2025
+  citation: Poyar (Jun 2025), "The 2025 State of B2B Monetization", Growth Unhinged/Tremont (n=240)
+  url: https://cdn.prod.website-files.com/66f3d5c51c51d8e744b8d529/682e259fa19323cc4ecda6be_60d3fca97de926e1eff89042d5a068a2_2025%20State%20of%20Monetization%20Report_Tremont_2025.pdf
+  evidence_ids:
+  - poyar-state-b2b-monetization-2025
+  added: '2026-11-18'
+  agent: meta
+- bib_id: benchmarkit-2026
+  citation: Benchmarkit (2026), "SaaS and AI-Native Metrics 2026", via Orb
+  url: https://www.withorb.com/blog/saas-monetization-statistics
+  evidence_ids:
+  - benchmarkit-usage-nrr-108-vs-seat-98-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: microsoft-q1-fy2027-earnings-call-2027
+  citation: Microsoft, Q1 FY2027 earnings call (28 Oct 2026), via PYMNTS
+  url: https://www.pymnts.com/earnings/2026/microsoft-sees-enterprise-ai-adoption-accelerate-as-copilot-usage-grows/
+  evidence_ids:
+  - microsoft-copilot-usage-billing-q1-fy27-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: sekine-wada-2025
+  citation: Sekine & Wada (2025), "How Did People Tweet against Inflation in Japan?", Hitotsubashi HIAS-E-150
+  url: https://glecs.hias.hit-u.ac.jp/wp-content/uploads/2025/07/paper09.pdf
+  evidence_ids:
+  - sekine-wada-japan-tweets-2025
+  added: '2026-11-18'
+  agent: meta
+- bib_id: watanabe-2022
+  citation: Watanabe (Univ. of Tokyo) surveys, via Hayakawa (2022), Tokyo Foundation
+  url: https://www.tokyofoundation.org/research/detail.php?id=907
+  evidence_ids:
+  - watanabe-japan-tolerance-survey-2022
+  added: '2026-11-18'
+  agent: meta
+- bib_id: jenkins-fombelle-steffel-2026
+  citation: Jenkins, Fombelle & Steffel (2026), "Are Apologies Always the Best Policy?", *JCR* 53(1)
+  url: https://phys.org/news/2026-03-customer-backfire.html
+  evidence_ids:
+  - jenkins-apology-backfires-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: wirtz-mattila-2004
+  citation: Wirtz & Mattila (2004), "Consumer responses to compensation, speed of recovery and apology after a service failure", *IJSM* 15(2)
+  url: https://www.researchgate.net/publication/235315833_Consumer_responses_to_compensation_speed_of_recovery_and_apology_after_a_service_failure
+  evidence_ids:
+  - wirtz-mattila-compensation-apology-2004
+  added: '2026-11-18'
+  agent: meta
+- bib_id: customer-care-measurement-consulting-asu-2013
+  citation: Customer Care Measurement & Consulting / ASU (2013), "Customer Rage Study"
+  url: https://news.asu.edu/content/new-customer-rage-study-out-holiday-shopping-season
+  evidence_ids:
+  - customer-rage-apology-compensation-2013
+  added: '2026-11-18'
+  agent: meta
+- bib_id: microsoft-xbox-2021
+  citation: Microsoft/Xbox (22–23 Jan 2021), Xbox Live Gold pricing reversal, via GameSpot
+  url: https://www.gamespot.com/articles/microsoft-reverses-xbox-live-gold-price-increase-unlocks-free-to-play-games-for-everyone/1100-6486623/?ftag=CAD-01-10abi2f
+  evidence_ids:
+  - xbox-live-gold-reversal-2021
+  added: '2026-11-18'
+  agent: meta
+- bib_id: wendy-s-dynamic-pricing-walk-back-2024
+  citation: Wendy's dynamic pricing walk-back (Feb 2024), via Restaurant Business Online
+  url: https://www.restaurantbusinessonline.com/technology/3-restaurant-tech-fads-faded
+  evidence_ids:
+  - wendys-dynamic-pricing-reversal-2024
+  added: '2026-11-18'
+  agent: meta
+- bib_id: anderson-simester-2004
+  citation: Anderson & Simester (2004), "Long-Run Effects of Promotion Depth on New Versus Established Customers", *Marketing Science* 23(1)
+  url: https://www.kellogg.northwestern.edu/faculty/anderson_e/htm/personalpage_files/Papers/Long_Run_Effects_of_Promotion_Depth_on_New_versus_Established_Customers.pdf
+  evidence_ids:
+  - anderson-simester-promotion-depth-2004
+  added: '2026-11-18'
+  agent: meta
+- bib_id: mazumdar-raj-sinha-2005
+  citation: 'Mazumdar, Raj & Sinha (2005), "Reference Price Research: Review and Propositions", *Journal of Marketing* 69(4)'
+  url: https://www.researchgate.net/publication/236656727_Reference_Price_Research_Review_and_Propositions
+  evidence_ids:
+  - mazumdar-reference-price-review-2005
+  added: '2026-11-18'
+  agent: meta
+- bib_id: government-of-india-2026
+  citation: Government of India (9 Sep 2026), Consumer Protection (E-Commerce) (Amendment) Rules, 2026, via PIB (10 Sep 2026)
+  url: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2308759&reg=48&lang=2
+  evidence_ids:
+  - india-ecommerce-prior-price-rule-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: kff-2026
+  citation: KFF (6 Nov 2026), "9 Things to Watch for the 2027 ACA Open Enrollment Period"
+  url: https://www.kff.org/affordable-care-act/9-things-to-watch-for-the-2027-aca-open-enrollment-period/
+  evidence_ids:
+  - kff-aca-premium-decomposition-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: kff-2026-b
+  citation: KFF (30 Oct 2026), "Medicare Part D Premiums and Cost Sharing in 2027"
+  url: https://www.kff.org/medicare/medicare-part-d-premiums-and-cost-sharing-in-2027/
+  evidence_ids:
+  - kff-part-d-premiums-2027
+  added: '2026-11-18'
+  agent: meta
+- bib_id: duggal-et-al-2019
+  citation: 'Duggal et al. (2019), "Drug-Eluting Stent Use Among Low-Income Patients in Maharashtra", *Circulation: Cardiovascular Interventions* 12(4)'
+  url: https://repository.ias.ac.in/120573/
+  evidence_ids:
+  - duggal-stent-price-reduction-maharashtra-2019
+  added: '2026-11-18'
+  agent: meta
+- bib_id: deo-et-al-2020
+  citation: Deo et al. (2020), "Did India's price control policy for coronary stents create unintended consequences?", *Social Science & Medicine* 246
+  url: https://pubmed.ncbi.nlm.nih.gov/31887627/
+  evidence_ids:
+  - deo-stent-price-control-unintended-2020
+  added: '2026-11-18'
+  agent: meta
+- bib_id: live-law-2026
+  citation: Live Law (12 Oct 2026), "After Supreme Court Push, Centre To Cap Cancer Drug Margins At 30%"
+  url: https://www.livelaw.in/top-stories/after-supreme-court-push-centre-to-cap-cancer-drug-margins-at-30-554311
+  evidence_ids:
+  - india-cancer-drug-margin-cap-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: nepra-decisions-of-6-nov-2026-via-khabar-2026
+  citation: NEPRA decisions of 6 Nov 2026, via KhabarWire (7 Nov 2026)
+  url: https://khabarwire.com/blog/nepra-approves-september-fca-november-bills-2026-11-07/
+  evidence_ids:
+  - nepra-split-vote-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: inside-higher-ed-2026
+  citation: Inside Higher Ed (25 Jun 2026), "Can Price-First Admissions Improve College Access?" (Cornell College Save Your Seat)
+  url: https://www.insidehighered.com/news/student-success/college-experience/2026/06/25/can-price-first-admissions-improve-college
+  evidence_ids:
+  - cornell-save-your-seat-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: sims-et-al-2025
+  citation: Sims et al. (2025), "The equity implications of pecuniary externalities on an electric grid", *PNAS Nexus* 4(12)
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12687347/
+  evidence_ids:
+  - sims-solar-cost-shift-2025
+  added: '2026-11-18'
+  agent: meta
+- bib_id: nersa-2026
+  citation: NERSA (6 Nov 2026), Consultation Paper on the Review of the Cost of Supply Framework, via EnergyBee (9 Nov 2026)
+  url: https://energybee.co.za/news/nersa-municipal-tariff-review-solar-homes-2026
+  evidence_ids:
+  - nersa-solar-tariff-consultation-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: hill-et-al-2017
+  citation: Hill et al. (2017), "High sustained virological response rates using imported generic direct acting antiviral treatment for hepatitis C", *Journal of Virus Eradication* 3(4)
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5632545/
+  evidence_ids:
+  - hill-buyers-club-hepatitis-c-2017
+  added: '2026-11-18'
+  agent: meta
+- bib_id: beximco-pharmaceuticals-2026
+  citation: Beximco Pharmaceuticals (22 Jun 2026), "First patients gain access to affordable, lifesaving cystic fibrosis medicine" (RNS Reach)
+  url: https://beximco-pharma.com/cdn/bpl/reach-announcement/reach-announcement-londonstockexchange-22-june-2026.pdf
+  evidence_ids:
+  - beximco-trikafta-buyers-club-2026
+  added: '2026-11-18'
+  agent: meta
+- bib_id: bloomberg-2025
+  citation: Bloomberg (Jul 2025), via syndication, "Several Amazon sellers skip offering Prime Day discounts"
+  url: https://stockwatchindex.com/several-amazon-sellers-skip-offering-prime-day-discounts-as-trump/
+  evidence_ids:
+  - prime-day-sellers-skip-discounts-2025
+  added: '2026-11-18'
+  agent: meta
+- bib_id: anderson-simester-2010
+  citation: Anderson & Simester (2010), "Price Stickiness and Customer Antagonism", *Quarterly Journal of Economics* 125(2)
+  url: https://ideas.repec.org/a/oup/qjecon/v125y2010i2p729-765..html
+  evidence_ids:
+  - anderson-simester-price-antagonism-2010
+  added: '2026-11-18'
+  agent: meta

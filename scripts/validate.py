@@ -130,7 +130,7 @@ all_case_ids = defaultdict(list)       # case_id -> [file]
 records_by_file = {}
 for path, d in data.items():
     if path in ("_data/tags.yml", "_data/mechanisms.yml", "_data/firms.yml", "_data/claims.yml",
-                "_data/hypotheses.yml"):
+                "_data/hypotheses.yml", "_data/research/bibliography.yml"):
         continue
     recs = as_list(d)
     records_by_file[path] = recs
@@ -353,6 +353,26 @@ def as_date(v):
     except ValueError:
         return None
 
+
+# ---------------------------------------------------------------- bibliography
+bib = data.get("_data/research/bibliography.yml")
+if bib is not None:
+    seen_bib = set()
+    for b in bib if isinstance(bib, list) else []:
+        bid = b.get("bib_id") if isinstance(b, dict) else None
+        where = f"_data/research/bibliography.yml {bid}"
+        if not bid or not SLUG.match(str(bid)):
+            err(where, "bib_id must be a lowercase slug")
+        if bid in seen_bib:
+            err(where, "duplicate bib_id")
+        seen_bib.add(bid)
+        if not b.get("citation"):
+            err(where, "citation is empty")
+        for e in b.get("evidence_ids") or []:
+            if e not in evidence_ids:
+                err(where, f"evidence id {e!r} does not resolve to pricing_evidence.yml")
+        if not b.get("evidence_ids") and not b.get("note"):
+            err(where, "an entry with no evidence_ids needs a note saying why")
 
 hyps = data.get("_data/hypotheses.yml")
 if hyps is not None:

@@ -13,7 +13,7 @@
   - motive-attribution
   - left-digit
   created: '2026-11-17'
-  last_updated: '2026-11-17'
+  last_updated: '2026-11-18'
   evidence_for:
   - kind: evidence
     ref: ai-vs-human-price-setter-fairness
@@ -21,6 +21,18 @@
   - kind: evidence
     ref: ai-set-just-below-prices
     note: 'Chacon & Limongi (JCA, 2 studies): AI-set prices drew lower intentions; just-below endings read as manipulation.'
+  - kind: evidence
+    ref: duani-algorithmic-demographic-pricing-fairness
+    note: Algorithm-set demographic prices judged fairer than human-set (4 studies); not for temporal pricing.
+  - kind: evidence
+    ref: zhang-cheng-algorithm-human-price-discrimination
+    note: 'Attribution flips with who gains: disadvantaged prices judged harsher under humans, advantaged harsher under algorithms.'
+  - kind: evidence
+    ref: wang-algorithmic-pricing-nwom
+    note: Algorithm-set discriminatory prices drew less negative word of mouth (7 experiments, n=2,080).
+  - kind: evidence
+    ref: mamen-hem-human-vs-ai-pricing-fairness
+    note: 'Opposite direction: ''AI-driven'' rated less fair than ''human-developed'' algorithms (n=600). Supports ''judged differently'' but shows the label matters.'
   evidence_against: []
   related_questions:
   - ai-price-setter-fairness-2026
@@ -43,7 +55,7 @@
   - price-change-communication
   - motive-attribution
   created: '2026-11-17'
-  last_updated: '2026-11-17'
+  last_updated: '2026-11-18'
   evidence_for:
   - kind: tracker
     ref: chatgpt-pro-allowance-2026
@@ -57,6 +69,12 @@
   - kind: tracker
     ref: openai-per-job-pricing-2026
     note: Per-job pricing dropped after customer objections.
+  - kind: evidence
+    ref: xbox-live-gold-reversal-2021
+    note: Announced rise reversed the same day after public backlash, with a concession; never charged.
+  - kind: evidence
+    ref: wendys-dynamic-pricing-reversal-2024
+    note: Dynamic-pricing plan walked back within days of press and political backlash; never implemented.
   evidence_against:
   - kind: tracker
     ref: starlink-congestion-2026
@@ -85,8 +103,23 @@
   - motive-attribution
   - price-change-communication
   created: '2026-11-17'
-  last_updated: '2026-11-17'
-  evidence_for: []
+  last_updated: '2026-11-18'
+  evidence_for:
+  - kind: evidence
+    ref: kahneman-knetsch-thaler-dual-entitlement-1986
+    note: Cost pass-through judged acceptable (79%), demand exploitation unfair (82%); vignettes.
+  - kind: evidence
+    ref: urbany-cost-justification-atm-surcharge-1989
+    note: Surcharge fair to 58% when cost-justified vs 29% unjustified; n=40, and judgments did not predict behaviour.
+  - kind: evidence
+    ref: campbell-inferred-motive-price-unfairness-1999
+    note: Negative inferred motive made the same rise less fair; motive inferred, not stated.
+  - kind: evidence
+    ref: tarrahi-meta-analysis-price-change-fairness-2016
+    note: 'Meta-analysis (54 samples): bad motives hurt more than cost justifications help; size of rise matters more than motive.'
+  - kind: evidence
+    ref: stangl-cost-structure-appeals-fairness-2026
+    note: Naming customer-facing costs raised fairness and voluntary payments (2 field + 6 lab); mostly pay-what-you-want, not list-price rises.
   evidence_against:
   - kind: tracker
     ref: damavandi-justification-study
@@ -122,7 +155,7 @@
   - mental-accounting
   - usage-anxiety
   created: '2026-11-17'
-  last_updated: '2026-11-17'
+  last_updated: '2026-11-18'
   evidence_for:
   - kind: tracker
     ref: chatgpt-pro-allowance-2026
@@ -130,6 +163,15 @@
   - kind: tracker
     ref: notion-credits-2026
     note: Two non-interchangeable credit balances with a fixed draw-down order.
+  - kind: evidence
+    ref: virtual-currency-loot-box-wtp-2025
+    note: Virtual currency at 1:1 raised WTP ~4% vs pounds (incentivised RCT, N=753); a 100:1 rate lowered it.
+  - kind: evidence
+    ref: monopoly-money-scrip-spending-2008
+    note: Scrip and gift certificates spent more freely than equal cash; itemising closed the gap.
+  - kind: evidence
+    ref: numerosity-virtual-item-price-salience-2021
+    note: 'Direction flips with exchange-rate salience: high numbers feel dearer when the rate is hidden, cheaper when shown.'
   evidence_against:
   - kind: tracker
     ref: openai-per-job-pricing-2026
@@ -137,6 +179,9 @@
   - kind: tracker
     ref: genai-subscriptions-nber-2026
     note: 'Card data on 174M consumers: high churn and switching suggest buyers respond to value changes.'
+  - kind: evidence
+    ref: free-to-play-currency-conversion-null-2018
+    note: With rates disclosed, currency conversion did not raise spending (N=21).
   related_questions: []
   related_dives:
   - 2026-12-credits-as-a-currency
@@ -158,12 +203,27 @@
   - partitioned-pricing
   - drip-pricing
   created: '2026-11-17'
-  last_updated: '2026-11-17'
+  last_updated: '2026-11-18'
   evidence_for:
   - kind: evidence
     ref: partitioned-surcharge-magnitude
     note: 'Aichner & Dorigati (n=433): partitioning helped with a small shipping fee and hurt with a large one, through fairness.'
-  evidence_against: []
+  - kind: evidence
+    ref: morwitz-partitioned-prices-1998
+    note: Partitioned prices raised demand and lowered recalled totals (lab).
+  - kind: evidence
+    ref: sheng-surcharge-fairness-2007
+    note: 'The same $9 surcharge judged unfair on a $7.90 base, fair on a $49.90 base: the size boundary.'
+  - kind: evidence
+    ref: santana-drip-pricing-2020
+    note: Drip (late-revealed) surcharges steered choice to the lower base price; timing, not size.
+  - kind: evidence
+    ref: blake-stubhub-drip-2021
+    note: 'Field experiment: fees shown only at checkout raised completion 14.1% and revenue ~21%; timing, not size.'
+  evidence_against:
+  - kind: evidence
+    ref: lee-unexpected-surcharge-2026
+    note: Even a one-cent surcharge on a complimentary item cut fairness and revisit intention; unexpected charges, communal norms.
   related_questions: []
   related_dives: []
   status_history:
@@ -356,11 +416,20 @@
   - transaction-utility
   test: Festival sales outcomes in a market where pre-festival prices were flat, against Diwali 2026 where they had risen.
   created: '2026-11-17'
-  last_updated: '2026-11-17'
+  last_updated: '2026-11-18'
   evidence_for:
   - kind: tracker
     ref: diwali-smartphones-2026
     note: Diwali offline smartphone sales down 18-20% despite festive discounts, after memory-driven price rises.
+  - kind: evidence
+    ref: anderson-simester-promotion-depth-2004
+    note: Deep discounts cut later purchases by established customers (3 field experiments); discount depth, not hikes then a festival sale.
+  - kind: evidence
+    ref: mazumdar-reference-price-review-2005
+    note: 'Review: internal reference prices update with prices seen and paid, so a hike that sticks becomes the reference.'
+  - kind: evidence
+    ref: india-ecommerce-prior-price-rule-2026
+    note: 'India''s rule defines the legitimate ''prior price'' as the 30-day low from 2027: regulatory recognition of hike-then-discount.'
   evidence_against: []
   related_questions: []
   related_dives: []
@@ -419,7 +488,7 @@
   - motive-attribution
   test: Matched apology cases coded for whether a concession followed, compared on reversal and backlash outcomes in backlash.yml and explanations.yml.
   created: '2026-11-17'
-  last_updated: '2026-11-17'
+  last_updated: '2026-11-18'
   evidence_for:
   - kind: tracker
     ref: saizeriya-apology-2026
@@ -427,6 +496,15 @@
   - kind: tracker
     ref: laugfs-lpg-2026
     note: Apology for the shortage only, no concession on the 35.7% rise; regulator summons and criticism in Parliament followed.
+  - kind: evidence
+    ref: jenkins-apology-backfires-2026
+    note: 'Field experiment (n=3,083): apologising for an unnoticed failure reduced reordering; service delays, not price rises.'
+  - kind: evidence
+    ref: wirtz-mattila-compensation-apology-2004
+    note: Apology and compensation work jointly in service recovery (n=187, scenarios).
+  - kind: evidence
+    ref: customer-rage-apology-compensation-2013
+    note: Satisfaction 37% with money alone vs 74% with money plus apology; observational survey.
   evidence_against: []
   related_questions: []
   related_dives: []
@@ -523,7 +601,7 @@
   - motive-attribution
   test: The same personalised price shown labelled, unlabelled, and uniform, measuring fairness and purchase intention.
   created: '2026-11-17'
-  last_updated: '2026-11-17'
+  last_updated: '2026-11-18'
   evidence_for:
   - kind: tracker
     ref: sony-ps-store-pricing-2026
@@ -531,6 +609,12 @@
   - kind: tracker
     ref: ny-algorithmic-pricing-label-2026
     note: Mandated labelled variation in New York.
+  - kind: evidence
+    ref: hufnagel-personalized-pricing-backlash
+    note: Knowing a price is personalised drew negative reactions even from favoured customers; no label manipulation.
+  - kind: evidence
+    ref: priester-personalized-dynamic-pricing-fairness
+    note: Individual prices less fair than segment prices; granularity, not label visibility.
   evidence_against: []
   related_questions:
   - personal-price-label-2026
@@ -554,12 +638,18 @@
   - reference-price
   test: A time series of mentions or complaints after a discovered difference, compared with the baseline rate for the same seller.
   created: '2026-11-17'
-  last_updated: '2026-11-17'
+  last_updated: '2026-11-18'
   evidence_for:
   - kind: tracker
     ref: sony-ps-store-pricing-2026
     note: Screenshot comparisons and boycott talk after buyers noticed account-level discounts.
-  evidence_against: []
+  - kind: evidence
+    ref: bambauer-sachse-dynamic-pricing-nwom
+    note: Dynamic pricing raised confusion, unfairness and intentions to spread negative word of mouth; intentions, not speed.
+  evidence_against:
+  - kind: evidence
+    ref: wang-algorithmic-pricing-nwom
+    note: 'Qualifier: when the setter is an algorithm, disadvantaged customers spread less negative word of mouth.'
   related_questions:
   - account-price-unfairness-spread-2026
   related_dives: []
@@ -698,8 +788,20 @@
   - quantity-insensitivity
   test: A matched pair of products, one shrunk and one repriced by the same per-unit amount, comparing complaints and sales.
   created: '2026-11-17'
-  last_updated: '2026-11-17'
-  evidence_for: []
+  last_updated: '2026-11-18'
+  evidence_for:
+  - kind: evidence
+    ref: gourville-downsizing-2004
+    note: Price rises changed buying, equivalent downsizing did not; purchase response, not backlash.
+  - kind: evidence
+    ref: cakir-package-downsizing-2014
+    note: Demand about four times less responsive to pack size than to price (scanner panel); purchase response.
+  - kind: evidence
+    ref: grigolon-pepper-downsizing-2026
+    note: Downsizing went almost unnoticed; made salient, downsized products lost 23% of share.
+  - kind: evidence
+    ref: snir-levy-shrinking-goods-2011
+    note: 'Model plus data: consumers attend to price, not quantity, so firms shrink instead; working paper.'
   evidence_against:
   - kind: tracker
     ref: macromill-stealth-hikes-2026
@@ -728,11 +830,14 @@
   - left-digit
   test: Pack-size series for products pinned at iconic price points versus products free to reprice, over the same cost shock.
   created: '2026-11-17'
-  last_updated: '2026-11-17'
+  last_updated: '2026-11-18'
   evidence_for:
   - kind: tracker
     ref: india-magic-price-points-2026
     note: ₹5/₹10 pack share falling; ₹5 chips pack about 17 g to 8 g over time.
+  - kind: evidence
+    ref: businessline-india-five-rupee-pack-2026
+    note: Named ₹5/₹10 packs shrunk (e.g. Good Day 100 g to ~90 g) while price points held; trade press.
   evidence_against: []
   related_questions:
   - protect-price-endings-2026
@@ -930,7 +1035,7 @@
   - transaction-utility
   test: Repeat the price-history measurement in a second market and a second year.
   created: '2026-11-17'
-  last_updated: '2026-11-17'
+  last_updated: '2026-11-18'
   evidence_for:
   - kind: tracker
     ref: shoprime-black-friday-index-2026
@@ -941,6 +1046,15 @@
   - kind: tracker
     ref: deco-black-friday-2026
     note: 'Portugal 2026: DECO found pre-sale price rises at four online retailers (FNAC earbuds EUR 199.99 in October, EUR 249.99 in the Black Friday campaign). Instances, not a share of offers, so it adds a second market but not a second measurement.'
+  - kind: evidence
+    ref: which-black-friday-2025
+    note: 'UK, 175 appliances tracked for a year: none at their cheapest on Black Friday; 83% same or cheaper at other times.'
+  - kind: evidence
+    ref: groundwork-amazon-deal-decoy-2026
+    note: 'Amazon US, 351 deals: 57.3% no cheaper than the prior-90-day low, 29.1% vs the prior 30 days. Amazon disputes the report.'
+  - kind: evidence
+    ref: checkbook-fake-discounts-2025
+    note: 'US, 25 chains over 24 weeks: most ''sale'' prices are fake discounts. Everyday sales, not Black Friday.'
   evidence_against: []
   related_questions: []
   related_dives: []
@@ -1035,11 +1149,14 @@
   mechanism_codes: []
   test: The NERSA Eskom tariff decision due Nov 26, 2026, and whether its dissent pattern repeats.
   created: '2026-11-17'
-  last_updated: '2026-11-17'
+  last_updated: '2026-11-18'
   evidence_for:
   - kind: tracker
     ref: nepra-fuel-adjustment-2026
     note: Pakistan's NEPRA raised the concessional industrial rate on the chairman's casting vote; two members dissented.
+  - kind: evidence
+    ref: nepra-split-vote-2026
+    note: Fuller account of the same NEPRA decision (2-2, casting vote, dissent citing marginal cost). Same case as the existing pointer, not an independent instance.
   evidence_against: []
   related_questions: []
   related_dives: []
@@ -1062,7 +1179,7 @@
   - dual-entitlement
   test: The same rise framed in Japan versus a high-inflation market, measuring backlash; or tolerance tracked across successive Japanese rises.
   created: '2026-11-17'
-  last_updated: '2026-11-17'
+  last_updated: '2026-11-18'
   evidence_for:
   - kind: tracker
     ref: japan-food-price-rises-2026
@@ -1073,6 +1190,12 @@
   - kind: tracker
     ref: uniqlo-socks-2026
     note: Basic sock rise reversed within weeks after backlash.
+  - kind: evidence
+    ref: sekine-wada-japan-tweets-2025
+    note: '2.15m tweets: acceptance of price hikes rose after 2021; BoJ unfavourable index fell despite higher inflation.'
+  - kind: evidence
+    ref: watanabe-japan-tolerance-survey-2022
+    note: 'Share who would keep shopping after a 10% rise: 43% (Aug 2021) to 56% (Apr 2022). Second-hand report of the survey.'
   evidence_against: []
   related_questions:
   - price-rise-tolerance-learned-2026
@@ -1096,11 +1219,17 @@
   - social-norms
   test: A second case of a new-customers-only rise, measuring who complains.
   created: '2026-11-17'
-  last_updated: '2026-11-17'
+  last_updated: '2026-11-18'
   evidence_for:
   - kind: tracker
     ref: burry-substack-2026
     note: $49 to $69 for new subscribers only; existing grandfathered readers pushed back; reversed within days.
+  - kind: evidence
+    ref: kahneman-fairness-profit-seeking-1986
+    note: 'Dual entitlement: the reference transaction protects existing customers'' terms. Theory and vignettes.'
+  - kind: evidence
+    ref: anderson-simester-price-antagonism-2010
+    note: '28-month field experiment: customers who saw others get a lower price bought less afterwards. Reverse direction (discount for others, not a rise).'
   evidence_against: []
   related_questions:
   - new-customer-only-rise-backlash-2026
@@ -1158,15 +1287,21 @@
   mechanism_codes: []
   test: The ACA 2027 open-enrollment outcome against the care-cost trend, and a decomposition of the Part D rise.
   created: '2026-11-17'
-  last_updated: '2026-11-17'
+  last_updated: '2026-11-18'
   evidence_for:
   - kind: tracker
     ref: medicare-part-d-premiums-2026
     note: Part D premiums set to rise about 50% in 2027; a possible cause is the early end of a premium-subsidy pilot.
+  - kind: evidence
+    ref: kff-part-d-premiums-2027
+    note: Part D premiums $34 to $51 for stayers after the stabilisation demonstration ends. Same case as the existing pointer.
   evidence_against:
   - kind: tracker
     ref: aca-2027-premiums-2026
     note: ACA benchmark premiums +13% for 2027; KFF attributes about 4 points to the end of enhanced tax credits and risk-pool change; insurers also cite above-usual care-cost growth.
+  - kind: evidence
+    ref: kff-aca-premium-decomposition-2026
+    note: 'Finalised ACA 2027 rates: subsidy and risk pool ~4 points of 13, median medical trend 10%. Same case as the existing pointer.'
   related_questions: []
   related_dives: []
   status_history:
@@ -1188,11 +1323,14 @@
   - reference-price
   test: WVU applications and deposits for 2027-28 against prior years and against peer universities that announced later.
   created: '2026-11-17'
-  last_updated: '2026-11-17'
+  last_updated: '2026-11-18'
   evidence_for:
   - kind: tracker
     ref: wvu-early-tuition-2026
     note: WVU set 2027-28 tuition months early so acceptance letters carry real numbers; reports applications and deposits ahead of previous years.
+  - kind: evidence
+    ref: cornell-save-your-seat-2026
+    note: Early personalised aid estimates; nearly a fifth of the class committed after one. Aid estimate, not tuition; no control.
   evidence_against: []
   related_questions: []
   related_dives: []
@@ -1238,3 +1376,123 @@
     confirmed_by: utpal
   agent: meta
   superseded_by: solar-grid-cost-shift
+- claim_id: list-price-overstates-net-price
+  claim: Published enterprise software list prices overstate what buyers pay after negotiation, though the gap has been narrowing.
+  status: Open
+  confidence: Medium
+  confidence_note: One large benchmark of matched contracts (800, four vendors) measures the gap directly; advisory-firm data, not peer-reviewed. The gap is shrinking.
+  mechanism_codes:
+  - reference-price
+  test: Net and list prices for matched deals in a second software category or from a second source.
+  created: '2026-11-18'
+  last_updated: '2026-11-18'
+  evidence_for:
+  - kind: evidence
+    ref: redress-vanishing-discount-2026
+    note: '800 contracts, size-matched: Oracle average discount 57% (2019) to 44% (2026); buyers with a credible alternative 8-15 points deeper.'
+  - kind: evidence
+    ref: harrington-ye-list-price-coordination-2017
+    note: 'Theory and cases: in negotiated B2B markets buyers rarely pay list, yet list prices anchor transaction prices.'
+  - kind: evidence
+    ref: zhao-listing-vs-transaction-dispersion-2015
+    note: Listing-price dispersion three times transaction-price dispersion; consumer online market, adjacent.
+  evidence_against: []
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-18'
+    old_status: null
+    new_status: Open
+    reason: 'Graduated from hypothesis list-is-not-what-buyers-pay: Muse''s 2026-11-18 evidence backfill found evidence directly on point (checked and filed by Claude). Proposed for Utpal''s confirmation.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: meta
+- claim_id: surcharges-persist-after-cost-falls
+  claim: Named B2B surcharges often persist after the cost that justified them falls, kept or raised rather than removed.
+  status: Open
+  confidence: Low
+  confidence_note: Carrier-by-carrier follow-through in one shock plus one persistence study; persistence is documented for months, permanence and margin capture are not.
+  mechanism_codes:
+  - partitioned-pricing
+  test: Invoice-level surcharge data for named carriers over a full cycle after the cost falls.
+  created: '2026-11-18'
+  last_updated: '2026-11-18'
+  evidence_for:
+  - kind: evidence
+    ref: tradlinx-emergency-fuel-surcharge-overlap-2026
+    note: After the 2026 fuel spike, Hapag-Lloyd withdrew its emergency surcharge when the BAF caught up; CMA CGM and ONE kept and raised theirs.
+  - kind: evidence
+    ref: zorasi-nigeria-war-risk-premium-persistence-2026
+    note: War-risk premiums on Nigeria-bound cargo persisted after piracy fell sharply; qualitative, secondary data.
+  - kind: evidence
+    ref: cannon-watanabe-asymmetric-fuel-passthrough-2025
+    note: Airlines keep prices when fuel falls and absorb more of rises; total prices, not a named surcharge.
+  evidence_against: []
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-18'
+    old_status: null
+    new_status: Open
+    reason: 'Graduated from hypothesis surcharges-outlive-their-cost: Muse''s 2026-11-18 evidence backfill found evidence directly on point (checked and filed by Claude). Proposed for Utpal''s confirmation.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: meta
+- claim_id: all-in-rules-reshuffle-fees
+  claim: When all-in pricing rules force fees into the headline price, sellers re-label the lost fee revenue as other charges rather than absorb it.
+  status: Open
+  confidence: Low
+  confidence_note: One documented firm in one industry (ticketing), with the seller's own email; no evidence yet on base prices or shipping thresholds.
+  mechanism_codes:
+  - drip-pricing
+  - partitioned-pricing
+  test: Retail product prices and free-shipping thresholds before and after an all-in rule, for the same sellers.
+  created: '2026-11-18'
+  last_updated: '2026-11-18'
+  evidence_for:
+  - kind: evidence
+    ref: ticketnews-ticketmaster-fee-shift-2026
+    note: 'Venue documents: Ticketmaster dropped order-processing fees and raised per-ticket charges to keep revenue level.'
+  evidence_against: []
+  related_questions:
+  - all-in-rules-response-2026
+  related_dives: []
+  status_history:
+  - date: '2026-11-18'
+    old_status: null
+    new_status: Open
+    reason: 'Graduated from hypothesis all-in-rules-price-response: Muse''s 2026-11-18 evidence backfill found evidence directly on point (checked and filed by Claude). Proposed for Utpal''s confirmation.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: meta
+- claim_id: patients-import-generics-when-gaps-large
+  claim: When drug price gaps across countries are large enough, patients themselves become the arbitrageurs, importing low-cost generics.
+  status: Open
+  confidence: Low
+  confidence_note: One counted precedent (616 patients, 38 countries) and one launch with no counts; growth with the price gap is not measured.
+  mechanism_codes: []
+  test: Verified buyer counts or import volumes for the Trikafta buyers' club over time.
+  created: '2026-11-18'
+  last_updated: '2026-11-18'
+  evidence_for:
+  - kind: evidence
+    ref: hill-buyers-club-hepatitis-c-2017
+    note: 616 patients in 38 countries bought generic hepatitis C drugs through buyers' clubs at $400-1,300 vs $84,000; 99% cure.
+  - kind: evidence
+    ref: beximco-trikafta-buyers-club-2026
+    note: First patients from six countries collected generic Trikafta at $12,750/year vs ~$370,000; no buyer counts yet.
+  evidence_against: []
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-18'
+    old_status: null
+    new_status: Open
+    reason: 'Graduated from hypothesis patients-become-arbitrageurs: Muse''s 2026-11-18 evidence backfill found evidence directly on point (checked and filed by Claude). Proposed for Utpal''s confirmation.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: meta

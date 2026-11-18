@@ -15,7 +15,13 @@
   last_hunted: null
   hunt_count: 0
   hunts: []
-  evidence_for: []
+  evidence_for:
+  - kind: evidence
+    ref: bagchi-labour-vs-material-cost-justification
+    note: 'Lead, not settled evidence: an unpublished seminar abstract reports the predicted preference, conditionally; no numbers.'
+  - kind: evidence
+    ref: stangl-cost-structure-appeals-fairness-2026
+    note: 'Adjacent: naming staff (customer-facing) costs beat overheads; tests alignability, not labour vs material.'
   evidence_against: []
   related_claim: null
   related_questions: []
@@ -39,39 +45,17 @@
   last_hunted: null
   hunt_count: 0
   hunts: []
-  evidence_for: []
+  evidence_for:
+  - kind: evidence
+    ref: zhang-cheng-algorithm-human-price-discrimination
+    note: 'Indirect: the disadvantaged side drives the harshest judgments.'
+  - kind: evidence
+    ref: hufnagel-personalized-pricing-backlash
+    note: 'Indirect: even favoured customers reject personalised pricing, so judgment is not set by the median beneficiary.'
   evidence_against: []
   related_claim: null
   related_questions:
   - personalization-worst-hit-2026
-  created: '2026-11-17'
-  agent: meta
-  history:
-  - date: '2026-11-17'
-    old_status: null
-    new_status: Testing
-    reason: Seeded from the 48-candidate list under Spec F.
-    source: null
-- hypothesis_id: surcharge-bans-shift-costs
-  hypothesis: Banning a surcharge shifts the cost elsewhere (higher base prices, new fees) rather than removing it.
-  predicts: After the card-surcharge ban, Australian merchants' base prices or other fees rise by about the banned surcharge.
-  test: A matched panel of Australian merchants' prices and fees since the card-surcharge ban, tracking differences in merchant payment costs (interchange caps fell at the same time); a raw before-and-after will not isolate the effect.
-  status: Testing
-  confidence: Low
-  lanes:
-  - Primary documents instead of news
-  - Outside the US/UK/EU
-  last_hunted: '2026-11-18'
-  hunt_count: 1
-  hunts:
-  - date: '2026-11-18'
-    agent: claude
-    outcome: miss
-    note: 'Searched post-Oct 1 Australian price data for merchants that had surcharged; found only raw before-and-after cafe data (17% of tracked cafes up about 49c, 79% unchanged; Hey You/Westpac about 1 in 10 up), filed as pricing_evidence au-surcharge-ban-cafe-prices. No matched panel and interchange caps fell the same day, so inconclusive and not evidence. Next hunt after 2026-12-02.'
-  evidence_for: []
-  evidence_against: []
-  related_claim: null
-  related_questions: []
   created: '2026-11-17'
   agent: meta
   history:
@@ -116,7 +100,10 @@
   last_hunted: null
   hunt_count: 0
   hunts: []
-  evidence_for: []
+  evidence_for:
+  - kind: evidence
+    ref: raghubir-three-faces-promotions-2004
+    note: 'Framework: irregular intervals blur perceived deal frequency; promotions shape store price reputation. Propositions, not a test.'
   evidence_against: []
   related_claim: null
   related_questions:
@@ -140,7 +127,13 @@
   last_hunted: null
   hunt_count: 0
   hunts: []
-  evidence_for: []
+  evidence_for:
+  - kind: evidence
+    ref: churnkey-offer-durability-2025
+    note: 'Observational: plan-change saves kept customers 7-8 months vs 5.1 for discounts; self-selected, no price-rise variation.'
+  - kind: evidence
+    ref: recurly-pause-dividend-2025
+    note: 'Observational: a quarter of subscribers paused instead of cancelling where offered; vendor data.'
   evidence_against: []
   related_claim: null
   related_questions:
@@ -165,7 +158,19 @@
   last_hunted: null
   hunt_count: 0
   hunts: []
-  evidence_for: []
+  evidence_for:
+  - kind: evidence
+    ref: contactless-pain-of-paying-dnb-2024
+    note: Contactless and mobile payments hurt less and restrain spending least (N=2,497, vignettes).
+  - kind: evidence
+    ref: mobile-payment-pleasure-eeg-2022
+    note: Mobile payment reduced the neural pain signal and raised purchase likelihood (small lab samples).
+  - kind: evidence
+    ref: mobile-vs-card-convenience-wtp-2020
+    note: 'Mobile beat card on WTP through convenience, with similar pain: frictionless gains may not run through pain.'
+  - kind: evidence
+    ref: cashless-effect-meta-analysis-2024
+    note: 'Bound: the cashless spending effect is small and shrinking; payment features did not moderate it.'
   evidence_against: []
   related_claim: null
   related_questions:
@@ -189,31 +194,14 @@
   last_hunted: null
   hunt_count: 0
   hunts: []
-  evidence_for: []
-  evidence_against: []
-  related_claim: null
-  related_questions: []
-  created: '2026-11-17'
-  agent: meta
-  history:
-  - date: '2026-11-17'
-    old_status: null
-    new_status: Testing
-    reason: Seeded from the 48-candidate list under Spec F.
-    source: null
-- hypothesis_id: list-is-not-what-buyers-pay
-  hypothesis: Published B2B list prices systematically overstate what enterprise buyers pay after negotiation.
-  predicts: In a dataset of actual deals, net prices sit materially below list in one software category.
-  test: Estimate the gap between net and list price, and its spread, in one software category, matching deal size, term, bundled services and list vintage. List prices alone (the b2b_pricing.yml entries) are the reason to hunt, not evidence.
-  status: Testing
-  confidence: Low
-  lanes:
-  - B2B and enterprise pricing
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
-  evidence_for: []
-  evidence_against: []
+  evidence_for:
+  - kind: evidence
+    ref: sophisticated-consumers-inertia-field-experiment-2026
+    note: Auto-renewal cut take-up 35% and subscribers 23% over 20 months; revenue equal after a year. Promo sign-up, not tier choice at renewal.
+  evidence_against:
+  - kind: evidence
+    ref: selling-subscriptions-card-replacement-2025
+    note: Forced re-enrolment (card replacement) sharply raised cancellations; inertia worth ~87% of revenue. Not a designed tier choice.
   related_claim: null
   related_questions: []
   created: '2026-11-17'
@@ -235,56 +223,14 @@
   last_hunted: null
   hunt_count: 0
   hunts: []
-  evidence_for: []
-  evidence_against: []
-  related_claim: null
-  related_questions: []
-  created: '2026-11-17'
-  agent: meta
-  history:
-  - date: '2026-11-17'
-    old_status: null
-    new_status: Testing
-    reason: Seeded from the 48-candidate list under Spec F.
-    source: null
-- hypothesis_id: surcharges-outlive-their-cost
-  hypothesis: B2B surcharges outlive the cost that justified them, becoming permanent margin.
-  predicts: A named surcharge (war-risk, fuel) is still charged, renamed or folded into the base rate after its stated cost falls.
-  test: Follow a named surcharge (war-risk, fuel) after its stated cost falls and record whether it is removed, renamed or rolled into the base rate; persistence alone does not establish a permanent margin gain.
-  status: Testing
-  confidence: Low
-  lanes:
-  - B2B and enterprise pricing
-  - Primary documents instead of news
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
-  evidence_for: []
-  evidence_against: []
-  related_claim: null
-  related_questions: []
-  created: '2026-11-17'
-  agent: meta
-  history:
-  - date: '2026-11-17'
-    old_status: null
-    new_status: Testing
-    reason: Seeded from the 48-candidate list under Spec F.
-    source: null
-- hypothesis_id: patients-become-arbitrageurs
-  hypothesis: When drug price gaps across countries are large enough, patients themselves become the arbitrageurs, importing low-cost generics.
-  predicts: Patient-led importing of a low-cost generic grows in volume and countries while the originator's price gap persists.
-  test: Verified import volumes or credible counts of buyers across countries for the Trikafta buyers' club or a similar scheme; a buyers' club existing shows a pathway, not its growth. Hunt starts from the Substack idea trikafta-patient-arbitrage.
-  status: Testing
-  confidence: Low
-  lanes:
-  - Industries the others ignore
-  - Outside the US/UK/EU
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
-  evidence_for: []
-  evidence_against: []
+  evidence_for:
+  - kind: evidence
+    ref: att-broadcom-vmware-settlement-2024
+    note: 'Magnitude only: AT&T alleged a 1,050% rise and planned to migrate; settled with terms undisclosed.'
+  evidence_against:
+  - kind: evidence
+    ref: broadcom-vmware-pays-off-customers-leave-2025
+    note: 'Short run favours the counter-prediction: segment revenue up while customers plan exits; no cohort accounting.'
   related_claim: null
   related_questions: []
   created: '2026-11-17'
@@ -367,62 +313,6 @@
     new_status: Testing
     reason: 'Moved from the claims list at seeding (Spec F re-judgment): its tracker pointer (crochet-seller-reversal-2026) is a price reversal, not an opt-out, and the remaining pointers are single consumer-voice posts (briefings 2026-11-17-meta and 2026-11-16-meta), which are leads, not evidence.'
     source: null
-- hypothesis_id: tariff-refund-expectations
-  hypothesis: When a seller justifies a price rise by naming a specific cost, buyers expect the price to fall when that cost is refunded, more than after an unspecified cost increase.
-  predicts: Buyers expect a larger price cut when a refunded cost had been named in the original price rise than after an unspecified rise, and larger still when the rise was labelled a temporary surcharge.
-  test: 'Consumer surveys, complaints or seller responses as tariff refunds are paid; an experiment varying the justification (named tariff, temporary surcharge, unspecified cost) and then announcing the refund, holding amount and rationale constant (ChatGPT reserve #25 folded in).'
-  status: Testing
-  confidence: Low
-  lanes:
-  - Primary documents instead of news
-  - B2B and enterprise pricing
-  last_hunted: '2026-11-18'
-  hunt_count: 1
-  hunts:
-  - date: '2026-11-18'
-    agent: claude
-    outcome: miss
-    note: 'Searched consumer surveys, complaints and seller responses as refunds are paid; found ProPublica''s Nov 16 finding that at least nine firms put refunds into bonuses (filed on tariff-refunds-2026) and a Groundwork/Data for Progress poll in which 72% of voters do not trust firms to cut prices after refunds. Neither compares named-cost with unspecified-cost rises, so no test of the prediction. Next hunt after 2026-12-02.'
-  evidence_for: []
-  evidence_against: []
-  related_claim: null
-  related_questions:
-  - tariff-refund-expectations-2026
-  from_claim: tariff-refund-entitlement
-  created: '2026-11-17'
-  agent: claude
-  history:
-  - date: '2026-11-17'
-    old_status: null
-    new_status: Testing
-    reason: 'Created from claim tariff-refund-entitlement, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): tariff-refunds-2026.'
-    source: null
-- hypothesis_id: all-in-rules-price-response
-  hypothesis: Retailers respond to all-in pricing rules by raising product prices or leaning harder on free-shipping thresholds, rather than absorbing the disclosed fees.
-  predicts: After all-in rules take effect, the same retailers raise product prices or free-shipping thresholds rather than absorbing the disclosed fees.
-  test: Product prices and threshold levels before and after an all-in rule takes effect, for the same retailers.
-  status: Testing
-  confidence: Low
-  lanes:
-  - Primary documents instead of news
-  - Outside the US/UK/EU
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
-  evidence_for: []
-  evidence_against: []
-  related_claim: null
-  related_questions:
-  - all-in-rules-response-2026
-  from_claim: all-in-rules-shift-prices
-  created: '2026-11-17'
-  agent: claude
-  history:
-  - date: '2026-11-17'
-    old_status: null
-    new_status: Testing
-    reason: 'Created from claim all-in-rules-shift-prices, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): uk-cma-drip-pricing-2026.'
-    source: null
 - hypothesis_id: solar-grid-cost-shift
   hypothesis: When solar homes buy less power, the fixed cost of the grid falls on remaining customers unless tariffs are redesigned.
   predicts: Regulators facing solar defection raise fixed or network charges, shifting grid costs onto customers who stay.
@@ -435,7 +325,13 @@
   last_hunted: null
   hunt_count: 0
   hunts: []
-  evidence_for: []
+  evidence_for:
+  - kind: evidence
+    ref: sims-solar-cost-shift-2025
+    note: 'Model calibrated with a choice experiment: high-income solar adoption raises low-income bills ~10% under volumetric tariffs.'
+  - kind: evidence
+    ref: nersa-solar-tariff-consultation-2026
+    note: NERSA's draft moves network costs to per-connection charges; Eskom fixed charge proposed +23%. Decision due 26 Nov 2026.
   evidence_against: []
   related_claim: null
   related_questions: []
@@ -460,8 +356,14 @@
   last_hunted: null
   hunt_count: 0
   hunts: []
-  evidence_for: []
-  evidence_against: []
+  evidence_for:
+  - kind: evidence
+    ref: benchmarkit-usage-nrr-108-vs-seat-98-2026
+    note: 'Correlational and second-hand: usage-priced firms report NRR 108% vs 98% for seat-priced; another dataset disagrees.'
+  evidence_against:
+  - kind: evidence
+    ref: bain-per-seat-pricing-not-dead-2025
+    note: 'Bound: none of 30+ established vendors had fully moved to usage or outcome pricing; most layered a meter on seats.'
   related_claim: null
   related_questions: []
   from_claim: metering-beats-seats-for-ai
@@ -472,6 +374,76 @@
     old_status: null
     new_status: Testing
     reason: 'Created from claim metering-beats-seats-for-ai, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): saas-credits-2026; microsoft-365-copilot-metered-2027; openai-per-job-pricing-2026.'
+    source: null
+- hypothesis_id: surcharge-bans-shift-costs
+  hypothesis: Banning a surcharge shifts the cost elsewhere (higher base prices, new fees) rather than removing it.
+  predicts: After the card-surcharge ban, Australian merchants' base prices or other fees rise by about the banned surcharge.
+  test: A matched panel of Australian merchants' prices and fees since the card-surcharge ban, tracking differences in merchant payment costs (interchange caps fell at the same time); a raw before-and-after will not isolate the effect.
+  status: Testing
+  confidence: Low
+  lanes:
+  - Primary documents instead of news
+  - Outside the US/UK/EU
+  last_hunted: '2026-11-18'
+  hunt_count: 1
+  hunts:
+  - date: '2026-11-18'
+    agent: claude
+    outcome: miss
+    note: Searched post-Oct 1 Australian price data for merchants that had surcharged; found only raw before-and-after cafe data (17% of tracked cafes up about 49c, 79% unchanged; Hey You/Westpac about 1 in 10 up), filed as pricing_evidence au-surcharge-ban-cafe-prices. No matched panel and interchange caps fell the same day, so inconclusive and not evidence. Next hunt after 2026-12-02.
+  evidence_for:
+  - kind: evidence
+    ref: eca-surcharge-ban-global-addon-2025
+    note: 'EU auditors: under the surcharge ban merchants fold payment fees into prices as a global add-on; no price data.'
+  - kind: evidence
+    ref: rba-surcharge-ban-expectation-2026
+    note: RBA expects merchants to fold payment costs into headline prices; an expectation, published before the ban.
+  - kind: evidence
+    ref: bundeskartellamt-paypal-surcharge-2026
+    note: 'German regulator: under PayPal''s no-surcharge rule, costs fall on all customers through general prices; preliminary.'
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+- hypothesis_id: tariff-refund-expectations
+  hypothesis: When a seller justifies a price rise by naming a specific cost, buyers expect the price to fall when that cost is refunded, more than after an unspecified cost increase.
+  predicts: Buyers expect a larger price cut when a refunded cost had been named in the original price rise than after an unspecified rise, and larger still when the rise was labelled a temporary surcharge.
+  test: 'Consumer surveys, complaints or seller responses as tariff refunds are paid; an experiment varying the justification (named tariff, temporary surcharge, unspecified cost) and then announcing the refund, holding amount and rationale constant (ChatGPT reserve #25 folded in).'
+  status: Testing
+  confidence: Low
+  lanes:
+  - Primary documents instead of news
+  - B2B and enterprise pricing
+  last_hunted: '2026-11-18'
+  hunt_count: 1
+  hunts:
+  - date: '2026-11-18'
+    agent: claude
+    outcome: miss
+    note: Searched consumer surveys, complaints and seller responses as refunds are paid; found ProPublica's Nov 16 finding that at least nine firms put refunds into bonuses (filed on tariff-refunds-2026) and a Groundwork/Data for Progress poll in which 72% of voters do not trust firms to cut prices after refunds. Neither compares named-cost with unspecified-cost rises, so no test of the prediction. Next hunt after 2026-12-02.
+  evidence_for: []
+  evidence_against:
+  - kind: evidence
+    ref: kahneman-knetsch-thaler-dual-entitlement-1986
+    note: 'Indirect prior against the strong form: only 53% thought a firm whose costs fell should cut its price.'
+  related_claim: null
+  related_questions:
+  - tariff-refund-expectations-2026
+  from_claim: tariff-refund-entitlement
+  created: '2026-11-17'
+  agent: claude
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Created from claim tariff-refund-entitlement, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): tariff-refunds-2026.'
     source: null
 - hypothesis_id: less-accurate-ai-buyer-better-off
   hypothesis: A less accurate AI buyer can leave consumers better off than a fully accurate one, because sellers respond to how buyers process prices.
@@ -939,3 +911,147 @@
     reason: 'Deferred at creation: no test is likely before the reopen event. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
     source: null
   reopen_when: A vignette study or a case where a seller's efficiency gains became public and buyers asked for a cut.
+- hypothesis_id: list-is-not-what-buyers-pay
+  hypothesis: Published B2B list prices systematically overstate what enterprise buyers pay after negotiation.
+  predicts: In a dataset of actual deals, net prices sit materially below list in one software category.
+  test: Estimate the gap between net and list price, and its spread, in one software category, matching deal size, term, bundled services and list vintage. List prices alone (the b2b_pricing.yml entries) are the reason to hunt, not evidence.
+  status: Graduated
+  confidence: Low
+  lanes:
+  - B2B and enterprise pricing
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for:
+  - kind: evidence
+    ref: redress-vanishing-discount-2026
+    note: '800 contracts, size-matched: Oracle average discount 57% (2019) to 44% (2026); buyers with a credible alternative 8-15 points deeper.'
+  - kind: evidence
+    ref: harrington-ye-list-price-coordination-2017
+    note: 'Theory and cases: in negotiated B2B markets buyers rarely pay list, yet list prices anchor transaction prices.'
+  - kind: evidence
+    ref: zhao-listing-vs-transaction-dispersion-2015
+    note: Listing-price dispersion three times transaction-price dispersion; consumer online market, adjacent.
+  evidence_against: []
+  related_claim: list-price-overstates-net-price
+  related_questions: []
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+  - date: '2026-11-18'
+    old_status: Testing
+    new_status: Graduated
+    reason: Graduated into claim list-price-overstates-net-price on evidence from Muse's 2026-11-18 backfill.
+    source: null
+- hypothesis_id: surcharges-outlive-their-cost
+  hypothesis: B2B surcharges outlive the cost that justified them, becoming permanent margin.
+  predicts: A named surcharge (war-risk, fuel) is still charged, renamed or folded into the base rate after its stated cost falls.
+  test: Follow a named surcharge (war-risk, fuel) after its stated cost falls and record whether it is removed, renamed or rolled into the base rate; persistence alone does not establish a permanent margin gain.
+  status: Graduated
+  confidence: Low
+  lanes:
+  - B2B and enterprise pricing
+  - Primary documents instead of news
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for:
+  - kind: evidence
+    ref: tradlinx-emergency-fuel-surcharge-overlap-2026
+    note: After the 2026 fuel spike, Hapag-Lloyd withdrew its emergency surcharge when the BAF caught up; CMA CGM and ONE kept and raised theirs.
+  - kind: evidence
+    ref: zorasi-nigeria-war-risk-premium-persistence-2026
+    note: War-risk premiums on Nigeria-bound cargo persisted after piracy fell sharply; qualitative, secondary data.
+  - kind: evidence
+    ref: cannon-watanabe-asymmetric-fuel-passthrough-2025
+    note: Airlines keep prices when fuel falls and absorb more of rises; total prices, not a named surcharge.
+  evidence_against: []
+  related_claim: surcharges-persist-after-cost-falls
+  related_questions: []
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+  - date: '2026-11-18'
+    old_status: Testing
+    new_status: Graduated
+    reason: Graduated into claim surcharges-persist-after-cost-falls on evidence from Muse's 2026-11-18 backfill.
+    source: null
+- hypothesis_id: patients-become-arbitrageurs
+  hypothesis: When drug price gaps across countries are large enough, patients themselves become the arbitrageurs, importing low-cost generics.
+  predicts: Patient-led importing of a low-cost generic grows in volume and countries while the originator's price gap persists.
+  test: Verified import volumes or credible counts of buyers across countries for the Trikafta buyers' club or a similar scheme; a buyers' club existing shows a pathway, not its growth. Hunt starts from the Substack idea trikafta-patient-arbitrage.
+  status: Graduated
+  confidence: Low
+  lanes:
+  - Industries the others ignore
+  - Outside the US/UK/EU
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for:
+  - kind: evidence
+    ref: hill-buyers-club-hepatitis-c-2017
+    note: 616 patients in 38 countries bought generic hepatitis C drugs through buyers' clubs at $400-1,300 vs $84,000; 99% cure.
+  - kind: evidence
+    ref: beximco-trikafta-buyers-club-2026
+    note: First patients from six countries collected generic Trikafta at $12,750/year vs ~$370,000; no buyer counts yet.
+  evidence_against: []
+  related_claim: patients-import-generics-when-gaps-large
+  related_questions: []
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+  - date: '2026-11-18'
+    old_status: Testing
+    new_status: Graduated
+    reason: Graduated into claim patients-import-generics-when-gaps-large on evidence from Muse's 2026-11-18 backfill.
+    source: null
+- hypothesis_id: all-in-rules-price-response
+  hypothesis: Retailers respond to all-in pricing rules by raising product prices or leaning harder on free-shipping thresholds, rather than absorbing the disclosed fees.
+  predicts: After all-in rules take effect, the same retailers raise product prices or free-shipping thresholds rather than absorbing the disclosed fees.
+  test: Product prices and threshold levels before and after an all-in rule takes effect, for the same retailers.
+  status: Graduated
+  confidence: Low
+  lanes:
+  - Primary documents instead of news
+  - Outside the US/UK/EU
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for:
+  - kind: evidence
+    ref: ticketnews-ticketmaster-fee-shift-2026
+    note: 'Venue documents: Ticketmaster dropped order-processing fees and raised per-ticket charges to keep revenue level.'
+  evidence_against: []
+  related_claim: all-in-rules-reshuffle-fees
+  related_questions:
+  - all-in-rules-response-2026
+  from_claim: all-in-rules-shift-prices
+  created: '2026-11-17'
+  agent: claude
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Created from claim all-in-rules-shift-prices, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): uk-cma-drip-pricing-2026.'
+    source: null
+  - date: '2026-11-18'
+    old_status: Testing
+    new_status: Graduated
+    reason: Graduated into claim all-in-rules-reshuffle-fees on evidence from Muse's 2026-11-18 backfill.
+    source: null
