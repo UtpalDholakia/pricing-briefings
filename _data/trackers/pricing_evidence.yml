@@ -1,4 +1,20 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: "eu-discount-reference-base-choice"
+  date: "2026-10-13"
+  mechanism: "Reference price anchoring through the percentage discount and crossed-out comparison price"
+  mechanism_codes: [reference-price, context-effects]
+  comparison: "Percentage discount and crossed-out price based on a higher additional reference (recommended or unspecified) versus the seller's lowest price in the prior 30 days"
+  design: "Between-subjects online experiment, Experiment 2, T7 versus T8, best-deal selection task"
+  setting: "Simulated three-product shop in Ireland, France and Spain, fielded January 2025; 4,015 participants across both experiments in the report"
+  outcome: "Share selecting the cheapest product as the best deal"
+  result_kind: "Positive in this setting"
+  result: "The cheapest product was chosen by 50.8% in T7 (higher additional reference) and 80.6% in T8 (recent low), a 29.8 percentage point difference (Figure 10)."
+  boundary: "Simulated choice, not a paid purchase. Both the percent-off and strikethrough labels changed together. The selected item combined the lowest current price and the largest displayed percentage reduction in T8."
+  source: "https://op.europa.eu/en/publication-detail/-/publication/1af18b1f-c77e-11f1-a77b-01aa75ed71a1/language-en"
+  related_source: "https://euagenda.eu/publications/download/850772"
+  verification_note: "Read the original report: Experiment 2 protocol, Figure 10, and Table 7. Publication date is the EU Publications Office release date."
+  digest: "2026-11-18"
+  agent: "chatgpt"
 - id: unit-rate-format-promotion-sensitivity
   case_id: unit-rate-format-2026
   date: '2026-11-01'
