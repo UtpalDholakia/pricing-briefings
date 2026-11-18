@@ -32,7 +32,7 @@ permalink: /hypotheses/
     <tr id="{{ h.hypothesis_id }}">
       <td><strong>{{ h.hypothesis }}</strong>
         <div class="small">Predicts: {{ h.predicts }}</div>
-        <div class="small muted">{{ h.hypothesis_id }} · prior {{ h.confidence }}{% for q in h.related_questions %}{% assign qq = Q | where: "question_id", q | first %} · question: {% if qq %}<span title="{{ qq.question | escape }}">{{ q }}</span>{% else %}{{ q }}{% endif %}{% endfor %}</div>
+        <div class="small muted">{{ h.hypothesis_id }} · prior {{ h.confidence }}{% if h.from_claim %} · from claim <a href="{{ claims_base }}#{{ h.from_claim }}">{{ h.from_claim }}</a>{% endif %}{% for q in h.related_questions %}{% assign qq = Q | where: "question_id", q | first %} · question: {% if qq %}<span title="{{ qq.question | escape }}">{{ q }}</span>{% else %}{{ q }}{% endif %}{% endfor %}</div>
         {% assign evn = h.evidence_for.size | plus: h.evidence_against.size %}{% if evn > 0 %}<div class="small">Evidence: {% for p in h.evidence_for %}<span class="chip yes">for</span> {{ p.ref }} {% endfor %}{% for p in h.evidence_against %}<span class="chip no">against</span> {{ p.ref }} {% endfor %}</div>{% endif %}
       </td>
       <td class="small">{{ h.test }}</td>
@@ -48,7 +48,7 @@ permalink: /hypotheses/
   <p class="muted small">Hypotheses kept in reserve: paused until an event or data could test them, or waiting for a free slot. They are not hunted.</p>
   {% if deferred.size == 0 %}<p class="muted small">None yet.</p>{% else %}
   <details><summary class="small">Show {{ deferred.size }} deferred hypotheses</summary><ul>{% for h in deferred %}
-    <li id="{{ h.hypothesis_id }}" class="small"><strong>{{ h.hypothesis }}</strong> <span class="muted">Test: {{ h.test }} Reopen when: {{ h.reopen_when }}</span></li>{% endfor %}</ul></details>{% endif %}
+    <li id="{{ h.hypothesis_id }}" class="small"><strong>{{ h.hypothesis }}</strong> <span class="muted">Test: {{ h.test }} Reopen when: {{ h.reopen_when }}{% if h.from_claim %} (from claim <a href="{{ claims_base }}#{{ h.from_claim }}">{{ h.from_claim }}</a>){% endif %}</span></li>{% endfor %}</ul></details>{% endif %}
 </section>
 
 <section class="tracker" id="graduated">

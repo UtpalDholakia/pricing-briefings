@@ -450,6 +450,16 @@ if hyps is not None:
             if len(hunts) >= 3 and not has_evidence:
                 hyp_report["review"].append(hid)
                 warn(where, f"{len(hunts)} hunts and no evidence: review (keep hunting with a reason, or mark Dead)")
+    hyp_ids = {h.get("hypothesis_id") for h in hyps if isinstance(h, dict)}
+    for h in hyps:
+        if isinstance(h, dict) and h.get("from_claim") and h["from_claim"] not in claim_ids:
+            err(f"_data/hypotheses.yml {h.get('hypothesis_id')}", f"from_claim {h['from_claim']!r} is not a claim_id")
+    for c in claims or []:
+        sb = c.get("superseded_by") if isinstance(c, dict) else None
+        if sb and sb not in hyp_ids:
+            err(f"_data/claims.yml {c.get('claim_id')}", f"superseded_by {sb!r} is not a hypothesis_id")
+        if sb and c.get("status") != "Dead":
+            err(f"_data/claims.yml {c.get('claim_id')}", "a claim superseded by a hypothesis must be Dead")
     if hyp_report["testing"] > TESTING_CAP:
         err("_data/hypotheses.yml", f"{hyp_report['testing']} hypotheses in Testing (cap is {TESTING_CAP})")
 

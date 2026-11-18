@@ -7,8 +7,11 @@
   claim: A dynamic price attributed to an AI is judged differently, on fairness and intent, from the same price attributed to a person.
   status: Open
   confidence: Medium
-  confidence_note: 'Both studies in the repo find a difference, in opposite directions (AI fairer vs AI more manipulative); two studies of one kind are not enough for Supported under the verdict rules, and no field case tests it yet.'
-  mechanism_codes: [algorithm-attribution, motive-attribution, left-digit]
+  confidence_note: Both studies in the repo find a difference, in opposite directions (AI fairer vs AI more manipulative); two studies of one kind are not enough for Supported under the verdict rules, and no field case tests it yet.
+  mechanism_codes:
+  - algorithm-attribution
+  - motive-attribution
+  - left-digit
   created: '2026-11-17'
   last_updated: '2026-11-17'
   evidence_for:
@@ -19,7 +22,8 @@
     ref: ai-set-just-below-prices
     note: 'Chacon & Limongi (JCA, 2 studies): AI-set prices drew lower intentions; just-below endings read as manipulation.'
   evidence_against: []
-  related_questions: [ai-price-setter-fairness-2026]
+  related_questions:
+  - ai-price-setter-fairness-2026
   related_dives: []
   status_history:
   - date: '2026-11-17'
@@ -35,7 +39,9 @@
   status: Contested
   confidence: Low
   confidence_note: 'backlash.yml on 2026-11-17: 7 of 11 resolved cases reversed at least partly (6 Yes, 1 Partial, 4 No; 4 still Pending or Unknown). The tracker does not code whether backlash was public, attributable or widely covered, so the count does not test the condition; two widely covered cases held.'
-  mechanism_codes: [price-change-communication, motive-attribution]
+  mechanism_codes:
+  - price-change-communication
+  - motive-attribution
   created: '2026-11-17'
   last_updated: '2026-11-17'
   evidence_for:
@@ -73,8 +79,11 @@
   claim: Naming a specific cost in a price-rise explanation reduces backlash compared with an unspecified or market-based explanation.
   status: Open
   confidence: Low
-  confidence_note: 'Leans against. The only direct test in the repo, a field experiment, found market justifications cut attrition and cost justifications did not; whether its cost condition named a specific cost is unconfirmed. No evidence for yet; tariff refunds suggest a named cost may also bind the seller later.'
-  mechanism_codes: [dual-entitlement, motive-attribution, price-change-communication]
+  confidence_note: Leans against. The only direct test in the repo, a field experiment, found market justifications cut attrition and cost justifications did not; whether its cost condition named a specific cost is unconfirmed. No evidence for yet; tariff refunds suggest a named cost may also bind the seller later.
+  mechanism_codes:
+  - dual-entitlement
+  - motive-attribution
+  - price-change-communication
   created: '2026-11-17'
   last_updated: '2026-11-17'
   evidence_for: []
@@ -85,7 +94,8 @@
   - kind: tracker
     ref: sam-fender-tour-2026
     note: 'Anecdote, not a comparison: a cost-tracking explanation still met fan backlash; prices partly reversed.'
-  related_questions: [tariff-refund-expectations-2026]
+  related_questions:
+  - tariff-refund-expectations-2026
   related_dives: []
   status_history:
   - date: '2026-11-17'
@@ -107,8 +117,10 @@
   claim: When a vendor prices in credits rather than currency, buyers underestimate what they pay, because the vendor sets the exchange rate.
   status: Open
   confidence: Low
-  confidence_note: 'The repo has cases where the exchange rate changed (allowances, credit draw-down rules) but no measurement of whether buyers misjudged what they paid; churn data and the per-job reversal suggest buyers notice and prefer metered units. The draft deep dive was removed from the evidence on 2026-11-17 (an argument for the claim is not evidence for it) and stays under related dives.'
-  mechanism_codes: [mental-accounting, usage-anxiety]
+  confidence_note: The repo has cases where the exchange rate changed (allowances, credit draw-down rules) but no measurement of whether buyers misjudged what they paid; churn data and the per-job reversal suggest buyers notice and prefer metered units. The draft deep dive was removed from the evidence on 2026-11-17 (an argument for the claim is not evidence for it) and stays under related dives.
+  mechanism_codes:
+  - mental-accounting
+  - usage-anxiety
   created: '2026-11-17'
   last_updated: '2026-11-17'
   evidence_for:
@@ -126,7 +138,8 @@
     ref: genai-subscriptions-nber-2026
     note: 'Card data on 174M consumers: high churn and switching suggest buyers respond to value changes.'
   related_questions: []
-  related_dives: [2026-12-credits-as-a-currency]
+  related_dives:
+  - 2026-12-credits-as-a-currency
   status_history:
   - date: '2026-11-17'
     old_status: null
@@ -141,7 +154,9 @@
   status: Open
   confidence: Low
   confidence_note: 'One experiment supports the size boundary. Restaurant fee backlash (earls-admin-fee-2026, uca-terraza-fees-2026) was removed as counter-evidence on 2026-11-17: those fees were revealed late (drip pricing), which does not test an upfront partitioned price against an all-in one. A field comparison of upfront partitioned and all-in prices is needed.'
-  mechanism_codes: [partitioned-pricing, drip-pricing]
+  mechanism_codes:
+  - partitioned-pricing
+  - drip-pricing
   created: '2026-11-17'
   last_updated: '2026-11-17'
   evidence_for:
@@ -172,7 +187,8 @@
   status: Refuted
   confidence: Medium
   confidence_note: Four replications failed to reproduce the original effect; this refutes the multipack result, not the broader idea that easier arithmetic can affect choice.
-  mechanism_codes: [unit-price-processing]
+  mechanism_codes:
+  - unit-price-processing
   created: '2026-11-17'
   last_updated: '2026-11-17'
   evidence_for: []
@@ -191,10 +207,9 @@
     proposed_by: claude
     confirmed_by: null
   agent: claude
-# Spec F seeds, 2026-11-17: 31 of Muse's 48 candidates (seed-first five first). Re-judgments are recorded in each status_history reason.
 - claim_id: personalization-pledges-reassure
   claim: A public pledge not to personalise prices reassures shoppers rather than reminding them that personalisation is possible.
-  status: Open
+  status: Dead
   confidence: Low
   confidence_note: One instance of the pledge, no measured shopper response; the only recorded reaction is skeptical commentary that shoppers cannot verify app prices, which leans against.
   mechanism_codes:
@@ -219,10 +234,18 @@
     source: null
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-17'
+    old_status: Open
+    new_status: Dead
+    reason: 'Superseded by hypothesis pledge-reassures-shoppers: the pointers show the situation the claim is about but do not measure its predicted outcome, so it goes back to the hunt. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+    proposed_by: claude
+    confirmed_by: utpal
   agent: claude
+  superseded_by: pledge-reassures-shoppers
 - claim_id: fare-breakdown-builds-trust
   claim: Showing a fare's cost breakdown builds trust rather than inviting disputes over each line.
-  status: Open
+  status: Dead
   confidence: Low
   confidence_note: One mandated breakdown, not yet in effect (January 2027); no trust or complaint data yet.
   mechanism_codes:
@@ -247,7 +270,15 @@
     source: null
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-17'
+    old_status: Open
+    new_status: Dead
+    reason: 'Superseded by hypothesis fare-breakdown-trust-test: the pointers show the situation the claim is about but do not measure its predicted outcome, so it goes back to the hunt. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+    proposed_by: claude
+    confirmed_by: utpal
   agent: claude
+  superseded_by: fare-breakdown-trust-test
 - claim_id: threshold-beats-cap-low-only
   claim: A minimum-spend threshold beats a cap on savings at low trigger amounts, and loses at high trigger amounts.
   status: Open
@@ -276,7 +307,7 @@
   agent: claude
 - claim_id: metering-beats-seats-for-ai
   claim: Usage or credit metering beats seat pricing for AI products once agents do the work, because seats no longer measure use.
-  status: Contested
+  status: Dead
   confidence: Low
   confidence_note: Vendors are moving to metering, but buyers rejected a simpler unit in favour of auditable metering; the against case fits only partly (it is against opaque units, not metering as such).
   mechanism_codes:
@@ -306,12 +337,20 @@
     source: null
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-17'
+    old_status: Contested
+    new_status: Dead
+    reason: 'Superseded by hypothesis metering-beats-seats-ai: the pointers show the situation the claim is about but do not measure its predicted outcome, so it goes back to the hunt. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+    proposed_by: claude
+    confirmed_by: utpal
   agent: claude
+  superseded_by: metering-beats-seats-ai
 - claim_id: festival-discounts-fail-after-hikes
   claim: Festival-sale discounts fail when earlier price hikes have already moved the reference price.
   status: Open
   confidence: Medium
-  confidence_note: One direct market outcome (Diwali) plus one institutional response to the same problem (Buen Fin); a market where pre-festival prices were flat is the missing comparison.
+  confidence_note: 'One direct market outcome (Diwali) plus one institutional response to the same problem (Buen Fin); a market where pre-festival prices were flat is the missing comparison. Profeco''s Buen Fin price-history tool (profeco-buen-fin-2026) is context, not evidence: it is a regulator''s response, not a sales outcome (audit 2026-11-17).'
   mechanism_codes:
   - reference-price
   - transaction-utility
@@ -322,9 +361,6 @@
   - kind: tracker
     ref: diwali-smartphones-2026
     note: Diwali offline smartphone sales down 18-20% despite festive discounts, after memory-driven price rises.
-  - kind: tracker
-    ref: profeco-buen-fin-2026
-    note: Mexico's consumer agency published price histories for Buen Fin to expose pre-sale price inflation.
   evidence_against: []
   related_questions: []
   related_dives: []
@@ -339,7 +375,7 @@
   agent: meta
 - claim_id: tariff-refund-entitlement
   claim: When a seller justifies a price rise by naming a specific cost, buyers expect the price to fall when that cost is refunded, more than after an unspecified cost increase.
-  status: Open
+  status: Dead
   confidence: Low
   confidence_note: One case where the named cost was refunded and prices held, prompting a senators' letter; no measured buyer expectation.
   mechanism_codes:
@@ -364,7 +400,15 @@
     source: null
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-17'
+    old_status: Open
+    new_status: Dead
+    reason: 'Superseded by hypothesis tariff-refund-expectations: the pointers show the situation the claim is about but do not measure its predicted outcome, so it goes back to the hunt. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+    proposed_by: claude
+    confirmed_by: utpal
   agent: claude
+  superseded_by: tariff-refund-expectations
 - claim_id: apology-needs-restraint
   claim: An apology for a price rise reduces backlash only when paired with a concession or restraint, not on its own.
   status: Open
@@ -397,7 +441,7 @@
   agent: claude
 - claim_id: data-disclosure-backfires
   claim: Telling a buyer "your data raised this price" triggers backlash or reactance rather than being ignored.
-  status: Open
+  status: Dead
   confidence: Low
   confidence_note: Two instances of the disclosure being mandated or studied; no measured buyer response yet.
   mechanism_codes:
@@ -425,10 +469,18 @@
     source: null
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-17'
+    old_status: Open
+    new_status: Dead
+    reason: 'Superseded by hypothesis data-price-disclosure-reactance: the pointers show the situation the claim is about but do not measure its predicted outcome, so it goes back to the hunt. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+    proposed_by: claude
+    confirmed_by: utpal
   agent: claude
+  superseded_by: data-price-disclosure-reactance
 - claim_id: nyc-fairness-line-drawn-by-consumers
   claim: 'Consumers draw the fairness line where New York City''s law does: prices based on stated traits and own purchase history are fair, prices based on inferred traits are unfair.'
-  status: Open
+  status: Dead
   confidence: Low
   confidence_note: The pointer shows where lawmakers drew the line, not where consumers draw it.
   mechanism_codes:
@@ -452,7 +504,15 @@
     source: null
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-17'
+    old_status: Open
+    new_status: Dead
+    reason: 'Superseded by hypothesis stated-vs-inferred-fairness: the pointers show the situation the claim is about but do not measure its predicted outcome, so it goes back to the hunt. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+    proposed_by: claude
+    confirmed_by: utpal
   agent: claude
+  superseded_by: stated-vs-inferred-fairness
 - claim_id: personal-price-label-worse
   claim: A "your price is personal" label on a price tag is worse for fairness judgments than hidden variation.
   status: Open
@@ -514,7 +574,7 @@
   agent: claude
 - claim_id: algorithm-label-triggers-inferences
   claim: A label saying a price was "set by an algorithm using your personal data" triggers both fairness judgments and price-level inferences (buyers infer the price is higher).
-  status: Open
+  status: Dead
   confidence: Low
   confidence_note: The label exists and is litigated; no measured inferences yet.
   mechanism_codes:
@@ -539,10 +599,18 @@
     source: null
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-17'
+    old_status: Open
+    new_status: Dead
+    reason: 'Superseded by hypothesis algorithm-label-price-inference: the pointers show the situation the claim is about but do not measure its predicted outcome, so it goes back to the hunt. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+    proposed_by: claude
+    confirmed_by: utpal
   agent: claude
+  superseded_by: algorithm-label-price-inference
 - claim_id: ai-agents-set-reference-prices
   claim: When pricing agents set market anchors, consumers learn different reference prices than when humans set them.
-  status: Open
+  status: Dead
   confidence: Low
   confidence_note: Both pointers show agents setting or reacting to prices differently from humans; neither measures what consumers learn.
   mechanism_codes:
@@ -570,10 +638,18 @@
     source: null
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-17'
+    old_status: Open
+    new_status: Dead
+    reason: 'Superseded by hypothesis agent-set-reference-prices: the pointers show the situation the claim is about but do not measure its predicted outcome, so it goes back to the hunt. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+    proposed_by: claude
+    confirmed_by: utpal
   agent: claude
+  superseded_by: agent-set-reference-prices
 - claim_id: partitioning-vs-drip-boundary
   claim: Consumers draw the line between partitioning and drip pricing on when the extra charge is revealed, not on what it is called.
-  status: Open
+  status: Dead
   confidence: Low
   confidence_note: Three late-reveal fee cases and the rules responding to them; no consumer judgment measured across reveal timing.
   mechanism_codes:
@@ -604,7 +680,15 @@
     source: null
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-17'
+    old_status: Open
+    new_status: Dead
+    reason: 'Superseded by hypothesis fee-timing-fairness-boundary: the pointers show the situation the claim is about but do not measure its predicted outcome, so it goes back to the hunt. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+    proposed_by: claude
+    confirmed_by: utpal
   agent: claude
+  superseded_by: fee-timing-fairness-boundary
 - claim_id: shrinkflation-draws-less-backlash
   claim: A smaller pack at the same price draws less backlash than an equal per-unit price rise.
   status: Open
@@ -664,7 +748,7 @@
   agent: claude
 - claim_id: upsizing-markup-reads-as-value
   claim: A larger pack at a higher price with a higher per-unit price is read as value, not as a price rise.
-  status: Open
+  status: Dead
   confidence: Low
   confidence_note: Two instances of the tactic; no measurement of how buyers read them, and the Tesla case is a trim change rather than a pack.
   mechanism_codes:
@@ -691,10 +775,18 @@
     source: null
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-17'
+    old_status: Open
+    new_status: Dead
+    reason: 'Superseded by hypothesis upsizing-reads-as-value: the pointers show the situation the claim is about but do not measure its predicted outcome, so it goes back to the hunt. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+    proposed_by: claude
+    confirmed_by: utpal
   agent: claude
+  superseded_by: upsizing-reads-as-value
 - claim_id: inflated-reference-lifts-purchase
   claim: An inflated reference price ("was R6,499") lifts purchase even when the reference price never actually held.
-  status: Open
+  status: Dead
   confidence: Low
   confidence_note: One instance of the tactic, no purchase data; one related study suggests less believable reference claims draw weaker responses.
   mechanism_codes:
@@ -721,10 +813,18 @@
     source: null
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-17'
+    old_status: Open
+    new_status: Dead
+    reason: 'Superseded by hypothesis inflated-reference-purchase: the pointers show the situation the claim is about but do not measure its predicted outcome, so it goes back to the hunt. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+    proposed_by: claude
+    confirmed_by: utpal
   agent: meta
+  superseded_by: inflated-reference-purchase
 - claim_id: all-in-rules-shift-prices
   claim: Retailers respond to all-in pricing rules by raising product prices or leaning harder on free-shipping thresholds, rather than absorbing the disclosed fees.
-  status: Open
+  status: Dead
   confidence: Low
   confidence_note: The rule is in force; no before-and-after retailer price data yet.
   mechanism_codes:
@@ -749,10 +849,18 @@
     source: null
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-17'
+    old_status: Open
+    new_status: Dead
+    reason: 'Superseded by hypothesis all-in-rules-price-response: the pointers show the situation the claim is about but do not measure its predicted outcome, so it goes back to the hunt. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+    proposed_by: claude
+    confirmed_by: utpal
   agent: claude
+  superseded_by: all-in-rules-price-response
 - claim_id: discounts-teach-timing
   claim: A discount trains customers when to buy, through which channel, and what reference price to use afterward, so promotion problems are partly memory problems.
-  status: Open
+  status: Dead
   confidence: Low
   confidence_note: One market where discounts failed after earlier hikes moved the reference; it does not isolate learned timing.
   mechanism_codes:
@@ -776,7 +884,15 @@
     source: null
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-17'
+    old_status: Open
+    new_status: Dead
+    reason: 'Superseded by hypothesis discounts-teach-waiting: the pointers show the situation the claim is about but do not measure its predicted outcome, so it goes back to the hunt. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+    proposed_by: claude
+    confirmed_by: utpal
   agent: meta
+  superseded_by: discounts-teach-waiting
 - claim_id: easy-code-beats-automatic
   claim: Entering an easy promo code converts better than the same discount applied automatically.
   status: Open
@@ -836,7 +952,7 @@
   agent: meta
 - claim_id: expiring-credits-valued-less
   claim: Consumers value expiring, platform-only credits at less than an equal instant discount.
-  status: Open
+  status: Dead
   confidence: Low
   confidence_note: One switch from instant discounts to expiring credits; no valuation data.
   mechanism_codes:
@@ -861,10 +977,18 @@
     source: null
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-17'
+    old_status: Open
+    new_status: Dead
+    reason: 'Superseded by hypothesis expiring-credit-valuation: the pointers show the situation the claim is about but do not measure its predicted outcome, so it goes back to the hunt. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+    proposed_by: claude
+    confirmed_by: utpal
   agent: claude
+  superseded_by: expiring-credit-valuation
 - claim_id: silent-rises-draw-less-backlash
   claim: A small, unannounced price rise draws less backlash than an announced rise of the same size.
-  status: Open
+  status: Dead
   confidence: Low
   confidence_note: One unannounced rise with no recorded backlash; the against pointer shows most consumers notice stealth hikes, which is not backlash (partial fit).
   mechanism_codes:
@@ -891,7 +1015,15 @@
     source: null
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-17'
+    old_status: Open
+    new_status: Dead
+    reason: 'Superseded by hypothesis silent-rise-backlash: the pointers show the situation the claim is about but do not measure its predicted outcome, so it goes back to the hunt. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+    proposed_by: claude
+    confirmed_by: utpal
   agent: meta
+  superseded_by: silent-rise-backlash
 - claim_id: regulators-split-over-own-prices
   claim: Energy regulators publicly split over prices they themselves set, when the cost allocation is contested.
   status: Open
@@ -920,8 +1052,8 @@
 - claim_id: tolerance-is-learned
   claim: 'Tolerance for price increases is learned and adapts: after a deflationary period, even small rises feel large, and tolerance grows with exposure.'
   status: Open
-  confidence: Medium
-  confidence_note: Three Japanese cases fit; all from one market, with no adaptation measured over time.
+  confidence: Low
+  confidence_note: Three Japanese cases show low tolerance after deflation; none measures adaptation over time. Confidence lowered from Medium to Low in the 2026-11-17 audit.
   mechanism_codes:
   - reference-price
   - dual-entitlement
@@ -981,7 +1113,7 @@
   agent: claude
 - claim_id: entitled-to-efficiency-gains
   claim: 'Consumers feel entitled to a seller''s efficiency gains: when a seller''s costs fall, buyers expect prices to fall too.'
-  status: Open
+  status: Dead
   confidence: Low
   confidence_note: One case where an efficiency framing for a cut failed and the cut was cancelled; the backlash may reflect loss of allowance rather than entitlement to the gain.
   mechanism_codes:
@@ -1006,7 +1138,15 @@
     source: null
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-17'
+    old_status: Open
+    new_status: Dead
+    reason: 'Superseded by hypothesis efficiency-gains-entitlement: the pointers show the situation the claim is about but do not measure its predicted outcome, so it goes back to the hunt. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+    proposed_by: claude
+    confirmed_by: utpal
   agent: claude
+  superseded_by: efficiency-gains-entitlement
 - claim_id: subsidy-expiry-drives-premiums
   claim: Health-insurance premium rises after a subsidy expires are driven more by the expiry and the worsening risk pool than by underlying care costs.
   status: Open
@@ -1064,7 +1204,7 @@
   agent: meta
 - claim_id: solar-shifts-grid-costs
   claim: When solar homes buy less power, the fixed cost of the grid falls on remaining customers unless tariffs are redesigned.
-  status: Open
+  status: Dead
   confidence: Low
   confidence_note: One regulator consultation built on this premise, with a 23% rise in a fixed charge proposed; no measured cost shift yet.
   mechanism_codes: []
@@ -1086,4 +1226,12 @@
     source: null
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-17'
+    old_status: Open
+    new_status: Dead
+    reason: 'Superseded by hypothesis solar-grid-cost-shift: the pointers show the situation the claim is about but do not measure its predicted outcome, so it goes back to the hunt. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+    proposed_by: claude
+    confirmed_by: utpal
   agent: meta
+  superseded_by: solar-grid-cost-shift

@@ -34,7 +34,8 @@ permalink: /claims/
       <td><strong>{{ c.claim }}</strong>
         <div class="small muted">{{ c.claim_id }}{% if c.mechanism_codes %} · {{ c.mechanism_codes | join: ", " }}{% endif %}</div>
         {% if c.test %}<div class="small">Test: {{ c.test }}</div>{% endif %}
-        {% assign fromh = H | where: "related_claim", c.claim_id | first %}{% if fromh %}<div class="small">Graduated from hypothesis <a href="{{ '/hypotheses/' | relative_url }}#{{ fromh.hypothesis_id }}">{{ fromh.hypothesis_id }}</a></div>{% endif %}
+        {% assign fromh = H | where: "related_claim", c.claim_id | first %}{% if c.superseded_by %}<div class="small">Superseded by hypothesis <a href="{{ '/hypotheses/' | relative_url }}#{{ c.superseded_by }}">{{ c.superseded_by }}</a></div>{% endif %}
+        {% if fromh %}<div class="small">Graduated from hypothesis <a href="{{ '/hypotheses/' | relative_url }}#{{ fromh.hypothesis_id }}">{{ fromh.hypothesis_id }}</a></div>{% endif %}
         {% if c.related_questions.size > 0 %}<div class="small">Questions: {{ c.related_questions | join: ", " }}</div>{% endif %}
         {% if c.related_dives.size > 0 %}<div class="small">Deep dives: {% for d in c.related_dives %}<a href="{{ case_base }}{{ d }}/">{{ d }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</div>{% endif %}
       </td>

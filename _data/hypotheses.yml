@@ -6,7 +6,7 @@
 - hypothesis_id: labour-cost-fairer-than-material
   hypothesis: A price rise blamed on labour costs is judged fairer than the same rise blamed on material costs.
   predicts: Fairness ratings for an identical rise are higher when labour costs are named than when material costs are.
-  test: A vignette experiment ranking justifications (labour, materials, energy, demand) by fairness ratings for an identical rise.
+  test: A vignette experiment ranking justifications (labour, materials, energy, demand) for an identical rise with an equally credible cost, testing whether the result depends on who shoppers think receives the extra money.
   status: Testing
   confidence: Low
   lanes:
@@ -30,7 +30,7 @@
 - hypothesis_id: fairness-judged-by-worst-hit
   hypothesis: The public judges personalised pricing by the worst-hit shopper, not by the median shopper.
   predicts: Fairness ratings of the same scheme fall more when the worst-case outcome is highlighted than when the median is.
-  test: A survey presenting the same pricing scheme with the median outcome versus the worst-case outcome highlighted, measuring fairness judgments.
+  test: The same pricing scheme with the median outcome highlighted, the worst case highlighted, and no highlight; the no-highlight condition shows which outcome people focus on unprompted.
   status: Testing
   confidence: Low
   lanes:
@@ -52,34 +52,10 @@
     new_status: Testing
     reason: Seeded from the 48-candidate list under Spec F.
     source: null
-- hypothesis_id: less-accurate-ai-buyer-better-off
-  hypothesis: A less accurate AI buyer can leave consumers better off than a fully accurate one, because sellers respond to how buyers process prices.
-  predicts: Consumer surplus is higher in a market of less accurate AI buyers than of fully accurate ones.
-  test: 'A field or lab market with AI buyers of varying accuracy, measuring consumer surplus rather than seller revenue. Hunt for a real test, not more simulations: the source simulation (ning-ai-buyer-disclosure-2026) is flagged as not robust.'
-  status: Testing
-  confidence: Low
-  lanes:
-  - Google-world and Asia
-  - B2B and enterprise pricing
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
-  evidence_for: []
-  evidence_against: []
-  related_claim: null
-  related_questions: []
-  created: '2026-11-17'
-  agent: meta
-  history:
-  - date: '2026-11-17'
-    old_status: null
-    new_status: Testing
-    reason: Seeded from the 48-candidate list under Spec F.
-    source: null
 - hypothesis_id: surcharge-bans-shift-costs
   hypothesis: Banning a surcharge shifts the cost elsewhere (higher base prices, new fees) rather than removing it.
   predicts: After the card-surcharge ban, Australian merchants' base prices or other fees rise by about the banned surcharge.
-  test: Australian merchant base prices and fee structures before and after the ban takes effect (au-card-surcharge-ban-2026).
+  test: A matched panel of Australian merchants' prices and fees since the card-surcharge ban, tracking differences in merchant payment costs (interchange caps fell at the same time); a raw before-and-after will not isolate the effect.
   status: Testing
   confidence: Low
   lanes:
@@ -103,7 +79,7 @@
 - hypothesis_id: clip-coupons-lower-perceived-savings
   hypothesis: Coupons that must be clipped or activated lower perceived savings relative to an equal price cut.
   predicts: At equal face value, clip-to-activate coupons yield lower perceived savings (and redemption) than automatic coupons.
-  test: A field comparison of clip-to-activate versus automatic coupons at equal face value, measuring redemption and perceived savings.
+  test: Clip-to-activate versus automatic coupons at equal face value (an automatic coupon, not a shelf-price cut, is the comparator), measuring perceived savings separately from redemption.
   status: Testing
   confidence: Low
   lanes:
@@ -127,7 +103,7 @@
 - hypothesis_id: irregular-deals-shape-price-image
   hypothesis: Irregular, discovery-style deals shape a store's price image more than scheduled promotions do.
   predicts: Shoppers exposed mainly to irregular deals rate the store's price image lower (cheaper) than those exposed mainly to scheduled promotions.
-  test: A survey or panel comparing price image for shoppers exposed mainly to irregular deals versus mainly to scheduled promotions (start from grocery-outlet-promotions-2026).
+  test: Shoppers exposed mainly to irregular versus mainly to scheduled deals, matched on average discount depth and frequency; measure perceived store price level, not recall of a single deal (start from grocery-outlet-promotions-2026).
   status: Testing
   confidence: Low
   lanes:
@@ -152,7 +128,7 @@
 - hypothesis_id: churn-is-about-options
   hypothesis: Subscription churn after a price rise comes as much from missing pause or downgrade options as from price sensitivity.
   predicts: Risers offered pause or downgrade churn less than risers offered only cancel, at the same price rise.
-  test: Churn rates for risers offered pause/downgrade versus risers offered only cancel, at the same price rise. The one existing pointer (subscription-unbundling-survey-2026) is weak-fit and is not seeded as evidence.
+  test: Paid retention (not just cancellations) for risers offered pause, offered downgrade, and offered only cancel, at the same price rise; count paused but unpaid accounts as unpaid at day 90. Showing that options matter as much as price sensitivity needs the price rise varied too. The one existing pointer (subscription-unbundling-survey-2026) is weak-fit and is not evidence.
   status: Testing
   confidence: Low
   lanes:
@@ -176,7 +152,7 @@
 - hypothesis_id: one-tap-approval-dulls-pain
   hypothesis: Approving an agent's purchase with one biometric tap reduces the pain of paying relative to manual checkout.
   predicts: Spending is higher and post-purchase regret no lower with one-tap approval than with manual checkout of the same purchase.
-  test: A lab or field comparison of one-tap versus manual checkout for the same purchase, measuring spending and post-purchase regret.
+  test: One-tap versus manual checkout for the same purchase, holding offers and budgets constant; measure felt payment pain and actual spending separately, since higher spending alone could come from reduced friction.
   status: Testing
   confidence: Low
   lanes:
@@ -201,7 +177,7 @@
 - hypothesis_id: renewal-into-choice-beats-auto-renew
   hypothesis: Making members actively choose a tier at renewal, instead of auto-renewing them, raises trust and does not lose more members than it keeps.
   predicts: Landmark's renewal rate after the switch is no lower than its auto-renewal baseline, with fewer complaints.
-  test: 'Renewal and complaint rates after Landmark''s switch, against its own prior auto-renewal baseline. The case (landmark-loyalty-tier-election-2026) has no outcome yet: the hunt is the outcome.'
+  test: 'Paid renewal rate and complaints, measured separately, after Landmark''s switch against its own auto-renewal baseline (a first read, not a matched test). Define in advance what counts as no meaningful loss. Competing prediction (ChatGPT reserve #13): active tier choice lowers paid retention versus auto-migration with opt-out.'
   status: Testing
   confidence: Low
   lanes:
@@ -224,7 +200,7 @@
 - hypothesis_id: list-is-not-what-buyers-pay
   hypothesis: Published B2B list prices systematically overstate what enterprise buyers pay after negotiation.
   predicts: In a dataset of actual deals, net prices sit materially below list in one software category.
-  test: A survey or dataset of actual net versus list prices in one software category. Existing b2b_pricing.yml entries show list-only visibility; they are the reason to hunt, not evidence.
+  test: Estimate the gap between net and list price, and its spread, in one software category, matching deal size, term, bundled services and list vintage. List prices alone (the b2b_pricing.yml entries) are the reason to hunt, not evidence.
   status: Testing
   confidence: Low
   lanes:
@@ -247,30 +223,7 @@
 - hypothesis_id: renewal-uplifts-destroy-value
   hypothesis: Enterprise renewal uplifts large enough to make a major customer sue and migrate destroy more revenue than the uplift adds.
   predicts: For the affected accounts, revenue lost to exits exceeds revenue gained from the uplift on retained accounts.
-  test: The Broadcom trial outcome (reportedly 2027) and renewal revenue versus churn for the affected accounts.
-  status: Testing
-  confidence: Low
-  lanes:
-  - B2B and enterprise pricing
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
-  evidence_for: []
-  evidence_against: []
-  related_claim: null
-  related_questions: []
-  created: '2026-11-17'
-  agent: meta
-  history:
-  - date: '2026-11-17'
-    old_status: null
-    new_status: Testing
-    reason: Seeded from the 48-candidate list under Spec F.
-    source: null
-- hypothesis_id: shedding-customers-can-pay
-  hypothesis: Deliberately losing a large share of customers through renewal pricing can be a coherent strategy when the remaining customers pay much more.
-  predicts: Revenue from retained accounts after the uplift exceeds revenue lost to exits.
-  test: 'The same Broadcom outcome, read the other way: renewal revenue from retained accounts versus revenue lost to exits.'
+  test: The Broadcom trial outcome (reportedly 2027) or another disclosure with cohort data. For the same cohort and horizon, compare incremental renewal revenue from retained accounts with revenue lost to exits (contribution after costs, not total retained revenue). The counter-prediction (shedding-customers-can-pay) is checked in the same hunt. A lawsuit or one departure does not settle the net effect.
   status: Testing
   confidence: Low
   lanes:
@@ -293,7 +246,7 @@
 - hypothesis_id: surcharges-outlive-their-cost
   hypothesis: B2B surcharges outlive the cost that justified them, becoming permanent margin.
   predicts: A named surcharge (war-risk, fuel) is still charged, renamed or folded into the base rate after its stated cost falls.
-  test: Track a named surcharge after its stated cost falls, and record whether it is removed, renamed or absorbed.
+  test: Follow a named surcharge (war-risk, fuel) after its stated cost falls and record whether it is removed, renamed or rolled into the base rate; persistence alone does not establish a permanent margin gain.
   status: Testing
   confidence: Low
   lanes:
@@ -317,7 +270,7 @@
 - hypothesis_id: patients-become-arbitrageurs
   hypothesis: When drug price gaps across countries are large enough, patients themselves become the arbitrageurs, importing low-cost generics.
   predicts: Patient-led importing of a low-cost generic grows in volume and countries while the originator's price gap persists.
-  test: 'The Trikafta buyers'' club''s current status and figures, when verified. No repo evidence yet: the hunt starts from the Substack idea trikafta-patient-arbitrage.'
+  test: Verified import volumes or credible counts of buyers across countries for the Trikafta buyers' club or a similar scheme; a buyers' club existing shows a pathway, not its growth. Hunt starts from the Substack idea trikafta-patient-arbitrage.
   status: Testing
   confidence: Low
   lanes:
@@ -341,7 +294,7 @@
 - hypothesis_id: restraint-pays-for-monopolists
   hypothesis: A near-monopolist that restrains its price (modest rises, two-part tariffs) earns more in the long run than one that exploits its position.
   predicts: Dominant sellers with restrained rises show better multi-year revenue and retention than comparable dominant sellers with exploitative rises.
-  test: The TSMC overage-surcharge case once filed, plus a comparison of restrained versus exploitative rises by dominant sellers in explanations.yml.
+  test: A comparison among similarly dominant sellers, with market power measured, over a stated horizon, reporting revenue and profit separately (the TSMC overage-surcharge case once filed is one input). A modest rise by a seller without market power does not test it.
   status: Testing
   confidence: Low
   lanes:
@@ -365,7 +318,7 @@
 - hypothesis_id: agents-kill-inertia-pricing
   hypothesis: AI agents that cancel subscriptions for the buyer remove the inertia on which auto-renew pricing depends.
   predicts: After agent-cancel tools become widely available, auto-renew retention falls (and acquisition may rise) relative to a matched control.
-  test: Retention and acquisition for a subscription after an agent-cancel tool becomes widely available, against a matched control.
+  test: 'Retention and acquisition for a subscription after an agent-cancel tool becomes widely available, against a matched control. Event-driven: look again when an agent cancellation tool has measurable adoption and renewal data.'
   status: Testing
   confidence: Low
   lanes:
@@ -389,7 +342,7 @@
 - hypothesis_id: low-margin-sellers-opt-out
   hypothesis: Sellers with near-zero unit margins rationally opt out of platform sale events rather than discounting at a loss.
   predicts: Opt-out rates from a platform sale event are higher among low-margin resellers than among high-margin makers.
-  test: Opt-out rates and seller margins across a platform sale event, comparing low-margin resellers with high-margin makers.
+  test: Opt-out rates and margins for sellers within the same category and sale event, accounting for platform-subsidised discounts and incentives; resellers versus makers alone confounds margin with business model.
   status: Testing
   confidence: Low
   lanes:
@@ -410,3 +363,571 @@
     new_status: Testing
     reason: 'Moved from the claims list at seeding (Spec F re-judgment): its tracker pointer (crochet-seller-reversal-2026) is a price reversal, not an opt-out, and the remaining pointers are single consumer-voice posts (briefings 2026-11-17-meta and 2026-11-16-meta), which are leads, not evidence.'
     source: null
+- hypothesis_id: tariff-refund-expectations
+  hypothesis: When a seller justifies a price rise by naming a specific cost, buyers expect the price to fall when that cost is refunded, more than after an unspecified cost increase.
+  predicts: Buyers expect a larger price cut when a refunded cost had been named in the original price rise than after an unspecified rise, and larger still when the rise was labelled a temporary surcharge.
+  test: 'Consumer surveys, complaints or seller responses as tariff refunds are paid; an experiment varying the justification (named tariff, temporary surcharge, unspecified cost) and then announcing the refund, holding amount and rationale constant (ChatGPT reserve #25 folded in).'
+  status: Testing
+  confidence: Low
+  lanes:
+  - Primary documents instead of news
+  - B2B and enterprise pricing
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions:
+  - tariff-refund-expectations-2026
+  from_claim: tariff-refund-entitlement
+  created: '2026-11-17'
+  agent: claude
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Created from claim tariff-refund-entitlement, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): tariff-refunds-2026.'
+    source: null
+- hypothesis_id: all-in-rules-price-response
+  hypothesis: Retailers respond to all-in pricing rules by raising product prices or leaning harder on free-shipping thresholds, rather than absorbing the disclosed fees.
+  predicts: After all-in rules take effect, the same retailers raise product prices or free-shipping thresholds rather than absorbing the disclosed fees.
+  test: Product prices and threshold levels before and after an all-in rule takes effect, for the same retailers.
+  status: Testing
+  confidence: Low
+  lanes:
+  - Primary documents instead of news
+  - Outside the US/UK/EU
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions:
+  - all-in-rules-response-2026
+  from_claim: all-in-rules-shift-prices
+  created: '2026-11-17'
+  agent: claude
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Created from claim all-in-rules-shift-prices, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): uk-cma-drip-pricing-2026.'
+    source: null
+- hypothesis_id: solar-grid-cost-shift
+  hypothesis: When solar homes buy less power, the fixed cost of the grid falls on remaining customers unless tariffs are redesigned.
+  predicts: Regulators facing solar defection raise fixed or network charges, shifting grid costs onto customers who stay.
+  test: The NERSA Eskom tariff decision due Nov 26, 2026, and whether it separates wires charges from retail; other tariff decisions that reallocate fixed costs after solar uptake.
+  status: Testing
+  confidence: Low
+  lanes:
+  - Outside the US/UK/EU
+  - Primary documents instead of news
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  from_claim: solar-shifts-grid-costs
+  created: '2026-11-17'
+  agent: claude
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Created from claim solar-shifts-grid-costs, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): nersa-tariff-review-2026.'
+    source: null
+- hypothesis_id: metering-beats-seats-ai
+  hypothesis: Usage or credit metering beats seat pricing for AI products once agents do the work, because seats no longer measure use.
+  predicts: For AI products where agents do the work, metered pricing yields higher net revenue retention or buyer satisfaction than seat pricing for matched products.
+  test: Vendor disclosures (earnings calls, filings) or buyer surveys comparing metered and seat pricing for matched AI products, after agent usage becomes material. Vendor adoption of metering is not evidence that it works better.
+  status: Testing
+  confidence: Low
+  lanes:
+  - B2B and enterprise pricing
+  - Primary documents instead of news
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  from_claim: metering-beats-seats-for-ai
+  created: '2026-11-17'
+  agent: claude
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Created from claim metering-beats-seats-for-ai, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): saas-credits-2026; microsoft-365-copilot-metered-2027; openai-per-job-pricing-2026.'
+    source: null
+- hypothesis_id: less-accurate-ai-buyer-better-off
+  hypothesis: A less accurate AI buyer can leave consumers better off than a fully accurate one, because sellers respond to how buyers process prices.
+  predicts: Consumer surplus is higher in a market of less accurate AI buyers than of fully accurate ones.
+  test: 'A field or lab market with AI buyers of varying accuracy, measuring consumer surplus rather than seller revenue. Hunt for a real test, not more simulations: the source simulation (ning-ai-buyer-disclosure-2026) is flagged as not robust.'
+  status: Deferred
+  confidence: Low
+  lanes:
+  - Google-world and Asia
+  - B2B and enterprise pricing
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+  - date: '2026-11-17'
+    old_status: Testing
+    new_status: Deferred
+    reason: 'Deferred to free a slot: a test needs a purpose-built market study, and the source simulation is flagged as not robust. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+  reopen_when: A lab or field market with AI buyers of varying accuracy is published, or a free slot opens.
+- hypothesis_id: shedding-customers-can-pay
+  hypothesis: Deliberately losing a large share of customers through renewal pricing can be a coherent strategy when the remaining customers pay much more.
+  predicts: Revenue from retained accounts after the uplift exceeds revenue lost to exits.
+  test: 'The same Broadcom outcome, read the other way: renewal revenue from retained accounts versus revenue lost to exits.'
+  status: Deferred
+  confidence: Low
+  lanes:
+  - B2B and enterprise pricing
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  created: '2026-11-17'
+  agent: meta
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+  - date: '2026-11-17'
+    old_status: Testing
+    new_status: Deferred
+    reason: Folded into renewal-uplifts-destroy-value as its counter-prediction, so the Broadcom outcome is hunted once. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).
+    source: null
+  reopen_when: Hunted jointly through renewal-uplifts-destroy-value; reopen if that one graduates or dies.
+- hypothesis_id: pledge-reassures-shoppers
+  hypothesis: A public pledge not to personalise prices reassures shoppers rather than reminding them that personalisation is possible.
+  predicts: Shoppers shown a no-personalisation pledge report higher trust than shoppers shown the same offer without it.
+  test: 'An experiment showing the same offer with and without a visible no-personalisation pledge, measuring trust and purchase intention, within groups that did and did not already know about personalised pricing (ChatGPT reserve #29).'
+  status: Deferred
+  confidence: Low
+  lanes:
+  - Meta-platform consumer voice
+  - Primary documents instead of news
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions:
+  - personalization-pledges-2026
+  from_claim: personalization-pledges-reassure
+  created: '2026-11-17'
+  agent: claude
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Created from claim personalization-pledges-reassure, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): walmart-nga-pledge-2026.'
+    source: null
+  - date: '2026-11-17'
+    old_status: Testing
+    new_status: Deferred
+    reason: 'Deferred at creation: no test is likely before the reopen event. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+  reopen_when: A survey or experiment on pledges is published, or FTC 6(b) responses (due December 2026) report on them.
+- hypothesis_id: fare-breakdown-trust-test
+  hypothesis: Showing a fare's cost breakdown builds trust rather than inviting disputes over each line.
+  predicts: After India's fare-component rule takes effect, fare complaints per booking do not rise and trust measures improve.
+  test: A field comparison of routes or sellers with and without an itemised breakdown, measuring complaints per booking as well as trust scores.
+  status: Deferred
+  confidence: Low
+  lanes:
+  - Outside the US/UK/EU
+  - Primary documents instead of news
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions:
+  - fare-breakdown-trust-2026
+  from_claim: fare-breakdown-builds-trust
+  created: '2026-11-17'
+  agent: claude
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Created from claim fare-breakdown-builds-trust, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): india-aviation-fare-breakdown-2026.'
+    source: null
+  - date: '2026-11-17'
+    old_status: Testing
+    new_status: Deferred
+    reason: 'Deferred at creation: no test is likely before the reopen event. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+  reopen_when: India's rule takes effect in January 2027; reopen when the first months of airline complaint data after it are published (about March 2027).
+- hypothesis_id: stated-vs-inferred-fairness
+  hypothesis: 'Consumers draw the fairness line where New York City''s law does: prices based on stated traits and own purchase history are fair, prices based on inferred traits are unfair.'
+  predicts: Consumers rate an identical personalised price gap fairer when it rests on a stated trait or their own history than on an inferred trait.
+  test: 'A vignette study varying only the basis of the price difference (stated trait, own history, inferred trait) and measuring fairness ratings; ChatGPT''s reserve #26 is the cleanest version (same trait, self-disclosed versus inferred).'
+  status: Deferred
+  confidence: Low
+  lanes:
+  - Primary documents instead of news
+  - Meta-platform consumer voice
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions:
+  - nyc-fairness-line-2026
+  from_claim: nyc-fairness-line-drawn-by-consumers
+  created: '2026-11-17'
+  agent: claude
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Created from claim nyc-fairness-line-drawn-by-consumers, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): us-surveillance-pricing-laws-2026.'
+    source: null
+  - date: '2026-11-17'
+    old_status: Testing
+    new_status: Deferred
+    reason: 'Deferred at creation: no test is likely before the reopen event. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+  reopen_when: A consumer survey or experiment separating stated from inferred traits is published, or NYC's law produces complaint data.
+- hypothesis_id: data-price-disclosure-reactance
+  hypothesis: Telling a buyer "your data raised this price" triggers backlash or reactance rather than being ignored.
+  predicts: Buyers shown a 'your data raised this price' disclosure complain, opt out or abandon more than buyers shown the same price without it.
+  test: A field or lab test of a data-use disclosure on a live price, measuring complaints, opt-outs and purchases, not just stated attitudes.
+  status: Deferred
+  confidence: Low
+  lanes:
+  - Primary documents instead of news
+  - Meta-platform consumer voice
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions:
+  - data-raised-price-disclosure-2026
+  from_claim: data-disclosure-backfires
+  created: '2026-11-17'
+  agent: claude
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Created from claim data-disclosure-backfires, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): ny-algorithmic-pricing-label-2026; ftc-6b-personalized-pricing-2026.'
+    source: null
+  - date: '2026-11-17'
+    old_status: Testing
+    new_status: Deferred
+    reason: 'Deferred at creation: no test is likely before the reopen event. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+  reopen_when: New York's label is in force and survives appeal, so live reactions can be observed; or a field test of such a disclosure is published.
+- hypothesis_id: algorithm-label-price-inference
+  hypothesis: A label saying a price was "set by an algorithm using your personal data" triggers both fairness judgments and price-level inferences (buyers infer the price is higher).
+  predicts: Buyers who see an 'algorithm using your personal data' label guess a higher price and rate it less fair than buyers who see the same price unlabelled.
+  test: An experiment crossing label presence with price level, measuring fairness ratings and guessed prices.
+  status: Deferred
+  confidence: Low
+  lanes:
+  - Primary documents instead of news
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions:
+  - algorithm-label-inferences-2026
+  from_claim: algorithm-label-triggers-inferences
+  created: '2026-11-17'
+  agent: claude
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Created from claim algorithm-label-triggers-inferences, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): ny-algorithmic-pricing-label-2026.'
+    source: null
+  - date: '2026-11-17'
+    old_status: Testing
+    new_status: Deferred
+    reason: 'Deferred at creation: no test is likely before the reopen event. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+  reopen_when: New York's label is in force, or an experiment on algorithmic-pricing labels is published.
+- hypothesis_id: agent-set-reference-prices
+  hypothesis: When pricing agents set market anchors, consumers learn different reference prices than when humans set them.
+  predicts: Consumers in agent-priced markets learn different reference prices from consumers in human-priced markets for the same goods.
+  test: A market simulation or field observation comparing reference prices learned in agent-priced versus human-priced markets for the same goods.
+  status: Deferred
+  confidence: Low
+  lanes:
+  - Google-world and Asia
+  - Primary documents instead of news
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions:
+  - agent-set-reference-prices-2026
+  from_claim: ai-agents-set-reference-prices
+  created: '2026-11-17'
+  agent: claude
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Created from claim ai-agents-set-reference-prices, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): pricebench-2026; bichler-llm-pricing-agents-2026.'
+    source: null
+  - date: '2026-11-17'
+    old_status: Testing
+    new_status: Deferred
+    reason: 'Deferred at creation: no test is likely before the reopen event. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+  reopen_when: A study measuring consumers' reference prices in agent-priced markets is published.
+- hypothesis_id: fee-timing-fairness-boundary
+  hypothesis: Consumers draw the line between partitioning and drip pricing on when the extra charge is revealed, not on what it is called.
+  predicts: The same fee is judged unfair when revealed at checkout and acceptable when shown upfront, whatever it is called.
+  test: 'The same fee shown upfront versus at checkout, measuring perceived fairness and abandonment across fee types. Keep fairness judgments separate from purchase outcomes: the StubHub field experiment measures purchases, not judgments.'
+  status: Deferred
+  confidence: Low
+  lanes:
+  - Primary documents instead of news
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions:
+  - partitioning-drip-boundary-2026
+  from_claim: partitioning-vs-drip-boundary
+  created: '2026-11-17'
+  agent: claude
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Created from claim partitioning-vs-drip-boundary, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): dutch-delivery-fees-2026; uk-cma-drip-pricing-2026; ticketmaster-drip-ftc-2026.'
+    source: null
+  - date: '2026-11-17'
+    old_status: Testing
+    new_status: Deferred
+    reason: 'Deferred at creation: no test is likely before the reopen event. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+  reopen_when: A study measuring fairness judgments of fee timing (not only purchase rates) is published.
+- hypothesis_id: upsizing-reads-as-value
+  hypothesis: A larger pack at a higher price with a higher per-unit price is read as value, not as a price rise.
+  predicts: Buyers of an upsized pack with a higher unit price rate it as better value and do not notice the per-unit rise.
+  test: A choice experiment crossing pack size and per-unit price, measuring whether buyers notice the per-unit rise.
+  status: Deferred
+  confidence: Low
+  lanes:
+  - Industries the others ignore
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  from_claim: upsizing-markup-reads-as-value
+  created: '2026-11-17'
+  agent: claude
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Created from claim upsizing-markup-reads-as-value, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): lenor-upsizing-2026; tesla-model-y-awd-2026.'
+    source: null
+  - date: '2026-11-17'
+    old_status: Testing
+    new_status: Deferred
+    reason: 'Deferred at creation: no test is likely before the reopen event. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+  reopen_when: A choice experiment or consumer survey on upsizing with a markup is published, or a regulator reports on the practice.
+- hypothesis_id: inflated-reference-purchase
+  hypothesis: An inflated reference price ("was R6,499") lifts purchase even when the reference price never actually held.
+  predicts: At the same sale price, an advertised former price that was never charged raises purchase compared with no reference price.
+  test: An experiment varying whether the reference price was ever charged, measuring purchase intention at the same sale price.
+  status: Deferred
+  confidence: Low
+  lanes:
+  - Primary documents instead of news
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  from_claim: inflated-reference-lifts-purchase
+  created: '2026-11-17'
+  agent: claude
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Created from claim inflated-reference-lifts-purchase, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): sa-speaker-black-friday-2026; historical-low-price-temporal-cues.'
+    source: null
+  - date: '2026-11-17'
+    old_status: Testing
+    new_status: Deferred
+    reason: 'Deferred at creation: no test is likely before the reopen event. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+  reopen_when: A new field or regulatory study of fictitious former prices is published, or an enforcement case reports sales data.
+- hypothesis_id: discounts-teach-waiting
+  hypothesis: A discount trains customers when to buy, through which channel, and what reference price to use afterward, so promotion problems are partly memory problems.
+  predicts: Shoppers exposed to repeated discounts delay later full-price purchases more than comparable shoppers who were not.
+  test: 'A promotion-history analysis or experiment measuring whether past discount timing predicts when customers next buy; cart-triggered discounts are the sharpest case (ChatGPT reserve #24).'
+  status: Deferred
+  confidence: Low
+  lanes:
+  - Industries the others ignore
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  from_claim: discounts-teach-timing
+  created: '2026-11-17'
+  agent: claude
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Created from claim discounts-teach-timing, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): diwali-smartphones-2026.'
+    source: null
+  - date: '2026-11-17'
+    old_status: Testing
+    new_status: Deferred
+    reason: 'Deferred at creation: no test is likely before the reopen event. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+  reopen_when: Panel or platform data on discount timing and later purchase delay is published.
+- hypothesis_id: expiring-credit-valuation
+  hypothesis: Consumers value expiring, platform-only credits at less than an equal instant discount.
+  predicts: Shoppers value expiring, platform-only credit below an equal instant discount or equal cash.
+  test: 'A choice experiment eliciting the cash or instant discount shoppers would trade for the credit; check whether the gap is smaller for shoppers who expect to return soon (ChatGPT reserve #19). Redemption or a policy change alone does not measure valuation.'
+  status: Deferred
+  confidence: Low
+  lanes:
+  - Industries the others ignore
+  - Small business and creator economy
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions:
+  - expiring-credits-value-2026
+  from_claim: expiring-credits-valued-less
+  created: '2026-11-17'
+  agent: claude
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Created from claim expiring-credits-valued-less, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): lyft-go-credits-2026.'
+    source: null
+  - date: '2026-11-17'
+    old_status: Testing
+    new_status: Deferred
+    reason: 'Deferred at creation: no test is likely before the reopen event. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+  reopen_when: Lyft or another platform reports results after switching to expiring credits, or a valuation study is published.
+- hypothesis_id: silent-rise-backlash
+  hypothesis: A small, unannounced price rise draws less backlash than an announced rise of the same size.
+  predicts: A small unannounced rise draws fewer complaints and less churn than an announced rise of the same size.
+  test: Matched silent versus announced rises of the same size, comparing complaints and churn.
+  status: Deferred
+  confidence: Low
+  lanes:
+  - Outside the US/UK/EU
+  - Meta-platform consumer voice
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  from_claim: silent-rises-draw-less-backlash
+  created: '2026-11-17'
+  agent: claude
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Created from claim silent-rises-draw-less-backlash, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): airtel-299-2026; macromill-stealth-hikes-2026.'
+    source: null
+  - date: '2026-11-17'
+    old_status: Testing
+    new_status: Deferred
+    reason: 'Deferred at creation: no test is likely before the reopen event. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+  reopen_when: A matched pair of silent and announced rises with complaint or churn data turns up.
+- hypothesis_id: efficiency-gains-entitlement
+  hypothesis: 'Consumers feel entitled to a seller''s efficiency gains: when a seller''s costs fall, buyers expect prices to fall too.'
+  predicts: When buyers learn a seller's costs fell through efficiency, they expect a price cut, as much as after a fall in input prices.
+  test: A vignette varying whether a cost fall comes from efficiency versus input prices, measuring expected price cuts.
+  status: Deferred
+  confidence: Low
+  lanes:
+  - B2B and enterprise pricing
+  - Meta-platform consumer voice
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions:
+  - efficiency-gains-entitlement-2026
+  from_claim: entitled-to-efficiency-gains
+  created: '2026-11-17'
+  agent: claude
+  history:
+  - date: '2026-11-17'
+    old_status: null
+    new_status: Testing
+    reason: 'Created from claim entitled-to-efficiency-gains, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): chatgpt-pro-allowance-2026.'
+    source: null
+  - date: '2026-11-17'
+    old_status: Testing
+    new_status: Deferred
+    reason: 'Deferred at creation: no test is likely before the reopen event. Claims audit approved by Utpal on 2026-11-17 (ChatGPT handoff review).'
+    source: null
+  reopen_when: A vignette study or a case where a seller's efficiency gains became public and buyers asked for a cut.
