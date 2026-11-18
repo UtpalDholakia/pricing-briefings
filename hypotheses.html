@@ -10,14 +10,16 @@ permalink: /hypotheses/
 {% capture brief_base %}{{ '/briefings/' | relative_url }}{% endcapture %}
 {% capture claims_base %}{{ '/claims/' | relative_url }}{% endcapture %}
 {% assign testing = H | where: "status", "Testing" %}
+{% assign deferred = H | where: "status", "Deferred" %}
 {% assign graduated = H | where: "status", "Graduated" %}
 {% assign dead = H | where: "status", "Dead" %}
 
 <h1 class="page-title">Hypotheses</h1>
-<p class="muted">What the daily briefings are hunting for. Each hypothesis is a falsifiable prediction plus the observable test that would settle it. Every morning each agent picks up to two in its lanes, searches for them and reports hits and misses. A hit files evidence; enough evidence graduates a hypothesis into a <a href="{{ claims_base }}">claim</a>; three evidence-free hunts trigger a review. Rules: AGENTS.md section 13.</p>
+<p class="muted">What the daily briefings are hunting for. Each hypothesis is a falsifiable prediction plus the observable test that would settle it. Every morning each agent picks up to two in its lanes, searches for them and reports hits and misses. A hit files evidence; enough evidence graduates a hypothesis into a <a href="{{ claims_base }}">claim</a>; three evidence-free hunts trigger a review. Deferred hypotheses are kept in reserve and not hunted. Rules: AGENTS.md section 13.</p>
 
 <div class="stat-row">
   <div class="stat"><span class="big">{{ testing.size }} of 20</span><span class="lbl">Testing slots in use</span></div>
+  <div class="stat"><span class="big">{{ deferred.size }}</span><span class="lbl">Deferred (reserve, not hunted)</span></div>
   <div class="stat"><span class="big">{{ graduated.size }}</span><span class="lbl">Graduated into claims</span></div>
   <div class="stat"><span class="big">{{ dead.size }}</span><span class="lbl">Dead</span></div>
 </div>
@@ -39,6 +41,14 @@ permalink: /hypotheses/
       <td class="small">{{ h.hunt_count }}{% if h.hunts.size > 0 %}{% assign lasthunt = h.hunts | last %}<div class="muted">last: {{ lasthunt.outcome }} ({{ lasthunt.agent }}) {{ lasthunt.note }}</div>{% endif %}</td>
     </tr>{% endfor %}</tbody>
   </table></div>
+</section>
+
+<section class="tracker" id="deferred">
+  <h2>Deferred <small class="muted">{{ deferred.size }}</small></h2>
+  <p class="muted small">Hypotheses kept in reserve: paused until an event or data could test them, or waiting for a free slot. They are not hunted.</p>
+  {% if deferred.size == 0 %}<p class="muted small">None yet.</p>{% else %}
+  <details><summary class="small">Show {{ deferred.size }} deferred hypotheses</summary><ul>{% for h in deferred %}
+    <li id="{{ h.hypothesis_id }}" class="small"><strong>{{ h.hypothesis }}</strong> <span class="muted">Test: {{ h.test }} Reopen when: {{ h.reopen_when }}</span></li>{% endfor %}</ul></details>{% endif %}
 </section>
 
 <section class="tracker" id="graduated">

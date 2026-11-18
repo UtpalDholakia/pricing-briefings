@@ -16,7 +16,7 @@ Checks (AGENTS.md sections 2, 6, 8, 10, 11):
   * question_id slugs are unique; claims (_data/claims.yml): vocabularies, every evidence ref and related
     question/dive resolves, status_history is consistent with status, confirmed_by is null or 'utpal'
   * hypotheses (_data/hypotheses.yml, AGENTS.md section 13): vocabularies, non-empty predicts and test,
-    at most 20 Testing, every evidence ref / related_claim / related question resolves, hunts consistent
+    at most 20 Testing, Deferred entries say what would reopen them, every evidence ref / related_claim / related question resolves, hunts consistent
     with hunt_count and last_hunted (never in the future), Graduated entries name a claim, history consistent,
     hypothesis_ids unique and never equal to a claim_id
 Needs only Python 3 and PyYAML.
@@ -339,10 +339,10 @@ if claims is not None:
 
 
 # ---------------------------------------------------------------- 6. hypotheses
-HYP_STATUS = {"Testing", "Graduated", "Dead"}
+HYP_STATUS = {"Testing", "Deferred", "Graduated", "Dead"}
 HUNT_OUTCOME = {"hit", "miss"}
 TESTING_CAP = 20
-hyp_report = {"testing": 0, "unhunted": [], "review": []}
+hyp_report = {"testing": 0, "deferred": 0, "unhunted": [], "review": []}
 
 
 def as_date(v):
@@ -438,6 +438,10 @@ if hyps is not None:
                 for k in ("date", "new_status", "reason"):
                     if not e.get(k):
                         err(where, f"history entry missing {k}")
+        if status == "Deferred":
+            hyp_report["deferred"] += 1
+            if not str(h.get("reopen_when") or "").strip():
+                err(where, "a Deferred hypothesis must say in reopen_when what would reopen the hunt")
         if status == "Testing":
             hyp_report["testing"] += 1
             hyp_report["unhunted"].append((str(lh) if lh else "never", hid))
@@ -455,7 +459,7 @@ if "--firms" in sys.argv:
     for row in sorted(firm_report, key=lambda x: -x[1]):
         print("  ", *row)
 if "--hypotheses" in sys.argv and hyps is not None:
-    print(f"Hypotheses: {hyp_report['testing']} of {TESTING_CAP} Testing slots in use")
+    print(f"Hypotheses: {hyp_report['testing']} of {TESTING_CAP} Testing slots in use; {hyp_report['deferred']} Deferred")
     order = sorted(hyp_report["unhunted"], key=lambda x: (x[0] != "never", x[0]))
     print("  longest unhunted:", ", ".join(f"{hid} ({d})" for d, hid in order[:5]) or "none")
     print("  due a 3-hunt review:", ", ".join(hyp_report["review"]) or "none")

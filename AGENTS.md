@@ -230,12 +230,13 @@ What the daily briefings go looking for. File: `_data/hypotheses.yml`; page: htt
 ### 13.1 Fields and allowed values
 
 - `hypothesis_id` (lowercase slug, never renamed, never the same as any `claim_id`), `hypothesis` (one falsifiable sentence), `predicts` (the observable consequence: a number, a comparison, an event), `test` (how it would be checked). `predicts` and `test` must both be non-empty; an entry without a test is a question and goes in `questions.yml`.
-- `status`: `Testing` / `Graduated` / `Dead`. `confidence`: `High` / `Medium` / `Low`, the strength of the prior before hunting, not a verdict (most are `Low`).
+- `status`: `Testing` / `Deferred` / `Graduated` / `Dead`. `Deferred` is an inactive hypothesis worth keeping: it takes no Testing slot, is not hunted, and must say in `reopen_when` what would reopen the hunt (an event, a data release, a free slot). Use it for paused hypotheses and for the reserve of untested ideas; never mark a viable hypothesis `Dead` just to free a slot. Moving between `Testing` and `Deferred` needs a `history` entry; Utpal picks which reserve ideas take free slots. `confidence`: `High` / `Medium` / `Low`, the strength of the prior before hunting, not a verdict (most are `Low`).
 - `lanes`: the briefing lanes that should hunt it, using the lane names in the agents' instructions (e.g. `Meta-platform consumer voice`, `Outside the US/UK/EU`, `Industries the others ignore`, `Google-world and Asia`, `B2B and enterprise pricing`, `Primary documents instead of news`, `Small business and creator economy`). If no lane fits, use a pipeline theme name (e.g. `Subscriptions`) and say so in that day's digest.
 - `last_hunted` (date or `null`), `hunt_count`, `hunts` (append-only list of `date`, `agent`, `outcome`: `hit` / `miss`, one-line `note`). Every hunt is logged, hit or miss; `hunt_count` always equals the number of hunts and `last_hunted` the latest hunt date.
 - `evidence_for` / `evidence_against`: same pointer kinds and resolution rule as claims (section 12). `related_claim`: `null` until graduation, then the new `claim_id`. `related_questions`: `question_id`s. `created`, `agent` (who proposed it).
 - `history`: append-only; every status change adds `date`, `old_status`, `new_status`, `reason`, `source`.
-- Order in the file: Testing first (longest unhunted first), then Graduated, then Dead. Quote any string with a colon.
+- `reopen_when`: required when `Deferred`, otherwise optional.
+- Order in the file: Testing first (longest unhunted first), then Deferred, then Graduated, then Dead. Quote any string with a colon.
 
 ### 13.2 The daily hunt
 
@@ -251,7 +252,8 @@ What the daily briefings go looking for. File: `_data/hypotheses.yml`; page: htt
 
 - **Graduation.** When a hunt returns evidence directly on point on at least one side, Claude creates a new claim in `claims.yml` (status `Open`, or `Contested` with credible evidence on both sides; never `Supported` on one hunt; section 12 verdict rules apply), sets the hypothesis to `Graduated` with `related_claim`, and adds history entries on both. A single consumer-voice post is a lead, not a graduation. Utpal decides contested graduations and confirms the claim's verdict as usual.
 - **No renaming.** Graduation always creates a new `claim_id` and leaves the hypothesis in place, marked `Graduated`, so its hunt history survives.
-- **Death.** A hypothesis dies when its test returns a clear negative, or after 3 empty hunts when no upcoming event could test it. Record the reason in `history` and keep any negative evidence in `evidence_against`; a dead hypothesis is knowledge too. Never delete an entry. Utpal can kill a hypothesis at any time; Claude records it.
+- **Misses are not negative evidence.** A hunt that finds nothing, because the outcome is not public or has not happened yet, says nothing about whether the hypothesis is true: log it as a miss, and if no test is in sight, move the hypothesis to `Deferred` with a `reopen_when`. Only a credible test of the prediction counts against it. A precise result against it is negative evidence: file it, then propose a claim review under section 12 (a direct negative result can be worth keeping as a claim). An imprecise result is recorded as inconclusive in the hunt note. Never turn a miss into a refuted claim.
+- **Death.** A hypothesis dies when a credible test returns a clear negative, or when it proves untestable (no test can be stated, or the event it depended on has passed with no data). Record the reason in `history` and keep any negative evidence in `evidence_against`; a dead hypothesis is knowledge too. Never delete an entry. Utpal can kill a hypothesis at any time; Claude records it.
 
 ### 13.4 Ownership and reporting
 

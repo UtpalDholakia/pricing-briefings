@@ -1,6 +1,6 @@
 # Hypotheses: the daily search layer. AGENTS.md section 13.
 # One falsifiable prediction per entry, with the observable test that would settle it. Testing entries first (longest unhunted first), then Graduated, then Dead.
-# status: Testing / Graduated / Dead. confidence: High / Medium / Low (strength of the prior, not a verdict). At most 20 Testing.
+# status: Testing / Deferred / Graduated / Dead (Deferred: kept in reserve, not hunted, needs reopen_when). confidence: High / Medium / Low (strength of the prior, not a verdict). At most 20 Testing.
 # Every hunt is logged (hit or miss). Graduation creates a new claim_id in claims.yml; a hypothesis is never renamed or deleted.
 # Seeded 2026-11-17 by Claude from Muse's 48 candidates under Spec F: 14 listed seeds plus 3 moved from the claims list at seeding.
 - hypothesis_id: labour-cost-fairer-than-material
