@@ -1,4 +1,160 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: burland-certainty-free-tuition-2023
+  date: 2023-09
+  mechanism: 'Students value financial certainty: an up-front, unconditional promise changes decisions where the same aid made contingent on an application does not.'
+  mechanism_codes:
+  - price-change-communication
+  comparison: unconditional free-tuition guarantee (HAIL) vs a free-tuition offer contingent on proving need through the aid process (Go Blue encouragement) vs control
+  design: randomised field experiment (AEA RCT registry AEARCTR-0001831), 1,796 students
+  setting: University of Michigan, high-achieving low-income Michigan high-school students, 2019-2020
+  outcome: application to Michigan; enrolment at any US college
+  result_kind: Positive in this setting
+  result: The unconditional offer substantially raised application (about 28 points from a 35% base, per J-PAL) and enrolment; the need-contingent offer had a much smaller effect on application and none on enrolment.
+  boundary: 'Same program and research team as Dynarski et al. (2021): count the two as one research program. Tests a guarantee against a conditional offer, not announcing the same tuition earlier.'
+  source: https://doi.org/10.1257/aeri.20220094
+  related_source: https://www.povertyactionlab.org/evaluation/impact-free-tuition-program-design-college-applications-and-enrollment-united-states
+  verification_note: 'Found via web search on 2026-11-18 (abstract or publisher/registry page in results); EconPapers abstract (AER: Insights 5(3):293-310) and J-PAL evaluation summary read; NBER WP 29864 is the same paper. Link not re-checked at filing (persistent identifier).'
+  digest: '2026-11-18'
+  agent: claude
+- id: abraham-hamilton-partitioned-pricing-meta-2018
+  date: 2018-10
+  mechanism: Partitioning helps when the surcharge is typical for the category and seen as beneficial, and when the total price is not shown.
+  mechanism_codes:
+  - partitioned-pricing
+  comparison: partitioned vs all-inclusive prices, pooled across studies, with moderators
+  design: 'meta-analysis: 149 observations from 43 studies in 27 papers (N = 12,878)'
+  setting: published partitioned-pricing experiments over 17 years
+  outcome: consumer preference and demand
+  result_kind: Context-dependent
+  result: Consumers responded more favourably to partitioned than all-inclusive prices when the total price was absent; the perceived benefit of the surcharge and how typical partitioning is in the category were robust moderators.
+  boundary: Pools studies already in the evidence file (e.g. Morwitz et al. 1998), so it is not independent support for those rows; surcharge size relative to base is not reported as a moderator in the abstract.
+  source: https://doi.org/10.1177/0022243718800724
+  related_source: https://drum.lib.umd.edu/handle/1903/16560
+  verification_note: Found via web search on 2026-11-18 (abstract or publisher/registry page in results); EconBiz record (JMR 55(5):686-703) and the abstract of Abraham's 2015 dissertation, which contains the meta-analysis, read. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: tran-airbnb-cleaning-fee-transparency
+  date: '2024'
+  mechanism: Showing fee-inclusive totals lets hosts see rivals' full prices; hosts without a fee find themselves cheaper and raise their nightly price.
+  mechanism_codes:
+  - partitioned-pricing
+  - drip-pricing
+  comparison: Airbnb listings seen from EU IP addresses (fee-inclusive totals from 2019) vs non-EU, before vs after
+  design: difference-in-differences on listing data (working paper)
+  setting: Airbnb, EU fee-transparency change (all-in display from early 2019)
+  outcome: cleaning fees; nightly prices
+  result_kind: Context-dependent
+  result: Cleaning fees fell 2-4%; listings that previously had no cleaning fee raised nightly prices 5-6%.
+  boundary: The nightly-price rise is by hosts who had no fee, so it does not show hosts folding their own fee into the nightly price. A later version ('Cleanin' It Up', Bristol DP 25/798) reports different magnitudes; it is the same paper and counts once.
+  source: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5073415
+  related_source: https://research-information.bris.ac.uk/en/publications/transparency-of-add-on-fees-on-peer-to-peer-platforms-evidence-fr/
+  verification_note: Found via web search on 2026-11-18 (abstract or publisher/registry page in results); Bristol research portal abstract (Tran, Madio, Rossi & Tremblay) read; SSRN page not opened, so the posting date is not confirmed. Link not re-checked at filing.
+  digest: '2026-11-18'
+  agent: claude
+- id: raghubir-srivastava-face-value-2002
+  date: 2002-12
+  mechanism: People value a product in an unfamiliar currency by its face value and under-adjust for the exchange rate.
+  mechanism_codes:
+  - mental-accounting
+  - unit-price-processing
+  comparison: prices in foreign currencies whose unit is a multiple vs a fraction of the home currency
+  design: six studies (lab), samples from two countries
+  setting: consumers valuing products in unfamiliar currencies
+  outcome: product valuation and spending
+  result_kind: Context-dependent
+  result: 'Valuation was biased toward face value: people underspent when the foreign unit was a multiple of the home unit and overspent when it was a fraction; time pressure and experience moderated the effect.'
+  boundary: Foreign currencies, not vendor credits; direction depends on the denomination, so it does not predict systematic underestimation; does not measure bill-forecast error.
+  source: https://doi.org/10.1086/344430
+  related_source: https://econpapers.repec.org/RePEc:oup:jconrs:v:29:y:2002:i:3:p:335-47
+  verification_note: Found via web search on 2026-11-18 (abstract or publisher/registry page in results); EconPapers abstract and NYU Stern summary read; JCR 29(3):335-347. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: chun-hamilton-variable-points-exchange-rate-2024
+  date: '2024-05-07'
+  mechanism: A variable points-to-money rate makes people optimistic about getting a better rate later, so they hold points and pay cash.
+  mechanism_codes:
+  - mental-accounting
+  comparison: variable vs fixed points-to-money exchange rate at the same average point value
+  design: series of studies, including an incentive-compatible retail loyalty program and a hotel loyalty program
+  setting: loyalty programs
+  outcome: point redemption
+  result_kind: Positive in this setting
+  result: Consumers were less likely to redeem points, and paid money instead, under a variable exchange rate than a fixed one with the same average value.
+  boundary: Loyalty points, not prepaid usage credits; measures redemption, not whether buyers misjudge what they pay.
+  source: https://doi.org/10.1177/00222437241255650
+  related_source: https://www.ama.org/research-insights/research-insight-when-do-consumers-decide-to-redeem-rewards-points-the-role-of-loyalty-program-design/
+  verification_note: Found via web search on 2026-11-18 (abstract or publisher/registry page in results); SAGE abstract, INSEAD page and AMA research insight read; JMR 61(5):858. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: dhar-hoch-in-store-coupons-1996
+  date: 1996-01
+  mechanism: 'An in-store coupon discriminates: only price-sensitive shoppers redeem it, so it lifts sales of the promoted brand more per dollar of discount than a shelf-price cut.'
+  mechanism_codes:
+  - transaction-utility
+  comparison: in-store coupons vs off-the-shelf price discounts (bonus buys) of the same size
+  design: five field tests plus a category-profit model
+  setting: US supermarkets; ready-to-eat cereal application
+  outcome: incremental sales of the promoted brand; retailer profit
+  result_kind: Context-dependent
+  result: On average across five field tests, in-store coupons produced a 35% greater increase in promoted-brand sales than equal bonus buys; with average redemption of 55%, coupons produced a 108% greater increase in dollar profits.
+  boundary: Measures sales, not perceived savings; paper in-store coupons in the 1990s, not digital clip-to-activate; the comparator is a shelf-price cut, not an automatic coupon.
+  source: https://doi.org/10.2307/1251885
+  related_source: https://acnpsearch.tweb-dev.unibo.it/singlejournalindex/13974865
+  verification_note: Found via web search on 2026-11-18 (abstract or publisher/registry page in results); abstract read on two indexing pages; Journal of Marketing 60(1):17-30. ChatGPT's audit gave DOI 10.1177/002224299606000103 (SAGE); the JSTOR DOI shown on the index is used here. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: zhang-alibaba-cart-promotion-experiment-2020
+  date: 2020-06
+  mechanism: A discount on items already in the cart teaches shoppers that waiting in the cart can pay, making them more strategic afterwards.
+  mechanism_codes:
+  - reference-price
+  - impatience-self-selection
+  comparison: customers randomly given promotions on items in their shopping cart vs not
+  design: randomised field experiment (over 100 million customers, 11,000 retailers, 12 Mar-11 Apr 2016)
+  setting: Alibaba (Tmall) platform, China
+  outcome: same-day sales; browsing, cart additions and purchases in the following month
+  result_kind: Context-dependent
+  result: The promotion doubled same-day sales of promoted products; in the following month treated customers viewed about 0.53% more products and added about 0.41% more to carts, and the authors describe them as becoming more strategic bargain hunters.
+  boundary: Does not test whether customers then wait longer before buying at full price; cart-triggered discounts only.
+  source: https://doi.org/10.1287/mnsc.2019.3316
+  related_source: https://anderson-review.ucla.edu/coupons
+  verification_note: Found via web search on 2026-11-18 (abstract or publisher/registry page in results); SUFE abstract record, WashU release and UCLA Anderson Review summary read; Management Science 66(6):2589-2609. The 0.53% and 0.41% figures are from the Anderson Review summary. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: oecd-personalised-pricing-disclosure-experiment-2021
+  date: '2021-01-18'
+  mechanism: Disclosures about personalised pricing are easy to miss, so they change little unless noticed.
+  mechanism_codes:
+  - personalization-fairness
+  comparison: online shopping with vs without disclosures that prices are personalised
+  design: laboratory experiment (Dublin Oct 2019, Santiago Mar 2020) plus questionnaire
+  setting: Ireland and Chile; simulated online retail
+  outcome: identification and comprehension of personalised pricing; purchasing behaviour; attitudes
+  result_kind: Inconclusive
+  result: Disclosures had only limited effects on participants' ability to identify and understand personalised pricing, and the study could not confirm a significant effect on purchasing; in the questionnaire, participants on average saw personalised pricing as unfair and wanting it prohibited.
+  boundary: Tests whether disclosures are noticed and acted on, not reactance to a noticed 'your data raised this price' label.
+  source: https://doi.org/10.1787/1ce1de63-en
+  related_source: https://esri.ie/pubs/RB202106.pdf
+  verification_note: Found via web search on 2026-11-18 (abstract or publisher/registry page in results); OECD and ESRI abstract pages and the ESRI research bulletin first page read (OECD Digital Economy Papers No. 303; authors Julienne, Barjakova, Robertson & Lunn). Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: unal-park-one-click-buying-2023
+  date: '2023-02-22'
+  mechanism: Removing checkout steps makes buying easier, so adopters buy more often and across more categories.
+  mechanism_codes:
+  - pain-of-paying
+  comparison: customers before vs after adopting one-click buying, against non-adopters
+  design: quasi-experimental panel analysis with machine-learning causal methods (generalised random forests), 35 months
+  setting: a large Asian online retailer; 977 one-click adopters; Jan 2016-Aug 2018
+  outcome: spending, purchase frequency, items bought
+  result_kind: Positive in this setting
+  result: After adopting one-click buying, customers raised spending by an average 28.5%, purchase frequency by 43% and items bought by 36%, and bought across more categories.
+  boundary: Adopters self-selected; one retailer; measures purchases, not pain of paying, and one-click is not biometric agent approval.
+  source: https://doi.org/10.1287/mnsc.2023.4716
+  related_source: https://news.cornell.edu/node/325992
+  verification_note: Found via web search on 2026-11-18 (abstract or publisher/registry page in results); SUFE abstract record, EconPapers record (Management Science 69(12):7317-7334) and Cornell release read; percentages from the Cornell release. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
 - id: janssen-kasinger-shrinkflation-demand-2026
   date: 2026-01
   mechanism: Shoppers track the shelf price more closely than the pack size, so a size cut at a steady price loses fewer sales than an equal per-unit price rise.
@@ -1793,23 +1949,24 @@
   digest: '2026-11-18'
   agent: meta
 - id: bagchi-labour-vs-material-cost-justification
-  date: '2026-02-23'
+  date: '2024'
   mechanism: Labour (vs. material) cost justifications activate feelings of responsibility to support low-wage labour and promote equality, making the rise appear fairer — conditional on responsibility being active.
   mechanism_codes:
   - dual-entitlement
   - motive-attribution
   - social-norms
   comparison: Labour-cost vs. material-cost justification for an identical price increase
-  design: Preregistered laboratory studies plus social-media sentiment analysis, website traffic data and stock-market analysis
-  setting: Seminar abstract only; laboratory and archival/field data described but not detailed
+  design: Preregistered online experiments (MSI working paper) plus social-media sentiment, website traffic and stock-market analyses (seminar abstract)
+  setting: MSI Working Paper Report 24-121 (Goenka & Bagchi); the 2026 HKU/CUHK seminar presents the same research program
   outcome: Preference for justification type; fairness perceptions
   result_kind: Context-dependent
-  result: Labour-cost justifications preferred in certain contexts only; preference depends on equality beliefs, physical distance of labour, type of labour beneficiaries, and consumers' economic understanding of labour markets. No effect sizes, sample sizes or statistics stated in the abstract.
-  boundary: Unpublished working paper — no journal, no peer review, no full text available; co-authors not named on the seminar pages; no numbers to check.
-  source: https://www.hkubs.hku.hk/event/when-consumers-prefer-labor-vs-material-cost-justifications-for-price-increases/
-  verification_note: 'Read both seminar abstracts in full (CUHK and HKU pages) — same abstract text, speaker Rajesh Bagchi (Virginia Tech). No journal version, preprint, or effect sizes were found; treat as a lead, not as settled evidence. Link re-checked by Claude 2026-11-18: page loads and matches the row.'
+  result: 'As reported in ChatGPT''s 2026-11-18 audit of the MSI paper (not yet opened by Claude): in Study 1A, mean fairness was 4.97 for a labour-cost explanation, 4.61 for materials and 3.67 for no explanation (7-point scale); the labour-materials gap was 0.36 points, 95% CI [0.04, 0.67]. Both the paper and the seminar abstract report that the preference depends on who benefits from the labour spending, and the abstract adds equality beliefs, the physical distance of the labour and understanding of labour markets.'
+  boundary: One research program (seminar and working paper count once); stated fairness ratings, not purchases or complaints; working paper, not peer-reviewed; the labour advantage is small next to the gain from giving any explanation.
+  source: https://thearf-org-unified-admin.s3.amazonaws.com/MSI_Report_24-121.pdf
+  verification_note: 'Read both seminar abstracts in full (CUHK and HKU pages) — same abstract text, speaker Rajesh Bagchi (Virginia Tech). No journal version, preprint, or effect sizes were found; treat as a lead, not as settled evidence. Link re-checked by Claude 2026-11-18: page loads and matches the row. Upgraded 2026-11-18 by Claude after ChatGPT''s audit: source changed from the seminar page to the MSI working paper; the Study 1A figures are ChatGPT''s reading of the PDF, which Claude could not open in this run (fetch needed approval). Re-check against the PDF.'
   digest: '2026-11-18'
   agent: meta
+  related_source: https://www.hkubs.hku.hk/event/when-consumers-prefer-labor-vs-material-cost-justifications-for-price-increases/
 - id: hufnagel-personalized-pricing-backlash
   date: '2022-04-01'
   mechanism: Learning a price was personalised triggers unfairness perceptions even in those who benefit, so personalisation itself — not just a bad price — drives rejection.

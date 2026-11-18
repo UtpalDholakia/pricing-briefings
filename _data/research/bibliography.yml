@@ -66,12 +66,13 @@
   added: '2026-11-18'
   agent: meta
 - bib_id: bagchi-2026
-  citation: Bagchi (2026, working paper), "When Consumers Prefer Labor (vs. Material) Cost Justifications for Price Increases"
-  url: https://www.hkubs.hku.hk/event/when-consumers-prefer-labor-vs-material-cost-justifications-for-price-increases/
+  citation: Goenka & Bagchi (2024), "When Consumers Prefer Labor (vs. Material) Cost Justifications for Price Increases", MSI Working Paper Report 24-121; presented as a seminar at HKU and CUHK (2026)
+  url: https://thearf-org-unified-admin.s3.amazonaws.com/MSI_Report_24-121.pdf
   evidence_ids:
   - bagchi-labour-vs-material-cost-justification
   added: '2026-11-18'
   agent: meta
+  note: Seminar and working paper are one research program and count once. Updated by Claude 2026-11-18 after ChatGPT's audit.
 - bib_id: hufnagel-schwaiger-weritz-2022
   citation: Hufnagel, Schwaiger & Weritz (2022), "Seeking the perfect price", *JBR* 143
   url: https://ideas.repec.org/a/eee/jbrese/v143y2022icp346-365.html
@@ -821,6 +822,7 @@
   - dynarski-hail-early-tuition-promise-2021
   added: '2026-11-18'
   agent: claude
+  note: Same program and team as burland-et-al-2023; together they are one research program.
 - bib_id: delaney-kearney-2016
   citation: Delaney & Kearney (2016), guaranteed tuition and alternative revenue streams, *Journal of Higher Education*
   url: https://doi.org/10.1080/00221546.2016.11777420
@@ -919,3 +921,69 @@
   added: '2026-11-18'
   agent: claude
   note: 'Context only for all-in-rules-reshuffle-fees: restaurants won a carve-out allowing disclosed service charges, so California''s all-in rule did not force fees into menu prices; no outcome data on menu prices.'
+- bib_id: burland-et-al-2023
+  citation: 'Burland, Dynarski, Michelmore, Owen & Raghuraman (2023), "The Power of Certainty", *AER: Insights* 5(3); NBER WP 29864 (2022) is the same paper'
+  url: https://doi.org/10.1257/aeri.20220094
+  evidence_ids:
+  - burland-certainty-free-tuition-2023
+  added: '2026-11-18'
+  agent: claude
+  note: Same program and team as dynarski-et-al-2021; together they are one research program.
+- bib_id: abraham-hamilton-2018
+  citation: Abraham & Hamilton (2018), "When Does Partitioned Pricing Lead to More Favorable Consumer Preferences? Meta-Analytic Evidence", *JMR* 55(5)
+  url: https://doi.org/10.1177/0022243718800724
+  evidence_ids:
+  - abraham-hamilton-partitioned-pricing-meta-2018
+  added: '2026-11-18'
+  agent: claude
+  note: Pools studies also filed separately (e.g. Morwitz et al. 1998); do not count both.
+- bib_id: tran-madio-rossi-tremblay
+  citation: 'Tran, Madio, Rossi & Tremblay, "Transparency of Add-On Fees on Peer-to-Peer Platforms: Evidence from Airbnb" (working paper; later "Cleanin'' It Up", Bristol DP 25/798)'
+  url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5073415
+  evidence_ids:
+  - tran-airbnb-cleaning-fee-transparency
+  added: '2026-11-18'
+  agent: claude
+  note: Working-paper versions count once.
+- bib_id: raghubir-srivastava-2002
+  citation: Raghubir & Srivastava (2002), "Effect of Face Value on Product Valuation in Foreign Currencies", *JCR* 29(3)
+  url: https://doi.org/10.1086/344430
+  evidence_ids:
+  - raghubir-srivastava-face-value-2002
+  added: '2026-11-18'
+  agent: claude
+- bib_id: chun-hamilton-2024
+  citation: Chun & Hamilton (2024), "Paying with Money or Paying with Points", *JMR* 61(5)
+  url: https://doi.org/10.1177/00222437241255650
+  evidence_ids:
+  - chun-hamilton-variable-points-exchange-rate-2024
+  added: '2026-11-18'
+  agent: claude
+- bib_id: dhar-hoch-1996
+  citation: Dhar & Hoch (1996), "Price Discrimination Using In-Store Merchandising", *Journal of Marketing* 60(1)
+  url: https://doi.org/10.2307/1251885
+  evidence_ids:
+  - dhar-hoch-in-store-coupons-1996
+  added: '2026-11-18'
+  agent: claude
+- bib_id: zhang-et-al-2020
+  citation: Zhang, Dai, Dong, Qi, Zhang, Liu, Liu & Yang (2020), "The Long-term and Spillover Effects of Price Promotions on Retailing Platforms", *Management Science* 66(6)
+  url: https://doi.org/10.1287/mnsc.2019.3316
+  evidence_ids:
+  - zhang-alibaba-cart-promotion-experiment-2020
+  added: '2026-11-18'
+  agent: claude
+- bib_id: oecd-2021
+  citation: 'OECD (2021), "The effects of online disclosure about personalised pricing on consumers: Results from a lab experiment in Ireland and Chile", Digital Economy Papers No. 303 (Julienne, Barjakova, Robertson & Lunn, ESRI)'
+  url: https://doi.org/10.1787/1ce1de63-en
+  evidence_ids:
+  - oecd-personalised-pricing-disclosure-experiment-2021
+  added: '2026-11-18'
+  agent: claude
+- bib_id: unal-park-2023
+  citation: Unal & Park (2023), "Fewer Clicks, More Purchases", *Management Science* 69(12)
+  url: https://doi.org/10.1287/mnsc.2023.4716
+  evidence_ids:
+  - unal-park-one-click-buying-2023
+  added: '2026-11-18'
+  agent: claude

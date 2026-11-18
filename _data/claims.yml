@@ -50,7 +50,7 @@
   claim: Sellers reverse a price rise at least partly when the backlash is public, attributable and covered beyond the seller's own channels.
   status: Contested
   confidence: Low
-  confidence_note: 'backlash.yml on 2026-11-17: 7 of 11 resolved cases reversed at least partly. Widely covered historical cases filed 2026-11-18 (Amazon 2000, Coca-Cola 1999, Netflix 2011, Unity 2023, Instacart 2025) all reversed at least partly, but Netflix kept the price and Unity recovered the revenue through list prices; the tracker still does not code coverage, so the condition is untested.'
+  confidence_note: 'Reversal types kept apart: price rolled back (Uniqlo, ChatGPT Pro allowance, Amazon refunds), fees or terms changed (OpenAI per-job, Unity, Instacart), proposal withdrawn (Burry, Xbox, Wendy''s, Coca-Cola). Only rollbacks of live prices test the claim directly. Held despite wide coverage: Starlink, Sony, Netflix (price kept). The case collection cannot show that publicity predicts reversal without comparable price changes that drew little or no coverage; the backlash tracker would need to code coverage for every case.'
   mechanism_codes:
   - price-change-communication
   - motive-attribution
@@ -59,37 +59,34 @@
   evidence_for:
   - kind: tracker
     ref: chatgpt-pro-allowance-2026
-    note: Allowance cut cancelled after public developer backlash.
+    note: 'Price rolled back (allowance restored): an announced allowance cut at an unchanged price was cancelled after public developer backlash.'
   - kind: tracker
     ref: burry-substack-2026
-    note: Price-rise plan cancelled after reader pushback.
+    note: 'Proposal withdrawn: a planned rise was cancelled before taking effect.'
   - kind: tracker
     ref: uniqlo-socks-2026
-    note: Increase reversed after customer backlash.
+    note: 'Price rolled back: a live increase was reversed after customer backlash.'
   - kind: tracker
     ref: openai-per-job-pricing-2026
-    note: Per-job pricing dropped after customer objections.
+    note: 'Fees or terms changed: the per-job pricing model was dropped after customer objections.'
   - kind: evidence
     ref: xbox-live-gold-reversal-2021
-    note: Announced rise reversed the same day after public backlash, with a concession; never charged.
+    note: 'Proposal withdrawn: announced rise reversed the same day, never charged.'
   - kind: evidence
     ref: wendys-dynamic-pricing-reversal-2024
-    note: Dynamic-pricing plan walked back within days of press and political backlash; never implemented.
+    note: 'Proposal withdrawn: dynamic-pricing plan never implemented.'
   - kind: evidence
     ref: amazon-dvd-random-price-test-2000
-    note: Message-board backlash; apology, refunds to 6,896 buyers and a lowest-price promise within weeks.
+    note: Price rolled back (refunds) and terms changed (lowest-price promise for future tests).
   - kind: evidence
     ref: unity-runtime-fee-reversal-2023
-    note: Developer boycott; fee narrowed in ten days and scrapped a year later, replaced by 8-25% seat rises.
+    note: 'Fees or terms changed: runtime fee narrowed then scrapped; revenue recovered through 8-25% seat rises.'
   - kind: evidence
     ref: instacart-price-tests-ended-2025
-    note: Published consumer-group study; all item price tests ended within two weeks.
+    note: 'Fees or terms changed: item price tests ended; no general price cut.'
   - kind: evidence
     ref: coca-cola-temperature-vending-1999
-    note: Hostile coverage of a heat-based pricing plan; Coca-Cola said it would not introduce it.
-  - kind: evidence
-    ref: netflix-qwikster-price-rise-2011
-    note: Split reversed within a month of the apology; the price rise itself was kept, so a partial reversal.
+    note: 'Proposal withdrawn: a reported plan, never a live price.'
   evidence_against:
   - kind: tracker
     ref: starlink-congestion-2026
@@ -97,6 +94,9 @@
   - kind: tracker
     ref: sony-ps-store-pricing-2026
     note: Screenshot comparisons and boycott talk; no reversal.
+  - kind: evidence
+    ref: netflix-qwikster-price-rise-2011
+    note: 'Against on the price: Netflix kept the 2011 price rise and withdrew only the Qwikster split (a change of terms).'
   related_questions: []
   related_dives: []
   status_history:
@@ -178,7 +178,7 @@
   claim: When a vendor prices in credits rather than currency, buyers underestimate what they pay, because the vendor sets the exchange rate.
   status: Contested
   confidence: Low
-  confidence_note: Proposed Contested (awaiting Utpal). Studies of intermediate currencies find distortion; a disclosed-rate null and AI-product field cases point the other way. No study yet measures whether AI-credit buyers misjudge spend.
+  confidence_note: 'Proposed Contested (awaiting Utpal). Studies of intermediate currencies find distortion; a disclosed-rate null and AI-product field cases point the other way. No study yet measures whether AI-credit buyers misjudge spend. Added 2026-11-18 (ChatGPT audit): two boundary studies show exchange-rate design changes behaviour; neither measures whether credit buyers misjudge their bills, which remains the missing direct test.'
   mechanism_codes:
   - mental-accounting
   - usage-anxiety
@@ -203,6 +203,12 @@
   - kind: evidence
     ref: hsee-medium-maximization-points-2003
     note: 'Lab: an intermediate medium (points) distorts choice toward more points over better outcomes; mechanism, not misjudged spend.'
+  - kind: evidence
+    ref: raghubir-srivastava-face-value-2002
+    note: 'Boundary: unfamiliar currencies bias valuation toward face value; over- or underspending depending on denomination. No AI bill-forecast measure.'
+  - kind: evidence
+    ref: chun-hamilton-variable-points-exchange-rate-2024
+    note: 'Boundary: a variable points rate (same average value) cut redemption. Loyalty points, not usage credits; no bill-forecast measure.'
   evidence_against:
   - kind: tracker
     ref: openai-per-job-pricing-2026
@@ -234,9 +240,9 @@
   agent: claude
 - claim_id: small-surcharge-partitioning-helps
   claim: Showing a surcharge separately from the base price raises purchase intention only while the surcharge is small relative to the base price.
-  status: Contested
+  status: Open
   confidence: Low
-  confidence_note: Proposed Contested (awaiting Utpal). Lab evidence for the size boundary; one study finds a trivial unexpected surcharge hurts. Still no field comparison of upfront partitioned vs all-in prices.
+  confidence_note: 'Three tests kept separate. (1) Itemised vs all-in at the same total, the direct test: Aichner & Dorigati support the size boundary; Morwitz shows partitioning helps at moderate size without a size contrast. (2) Early vs late disclosure (Santana, Blake): drip pricing, boundary only. (3) Unexpected charge vs no charge (Lee): boundary, not a partitioning comparison. Sheng varies surcharge size without an all-in comparator. Abraham & Hamilton''s meta-analysis adds typicality, perceived benefit and total-price visibility as moderators; it pools Morwitz and others, so it is not counted again. Lean for, one direct test; Low.'
   mechanism_codes:
   - partitioned-pricing
   - drip-pricing
@@ -245,23 +251,26 @@
   evidence_for:
   - kind: evidence
     ref: partitioned-surcharge-magnitude
-    note: 'Aichner & Dorigati (n=433): partitioning helped with a small shipping fee and hurt with a large one, through fairness.'
+    note: 'Direct test (itemised vs all-in, same total, small vs large fee): partitioning helped with a small fee and hurt with a large one; n=433, stated intentions.'
   - kind: evidence
     ref: morwitz-partitioned-prices-1998
-    note: Partitioned prices raised demand and lowered recalled totals (lab).
+    note: Direct test of itemised vs all-in at the same total (moderate surcharges, ~15-18% of base); no size contrast. Pooled in Abraham & Hamilton.
   - kind: evidence
     ref: sheng-surcharge-fairness-2007
-    note: 'The same $9 surcharge judged unfair on a $7.90 base, fair on a $49.90 base: the size boundary.'
+    note: 'Boundary: the same surcharge judged unfair on a small base, fair on a large one; no all-in comparator.'
   - kind: evidence
     ref: santana-drip-pricing-2020
-    note: Drip (late-revealed) surcharges steered choice to the lower base price; timing, not size.
+    note: 'Boundary (early vs late disclosure): drip surcharges steered choice; timing, not size.'
   - kind: evidence
     ref: blake-stubhub-drip-2021
-    note: 'Field experiment: fees shown only at checkout raised completion 14.1% and revenue ~21%; timing, not size.'
+    note: 'Boundary (early vs late disclosure): checkout-only fees raised completion 14.1%; timing, not size.'
+  - kind: evidence
+    ref: abraham-hamilton-partitioned-pricing-meta-2018
+    note: 'Context (meta-analysis, 149 observations): partitioning helps when the total is absent and the surcharge is typical and beneficial; pools studies filed separately, so not counted again.'
   evidence_against:
   - kind: evidence
     ref: lee-unexpected-surcharge-2026
-    note: Even a one-cent surcharge on a complimentary item cut fairness and revisit intention; unexpected charges, communal norms.
+    note: 'Boundary (unexpected charge vs no charge): a one-cent surcharge on a complimentary item cut fairness; not an itemised vs all-in comparison.'
   related_questions: []
   related_dives: []
   status_history:
@@ -283,6 +292,13 @@
     old_status: Open
     new_status: Contested
     reason: 'Proposed after the 2026-11-18 backfill: partitioning studies support a size boundary (Morwitz 1998, Sheng 2007), while Lee et al. (2026) found even a trivial surcharge on a complimentary item cut fairness.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  - date: '2026-11-18'
+    old_status: Contested
+    new_status: Open
+    reason: 'Proposal withdrawn after ChatGPT audit of 3456647 (2026-11-18): the pointers mix three different tests (itemised vs all-in at the same total; early vs late disclosure; an unexpected charge vs none). Only the first tests the claim directly, and the one direct test supports it.'
     source: null
     proposed_by: claude
     confirmed_by: null
@@ -672,7 +688,10 @@
   - kind: evidence
     ref: priester-personalized-dynamic-pricing-fairness
     note: Individual prices less fair than segment prices; granularity, not label visibility.
-  evidence_against: []
+  evidence_against:
+  - kind: evidence
+    ref: oecd-personalised-pricing-disclosure-experiment-2021
+    note: 'Boundary: disclosures of personalised pricing had no confirmed purchase effect, partly because participants missed them; a label that is not noticed cannot backfire.'
   related_questions:
   - personal-price-label-2026
   related_dives: []
@@ -849,7 +868,7 @@
   claim: A smaller pack at the same price draws less backlash than an equal per-unit price rise.
   status: Open
   confidence: Low
-  confidence_note: 'Evidence splits by outcome. Purchase response favours the claim (Gourville, Cakir, Grigolon, Janssen & Kasinger 2026, Kim 2024: sales fall about half as much for a size cut). Fairness once noticed runs against it (Evangelidis 2024: five preregistered experiments find downsizing judged less fair than an equal price rise; Macromill: 90% notice). Suggest Utpal reword before any verdict, e.g. split into ''loses fewer sales'' (would be Supported) and ''draws less backlash once known'' (would be Refuted on current evidence).'
+  confidence_note: 'Proposed split (awaiting Utpal), ID and history kept: (a) downsizing-loses-fewer-sales-than-price-rise for purchases after a size cut; (b) known-downsizing-judged-less-fair for fairness once the change is known. The demand studies and the fairness experiments can both be right. Neither measures how often customers complain or organise a boycott, which is what ''backlash'' means here. If Utpal confirms the split, this claim would go to Dead with a pointer to the two new claims.'
   mechanism_codes:
   - quantity-insensitivity
   test: A matched pair of products, one shrunk and one repriced by the same per-unit amount, comparing complaints and sales.
@@ -1108,9 +1127,9 @@
   agent: claude
 - claim_id: most-black-friday-deals-not-discounts
   claim: Most advertised Black Friday "deals" are not discounts against the product's own price history.
-  status: Contested
+  status: Open
   confidence: Medium
-  confidence_note: 'Proposed Contested (awaiting Utpal). The verdict turns on the benchmark: against a year or 90 days most deals are not discounts; against 30 days or the prior month most are, but small. Consider splitting the claim by benchmark.'
+  confidence_note: 'Three measures kept apart. (A) Below a prior benchmark: Groundwork (Amazon US, 351 deals; ties count as no discount): 57.3% no cheaper than the 90-day low, 29.1% vs 30 days; Shoprime (Brazil, 5,812 offers; within +/-5% of typical counts as no discount): 30.3% more than 5% below typical; Idealo (Germany, >10,000 products, second-hand): 73% below the October level. (B) Tied with or beaten by a price outside the event: Which? (UK, 175 products, +/-6 months; ties count): 83%; Idealo: 59% cheaper on another November day. (C) Compliance with the EU 30-day rule: EU sweep, about 30% of 314 traders (a share of traders, not products); DECO instances. On (A) the evidence is mixed and depends on the window; on (B) both measures say most deals are matched or beaten. Suggested split wording: ''Most advertised Black Friday prices are matched or beaten at another time of year'' (B), kept apart from ''Most are no lower than the product''s recent low'' (A). Awaiting Utpal.'
   mechanism_codes:
   - reference-price
   - transaction-utility
@@ -1120,29 +1139,32 @@
   evidence_for:
   - kind: tracker
     ref: shoprime-black-friday-index-2026
-    note: 'Brazil 2026: 30.3% of 5,812 offers more than 5% below typical; 20.8% above typical.'
+    note: 'Direct test, measure A (below a prior benchmark): Brazil 2026, 5,812 offers vs each product''s typical price; 30.3% more than 5% below, 48.9% within +/-5% (ties count as no discount), 20.8% above.'
   - kind: tracker
     ref: sa-speaker-black-friday-2026
-    note: Advertised saving built on a pre-sale price rise.
+    note: 'Context: one inflated-reference instance.'
   - kind: tracker
     ref: deco-black-friday-2026
-    note: 'Portugal 2026: DECO found pre-sale price rises at four online retailers (FNAC earbuds EUR 199.99 in October, EUR 249.99 in the Black Friday campaign). Instances, not a share of offers, so it adds a second market but not a second measurement.'
+    note: 'Context, measure C: Portugal 2026 instances of breaches of the 30-day rule; not a share of offers.'
   - kind: evidence
     ref: which-black-friday-2025
-    note: 'UK, 175 appliances tracked for a year: none at their cheapest on Black Friday; 83% same or cheaper at other times.'
+    note: 'Direct test, measure B (matched or beaten outside the event): UK, 175 appliances, prices tracked 6 months either side; ties count. 83% same or cheaper at another time; 42% strictly cheaper; none at their year low on Black Friday.'
   - kind: evidence
     ref: groundwork-amazon-deal-decoy-2026
-    note: 'Amazon US, 351 deals: 57.3% no cheaper than the prior-90-day low, 29.1% vs the prior 30 days. Amazon disputes the report.'
+    note: 'Direct test, measure A: Amazon US, 351 deals vs prior lows; ties count as no discount. 57.3% no cheaper than the 90-day low, 29.1% vs 30 days, 23.5% vs 10 days. Amazon disputes it.'
   - kind: evidence
     ref: checkbook-fake-discounts-2025
-    note: 'US, 25 chains over 24 weeks: most ''sale'' prices are fake discounts. Everyday sales, not Black Friday.'
+    note: 'Context: US, 25 chains over 24 weeks, everyday ''sale'' prices, not Black Friday.'
+  - kind: evidence
+    ref: idealo-black-friday-price-study-2024
+    note: 'Direct test, measure B (second-hand): 59% of products were cheaper on at least one other November day.'
   evidence_against:
   - kind: evidence
     ref: eu-cpc-black-friday-sweep-2025
-    note: 'EU sweep of 314 shops (2025): about 30% used irregular discounts against the 30-day lowest-price rule, so most did not.'
+    note: 'Context, measure C: about 30% of 314 traders had irregular discounts under the 30-day rule. A share of traders, not of products, so not counted on A or B.'
   - kind: evidence
     ref: idealo-black-friday-price-study-2024
-    note: 'Germany 2024 (second-hand): 73% of products cheaper than in October, but only 7% on average, and 59% cheaper on another November day.'
+    note: 'Direct test, measure A (second-hand): Germany 2024, >10,000 products; 73% cheaper than in October, by 7% on average; tie handling unknown.'
   related_questions: []
   related_dives: []
   status_history:
@@ -1157,6 +1179,13 @@
     old_status: Open
     new_status: Contested
     reason: 'Proposed after Claude''s 2026-11-18 sweep. Studies against a long price history (Which?, Groundwork) find most deals no cheaper than earlier lows; checks against a 30-day or prior-month benchmark (EU 2025 sweep: about 30% irregular; Idealo Germany 2024: 73% cheaper than October) find most are real but small discounts. Credible evidence on both sides; the split is about the benchmark.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  - date: '2026-11-18'
+    old_status: Contested
+    new_status: Open
+    reason: 'Proposal withdrawn after ChatGPT audit of 3456647 (2026-11-18): the pointers measure three different things (below a prior benchmark; tied with or beaten outside the event; compliance with the 30-day rule), and a share of traders is not a share of products. Verdicts should be proposed per measure.'
     source: null
     proposed_by: claude
     confirmed_by: null
@@ -1412,9 +1441,9 @@
   agent: meta
 - claim_id: early-tuition-announcement-sells-certainty
   claim: Announcing tuition early sells certainty itself, and changes enrolment behaviour in the announcer's favour.
-  status: Supported
-  confidence: Medium
-  confidence_note: 'Proposed Supported (awaiting Utpal), Medium. One strong RCT (bundled with personalised outreach, so certainty is not fully isolated), one DiD abstract and two university cases. Delaney & Kearney (2016) show the cost side: guarantees came with higher fees.'
+  status: Open
+  confidence: Low
+  confidence_note: 'Lean for, but no direct test: the WVU and Cornell cases show early announcements with strong early numbers and no comparison; the RCTs test a guarantee, not earlier timing of the same tuition. A comparison of early and late announcers, or of one university before and after moving its announcement, is needed.'
   mechanism_codes:
   - price-change-communication
   - reference-price
@@ -1430,10 +1459,13 @@
     note: Early personalised aid estimates; nearly a fifth of the class committed after one. Aid estimate, not tuition; no control.
   - kind: evidence
     ref: dynarski-hail-early-tuition-promise-2021
-    note: 'RCT: an early guaranteed free-tuition promise with no extra aid raised application 26% to 68% and enrolment 12% to 27%; bundled with personalised outreach.'
+    note: 'Boundary: RCT of an unconditional free-tuition guarantee (application 26% to 68%, enrolment 12% to 27%); a guarantee, not earlier announcement of the same tuition.'
   - kind: evidence
     ref: coulibaly-asirvatham-truth-in-tuition-enrollment-2024
-    note: 'DiD: Illinois''s four-year tuition guarantee raised freshman enrolment; abstract only.'
+    note: 'Boundary: a legally mandated four-year tuition freeze raised freshman enrolment (DiD, abstract only); a guarantee, not earlier timing.'
+  - kind: evidence
+    ref: burland-certainty-free-tuition-2023
+    note: 'Boundary: unconditional free tuition raised enrolment, a need-contingent offer did not; same program as Dynarski 2021.'
   evidence_against: []
   related_questions: []
   related_dives: []
@@ -1449,6 +1481,13 @@
     old_status: Open
     new_status: Supported
     reason: 'Proposed after Claude''s 2026-11-18 sweep: a randomised field experiment (Dynarski et al. 2021, AER) found an early guaranteed tuition promise with no extra aid more than doubled application and enrolment; a DiD study found Illinois''s tuition guarantee raised freshman enrolment; plus the WVU and Cornell field cases. Two kinds of evidence, none against.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  - date: '2026-11-18'
+    old_status: Supported
+    new_status: Open
+    reason: 'Proposal withdrawn after ChatGPT audit of 3456647 (2026-11-18): the experiments test an unconditional guarantee, not announcing the same tuition earlier, so they are boundary evidence for this claim. The guarantee is now a separate claim (unconditional-tuition-guarantee-raises-enrollment).'
     source: null
     proposed_by: claude
     confirmed_by: null
@@ -1567,7 +1606,7 @@
   claim: When all-in pricing rules force fees into the headline price, sellers re-label the lost fee revenue as other charges rather than absorb it.
   status: Open
   confidence: Low
-  confidence_note: One documented firm in one industry (ticketing), with the seller's own email; no evidence yet on base prices or shipping thresholds.
+  confidence_note: One documented firm (Ticketmaster) shifting a specific fee. Airbnb under EU all-in display shows price adjustment by hosts who had no fee, not relabelling; no evidence yet on shipping thresholds.
   mechanism_codes:
   - drip-pricing
   - partitioned-pricing
@@ -1577,7 +1616,10 @@
   evidence_for:
   - kind: evidence
     ref: ticketnews-ticketmaster-fee-shift-2026
-    note: 'Venue documents: Ticketmaster dropped order-processing fees and raised per-ticket charges to keep revenue level.'
+    note: 'Direct case: Ticketmaster dropped order-processing fees and raised per-ticket charges; one specific fee shift.'
+  - kind: evidence
+    ref: tran-airbnb-cleaning-fee-transparency
+    note: 'Boundary: after EU all-in display, cleaning fees fell 2-4% and listings with no fee raised nightly prices 5-6%; not the same hosts folding their fee into the nightly price.'
   evidence_against: []
   related_questions:
   - all-in-rules-response-2026
@@ -1619,3 +1661,139 @@
     proposed_by: claude
     confirmed_by: null
   agent: meta
+- claim_id: labour-cost-explanation-rated-fairer-online
+  claim: In online experiments, a price rise explained by higher labour costs is rated slightly fairer than the same rise explained by higher material costs, and the gap depends on who is seen to benefit from the labour spending.
+  status: Open
+  confidence: Low
+  confidence_note: One research program (seminar plus MSI working paper, counted once), not peer-reviewed. Small gap (0.36 on a 7-point scale, CI [0.04, 0.67]) next to the gain from any explanation. Figures are ChatGPT's reading of the PDF; Claude has not yet opened it. Says nothing about complaints, churn or backlash.
+  mechanism_codes:
+  - dual-entitlement
+  - motive-attribution
+  - social-norms
+  test: An independent replication, or a field comparison of labour- vs material-cost explanations measuring complaints or churn.
+  created: '2026-11-18'
+  last_updated: '2026-11-18'
+  evidence_for:
+  - kind: evidence
+    ref: bagchi-labour-vs-material-cost-justification
+    note: 'Direct test: Study 1A fairness 4.97 (labour) vs 4.61 (materials) vs 3.67 (none); beneficiary moderates. Working paper.'
+  evidence_against: []
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-18'
+    old_status: null
+    new_status: Open
+    reason: 'Graduated from hypothesis labour-cost-fairer-than-material (ChatGPT audit of 3456647 (2026-11-18)): one direct test in a working paper. Proposed for Utpal''s confirmation.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: meta
+- claim_id: downsizing-loses-fewer-sales-than-price-rise
+  claim: A smaller pack at the same price loses fewer unit sales than an equal per-unit price rise.
+  status: Open
+  confidence: Medium
+  confidence_note: Proposed as half of the shrinkflation split. Three direct demand tests (two scanner-data studies and a natural experiment) agree, with nothing against; Utpal to decide whether this meets the Supported bar. Grigolon shows the advantage depends on buyers not noticing.
+  mechanism_codes:
+  - quantity-insensitivity
+  - unit-price-processing
+  test: Already tested in scanner data; a field test with the change made salient would bound it.
+  created: '2026-11-18'
+  last_updated: '2026-11-18'
+  evidence_for:
+  - kind: evidence
+    ref: janssen-kasinger-shrinkflation-demand-2026
+    note: 'Direct test: US scanner data 2010-20; sales -0.56% per 1% size cut vs -1.19% per 1% price rise.'
+  - kind: evidence
+    ref: cakir-package-downsizing-2014
+    note: 'Direct test: scanner panel; demand about four times less responsive to size than to price.'
+  - kind: evidence
+    ref: kim-downsizing-preference-korea-milk-2024
+    note: 'Direct test: Korean milk natural experiment; strong preference for downsizing over equal package-price rises, not fading.'
+  - kind: evidence
+    ref: gourville-downsizing-2004
+    note: 'Direct test: price rises changed buying, equivalent downsizing did not.'
+  - kind: evidence
+    ref: grigolon-pepper-downsizing-2026
+    note: 'Boundary: downsizing went almost unnoticed; made salient, downsized products lost 23% of share.'
+  - kind: evidence
+    ref: snir-levy-shrinking-goods-2011
+    note: 'Context: model and data on why firms shrink; working paper.'
+  evidence_against: []
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-18'
+    old_status: null
+    new_status: Open
+    reason: 'Proposed split of shrinkflation-draws-less-backlash (ChatGPT audit of 3456647 (2026-11-18)): purchases after a size cut. Proposed for Utpal''s confirmation.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: known-downsizing-judged-less-fair
+  claim: Once buyers know about it, a smaller pack at the same price is judged less fair than an equal per-unit price rise.
+  status: Open
+  confidence: Low
+  confidence_note: Proposed as half of the shrinkflation split. One paper of five preregistered experiments; disclosure removes most of the gap. No field measure of complaints or boycotts yet.
+  mechanism_codes:
+  - quantity-insensitivity
+  - dual-entitlement
+  - motive-attribution
+  test: Complaint or boycott counts for matched downsized and repriced products after both changes are publicised.
+  created: '2026-11-18'
+  last_updated: '2026-11-18'
+  evidence_for:
+  - kind: evidence
+    ref: evangelidis-shrinkflation-aversion-2024
+    note: 'Direct test: five preregistered experiments; known downsizing judged less fair than an equal price rise, through perceived deception.'
+  - kind: tracker
+    ref: mtg-nauctis-collector-booster-2026
+    note: 'Context: a publicised pack cut drew community backlash; no repriced comparator.'
+  - kind: tracker
+    ref: macromill-stealth-hikes-2026
+    note: 'Context: 90% of Japanese respondents say they notice stealth hikes; noticing, not judging.'
+  evidence_against: []
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-18'
+    old_status: null
+    new_status: Open
+    reason: 'Proposed split of shrinkflation-draws-less-backlash (ChatGPT audit of 3456647 (2026-11-18)): fairness when the change is known. Proposed for Utpal''s confirmation.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude
+- claim_id: unconditional-tuition-guarantee-raises-enrollment
+  claim: An unconditional, up-front free-tuition guarantee raises low-income students' application and enrolment more than the same aid offered contingent on proving need.
+  status: Open
+  confidence: Medium
+  confidence_note: Two randomised experiments from one program and team at one university (HAIL at Michigan), counted as one research program. Strong causal design; generalisation to other universities untested.
+  mechanism_codes:
+  - price-change-communication
+  test: A replication of the unconditional vs contingent comparison at a second university or state program.
+  created: '2026-11-18'
+  last_updated: '2026-11-18'
+  evidence_for:
+  - kind: evidence
+    ref: burland-certainty-free-tuition-2023
+    note: 'Direct test: unconditional offer raised application and enrolment; the need-contingent offer had a smaller effect on application and none on enrolment.'
+  - kind: evidence
+    ref: dynarski-hail-early-tuition-promise-2021
+    note: 'Direct test (same research program as Burland et al.): the guarantee with no extra aid raised application 26% to 68% and enrolment 12% to 27%.'
+  - kind: evidence
+    ref: delaney-kearney-guaranteed-tuition-fees-2016
+    note: 'Context: a tuition guarantee by law came with higher fees and out-of-state tuition (the cost side).'
+  evidence_against: []
+  related_questions: []
+  related_dives: []
+  status_history:
+  - date: '2026-11-18'
+    old_status: null
+    new_status: Open
+    reason: 'Created after ChatGPT audit of 3456647 (2026-11-18): the narrower guarantee claim, evaluated separately from early announcement. Proposed for Utpal''s confirmation.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  agent: claude

@@ -7,7 +7,7 @@
   hypothesis: A price rise blamed on labour costs is judged fairer than the same rise blamed on material costs.
   predicts: Fairness ratings for an identical rise are higher when labour costs are named than when material costs are.
   test: A vignette experiment ranking justifications (labour, materials, energy, demand) for an identical rise with an equally credible cost, testing whether the result depends on who shoppers think receives the extra money.
-  status: Testing
+  status: Graduated
   confidence: Low
   lanes:
   - Industries the others ignore
@@ -18,15 +18,15 @@
   evidence_for:
   - kind: evidence
     ref: bagchi-labour-vs-material-cost-justification
-    note: 'Lead, not settled evidence: an unpublished seminar abstract reports the predicted preference, conditionally; no numbers.'
+    note: 'Direct test: Goenka & Bagchi (MSI WP 24-121; the seminar is the same program). Study 1A: labour 4.97, materials 4.61, none 3.67 (7-point); gap 0.36, CI [0.04, 0.67], per ChatGPT''s reading. Depends on who benefits.'
   - kind: evidence
     ref: stangl-cost-structure-appeals-fairness-2026
-    note: 'Adjacent: naming staff (customer-facing) costs beat overheads; tests alignability, not labour vs material.'
+    note: 'Context: naming customer-facing (staff) costs beat overheads; alignability, not labour vs materials.'
   - kind: evidence
     ref: vaidyanathan-aggarwal-attribution-fairness-2003
-    note: 'Mechanism only: costs seen as outside the seller''s control are judged fairer; whether buyers see wages that way is untested.'
+    note: 'Context: costs seen as outside the seller''s control are judged fairer; whether wages are seen that way is untested.'
   evidence_against: []
-  related_claim: null
+  related_claim: labour-cost-explanation-rated-fairer-online
   related_questions: []
   created: '2026-11-17'
   agent: meta
@@ -35,6 +35,11 @@
     old_status: null
     new_status: Testing
     reason: Seeded from the 48-candidate list under Spec F.
+    source: null
+  - date: '2026-11-18'
+    old_status: Testing
+    new_status: Graduated
+    reason: 'Graduated into claim labour-cost-explanation-rated-fairer-online on the Goenka & Bagchi MSI working paper (ChatGPT audit of 3456647 (2026-11-18)). Narrow wording: stated fairness in online experiments only.'
     source: null
 - hypothesis_id: fairness-judged-by-worst-hit
   hypothesis: The public judges personalised pricing by the worst-hit shopper, not by the median shopper.
@@ -82,7 +87,10 @@
   hunt_count: 0
   hunts: []
   evidence_for: []
-  evidence_against: []
+  evidence_against:
+  - kind: evidence
+    ref: dhar-hoch-in-store-coupons-1996
+    note: 'Boundary: in five field tests, in-store coupons lifted promoted-brand sales 35% more than equal shelf-price cuts. Sales, not perceived savings; paper coupons, not digital clipping; comparator is a price cut.'
   related_claim: null
   related_questions:
   - clip-coupons-savings-2026
@@ -183,6 +191,9 @@
   - kind: evidence
     ref: prelec-simester-credit-card-wtp-2001
     note: 'Real auction: card payers bid about twice cash payers (second-hand figure). Card vs cash, not biometric vs manual.'
+  - kind: evidence
+    ref: unal-park-one-click-buying-2023
+    note: 'Boundary: one-click adopters raised spending 28.5% and purchase frequency 43% (self-selected, one retailer). Purchases, not pain of paying; not biometric agent approval.'
   evidence_against: []
   related_claim: null
   related_questions:
@@ -646,7 +657,10 @@
   hunt_count: 0
   hunts: []
   evidence_for: []
-  evidence_against: []
+  evidence_against:
+  - kind: evidence
+    ref: oecd-personalised-pricing-disclosure-experiment-2021
+    note: 'Boundary: personalised-pricing disclosures had no confirmed effect on purchases and were often not understood. Shows disclosures go unnoticed, not reactance when noticed.'
   related_claim: null
   related_questions:
   - data-raised-price-disclosure-2026
@@ -830,7 +844,10 @@
   last_hunted: null
   hunt_count: 0
   hunts: []
-  evidence_for: []
+  evidence_for:
+  - kind: evidence
+    ref: zhang-alibaba-cart-promotion-experiment-2020
+    note: 'Boundary: randomised cart discounts changed later browsing and cart behaviour (customers became more strategic). Waiting longer to buy at full price is not tested.'
   evidence_against: []
   related_claim: null
   related_questions: []
