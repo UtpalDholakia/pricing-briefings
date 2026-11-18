@@ -1,5 +1,22 @@
 # Tracker: hidden_increases. Shrinkflation, upsizing with a markup, unbundling, inflated reference prices and fees.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: deco-black-friday-2026
+  mechanism_codes: [reference-price, transaction-utility]
+  date: '2026-11-03'
+  kind: Inflated reference price
+  product: Black Friday offers at the online shops of Auchan, El Corte Ingles, Euronics and FNAC (Portugal)
+  change: 'DECO PROteste price checks on Nov 2-3 found several breaches of the rule that a discount is measured from the lowest price of the previous 30 days; e.g. FNAC listed Samsung earbuds at EUR 249.99 on Nov 2 in its Black Friday campaign after selling them at EUR 199.99 on Oct 12-18'
+  unit_price_effect: null
+  magnitude_pct: null
+  magnitude_note: 'Earbuds example implies a 25% pre-sale rise (50 / 199.99); one product, not a market rate, so not entered'
+  industry: Retail (electronics and appliances)
+  geography: Portugal
+  source: https://www.euronews.com/2026/11/18/black-friday-deals-under-scrutiny-as-portuguese-consumer-group-deco-warns-of-dubious-disco
+  related_source: https://www.nit.pt/compras/lojas-e-marcas/deco-alerta-para-descontos-da-black-friday-estes-produtos-estavam-mais-baratos-antes
+  digest: '2026-11-18'
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
+  last_checked: '2026-11-18'
+  follow_up_date: '2026-12-18'
 - case_id: shoprime-black-friday-index-2026
   date: '2026-11-17'
   kind: Inflated reference price

@@ -1,5 +1,31 @@
 # Tracker: ai_product_pricing. How AI products themselves are priced.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: slack-slackbot-cap-2026
+  mechanism_codes: [usage-anxiety, mental-accounting]
+  date: '2026-11-11'
+  kind: AI product pricing
+  title: Slack caps Slackbot AI at 15 messages a week on Business+, then bills Salesforce Flex Credits
+  who: Slack (Salesforce)
+  finding: 'Business+ members get 15 Slackbot messages a week (reset Monday); beyond that use draws on Salesforce Flex Credits through a connected Salesforce org; Enterprise+ has no weekly cap; Free and Pro get a trial only. A $45 per user per month Enterprise+ figure circulates but Slack routes Enterprise+ to sales, so it is not treated as a list price'
+  source: https://www.therevenueaireport.com/blog/slack-enterprise-plus-45-slackbot-flex-credits-order-form
+  related_source: https://markaicode.com/pricing/slack-ai-pricing/
+  digest: '2026-11-18'
+  verification_note: 'Direct page fetches were blocked in this run; details read from search-indexed text of secondary sources that cite Slack''s help center. The Nov 11 date comes from a third-party pricing tracker. Recheck against Slack''s help center at follow-up.'
+  last_checked: '2026-11-18'
+  follow_up_date: '2026-12-18'
+- case_id: salesforce-agentforce-coworker-2027
+  mechanism_codes: [usage-anxiety]
+  date: '2026-11-05'
+  kind: AI product pricing
+  title: Salesforce prices Agentforce Coworker as a $50 seat, with handed-off work billed in Flex Credits
+  who: Salesforce
+  finding: '$50 per user per month covers Coworker searches plus a pooled indexing allowance; work delegated to other agents bills on their terms in Flex Credits ($500 per 100,000, i.e. $0.005 each)'
+  source: https://ctol.digital/news/salesforce-agentforce-coworker-pricing-tier/
+  digest: '2026-11-17'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-17 suggestion (the matching b2b_pricing.yml row was filed on Nov 17); Salesforce''s own page not opened (fetch blocked).'
+  last_checked: '2026-11-18'
+  follow_up_date: '2026-12-17'
 - case_id: notion-credits-2026
   mechanism_codes: [mental-accounting, usage-anxiety]
   date: '2026-11-02'

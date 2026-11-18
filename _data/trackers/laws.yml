@@ -192,12 +192,12 @@
   scope: Card surcharges banned (cash discounts allowed); new unfair-trading law to follow
   carve_outs: null
   status: In force
-  status_note: Surcharge ban in force; unfair-trading law from July 2027
+  status_note: 'Surcharge ban in force; unfair-trading law from July 2027. Early price response: 17% of tracked cafes raised a small flat white by about 49c after Oct 1; the ACCC warns firms not to blame the ban for rises that reflect other costs (see pricing_evidence au-surcharge-ban-cafe-prices)'
   effective: 2026-10-01; unfair trading July 2027
   enforcement: null
   source: https://www.abc.net.au/news/2026-11-10/shoppers-warned-dodgy-discounts-black-friday-sales/107365588
   updated: '2026-11-10'
-  last_checked: '2026-11-15'
+  last_checked: '2026-11-18'
   follow_up_date: '2026-12-15'
 - case_id: null
   jurisdiction: India (aviation)

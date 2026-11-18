@@ -61,9 +61,13 @@
   lanes:
   - Primary documents instead of news
   - Outside the US/UK/EU
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
+  last_hunted: '2026-11-18'
+  hunt_count: 1
+  hunts:
+  - date: '2026-11-18'
+    agent: claude
+    outcome: miss
+    note: 'Searched post-Oct 1 Australian price data for merchants that had surcharged; found only raw before-and-after cafe data (17% of tracked cafes up about 49c, 79% unchanged; Hey You/Westpac about 1 in 10 up), filed as pricing_evidence au-surcharge-ban-cafe-prices. No matched panel and interchange caps fell the same day, so inconclusive and not evidence. Next hunt after 2026-12-02.'
   evidence_for: []
   evidence_against: []
   related_claim: null
@@ -372,9 +376,13 @@
   lanes:
   - Primary documents instead of news
   - B2B and enterprise pricing
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
+  last_hunted: '2026-11-18'
+  hunt_count: 1
+  hunts:
+  - date: '2026-11-18'
+    agent: claude
+    outcome: miss
+    note: 'Searched consumer surveys, complaints and seller responses as refunds are paid; found ProPublica''s Nov 16 finding that at least nine firms put refunds into bonuses (filed on tariff-refunds-2026) and a Groundwork/Data for Progress poll in which 72% of voters do not trust firms to cut prices after refunds. Neither compares named-cost with unspecified-cost rises, so no test of the prediction. Next hunt after 2026-12-02.'
   evidence_for: []
   evidence_against: []
   related_claim: null

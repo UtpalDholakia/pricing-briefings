@@ -70,3 +70,14 @@
   - LAUGFS Gas PLC
   first_seen: '2026-11-13'
   notes: 'Apologised for a shortage but defended a 35.7% cylinder price rise as break-even; Consumer Affairs Authority summons.'
+- firm_id: salesforce
+  name: Salesforce
+  sector: Enterprise software and AI agents
+  case_ids:
+  - salesforce-agentforce-coworker-2027
+  - slack-slackbot-cap-2026
+  aliases:
+  - Salesforce
+  - Slack (Salesforce)
+  first_seen: '2026-11-05'
+  notes: 'Seat prices with AI work metered in Flex Credits: Agentforce Coworker $50 seat; Slackbot capped at 15 messages a week on Business+ before credits.'

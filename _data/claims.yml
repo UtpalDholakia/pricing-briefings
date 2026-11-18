@@ -938,6 +938,9 @@
   - kind: tracker
     ref: sa-speaker-black-friday-2026
     note: Advertised saving built on a pre-sale price rise.
+  - kind: tracker
+    ref: deco-black-friday-2026
+    note: 'Portugal 2026: DECO found pre-sale price rises at four online retailers (FNAC earbuds EUR 199.99 in October, EUR 249.99 in the Black Friday campaign). Instances, not a share of offers, so it adds a second market but not a second measurement.'
   evidence_against: []
   related_questions: []
   related_dives: []

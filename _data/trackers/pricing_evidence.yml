@@ -1,4 +1,38 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: unit-rate-format-promotion-sensitivity
+  case_id: unit-rate-format-2026
+  date: '2026-11-01'
+  mechanism: Price salience from the direction of a unit rate (dollars per unit versus units per dollar)
+  mechanism_codes: [unit-price-processing, quantity-insensitivity]
+  comparison: Multiple-unit offers expressed as dollars per unit versus units per dollar, whether the rate is shown by the seller or computed by the shopper
+  design: Multiple studies (details not read)
+  setting: 'Journal of Marketing 90(6), November 2026, pp. 114-134 (Villanova & Bagchi; online first August 2025)'
+  outcome: Price and promotion sensitivity
+  result_kind: Context-dependent
+  result: 'Dollars-per-unit rates made consumers more sensitive to promotions than units-per-dollar rates, which the authors attribute to higher price salience; the paper also documents which rate shoppers compute when none is shown'
+  boundary: 'Abstract and press summary only; effect sizes, samples and categories not checked.'
+  source: https://journals.sagepub.com/doi/10.1177/00222429251375403
+  related_source: https://marketbusinessnews.com/why-the-way-unit-prices-are-shown-can-change-how-shoppers-judge-a-deal/456703/
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
+  digest: '2026-11-18'
+  agent: claude
+- id: au-surcharge-ban-cafe-prices
+  case_id: au-card-surcharge-ban-2026
+  date: '2026-11-02'
+  mechanism: Removing a partitioned card surcharge; whether the cost moves into the base price
+  mechanism_codes: [partitioned-pricing, motive-attribution]
+  comparison: Small flat white prices at the same cafes before and after the Oct 1, 2026 card-surcharge ban
+  design: Observational before-and-after tracker (self-selected cafes); a separate card-transaction analysis
+  setting: 'Australia; Small Flat White tracker (Chris Drake) and a Hey You / Westpac DataX analysis'
+  outcome: Share of cafes raising the price, and the size of the rise
+  result_kind: Inconclusive
+  result: 'Tracker: 17% of cafes raised the price (average 49c, about 10.7%), 79% did not change it, 4% cut it. Hey You / Westpac: about one cafe in ten raised coffee prices since the ban, nearly 40% of those by 50c or more'
+  boundary: 'Raw before-and-after; no matched control, and interchange caps fell on the same date. Rises far exceed a typical 1-2% surcharge and owners also cite milk, beans, wages and rent, so the ban is at most the occasion. Does not meet the test of surcharge-bans-shift-costs.'
+  source: https://www.thenewdaily.com.au/themoneyedition/cost-of-living/2026/11/02/coffee-prices-skyrocket-in-october-after-surcharge-ban
+  related_source: https://www.smartcompany.com.au/hospitality/coffee-prices-jump-50-cents-on-average-at-one-in-six-cafes-after-surcharge-ban/
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
+  digest: '2026-11-18'
+  agent: claude
 - id: "coupon-use-power-distance"
   case_id: "coupon-use-power-distance-2026"
   date: "2026-06-03"

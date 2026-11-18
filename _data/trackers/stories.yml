@@ -30,7 +30,7 @@
   next_milestone: FTC response to the senators' Nov 11 letter; Logitech class action (N.D. Cal.)
   milestone_date: null
   why_it_matters: A cost-based justification turned into an implied promise; tests whether consumers expect prices to fall when the cited cost is refunded
-  last_checked: '2026-11-17'
+  last_checked: '2026-11-18'
   follow_up_date: '2026-12-17'
   closed_date: null
   outcome_summary: null
@@ -44,6 +44,9 @@
   - date: '2026-11-11'
     note: Seven Senate Democrats ask the FTC to examine whether keeping refunds after tariff-justified price rises violates the FTC Act
     source: https://www.warren.senate.gov/newsroom/press-releases/warren-colleagues-urge-ftc-to-crack-down-on-corporations-pocketing-consumers-tariff-refunds/
+  - date: '2026-11-16'
+    note: 'ProPublica, from filings and earnings calls: at least nine listed firms put part of their refunds into executive or employee bonuses (TJX accrued $112M of a $331M refund on about $490M of tariffs paid; Acushnet $12M of $45M); Stanley Black & Decker''s 10-Q says its $298M refund gain was partly offset by variable incentive pay'
+    source: https://www.propublica.org/article/trump-tariff-refunds-corporate-bonuses
   digest: '2026-11-17'
   verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
 - case_id: ftc-6b-personalized-pricing-2026

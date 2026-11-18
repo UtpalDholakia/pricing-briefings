@@ -1,5 +1,23 @@
 # Tracker: explanations. How sellers explain price changes.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: xfinity-december-2026
+  mechanism_codes: [price-change-communication, dual-entitlement]
+  date: '2026-11-15'
+  firm: Comcast (Xfinity)
+  change: Bill-changes page says some prices rise starting in December 2026; no amounts, dates or services listed
+  explanation: To help cover rising costs and support continued investment in the network and services; customers on promotional rates or term agreements are unaffected until their term ends
+  category: Cost
+  reaction: null
+  outcome: Ongoing
+  outcome_note: 'Amounts not yet published as of Nov 15-18; check the page and customer notices in December'
+  outcome_date: null
+  magnitude_pct: null
+  source: https://www.xfinity.com/billchanges
+  related_source: https://www.modemguides.com/blogs/modemguides-blog/xfinity-price-increase
+  digest: '2026-11-18'
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
+  last_checked: '2026-11-18'
+  follow_up_date: '2026-12-10'
 - case_id: laugfs-lpg-2026
   mechanism_codes: [dual-entitlement, price-change-communication]
   date: '2026-11-14'
@@ -26,7 +44,7 @@
   change: Tariff-justified price increases kept in place after the tariffs were struck down and importers received refunds
   explanation: Increases were attributed to tariff costs; refunds go to the importer of record, not to buyers
   category: Cost
-  reaction: 'Seven Senate Democrats led by Sen. Warren asked the FTC (Nov 11) whether keeping refunds after raising prices on tariff grounds violates the FTC Act; class action against Logitech (Aug)'
+  reaction: 'Seven Senate Democrats led by Sen. Warren asked the FTC (Nov 11) whether keeping refunds after raising prices on tariff grounds violates the FTC Act; class action against Logitech (Aug); ProPublica (Nov 16) found at least nine listed firms putting part of their refunds into bonuses, e.g. TJX accruing $112M of a $331M refund; suits also filed against Walmart, Target, Nike, Lululemon and Stanley Black & Decker'
   outcome: Unknown
   outcome_note: 'Mixed: FedEx and UPS refunding through portals; Walmart, Costco and e.l.f. say they will cut prices instead; Home Depot reported no plan'
   outcome_date: null
@@ -35,7 +53,7 @@
   related_source: https://www.supplychainbrain.com/general-scm/regulation-compliance/article/16425536/ftc-urged-to-probe-companies-not-sharing-tariff-refunds-with-consumers
   digest: '2026-11-17'
   verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
-  last_checked: '2026-11-17'
+  last_checked: '2026-11-18'
   follow_up_date: '2026-12-17'
 - case_id: grocery-outlet-promotions-2026
   date: '2026-11-14'

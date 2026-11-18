@@ -1,5 +1,45 @@
 # Tracker: nonwestern_pricing. Pricing outside the US/UK/EU, preferably from local-language sources.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: ph-fuel-surcharge-2026
+  mechanism_codes: [partitioned-pricing, price-change-communication]
+  date: '2026-11-16'
+  country: Philippines
+  language: English (Philippine press)
+  firm_or_place: Civil Aeronautics Board (airline fuel surcharge matrix)
+  change: Passenger and cargo fuel surcharges on domestic and international flights cut from Level 17 (Nov 1-15) to Level 16 (Nov 16-30) as jet fuel prices fell
+  context: 'A regulator-set, fortnightly surcharge indexed to jet fuel; peso amounts for the new period not found (at Level 16 in Oct 16-31: P525-P1,535 domestic, P1,733.76-P12,891.29 international)'
+  source: https://tribune.net.ph/2026/11/18/cab-trims-fuel-surcharges-for-rest-of-november
+  related_source: https://www.gmanetwork.com/news/money/economy/1009898/fuel-surcharge-downgraded-to-level-16-for-november-16-30-2026-flights/story/
+  digest: '2026-11-18'
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
+  last_checked: '2026-11-18'
+  follow_up_date: '2026-12-18'
+- case_id: vodafone-idea-859-2026
+  date: '2026-11-16'
+  country: India
+  language: English (Indian tech press)
+  firm_or_place: Vodafone Idea (Vi)
+  change: Cheapest 84-day prepaid plan with 5G moves from Rs 859 to Rs 899 with benefits reported unchanged
+  context: Indian telecom repricing round (see airtel-299-2026)
+  source: https://turbo.gadgets360.com/en/telecom/vodafone-idea-vi-rs-859-prepaid-plan-price-hike-in-india-84-day-validity-benefits-12242528
+  digest: '2026-11-17'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-17 suggestion; Claude could not open the page (fetch blocked) and relies on Meta''s summary and search-indexed text.'
+  last_checked: '2026-11-18'
+  follow_up_date: '2026-12-18'
+- case_id: china-double-11-2026
+  date: '2026-11-11'
+  country: China
+  language: Chinese
+  firm_or_place: 11.11 shopping festival (Tmall, JD and others)
+  change: Third-party tally of festival GMV at RMB 1,776.4 billion for Oct 7-Nov 11; platforms did not publish their own totals
+  context: Extended festival window; see Meta AI's 2026-11-16 note on thinner vouchers over a longer window
+  source: https://longbridge.com/zh-HK/quote/JD.US/news/305290322
+  digest: '2026-11-17'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-17 suggestion; Claude could not open the page (fetch blocked). The GMV figure is a third-party estimate, not a platform disclosure.'
+  last_checked: '2026-11-18'
+  follow_up_date: '2026-12-18'
 - case_id: shoprime-black-friday-index-2026
   date: '2026-11-17'
   country: Brazil
