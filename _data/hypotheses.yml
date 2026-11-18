@@ -227,7 +227,7 @@
 - hypothesis_id: renewal-uplifts-destroy-value
   hypothesis: Enterprise renewal uplifts large enough to make a major customer sue and migrate destroy more revenue than the uplift adds.
   predicts: For the affected accounts, revenue lost to exits exceeds revenue gained from the uplift on retained accounts.
-  test: The Broadcom trial outcome (reportedly 2027) or another disclosure with cohort data. For the same cohort and horizon, compare incremental renewal revenue from retained accounts with revenue lost to exits (contribution after costs, not total retained revenue). The counter-prediction (shedding-customers-can-pay) is checked in the same hunt. A lawsuit or one departure does not settle the net effect.
+  test: The outcome of Tesco v Broadcom (UK High Court; trial not before November 2027) or another disclosure with cohort data; AT&T's suit settled in November 2024 with undisclosed terms, so it cannot test this. For the same cohort and horizon, compare incremental renewal revenue from retained accounts with revenue lost to exits (contribution after costs, not total retained revenue). The counter-prediction (shedding-customers-can-pay) is checked in the same hunt. A lawsuit or one departure does not settle the net effect.
   status: Testing
   confidence: Low
   lanes:

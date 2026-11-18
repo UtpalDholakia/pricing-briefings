@@ -86,6 +86,7 @@ These are for Meta AI or its Muse agent, which can browse the web, use connected
 > - **Lanes used today:** <lane 1>, <lane 2>, <lane 3>
 > - **Example queries:** <4–6 of the queries that produced results, in their original language>
 > - **Dead ends:** <1–3 searches that found nothing useful, so tomorrow's run can avoid or retry them>
+> - **Hypothesis hunt:** <one line per hypothesis hunted today, hit or miss: `<hypothesis_id>` — hit: <what you found, with its source> | `<hypothesis_id>` — miss: <what you searched>; next hunt after <date 14 days on>>
 >
 > ## Tracker suggestions
 >
@@ -110,6 +111,10 @@ These are for Meta AI or its Muse agent, which can browse the web, use connected
 ## Research additions (AI pricing database and deep dives)
 
 When a daily briefing finds an AI price, allowance, tier or credit change, suggest a `price_changes.yml` entry in "Tracker suggestions" (provider, product or model, `change_type` from AGENTS.md section 8, old → new value as the source states it, source URL, and the matching `case_id`). Don't edit `_data/ai_pricing/`. When you find a case or counter-case that a draft deep dive in `_cases/` is missing, especially a non-Western or consumer-voice case, say so in your briefing or add it under that draft's "Review notes"; don't edit the rest of the draft. You can also suggest Substack pipeline ideas there; Claude adds them. When a case bears on a claim in `_data/claims.yml` (listed at /claims/), add a line to Tracker suggestions: "Claim evidence, `<claim_id>`, for/against: <case and source>". Don't edit `claims.yml`; Claude files it (AGENTS.md section 12).
+
+## Hypothesis hunt (AGENTS.md section 13)
+
+Add this to Meta AI's daily task: "Before researching, read `_data/hypotheses.yml` (listed at /hypotheses/). After picking today's lanes, pick up to 2 hypotheses with `status: Testing` whose `lanes` include one of today's lanes, preferring the one hunted longest ago (`last_hunted: null` first). Skip any hypothesis that any agent hunted yesterday, and any whose last hunt was a miss less than 14 days ago. Ignore `Deferred` hypotheses; they are not hunted. Run searches aimed at each hypothesis's `predicts` and `test`, not only at today's lane queries. Under 'How this was found', add one 'Hypothesis hunt' line per hypothesis you hunted, including misses: `<hypothesis_id>` — hit: <what you found, with its source> or `<hypothesis_id>` — miss: <what you searched>; next hunt after <date 14 days on>. A hit must be directly on point (a study, or a case that is itself an instance of the prediction); a single social-media post is a lead, so report it as a miss with the lead noted. To propose a new hypothesis, add to Tracker suggestions: `Hypothesis proposal: <one sentence> — predicts: <observable result> — test: <how it would be checked> — lanes: <lanes>`; a proposal without a test is a question. Don't edit `hypotheses.yml` or `claims.yml`; Claude logs your hunts and files the evidence."
 
 ## If something goes wrong
 
