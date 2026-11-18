@@ -50,7 +50,7 @@
   claim: Sellers reverse a price rise at least partly when the backlash is public, attributable and covered beyond the seller's own channels.
   status: Contested
   confidence: Low
-  confidence_note: 'backlash.yml on 2026-11-17: 7 of 11 resolved cases reversed at least partly (6 Yes, 1 Partial, 4 No; 4 still Pending or Unknown). The tracker does not code whether backlash was public, attributable or widely covered, so the count does not test the condition; two widely covered cases held.'
+  confidence_note: 'backlash.yml on 2026-11-17: 7 of 11 resolved cases reversed at least partly. Widely covered historical cases filed 2026-11-18 (Amazon 2000, Coca-Cola 1999, Netflix 2011, Unity 2023, Instacart 2025) all reversed at least partly, but Netflix kept the price and Unity recovered the revenue through list prices; the tracker still does not code coverage, so the condition is untested.'
   mechanism_codes:
   - price-change-communication
   - motive-attribution
@@ -75,6 +75,21 @@
   - kind: evidence
     ref: wendys-dynamic-pricing-reversal-2024
     note: Dynamic-pricing plan walked back within days of press and political backlash; never implemented.
+  - kind: evidence
+    ref: amazon-dvd-random-price-test-2000
+    note: Message-board backlash; apology, refunds to 6,896 buyers and a lowest-price promise within weeks.
+  - kind: evidence
+    ref: unity-runtime-fee-reversal-2023
+    note: Developer boycott; fee narrowed in ten days and scrapped a year later, replaced by 8-25% seat rises.
+  - kind: evidence
+    ref: instacart-price-tests-ended-2025
+    note: Published consumer-group study; all item price tests ended within two weeks.
+  - kind: evidence
+    ref: coca-cola-temperature-vending-1999
+    note: Hostile coverage of a heat-based pricing plan; Coca-Cola said it would not introduce it.
+  - kind: evidence
+    ref: netflix-qwikster-price-rise-2011
+    note: Split reversed within a month of the apology; the price rise itself was kept, so a partial reversal.
   evidence_against:
   - kind: tracker
     ref: starlink-congestion-2026
@@ -95,9 +110,9 @@
   agent: claude
 - claim_id: cost-naming-reduces-backlash
   claim: Naming a specific cost in a price-rise explanation reduces backlash compared with an unspecified or market-based explanation.
-  status: Open
+  status: Contested
   confidence: Low
-  confidence_note: Leans against. The only direct test in the repo, a field experiment, found market justifications cut attrition and cost justifications did not; whether its cost condition named a specific cost is unconfirmed. No evidence for yet; tariff refunds suggest a named cost may also bind the seller later.
+  confidence_note: 'Proposed Contested (awaiting Utpal). Lab and vignette studies for; one field experiment and two attribution studies against or bounding. Likely boundary: naming a cost helps when buyers see it as outside the seller''s control.'
   mechanism_codes:
   - dual-entitlement
   - motive-attribution
@@ -127,6 +142,12 @@
   - kind: tracker
     ref: sam-fender-tour-2026
     note: 'Anecdote, not a comparison: a cost-tracking explanation still met fan backlash; prices partly reversed.'
+  - kind: evidence
+    ref: vaidyanathan-aggarwal-attribution-fairness-2003
+    note: 'Experiments: cost-justified rises judged less fair when the cost was within the seller''s control or rivals held prices; naming a cost is not enough.'
+  - kind: evidence
+    ref: bolton-warlop-alba-price-unfairness-2003
+    note: 'Experiments: cueing sellers'' costs improved fairness judgments only modestly.'
   related_questions:
   - tariff-refund-expectations-2026
   related_dives: []
@@ -145,12 +166,19 @@
     source: https://utpaldholakia.github.io/pricing-briefings/claims/#cost-naming-reduces-backlash
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-18'
+    old_status: Open
+    new_status: Contested
+    reason: 'Proposed after the 2026-11-18 backfill and Claude''s sweep: vignette and lab studies find cost justifications raise fairness, while the one field test found cost justifications did not cut attrition, and attribution studies show a named cost helps only when it is outside the seller''s control (Vaidyanathan & Aggarwal 2003) and cost cues help only modestly (Bolton, Warlop & Alba 2003).'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
   agent: claude
 - claim_id: credits-obscure-true-price
   claim: When a vendor prices in credits rather than currency, buyers underestimate what they pay, because the vendor sets the exchange rate.
-  status: Open
+  status: Contested
   confidence: Low
-  confidence_note: The repo has cases where the exchange rate changed (allowances, credit draw-down rules) but no measurement of whether buyers misjudged what they paid; churn data and the per-job reversal suggest buyers notice and prefer metered units. The draft deep dive was removed from the evidence on 2026-11-17 (an argument for the claim is not evidence for it) and stays under related dives.
+  confidence_note: Proposed Contested (awaiting Utpal). Studies of intermediate currencies find distortion; a disclosed-rate null and AI-product field cases point the other way. No study yet measures whether AI-credit buyers misjudge spend.
   mechanism_codes:
   - mental-accounting
   - usage-anxiety
@@ -172,6 +200,9 @@
   - kind: evidence
     ref: numerosity-virtual-item-price-salience-2021
     note: 'Direction flips with exchange-rate salience: high numbers feel dearer when the rate is hidden, cheaper when shown.'
+  - kind: evidence
+    ref: hsee-medium-maximization-points-2003
+    note: 'Lab: an intermediate medium (points) distorts choice toward more points over better outcomes; mechanism, not misjudged spend.'
   evidence_against:
   - kind: tracker
     ref: openai-per-job-pricing-2026
@@ -193,12 +224,19 @@
     source: https://utpaldholakia.github.io/pricing-briefings/cases/2026-12-credits-as-a-currency/
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-18'
+    old_status: Open
+    new_status: Contested
+    reason: 'Proposed after the 2026-11-18 backfill and Claude''s sweep: lab and incentivised studies show intermediate currencies shift willingness to pay and choice (incl. Hsee et al. 2003), but with rates disclosed one study found no effect and field cases suggest buyers notice credit changes.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
   agent: claude
 - claim_id: small-surcharge-partitioning-helps
   claim: Showing a surcharge separately from the base price raises purchase intention only while the surcharge is small relative to the base price.
-  status: Open
+  status: Contested
   confidence: Low
-  confidence_note: 'One experiment supports the size boundary. Restaurant fee backlash (earls-admin-fee-2026, uca-terraza-fees-2026) was removed as counter-evidence on 2026-11-17: those fees were revealed late (drip pricing), which does not test an upfront partitioned price against an all-in one. A field comparison of upfront partitioned and all-in prices is needed.'
+  confidence_note: Proposed Contested (awaiting Utpal). Lab evidence for the size boundary; one study finds a trivial unexpected surcharge hurts. Still no field comparison of upfront partitioned vs all-in prices.
   mechanism_codes:
   - partitioned-pricing
   - drip-pricing
@@ -239,6 +277,13 @@
     new_status: Open
     reason: 'Review before confirmation: the two restaurant cases are drip pricing (fees revealed late), not tests of upfront partitioning, so they were removed as counter-evidence; one study for is not enough for Supported.'
     source: https://utpaldholakia.github.io/pricing-briefings/claims/#small-surcharge-partitioning-helps
+    proposed_by: claude
+    confirmed_by: null
+  - date: '2026-11-18'
+    old_status: Open
+    new_status: Contested
+    reason: 'Proposed after the 2026-11-18 backfill: partitioning studies support a size boundary (Morwitz 1998, Sheng 2007), while Lee et al. (2026) found even a trivial surcharge on a complimentary item cut fairness.'
+    source: null
     proposed_by: claude
     confirmed_by: null
   agent: claude
@@ -430,6 +475,9 @@
   - kind: evidence
     ref: india-ecommerce-prior-price-rule-2026
     note: 'India''s rule defines the legitimate ''prior price'' as the 30-day low from 2027: regulatory recognition of hike-then-discount.'
+  - kind: evidence
+    ref: samr-singles-day-raise-then-discount-fines-2020
+    note: 'China 2020: complaints about pre-festival hikes led to maximum fines for JD, Tmall and Vipshop; shows detection, not lost sales.'
   evidence_against: []
   related_questions: []
   related_dives: []
@@ -482,7 +530,7 @@
   claim: An apology for a price rise reduces backlash only when paired with a concession or restraint, not on its own.
   status: Open
   confidence: Low
-  confidence_note: Two cases, both consistent with the claim; neither isolates the apology from other differences between them.
+  confidence_note: 'Lean for. Two tracker cases plus three cases filed 2026-11-18 (Netflix 2011: apology without restraint, backlash continued; Amazon 2000 and Unity 2023: apology with concessions, backlash eased). None isolates the apology from the concession.'
   mechanism_codes:
   - price-change-communication
   - motive-attribution
@@ -505,6 +553,15 @@
   - kind: evidence
     ref: customer-rage-apology-compensation-2013
     note: Satisfaction 37% with money alone vs 74% with money plus apology; observational survey.
+  - kind: evidence
+    ref: netflix-qwikster-price-rise-2011
+    note: Apology that kept the price and added a split did not stop the backlash; about 800,000 US subscribers lost.
+  - kind: evidence
+    ref: amazon-dvd-random-price-test-2000
+    note: Apology paired with refunds and a binding lowest-price rule; the issue faded.
+  - kind: evidence
+    ref: unity-runtime-fee-reversal-2023
+    note: First apology without changes drew more anger; the revision with concessions calmed it.
   evidence_against: []
   related_questions: []
   related_dives: []
@@ -632,7 +689,7 @@
   claim: Once buyers notice account-level price differences, perceived unfairness spreads quickly beyond the first noticers.
   status: Open
   confidence: Low
-  confidence_note: One case with screenshot comparisons; no time series of how far it spread.
+  confidence_note: Lean for. Cases now include Amazon 2000 and Instacart 2025, where buyers compared prices side by side and the story went national within days; one experiment rates between-buyer differences least fair. Still no time series of spread, and one study finds algorithm-set differences drew less word of mouth.
   mechanism_codes:
   - personalization-fairness
   - reference-price
@@ -646,6 +703,15 @@
   - kind: evidence
     ref: bambauer-sachse-dynamic-pricing-nwom
     note: Dynamic pricing raised confusion, unfairness and intentions to spread negative word of mouth; intentions, not speed.
+  - kind: evidence
+    ref: amazon-dvd-random-price-test-2000
+    note: Buyers compared prices on message boards and suspected personal pricing although the test was random.
+  - kind: evidence
+    ref: instacart-price-tests-ended-2025
+    note: Coordinated side-by-side carts showed gaps up to 23%; national coverage within days.
+  - kind: evidence
+    ref: haws-bearden-dynamic-pricing-fairness-2006
+    note: 'Experiments: price differences between buyers rated least fair of four kinds of difference.'
   evidence_against:
   - kind: evidence
     ref: wang-algorithmic-pricing-nwom
@@ -783,7 +849,7 @@
   claim: A smaller pack at the same price draws less backlash than an equal per-unit price rise.
   status: Open
   confidence: Low
-  confidence_note: 'Lean against: evidence so far is only against (most consumers notice stealth hikes; a shrunk pack drew backlash), with no direct comparison.'
+  confidence_note: 'Evidence splits by outcome. Purchase response favours the claim (Gourville, Cakir, Grigolon, Janssen & Kasinger 2026, Kim 2024: sales fall about half as much for a size cut). Fairness once noticed runs against it (Evangelidis 2024: five preregistered experiments find downsizing judged less fair than an equal price rise; Macromill: 90% notice). Suggest Utpal reword before any verdict, e.g. split into ''loses fewer sales'' (would be Supported) and ''draws less backlash once known'' (would be Refuted on current evidence).'
   mechanism_codes:
   - quantity-insensitivity
   test: A matched pair of products, one shrunk and one repriced by the same per-unit amount, comparing complaints and sales.
@@ -802,6 +868,12 @@
   - kind: evidence
     ref: snir-levy-shrinking-goods-2011
     note: 'Model plus data: consumers attend to price, not quantity, so firms shrink instead; working paper.'
+  - kind: evidence
+    ref: janssen-kasinger-shrinkflation-demand-2026
+    note: 'US scanner data 2010-20: sales fall 0.56% per 1% size cut vs 1.19% per 1% price rise; purchase response, not backlash.'
+  - kind: evidence
+    ref: kim-downsizing-preference-korea-milk-2024
+    note: 'Korean milk 2018-19: demand strongly preferred downsizing to equal package-price rises, even when publicised, and did not fade.'
   evidence_against:
   - kind: tracker
     ref: macromill-stealth-hikes-2026
@@ -809,6 +881,9 @@
   - kind: tracker
     ref: mtg-nauctis-collector-booster-2026
     note: Collector Booster cut from 15 to 12 cards at an unchanged $26.99; community backlash.
+  - kind: evidence
+    ref: evangelidis-shrinkflation-aversion-2024
+    note: 'Five preregistered experiments: once known, downsizing judged less fair than an equal price rise because it reads as deceptive; disclosure removes most of the gap.'
   related_questions: []
   related_dives: []
   status_history:
@@ -824,7 +899,7 @@
   claim: When a price point cannot move (₹5, ₹10), cost pressure shows up as smaller packs rather than higher prices.
   status: Open
   confidence: Medium
-  confidence_note: One strong field instance with market data; Supported needs a second kind of evidence or market.
+  confidence_note: One strong field instance with market data. Studies filed 2026-11-18 show prices at price points are unusually rigid (Levy et al. 2011; Knotek 2011), which supports the premise but not the shrink itself. Supported needs a second market showing the shrink.
   mechanism_codes:
   - quantity-insensitivity
   - left-digit
@@ -838,6 +913,12 @@
   - kind: evidence
     ref: businessline-india-five-rupee-pack-2026
     note: Named ₹5/₹10 packs shrunk (e.g. Good Day 100 g to ~90 g) while price points held; trade press.
+  - kind: evidence
+    ref: levy-price-points-rigidity-2011
+    note: 'Scanner and online data: prices at 9-endings change less often and in bigger jumps; shows the rigidity, not the shrink.'
+  - kind: evidence
+    ref: knotek-convenient-prices-rigidity-2011
+    note: Convenient cash prices are concentrated among unusually sticky prices; rigidity, not the shrink.
   evidence_against: []
   related_questions:
   - protect-price-endings-2026
@@ -1027,9 +1108,9 @@
   agent: claude
 - claim_id: most-black-friday-deals-not-discounts
   claim: Most advertised Black Friday "deals" are not discounts against the product's own price history.
-  status: Open
+  status: Contested
   confidence: Medium
-  confidence_note: One market-year measured against price histories, plus one inflated-reference instance; a second market or year is needed.
+  confidence_note: 'Proposed Contested (awaiting Utpal). The verdict turns on the benchmark: against a year or 90 days most deals are not discounts; against 30 days or the prior month most are, but small. Consider splitting the claim by benchmark.'
   mechanism_codes:
   - reference-price
   - transaction-utility
@@ -1055,7 +1136,13 @@
   - kind: evidence
     ref: checkbook-fake-discounts-2025
     note: 'US, 25 chains over 24 weeks: most ''sale'' prices are fake discounts. Everyday sales, not Black Friday.'
-  evidence_against: []
+  evidence_against:
+  - kind: evidence
+    ref: eu-cpc-black-friday-sweep-2025
+    note: 'EU sweep of 314 shops (2025): about 30% used irregular discounts against the 30-day lowest-price rule, so most did not.'
+  - kind: evidence
+    ref: idealo-black-friday-price-study-2024
+    note: 'Germany 2024 (second-hand): 73% of products cheaper than in October, but only 7% on average, and 59% cheaper on another November day.'
   related_questions: []
   related_dives: []
   status_history:
@@ -1063,6 +1150,13 @@
     old_status: null
     new_status: Open
     reason: 'Seeded from Muse''s 48-candidate list under Spec F. Re-judged at seeding: the Meta briefing pointer was replaced by the newly filed tracker case shoprime-black-friday-index-2026.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  - date: '2026-11-18'
+    old_status: Open
+    new_status: Contested
+    reason: 'Proposed after Claude''s 2026-11-18 sweep. Studies against a long price history (Which?, Groundwork) find most deals no cheaper than earlier lows; checks against a 30-day or prior-month benchmark (EU 2025 sweep: about 30% irregular; Idealo Germany 2024: 73% cheaper than October) find most are real but small discounts. Credible evidence on both sides; the split is about the benchmark.'
     source: null
     proposed_by: claude
     confirmed_by: null
@@ -1213,7 +1307,7 @@
   claim: A price rise for new customers only still draws backlash from existing customers who are insulated from it.
   status: Open
   confidence: Low
-  confidence_note: One case; a second new-customers-only rise is needed.
+  confidence_note: 'Lean for. One field case plus studies of the mirror image (deals for newcomers anger loyal customers: Feinberg et al. 2002; Anderson & Simester 2010). A second new-customers-only rise is needed.'
   mechanism_codes:
   - motive-attribution
   - social-norms
@@ -1230,6 +1324,9 @@
   - kind: evidence
     ref: anderson-simester-price-antagonism-2010
     note: '28-month field experiment: customers who saw others get a lower price bought less afterwards. Reverse direction (discount for others, not a rise).'
+  - kind: evidence
+    ref: feinberg-betrayal-targeted-promotions-2002
+    note: 'Experiments: loyal customers liked their firm less when it gave switchers a deal (betrayal). A deal for newcomers, not a rise for newcomers.'
   evidence_against: []
   related_questions:
   - new-customer-only-rise-backlash-2026
@@ -1315,9 +1412,9 @@
   agent: meta
 - claim_id: early-tuition-announcement-sells-certainty
   claim: Announcing tuition early sells certainty itself, and changes enrolment behaviour in the announcer's favour.
-  status: Open
-  confidence: Low
-  confidence_note: One early announcement, with the university's own report of strong early applications and deposits; no comparison with later announcers.
+  status: Supported
+  confidence: Medium
+  confidence_note: 'Proposed Supported (awaiting Utpal), Medium. One strong RCT (bundled with personalised outreach, so certainty is not fully isolated), one DiD abstract and two university cases. Delaney & Kearney (2016) show the cost side: guarantees came with higher fees.'
   mechanism_codes:
   - price-change-communication
   - reference-price
@@ -1331,6 +1428,12 @@
   - kind: evidence
     ref: cornell-save-your-seat-2026
     note: Early personalised aid estimates; nearly a fifth of the class committed after one. Aid estimate, not tuition; no control.
+  - kind: evidence
+    ref: dynarski-hail-early-tuition-promise-2021
+    note: 'RCT: an early guaranteed free-tuition promise with no extra aid raised application 26% to 68% and enrolment 12% to 27%; bundled with personalised outreach.'
+  - kind: evidence
+    ref: coulibaly-asirvatham-truth-in-tuition-enrollment-2024
+    note: 'DiD: Illinois''s four-year tuition guarantee raised freshman enrolment; abstract only.'
   evidence_against: []
   related_questions: []
   related_dives: []
@@ -1339,6 +1442,13 @@
     old_status: null
     new_status: Open
     reason: 'Seeded from Muse''s 48-candidate list under Spec F. Re-judged at seeding: fsu-tuition-2026 dropped as evidence (a contrast case, not an instance); the Meta briefing pointer was replaced by the newly filed case wvu-early-tuition-2026.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  - date: '2026-11-18'
+    old_status: Open
+    new_status: Supported
+    reason: 'Proposed after Claude''s 2026-11-18 sweep: a randomised field experiment (Dynarski et al. 2021, AER) found an early guaranteed tuition promise with no extra aid more than doubled application and enrolment; a DiD study found Illinois''s tuition guarantee raised freshman enrolment; plus the WVU and Cornell field cases. Two kinds of evidence, none against.'
     source: null
     proposed_by: claude
     confirmed_by: null
@@ -1410,9 +1520,9 @@
   agent: meta
 - claim_id: surcharges-persist-after-cost-falls
   claim: Named B2B surcharges often persist after the cost that justified them falls, kept or raised rather than removed.
-  status: Open
+  status: Contested
   confidence: Low
-  confidence_note: Carrier-by-carrier follow-through in one shock plus one persistence study; persistence is documented for months, permanence and margin capture are not.
+  confidence_note: Proposed Contested (awaiting Utpal). Persistence is documented for discretionary surcharges (shipping EFS, war-risk premiums, Virgin YQ); surcharges tied to a published index or a regulator's rule fell with the cost. Consider narrowing to surcharges without an index.
   mechanism_codes:
   - partitioned-pricing
   test: Invoice-level surcharge data for named carriers over a full cycle after the cost falls.
@@ -1428,7 +1538,13 @@
   - kind: evidence
     ref: cannon-watanabe-asymmetric-fuel-passthrough-2025
     note: Airlines keep prices when fuel falls and absorb more of rises; total prices, not a named surcharge.
-  evidence_against: []
+  - kind: evidence
+    ref: airline-fuel-surcharges-after-oil-fall-2015
+    note: Discretionary YQ (Virgin, GBP 143 London-New York) stayed after a 70% fuel fall; Qantas folded its surcharge into higher base fares.
+  evidence_against:
+  - kind: evidence
+    ref: airline-fuel-surcharges-after-oil-fall-2015
+    note: Index-linked surcharges (ANA, JAL; Korea by rule) fell to zero as fuel fell. Persistence looks limited to surcharges without a formula.
   related_questions: []
   related_dives: []
   status_history:
@@ -1436,6 +1552,13 @@
     old_status: null
     new_status: Open
     reason: 'Graduated from hypothesis surcharges-outlive-their-cost: Muse''s 2026-11-18 evidence backfill found evidence directly on point (checked and filed by Claude). Proposed for Utpal''s confirmation.'
+    source: null
+    proposed_by: claude
+    confirmed_by: null
+  - date: '2026-11-18'
+    old_status: Open
+    new_status: Contested
+    reason: 'Proposed after Claude''s 2026-11-18 sweep: after the 2014-15 fuel fall, index-linked airline fuel surcharges (ANA, JAL, Korea by rule) fell to zero, while discretionary ones (Virgin YQ) stayed or were folded into base fares. Credible evidence on both sides.'
     source: null
     proposed_by: claude
     confirmed_by: null

@@ -22,6 +22,9 @@
   - kind: evidence
     ref: stangl-cost-structure-appeals-fairness-2026
     note: 'Adjacent: naming staff (customer-facing) costs beat overheads; tests alignability, not labour vs material.'
+  - kind: evidence
+    ref: vaidyanathan-aggarwal-attribution-fairness-2003
+    note: 'Mechanism only: costs seen as outside the seller''s control are judged fairer; whether buyers see wages that way is untested.'
   evidence_against: []
   related_claim: null
   related_questions: []
@@ -52,6 +55,9 @@
   - kind: evidence
     ref: hufnagel-personalized-pricing-backlash
     note: 'Indirect: even favoured customers reject personalised pricing, so judgment is not set by the median beneficiary.'
+  - kind: evidence
+    ref: instacart-price-tests-ended-2025
+    note: 'Coverage led with the largest gap (up to 23%), not the typical one. Weak: no measure of how the public judged it.'
   evidence_against: []
   related_claim: null
   related_questions:
@@ -104,6 +110,9 @@
   - kind: evidence
     ref: raghubir-three-faces-promotions-2004
     note: 'Framework: irregular intervals blur perceived deal frequency; promotions shape store price reputation. Propositions, not a test.'
+  - kind: evidence
+    ref: sheehan-hamilton-chellappa-hilo-price-image-2022
+    note: 'Six experiments: judged one store at a time, a few deep cuts beat many shallow ones for price image. Depth vs frequency, not irregular vs scheduled.'
   evidence_against: []
   related_claim: null
   related_questions:
@@ -171,6 +180,9 @@
   - kind: evidence
     ref: cashless-effect-meta-analysis-2024
     note: 'Bound: the cashless spending effect is small and shrinking; payment features did not moderate it.'
+  - kind: evidence
+    ref: prelec-simester-credit-card-wtp-2001
+    note: 'Real auction: card payers bid about twice cash payers (second-hand figure). Card vs cash, not biometric vs manual.'
   evidence_against: []
   related_claim: null
   related_questions:
@@ -202,6 +214,12 @@
   - kind: evidence
     ref: selling-subscriptions-card-replacement-2025
     note: Forced re-enrolment (card replacement) sharply raised cancellations; inertia worth ~87% of revenue. Not a designed tier choice.
+  - kind: evidence
+    ref: ascarza-proactive-churn-plan-recommendations-2016
+    note: 'Field RCT: prompting customers to review their plan raised churn from 6% to 10%. A recommendation, not a forced tier choice.'
+  - kind: evidence
+    ref: ofcom-mobile-end-of-contract-notifications-2024
+    note: 'UK mobile: end-of-contract notices had small, mixed effects, slightly negative for switching; best-tariff notices +2 points re-contracting. Weak.'
   related_claim: null
   related_questions: []
   created: '2026-11-17'
@@ -332,6 +350,9 @@
   - kind: evidence
     ref: nersa-solar-tariff-consultation-2026
     note: NERSA's draft moves network costs to per-connection charges; Eskom fixed charge proposed +23%. Decision due 26 Nov 2026.
+  - kind: evidence
+    ref: california-nem-cost-shift-dispute-2024
+    note: California regulator's advocate puts the 2024 shift at $8.5bn; a solar-industry-funded rebuttal claims a $1.5bn saving. Estimates, not outcomes.
   evidence_against: []
   related_claim: null
   related_questions: []
@@ -364,6 +385,9 @@
   - kind: evidence
     ref: bain-per-seat-pricing-not-dead-2025
     note: 'Bound: none of 30+ established vendors had fully moved to usage or outcome pricing; most layered a meter on seats.'
+  - kind: evidence
+    ref: lambrecht-skiera-tariff-choice-biases-2006
+    note: 'Consumer internet: flat-rate bias common and not churn-raising; wrongly chosen pay-per-use raised churn. Old consumer setting, not AI seats.'
   related_claim: null
   related_questions: []
   from_claim: metering-beats-seats-for-ai
@@ -401,6 +425,15 @@
   - kind: evidence
     ref: bundeskartellamt-paypal-surcharge-2026
     note: 'German regulator: under PayPal''s no-surcharge rule, costs fall on all customers through general prices; preliminary.'
+  - kind: evidence
+    ref: uk-card-surcharge-ban-just-eat-service-charge-2018
+    note: 'UK 2018: Just Eat swapped a 50p card fee for a 50p fee on all orders; others renamed card fees.'
+  - kind: evidence
+    ref: delaney-kearney-guaranteed-tuition-fees-2016
+    note: 'Illinois tuition freeze: required fees and out-of-state tuition rose. A price freeze, by analogy.'
+  - kind: evidence
+    ref: fca-gipp-price-walking-ban-evaluation-2025
+    note: 'UK insurance: ban on renewal prices above new-customer prices closed the gap mainly by raising new-customer prices. By analogy.'
   evidence_against: []
   related_claim: null
   related_questions: []

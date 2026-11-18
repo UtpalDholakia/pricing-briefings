@@ -1,4 +1,548 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: janssen-kasinger-shrinkflation-demand-2026
+  date: 2026-01
+  mechanism: Shoppers track the shelf price more closely than the pack size, so a size cut at a steady price loses fewer sales than an equal per-unit price rise.
+  mechanism_codes:
+  - quantity-insensitivity
+  - unit-price-processing
+  comparison: 1% package-size decrease vs 1% price increase, same products (demand elasticities)
+  design: scanner-data demand estimation (NielsenIQ, US grocery, 2010-2020)
+  setting: US retail grocery, leading brands across many categories
+  outcome: unit sales (purchase response); prevalence of downsizing vs upsizing
+  result_kind: Positive in this setting
+  result: About 1.92% of products were downsized, and downsizing was more than five times as common as upsizing by sales. A 1% price rise cut sales by about 1.19%; a 1% size cut reduced sales by only about 0.56%.
+  boundary: Measures purchase response, not complaints or fairness judgments; shoppers in the data mostly did not know of the change. Says nothing about backlash once a downsizing is publicised.
+  source: https://doi.org/10.1287/mksc.2024.0948
+  related_source: https://www.informs.org/News-Room/INFORMS-Releases/News-Releases/Consumers-Don-t-Realize-How-Much-Shrinkflation-Is-Costing-Them
+  verification_note: Found and read via web search on 2026-11-18; Tilburg repository abstract and EBSCO abstract (elasticities) read; Marketing Science 45(1):142-158, CC BY. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: evangelidis-shrinkflation-aversion-2024
+  date: 2024-03
+  mechanism: Downsizing is read as concealment, so once people know about it they judge it less fair than a transparent price rise of the same per-unit size.
+  mechanism_codes:
+  - quantity-insensitivity
+  - dual-entitlement
+  - motive-attribution
+  comparison: product downsizing vs equivalent price increase (same per-unit price change)
+  design: five preregistered online experiments
+  setting: consumer scenarios; firm facing or not facing cost increases
+  outcome: perceived fairness
+  result_kind: Negative in this setting
+  result: Most people judged a cost-driven price rise fair, but that pattern weakened or reversed for an equivalent downsizing, so more people saw downsizing as unfair. The aversion ran mainly through perceived deception; it shrank when the firm disclosed the size cut and depended on whether costs had risen.
+  boundary: Scenario judgments by informed participants, not purchases; the opposite direction to scanner studies is about a different outcome (fairness when known vs sales when unnoticed).
+  source: https://doi.org/10.1287/mksc.2023.0269
+  related_source: https://merit.url.edu/ws/portalfiles/portal/46733960/Shrinkflation_Aversion.pdf
+  verification_note: Found and read via web search on 2026-11-18; abstract read on the INFORMS ePDF page and the author's repository PDF; Marketing Science 43(2):280-288. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: kim-downsizing-preference-korea-milk-2024
+  date: 2024-01
+  mechanism: Even fully informed buyers respond less to a smaller carton than to a dearer carton with the same unit-price change, and the gap does not fade.
+  mechanism_codes:
+  - quantity-insensitivity
+  - unit-price-processing
+  comparison: manufacturers that downsized vs those that raised package prices after the same 2018 cost rise
+  design: natural experiment, demand estimation on sales data, plus a theoretical model
+  setting: South Korean milk market, Jan 2018-Dec 2019
+  outcome: demand (purchase response) over time
+  result_kind: Positive in this setting
+  result: Consumers strongly preferred downsizing to package price increases with the same unit-price effect, and the preference did not diminish over the period studied.
+  boundary: One category in one country; measures demand, not complaints. The milk downsizing was publicised, so it is a case where buyers knew, unlike most scanner studies.
+  source: https://doi.org/10.1111/jems.12548
+  related_source: https://econpapers.repec.org/RePEc:bla:jemstr:v:33:y:2024:i:1:p:25-52
+  verification_note: Found and read via web search on 2026-11-18; EconPapers abstract and vLex first page read; Journal of Economics & Management Strategy 33(1):25-52. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: feinberg-betrayal-targeted-promotions-2002
+  date: 2002-08
+  mechanism: Loyal customers judge a firm by what others are offered, so a deal for switchers reads as a penalty on loyalty (the 'betrayal' effect).
+  mechanism_codes:
+  - personalization-fairness
+  - social-norms
+  comparison: firm offers a lower price to switchers (new customers) vs not; also rival rewards its own loyal customers
+  design: game-theoretic model plus behavioural experiments
+  setting: targeted promotions; student and consumer scenarios
+  outcome: preference for the favoured firm; switching
+  result_kind: Positive in this setting
+  result: Loyal customers liked their favoured firm less when it offered a promotion to switchers (betrayal) or when a rival rewarded its own loyal customers (jealousy); the authors conclude firms would often do better targeting loyal customers.
+  boundary: Deals for newcomers rather than price rises for newcomers; experiments, not field outcomes.
+  source: https://doi.org/10.1509/jmkr.39.3.277.19108
+  related_source: https://news.umich.edu/?p=4556
+  verification_note: Found and read via web search on 2026-11-18; abstract and University of Michigan release read; JMR 39(3):277-291. Effect sizes not checked against the full text. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: fca-gipp-price-walking-ban-evaluation-2025
+  date: 2025-07
+  mechanism: 'Banning renewal prices above the new-customer price removes the teaser discount rather than the margin: firms close the gap mostly by raising new-customer prices.'
+  mechanism_codes:
+  - subscription-inertia
+  - personalization-fairness
+  comparison: UK home and motor insurance prices before vs after the Jan 2022 ban on price walking
+  design: regulator ex-post evaluation with econometric causal analysis
+  setting: UK home and motor insurance
+  outcome: renewal and new-business prices, the gap between them, attrition
+  result_kind: Context-dependent
+  result: 'Home: renewal prices flat (about GBP 272 before and after), new-business prices up from GBP 176.64 to GBP 222.36, gap halved; no significant causal price effect. Motor: renewal up GBP 22.71, new business up GBP 111.14; remedy associated with an average fall of GBP 6.63 per policy. Attrition moved about one point.'
+  boundary: Nominal prices in a period of high claims inflation; attrition is a proxy for switching. A ban on a pricing practice, not a surcharge ban.
+  source: https://www.fca.org.uk/publication/corporate/ep25-2.pdf
+  verification_note: Found and read via web search on 2026-11-18; FCA Evaluation Paper 25/2 PDF opened and figures read (first 100,000 characters). Link checked at filing.
+  digest: '2026-11-18'
+  agent: claude
+- id: ofcom-mobile-end-of-contract-notifications-2024
+  date: '2024-05-10'
+  mechanism: Telling customers that their contract is ending, or what the best tariff is, prompts some to re-contract or switch rather than drift onto out-of-contract prices.
+  mechanism_codes:
+  - subscription-inertia
+  - price-change-communication
+  comparison: customers before vs after mandatory end-of-contract notifications (ECNs); with vs without annual best tariff notifications (ABTNs)
+  design: 'regulator ex-post evaluation: regression discontinuity (ECNs) and fixed-effects regressions (ABTNs)'
+  setting: UK mobile providers (EE, O2, Three, Plusnet, Tesco, Sky Mobile)
+  outcome: re-contracting and switching rates
+  result_kind: Context-dependent
+  result: 'ABTNs raised re-contracting by about 2 percentage points and switching by under 1 point. ECN effects were small and mixed: positive for Plusnet and Three, negative for EE (about -8.6 points) and O2; overall slightly negative for switching.'
+  boundary: Rollout coincided with COVID-19 lockdowns; same-month effects only for ABTNs. Notifications prompt a choice but do not force one.
+  source: https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-2-6-weeks/130197-helping-consumers-get-better-deals-on-their-broadband/ex-post-evaluation/ex-post-evaulation-ecn-2024.pdf
+  verification_note: Found and read via web search on 2026-11-18; Ofcom PDF opened and findings read. Link checked at filing.
+  digest: '2026-11-18'
+  agent: claude
+- id: ascarza-proactive-churn-plan-recommendations-2016
+  date: 2016-02
+  mechanism: Prompting customers to review their plan breaks inertia, so some review the market and leave instead of switching plans.
+  mechanism_codes:
+  - subscription-inertia
+  comparison: customers sent a cost-minimising plan recommendation vs control customers not contacted
+  design: randomised field experiment (about 65,000 customers)
+  setting: South American wireless carrier
+  outcome: churn in the three months after the intervention
+  result_kind: Negative in this setting
+  result: Churn was 10% in the treatment group vs 6% in the control. The authors attribute the rise to lower inertia and greater salience of past usage among likely churners.
+  boundary: A plan recommendation, not a forced choice at renewal and not a price rise; one carrier and market.
+  source: https://doi.org/10.1509/jmr.13.0483
+  related_source: https://business.columbia.edu/faculty/research/perils-proactive-churn-prevention-using-plan-recommendations-evidence-field
+  verification_note: Found and read via web search on 2026-11-18; Columbia abstract and author PDF first page read; JMR 53(1):46-60. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: lambrecht-skiera-tariff-choice-biases-2006
+  date: 2006-05
+  mechanism: Many users choose a flat rate even when pay-per-use would cost less (insurance against bill variation); those who wrongly choose pay-per-use are the ones who churn.
+  mechanism_codes:
+  - usage-anxiety
+  - mental-accounting
+  comparison: customers on flat-rate vs pay-per-use tariffs, relative to their cost-minimising tariff
+  design: four empirical analyses on three data sets (billing data plus surveys)
+  setting: Internet access tariffs; three data sets of billing records and surveys
+  outcome: tariff-choice bias, churn, profit
+  result_kind: Positive in this setting
+  result: Flat-rate bias was more common and more persistent than pay-per-use bias and did not significantly raise churn; pay-per-use bias, driven by underestimating usage, raised churn enough to offset its short-run profit.
+  boundary: Consumer internet tariffs in the 2000s; seats for AI products differ (the buyer is a firm, usage is by agents).
+  source: https://www.anderson.ucla.edu/documents/areas/fac/marketing/paying_too_much.pdf
+  related_source: https://dro.deakin.edu.au/articles/journal_contribution/Paying_too_much_and_being_happy_about_it_existence_causes_and_consequences_of_tariff-choice_biases/20844079
+  verification_note: Found and read via web search on 2026-11-18; UCLA-hosted PDF first page and Deakin abstract read; JMR 43(2):212-223. Link not re-checked at filing (institutional host).
+  digest: '2026-11-18'
+  agent: claude
+- id: amazon-dvd-random-price-test-2000
+  date: '2000-09-27'
+  mechanism: Buyers who compare notes online see different prices for the same item as unfair, whatever the reason, and the story spreads beyond those affected.
+  mechanism_codes:
+  - personalization-fairness
+  - price-change-communication
+  comparison: random 20-40% discounts on 68 DVD titles for five days vs the standard price
+  design: field case (company statement and press coverage)
+  setting: Amazon.com DVD store, US, September 2000
+  outcome: customer complaints, company response
+  result_kind: Positive in this setting
+  result: Customers comparing prices on message boards suspected personal pricing; Amazon apologised, called even a random test a mistake, refunded 6,896 customers an average of $3.10, and promised to give every buyer the lowest test price in any future test.
+  boundary: One firm, one product line, pre-social-media; the test was random, not personal, which did not stop the backlash.
+  source: https://press.aboutamazon.com/2000/9/amazon-com-issues-statement-regarding-random-price-testing
+  related_source: https://money.cnn.com/2000/09/28/technology/amazon/
+  verification_note: Found and read via web search on 2026-11-18; Amazon press release text and CNNMoney report seen in search results. Link not re-checked at filing.
+  digest: '2026-11-18'
+  agent: claude
+- id: netflix-qwikster-price-rise-2011
+  date: '2011-10-24'
+  mechanism: An apology that keeps the price rise and adds a new inconvenience reads as no concession, so backlash continues.
+  mechanism_codes:
+  - price-change-communication
+  - bundling
+  comparison: Netflix's July 2011 unbundling (up to 60% rise for DVD+streaming) with a September apology that kept the price vs the October reversal of the Qwikster split
+  design: field case (company statements, quarterly results, press)
+  setting: Netflix US subscribers, July-October 2011
+  outcome: subscriber numbers, reversal
+  result_kind: Positive in this setting
+  result: Hastings apologised on 18 September but kept the price rise and announced a separate DVD service; on 10 October Netflix dropped the split but not the price. Netflix lost about 800,000 US subscribers in the quarter (24.6m to 23.8m).
+  boundary: The apology, the price rise and the service split arrived together, so their effects cannot be separated; one firm.
+  source: https://content.time.com/time/specials/packages/article/0,28804,2101344_2100509_2100510,00.html
+  related_source: https://www.manufacturing.net/home/news/13228950/netflix-gets-back-on-track-after-rough-2011
+  verification_note: Found and read via web search on 2026-11-18; Time and AP timeline (via Manufacturing.net) seen in search results; subscriber figures also in Time Techland. Link not re-checked at filing.
+  digest: '2026-11-18'
+  agent: claude
+- id: unity-runtime-fee-reversal-2023
+  date: '2023-09-22'
+  mechanism: A per-install fee applied to already-built games read as a retroactive rule change; public developer revolt forced a partial and then full reversal, with the revenue sought later through list-price rises.
+  mechanism_codes:
+  - price-change-communication
+  - dual-entitlement
+  comparison: Unity's 12 Sept 2023 per-install runtime fee vs its 22 Sept revision and its Sept 2024 cancellation
+  design: field case (company statements and trade press)
+  setting: Unity game engine developers, global, 2023-2024
+  outcome: reversal and replacement pricing
+  result_kind: Positive in this setting
+  result: After boycotts of Unity Ads, Unity apologised on 17 Sept, exempted Unity Personal and limited the fee to future engine versions on 22 Sept, then scrapped the fee in Sept 2024 while raising Unity Pro seats 8% (to $2,200 a year) and Enterprise 25%.
+  boundary: One platform with organised, vocal B2B users; the revenue goal was kept through a different mechanism.
+  source: https://www.theregister.com/2024/09/12/unity_cancel_runtime_fees/
+  related_source: https://www.theregister.com/2023/09/22/unity_apologizes_announces_revised_runtime/
+  verification_note: Found and read via web search on 2026-11-18; The Register (2023 and 2024), Engadget and Windows Central seen in search results. Link not re-checked at filing.
+  digest: '2026-11-18'
+  agent: claude
+- id: coca-cola-temperature-vending-1999
+  date: '1999-10-28'
+  mechanism: A demand-based price rise described as automatic and fair to the seller reads as exploiting buyers' need; a rival's public criticism amplified it.
+  mechanism_codes:
+  - dual-entitlement
+  - algorithm-attribution
+  comparison: Coca-Cola's reported plan for vending machines that raise prices in hot weather vs its later statement that it would not introduce them
+  design: field case (press coverage)
+  setting: Coca-Cola, global, October 1999
+  outcome: public reaction, company retreat
+  result_kind: Positive in this setting
+  result: After Ivester's interview in Veja was reported, Pepsi called heat-based pricing exploitative and press reaction was hostile; Coca-Cola said it would not introduce machines that charge more in hot weather.
+  boundary: A stated plan, not a live price; the share-price effect cannot be separated from Coca-Cola's other troubles that year.
+  source: https://money.cnn.com/1999/10/27/companies/coke/
+  related_source: https://www.uvm.edu/~awoolf/classes/spring2006/ec20/variable%20price%20coke%20machine%20NYT.htm
+  verification_note: Found and read via web search on 2026-11-18; CNNfn report, NYT text (course copy) and SCMP seen in search results. Link not re-checked at filing.
+  digest: '2026-11-18'
+  agent: claude
+- id: instacart-price-tests-ended-2025
+  date: '2025-12-22'
+  mechanism: Side-by-side evidence that two people pay different prices for the same item at the same moment is easy to share, and the largest gap becomes the story.
+  mechanism_codes:
+  - personalization-fairness
+  - algorithm-attribution
+  comparison: Instacart item price tests (different prices for the same item, store and time) vs their termination after a published study
+  design: field case (consumer-group experiment with 437 volunteers, then company response)
+  setting: Instacart, four US cities, December 2025
+  outcome: price variation found; company reversal
+  result_kind: Positive in this setting
+  result: The Consumer Reports, Groundwork and More Perfect Union study (9 Dec) found about three in four items offered at multiple prices, with gaps up to 23% (one 20-item basket ranged from $114.34 to $123.93). On 22 Dec Instacart ended all item price tests.
+  boundary: Instacart said the tests were random, not personal; advocacy groups ran the study; no measure of customer loss.
+  source: https://www.pbs.org/newshour/nation/instacart-ends-program-where-users-see-different-prices-for-the-same-item-at-same-store
+  related_source: https://www.folio3.ai/ai-pulse/instacart-halts-ai-price-testing-consumer-backlash-regulatory-scrutiny
+  verification_note: Found and read via web search on 2026-11-18; AP (via PBS), Fortune and LA Times seen in search results; the 437-volunteer and $114.34-$123.93 figures are from a secondary summary (folio3). Link not re-checked at filing.
+  digest: '2026-11-18'
+  agent: claude
+- id: haws-bearden-dynamic-pricing-fairness-2006
+  date: 2006-12
+  mechanism: People judge a price against what others paid and how it was set; differences between buyers and over short intervals feel least fair.
+  mechanism_codes:
+  - personalization-fairness
+  - reference-price
+  comparison: seller-, consumer-, time- and auction-based price differences
+  design: three experiments
+  setting: US consumers, online purchase scenarios
+  outcome: perceived price fairness, satisfaction
+  result_kind: Positive in this setting
+  result: Price differences between consumers drew the lowest fairness ratings; changes within short periods were judged less fair than over longer ones; taking part in setting the price (auctions) raised fairness and satisfaction.
+  boundary: Scenarios; does not test how fast unfairness spreads or a 'personal price' label.
+  source: https://doi.org/10.1086/508435
+  related_source: https://phys.org/news/2006-10-ripped-dynamic-pricing-affects-perceptions.html
+  verification_note: Found and read via web search on 2026-11-18; EconPapers abstract and University of Chicago Press release read; JCR 33(3):304-311. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: bolton-warlop-alba-price-unfairness-2003
+  date: 2003-03
+  mechanism: Buyers underestimate inflation and ignore most seller costs, so they attribute price gaps to profit; pointing to costs helps only a little.
+  mechanism_codes:
+  - dual-entitlement
+  - motive-attribution
+  - reference-price
+  comparison: judged fair price vs actual price; with vs without corrective information (price history, explanations, cost cues)
+  design: series of experiments
+  setting: US consumers, retail goods and services
+  outcome: perceived fairness; fair-price estimates
+  result_kind: Context-dependent
+  result: Consumers thought selling prices were well above fair prices, underestimated inflation, over-attributed price differences to profit and ignored costs other than goods sold. Price history, explanations and cost cues were only modestly effective.
+  boundary: Price levels and differences, not announced rises; tests generic cost cues, not naming one specific cost.
+  source: https://doi.org/10.1086/346244
+  related_source: https://econpapers.repec.org/RePEc:oup:jconrs:v:29:y:2003:i:4:p:474-91
+  verification_note: Found and read via web search on 2026-11-18; EconPapers abstract and Wharton summary read; JCR 29(4):474-491. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: vaidyanathan-aggarwal-attribution-fairness-2003
+  date: 2003-06
+  mechanism: A cost justification helps only when the cost is outside the seller's control; a cost the seller caused, or a rise rivals did not match, reads as volitional.
+  mechanism_codes:
+  - dual-entitlement
+  - motive-attribution
+  comparison: cost-justified price rises varying locus (internal vs external) and controllability
+  design: three experiments
+  setting: US consumer scenarios
+  outcome: perceived fairness of the price increase
+  result_kind: Context-dependent
+  result: Even cost-justified rises were judged less fair when the cause was internal to the seller or within its control, for example when competitors held prices or the cost rise stemmed from the seller's own actions.
+  boundary: Scenarios; tests attribution of a named cost, not named vs unnamed costs.
+  source: https://doi.org/10.1016/S0148-2963(01)00231-4
+  related_source: https://experts.umn.edu/en/publications/who-is-the-fairest-of-them-all-an-attributional-approach-to-price/
+  verification_note: Found and read via web search on 2026-11-18; University of Minnesota abstract read; Journal of Business Research 56(6):453-463. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: hsee-medium-maximization-points-2003
+  date: 2003-06
+  mechanism: An intermediate currency (points) gets valued for itself, so people pick the option with more points even when its real outcome is worse.
+  mechanism_codes:
+  - mental-accounting
+  comparison: choice between effort-reward options with vs without an intermediate medium (points)
+  design: lab experiments
+  setting: students choosing tasks for rewards (e.g. ice cream)
+  outcome: choice of option
+  result_kind: Positive in this setting
+  result: Adding points shifted choices toward the option that earned more points but a less preferred outcome; the medium created illusions of advantage, certainty or linearity.
+  boundary: Points as rewards for effort, not credits bought with money; does not measure misjudged spend.
+  source: https://doi.org/10.1086/374702
+  related_source: https://repository.ceibs.edu/en/publications/medium-maximization
+  verification_note: Found and read via web search on 2026-11-18; CEIBS repository abstract and AcaWiki summary read; JCR 30(1):1-14. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: sheehan-hamilton-chellappa-hilo-price-image-2022
+  date: 2022-12
+  mechanism: Judged one store at a time, shoppers compare prices on the shelf, so a few deep cuts signal low prices better than many small ones.
+  mechanism_codes:
+  - reference-price
+  - context-effects
+  comparison: depth strategy (infrequent deep price advantages) vs frequency strategy (frequent shallow ones), stores evaluated separately vs side by side
+  design: six experiments
+  setting: grocery national brands; one study with televisions
+  outcome: store price image
+  result_kind: Context-dependent
+  result: 'When stores were evaluated one at a time, many earlier findings reversed: the depth store tended to get the lower price image. Earlier work showing a frequency advantage used simultaneous cross-store comparison.'
+  boundary: Depth vs frequency, not irregular vs scheduled timing; lab price image, not sales.
+  source: https://doi.org/10.1093/jcr/ucac005
+  related_source: https://econpapers.repec.org/RePEc:oup:jconrs:v:49:y:2022:i:4:p:543-560.
+  verification_note: Found and read via web search on 2026-11-18; EconPapers and UKY abstracts and Emory summary read; JCR 49(4):543-560. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: levy-price-points-rigidity-2011
+  date: 2011-11
+  mechanism: Sellers keep prices at 9-endings, so prices at a price point change less often and by larger jumps.
+  mechanism_codes:
+  - left-digit
+  comparison: 9-ending vs non-9-ending prices
+  design: analysis of weekly scanner data and Internet price data
+  setting: US supermarket chain and online retailers
+  outcome: frequency and size of price changes
+  result_kind: Positive in this setting
+  result: 9 was the most common ending at every digit; the most common changes kept the 9-ending; 9-ending prices were less likely to change and changed by more when they did.
+  boundary: Shows rigidity at price points, not what sellers do instead (pack sizes are not studied).
+  source: https://doi.org/10.1162/REST_a_00178
+  related_source: https://experts.umn.edu/en/publications/price-points-and-price-rigidity/
+  verification_note: Found and read via web search on 2026-11-18; University of Minnesota abstract read; Review of Economics and Statistics 93(4):1417-1431. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: knotek-convenient-prices-rigidity-2011
+  date: 2011-08
+  mechanism: Where a quick cash transaction matters, sellers set prices that need few coins, and those prices are unusually sticky.
+  mechanism_codes:
+  - left-digit
+  comparison: goods sold at convenient (round, few-coin) prices vs other goods
+  design: cross-sectional analysis of a new price data set; earlier time series of newspaper cover prices (Knotek 2008)
+  setting: US goods and services typically bought with cash
+  outcome: use of convenient prices; price rigidity
+  result_kind: Positive in this setting
+  result: Convenient prices were used where fast transactions matter and were concentrated among goods with above-average price rigidity.
+  boundary: US cash settings; does not show what happens to quantity when costs rise.
+  source: https://doi.org/10.1162/REST_a_00124
+  related_source: https://econpapers.repec.org/RePEc:eee:moneco:v:55:y:2008:i:7:p:1303-1316
+  verification_note: Found and read via web search on 2026-11-18; EconPapers abstracts of the 2011 REStat and 2008 JME papers read. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: dynarski-hail-early-tuition-promise-2021
+  date: 2021-06
+  mechanism: A guaranteed, unconditional tuition promise made before application removes uncertainty, so students who would have received the same aid anyway apply and enrol far more often.
+  mechanism_codes:
+  - price-change-communication
+  comparison: students mailed an early free-tuition guarantee (HAIL) vs control students eligible for the same expected aid
+  design: randomised field experiment
+  setting: University of Michigan, high-achieving low-income Michigan students
+  outcome: application and enrolment rates
+  result_kind: Positive in this setting
+  result: The offer raised application from 26% to 68% and enrolment from 12% to 27%, without increasing aid, and with no diversion from equally selective colleges.
+  boundary: The treatment bundled the guarantee with personalised mailings to students, parents and schools; a free-tuition promise, not an early announcement of a tuition level.
+  source: https://doi.org/10.1257/aer.20200451
+  related_source: https://www.nber.org/papers/w25349.pdf
+  verification_note: Found and read via web search on 2026-11-18; AER abstract (68% vs 26%; 27% vs 12%) and NBER working paper abstract read; AER 111(6):1721-56. The working paper reports 67% for application. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: delaney-kearney-guaranteed-tuition-fees-2016
+  date: 2016-09
+  mechanism: When a law freezes tuition for each entering cohort, institutions raise the frozen price up front and move revenue into fees and out-of-state tuition.
+  mechanism_codes:
+  - partitioned-pricing
+  comparison: Illinois public universities under the 2004 Truth-in-Tuition law vs public universities elsewhere
+  design: difference-in-differences on institution panel data, 2000-2012
+  setting: US public four-year institutions
+  outcome: tuition levels, required fees, out-of-state tuition and enrolment
+  result_kind: Positive in this setting
+  result: After the law, required fees and out-of-state tuition rose significantly at covered institutions; the authors' companion study found larger tuition increases; out-of-state enrolment numbers did not change significantly.
+  boundary: One state's law; effects on students' decisions are not measured here.
+  source: https://doi.org/10.1080/00221546.2016.11777420
+  related_source: https://news.illinois.edu/guaranteed-tuition-laws-inflating-college-costs-study-finds/
+  verification_note: Found and read via web search on 2026-11-18; Journal of Higher Education abstract and University of Illinois release read; the release's 50% fee figure for doctoral universities differs from the abstract's out-of-state enrolment result, so only the abstract is used. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: coulibaly-asirvatham-truth-in-tuition-enrollment-2024
+  date: '2024'
+  mechanism: Price certainty for four years makes a public university more attractive to incoming students.
+  mechanism_codes:
+  - price-change-communication
+  comparison: Illinois universities after Truth-in-Tuition vs other Midwestern states, using staggered policy timing
+  design: difference-in-differences with state and time fixed effects
+  setting: Midwestern US public universities
+  outcome: first-year, minority and total enrolment
+  result_kind: Positive in this setting
+  result: The policy increased freshman enrolment but had no significant effect on minority enrolment.
+  boundary: Abstract only; a guarantee mandated by law, not a university choosing to announce early.
+  source: https://www.emerald.com/insight/content/doi/10.1108/IJCED-02-2024-0009/full/html
+  verification_note: Found and read via web search on 2026-11-18; Emerald abstract read (International Journal of Comparative Education and Development); full text not accessed. Link not re-checked at filing.
+  digest: '2026-11-18'
+  agent: claude
+- id: uk-card-surcharge-ban-just-eat-service-charge-2018
+  date: '2018-01-13'
+  mechanism: When a named surcharge is banned, the seller relabels it as a general fee charged to everyone.
+  mechanism_codes:
+  - partitioned-pricing
+  - drip-pricing
+  comparison: Just Eat's 50p card-payment surcharge before the UK ban (13 Jan 2018) vs its new 50p service charge on all orders
+  design: field case (press and consumer-group reports)
+  setting: UK takeaway platform; UK card surcharge ban under PSD2
+  outcome: fee structure
+  result_kind: Positive in this setting
+  result: Days before the ban, Just Eat replaced its 50p card fee with a 50p service charge on every order, cash or card; Which? and a Consumer Intelligence survey reported other firms renaming card fees as booking or administration fees.
+  boundary: Instances, not a measured share of firms; the company said it had already been reviewing charges.
+  source: https://www.which.co.uk/news/article/rip-off-card-surcharges-to-end-azxeM4O5lOpP
+  related_source: https://www.ashfords.co.uk/insights/articles/payment-surcharges-banned-in-the-uk
+  verification_note: Found and read via web search on 2026-11-18; Which?, ITV, Ashfords and lovemoney seen in search results. Link not re-checked at filing.
+  digest: '2026-11-18'
+  agent: claude
+- id: bolt-jonker-renselaar-debit-surcharge-2010
+  date: 2010-08
+  mechanism: 'A small surcharge steers payment choice: where retailers surcharge debit cards, customers use cash more.'
+  mechanism_codes:
+  - partitioned-pricing
+  - pain-of-paying
+  comparison: retailers that surcharge debit card payments vs those that do not
+  design: survey data analysis
+  setting: Netherlands retail, where no-surcharge rules are prohibited
+  outcome: debit card payment share
+  result_kind: Positive in this setting
+  result: Surcharging explained about half the difference in debit card payment shares across retailers; removing surcharges could save more than EUR 50 million in the long run.
+  boundary: Shows what surcharges do, not what a ban shifts; Dutch surcharging later almost disappeared without a ban.
+  source: https://econpapers.repec.org/RePEc:eee:jbfina:v:34:y:2010:i:8:p:1738-1744
+  verification_note: Found and read via web search on 2026-11-18; EconPapers and EconBiz abstracts read; Journal of Banking & Finance 34(8):1738-1744. Link not re-checked at filing.
+  digest: '2026-11-18'
+  agent: claude
+- id: airline-fuel-surcharges-after-oil-fall-2015
+  date: '2016-01-19'
+  mechanism: Surcharges tied to a published fuel index fall with the index; discretionary surcharges stay or are folded into a higher base fare.
+  mechanism_codes:
+  - partitioned-pricing
+  - dual-entitlement
+  comparison: index-linked fuel surcharges (Japan, South Korea) vs discretionary ones (e.g. UK transatlantic YQ) after jet fuel fell about 70% in 2014-15
+  design: field cases (airline announcements and press)
+  setting: international airlines, 2014-2016
+  outcome: surcharge level; base fares
+  result_kind: Context-dependent
+  result: ANA and JAL, whose surcharge table drops to zero below a fuel threshold, cut and then planned to scrap surcharges; Korea's government rule removed them on Korea-origin flights. Qantas dropped its surcharge but raised base fares; Virgin Atlantic still charged GBP 143 YQ on a London-New York return.
+  boundary: Instances from press reports, not a systematic sample; base-fare changes reflect competition as well as fuel.
+  source: https://www.japantimes.co.jp/news/2016/01/19/business/japanese-airlines-cut-fuel-surcharges-oil-prices-slump/
+  related_source: https://www.travelpulse.com/news/airlines-airports/more-airlines-dropping-fuel-surcharges
+  verification_note: Found and read via web search on 2026-11-18; Japan Times, Gulf News (Bloomberg), TravelPulse, TradeArabia and Daily Telegraph (via PressReader) seen in search results. Link not re-checked at filing.
+  digest: '2026-11-18'
+  agent: claude
+- id: samr-singles-day-raise-then-discount-fines-2020
+  date: '2020-12-30'
+  mechanism: Sellers raise prices before a festival so the festival discount looks larger; buyers who notice complain.
+  mechanism_codes:
+  - reference-price
+  comparison: prices days before Singles' Day promotions vs the advertised 'discounted' prices
+  design: regulatory case (consumer complaints, fines)
+  setting: JD.com, Tmall and Vipshop, China, Nov 2020
+  outcome: regulatory fines
+  result_kind: Positive in this setting
+  result: SAMR fined each platform 500,000 yuan, the legal maximum, after complaints that prices were raised before discounts; one JD 'discount' price was 10 yuan above the previous day's price.
+  boundary: Shows the practice and complaints, not that the discounts failed to sell.
+  source: https://www.scmp.com/tech/policy/article/3115891/china-fines-tmall-jd-and-vipshop-price-irregularities-beijings-latest
+  related_source: https://www.caixinglobal.com/2020-12-31/jdcom-alibabas-tmall-and-vipshop-fined-for-manipulative-pricing-101645539.html
+  verification_note: Found and read via web search on 2026-11-18; SCMP, China Daily, Caixin and Global Times seen in search results. Link not re-checked at filing.
+  digest: '2026-11-18'
+  agent: claude
+- id: eu-cpc-black-friday-sweep-2025
+  date: 2026-03
+  mechanism: EU law requires a discount to be measured against the lowest price of the prior 30 days, which limits fake reference prices.
+  mechanism_codes:
+  - reference-price
+  comparison: Black Friday and Cyber Monday discounts vs the EU 30-day lowest-price rule
+  design: regulatory sweep (not representative)
+  setting: 314 online shops and apps in 23 EU states plus Iceland and Norway, Nov-Dec 2025
+  outcome: share of traders with irregular discounts
+  result_kind: Context-dependent
+  result: About 30% of traders checked applied irregular or inflated discounts; others used misleading countdown timers or late fees.
+  boundary: Sweep targets suspect traders and measures compliance with a 30-day rule, not discounts against a longer price history.
+  source: https://heise.de/-11226422
+  related_source: https://en.ilsole24ore.com/art/black-friday-and-cyber-monday-eu-investigation-reveals-irregular-discounts-and-deceptive-practices-AI0gLXPC
+  verification_note: Found and read via web search on 2026-11-18; heise and Il Sole 24 Ore summaries seen in search results; the Commission's own release not opened. Link not re-checked at filing.
+  digest: '2026-11-18'
+  agent: claude
+- id: idealo-black-friday-price-study-2024
+  date: 2024-12
+  mechanism: Black Friday prices are usually below the prior month but often not the month's lowest.
+  mechanism_codes:
+  - reference-price
+  comparison: Black Friday 2024 prices vs October prices and vs other November days
+  design: price-comparison-site analysis (over 10,000 products)
+  setting: Germany, 100 most popular Black Friday categories
+  outcome: share of products cheaper; average saving
+  result_kind: Context-dependent
+  result: 73% of products were cheaper on Black Friday than in October, but by only 7% on average; 59% were cheaper on at least one other November day.
+  boundary: Second-hand figures; benchmark is the prior month, not a year-long history.
+  source: https://www.echo24.de/welt/black-friday-echte-schnaeppchen-oder-nur-show-im-schnitt-sparen-sie-prozent-zr-94536813.html
+  related_source: https://xpert.digital/en/black-friday-and-the-great-discount-lie/
+  verification_note: Found and read via web search on 2026-11-18; figures from two secondary reports (echo24, xpert.digital) citing Idealo; Idealo's own release not opened. Link not re-checked at filing.
+  digest: '2026-11-18'
+  agent: claude
+- id: prelec-simester-credit-card-wtp-2001
+  date: 2001-02
+  mechanism: Paying by card weakens the link between buying and paying, so willingness to pay rises.
+  mechanism_codes:
+  - pain-of-paying
+  comparison: sealed-bid auction winners told to pay by credit card vs by cash
+  design: field auction experiment with real transactions
+  setting: MIT students bidding on sold-out Celtics and Red Sox tickets
+  outcome: bids (willingness to pay)
+  result_kind: Positive in this setting
+  result: Credit-card bidders bid roughly twice as much as cash bidders for the same tickets.
+  boundary: Credit card vs cash, not one-tap biometric approval vs manual checkout; small sample.
+  source: https://doi.org/10.1023/A:1008196717017
+  related_source: https://www.canr.msu.edu/news/beware_the_credit_card_premium
+  verification_note: Found and read via web search on 2026-11-18; bibliographic record (Marketing Letters 12(1):5-12) and secondary summaries seen; the 'about double' figure is from secondary sources, not the paper itself. Link not re-checked at filing (persistent identifier).
+  digest: '2026-11-18'
+  agent: claude
+- id: california-nem-cost-shift-dispute-2024
+  date: 2024-08
+  mechanism: Net metering credits rooftop exports at retail rates, so grid fixed costs fall on non-solar customers, if avoided costs are smaller than the credits.
+  mechanism_codes:
+  - dual-entitlement
+  comparison: CPUC Public Advocates Office cost-shift estimate vs a solar-industry-funded rebuttal
+  design: dueling accounting estimates
+  setting: California's three large investor-owned utilities, 2024
+  outcome: estimated annual cost to non-solar customers
+  result_kind: Inconclusive
+  result: The Public Advocates Office put the cost to non-solar customers at about $8.5 billion in 2024, up from $3.4 billion in 2021; M.Cubed, funded by the solar trade association, argued rooftop solar saved non-solar customers about $1.5 billion.
+  boundary: Both are accounting estimates resting on contested avoided-cost assumptions; neither is a measured outcome.
+  source: https://publicadvocatesa.cpuc.ca.gov/press-room/reports-and-analyses/nem-cost-shift-methodology-fact-sheet-2024
+  related_source: https://www.canarymedia.com/articles/solar/californias-rooftop-solar-debate-is-raging-again
+  verification_note: Found and read via web search on 2026-11-18; Public Advocates Office fact sheet title and IVN, Canary Media and ILSR coverage seen in search results; spreadsheets not opened. Link not re-checked at filing.
+  digest: '2026-11-18'
+  agent: claude
 - id: morwitz-partitioned-prices-1998
   date: 1998-11
   mechanism: Consumers anchor on the base price and under-process the surcharge, so a partitioned price is recalled as cheaper than the same all-in total.

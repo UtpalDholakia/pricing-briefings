@@ -674,3 +674,248 @@
   - anderson-simester-price-antagonism-2010
   added: '2026-11-18'
   agent: meta
+- bib_id: janssen-kasinger-2026
+  citation: Janssen & Kasinger (2026), "Shrinkflation and Consumer Demand", *Marketing Science* 45(1)
+  url: https://doi.org/10.1287/mksc.2024.0948
+  evidence_ids:
+  - janssen-kasinger-shrinkflation-demand-2026
+  added: '2026-11-18'
+  agent: claude
+- bib_id: evangelidis-2024
+  citation: 'Evangelidis (2024), "Frontiers: Shrinkflation Aversion", *Marketing Science* 43(2)'
+  url: https://doi.org/10.1287/mksc.2023.0269
+  evidence_ids:
+  - evangelidis-shrinkflation-aversion-2024
+  added: '2026-11-18'
+  agent: claude
+- bib_id: kim-2024
+  citation: Kim (2024), "Consumers' preference for downsizing over package price increases", *JEMS* 33(1)
+  url: https://doi.org/10.1111/jems.12548
+  evidence_ids:
+  - kim-downsizing-preference-korea-milk-2024
+  added: '2026-11-18'
+  agent: claude
+- bib_id: feinberg-krishna-zhang-2002
+  citation: Feinberg, Krishna & Zhang (2002), "Do We Care What Others Get?", *JMR* 39(3)
+  url: https://doi.org/10.1509/jmkr.39.3.277.19108
+  evidence_ids:
+  - feinberg-betrayal-targeted-promotions-2002
+  added: '2026-11-18'
+  agent: claude
+- bib_id: fca-2025
+  citation: 'FCA (July 2025), Evaluation Paper 25/2: General Insurance Pricing Practices remedies'
+  url: https://www.fca.org.uk/publication/corporate/ep25-2.pdf
+  evidence_ids:
+  - fca-gipp-price-walking-ban-evaluation-2025
+  added: '2026-11-18'
+  agent: claude
+- bib_id: ofcom-2024
+  citation: Ofcom (10 May 2024), ex-post evaluation of mobile annual best tariff and end-of-contract notifications
+  url: https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-2-6-weeks/130197-helping-consumers-get-better-deals-on-their-broadband/ex-post-evaluation/ex-post-evaulation-ecn-2024.pdf
+  evidence_ids:
+  - ofcom-mobile-end-of-contract-notifications-2024
+  added: '2026-11-18'
+  agent: claude
+- bib_id: ascarza-iyengar-schleicher-2016
+  citation: Ascarza, Iyengar & Schleicher (2016), "The Perils of Proactive Churn Prevention Using Plan Recommendations", *JMR* 53(1)
+  url: https://doi.org/10.1509/jmr.13.0483
+  evidence_ids:
+  - ascarza-proactive-churn-plan-recommendations-2016
+  added: '2026-11-18'
+  agent: claude
+- bib_id: lambrecht-skiera-2006
+  citation: Lambrecht & Skiera (2006), "Paying Too Much and Being Happy About It", *JMR* 43(2)
+  url: https://www.anderson.ucla.edu/documents/areas/fac/marketing/paying_too_much.pdf
+  evidence_ids:
+  - lambrecht-skiera-tariff-choice-biases-2006
+  added: '2026-11-18'
+  agent: claude
+- bib_id: amazon-2000
+  citation: Amazon.com (27 Sep 2000), statement regarding random price testing
+  url: https://press.aboutamazon.com/2000/9/amazon-com-issues-statement-regarding-random-price-testing
+  evidence_ids:
+  - amazon-dvd-random-price-test-2000
+  added: '2026-11-18'
+  agent: claude
+- bib_id: time-2011
+  citation: Time (Dec 2011), Reed Hastings entry, Top 10 apologies; AP timeline via Manufacturing.net
+  url: https://content.time.com/time/specials/packages/article/0,28804,2101344_2100509_2100510,00.html
+  evidence_ids:
+  - netflix-qwikster-price-rise-2011
+  added: '2026-11-18'
+  agent: claude
+- bib_id: the-register-2024
+  citation: The Register (12 Sep 2024), "Unity cancels runtime fees"; (22 Sep 2023) revised runtime fee
+  url: https://www.theregister.com/2024/09/12/unity_cancel_runtime_fees/
+  evidence_ids:
+  - unity-runtime-fee-reversal-2023
+  added: '2026-11-18'
+  agent: claude
+- bib_id: cnnfn-1999
+  citation: CNNfn (27 Oct 1999), "Coke price rises with heat"
+  url: https://money.cnn.com/1999/10/27/companies/coke/
+  evidence_ids:
+  - coca-cola-temperature-vending-1999
+  added: '2026-11-18'
+  agent: claude
+- bib_id: ap-2025
+  citation: Associated Press via PBS (22 Dec 2025), "Instacart ends program where users see different prices for the same item"
+  url: https://www.pbs.org/newshour/nation/instacart-ends-program-where-users-see-different-prices-for-the-same-item-at-same-store
+  evidence_ids:
+  - instacart-price-tests-ended-2025
+  added: '2026-11-18'
+  agent: claude
+- bib_id: haws-bearden-2006
+  citation: Haws & Bearden (2006), "Dynamic Pricing and Consumer Fairness Perceptions", *JCR* 33(3)
+  url: https://doi.org/10.1086/508435
+  evidence_ids:
+  - haws-bearden-dynamic-pricing-fairness-2006
+  added: '2026-11-18'
+  agent: claude
+- bib_id: bolton-warlop-alba-2003
+  citation: Bolton, Warlop & Alba (2003), "Consumer Perceptions of Price (Un)Fairness", *JCR* 29(4)
+  url: https://doi.org/10.1086/346244
+  evidence_ids:
+  - bolton-warlop-alba-price-unfairness-2003
+  added: '2026-11-18'
+  agent: claude
+- bib_id: vaidyanathan-aggarwal-2003
+  citation: Vaidyanathan & Aggarwal (2003), "Who is the fairest of them all?", *JBR* 56(6)
+  url: https://doi.org/10.1016/S0148-2963(01)00231-4
+  evidence_ids:
+  - vaidyanathan-aggarwal-attribution-fairness-2003
+  added: '2026-11-18'
+  agent: claude
+- bib_id: hsee-et-al-2003
+  citation: Hsee, Yu, Zhang & Zhang (2003), "Medium Maximization", *JCR* 30(1)
+  url: https://doi.org/10.1086/374702
+  evidence_ids:
+  - hsee-medium-maximization-points-2003
+  added: '2026-11-18'
+  agent: claude
+- bib_id: sheehan-hamilton-chellappa-2022
+  citation: Sheehan, Hamilton & Chellappa (2022), "When Is HILO Low?", *JCR* 49(4)
+  url: https://doi.org/10.1093/jcr/ucac005
+  evidence_ids:
+  - sheehan-hamilton-chellappa-hilo-price-image-2022
+  added: '2026-11-18'
+  agent: claude
+- bib_id: levy-et-al-2011
+  citation: Levy, Lee, Chen, Kauffman & Bergen (2011), "Price Points and Price Rigidity", *REStat* 93(4)
+  url: https://doi.org/10.1162/REST_a_00178
+  evidence_ids:
+  - levy-price-points-rigidity-2011
+  added: '2026-11-18'
+  agent: claude
+- bib_id: knotek-2011
+  citation: 'Knotek (2011), "Convenient Prices and Price Rigidity: Cross-Sectional Evidence", *REStat* 93(3); and Knotek (2008), *JME* 55(7)'
+  url: https://doi.org/10.1162/REST_a_00124
+  evidence_ids:
+  - knotek-convenient-prices-rigidity-2011
+  added: '2026-11-18'
+  agent: claude
+- bib_id: dynarski-et-al-2021
+  citation: Dynarski, Libassi, Michelmore & Owen (2021), "Closing the Gap", *AER* 111(6)
+  url: https://doi.org/10.1257/aer.20200451
+  evidence_ids:
+  - dynarski-hail-early-tuition-promise-2021
+  added: '2026-11-18'
+  agent: claude
+- bib_id: delaney-kearney-2016
+  citation: Delaney & Kearney (2016), guaranteed tuition and alternative revenue streams, *Journal of Higher Education*
+  url: https://doi.org/10.1080/00221546.2016.11777420
+  evidence_ids:
+  - delaney-kearney-guaranteed-tuition-fees-2016
+  added: '2026-11-18'
+  agent: claude
+- bib_id: coulibaly-asirvatham-2024
+  citation: Coulibaly & Asirvatham (2024), "Impact of state tuition guarantee policy on enrollment in public universities", *IJCED*
+  url: https://www.emerald.com/insight/content/doi/10.1108/IJCED-02-2024-0009/full/html
+  evidence_ids:
+  - coulibaly-asirvatham-truth-in-tuition-enrollment-2024
+  added: '2026-11-18'
+  agent: claude
+- bib_id: which-2018
+  citation: Which? (Jan 2018), "Rip-off card surcharges to end"
+  url: https://www.which.co.uk/news/article/rip-off-card-surcharges-to-end-azxeM4O5lOpP
+  evidence_ids:
+  - uk-card-surcharge-ban-just-eat-service-charge-2018
+  added: '2026-11-18'
+  agent: claude
+- bib_id: bolt-jonker-van-renselaar-2010
+  citation: Bolt, Jonker & van Renselaar (2010), "Incentives at the counter", *Journal of Banking & Finance* 34(8)
+  url: https://econpapers.repec.org/RePEc:eee:jbfina:v:34:y:2010:i:8:p:1738-1744
+  evidence_ids:
+  - bolt-jonker-renselaar-debit-surcharge-2010
+  added: '2026-11-18'
+  agent: claude
+- bib_id: japan-times-2016
+  citation: Japan Times (19 Jan 2016), "Japanese airlines cut fuel surcharges as oil prices slump"; TravelPulse; Daily Telegraph
+  url: https://www.japantimes.co.jp/news/2016/01/19/business/japanese-airlines-cut-fuel-surcharges-oil-prices-slump/
+  evidence_ids:
+  - airline-fuel-surcharges-after-oil-fall-2015
+  added: '2026-11-18'
+  agent: claude
+- bib_id: scmp-2020
+  citation: SCMP (Dec 2020), "China fines Tmall, JD and Vipshop for price irregularities"
+  url: https://www.scmp.com/tech/policy/article/3115891/china-fines-tmall-jd-and-vipshop-price-irregularities-beijings-latest
+  evidence_ids:
+  - samr-singles-day-raise-then-discount-fines-2020
+  added: '2026-11-18'
+  agent: claude
+- bib_id: heise-2026
+  citation: heise (2026), EU-wide Black Friday sweep of 314 online shops; Il Sole 24 Ore
+  url: https://heise.de/-11226422
+  evidence_ids:
+  - eu-cpc-black-friday-sweep-2025
+  added: '2026-11-18'
+  agent: claude
+- bib_id: idealo-2024
+  citation: Idealo (2024) Black Friday price study, via echo24 and xpert.digital
+  url: https://www.echo24.de/welt/black-friday-echte-schnaeppchen-oder-nur-show-im-schnitt-sparen-sie-prozent-zr-94536813.html
+  evidence_ids:
+  - idealo-black-friday-price-study-2024
+  added: '2026-11-18'
+  agent: claude
+- bib_id: prelec-simester-2001
+  citation: Prelec & Simester (2001), "Always Leave Home Without It", *Marketing Letters* 12(1)
+  url: https://doi.org/10.1023/A:1008196717017
+  evidence_ids:
+  - prelec-simester-credit-card-wtp-2001
+  added: '2026-11-18'
+  agent: claude
+- bib_id: cpuc-public-advocates-office-2024
+  citation: CPUC Public Advocates Office (Aug 2024), NEM cost shift fact sheet; M.Cubed rebuttal via Canary Media
+  url: https://publicadvocatesa.cpuc.ca.gov/press-room/reports-and-analyses/nem-cost-shift-methodology-fact-sheet-2024
+  evidence_ids:
+  - california-nem-cost-shift-dispute-2024
+  added: '2026-11-18'
+  agent: claude
+- bib_id: alba-et-al-1994
+  citation: Alba, Broniarczyk, Shimp & Urbany (1994), "The Influence of Prior Beliefs, Frequency Cues, and Magnitude Cues on Consumers' Perceptions of Comparative Price Data", *JCR* 21(2)
+  url: https://doi.org/10.1086/209394
+  evidence_ids: []
+  added: '2026-11-18'
+  agent: claude
+  note: 'Context only: the simultaneous-comparison frequency advantage that Sheehan, Hamilton & Chellappa (2022) revisit; not filed as a row because only cited second-hand here.'
+- bib_id: levy-young-2004
+  citation: 'Levy & Young (2004), "The Real Thing: Nominal Price Rigidity of the Nickel Coke, 1886-1959", *JMCB* 36(4)'
+  url: https://doi.org/10.1353/mcb.2004.0065
+  evidence_ids: []
+  added: '2026-11-18'
+  agent: claude
+  note: 'Context only for magic-price-points-force-shrink: a 73-year fixed nominal price; whether pack size moved instead was not checked, so no evidence row.'
+- bib_id: vermeer-et-al-2026
+  citation: Vermeer, Kohavi, Linowski et al. (2026), "Trustworthy A/B Patterns and the Winner's Curse", *KDD 2026*
+  url: https://doi.org/10.1145/3770855
+  evidence_ids: []
+  added: '2026-11-18'
+  agent: claude
+  note: 'Context only for easy-code-beats-automatic: large replications included removing the coupon-code field; per-pattern results not published on the page read, and the comparison (field vs no field) is not code vs automatic discount.'
+- bib_id: ca-sb-1524-2024
+  citation: California SB 1524 (2024) restaurant exemption from SB 478, via KQED (Jul 2024)
+  url: https://kqed.org/news/11992412/californias-junk-fee-ban-begins-but-restaurants-get-a-pass
+  evidence_ids: []
+  added: '2026-11-18'
+  agent: claude
+  note: 'Context only for all-in-rules-reshuffle-fees: restaurants won a carve-out allowing disclosed service charges, so California''s all-in rule did not force fees into menu prices; no outcome data on menu prices.'
