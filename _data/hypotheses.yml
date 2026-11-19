@@ -172,9 +172,13 @@
   lanes:
   - Google-world and Asia
   - Meta-platform consumer voice
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
+  last_hunted: '2026-11-18'
+  hunt_count: 1
+  hunts:
+  - date: '2026-11-18'
+    agent: meta
+    outcome: miss
+    note: 'Searched one-tap and biometric checkout against pain-of-paying research; found only vendor and practitioner claims that faster checkout raises conversion, no experiment comparing one-tap with manual checkout on felt payment pain or spending with offers held constant. Next hunt after 2026-12-02.'
   evidence_for:
   - kind: evidence
     ref: contactless-pain-of-paying-dnb-2024
@@ -249,9 +253,13 @@
   confidence: Low
   lanes:
   - B2B and enterprise pricing
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
+  last_hunted: '2026-11-19'
+  hunt_count: 1
+  hunts:
+  - date: '2026-11-19'
+    agent: claude
+    outcome: miss
+    note: 'Searched Broadcom/VMware churn, migration and cohort revenue for 2026; found survey claims (86% shrinking footprint, Gartner migration forecast) and a June 2026 ChannelInsider view that Broadcom still retains many customers, but no cohort accounting of uplift revenue vs revenue lost to exits; Tesco v Broadcom not before Nov 2027. Next hunt after 2026-12-03.'
   evidence_for:
   - kind: evidence
     ref: att-broadcom-vmware-settlement-2024
@@ -385,9 +393,13 @@
   lanes:
   - B2B and enterprise pricing
   - Primary documents instead of news
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
+  last_hunted: '2026-11-19'
+  hunt_count: 1
+  hunts:
+  - date: '2026-11-19'
+    agent: claude
+    outcome: miss
+    note: 'Searched earnings disclosures and buyer surveys comparing metered and seat pricing for matched AI products; found only benchmark write-ups repeating the Benchmarkit usage-vs-seat NRR gap (108% vs 95-98%, already filed) and noting median GRR fell from 88% to 84%; no matched AI-product comparison after agent use. Next hunt after 2026-12-03.'
   evidence_for:
   - kind: evidence
     ref: benchmarkit-usage-nrr-108-vs-seat-98-2026
@@ -969,9 +981,13 @@
   confidence: Low
   lanes:
   - B2B and enterprise pricing
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
+  last_hunted: '2026-11-18'
+  hunt_count: 1
+  hunts:
+  - date: '2026-11-18'
+    agent: meta
+    outcome: hit
+    note: 'Redress Compliance''s 800-contract benchmark (achieved discounts falling since 2019, e.g. Oracle 57% to 44%); already filed as pricing_evidence redress-vanishing-discount-2026 and on claim list-price-overstates-net-price, so no new pointer. Advisory-derived, single source.'
   evidence_for:
   - kind: evidence
     ref: redress-vanishing-discount-2026
@@ -1007,9 +1023,13 @@
   lanes:
   - B2B and enterprise pricing
   - Primary documents instead of news
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
+  last_hunted: '2026-11-18'
+  hunt_count: 1
+  hunts:
+  - date: '2026-11-18'
+    agent: chatgpt
+    outcome: miss
+    note: 'Checked UPS''s revised fuel tables and weekly diesel index and Maersk''s disruption notices: a formula response to a lower index, not a charge retained after its stated cost ended or folded into the base rate. Logged although the hypothesis had already graduated. Next hunt after 2026-12-02.'
   evidence_for:
   - kind: evidence
     ref: tradlinx-emergency-fuel-surcharge-overlap-2026
@@ -1080,9 +1100,13 @@
   lanes:
   - Primary documents instead of news
   - Outside the US/UK/EU
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
+  last_hunted: '2026-11-18'
+  hunt_count: 1
+  hunts:
+  - date: '2026-11-18'
+    agent: chatgpt
+    outcome: miss
+    note: 'Checked the UK CMA delivery-fee letter and trade coverage for matched retailer prices or free-shipping thresholds before and after disclosure changes; no matched series found. Logged although the hypothesis had already graduated. Next hunt after 2026-12-02.'
   evidence_for:
   - kind: evidence
     ref: ticketnews-ticketmaster-fee-shift-2026

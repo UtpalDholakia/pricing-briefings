@@ -2,6 +2,50 @@
 # Newest first. Common fields follow AGENTS.md section 6 (case_id, last_checked, follow_up_date, agent, verification_note).
 # mechanism: seat-based / usage-based / credits / flat / outcome-based. price_type: list / net / quote.
 # net_disclosed: false unless the source states what buyers actually pay after negotiation.
+- case_id: vimeo-plan-migration-2026
+  related_case_id: null
+  date: '2026-11-05'
+  firm: Vimeo
+  product: Self-serve video hosting plans (legacy Starter, Standard, Advanced, Plus, Pro, Business)
+  change: 'Legacy plans retired; existing subscribers moved to new Free, Creator, Core and Professional plans (or Studio for businesses) at their next renewal, with an email about 30 days before; Vimeo decides whether an account is reclassified as Studio'
+  old_price: null
+  new_price: 'Studio $400 a month billed annually (other new plan prices reported by third parties disagree)'
+  effective: null
+  announced: null
+  mechanism: flat
+  price_type: list
+  net_disclosed: false
+  magnitude_pct: null
+  magnitude_note: 'Reported increases of 34-180% come from renewal emails users posted, not from Vimeo'
+  source: https://livid.com/blog/vimeo-price-increase-2026-a-complete-breakdown-of-the-new-plans-and-forced-upgrades/
+  related_source: https://petapixel.com/2026/09/04/vimeo-can-decide-to-change-your-plan-and-force-you-to-pay-5x-more/
+  digest: '2026-11-19'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run; read from search-indexed text of third-party breakdowns, which disagree on new plan prices. Only the Studio price is reported as published by Vimeo. Recheck Vimeo''s pricing page at follow-up.'
+  last_checked: '2026-11-19'
+  follow_up_date: '2026-12-19'
+- case_id: servicenow-renewals-2026
+  related_case_id: null
+  date: '2026-11-09'
+  firm: ServiceNow
+  product: ServiceNow platform renewals (ITSM and Now Assist AI tiers)
+  change: 'Procurement adviser NPI reports 8-12% unit-price rises at renewal, annual uplift clauses, and a 30-60% per-user cost increase for moving to the AI-inclusive Pro Plus / Enterprise Plus tiers'
+  old_price: null
+  new_price: null
+  effective: null
+  announced: null
+  mechanism: seat-based
+  price_type: quote
+  net_disclosed: false
+  magnitude_pct: null
+  magnitude_note: 'Advisory estimates from contract work; ServiceNow publishes no rate card'
+  source: https://www.npifinancial.com/knowledge-center/how-to-beat-servicenow-at-the-negotiation-table-in-2026/
+  related_source: https://redresscompliance.com/servicenow-renewal-negotiation-guide
+  digest: '2026-11-18'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-18 suggestion. Claude could not open NPI (fetch blocked). Search confirms the 30-60% tier-upgrade figure and NPI''s mention of uplift clauses, but not the 3% compounding figure. Sources also report ServiceNow replaced the Pro Plus/Enterprise Plus tiers with Foundation, Advanced and Prime on April 9, 2026, so the tier figure may describe the old structure.'
+  last_checked: '2026-11-19'
+  follow_up_date: '2027-01-19'
 - case_id: microsoft-365-copilot-metered-2027
   related_case_id: microsoft-2027-prices
   date: '2026-11-14'

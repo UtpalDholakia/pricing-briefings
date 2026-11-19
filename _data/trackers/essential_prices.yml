@@ -1,5 +1,24 @@
 # Tracker: essential_prices. Price changes for essentials: energy, tuition, healthcare, housing, food.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: india-cancer-drug-margin-cap-2026
+  mechanism_codes: [dual-entitlement]
+  date: '2026-11-09'
+  sector: Healthcare
+  firm_or_place: India, National Pharmaceutical Pricing Authority (137 anti-cancer drugs)
+  change: 'Trade margins capped at 30%; revised maximum retail prices from Nov 9, 2026, expected to fall by up to 70%'
+  magnitude_pct: null
+  magnitude_note: 'Up to 70% is the government''s expected maximum, not an average; some brands reportedly fell by more'
+  who_pays: Cancer patients in India (mostly out of pocket)
+  explanation: 'NPPA found average mark-ups of about 170% (700% or more in some cases) on non-scheduled cancer drugs; an expert committee recommended the cap'
+  reaction: 'Supreme Court asked in October why the intervention stops at cancer drugs (per Meta AI''s source)'
+  outcome: Ongoing
+  outcome_note: null
+  source: https://newsonair.gov.in/govt-caps-trade-margins-on-137-anti-cancer-drugs-at-30-prices-to-reduce-by-70-from-nov-9/
+  digest: '2026-11-18'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-18 suggestion; read from search-indexed text (fetch blocked). The Supreme Court remark was not independently checked.'
+  last_checked: '2026-11-19'
+  follow_up_date: '2026-12-19'
 - case_id: wvu-early-tuition-2026
   date: '2026-11-13'
   sector: Tuition

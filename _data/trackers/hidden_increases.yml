@@ -1,5 +1,40 @@
 # Tracker: hidden_increases. Shrinkflation, upsizing with a markup, unbundling, inflated reference prices and fees.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: progress-residential-fees-2026
+  mechanism_codes: [drip-pricing, partitioned-pricing]
+  date: '2026-11-06'
+  kind: Fee
+  product: Single-family home rentals (Progress Residential, owned by Pretium Partners)
+  change: 'FTC and four states (Arizona, Colorado, Indiana, Utah) allege mandatory fees such as a smart home fee and a utility maintenance fee were left out of advertised monthly rents; proposed settlement of $49.75 million ($48.5 million to the FTC for renter redress, $1.25 million to Arizona) requires advertising the total monthly price'
+  unit_price_effect: null
+  magnitude_pct: null
+  magnitude_note: Fee amounts per renter not stated in the sources read
+  industry: Residential rental housing
+  geography: United States
+  source: https://consumer.ftc.gov/consumer-alerts/2026/11/ftc-says-progress-residential-charged-renters-hidden-fees
+  related_source: https://coag.gov/press-releases/attorney-general-weiser-announces-48-million-multistate-settlement-with-progress-residential-for-false-advertising-charging-hidden-fees/
+  digest: '2026-11-19'
+  verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up. Settlement needs court approval; no admission of wrongdoing; refund process not yet announced.'
+  last_checked: '2026-11-19'
+  follow_up_date: '2026-12-19'
+- case_id: swiggy-zomato-platform-fee-2026
+  mechanism_codes: [drip-pricing, partitioned-pricing]
+  date: '2026-11-01'
+  kind: Fee
+  product: Food-delivery platform fee (Zomato and Swiggy, India)
+  change: 'Per-order platform fee introduced at Rs 2 (Aug 2023) and raised in steps to Rs 14.90 before GST (Rs 17.58 with GST) by March 2026, matched by Swiggy within days; charged on top of delivery and packaging fees, including to paying subscribers'
+  unit_price_effect: null
+  magnitude_pct: null
+  magnitude_note: Per-order fee, not a share of the product price
+  industry: Food delivery platforms
+  geography: India
+  source: https://longpress.news/swiggy-zomato-platform-fee-creep
+  related_source: https://inc42.com/buzz/swiggy-raises-platform-fee-to-₹17-58-after-zomatos-hike/
+  digest: '2026-11-18'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-18 suggestion. Claude could not open longpress.news (fetch blocked); the Rs 17.58 level and March 2026 timing are confirmed by Inc42 and other Indian trade press in search results. Meta''s claim that Zomato is holding the fee during the 2026 festive season was not confirmed by any source found.'
+  last_checked: '2026-11-19'
+  follow_up_date: '2026-12-19'
 - case_id: deco-black-friday-2026
   mechanism_codes: [reference-price, transaction-utility]
   date: '2026-11-03'

@@ -1,5 +1,61 @@
 # Tracker: nonwestern_pricing. Pricing outside the US/UK/EU, preferably from local-language sources.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: india-cancer-drug-margin-cap-2026
+  mechanism_codes: [dual-entitlement]
+  date: '2026-11-09'
+  country: India
+  language: English (Indian press and government broadcaster)
+  firm_or_place: National Pharmaceutical Pricing Authority (137 non-scheduled anti-cancer drugs)
+  change: 'Trade margin capped at 30% under Paragraph 19 of the Drugs (Prices Control) Order 2013 (notified Oct 17); revised MRPs from Nov 9, with prices expected to fall by up to 70%'
+  context: 'NPPA found average mark-ups of about 170% on these drugs; extends a 2019 pilot covering 42 cancer drugs; the cap targets distributor and retailer margins rather than the manufacturer price'
+  source: https://newsonair.gov.in/govt-caps-trade-margins-on-137-anti-cancer-drugs-at-30-prices-to-reduce-by-70-from-nov-9/
+  related_source: https://www.moneylife.in/article/cancer-drug-prices-set-to-fall-by-up-to-70-percentage-as-nppa-caps-trade-margins-on-137-medicines/81978.html
+  digest: '2026-11-18'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-18 suggestion (BioSpectrum India). Claude could not open the pages (fetch blocked); facts confirmed through search-indexed text of several Indian outlets. Sources differ on whether the 30% is computed on MRP excluding GST.'
+  last_checked: '2026-11-19'
+  follow_up_date: '2026-12-19'
+- case_id: swiggy-zomato-platform-fee-2026
+  date: '2026-11-01'
+  country: India
+  language: English (Indian business press)
+  firm_or_place: Zomato and Swiggy
+  change: 'Platform fee per order rose from Rs 2 (Aug 2023) to Rs 17.58 including GST (March 2026), matched by Swiggy'
+  context: Fee creep on top of delivery, packaging and rain fees; see hidden_increases.yml entry with the same case_id
+  source: https://longpress.news/swiggy-zomato-platform-fee-creep
+  related_source: https://inc42.com/buzz/swiggy-raises-platform-fee-to-₹17-58-after-zomatos-hike/
+  digest: '2026-11-18'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-18 suggestion; the reported festive-season freeze was not confirmed.'
+  last_checked: '2026-11-19'
+  follow_up_date: '2026-12-19'
+- case_id: google-one-pakistan-2027
+  date: '2026-11-16'
+  country: Pakistan
+  language: English (Pakistani tech press)
+  firm_or_place: Google One (30GB Lite plan)
+  change: 'Annual price reported to rise from PKR 1,899 to PKR 2,500 from Jan 12, 2027'
+  context: 'Third reported Google One revision in Pakistan in under two years, after the March 2025 rise and the July 27, 2026 increase that Google''s support page confirms for Algeria, Egypt, Nigeria, Pakistan and Turkey'
+  source: https://www.techjuice.pk/google-one-30gb-price-increase-pakistan-january-2027/
+  related_source: https://support.google.com/googleone/answer/17251824?hl=en
+  digest: '2026-11-18'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-18 suggestion. Claude could not open TechJuice (fetch blocked) and found no Google page confirming the January 2027 change; the current PKR 1,899 annual price matches another Pakistani outlet. Single-source until Google confirms.'
+  last_checked: '2026-11-19'
+  follow_up_date: '2027-01-12'
+- case_id: shopee-11-11-sg-2026
+  date: '2026-11-16'
+  country: Singapore
+  language: English (company press release)
+  firm_or_place: Shopee Singapore (11.11 Big Sale)
+  change: 'Shopee says shoppers saved more than S$111 million and ShopeeVIP users got over 111 million coins in cashback; livestream and video watch time grew more than fivefold year on year'
+  context: Company figures only, not independently verified; savings are measured against Shopee's own reference prices
+  source: https://www.media-outreach.com/news/singapore/2026/11/16/501685/shopee-11-11-big-sale-campaign-delivers-record-breaking-sales-and-over-111m-coins-in-cashback-for-shopeevip-users/
+  digest: '2026-11-18'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-18 suggestion; Claude could not open the press release (fetch blocked) and relies on Meta''s summary.'
+  last_checked: '2026-11-19'
+  follow_up_date: '2026-12-19'
 - case_id: ph-fuel-surcharge-2026
   mechanism_codes: [partitioned-pricing, price-change-communication]
   date: '2026-11-16'

@@ -1,5 +1,22 @@
 # Tracker: laws. Pricing laws and rules by jurisdiction.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: texas-ticket-all-in-2027
+  jurisdiction: Texas
+  topic: Ticket pricing (all-in price display; no increase after selection)
+  approach: Disclosure mandate
+  scope: 'Websites and apps selling or reselling tickets to Texas events must show the total price including mandatory fees in the listing, with the fee amount, and may not raise the total after the buyer selects a ticket (except a disclosed charge for non-electronic delivery the buyer chooses)'
+  carve_outs: 'Does not restrict demand-based (dynamic) pricing before selection; does not expressly extend the existing $10,000 bot penalty to fee-disclosure violations'
+  status: Proposed
+  status_note: 'Bill proposed for the 2027 regular session, carrying forward 2025''s SB 1622 (HB 3621 died in committee); bill number not confirmed in sources read'
+  effective: null
+  enforcement: null
+  source: https://www.ticketnews.com/2026/11/texas-ticketing-bill-dynamic-pricing-fees/
+  updated: '2026-11-19'
+  agent: claude
+  digest: '2026-11-19'
+  verification_note: 'Direct page fetches were blocked in this run; read from search-indexed text of TicketNews and Dallas Express. Confirm bill number when filed.'
+  last_checked: '2026-11-19'
+  follow_up_date: '2027-01-15'
 - case_id: uk-cma-microsoft-sms-2026
   jurisdiction: United Kingdom (CMA)
   topic: Business software licensing and bundling (strategic market status)

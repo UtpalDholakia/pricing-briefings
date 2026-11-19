@@ -1,5 +1,19 @@
 # Tracker: ai_product_pricing. How AI products themselves are priced.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: gemini-carbon-intro-2026
+  mechanism_codes: [reference-price]
+  date: '2026-11-10'
+  kind: AI product pricing
+  title: Gemini 4 Carbon launches at an introductory $2/$10 per 1M tokens, with $4/$20 to follow
+  who: Google (Gemini API)
+  finding: 'Third-party reports agree on an introductory $2 input / $10 output per 1M tokens and a later $4 / $20; they disagree on whether Carbon''s introductory period ends Nov 30, 2026 (as for Argon, see gemini-argon-intro-2026) or is undated'
+  source: https://media.bigdomain.my/ai-agents/gemini-4-carbon-price-2026/
+  related_source: https://www.layer3labs.io/guides/gemini-4-carbon-pricing
+  digest: '2026-11-18'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-18 suggestion. Claude could not open Google''s pricing page or the cited source (fetch blocked), so nothing was logged in the AI pricing database; read the provider page in the Dec 1 snapshot.'
+  last_checked: '2026-11-19'
+  follow_up_date: '2026-12-01'
 - case_id: slack-slackbot-cap-2026
   mechanism_codes: [usage-anxiety, mental-accounting]
   date: '2026-11-11'
