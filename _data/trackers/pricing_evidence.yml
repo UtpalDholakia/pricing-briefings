@@ -1,4 +1,19 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: "gabel-simester-timoshenko-store-entry-coupons"
+  date: "2026-02"
+  mechanism: "Store-entry coupons redirect purchases."
+  mechanism_codes: [transaction-utility]
+  comparison: "Randomized coupon offers versus control."
+  design: "Field experiment; separate household-panel analysis."
+  setting: "German supermarket, 71 categories."
+  outcome: "Current-visit promoted-brand purchase incidence."
+  result_kind: "Positive in this setting"
+  result: "Incidence rose from 0.33% to 1.61%; household-panel evidence suggests cross-retailer substitution."
+  boundary: "Working paper. Does not compare clipping with automatic discounts. Cross-retailer mechanism relies on separate analysis, not solely the coupon randomization."
+  source: "https://artemtimoshenko.com/assets/papers/In%20Store%20Coupons%20February%202026.pdf"
+  verification_note: "Read design, summary results and separate substitution analysis."
+  digest: "2026-11-19"
+  agent: "chatgpt"
 - id: decodo-pre-black-friday-hikes-2026
   case_id: decodo-pre-black-friday-2026
   date: '2026-11'
