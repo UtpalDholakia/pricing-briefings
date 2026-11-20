@@ -1,4 +1,19 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: "tian-feinberg-duration-menu-selectivity-2020"
+  date: "2020-10-21"
+  mechanism: "Subscription self-selection across duration prices."
+  mechanism_codes: [context-effects]
+  comparison: "Randomized overall menu level and steepness of duration discounts."
+  design: "Pricing field experiment with joint selection and conditional-choice model."
+  setting: "One dating pay site."
+  outcome: "Joining and chosen plan; modeled optimal menu."
+  result_kind: "Context-dependent"
+  result: "Estimated optimal prices were higher, especially for the longest plan."
+  boundary: "Model-based optimum, not verified rollout. Does not test active renewal or pausing."
+  source: "https://doi.org/10.1287/mksc.2020.1265"
+  verification_note: "Publisher abstract and bibliographic record read; full paper and numerical estimates not checked."
+  digest: "2026-11-20"
+  agent: "chatgpt"
 - id: drip-assistant-experiment-2025
   case_id: drip-assistant-experiment-2025
   date: '2025-10'
