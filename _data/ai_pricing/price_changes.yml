@@ -1,5 +1,24 @@
 # AI pricing database: change log. Newest first. One entry per price or structure change, logged when found with a source.
 # change_type values and rules: AGENTS.md section 8.
+- date: '2026-11-09'
+  provider: Anthropic
+  provider_slug: anthropic
+  product_or_model: Claude Fable 5.2 (Claude API)
+  case_id: claude-fable-5-2-pricing-2026
+  change_type: new-model
+  what_changed: 'New flagship priced 20% below its predecessor: Fable 5.2 at $8 input / $40 output per 1M tokens vs Fable 5.1 at $10 / $50. Cache reads $0.20; batch 50% off; fast mode $16 / $80; US-only inference 1.1x. Mythos 5.2 at the same price for verified organisations.'
+  old_value: $10.00 input / $50.00 output per 1M tokens (Fable 5.1)
+  new_value: $8.00 input / $40.00 output per 1M tokens (Fable 5.2)
+  magnitude_pct: -20
+  magnitude_note: computed from the provider's stated rates (successor vs predecessor, not a cut to an existing model)
+  mechanism: per-token
+  announced: true
+  announced_date: null
+  source: https://platform.claude.com/docs/en/about-claude/pricing
+  related_source: https://www.anthropic.com/claude-fable-and-mythos-5-2
+  digest: '2026-11-20'
+  agent: claude
+  verification_note: 'Rates read from the search-indexed text of Anthropic''s own pricing and model docs on 2026-11-20; a direct fetch was blocked, so no out-of-cycle snapshot was taken. Launch date (Nov 9) is from third-party pages. Confirm at the 2026-12-01 snapshot.'
 - date: '2026-12-01'
   provider: Google
   provider_slug: google

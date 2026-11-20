@@ -1,5 +1,19 @@
 # Tracker: ai_agents. AI shopping agents and pricing agents: research, firm policy, surveys, opinion.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: drip-assistant-experiment-2025
+  mechanism_codes: [drip-pricing, algorithm-attribution]
+  date: '2025-10'
+  kind: Agent research
+  title: A price-comparison assistant cuts drip-pricing overpayment, but lowers trust in the platform
+  who: Lu, Markovits, Miller and Van Loo (Yale / Boston University working paper)
+  finding: 'Online gift-card marketplace experiment (1,608 participants): drip pricing raised average payments by about 10% (peak about 13%) vs upfront pricing; an assistant flagging a cheaper identical offer cut the share who overpaid by 63% and made transparent pricing the seller''s profit-maximising choice; drip lowered trust in the platform even though third-party sellers set the fees, and the assistant somewhat worsened that'
+  source: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5565238
+  related_source: https://scholarship.law.bu.edu/faculty_scholarship/4131
+  digest: '2026-11-20'
+  agent: claude
+  verification_note: 'Abstract only, via search-indexed text of SSRN, Yale CCL and BU records (fetch blocked). Dates differ across records (Oct 2025 BU record; June 2026 SSRN revision).'
+  last_checked: '2026-11-20'
+  follow_up_date: null
 - case_id: jpmorgan-agent-cards-2026
   date: '2026-11-13'
   kind: Firm policy

@@ -1,5 +1,59 @@
 # Tracker: hidden_increases. Shrinkflation, upsizing with a markup, unbundling, inflated reference prices and fees.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: tribeca-service-charge-2026
+  mechanism_codes: [drip-pricing, social-norms]
+  date: '2026-11-18'
+  kind: Fee
+  product: Restaurant bill (TriBeCa Standard, Pretoria; Totafin (Pty) Ltd)
+  change: 'Automatic 10% service charge added to every bill although the menu called it discretionary; diners had to ask management to remove it. National Consumer Tribunal found prohibited conduct under the Consumer Protection Act (menu did not show the full price payable, s 23(6)(a)); no fine, as no profit or loss was shown'
+  unit_price_effect: null
+  magnitude_pct: null
+  magnitude_note: 'The 10% is the charge itself, not a measured price effect; the National Consumer Commission reported about 200 such charges a day'
+  industry: Restaurants
+  geography: South Africa
+  source: https://www.news24.com/business/consumer-lookout/restaurants-cant-add-10-tip-to-every-bill-tribunal-rules-20261120-0501
+  related_source: https://www.sowetan.co.za/news/2026-11-19-restaurants-cannot-force-you-to-pay-10-tip-consumer-tribunal-rules/
+  digest: '2026-11-20'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The restaurant reportedly stopped the practice and changed its menu (one report). Braai Block was fined R1 million in Dec 2024 for similar charges (News24).'
+  last_checked: '2026-11-20'
+  follow_up_date: '2026-12-20'
+- case_id: viagogo-cma-drip-2026
+  mechanism_codes: [drip-pricing, partitioned-pricing]
+  date: '2026-11-19'
+  kind: Fee
+  product: Secondary-market event tickets (viagogo, UK)
+  change: 'CMA provisional infringement notice: mandatory charges such as booking fees and taxes were allegedly added at later checkout stages instead of being in the first price shown. First provisional notice issued under the DMCC Act direct-enforcement powers (viagogo did not settle). Provisional, not a finding of breach; next update expected spring 2027'
+  unit_price_effect: null
+  magnitude_pct: null
+  magnitude_note: CMA has not said how many customers or how much money is involved
+  industry: Ticketing
+  geography: United Kingdom
+  source: https://www.ticketnews.com/2026/11/viagogo-cma-provisional-hidden-fees/
+  related_source: https://www.cityam.com/viagogo-slapped-with-provisional-warning-over-sneaky-ticket-costs/
+  digest: '2026-11-20'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The CMA case page itself was not read. Parallel StubHub UK investigation opened Nov 2025.'
+  last_checked: '2026-11-20'
+  follow_up_date: '2027-03-01'
+- case_id: atlassian-usage-billing-2026
+  mechanism_codes: [usage-anxiety, partitioned-pricing]
+  date: '2026-12-03'
+  kind: Unbundling
+  product: Atlassian Cloud (Jira, Confluence) Rovo AI credits and automation
+  change: 'From Dec 3, 2026, use beyond each organisation''s pooled monthly allowance is billed (Rovo credits $0.01 each), with extra usage on by default up to an admin spending cap; follows cloud list-price rises on Oct 13'
+  unit_price_effect: null
+  magnitude_pct: null
+  magnitude_note: 'Per-user allowance (Meta AI: 25 credits on Standard) not confirmed; a third-party example implies 70 per Premium user'
+  industry: B2B software
+  geography: Global
+  source: https://www.atlassian.com/licensing/usage-based-pricing
+  related_source: https://sanka.com/daily/2026-11-18/
+  digest: '2026-11-19'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-19 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Dec 3 start, $0.01 per credit, default-on extra usage and pooled non-rollover allowances confirmed via Atlassian pages and partners; the $0.50 per 1,000 automation steps rate is from a secondary source; the 25-credit Standard allowance is not confirmed.'
+  last_checked: '2026-11-20'
+  follow_up_date: '2026-12-05'
 - case_id: progress-residential-fees-2026
   mechanism_codes: [drip-pricing, partitioned-pricing]
   date: '2026-11-06'

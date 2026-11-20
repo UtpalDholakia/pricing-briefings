@@ -873,7 +873,7 @@
   - quantity-insensitivity
   test: A matched pair of products, one shrunk and one repriced by the same per-unit amount, comparing complaints and sales.
   created: '2026-11-17'
-  last_updated: '2026-11-18'
+  last_updated: '2026-11-20'
   evidence_for:
   - kind: evidence
     ref: gourville-downsizing-2004
@@ -903,6 +903,9 @@
   - kind: evidence
     ref: evangelidis-shrinkflation-aversion-2024
     note: 'Five preregistered experiments: once known, downsizing judged less fair than an equal price rise because it reads as deceptive; disclosure removes most of the gap.'
+  - kind: evidence
+    ref: toast-diner-shrinkflation-survey-2026
+    note: 'Boundary: stated preference once downsizing is known (most diners prefer a price rise to a smaller portion); not a measure of backlash to unnoticed downsizing, which is what this claim predicts. Does not count toward the verdict.'
   related_questions: []
   related_dives: []
   status_history:
@@ -1745,7 +1748,7 @@
   - motive-attribution
   test: Complaint or boycott counts for matched downsized and repriced products after both changes are publicised.
   created: '2026-11-18'
-  last_updated: '2026-11-18'
+  last_updated: '2026-11-20'
   evidence_for:
   - kind: evidence
     ref: evangelidis-shrinkflation-aversion-2024
@@ -1756,6 +1759,9 @@
   - kind: tracker
     ref: macromill-stealth-hikes-2026
     note: 'Context: 90% of Japanese respondents say they notice stealth hikes; noticing, not judging.'
+  - kind: evidence
+    ref: toast-diner-shrinkflation-survey-2026
+    note: 'Boundary: Toast survey of 850 US diners; asked with the trade-off made explicit, most prefer paying more to a smaller portion. Stated preference, not a fairness rating of matched per-unit changes, so it does not count toward the verdict.'
   evidence_against: []
   related_questions: []
   related_dives: []

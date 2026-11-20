@@ -2,6 +2,28 @@
 # Newest first. Common fields follow AGENTS.md section 6 (case_id, last_checked, follow_up_date, agent, verification_note).
 # mechanism: seat-based / usage-based / credits / flat / outcome-based. price_type: list / net / quote.
 # net_disclosed: false unless the source states what buyers actually pay after negotiation.
+- case_id: atlassian-usage-billing-2026
+  related_case_id: null
+  date: '2026-11-18'
+  firm: Atlassian
+  product: Rovo AI credits and automation steps (Jira, Confluence Cloud)
+  change: 'Usage beyond the pooled monthly allowance billed from Dec 3, 2026; extra usage on by default up to an admin cap; allowances do not roll over; if extra usage is off, billable work pauses at the allowance'
+  old_price: 'Included in plan (no overage billing)'
+  new_price: 'Rovo credits $0.01 each beyond allowance; automation $0.50 per 1,000 steps (secondary source)'
+  effective: '2026-12-03'
+  announced: null
+  mechanism: credits
+  price_type: list
+  net_disclosed: false
+  magnitude_pct: null
+  magnitude_note: Per-user allowances not confirmed; no effect on a typical bill can be computed
+  source: https://www.atlassian.com/licensing/usage-based-pricing
+  related_source: https://www.breeze.pm/articles/atlassian-pricing-changes-2026
+  digest: '2026-11-19'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-19 suggestion (sanka.com). Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. See hidden_increases entry with the same case_id for what was and was not confirmed.'
+  last_checked: '2026-11-20'
+  follow_up_date: '2026-12-05'
 - case_id: vimeo-plan-migration-2026
   related_case_id: null
   date: '2026-11-05'

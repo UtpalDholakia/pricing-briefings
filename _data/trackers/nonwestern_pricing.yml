@@ -1,5 +1,74 @@
 # Tracker: nonwestern_pricing. Pricing outside the US/UK/EU, preferably from local-language sources.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: tribeca-service-charge-2026
+  mechanism_codes: [drip-pricing, social-norms]
+  date: '2026-11-18'
+  country: South Africa
+  language: English (South African press)
+  firm_or_place: TriBeCa Standard (Pretoria) / National Consumer Tribunal
+  change: 'Automatic 10% service charge labelled discretionary ruled prohibited conduct; no fine'
+  context: 'Removal required diners to ask management; tribunal said the menu did not show the full price payable. See hidden_increases entry with the same case_id'
+  source: https://www.news24.com/business/consumer-lookout/restaurants-cant-add-10-tip-to-every-bill-tribunal-rules-20261120-0501
+  digest: '2026-11-20'
+  agent: claude
+  last_checked: '2026-11-20'
+  follow_up_date: '2026-12-20'
+- case_id: ph-dti-price-commitment-2026
+  date: '2026-11-05'
+  country: Philippines
+  language: English (Philippine press)
+  firm_or_place: Department of Trade and Industry (190 monitored basic goods)
+  change: 'Manufacturers committed to hold prices on 190 monitored SKUs of basic necessities and prime commodities through Dec 31, 2026; a voluntary commitment, not a formal price freeze order'
+  context: 'Rice, fuel, power and fares are outside the list (Meta AI cites October inflation of 7.8%, rice +20.7%, transport +20.1%; these figures not independently checked). Noche Buena items also excluded; DTI also ruled out shrinkflation on the 190 items'
+  source: https://tribune.net.ph/2026/10/26/dti-assures-no-price-hikes-for-basic-goods-until-year-end
+  related_source: https://sulit.ph/dti-christmas-price-freeze-basic-goods-philippines-2026/
+  digest: '2026-11-19'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-19 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Commitment and 190-SKU count confirmed (Daily Tribune, Inquirer); inflation figures not checked.'
+  last_checked: '2026-11-20'
+  follow_up_date: '2027-01-05'
+- case_id: kenya-power-costs-wb-2026
+  date: '2026-11-06'
+  country: Kenya
+  language: English (Kenyan press)
+  firm_or_place: World Bank Kenya Economic Update (Kenya Power, independent power producers)
+  change: 'No tariff change: the World Bank links high power prices to opaque, take-or-pay power purchase agreements; business power about 17.5 US cents/kWh vs 7.8 in Vietnam; losses above 23%'
+  context: 'Meta AI reports households at 22 cents/kWh and only 24% of 42 PPAs competitively tendered; the 22-cent figure was not found, and one outlet dates the 24% figure to a 2021 report'
+  source: https://www.kenyans.co.ke/news/129146-world-bank-links-high-electricity-costs-opaque-power-deals-kenya
+  related_source: https://www.africaupdates.com/news/world-bank-blames-governance-failures-for-kenya-s-high-electricity-costs-n2137/2026/11/06
+  digest: '2026-11-19'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-19 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Household 22-cent figure unconfirmed.'
+  last_checked: '2026-11-20'
+  follow_up_date: '2026-12-20'
+- case_id: india-upi-mdr-2026
+  date: '2026-10-13'
+  country: India
+  language: English (Indian press)
+  firm_or_place: NPCI (UPI person-to-merchant payments)
+  change: 'Merchant discount rate of 0.4% on P2M UPI payments above Rs 2,000, capped at Rs 300 (flat Rs 5 for fuel, utilities, telecom, railways, insurance); due Oct 15, deferred two days before to after Diwali; no start date found'
+  context: 'First UPI merchant charge since zero-MDR began in 2020; the fee is the merchant''s and may not be shown as a surcharge to consumers'
+  source: https://www.deccanherald.com/india/mdr-on-upi-deferred-until-after-diwali-npci-4181482
+  related_source: https://www.tldr.money/articles/banking/upi-merchant-fee-myth-vs-fact
+  digest: '2026-11-19'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-19 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The no-pass-through rule and the Supreme Court challenge are from Meta AI''s source, not independently checked.'
+  last_checked: '2026-11-20'
+  follow_up_date: '2026-12-15'
+- case_id: google-play-fee-split-2026
+  date: '2026-11-15'
+  country: South Korea, Turkey, South Africa (next wave); India (2027)
+  language: English (Indian trade press)
+  firm_or_place: Google Play
+  change: 'Split of the bundled cut into a service fee plus a separate 5% billing fee reaches further regions on Dec 31, 2026; India and the rest of the world on Sept 30, 2027'
+  context: 'Sources disagree on the Dec 31 wave: Meta AI''s source lists South Korea, Turkey and South Africa; Outlook Respawn lists Japan and South Korea. Turkey not confirmed'
+  source: https://ecorpit.com/google-play-service-fee-split-2026-app-economics/
+  related_source: https://respawn.outlookindia.com/gaming/gaming-news/google-play-revamps-billing-with-lower-developer-fees
+  digest: '2026-11-19'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-19 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Google''s own rate card not read; country list for Dec 31 disputed.'
+  last_checked: '2026-11-20'
+  follow_up_date: '2027-01-05'
 - case_id: india-cancer-drug-margin-cap-2026
   mechanism_codes: [dual-entitlement]
   date: '2026-11-09'

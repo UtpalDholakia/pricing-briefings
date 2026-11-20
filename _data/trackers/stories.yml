@@ -239,7 +239,7 @@
   next_milestone: New subscription-contracts regime
   milestone_date: '2027-01-01'
   why_it_matters: First jurisdiction fining all-in-price violations at scale; shipping fees now covered
-  last_checked: '2026-11-15'
+  last_checked: '2026-11-20'
   follow_up_date: '2027-01-01'
   closed_date: null
   outcome_summary: null
@@ -253,6 +253,9 @@
   - date: '2026-11-02'
     note: 'Open letter: mandatory delivery fees must be in the headline price'
     source: https://www.gov.uk/government/publications/online-retailers-including-mandatory-delivery-fees-in-the-total-price/open-letter-to-online-retailers-including-mandatory-delivery-fees-in-the-total-price
+  - date: '2026-11-19'
+    note: 'First provisional infringement notice under the new powers: viagogo (did not settle) allegedly added booking fees and taxes late in checkout; provisional, next update spring 2027 (case viagogo-cma-drip-2026)'
+    source: https://www.ticketnews.com/2026/11/viagogo-cma-provisional-hidden-fees/
 - case_id: au-card-surcharge-ban-2026
   story: Australia card-surcharge ban
   status: Open

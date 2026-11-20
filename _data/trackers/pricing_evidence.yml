@@ -1,4 +1,70 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: drip-assistant-experiment-2025
+  case_id: drip-assistant-experiment-2025
+  date: '2025-10'
+  mechanism: Fees revealed late in checkout raise what buyers pay; a comparison assistant that flags a cheaper identical offer counters it
+  mechanism_codes: [drip-pricing, algorithm-attribution]
+  comparison: Drip vs upfront fee display, with and without a digital shopping assistant
+  design: Online marketplace experiment with real purchases (gift cards), 1,608 participants
+  setting: Simulated online marketplace with third-party sellers setting fees
+  outcome: Amount paid for identical goods; share overpaying; trust in the platform
+  result_kind: Positive in this setting
+  result: 'Drip raised average payments by about 10% (up to about 13%) vs upfront pricing; the assistant cut the share who overpaid by 63%, enough to make transparent pricing the profit-maximising seller choice; drip lowered trust in the platform although sellers set the fees, and the assistant slightly increased that loss of trust'
+  boundary: 'Working paper, not peer reviewed; gift cards are a homogeneous good, so price comparison is easy; abstract-level figures only'
+  source: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5565238
+  related_source: https://www.ccl.yale.edu/working-papers-archives/measuring-and-mitigating-drip-pricing-overcharge
+  verification_note: 'Direct page fetches were blocked in this run; read from search-indexed text of the cited pages. Abstract only.'
+  digest: '2026-11-20'
+  agent: claude
+- id: subscription-value-alignment-2026
+  case_id: subscription-value-alignment-2026
+  date: '2026-09'
+  mechanism: A flat fee that waives per-order fees pays off for the subscriber only if extra spending does not also transfer surplus away from the platform
+  mechanism_codes: [mental-accounting, subscription-inertia]
+  comparison: Subscribers vs matched non-subscribers before and after joining
+  design: Difference-in-differences and causal forests on transaction data
+  setting: Nearly 500,000 subscribers across eight food-delivery subscription programs
+  outcome: Subscriber gains vs platform profit from the program
+  result_kind: Positive in this setting
+  result: 'Win-win outcomes are rare: thin platform margins offset even large spending increases, so subscriber gains and platform profit are close to zero-sum'
+  boundary: 'SSRN working paper (Sept 25, 2026), not peer reviewed; food delivery only; abstract-level read'
+  source: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7525743
+  verification_note: 'Direct page fetches were blocked in this run; read from search-indexed text of the cited pages. Abstract only; programmes named in summaries (DashPass, Instacart+) not confirmed from the paper.'
+  digest: '2026-11-20'
+  agent: claude
+- id: toast-diner-shrinkflation-survey-2026
+  case_id: toast-diner-shrinkflation-survey-2026
+  date: '2026-09'
+  mechanism: Diners say they prefer a visible price rise to a smaller portion, within narrow tolerance bands
+  mechanism_codes: [quantity-insensitivity, dual-entitlement]
+  comparison: Stated preference between paying more and getting less; tolerance for price and portion changes
+  design: Online survey of 850 US adults who eat out weekly, fielded Sept 23, 2026
+  setting: US restaurants
+  outcome: Stated preferences and acceptable change sizes
+  result_kind: Positive in this setting
+  result: 'Half say portions shrank in the past year (mostly from memory); most prefer paying more to getting less; on a $15 dish 41% would accept no more than $1 more and 71% no more than $2; 61% would not accept a portion cut beyond about 10% (27% any cut); 80% want at least one category in a smaller size; nine in ten would order a fairly priced half portion'
+  boundary: 'Vendor survey (Toast sells restaurant software); stated, not revealed, preference; respondents asked after the trade-off was made explicit, so it bears on known downsizing only'
+  source: https://pos.toasttab.com/blog/data/restaurant-shrinkflation
+  related_source: https://stacker.com/stories/food-drink/restaurant-shrinkflation-would-guests-rather-pay-more-or-get-less
+  verification_note: 'Direct page fetches were blocked in this run; read from search-indexed text of the cited pages.'
+  digest: '2026-11-20'
+  agent: claude
+- id: xero-black-friday-credit-2026
+  case_id: xero-black-friday-credit-2026
+  date: '2026-11'
+  mechanism: Small sellers that join a sale event fund the discount with credit; the smallest are least likely to hit needed sales
+  mechanism_codes: [social-norms]
+  comparison: Participation and outcomes by firm size; 2026 vs 2025
+  design: Online survey of 500 Australian small-business owners or decision-makers (firms up to 200 staff), Sept 22 to Oct 5, 2026
+  setting: Australian Black Friday / Cyber Monday
+  outcome: Participation, credit use, margin squeeze, sales targets
+  result_kind: Inconclusive
+  result: '53% will definitely take part (43% in 2025); 55% of past participants relied on credit or deferred payments (29% business credit card, 22% overdraft or loan); per Meta AI, 23% saw margins shrink, 43% of micro firms vs 75% of 11-20 staff firms hit needed sales, and 27% of never-participants cannot afford to discount'
+  boundary: 'Vendor survey; no margin measure, so it does not test whether low-margin sellers opt out; 2025 baseline covered firms up to 20 staff, so the year-on-year change may not be like-for-like. A MoneySuperMarket UK figure (35% opting out in 2026 vs 22%) could not be confirmed for 2026'
+  source: https://www.xero.com/au/media-releases/aussie-small-businesses-turning-to-credit-to-compete-in-black-friday-sales/
+  verification_note: 'Filed from Meta AI''s 2026-11-19 hypothesis-hunt line. Direct page fetches were blocked in this run; read from search-indexed text of the cited pages. Sample, 53%/43% and 55% confirmed; the micro-firm and never-participant figures are from Meta AI''s reading, not independently confirmed.'
+  digest: '2026-11-19'
+  agent: meta
 - id: "gabel-simester-timoshenko-store-entry-coupons"
   date: "2026-02"
   mechanism: "Store-entry coupons redirect purchases."

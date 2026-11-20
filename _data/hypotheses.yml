@@ -83,9 +83,13 @@
   confidence: Low
   lanes:
   - Industries the others ignore
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
+  last_hunted: '2026-11-19'
+  hunt_count: 1
+  hunts:
+  - date: '2026-11-19'
+    agent: chatgpt
+    outcome: miss
+    note: 'Searched checkbox, automatic-redemption and store-entry coupon studies; neighbouring comparisons only (store-entry coupons filed as evidence by ChatGPT), no equal-value clip-vs-automatic test of perceived savings. Next hunt after 2026-12-03.'
   evidence_for: []
   evidence_against:
   - kind: evidence
@@ -111,9 +115,13 @@
   lanes:
   - Industries the others ignore
   - Small business and creator economy
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
+  last_hunted: '2026-11-19'
+  hunt_count: 1
+  hunts:
+  - date: '2026-11-19'
+    agent: chatgpt
+    outcome: miss
+    note: 'Searched irregular vs scheduled deals and perceived store prices at matched discount depth and frequency; no direct test found. Next hunt after 2026-12-03.'
   evidence_for:
   - kind: evidence
     ref: raghubir-three-faces-promotions-2004
@@ -287,9 +295,13 @@
   lanes:
   - B2B and enterprise pricing
   - Primary documents instead of news
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
+  last_hunted: '2026-11-20'
+  hunt_count: 1
+  hunts:
+  - date: '2026-11-20'
+    agent: claude
+    outcome: miss
+    note: 'Searched for multi-year comparisons of dominant sellers with restrained vs exploitative price rises (revenue, retention, profit); found only competition-law guidance and theory on dominance, no matched comparison. Next hunt after 2026-12-04.'
   evidence_for: []
   evidence_against: []
   related_claim: null
@@ -311,9 +323,13 @@
   lanes:
   - Google-world and Asia
   - Meta-platform consumer voice
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
+  last_hunted: '2026-11-20'
+  hunt_count: 1
+  hunts:
+  - date: '2026-11-20'
+    agent: claude
+    outcome: miss
+    note: 'Searched for retention or churn data after agent cancellation tools (Meta Muse, Axios Oct 2026 coverage); found forecasts, an Accenture attitude survey and vendor churn claims, but no measured retention change against a control. Next hunt after 2026-12-04.'
   evidence_for: []
   evidence_against: []
   related_claim: null
@@ -335,10 +351,17 @@
   lanes:
   - Small business and creator economy
   - Meta-platform consumer voice
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
-  evidence_for: []
+  last_hunted: '2026-11-19'
+  hunt_count: 1
+  hunts:
+  - date: '2026-11-19'
+    agent: meta
+    outcome: hit
+    note: 'Reported as a hit by Meta AI: Xero Australian small-business survey (Nov 2026) and a MoneySuperMarket UK poll. Claude review: neither measures margins, so this is Context, not a direct test; filed as xero-black-friday-credit-2026; the MoneySuperMarket 2026 figures could not be confirmed. No graduation.'
+  evidence_for:
+  - kind: evidence
+    ref: xero-black-friday-credit-2026
+    note: 'Context: 500 Australian small firms; 55% of past participants funded Black Friday with credit; micro firms least likely to hit needed sales (per Meta AI). No margin measure, so not a direct test of the prediction.'
   evidence_against: []
   related_claim: null
   related_questions: []
@@ -359,9 +382,13 @@
   lanes:
   - Outside the US/UK/EU
   - Primary documents instead of news
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
+  last_hunted: '2026-11-19'
+  hunt_count: 1
+  hunts:
+  - date: '2026-11-19'
+    agent: meta
+    outcome: miss
+    note: 'Searched NERSA developments before the Nov 26 Eskom decision; consultation and Eskom fixed-charge proposal (R535.80 to R660.90) still undecided; the Nov 12 unlawful-tariffs concession is a separate matter (filed as nersa-unlawful-metro-tariffs-2026). Next hunt after 2026-11-26.'
   evidence_for:
   - kind: evidence
     ref: sims-solar-cost-shift-2025

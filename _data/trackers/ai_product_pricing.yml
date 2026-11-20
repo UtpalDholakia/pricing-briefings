@@ -1,5 +1,33 @@
 # Tracker: ai_product_pricing. How AI products themselves are priced.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: claude-fable-5-2-pricing-2026
+  mechanism_codes: [reference-price, context-effects]
+  date: '2026-11-09'
+  kind: AI product pricing
+  title: Anthropic prices Claude Fable 5.2 at $8/$40 per 1M tokens, 20% below Fable 5.1, with a $16/$80 fast mode
+  who: Anthropic
+  finding: 'Input $8 and output $40 per 1M tokens (Fable 5.1: $10/$50); cache reads $0.20; batch 50% off; fast mode (up to 2.5x faster) $16/$80; US-only inference at 1.1x; Mythos 5.2 same price, verified organisations only'
+  source: https://platform.claude.com/docs/en/about-claude/pricing
+  related_source: https://www.anthropic.com/claude-fable-and-mythos-5-2
+  digest: '2026-11-20'
+  agent: claude
+  verification_note: 'Rates read from search-indexed text of Anthropic''s pricing and model docs (direct fetch blocked); several third-party pages agree. Read the provider page at the 2026-12-01 snapshot.'
+  last_checked: '2026-11-20'
+  follow_up_date: '2026-12-01'
+- case_id: gemini-flash-jan-2027
+  mechanism_codes: [reference-price]
+  date: '2026-11-10'
+  kind: AI product pricing
+  title: Gemini 3.8 Flash and 3.6 Flash reported to double on Jan 1, 2027
+  who: Google (Gemini API)
+  finding: 'Reported: $0.75 input / $3.75 output per 1M tokens through Dec 31, 2026, then $1.50 / $7.50 from Jan 1, 2027, with Batch and Flex tiers doubling too. Meta AI also reports gemini-2.5-pro requests routing to 3.8 Flash from Dec 1; not confirmed'
+  source: https://kostkompass.com/gemini-api-price-increase-december-2026/
+  related_source: https://eesel.ai/blog/gemini-3-8-flash-pricing
+  digest: '2026-11-19'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-19 suggestion. Only secondary sources seen (Google''s page not read; fetch blocked), so no price_changes.yml entry; the Dec 1 reroute could not be confirmed. Read the provider page in the Dec 1 snapshot.'
+  last_checked: '2026-11-20'
+  follow_up_date: '2026-12-01'
 - case_id: gemini-carbon-intro-2026
   mechanism_codes: [reference-price]
   date: '2026-11-10'

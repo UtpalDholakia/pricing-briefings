@@ -1,5 +1,43 @@
 # Tracker: essential_prices. Price changes for essentials: energy, tuition, healthcare, housing, food.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: nersa-unlawful-metro-tariffs-2026
+  mechanism_codes: [dual-entitlement]
+  date: '2026-11-11'
+  sector: Energy
+  firm_or_place: South Africa, NERSA (Johannesburg, Ekurhuleni, Nelson Mandela Bay, Emfuleni, Madibeng)
+  change: 'NERSA conceded in the Pretoria High Court that its approvals of these municipal electricity tariffs were based on calculations with errors and are reviewable, unlawful and invalid'
+  magnitude_pct: null
+  magnitude_note: 'Court heard on Nov 9 that Nelson Mandela Bay businesses paid 76% more than the cost of supply; not a system-wide figure'
+  who_pays: Businesses and households in the affected municipalities
+  explanation: 'Regulator concedes calculation errors; asked to phase corrections in over future years'
+  reaction: 'Applicants (incl. Coega Steels) seek retrospective credits with interest'
+  outcome: Ongoing
+  outcome_note: 'Court to decide remedy; sources differ on whether the tariffs are 2024/25 or 2025/26'
+  source: https://www.citizen.co.za/business/another-mistake-with-electricity-tariffs/
+  related_source: https://www.dailymaverick.co.za/article/2026-11-12-unlawful-tariffs-and-soaring-power-costs-threaten-nmb-jobs-and-investment/
+  digest: '2026-11-19'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-19 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The word indefensible was not found in the sources read. Separate from nersa-tariff-review-2026.'
+  last_checked: '2026-11-20'
+  follow_up_date: '2026-12-20'
+- case_id: beacons-closet-premium-2026
+  date: '2026-11-13'
+  sector: Healthcare
+  firm_or_place: Beacon's Closet (New York City), Anthem Blue Cross and Blue Shield small-group renewal
+  change: 'Annual renewal quoted a 59.5% premium increase on about $600,000 a year; cheapest alternative quote was +34%'
+  magnitude_pct: 59.5
+  magnitude_note: 'Quoted rise, not the rise paid. An 8.3% figure appears in reports; Meta AI reads it as the settled rise, another summary as the prior year''s rise'
+  who_pays: Small employer and its ~50 full-time staff (wages)
+  explanation: null
+  reaction: 'Owners posted the renewal letter on Instagram; owner says wage rises become almost impossible'
+  outcome: Unknown
+  outcome_note: 'What the chain finally pays is unclear across sources'
+  source: https://www.marketplace.org/story/2026/11/13/small-businesses-struggle-with-rising-healthcare-costs
+  digest: '2026-11-19'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-19 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The meaning of the 8.3% figure is disputed.'
+  last_checked: '2026-11-20'
+  follow_up_date: '2026-12-20'
 - case_id: india-cancer-drug-margin-cap-2026
   mechanism_codes: [dual-entitlement]
   date: '2026-11-09'
