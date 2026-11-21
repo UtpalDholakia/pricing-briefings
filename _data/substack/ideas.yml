@@ -816,6 +816,7 @@
   case_ids:
   - sony-ps-store-pricing-2026
   - ny-algorithmic-pricing-label-2026
+  - uk-price-personalisation-study-2026
   status: idea
   priority: Medium
   owner: null
@@ -824,7 +825,7 @@
   published_url: null
   published_date: null
   revisit_date: null
-  notes: null
+  notes: '2026-11-21: the UK government''s price personalisation study (144 products, 87 sellers) gives a prevalence baseline: variation concentrated in transport, holidays, hospitality and ticketing, little in retail. It says how often hidden variation happens, not how a label would be judged.'
 - created: '2026-11-15'
   idea: Does showing a fare's cost breakdown build trust or invite disputes?
   idea_slug: fare-cost-breakdown

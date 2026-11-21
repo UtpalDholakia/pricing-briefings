@@ -1,5 +1,25 @@
 # Tracker: backlash. Price backlash and whether the seller reversed.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: valve-cs2-sticker-pricing-2026
+  mechanism_codes: [reference-price, personalization-fairness, scarcity-urgency]
+  date: '2026-05-22'
+  firm: Valve (Counter-Strike 2)
+  change: 'Replaced sticker capsules with a Major Shop selling team and player autograph stickers for tokens (100 tokens about $1) at demand-based prices: popular players'' stickers cost more; refund if a price fell more than 25 tokens within 24 hours of purchase'
+  framing: Prices reflect relative interest in players and teams
+  backlash: 'Players and press mocked the prices (one tracker put a set of the top 100 Cologne stickers at $19,447); by Aug 1 Valve conceded the system did not produce reasonable prices'
+  reversed: 'Yes'
+  reversal_note: 'Valve''s Nov 17 update ("we''ve heard your feedback") sells PGL Major Singapore 2026 autograph stickers at fixed prices by finish (Paper, Foil, Holo, Gold) and prices souvenir crafting by weapon rarity. Cologne stickers were not repriced; HLTV linked the change to weak Cologne sales (Valve''s post does not mention Cologne). Sources differ on whether all Singapore stickers are fixed-price'
+  days_to_reversal: 179
+  outcome_date: '2026-11-17'
+  magnitude_pct: null
+  reaction_volume: null
+  source: https://steamdb.com/en/cs2/cs2-major-stickers-fixed-price
+  related_source: https://www.gamesradar.com/games/fps/thanks-valve-a-set-of-counter-strike-2-cologne-major-stickers-now-costs-nearly-usd20-000/
+  digest: '2026-11-21'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Launch date (May 22 patch) from Dot Esports/Insider Gaming coverage; days_to_reversal runs from the Cologne shop launch to the Nov 17 update. Aug 1 concession from ixbt.games.'
+  last_checked: '2026-11-21'
+  follow_up_date: null
 - case_id: crochet-seller-reversal-2026
   date: '2026-11-10'
   firm: Crochet handbag seller (Instagram)
@@ -32,7 +52,7 @@
   reaction_volume: null
   source: https://www.ticketnews.com/2026/11/noah-kahan-presale-prices-resale-caps-2027/
   digest: '2026-11-11'
-  last_checked: '2026-11-20'
+  last_checked: '2026-11-21'
   follow_up_date: '2026-12-20'
 - case_id: earls-admin-fee-2026
   date: '2026-11-09'
@@ -48,7 +68,7 @@
   reaction_volume: null
   source: https://www.wfmd.com/2026/11/09/restaurant-admin-fees-spark-backlash-as-diners-question-what-theyre-paying-for/
   digest: '2026-11-10'
-  last_checked: '2026-11-20'
+  last_checked: '2026-11-21'
   follow_up_date: '2026-12-20'
 - case_id: duffys-operations-charge-2026
   date: '2026-11-09'
@@ -112,7 +132,7 @@
   reaction_volume: null
   source: https://www.foxnews.com/travel/cruise-passengers-criticize-new-program-identifying-early-tippers-board
   digest: '2026-11-04'
-  last_checked: '2026-11-20'
+  last_checked: '2026-11-21'
   follow_up_date: '2026-12-20'
 - case_id: car-feature-subscriptions-2026
   date: '2026-11-04'
@@ -227,7 +247,7 @@
   reaction_volume: null
   source: https://hoodline.com/2026/10/downtown-la-rooftop-spot-uca-terraza-slammed-over-surcharge-on-top-of-mandatory-tip
   digest: '2026-10-20'
-  last_checked: '2026-11-20'
+  last_checked: '2026-11-21'
   follow_up_date: '2026-12-20'
 - case_id: uniqlo-socks-2026
   date: 2026-10

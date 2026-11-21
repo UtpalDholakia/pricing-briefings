@@ -1,5 +1,24 @@
 # AI pricing database: change log. Newest first. One entry per price or structure change, logged when found with a source.
 # change_type values and rules: AGENTS.md section 8.
+- date: '2026-12-01'
+  provider: OpenAI
+  provider_slug: openai
+  product_or_model: ChatGPT Plus, Pro and Business (ChatGPT and Codex usage)
+  case_id: openai-shared-allowance-2026
+  change_type: mechanism-change
+  what_changed: 'From December, the usage allowance for Plus, Pro and Business is shared across ChatGPT and Codex and counted in tokens (stronger models and agent tasks draw more); Instant chats reportedly excluded. Prices unchanged; pool sizes and resets not published.'
+  old_value: Separate ChatGPT and Codex/Work allowances
+  new_value: One shared token-counted allowance across ChatGPT and Codex
+  magnitude_pct: null
+  magnitude_note: No allowance sizes published, so the change in effective allowance cannot be computed
+  mechanism: flat-subscription
+  announced: true
+  announced_date: null
+  source: https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits
+  related_source: https://www.notebookcheck.net/ChatGPT-and-Codex-will-share-one-usage-limit-starting-in-December.1440897.0.html
+  digest: '2026-11-21'
+  agent: claude
+  verification_note: 'Read from search-indexed text of OpenAI''s Help Center article and coverage on 2026-11-21 (direct fetch blocked). Help Center update dated Oct 31 or Nov 2 in coverage; start day in December not stated. Confirm at the Dec 1 snapshot.'
 - date: '2026-11-09'
   provider: Anthropic
   provider_slug: anthropic

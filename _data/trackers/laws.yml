@@ -1,5 +1,24 @@
 # Tracker: laws. Pricing laws and rules by jurisdiction.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: texas-personalized-pricing-2027
+  mechanism_codes: [personalization-fairness]
+  jurisdiction: Texas
+  topic: Personalized pricing
+  approach: Ban (bill)
+  scope: 'HB 1184 (Rep. Julio Salinas) would regulate personalized dynamic pricing models used by retailers doing business in Texas, online and in store, restricting use of consumers'' personal information to charge individuals higher prices for the same goods or services; HB 1242 would add a Business & Commerce Code chapter on personalized dynamic pricing'
+  carve_outs: null
+  status: Proposed
+  status_note: 'Pre-filed for the 90th Legislature (session opens January 2027); no committee action. Filing date reported as mid-November 2026 (not confirmed on the bill history page). Separate from the ticketing bill (texas-ticket-all-in-2027)'
+  effective: null
+  enforcement: null
+  source: https://capitol.texas.gov/tlodocs/90R/billtext/pdf/HB01184I.PDF
+  related_source: https://www.houstonchronicle.com/news/houston-texas/trending/article/texas-lawmakers-dynamic-pricing-bills-22529447.php
+  updated: '2026-11-21'
+  agent: claude
+  digest: '2026-11-21'
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Bill text read only as search snippets; HB 1242 sponsor and the definitions of personal information not confirmed.'
+  last_checked: '2026-11-21'
+  follow_up_date: '2027-01-15'
 - case_id: texas-ticket-all-in-2027
   jurisdiction: Texas
   topic: Ticket pricing (all-in price display; no increase after selection)

@@ -1,5 +1,41 @@
 # Tracker: hidden_increases. Shrinkflation, upsizing with a markup, unbundling, inflated reference prices and fees.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: meta-one-link-limit-2026
+  mechanism_codes: [partitioned-pricing, bundling]
+  date: '2026-09-15'
+  kind: Unbundling
+  product: Outbound link posts from Facebook Pages and professional accounts (Meta One business tiers)
+  change: 'Non-paying Pages limited to two link posts (or link comments) a month; Meta One Essential ($14.99) adds none; Advanced ($49.99) reportedly allows eight; links in ads and to Meta''s own apps unlimited; quota resets monthly and does not roll over'
+  unit_price_effect: null
+  magnitude_pct: null
+  magnitude_note: 'Engadget is cited as giving four links for Advanced, others eight; Meta describes the limit as a test'
+  industry: Social media platforms
+  geography: Global (rollout varies by region)
+  source: https://awespirestudios.com/meta-link-limits-organic-posts/
+  related_source: https://www.socialmediatoday.com/news/facebook-pages-get-charged-for-link-posts/
+  digest: '2026-11-20'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-20 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Two-link limit and $49.99 Advanced price confirmed in several sources; Advanced link count disputed.'
+  last_checked: '2026-11-21'
+  follow_up_date: '2026-12-21'
+- case_id: harvest-usage-billing-2026
+  mechanism_codes: [partitioned-pricing, usage-anxiety, subscription-inertia]
+  date: '2026-08-20'
+  kind: Unbundling
+  product: Harvest time-tracking and invoicing software (owned by Bending Spoons)
+  change: 'Per-seat price plus a usage fee (Flex: billed on projects, clients, tasks and invoicing; Unlimited: a fixed usage fee not published); many annual customers saw the new rates only at renewal'
+  unit_price_effect: null
+  magnitude_pct: null
+  magnitude_note: 'Reported customer bills: $13.32 to $133.98 a month (one contractor); BBC reported rises up to 1,500%; others report 496-2,275%; anecdotal'
+  industry: B2B software
+  geography: Global
+  source: https://www.stateofindiehacking.com/stories/harvest-price-increase-bending-spoons/
+  related_source: https://www.subscriptioninsider.com/blog/harvest-pricing-change-sends-some-renewals-up-1-500
+  digest: '2026-11-20'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-20 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The BBC article itself was not found; its figures are as cited by Subscription Insider.'
+  last_checked: '2026-11-21'
+  follow_up_date: '2026-12-21'
 - case_id: tribeca-service-charge-2026
   mechanism_codes: [drip-pricing, social-norms]
   date: '2026-11-18'

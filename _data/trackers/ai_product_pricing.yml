@@ -1,5 +1,19 @@
 # Tracker: ai_product_pricing. How AI products themselves are priced.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: openai-shared-allowance-2026
+  mechanism_codes: [mental-accounting, usage-anxiety]
+  date: '2026-11-02'
+  kind: AI product pricing
+  title: OpenAI merges ChatGPT and Codex usage into one shared allowance for Plus, Pro and Business from December
+  who: OpenAI
+  finding: 'Help Center says Plus, Pro and Business usage allowances will be shared across ChatGPT and Codex starting in December; usage is counted in tokens, so stronger models and multi-step agent tasks draw more; Instant chats reportedly do not draw from the pool; pool size, reset periods and chat-to-allowance conversion not published; prices unchanged'
+  source: https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits
+  related_source: https://www.notebookcheck.net/ChatGPT-and-Codex-will-share-one-usage-limit-starting-in-December.1440897.0.html
+  digest: '2026-11-21'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Help Center update date given as Oct 31 or Nov 2 in coverage. Read the subscriptions page at the Dec 1 snapshot.'
+  last_checked: '2026-11-21'
+  follow_up_date: '2026-12-03'
 - case_id: claude-fable-5-2-pricing-2026
   mechanism_codes: [reference-price, context-effects]
   date: '2026-11-09'

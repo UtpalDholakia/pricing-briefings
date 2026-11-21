@@ -1,5 +1,24 @@
 # Tracker: explanations. How sellers explain price changes.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: samsung-no-giveaway-prices-2026
+  mechanism_codes: [reference-price, transaction-utility]
+  date: '2026-11-19'
+  firm: Samsung Electronics (DX division)
+  change: 'Reported internal push to stop deep discounting of TVs, appliances and devices after weak DX earnings, with weekly inventory and plan tracking'
+  explanation: 'CFO Park Soon-chul reportedly said the TV and appliance businesses cannot keep shrinking and that Samsung must never sell at giveaway prices; finance leaders argued frequent deep discounts hurt margins and teach customers to wait for sales'
+  category: Refusal to cut
+  reaction: null
+  outcome: Ongoing
+  outcome_note: 'Single report (SamMobile); Korean original not found; check holiday-season promotion depth and Q4 commentary'
+  outcome_date: null
+  magnitude_pct: null
+  source: https://sammyfans.com/2026/11/20/samsung-plans-stop-heavy-discounts-amid-weak-business-performance
+  related_source: https://www.sammobile.com/?p=16689574
+  digest: '2026-11-21'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Internal remarks as reported, not an official statement.'
+  last_checked: '2026-11-21'
+  follow_up_date: '2027-01-31'
 - case_id: xfinity-december-2026
   mechanism_codes: [price-change-communication, dual-entitlement]
   date: '2026-11-15'
@@ -277,10 +296,10 @@
   category: Reference-point reframing
   reaction: Trade press
   outcome: Ongoing
-  outcome_note: Tied to a new economy product
+  outcome_note: 'Tied to a new economy product; 2026-11-21 check: blocked-middle-seat (shared table) option on A321XLR Economy Plus still announced without a published fee'
   outcome_date: null
   magnitude_pct: null
   source: https://aerocrewnews.com/2026/10/18/united-ceo-avoiding-the-middle-seat-should-come-at-a-price/
   digest: '2026-10-22'
-  last_checked: '2026-11-15'
-  follow_up_date: '2026-11-21'
+  last_checked: '2026-11-21'
+  follow_up_date: '2026-12-21'

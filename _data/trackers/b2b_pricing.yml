@@ -2,6 +2,50 @@
 # Newest first. Common fields follow AGENTS.md section 6 (case_id, last_checked, follow_up_date, agent, verification_note).
 # mechanism: seat-based / usage-based / credits / flat / outcome-based. price_type: list / net / quote.
 # net_disclosed: false unless the source states what buyers actually pay after negotiation.
+- case_id: oracle-java-smb-pricing-2026
+  related_case_id: null
+  date: '2026-10-08'
+  firm: Oracle
+  product: Java SE Universal Subscription
+  change: 'New lower list prices for organisations under 3,000 employees, still metered on total headcount (including contractors) regardless of how many use Java; above 3,000 unchanged; small-business bands direct-only'
+  old_price: '$15 per employee per month (1-999 employees, 2023 list)'
+  new_price: 'Per LICENSEWARE: 10 employees $100 a year (was $1,800); 500 employees $10,000 a year (was $90,000)'
+  effective: '2026-10-08'
+  announced: null
+  mechanism: seat-based
+  price_type: list
+  net_disclosed: false
+  magnitude_pct: null
+  magnitude_note: 'LICENSEWARE reports cuts of 12.5-94% by headcount band; band table not confirmed on Oracle''s page in this run'
+  source: https://medium.com/licenseware/oracle-cut-java-prices-by-up-to-94-it-still-counts-every-employee-10271b0199a3
+  related_source: https://blogs.oracle.com/java/new-lower-smb-pricing-and-easier-online-purchasing-of-java-se-universal-subscription
+  digest: '2026-11-20'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-20 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Oracle''s blog confirms lower SMB pricing for under 3,000 employees; its rate table did not render in search text.'
+  last_checked: '2026-11-21'
+  follow_up_date: '2026-12-21'
+- case_id: tropic-ai-renewal-uplift-2026
+  related_case_id: null
+  date: '2026-11-01'
+  firm: Multiple SaaS vendors (Tropic procurement data)
+  product: Enterprise software renewals with AI features
+  change: 'AI-driven renewal asks of 20-37% vs a typical 3-9% annual uplift, via forced SKU migration, unbundle-and-rebundle of AI add-ons, credit pricing and conditional discounts; buyers who negotiate cut the ask about 55%, settling near 12%'
+  old_price: null
+  new_price: null
+  effective: null
+  announced: null
+  mechanism: seat-based
+  price_type: net
+  net_disclosed: true
+  magnitude_pct: null
+  magnitude_note: 'Aggregate ranges from Tropic''s own deal data; not a single price; mechanism value is the closest fit (mix of seats and credits)'
+  source: https://www.tropicapp.io/blog/ai-tax
+  related_source: https://www.mysterydemo.com/blog/saas-price-increase-statistics
+  digest: '2026-11-20'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-20 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Figures confirmed on Tropic''s own pages (vendor data, no independent check); date is approximate. Vertice and Zylo figures in the roundup not checked.'
+  last_checked: '2026-11-21'
+  follow_up_date: '2026-12-21'
 - case_id: atlassian-usage-billing-2026
   related_case_id: null
   date: '2026-11-18'

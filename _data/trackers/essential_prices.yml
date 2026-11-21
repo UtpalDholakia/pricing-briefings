@@ -1,5 +1,25 @@
 # Tracker: essential_prices. Price changes for essentials: energy, tuition, healthcare, housing, food.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: hawaii-tuition-freeze-2026
+  mechanism_codes: [price-change-communication]
+  date: '2026-11-19'
+  sector: Tuition
+  firm_or_place: University of Hawaii (10 campuses)
+  change: 'Four-year tuition schedule for 2027-28 to 2030-31: undergraduate tuition frozen for two years, then raised (Meta AI: 5% in 2029-30); UH Hilo pharmacy is the exception'
+  magnitude_pct: null
+  magnitude_note: 'Later-year increases not confirmed in sources read'
+  who_pays: University of Hawaii students
+  explanation: 'Freeze now, raise later; tuition reported lower in real terms than a decade ago'
+  reaction: 'Meta AI reports all 35 public testifiers opposed any increase (not confirmed)'
+  outcome: Ongoing
+  outcome_note: 'The September proposal is confirmed (UH News, Sept 11); the Nov 19 regents vote (Meta AI: 7-2) could not be confirmed in this run'
+  source: https://www.hawaii.edu/news/2026/11/19/bor-approves-tuition-schedule/
+  related_source: https://www.hawaii.edu/news/2026/09/11/uh-proposed-tuition-schedule/
+  digest: '2026-11-20'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-20 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Only the September proposal was found in search.'
+  last_checked: '2026-11-21'
+  follow_up_date: '2026-12-21'
 - case_id: nersa-unlawful-metro-tariffs-2026
   mechanism_codes: [dual-entitlement]
   date: '2026-11-11'

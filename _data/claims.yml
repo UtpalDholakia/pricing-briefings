@@ -55,8 +55,11 @@
   - price-change-communication
   - motive-attribution
   created: '2026-11-17'
-  last_updated: '2026-11-18'
+  last_updated: '2026-11-21'
   evidence_for:
+  - kind: tracker
+    ref: valve-cs2-sticker-pricing-2026
+    note: 'Context (fees or terms changed): Valve dropped demand-based sticker pricing for the next Major after widely covered ridicule; earlier Cologne stickers were not repriced.'
   - kind: tracker
     ref: chatgpt-pro-allowance-2026
     note: 'Price rolled back (allowance restored): an announced allowance cut at an unchanged price was cancelled after public developer backlash.'
@@ -1540,8 +1543,11 @@
   - reference-price
   test: Net and list prices for matched deals in a second software category or from a second source.
   created: '2026-11-18'
-  last_updated: '2026-11-18'
+  last_updated: '2026-11-21'
   evidence_for:
+  - kind: tracker
+    ref: tropic-ai-renewal-uplift-2026
+    note: 'Context: Tropic deal data, AI-driven renewal asks of 20-37% settle near 12% after pushback; asks vs settled uplifts, not list vs net price levels. Vendor data.'
   - kind: evidence
     ref: redress-vanishing-discount-2026
     note: '800 contracts, size-matched: Oracle average discount 57% (2019) to 44% (2026); buyers with a credible alternative 8-15 points deeper.'
@@ -1618,8 +1624,11 @@
   - partitioned-pricing
   test: Retail product prices and free-shipping thresholds before and after an all-in rule, for the same sellers.
   created: '2026-11-18'
-  last_updated: '2026-11-18'
+  last_updated: '2026-11-21'
   evidence_for:
+  - kind: evidence
+    ref: jin-wagman-xing-all-in-str-2026
+    note: 'Boundary: under California''s all-in rule for short-term rentals (NBER w35989), headline nightly rates rose 4.8% and cleaning-fee-reliant hosts exited. Sellers did not absorb the fees, but the paper reports folding and exit, not relabelling as other charges.'
   - kind: evidence
     ref: ticketnews-ticketmaster-fee-shift-2026
     note: 'Direct case: Ticketmaster dropped order-processing fees and raised per-ticket charges; one specific fee shift.'

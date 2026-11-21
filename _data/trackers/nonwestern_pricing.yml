@@ -1,5 +1,20 @@
 # Tracker: nonwestern_pricing. Pricing outside the US/UK/EU, preferably from local-language sources.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: karnataka-bus-fares-2026
+  mechanism_codes: [dual-entitlement]
+  date: '2026-11-05'
+  country: India
+  language: English (Indian press)
+  firm_or_place: Karnataka state transport corporations (BMTC, KSRTC and two others)
+  change: 'BMTC fares up 32-35% on average, other corporations about 23%; BMTC minimum ordinary fare Rs 6 to Rs 10, maximum Rs 35 to Rs 45; Vajra AC minimum Rs 15 to Rs 20, maximum Rs 75 to Rs 90'
+  context: 'Transport Minister Byrathi Suresh cited diesel prices, salaries, dearness allowance, spare parts and maintenance; corporations reported cumulative losses of about Rs 9,000-9,900 crore; Shakti free travel for women continues. Stage-based fares mean the shortest trips rose most in percentage terms'
+  source: https://thesouthfirst.com/karnataka/karnataka-hikes-bus-fares-by-23-to-35-across-four-state-run-transport-corporations-from-5-november/
+  related_source: https://thecsrjournal.in/karnataka-increases-bus-fares-by-up-to-rs-10-effective-november-4-citing-rising-diesel-prices-and-financial-challenges
+  digest: '2026-11-20'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-20 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Effective from midnight Nov 4 / early Nov 5 (sources differ).'
+  last_checked: '2026-11-21'
+  follow_up_date: '2026-12-21'
 - case_id: tribeca-service-charge-2026
   mechanism_codes: [drip-pricing, social-norms]
   date: '2026-11-18'

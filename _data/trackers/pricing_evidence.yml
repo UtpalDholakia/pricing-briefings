@@ -1,4 +1,38 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: uk-price-personalisation-study-2026
+  case_id: uk-price-personalisation-study-2026
+  date: '2026-11-19'
+  mechanism: 'Online sellers may vary prices by consumer profile (device, login, demographics) or by time; whether variation is personalisation or dynamic pricing is hard to separate.'
+  mechanism_codes: [personalization-fairness]
+  comparison: Prices for the same product quoted to different consumer profiles (real survey participants and synthetic profiles) and over time
+  design: benchmark (price collection across a 1,688-person consumer survey and synthetic profiles, several phases)
+  setting: 'UK online B2C markets; 144 products from 87 online sellers (first phase: 100 products)'
+  outcome: Price variation across profiles; whether variation tracks consumer characteristics or vulnerabilities
+  result_kind: Context-dependent
+  result: 'Little variation in retail; much more in transport, package holidays, hospitality and ticketing, where about a third of platforms showed high variability. Some variation tracked age, gender, device type and login status. No evidence that prices were systematically personalised on the vulnerabilities examined (financial difficulty, mental health, neurodivergence). One taxi platform showed a strong indication of first-degree personalisation; the overall pattern is described as dynamic pricing combined with personalisation, varying with market conditions.'
+  boundary: 'Government-commissioned measurement study, not peer reviewed; detects variation, cannot always separate personalisation from timing; the direction and size of profile gaps were not read in this run.'
+  source: https://www.gov.uk/government/publications/price-personalisation-evidence-from-the-uk-online-market
+  related_source: https://www.gov.uk/government/publications/price-personalisation-evidence-from-the-uk-online-market/price-personalisation-evidence-from-the-uk-online-market-executive-summary
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Executive summary read at summary level only; publishing department name not confirmed (search text gives an unusual department name).'
+  digest: '2026-11-21'
+  agent: claude
+- id: jin-wagman-xing-all-in-str-2026
+  case_id: california-str-all-in-2024
+  date: '2026-11-01'
+  mechanism: 'Drip-priced cleaning and service fees hide the total; fee-inclusive display makes the full price salient, raising price sensitivity and pushing fee-reliant sellers out.'
+  mechanism_codes: [drip-pricing, partitioned-pricing]
+  comparison: 'Airbnb listings in San Diego and San Francisco (treated by California''s AB 537 all-in rule from July 1, 2024) vs Seattle and Chicago (controls)'
+  design: difference-in-differences with coarsened exact matching, plus a discrete-choice welfare model
+  setting: 'Short-term rentals (Airbnb), four US cities, before and after July 2024'
+  outcome: Guest price sensitivity, average daily rate, listing entry and exit, consumer surplus
+  result_kind: Context-dependent
+  result: 'All-in display made guests more price-sensitive than in control cities, yet average daily rates rose 4.8%. Exits and entries both rose; listings reliant on cleaning-fee revenue exited disproportionately, higher-quality listings were more likely to stay, and entrants had lower fees and lower quality. The welfare model finds the law removed a sizable welfare illusion from obscured fees and, mostly through churn, raised realized consumer surplus.'
+  boundary: 'NBER working paper (w35989), not yet peer reviewed; read at abstract level; one platform and two treated cities; the 4.8% is a headline nightly rate that now includes fees.'
+  source: https://www.nber.org/papers/w35989
+  related_source: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7290239
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Abstract read via NBER and SSRN listings; SSRN dated Aug 8, 2026, NBER issue November 2026 (date set to the NBER month). Author affiliations differ across listings.'
+  digest: '2026-11-21'
+  agent: claude
 - id: "tian-feinberg-duration-menu-selectivity-2020"
   date: "2020-10-21"
   mechanism: "Subscription self-selection across duration prices."
