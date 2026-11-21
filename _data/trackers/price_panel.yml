@@ -1,4 +1,25 @@
 # Fixed profiles. Add the newest observation under the existing ID, including unchanged checks.
+- id: "omsi-for-two-annual-new-member"
+  case_id: "omsi-holiday-membership-stepdown-2026"
+  offer: "OMSI for 2 annual membership"
+  market: "Portland, Oregon, United States"
+  profile: "New annual membership for two named adults, standard public holiday offer; no add-ons or other discounts."
+  currency: "USD"
+  unit: "one annual membership, posted membership charge only"
+  next_check: "2026-12-01"
+  observations:
+    - date: "2026-11-21"
+      basis: "Posted terms"
+      change: "baseline"
+      posted: "USD 96 per year, displayed against USD 120; 20% discount November 20-30."
+      first_payment: "Posted annual membership charge USD 96; checkout not observed."
+      renewal: "Future renewal price and automatic-renewal terms not verified."
+      included: "Two named adults; unlimited general admission and four single-use submarine, planetarium or documentary theater vouchers, plus published membership benefits."
+      amount: 96
+      note: "Not an all-in checkout quote; taxes or transaction fees, if any, not verified. Page announces 15% off December 1-January 4. At unchanged USD 120 base that implies USD 102, not an observed future price."
+      source: "https://omsi.edu/become-a-member/"
+  digest: "2026-11-21"
+  agent: "chatgpt"
 - id: chewy-food
   offer: Chewy+
   market: United States

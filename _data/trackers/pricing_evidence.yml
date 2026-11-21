@@ -1,4 +1,20 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: "zeithammer-stich-costly-price-offers-2024"
+  date: "2024-08-27"
+  mechanism: "Preferences inferred from entering a costly price-offer process differ from those inferred from the offer amount."
+  mechanism_codes: [impatience-self-selection]
+  comparison: "Entry and offer decisions, with and without an interactive decision aid and across simultaneous and sequential decision architectures."
+  design: "Series of incentivized controlled experiments with US participants."
+  setting: "Costly price offers to a seller with an uncertain acceptance threshold."
+  outcome: "Entry, offer amounts and consistency of model-implied preferences."
+  result_kind: "Context-dependent"
+  result: "Entry was more frequent than offer amounts predicted under the tested models. Decision aids and sequencing did not reconcile the inconsistency; bids implied more risk aversion than entry."
+  boundary: "Not field evidence from airline auctions. Parametric preference estimates; market effect sizes remain unknown. The aid's failure to reconcile preferences is not evidence that it never changes behavior."
+  source: "https://doi.org/10.1016/j.ijresmar.2024.08.006"
+  related_source: "https://www.anderson.ucla.edu/sites/default/files/document/2026-05/1-s2.0-S016781162400079X-main.pdf"
+  verification_note: "Publisher abstract, full-paper methods, results and discussion checked. Date is first online publication; journal issue is June 2025. Mechanism code is a broad participation-cost classification, not a claim that impatience explains the result."
+  digest: "2026-11-21"
+  agent: "chatgpt"
 - id: uk-price-personalisation-study-2026
   case_id: uk-price-personalisation-study-2026
   date: '2026-11-19'
