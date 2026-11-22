@@ -1,4 +1,20 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: "robitaille-affective-pain-placebo-2026"
+  date: "2026-08"
+  mechanism: "Beliefs about affective pain modulation may affect valuation."
+  mechanism_codes: [pain-of-paying]
+  comparison: "Affective-pain enhancer vs reliever placebos, and each vs untreated control."
+  design: "Reverse-placebo experiment; participants believed they had taken pain-modulating drugs."
+  setting: "Controlled purchase-valuation task."
+  outcome: "Willingness to pay."
+  result_kind: "Context-dependent"
+  result: "Publisher abstract and INSEAD summary report higher willingness to pay for the affective enhancer group than the reliever group; neither differed significantly from untreated control."
+  boundary: "Not a test of cards, checkout speed or one-tap payment. Control contrasts are not significant, not proof of equal effects. Full methods, sample sizes and estimates were not checked."
+  source: "https://doi.org/10.1016/j.jebo.2026.107671"
+  related_source: "https://www.insead.edu/faculty-research/publications/journal-articles/affective-cost-spending-neuroeconomic-and"
+  verification_note: "Read publisher search-indexed abstract and directly opened INSEAD author-institution summary. Direct publisher full-page fetch returned 403. Date is journal issue month, not discovery date."
+  digest: "2026-11-22"
+  agent: "chatgpt"
 - id: wallimann-fare-format-2026
   case_id: wallimann-fare-format-2026
   date: '2026-11'
