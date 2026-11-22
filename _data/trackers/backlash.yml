@@ -1,5 +1,25 @@
 # Tracker: backlash. Price backlash and whether the seller reversed.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: kpop-demon-hunters-tour-2026
+  mechanism_codes: [personalization-fairness, reference-price, scarcity-urgency]
+  date: '2026-11-18'
+  firm: Netflix and AEG Presents (KPop Demon Hunters Golden World Tour)
+  change: 'Presales (Mastercard Nov 18, fan presale Nov 19; general sale Nov 20) for a 2027-28 arena tour of a children''s film; fans report seats rising from about $200 to $600 within minutes and lower-bowl seats above $700; VIP packages from about $593 (Atlanta), EUR 682 (Dublin), GBP 635 (London)'
+  framing: 'No statement on prices found; VIP packages sold as experiences (on-stage photos, pre-show parties, merchandise)'
+  backlash: 'Fans and parents call the pricing predatory for a family show; widely shared social posts and entertainment press coverage'
+  reversed: Pending
+  reversal_note: 'One Ticketmaster listing (Belmont Park, NY) shows face value $97-$468 and warns resale may exceed face value, so some $600+ reports may be resale or premium tiers'
+  days_to_reversal: null
+  outcome_date: null
+  magnitude_pct: null
+  reaction_volume: null
+  source: https://www.yahoo.com/entertainment/music/concerts/articles/kpop-demon-hunters-world-tour-200347155.html
+  related_source: https://parade.com/news/kpop-demon-hunters-world-tour-faces-backlash-over-ticket-prices
+  digest: '2026-11-22'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The $200-to-$600 rise is a single fan account; face value vs resale not separated in coverage.'
+  last_checked: '2026-11-22'
+  follow_up_date: '2026-12-22'
 - case_id: valve-cs2-sticker-pricing-2026
   mechanism_codes: [reference-price, personalization-fairness, scarcity-urgency]
   date: '2026-05-22'
@@ -52,8 +72,8 @@
   reaction_volume: null
   source: https://www.ticketnews.com/2026/11/noah-kahan-presale-prices-resale-caps-2027/
   digest: '2026-11-11'
-  last_checked: '2026-11-21'
-  follow_up_date: '2026-12-20'
+  last_checked: '2026-11-22'
+  follow_up_date: '2026-12-22'
 - case_id: earls-admin-fee-2026
   date: '2026-11-09'
   firm: Earls Kitchen + Bar (Denver)
@@ -68,8 +88,8 @@
   reaction_volume: null
   source: https://www.wfmd.com/2026/11/09/restaurant-admin-fees-spark-backlash-as-diners-question-what-theyre-paying-for/
   digest: '2026-11-10'
-  last_checked: '2026-11-21'
-  follow_up_date: '2026-12-20'
+  last_checked: '2026-11-22'
+  follow_up_date: '2026-12-22'
 - case_id: duffys-operations-charge-2026
   date: '2026-11-09'
   firm: Duffy's (Florida)
@@ -132,8 +152,8 @@
   reaction_volume: null
   source: https://www.foxnews.com/travel/cruise-passengers-criticize-new-program-identifying-early-tippers-board
   digest: '2026-11-04'
-  last_checked: '2026-11-21'
-  follow_up_date: '2026-12-20'
+  last_checked: '2026-11-22'
+  follow_up_date: '2026-12-22'
 - case_id: car-feature-subscriptions-2026
   date: '2026-11-04'
   firm: Automakers (VW, Subaru)
@@ -247,8 +267,8 @@
   reaction_volume: null
   source: https://hoodline.com/2026/10/downtown-la-rooftop-spot-uca-terraza-slammed-over-surcharge-on-top-of-mandatory-tip
   digest: '2026-10-20'
-  last_checked: '2026-11-21'
-  follow_up_date: '2026-12-20'
+  last_checked: '2026-11-22'
+  follow_up_date: '2026-12-22'
 - case_id: uniqlo-socks-2026
   date: 2026-10
   firm: Uniqlo (Japan)

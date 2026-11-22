@@ -1,4 +1,36 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: wallimann-fare-format-2026
+  case_id: wallimann-fare-format-2026
+  date: '2026-11'
+  mechanism: 'Whether an off-peak discount is shown as a percentage or as an absolute amount changes price sensitivity, but only where fares are low'
+  mechanism_codes: [context-effects, transaction-utility]
+  comparison: Percentage vs absolute (currency) presentation of fare differences in a stated choice task
+  design: 'Randomised stated-preference survey run alongside a Swiss public-transport field test; 1,082 respondents of 2,910 contacted (39.6%)'
+  setting: Swiss public transport, off-peak discounts
+  outcome: Stated price sensitivity in trip choices
+  result_kind: Context-dependent
+  result: 'No significant overall effect of format; for low-fare trips, percentage presentation made respondents more price-sensitive than absolute amounts; authors suggest percentage messaging for low-fare products and discounts shallower than about 47%'
+  boundary: 'Stated, not revealed, choices; unreviewed preprint; one country and one mode'
+  source: https://arxiv.org/abs/2611.12117
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Author list beyond Hannes Wallimann not confirmed.'
+  digest: '2026-11-22'
+  agent: claude
+- id: xero-nz-black-friday-credit-2026
+  case_id: xero-black-friday-credit-2026
+  date: '2026-11-19'
+  mechanism: Small sellers that join a sale event fund it with credit; the smallest firms sit out most
+  mechanism_codes: [social-norms]
+  comparison: Participation by firm size; funding of past participation
+  design: 'Online survey of 517 New Zealand small-business owners or senior decision-makers (firms up to 200 staff), Sept 22 to Oct 6, 2026'
+  setting: New Zealand Black Friday
+  outcome: Planned participation and funding sources
+  result_kind: Inconclusive
+  result: '31% do not plan to take part, 44% of sole traders; about half of past participants funded stock and staff with credit (26% business credit cards, 23% supplier terms or BNPL, 16% overdraft or loan, 14% delayed other bills)'
+  boundary: 'Vendor survey; no margin measure, so it does not test whether low-margin sellers opt out; sole-trader size is not margin. A MoneySuperMarket UK figure (35% sitting out in 2026 vs 22%) still could not be confirmed: the 22% figure found may be the 2025 survey'
+  source: https://www.xero.com/media-releases/black-fridays-hidden-cost-kiwi-businesses-turning-to-credit/
+  verification_note: 'Filed from Meta AI''s 2026-11-21 hypothesis-hunt line. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages.'
+  digest: '2026-11-21'
+  agent: meta
 - id: "zeithammer-stich-costly-price-offers-2024"
   date: "2024-08-27"
   mechanism: "Preferences inferred from entering a costly price-offer process differ from those inferred from the offer amount."

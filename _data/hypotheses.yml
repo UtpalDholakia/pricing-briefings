@@ -363,17 +363,24 @@
   lanes:
   - Small business and creator economy
   - Meta-platform consumer voice
-  last_hunted: '2026-11-19'
-  hunt_count: 1
+  last_hunted: '2026-11-21'
+  hunt_count: 2
   hunts:
   - date: '2026-11-19'
     agent: meta
     outcome: hit
     note: 'Reported as a hit by Meta AI: Xero Australian small-business survey (Nov 2026) and a MoneySuperMarket UK poll. Claude review: neither measures margins, so this is Context, not a direct test; filed as xero-black-friday-credit-2026; the MoneySuperMarket 2026 figures could not be confirmed. No graduation.'
+  - date: '2026-11-21'
+    agent: meta
+    outcome: hit
+    note: 'Reported as a hit by Meta AI: Xero New Zealand survey (Nov 19; 517 firms) and MoneySuperMarket UK figures. Claude review: Xero NZ confirmed and filed as xero-nz-black-friday-credit-2026 (Context: firm size, not margin); the MoneySuperMarket 35% figure still not confirmed. No graduation.'
   evidence_for:
   - kind: evidence
     ref: xero-black-friday-credit-2026
     note: 'Context: 500 Australian small firms; 55% of past participants funded Black Friday with credit; micro firms least likely to hit needed sales (per Meta AI). No margin measure, so not a direct test of the prediction.'
+  - kind: evidence
+    ref: xero-nz-black-friday-credit-2026
+    note: 'Context: 517 New Zealand small firms; 31% sit out, 44% of sole traders; about half of past participants used credit. Firm size, not margin, so not a direct test.'
   evidence_against: []
   related_claim: null
   related_questions: []

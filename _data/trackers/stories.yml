@@ -239,7 +239,7 @@
   next_milestone: New subscription-contracts regime
   milestone_date: '2027-01-01'
   why_it_matters: First jurisdiction fining all-in-price violations at scale; shipping fees now covered
-  last_checked: '2026-11-20'
+  last_checked: '2026-11-22'
   follow_up_date: '2027-01-01'
   closed_date: null
   outcome_summary: null
@@ -256,6 +256,9 @@
   - date: '2026-11-19'
     note: 'First provisional infringement notice under the new powers: viagogo (did not settle) allegedly added booking fees and taxes late in checkout; provisional, next update spring 2027 (case viagogo-cma-drip-2026)'
     source: https://www.ticketnews.com/2026/11/viagogo-cma-provisional-hidden-fees/
+  - date: '2026-11-18'
+    note: 'Three new drip-pricing investigations: Bannatyne Health Club (joining fees and facility charges added later in sign-up), Secret Escapes (ATOL fees, local taxes, resort fees, component prices rising in booking) and Caledonian Travel (per-person indicative prices, supplements); initial phase to April 2027; no finding of breach'
+    source: https://www.gov.uk/government/news/travel-and-leisure-businesses-investigated-over-pricing-practices
 - case_id: au-card-surcharge-ban-2026
   story: Australia card-surcharge ban
   status: Open

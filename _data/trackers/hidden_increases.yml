@@ -1,5 +1,23 @@
 # Tracker: hidden_increases. Shrinkflation, upsizing with a markup, unbundling, inflated reference prices and fees.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: amazon-fba-fees-2027
+  mechanism_codes: [partitioned-pricing]
+  date: '2026-11-05'
+  kind: Fees
+  product: Amazon US Fulfillment by Amazon (FBA) seller fees
+  change: 'Fulfillment fees up an average $0.19 per unit from Jan 15, 2027 (about 0.8% of average selling price); five categories (Automotive and Powersports, Compact Appliances, Musical Instruments and AV, Media, Computers) lose low-price FBA rates for items under $10 and pay $10-$50 rates; new storage structure and revised low-inventory fee from Feb 1, 2027'
+  unit_price_effect: null
+  magnitude_pct: null
+  magnitude_note: 'Average only; effect varies by size, price and category'
+  industry: E-commerce marketplaces
+  geography: United States
+  source: https://ppc.land/amazon-sellers-face-average-0-19-fba-fee-rise-from-january-15-2027/
+  related_source: https://chainstoreage.com/amazon-increase-streamline-shipping-and-logistics-fees-2027
+  digest: '2026-11-21'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-21 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Seller Central notice itself not read; the 3.5% fuel and logistics surcharge was not confirmed.'
+  last_checked: '2026-11-22'
+  follow_up_date: '2027-01-15'
 - case_id: meta-one-link-limit-2026
   mechanism_codes: [partitioned-pricing, bundling]
   date: '2026-09-15'

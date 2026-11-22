@@ -1,5 +1,24 @@
 # Tracker: explanations. How sellers explain price changes.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: wwe-ticket-pricing-2026
+  mechanism_codes: [personalization-fairness, dual-entitlement]
+  date: '2026-11-20'
+  firm: WWE (TKO Group)
+  change: 'No price change announced; WWE president Nick Khan set out the live-event pricing policy behind fan complaints about being priced out'
+  explanation: 'Premium (P1) seats are priced as high as the wealthiest buyers will pay; upper-bowl seats are kept affordable for families but not so cheap that ticket brokers buy them up for resale; venue choice also manages supply by region'
+  category: Screening
+  reaction: 'Fan complaints about high ticket prices preceded the remarks; coverage frames them as an admission that top seats are deliberately expensive'
+  outcome: Ongoing
+  outcome_note: 'Remarks at Bloomberg Screentime (The Deal); no transcript found, quotes vary by outlet. Watch WrestleMania 43 pricing and any change to upper-bowl floors'
+  outcome_date: null
+  magnitude_pct: null
+  source: https://www.f4wonline.com/news/wwe/nick-khan-explains-why-wwe-cant-make-ticket-prices-too-family-friendly/
+  related_source: https://slamwrestling.net/news/nick-khan-addresses-high-wwe-ticket-prices/
+  digest: '2026-11-22'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Date is the reporting date; the conference appearance date was not confirmed.'
+  last_checked: '2026-11-22'
+  follow_up_date: '2027-01-22'
 - case_id: samsung-no-giveaway-prices-2026
   mechanism_codes: [reference-price, transaction-utility]
   date: '2026-11-19'

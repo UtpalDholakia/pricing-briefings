@@ -1,5 +1,35 @@
 # Tracker: nonwestern_pricing. Pricing outside the US/UK/EU, preferably from local-language sources.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: sg-my-cross-border-taxi-2026
+  mechanism_codes: [reference-price]
+  date: '2026-11-16'
+  country: Singapore and Malaysia
+  language: English (Singapore and Malaysian press)
+  firm_or_place: Cross-border taxi scheme (Grab, CDG Zig, Kumpool)
+  change: 'Licensed cross-border taxi quota raised from 300 to 500 per country from Nov 16; CDG Zig and Malaysia''s Kumpool get ride-hail licences alongside GrabCar'
+  context: 'Joint statement of the two transport ministries (Nov 6). Zig said app fares would be announced later; Grab says its app fares are fixed upfront with reference to street-hail fares. Entry may test whether a fixed street-hail fare anchors the new apps'' prices'
+  source: https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/06/causeway-taxi-quota-to-rise-to-500-from-nov-16-cdg-zig-malaysian-firm-to-get-ride-hail-licences
+  related_source: https://www.mot.gov.sg/news/details/joint-statement-by-the-ministry-of-transport--singapore-and-ministry-of-transport--malaysia-on-the-cross-border-taxi-scheme-and-cross-border-bus-services
+  digest: '2026-11-21'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-21 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The S$80 / RM240 street-hail fares were not confirmed.'
+  last_checked: '2026-11-22'
+  follow_up_date: '2026-12-22'
+- case_id: za-fuel-december-2026
+  mechanism_codes: [reference-price, motive-attribution]
+  date: '2026-11-17'
+  country: South Africa
+  language: English (South African press)
+  firm_or_place: South Africa regulated fuel prices (Department of Mineral and Petroleum Resources)
+  change: 'Mid-November Central Energy Fund data point to a large petrol cut and a possible diesel rise in December, as the temporary general fuel levy relief shrinks from Dec 2 (petrol R1.50 to R1.00 a litre; diesel R3.00 to R1.50) until Jan 5, 2027'
+  context: 'A government tax holiday partly ending can turn a falling oil price into a diesel rise; final adjustment announced for Dec 2. Outlets disagree on the diesel direction'
+  source: https://www.carmag.co.za/news/sa-fuel-price-forecast-petrol-to-drop-and-diesel-to-rise-in-december-2026/
+  related_source: https://www.sowetan.co.za/motoring/2026-11-17-heres-what-you-could-pay-for-petrol-and-diesel-in-december/
+  digest: '2026-11-21'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-21 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Meta AI''s R2.65 (petrol 93) and R0.28 (diesel) figures were not confirmed; one source projects diesel falling. Check the official Dec 2 adjustment.'
+  last_checked: '2026-11-22'
+  follow_up_date: '2026-12-03'
 - case_id: karnataka-bus-fares-2026
   mechanism_codes: [dual-entitlement]
   date: '2026-11-05'

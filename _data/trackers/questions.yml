@@ -1,5 +1,21 @@
 # Tracker: questions. Open research questions with status and priority.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- date: '2026-11-22'
+  question_id: restricted-tier-softens-rise-2026
+  question: 'When a seller raises a price and at the same time adds a slightly cheaper restricted version (Disney''s Christmas-week ticket without Magic Kingdom), does the new option make the rise seem fairer, or does it read as a penalty for wanting the full product?'
+  context: 'Walt Disney World, Dec 24-31, 2026: one-day prices up $5; new 2-3 day select-parks ticket saves $6-8'
+  digest: '2026-11-22'
+  status: Open
+  priority: Medium
+  answered_by: null
+- date: '2026-11-22'
+  question_id: black-friday-sitters-discount-later-2026
+  question: 'Do small businesses that sit out Black Friday discount later in December, or hold their prices, and which group keeps more margin?'
+  context: 'Meta AI 2026-11-21; Xero New Zealand and Australia surveys; UK small-business opt-out reports'
+  digest: '2026-11-21'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-21'
   question_id: average-price-bimodal-anchor-2026
   question: 'When a published average price describes a bimodal market (The Knot''s $34,200 wedding vs bracket means of $8,900 and $70,300), does it act as an anchor that pulls budgets toward a level few buyers actually pay?'

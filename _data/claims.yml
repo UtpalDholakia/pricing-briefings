@@ -212,6 +212,9 @@
   - kind: evidence
     ref: chun-hamilton-variable-points-exchange-rate-2024
     note: 'Boundary: a variable points rate (same average value) cut redemption. Loyalty points, not usage credits; no bill-forecast measure.'
+  - kind: tracker
+    ref: teamwork-ai-credits-2026
+    note: 'Context: a published price per credit ($0.01 top-ups) but no published credits per AI action, pooled at account level and expiring monthly; an instance of the vendor-set exchange rate, not a test of buyer misjudgment.'
   evidence_against:
   - kind: tracker
     ref: openai-per-job-pricing-2026

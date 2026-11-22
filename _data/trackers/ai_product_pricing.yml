@@ -1,5 +1,47 @@
 # Tracker: ai_product_pricing. How AI products themselves are priced.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: teamwork-ai-credits-2026
+  mechanism_codes: [mental-accounting, usage-anxiety]
+  date: '2026-11-10'
+  kind: AI product pricing
+  title: Teamwork.com starts billing AI in pooled monthly credits that do not roll over
+  who: Teamwork.com
+  finding: 'Every paid plan gets a monthly account-level AI credit pool (Basic 1,000; Accelerate 2,500; Optimize and Enterprise 7,500), shared by the whole team and not growing with seats; unused credits expire at the monthly reset; top-up credits cost $0.01 each and last six months; when the pool runs out AI features pause until reset; plan prices unchanged; billing slipped from September to November'
+  source: https://www.teamwork.com/blog/teamwork-ai-credits/
+  related_source: https://pricingsaas.com/companies/teamwork/diffs/2026W47
+  digest: '2026-11-22'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Credits consumed per AI action were not found.'
+  last_checked: '2026-11-22'
+  follow_up_date: '2026-12-22'
+- case_id: gemini-neon-launch-2026
+  mechanism_codes: [reference-price]
+  date: '2026-11-18'
+  kind: AI product pricing
+  title: Google launches Gemini 4 Neon at $3/$15 per 1M tokens, below Carbon's December price
+  who: Google (Gemini API)
+  finding: 'Input $3 and output $15 per 1M tokens; cached input $0.15; 1M-token context; not on the free tier. Gemini 4 Carbon''s introductory $2/$10 ends Nov 30 and becomes $4/$20 from Dec 1, so Neon is cheaper per token than Carbon only from December. Batch/Flex $1.50/$7.50 reported by one source, disputed by another'
+  source: https://www.technobezz.com/news/google-gemini-neon-million-input-tokens
+  related_source: https://apidog.com/blog/gemini-4-neon-pricing/
+  digest: '2026-11-21'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-21 suggestion. Only secondary sources citing Google''s pricing page were read (direct fetch blocked), so no price_changes.yml entry; read Google''s page at the 2026-12-01 snapshot.'
+  last_checked: '2026-11-22'
+  follow_up_date: '2026-12-01'
+- case_id: singles-day-ai-tokens-2026
+  mechanism_codes: [mental-accounting]
+  date: '2026-11-11'
+  kind: AI product pricing
+  title: AI tokens sold as a Singles Day promotion category in China
+  who: Tmall, JD and other Chinese platforms
+  finding: 'Tmall AI-token sales rose over 700% from Oct 15 to Nov 5 vs Sept 15 to Oct 5 (eMarketer, China Daily); CGTN reported a 450% month-on-month rise in token transaction value on the first day of Tmall''s promotion; overall Singles Day growth on Tmall, JD and Douyin was 3.7% year on year'
+  source: https://www.emarketer.com/content/price-wars-cautious-subdued-singles-day-2026
+  related_source: https://news.cgtn.com/news/2026-11-07/AI-tokens-a-hit-on-China-s-Singles-Day-as-consumers-embrace-AI-boom-1RSuuGzn2z6/share_amp.html
+  digest: '2026-11-21'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-21 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The JD 13-fold search figure was not confirmed.'
+  last_checked: '2026-11-22'
+  follow_up_date: null
 - case_id: openai-shared-allowance-2026
   mechanism_codes: [mental-accounting, usage-anxiety]
   date: '2026-11-02'
