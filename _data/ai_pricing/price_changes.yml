@@ -1,5 +1,43 @@
 # AI pricing database: change log. Newest first. One entry per price or structure change, logged when found with a source.
 # change_type values and rules: AGENTS.md section 8.
+- date: '2027-03-01'
+  provider: OpenAI
+  provider_slug: openai
+  product_or_model: GPT-6.2 Astra and GPT-6.2 Sol, Ultrafast service tier
+  case_id: openai-gpt-6-2-speed-tiers-2026
+  change_type: price-rise
+  what_changed: 'Ultrafast multiplier on Standard token rates rises from 3x (through Feb 28, 2027, Pacific time) to 6x from Mar 1, 2027; for Astra $24/$120 becomes $48/$240 per 1M input/output tokens'
+  old_value: 3x Standard (Astra $24 input / $120 output per 1M tokens)
+  new_value: 6x Standard (Astra $48 input / $240 output per 1M tokens)
+  magnitude_pct: 100
+  magnitude_note: computed from the provider's stated multipliers
+  mechanism: per-token
+  announced: true
+  announced_date: '2026-11-17'
+  source: https://developers.openai.com/api/docs/pricing
+  related_source: https://developers.openai.com/api/docs/models/gpt-6.2-astra
+  digest: '2026-11-23'
+  agent: claude
+  verification_note: 'Multipliers read from search-indexed text of OpenAI''s own pricing and model pages on 2026-11-23 (direct fetch blocked); dollar values computed from the stated Standard rates. Confirm at the 2026-12-01 snapshot.'
+- date: '2026-11-17'
+  provider: OpenAI
+  provider_slug: openai
+  product_or_model: GPT-6.2 Astra (OpenAI API)
+  case_id: openai-gpt-6-2-speed-tiers-2026
+  change_type: new-model
+  what_changed: 'New flagship priced 20% below its predecessor: GPT-6.2 Astra at $8 input / $40 output per 1M tokens (cached input $0.40) vs GPT-6 Astra at $10 / $50, which stays available. GPT-6.2 Sol at $2 / $10, unchanged from GPT-6.1 Sol. Background requests 30% (2-hour window) or 40% (8-hour window) below Standard; batch 50% off; Fast 2x'
+  old_value: $10.00 input / $50.00 output per 1M tokens (GPT-6 Astra)
+  new_value: $8.00 input / $40.00 output per 1M tokens (GPT-6.2 Astra)
+  magnitude_pct: -20
+  magnitude_note: computed from the provider's stated rates (successor vs predecessor, not a cut to an existing model)
+  mechanism: per-token
+  announced: true
+  announced_date: '2026-11-17'
+  source: https://developers.openai.com/api/docs/pricing
+  related_source: https://openai.com/index/introducing-gpt-6-2-astra-sol/
+  digest: '2026-11-23'
+  agent: claude
+  verification_note: 'Rates read from search-indexed text of OpenAI''s own pricing, model and launch pages on 2026-11-23 (direct fetch blocked), matching DataCamp and other secondary coverage. No out-of-cycle snapshot taken. Confirm at the 2026-12-01 snapshot.'
 - date: '2026-12-01'
   provider: OpenAI
   provider_slug: openai

@@ -1,5 +1,24 @@
 # Tracker: explanations. How sellers explain price changes.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: bellring-elasticity-2026
+  mechanism_codes: [reference-price, price-change-communication]
+  date: '2026-11-18'
+  firm: BellRing Brands (Premier Protein)
+  change: 'Plans low double-digit price increases on Premier Protein shakes for fiscal 2027 after adjusted gross margin fell to 20.1% in Q4 (29.7% a year earlier)'
+  explanation: 'High single-digit protein cost inflation, including tariffs; management tells investors its guidance assumes price elasticity greater than one (volume falls proportionally more than price rises) and that more consumer elasticity is still ahead'
+  category: Cost
+  reaction: 'Shares rose about 20% on the day on a sales beat; Premier shake sales guided at +2% to -2%; long-term growth algorithm withdrawn until the Q2 2027 call'
+  outcome: Ongoing
+  outcome_note: 'Watch whether club-channel promotions and retailer inventory cuts in Q1 FY2027 confirm the elasticity assumption'
+  outcome_date: null
+  magnitude_pct: null
+  source: https://www.sec.gov/Archives/edgar/data/0001772016/000162828026074645/brbrexh991-q42026earningsr.htm
+  related_source: https://www.fool.com/earnings/call-transcripts/2026/11/18/bellring-brbr-q4-2026-earnings-call-transcript/
+  digest: '2026-11-23'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the 8-K release and third-party call transcripts and summaries (Motley Fool, Investing.com, GuruFocus). Premier RTD volume growth reported as 16.5% or 17% by different summaries; exact size of the planned increase not stated beyond low double digits.'
+  last_checked: '2026-11-23'
+  follow_up_date: '2027-02-15'
 - case_id: wwe-ticket-pricing-2026
   mechanism_codes: [personalization-fairness, dual-entitlement]
   date: '2026-11-20'

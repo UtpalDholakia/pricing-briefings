@@ -1,5 +1,20 @@
 # Tracker: nonwestern_pricing. Pricing outside the US/UK/EU, preferably from local-language sources.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: kenya-internet-metering-bill-2026
+  mechanism_codes: [usage-anxiety, pain-of-paying]
+  date: '2026-11-22'
+  country: Kenya
+  language: English (Kenyan press and Al Jazeera)
+  firm_or_place: Kenyan internet service providers (Safaricom, Telkom Kenya and others)
+  change: 'Proposed law would make home and fixed internet billing consumption-based, with a meter number per customer'
+  context: 'Regulator and Telkom Kenya oppose a mandate; Telkom says mobile data (about 96% of subscriptions) is already billed by volume, so the fight is over unlimited fixed and speed-based packages. Supporters frame metering as fair billing; opponents cite privacy, cost and affordability'
+  source: https://www.aljazeera.com/news/2026/11/22/kenyas-internet-metering-bill-raises-privacy-and-affordability-concerns
+  related_source: https://peopledaily.digital/news/mps-warned-against-proposed-internet-law-that-could-expose-kenyans-browsing-data
+  digest: '2026-11-23'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages.'
+  last_checked: '2026-11-23'
+  follow_up_date: '2026-12-23'
 - case_id: sg-my-cross-border-taxi-2026
   mechanism_codes: [reference-price]
   date: '2026-11-16'

@@ -1,4 +1,37 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: deal-ai-single-store-gap-2026
+  case_id: deal-ai-single-store-gap-2026
+  date: '2026-11-17'
+  mechanism: 'Shoppers who check one store pay a dispersion premium; a little search removes most of it'
+  mechanism_codes: [reference-price]
+  comparison: Price at one randomly chosen store vs the lowest listed price across 16 US retailers, and vs the lowest of three stores checked
+  design: 'Vendor price scrape of 24,394 identical products at 16 major US retailers; random Black Friday tracking basket frozen Nov 5, 2026'
+  setting: US online retail, pre-Black Friday 2026
+  outcome: Gap between the price paid and the lowest listed price
+  result_kind: Positive in this setting
+  result: 'One random store averaged 15.6% above the lowest listed price; checking three stores cut the gap to 3.7%'
+  boundary: 'Vendor (Famous Labs, which earns commissions from some stores) press release; listed prices only, no shipping, membership or availability adjustment; method not peer reviewed; not a test of advertised discounts'
+  source: https://fortune.com/press-releases/deal-ai-single-store-shoppers-pay-more-black-friday-2026-11-17/
+  related_source: https://deal.ai/research/black-friday-2026
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the press release. Figures are company-reported and not independently checked.'
+  digest: '2026-11-23'
+  agent: claude
+- id: cheng-blank-conditional-promotion-2025
+  date: '2025'
+  mechanism: 'A large discount behind a demanding precondition lowers transaction utility at the regular price, so non-qualifiers buy less'
+  mechanism_codes: [transaction-utility, reference-price]
+  comparison: Conditional promotions varying precondition cost and discount depth vs no promotion
+  design: Five studies, mixed methods (Journal of Marketing Research 62(3), 526-542)
+  setting: Retail promotions with preconditions (e.g. spend or membership thresholds)
+  outcome: Total sales of the promoted product
+  result_kind: Context-dependent
+  result: 'High-precondition, high-discount promotions are the most likely to reduce total sales of the promoted product below no promotion; low-precondition, high-discount promotions raise sales; a steep conditional discount makes the full-price option less appealing'
+  boundary: 'Effect sizes and field-versus-lab split not checked; read at summary level'
+  source: https://doi.org/10.1177/00222437241309324
+  related_source: https://www.ama.org/research-insights/the-conditional-promotion-paradox-when-and-why-conditional-promotions-decrease-total-sales-of-the-promoted-product/
+  verification_note: 'Filed from Meta AI''s 2026-11-22 suggestion. Direct page fetches were blocked (session network); read from search-indexed text of the AMA research summary and the University of Delaware repository record.'
+  digest: '2026-11-22'
+  agent: meta
 - id: "robitaille-affective-pain-placebo-2026"
   date: "2026-08"
   mechanism: "Beliefs about affective pain modulation may affect valuation."

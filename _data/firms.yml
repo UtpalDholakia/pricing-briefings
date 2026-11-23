@@ -26,11 +26,12 @@
   - openai-per-job-pricing-2026
   - chatgpt-wallet-2026
   - openai-shared-allowance-2026
+  - openai-gpt-6-2-speed-tiers-2026
   aliases:
   - OpenAI
   - OpenAI (ChatGPT Pro)
   first_seen: '2026-10-27'
-  notes: 'Cancelled the ChatGPT Pro allowance cut after backlash; backed off per-job pricing; ChatGPT Wallet for agent checkout.'
+  notes: 'Cancelled the ChatGPT Pro allowance cut after backlash; backed off per-job pricing; ChatGPT Wallet for agent checkout; GPT-6.2 priced by speed tier.'
 - firm_id: starlink
   name: Starlink (SpaceX)
   sector: Telecom

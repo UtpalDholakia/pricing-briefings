@@ -1,5 +1,47 @@
 # Tracker: ai_product_pricing. How AI products themselves are priced.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: openai-gpt-6-2-speed-tiers-2026
+  mechanism_codes: [impatience-self-selection, reference-price]
+  date: '2026-11-17'
+  kind: AI product pricing
+  title: 'OpenAI prices GPT-6.2 by speed: background 30-40% off, fast 2x, ultrafast 3x rising to 6x'
+  who: OpenAI
+  finding: 'GPT-6.2 Astra at $8 input / $40 output per 1M tokens (cached $0.40), 20% below GPT-6 Astra ($10/$50); GPT-6.2 Sol $2/$10, unchanged. Same tokens sold at five speeds: background requests 30% below Standard for a 2-hour completion window and 40% below for 8 hours; batch 50% off; Fast 2x; Ultrafast 3x Standard through Feb 28, 2027, then 6x from Mar 1. Requests over 272K input tokens cost more. Astra''s $8/$40 equals Anthropic''s Fable 5.2 list price'
+  source: https://developers.openai.com/api/docs/pricing
+  related_source: https://openai.com/index/introducing-gpt-6-2-astra-sol/
+  digest: '2026-11-23'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); rates read from search-indexed text of OpenAI''s own pricing, model and launch pages. The pricing page also shows $16/$80 and $48/$240 rows for Astra, consistent with the 2x Fast and 6x Ultrafast multipliers; not confirmed row by row.'
+  last_checked: '2026-11-23'
+  follow_up_date: '2026-12-01'
+- case_id: clickup-ai-credits-2026
+  mechanism_codes: [bundling, mental-accounting, usage-anxiety]
+  date: '2026-11-02'
+  kind: AI product pricing
+  title: ClickUp folds its AI add-ons into every plan as pooled monthly credits and adds a $100 MAX tier
+  who: ClickUp
+  finding: 'Standalone Brain AI ($9) and Everything AI ($28) add-ons replaced by AI credits built into each plan: 1,000 per seat on Core, 1,500 on Business, 10,000 on MAX, pooled across the workspace, reset monthly, no rollover; extra credits in $10 blocks. List prices per user per month billed yearly: Core $9, Business $17, MAX $100. Existing workspaces keep their plans; those without an AI add-on get a one-time 1,000 credits per user that does not reset'
+  source: https://help.clickup.com/hc/en-us/articles/44297094474391-AI-Credits-availability-and-limits
+  related_source: https://pricingsaas.com/companies/clickup/diffs/2026W45
+  digest: '2026-11-23'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of ClickUp''s help center and FAQ and the PricingSaaS diff. Sources disagree on the earlier Business price ($12 in an Oct 19 capture vs $17 now) and whether MAX began as an Oct 15 test; credits consumed per AI action not found.'
+  last_checked: '2026-11-23'
+  follow_up_date: '2026-12-23'
+- case_id: hubspot-agent-credits-2026
+  mechanism_codes: [mental-accounting, usage-anxiety]
+  date: '2026-11-17'
+  kind: AI product pricing
+  title: HubSpot includes Claude and ChatGPT connector use in the seat but will meter agent work at scale in credits
+  who: HubSpot
+  finding: 'Everyday use of HubSpot''s Claude, ChatGPT, Gemini and Copilot connectors, MCP server and Agent CLI carries no extra charge and no stated ceiling; outside agents on the regular APIs draw on the plan''s API allowance; a governed agent environment (in development) will bill large-scale agent work in HubSpot Credits, listed at $10 per 1,000; credits per agent action not published'
+  source: https://ppc.land/hubspot-wont-charge-extra-when-claude-or-chatgpt-works-its-crm/
+  related_source: https://www.hubspot.com/products/artificial-intelligence/credits
+  digest: '2026-11-22'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-22 suggestion. Direct page fetches were blocked (session network); read from search-indexed text of ppc.land, SMTPedia and HubSpot''s credits page. HubSpot''s own Nov 17 post was not reached.'
+  last_checked: '2026-11-23'
+  follow_up_date: '2026-12-23'
 - case_id: teamwork-ai-credits-2026
   mechanism_codes: [mental-accounting, usage-anxiety]
   date: '2026-11-10'
@@ -108,8 +150,9 @@
   source: https://www.therevenueaireport.com/blog/slack-enterprise-plus-45-slackbot-flex-credits-order-form
   related_source: https://markaicode.com/pricing/slack-ai-pricing/
   digest: '2026-11-18'
-  verification_note: 'Direct page fetches were blocked in this run; details read from search-indexed text of secondary sources that cite Slack''s help center. The Nov 11 date comes from a third-party pricing tracker. Recheck against Slack''s help center at follow-up.'
-  last_checked: '2026-11-18'
+  follow_up_source: https://slack.com/help/articles/53579676130195-Slackbot-limits-and-credit-usage
+  verification_note: 'Direct page fetches were blocked in this run; details read from search-indexed text of secondary sources that cite Slack''s help center. The Nov 11 date comes from a third-party pricing tracker. 2026-11-23 (Meta AI suggestion, Nov 22): Slack''s help center confirms the 15-message weekly cap (Monday reset), Flex Credits overage through a connected Salesforce org with admin approval, and Standard vs Advanced action pricing on the Flex Credits rate card; the 40 and 200 credits per action were not found in search text.'
+  last_checked: '2026-11-23'
   follow_up_date: '2026-12-18'
 - case_id: salesforce-agentforce-coworker-2027
   mechanism_codes: [usage-anxiety]

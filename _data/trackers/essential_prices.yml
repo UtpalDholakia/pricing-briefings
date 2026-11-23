@@ -1,5 +1,45 @@
 # Tracker: essential_prices. Price changes for essentials: energy, tuition, healthcare, housing, food.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: uk-energy-cap-jan-2027
+  mechanism_codes: [reference-price]
+  date: '2026-11-19'
+  sector: Energy
+  firm_or_place: Great Britain (Ofgem default tariff cap)
+  change: 'Cornwall Insight forecasts the January-March 2027 cap for a typical dual-fuel household at £2,166 a year, up £443 from £1,723 (October-December 2026); includes the removal of VAT on domestic electricity, excludes the one-off £100 Household Energy Payment'
+  magnitude_pct: 26
+  magnitude_note: 'Forecast, not a decision; 26% as stated by Cornwall Insight (443/1723 = 25.7%). Supplier forecasts range from £2,065 to £2,165'
+  who_pays: Households on default (capped) tariffs in Great Britain
+  explanation: 'Forecaster attributes the rise to wholesale costs; timing described as coming in a cold winter'
+  reaction: null
+  outcome: Ongoing
+  outcome_note: 'Ofgem announces the actual cap on Nov 25, 2026'
+  source: https://www.cornwall-insight.com/press-releases/energy-bills-set-for-steep-rise-in-january/
+  related_source: https://www.ibtimes.co.uk/great-britain-energy-bills-rise-january-2027-forecast-1833134
+  digest: '2026-11-22'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-22 suggestion. Direct page fetches were blocked (session network); £2,166, £443 and 26% confirmed in search-indexed text of secondary outlets reporting the release; the unit rates (32.54p/kWh, 10.90p/kWh) and the release date were not confirmed.'
+  last_checked: '2026-11-23'
+  follow_up_date: '2026-11-26'
+- case_id: thanksgiving-dinner-2026
+  mechanism_codes: [reference-price, motive-attribution]
+  date: '2026-11-18'
+  sector: Food
+  firm_or_place: United States (Thanksgiving dinner basket)
+  change: 'American Farm Bureau survey: 10-person dinner $58.63, up $3.45 (6.3%) on 2025; 16-pound turkey $23.68, up from $21.50'
+  magnitude_pct: 6.3
+  magnitude_note: 'As stated by AFBF; turkey 23.68/21.50 = +10.1%. Groundwork Collaborative''s 26-item NielsenIQ basket (+11%, $137.12) reported by Meta AI was not confirmed; Wells Fargo forecast a slight drop'
+  who_pays: US households
+  explanation: 'AFBF economist attributes the rise to general price increases, led by turkey'
+  reaction: 'Competing baskets give different headline numbers, so the same holiday reads as a mild or a sharp rise depending on the source'
+  outcome: Held
+  outcome_note: 'One-off seasonal measure; revisit with the 2027 survey'
+  source: https://www.fb.org/intel/markets/thanksgiving-dinner-cost-ticks-upward-in-2026
+  related_source: https://groundworkcollaborative.org/work/thanksgiving-staples-up-11-as-soaring-prices-gobble-up-paychecks/
+  digest: '2026-11-22'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-22 suggestion. Direct page fetches were blocked (session network); AFBF figures confirmed in search-indexed text (Feedstuffs, local TV); Groundwork figures not found in search.'
+  last_checked: '2026-11-23'
+  follow_up_date: null
 - case_id: hawaii-tuition-freeze-2026
   mechanism_codes: [price-change-communication]
   date: '2026-11-19'

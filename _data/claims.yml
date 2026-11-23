@@ -186,7 +186,7 @@
   - mental-accounting
   - usage-anxiety
   created: '2026-11-17'
-  last_updated: '2026-11-18'
+  last_updated: '2026-11-23'
   evidence_for:
   - kind: tracker
     ref: chatgpt-pro-allowance-2026
@@ -215,6 +215,12 @@
   - kind: tracker
     ref: teamwork-ai-credits-2026
     note: 'Context: a published price per credit ($0.01 top-ups) but no published credits per AI action, pooled at account level and expiring monthly; an instance of the vendor-set exchange rate, not a test of buyer misjudgment.'
+  - kind: tracker
+    ref: clickup-ai-credits-2026
+    note: 'Context: AI add-ons with dollar prices ($9, $28) replaced by pooled plan credits with no published credits per action; the currency price became a credit allowance. An instance, not a test of misjudged spend.'
+  - kind: tracker
+    ref: hubspot-agent-credits-2026
+    note: 'Context: credits priced at $10 per 1,000 but credits per agent action unpublished, so the dollar cost of agent work is not knowable in advance. An instance, not a test.'
   evidence_against:
   - kind: tracker
     ref: openai-per-job-pricing-2026
@@ -1144,7 +1150,7 @@
   - transaction-utility
   test: Repeat the price-history measurement in a second market and a second year.
   created: '2026-11-17'
-  last_updated: '2026-11-19'
+  last_updated: '2026-11-23'
   evidence_for:
   - kind: tracker
     ref: shoprime-black-friday-index-2026
@@ -1167,6 +1173,9 @@
   - kind: evidence
     ref: checkbook-fake-discounts-2025
     note: 'Context: US, 25 chains over 24 weeks, everyday ''sale'' prices, not Black Friday.'
+  - kind: tracker
+    ref: black-friday-was-price-audit-2026
+    note: 'Context: a pre-registered-style audit of ''was'' prices in 46,306 stores across 49 countries is collecting data until Jan 31, 2027; no results yet. When published it would be a direct test on measure A (and C for EU stores), with at most 13 days of prior prices for Black Friday reductions.'
   - kind: evidence
     ref: idealo-black-friday-price-study-2024
     note: 'Direct test, measure B (second-hand): 59% of products were cheaper on at least one other November day.'

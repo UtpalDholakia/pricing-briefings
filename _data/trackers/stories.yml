@@ -1,5 +1,23 @@
 # Tracker: stories. Ongoing stories; keep updates dated and close stories when they resolve.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: black-friday-was-price-audit-2026
+  story: 'An open audit of Black Friday ''was'' prices across 46,306 online stores in 49 countries'
+  status: Open
+  started: '2026-11-21'
+  next_milestone: Price collection ends; results on how often 'was' prices exceed prices actually charged, and whether EU stores under the 30-day prior-price rule differ
+  milestone_date: '2027-01-31'
+  why_it_matters: 'A pre-announced, store-level test of reference-price honesty across rule regimes, with a design fixed before the results; a direct test for the most-black-friday-deals-not-discounts claim'
+  last_checked: '2026-11-23'
+  follow_up_date: '2027-02-15'
+  closed_date: null
+  outcome_summary: null
+  updates:
+  - date: '2026-11-21'
+    note: 'Preprint posted on OSF with the design: 6,514 Shopify and 39,792 WooCommerce stores, public product feeds scraped every 6 hours from Nov 14, 2026 to Jan 31, 2027; a Black Friday reduction can be checked against at most 13 days of prior prices, not 30'
+    source: https://osf.io/7fxzk/overview
+  digest: '2026-11-23'
+  agent: claude
+  verification_note: 'osf.io could not be opened (session network); design read from search-indexed text of the OSF page. Author not confirmed.'
 - case_id: microsoft-2027-prices
   story: Microsoft's 2027 price calendar
   status: Open

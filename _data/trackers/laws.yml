@@ -1,5 +1,24 @@
 # Tracker: laws. Pricing laws and rules by jurisdiction.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: kenya-internet-metering-bill-2026
+  mechanism_codes: [usage-anxiety, pain-of-paying]
+  jurisdiction: Kenya
+  topic: Internet billing (mandatory consumption-based metering)
+  approach: Billing-method mandate (bill)
+  scope: 'Kenya Information and Communications (Amendment) Bill, 2025 (sponsor: Aldai MP Marianne Jebet Kitany) would require internet providers to monitor each customer''s data use, assign a unique meter number and bill by data consumed'
+  carve_outs: null
+  status: Proposed
+  status_note: 'Before Parliament''s committee. The Communications Authority opposed a compulsory metering mandate on Nov 3 (proposing itemised bills, audited meters and low-income packages instead); Telkom Kenya opposed a uniform framework on Nov 10 and asked to keep unlimited and speed-based packages; KEPSA urged rejection in October. No vote reported'
+  effective: null
+  enforcement: null
+  source: https://www.aljazeera.com/news/2026/11/22/kenyas-internet-metering-bill-raises-privacy-and-affordability-concerns
+  related_source: https://www.standardmedia.co.ke/business/article/2001562098/telkom-opposes-proposed-internet-metering-rules
+  updated: '2026-11-23'
+  agent: claude
+  digest: '2026-11-23'
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of Al Jazeera, The Standard and People Daily. The 96% mobile-data share is Telkom''s figure as reported.'
+  last_checked: '2026-11-23'
+  follow_up_date: '2026-12-23'
 - case_id: texas-personalized-pricing-2027
   mechanism_codes: [personalization-fairness]
   jurisdiction: Texas

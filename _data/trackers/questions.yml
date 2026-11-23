@@ -1,5 +1,21 @@
 # Tracker: questions. Open research questions with status and priority.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- date: '2026-11-23'
+  question_id: speed-tier-intro-price-anchor-2026
+  question: 'When a premium speed tier launches at an introductory multiple (OpenAI''s Ultrafast at 3x Standard until Feb 28, then 6x), do buyers who adopt at 3x treat it as the reference and drop the tier at 6x, or does habit keep them paying?'
+  context: 'OpenAI GPT-6.2 speed ladder, Nov 17, 2026: background -30%/-40%, batch -50%, Fast 2x, Ultrafast 3x then 6x'
+  digest: '2026-11-23'
+  status: Open
+  priority: Medium
+  answered_by: null
+- date: '2026-11-22'
+  question_id: publix-bogo-total-spend-2026
+  question: 'Do shoppers who switch to buying only BOGO items spend less in total, or shift the same spend into promoted weeks?'
+  context: 'Meta AI 2026-11-22; TheStreet report of Publix shoppers going BOGO-only'
+  digest: '2026-11-22'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-22'
   question_id: restricted-tier-softens-rise-2026
   question: 'When a seller raises a price and at the same time adds a slightly cheaper restricted version (Disney''s Christmas-week ticket without Magic Kingdom), does the new option make the rise seem fairer, or does it read as a penalty for wanting the full product?'

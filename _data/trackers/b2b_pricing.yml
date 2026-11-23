@@ -2,6 +2,69 @@
 # Newest first. Common fields follow AGENTS.md section 6 (case_id, last_checked, follow_up_date, agent, verification_note).
 # mechanism: seat-based / usage-based / credits / flat / outcome-based. price_type: list / net / quote.
 # net_disclosed: false unless the source states what buyers actually pay after negotiation.
+- case_id: clickup-ai-credits-2026
+  related_case_id: null
+  date: '2026-11-02'
+  firm: ClickUp
+  product: ClickUp plans (Core, Business, MAX) with bundled AI credits
+  change: 'AI add-ons (Brain AI $9, Everything AI $28 per user per month) folded into every plan as pooled monthly AI credits (Core 1,000, Business 1,500, MAX 10,000 per seat; no rollover; extra credits in $10 blocks); new top tier MAX at $100'
+  old_price: 'Business plus AI add-on: base plan price plus $9 or $28 per user per month (Business base reported at $12 in an Oct 19 capture)'
+  new_price: 'Core $9, Business $17, MAX $100 per user per month billed yearly (MAX $120 billed monthly, reported)'
+  effective: '2026-11-02'
+  announced: null
+  mechanism: credits
+  price_type: list
+  net_disclosed: false
+  magnitude_pct: null
+  magnitude_note: 'Prior Business base price disputed across sources, so no change is computed'
+  source: https://help.clickup.com/hc/en-us/articles/44297094474391-AI-Credits-availability-and-limits
+  related_source: https://pricingsaas.com/companies/clickup/diffs/2026W45
+  digest: '2026-11-23'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of ClickUp''s help center and FAQ and PricingSaaS. Existing workspaces keep current plans.'
+  last_checked: '2026-11-23'
+  follow_up_date: '2026-12-23'
+- case_id: hubspot-agent-credits-2026
+  related_case_id: null
+  date: '2026-11-17'
+  firm: HubSpot
+  product: HubSpot connectors for Claude, ChatGPT, Gemini and Copilot; governed agent environment
+  change: 'Connector use included in existing seats with no stated cap; third-party agents on regular APIs count against the plan''s API allowance; agent work at scale in a governed environment (in development) to be billed in HubSpot Credits'
+  old_price: null
+  new_price: 'Included in seat; credits $10 per 1,000 (credits per agent action not published)'
+  effective: null
+  announced: '2026-11-17'
+  mechanism: credits
+  price_type: list
+  net_disclosed: false
+  magnitude_pct: null
+  source: https://ppc.land/hubspot-wont-charge-extra-when-claude-or-chatgpt-works-its-crm/
+  related_source: https://www.hubspot.com/products/artificial-intelligence/credits
+  digest: '2026-11-22'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-22 suggestion. Direct page fetches were blocked (session network); read from search-indexed text. HubSpot''s own post not reached.'
+  last_checked: '2026-11-23'
+  follow_up_date: '2026-12-23'
+- case_id: slack-slackbot-cap-2026
+  related_case_id: salesforce-agentforce-coworker-2027
+  date: '2026-11-11'
+  firm: Slack (Salesforce)
+  product: Slackbot (AI) on Business+
+  change: 'Business+ members limited to 15 Slackbot messages a week (Monday reset); further use billed in Salesforce Flex Credits through a connected Salesforce org with admin approval; Enterprise+ uncapped; Free and Pro preview only'
+  old_price: null
+  new_price: 'Overage in Flex Credits at $500 per 100,000 list (per-action credit rates on the Flex Credits rate card; 40/200 per action reported by Meta AI, not confirmed)'
+  effective: null
+  announced: null
+  mechanism: credits
+  price_type: list
+  net_disclosed: false
+  magnitude_pct: null
+  source: https://slack.com/help/articles/53579676130195-Slackbot-limits-and-credit-usage
+  digest: '2026-11-22'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-22 suggestion; matching ai_product_pricing row filed Nov 18. Cap and Flex Credits route confirmed in search-indexed text of Slack''s help center; per-action rates not found.'
+  last_checked: '2026-11-23'
+  follow_up_date: '2026-12-23'
 - case_id: oracle-java-smb-pricing-2026
   related_case_id: null
   date: '2026-10-08'
