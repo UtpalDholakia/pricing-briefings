@@ -1,4 +1,19 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: "zhuang-fang-song-uniform-channel-prices-2025"
+  date: "2025-12-01"
+  mechanism: "Reduced channel search costs versus lost price discrimination."
+  mechanism_codes: [impatience-self-selection]
+  comparison: "Uniform-price products versus products retaining channel-specific prices."
+  design: "Matched difference-in-differences."
+  setting: "Chinese electronics retailer; 4,150 products, 18 months, 2013-14."
+  outcome: "Unit sales, not profit."
+  result_kind: "Context-dependent"
+  result: "Initially negative, later positive. Average offline estimate +3.56%; average online estimate insignificant."
+  boundary: "Nonrandom inventory-ownership groups; one retailer."
+  source: "https://link.springer.com/article/10.1007/s11747-025-01127-z"
+  verification_note: "Read methods, pre-trend tests and results. Code classifies search/self-selection broadly."
+  digest: "2026-11-23"
+  agent: "chatgpt"
 - id: deal-ai-single-store-gap-2026
   case_id: deal-ai-single-store-gap-2026
   date: '2026-11-17'
