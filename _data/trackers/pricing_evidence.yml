@@ -1,4 +1,20 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: "goenka-bagchi-sociomoral-partitioning-3c-2024"
+  date: "2024-04-08"
+  mechanism: "Surcharge purpose affects reactions to partitioning."
+  mechanism_codes: [partitioned-pricing, motive-attribution]
+  comparison: "All-inclusive versus separate carbon-offset or shipping fee."
+  design: "Preregistered incentivized choice, study 3C, N=593."
+  setting: "MTurk meal-kit choice."
+  outcome: "Target-brand choice share."
+  result_kind: "Context-dependent"
+  result: "All-inclusive 40.1%; carbon-offset separated 27.6% (p=.009); shipping separated 40.1% (p=.999 versus all-inclusive)."
+  boundary: "Prize incentive; not actual retention. Size not manipulated."
+  source: "https://doi.org/10.1093/jcr/ucae026"
+  related_source: "https://mkwu.people.ust.hk/assignment/2026_06.pdf"
+  verification_note: "Read study 3C methods and results, pp.885-886. First-online date; issue February 2025."
+  digest: "2026-11-24"
+  agent: "chatgpt"
 - id: leo-huh-ai-price-dispersion-2026
   date: '2026'
   mechanism: 'Buyers believe AI-set prices vary less than human-set prices, so an AI counterpart feels like a safer price'
