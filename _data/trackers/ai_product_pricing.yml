@@ -1,5 +1,33 @@
 # Tracker: ai_product_pricing. How AI products themselves are priced.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: mistral-pro-api-credits-2026
+  mechanism_codes: [bundling, reference-price]
+  date: '2026-11-20'
+  kind: AI product pricing
+  title: Mistral's pricing page stops listing the API credits bundled with Pro and Education plans
+  who: Mistral AI
+  finding: 'Between Nov 17 and Nov 20, 2026 the pricing page stopped stating $25.50 a month in API credits on Pro (cut from $30 in October) and $15 on the Education plan; no announcement found and plan prices unchanged. Docs still say paid plans include monthly usage without giving an amount. The Free plan''s $10 credit was dropped in October'
+  source: https://agentdeals.dev/digest/2026-w47
+  related_source: https://github.com/robhunter/agentdeals/issues/3523
+  digest: '2026-11-24'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Based on a third-party tracker comparing an Internet Archive capture (Nov 17) with its own reading (Nov 20); Mistral''s own page and any statement not read. Not logged in price_changes.yml until confirmed on the Dec 1 snapshot.'
+  last_checked: '2026-11-24'
+  follow_up_date: '2026-12-01'
+- case_id: qwen4-max-launch-2026
+  mechanism_codes: [reference-price]
+  date: '2026-11-16'
+  kind: AI product pricing
+  title: Alibaba prices Qwen4-Max 25% below Qwen3.8-Max, flat across a 1M-token context
+  who: Alibaba Cloud (Qwen)
+  finding: 'General availability Nov 16, 2026: international (Singapore) list $1.50 input / $4.50 output per 1M tokens, cache reads $0.075; Qwen3.8-Max stays at $2.00/$6.00; same rate across the full 1M context and thinking/non-thinking modes; closed weights; no batch price published. Beijing region priced in yuan (about ¥10/¥30)'
+  source: https://www.datastudios.org/post/alibaba-qwen4-max-launch-api-pricing-1-50-input-4-50-output
+  related_source: https://qcode.cc/en/qwen4-max-api-pricing-guide
+  digest: '2026-11-23'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-23 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Prices confirmed in several third-party pages; Alibaba''s own Model Studio pricing page did not show the Qwen4-Max rows in search text. Alibaba is not a provider in the AI pricing database scope, so no price_changes.yml entry.'
+  last_checked: '2026-11-24'
+  follow_up_date: '2026-12-24'
 - case_id: openai-gpt-6-2-speed-tiers-2026
   mechanism_codes: [impatience-self-selection, reference-price]
   date: '2026-11-17'

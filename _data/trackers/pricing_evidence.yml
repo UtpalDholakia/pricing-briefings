@@ -1,4 +1,51 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: leo-huh-ai-price-dispersion-2026
+  date: '2026'
+  mechanism: 'Buyers believe AI-set prices vary less than human-set prices, so an AI counterpart feels like a safer price'
+  mechanism_codes: [algorithm-attribution, reference-price]
+  comparison: Price quotes or trading prices attributed to an AI agent vs a human agent
+  design: 'Multiple experiments (Studies 1A, 1B and follow-ups) in a product resale setting; utilitarian and hedonic categories'
+  setting: Consumer resale (selling used products to a buyer)
+  outcome: Perceived price dispersion and preference for an AI vs human buyer
+  result_kind: Positive in this setting
+  result: 'AI agents are perceived to produce narrower price dispersion; that perception drives preference for AI buyers, more so among consumers low in negotiator self-efficacy'
+  boundary: 'Abstract only; sample sizes and effect sizes not read; perceptions, not realised prices; resale setting'
+  source: https://www.sciencedirect.com/science/article/abs/pii/S0022435926000709
+  verification_note: 'Journal of Retailing, in press (2026). Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Authors given as Leo and Huh in indexed text; not confirmed on the page.'
+  digest: '2026-11-24'
+  agent: claude
+- id: household-vs-individual-reference-prices-2026
+  date: '2026'
+  mechanism: 'Reference prices belong to the person who shops, not the household; pooling shoppers misestimates price and reference effects'
+  mechanism_codes: [reference-price]
+  comparison: Reference-price choice models estimated at household level vs at the level of the individual shopper within the household
+  design: 'Bayesian (MCMC) choice models on a proprietary panel that identifies which household member made each purchase; three product categories'
+  setting: Grocery categories (retail panel)
+  outcome: Price-sensitivity and reference-price parameters; implied cost of using household-level estimates
+  result_kind: Positive in this setting
+  result: 'Household-level estimates differ substantially from individual-level ones; frequent shoppers in a household are more price sensitive and respond differently to reference prices than infrequent ones'
+  boundary: 'Abstract only; size of the pricing cost of the error not read; categories and data source not named in indexed text'
+  source: https://www.sciencedirect.com/science/article/abs/pii/S0022435926000291
+  verification_note: 'Journal of Retailing, 2026 listing. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Authors not identified.'
+  digest: '2026-11-24'
+  agent: claude
+- id: gusto-small-business-pricing-2026
+  case_id: gusto-small-business-pricing-2026
+  date: '2026-11-12'
+  mechanism: 'Cost-push pricing by firms too small to absorb input costs'
+  mechanism_codes: [dual-entitlement]
+  comparison: Share of US small businesses raising, holding or cutting prices over the past 12 months, and plans for next year
+  design: 'Online survey of 1,731 owners of US businesses with fewer than 25 employees, Aug 17-Sep 7, 2026; weighted to industry and firm-age mix; margin of error about 3.4 points'
+  setting: US small businesses (Gusto customers)
+  outcome: Self-reported price changes and plans
+  result_kind: Descriptive
+  result: '52% raised prices (most often by up to 10%), 42% held, 3% cut; 50% plan to raise again next year; 59% say changing input prices hurt their business, 3% that it helped'
+  boundary: 'Gusto customers only; self-report; no customer response measured'
+  source: https://gusto.com/resources/gusto-insights/state-of-small-business-2026
+  related_source: https://www.prnewswire.com/news-releases/small-business-owners-are-more-confident-in-their-own-companies-than-in-the-economy-and-two-thirds-use-ai-gusto-survey-finds-302936587.html
+  verification_note: 'Filed from Meta AI''s 2026-11-23 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Figures confirmed on Gusto''s report page and CPA Practice Advisor in search text.'
+  digest: '2026-11-23'
+  agent: meta
 - id: "zhuang-fang-song-uniform-channel-prices-2025"
   date: "2025-12-01"
   mechanism: "Reduced channel search costs versus lost price discrimination."

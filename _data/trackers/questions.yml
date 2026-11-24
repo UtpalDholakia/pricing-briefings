@@ -1,5 +1,21 @@
 # Tracker: questions. Open research questions with status and priority.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- date: '2026-11-24'
+  question_id: refund-repurposed-cut-noticed-2026
+  question: 'When a retailer that promised refund-funded price cuts later spends the refund absorbing a different cost (Walmart: rollbacks down from 11,000+ to about 7,700 while refunds offset diesel), do shoppers notice the smaller number of cuts, and do they judge the retailer as having broken the promise?'
+  context: 'Walmart Q3 FY27 (Nov 19, 2026); tariff-refunds-2026 story'
+  digest: '2026-11-24'
+  status: Open
+  priority: Medium
+  answered_by: null
+- date: '2026-11-23'
+  question_id: nigeria-depot-pump-gap-2026
+  question: 'When a refinery cuts its petrol price sharply in a week but pump prices fall only a little, how much of the gap is stock bought at higher prices and how much is margin, and does it close by December travel?'
+  context: 'Meta AI 2026-11-23; Dangote gantry ₦1,070 vs Abuja pumps ₦1,300-1,385 (dangote-petrol-nov-2026)'
+  digest: '2026-11-23'
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-23'
   question_id: speed-tier-intro-price-anchor-2026
   question: 'When a premium speed tier launches at an introductory multiple (OpenAI''s Ultrafast at 3x Standard until Feb 28, then 6x), do buyers who adopt at 3x treat it as the reference and drop the tier at 6x, or does habit keep them paying?'

@@ -13,7 +13,7 @@
   - motive-attribution
   - left-digit
   created: '2026-11-17'
-  last_updated: '2026-11-18'
+  last_updated: '2026-11-24'
   evidence_for:
   - kind: evidence
     ref: ai-vs-human-price-setter-fairness
@@ -33,6 +33,9 @@
   - kind: evidence
     ref: mamen-hem-human-vs-ai-pricing-fairness
     note: 'Opposite direction: ''AI-driven'' rated less fair than ''human-developed'' algorithms (n=600). Supports ''judged differently'' but shows the label matters.'
+  - kind: evidence
+    ref: leo-huh-ai-price-dispersion-2026
+    note: 'Boundary: AI-attributed prices are perceived as less dispersed (resale setting, J. Retailing 2026); a structural belief, not a fairness judgement, so it does not count toward the verdict but suggests a route by which AI attribution could shape fairness.'
   evidence_against: []
   related_questions:
   - ai-price-setter-fairness-2026

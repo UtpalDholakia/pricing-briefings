@@ -1,5 +1,24 @@
 # Tracker: explanations. How sellers explain price changes.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: walmart-rollbacks-diesel-2026
+  mechanism_codes: [reference-price, dual-entitlement, price-change-communication]
+  date: '2026-11-19'
+  firm: Walmart
+  change: 'Walmart U.S. ends Q3 FY27 with about 7,700 price rollbacks, down from more than 11,000 at the end of Q2 (historical range 5,000-5,500); no list-price rise announced'
+  explanation: 'CEO John Furner (CNBC): diesel costs ran higher than expected, and tariff refunds (about $2.9B, earlier pledged to price cuts) helped offset them and keep prices low; executives expect more than $2B in incremental diesel and transport costs this year'
+  category: Cost
+  reaction: 'Results beat forecasts and guidance was raised; no consumer reaction to the smaller rollback count found'
+  outcome: Ongoing
+  outcome_note: 'Refund money earlier framed as funding price cuts is now framed as absorbing a different cost. Watch the Q4 rollback count (Feb 2027) and whether the count falls back toward the historical range'
+  outcome_date: null
+  magnitude_pct: null
+  source: https://www.cnbc.com/2026/11/19/walmart-wmt-q3-2026-earnings.html
+  related_source: https://progressivegrocer.com/price-investments-accelerated-delivery-drive-walmarts-q3-results
+  digest: '2026-11-24'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Rollback counts from Progressive Grocer and call summaries; the CNBC quote was read in search text only; the $2.9B refund figure is from August coverage (Modern Retail).'
+  last_checked: '2026-11-24'
+  follow_up_date: '2027-02-20'
 - case_id: bellring-elasticity-2026
   mechanism_codes: [reference-price, price-change-communication]
   date: '2026-11-18'

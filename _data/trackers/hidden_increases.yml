@@ -1,5 +1,23 @@
 # Tracker: hidden_increases. Shrinkflation, upsizing with a markup, unbundling, inflated reference prices and fees.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: usps-fuel-surcharge-2027
+  mechanism_codes: [partitioned-pricing, drip-pricing]
+  date: '2026-11-12'
+  kind: Fee
+  product: USPS domestic parcel shipping (Ground Advantage, Priority Mail, Priority Mail Express, Parcel Select)
+  change: 'Temporary 8% fuel surcharge added in April becomes permanent at 11% of base postage from Jan 17, 2027 (8% plus 3% for further fuel rises), alongside an average 5.9% parcel price increase; USPS plans eventually to adjust the surcharge weekly on EIA fuel prices; reevaluation in July 2027; international excluded'
+  unit_price_effect: null
+  magnitude_pct: null
+  magnitude_note: 'Surcharge rises from 8% to 11% of base postage; the 5.9% rate rise is separate. Pending Postal Regulatory Commission review (Docket CP2027-1)'
+  industry: Parcel shipping
+  geography: United States
+  source: https://about.usps.com/newsroom/national-releases/2026/1112-usps-recommends-shipping-price-adjustments-for-2027.htm
+  related_source: https://waybillwire.com/articles/usps-locks-in-11-fuel-surcharge-and-small-sellers-redraw-the-math-on-free-shippi
+  digest: '2026-11-23'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-23 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Filing, 11%, Jan 17 date and 5.9% confirmed via USPS newsroom text, Supply Chain Dive and FreightWaves; the small-seller anecdotes in Waybill Wire were not checked.'
+  last_checked: '2026-11-24'
+  follow_up_date: '2027-01-17'
 - case_id: amazon-fba-fees-2027
   mechanism_codes: [partitioned-pricing]
   date: '2026-11-05'

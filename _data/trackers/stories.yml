@@ -48,7 +48,7 @@
   next_milestone: FTC response to the senators' Nov 11 letter; Logitech class action (N.D. Cal.)
   milestone_date: null
   why_it_matters: A cost-based justification turned into an implied promise; tests whether consumers expect prices to fall when the cited cost is refunded
-  last_checked: '2026-11-18'
+  last_checked: '2026-11-24'
   follow_up_date: '2026-12-17'
   closed_date: null
   outcome_summary: null
@@ -65,6 +65,9 @@
   - date: '2026-11-16'
     note: 'ProPublica, from filings and earnings calls: at least nine listed firms put part of their refunds into executive or employee bonuses (TJX accrued $112M of a $331M refund on about $490M of tariffs paid; Acushnet $12M of $45M); Stanley Black & Decker''s 10-Q says its $298M refund gain was partly offset by variable incentive pay'
     source: https://www.propublica.org/article/trump-tariff-refunds-corporate-bonuses
+  - date: '2026-11-19'
+    note: 'Walmart Q3 FY27: rollbacks down to about 7,700 from more than 11,000 at the end of Q2 (historical range 5,000-5,500); CEO John Furner tells CNBC tariff refunds helped offset higher-than-expected diesel costs and maintain lower prices; executives expect over $2B in incremental diesel and transport costs this year'
+    source: https://www.cnbc.com/2026/11/19/walmart-wmt-q3-2026-earnings.html
   digest: '2026-11-17'
   verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
 - case_id: ftc-6b-personalized-pricing-2026
@@ -212,11 +215,14 @@
   next_milestone: Litigation (no dated milestone — check monthly)
   milestone_date: null
   why_it_matters: Posted price as a promise; low-attention shoppers bear errors
-  last_checked: '2026-11-15'
+  last_checked: '2026-11-24'
   follow_up_date: '2026-12-15'
   closed_date: null
   outcome_summary: null
   updates:
+  - date: '2026-11-20'
+    note: 'Amended complaint adds ten states (DE, GA, KY, ME, MN, NM, OR, RI, SC, SD), now FTC plus 30 states; alleged conduct Jan 2019-Mar 2026; Dollar General says it will defend. Family Dollar settled a parallel FTC and 17-state case for $63M on Nov 12'
+    source: https://www.ftc.gov/news-events/news/press-releases/2026/11/ten-additional-states-join-ftc-lawsuit-alleging-dollar-general-charged-consumers-more-advertised
   - date: '2026-10-26'
     note: Suit filed; 29,000+ price-honoring complaints
     source: https://grocerydive.com/news/dollar-general-sued-ftc-alleged-deceptive-pricing/872885
@@ -309,17 +315,20 @@
     source: https://www.lewissilkin.com/insights/2026/10/15/eu-consumer-protection-network-launches-action-involving-nine-video-games-compani-102o5do
 - case_id: profeco-buen-fin-2026
   story: Profeco's Buen Fin price-history microsite (Mexico)
-  status: Open
+  status: Closed
   started: '2026-11-09'
   next_milestone: Profeco's final Buen Fin complaint and refund tally
   milestone_date: '2026-11-24'
   why_it_matters: A regulator publishing price histories to expose pre-sale price inflation, the inflated-reference-price problem the other trackers cover in the US and Europe
-  last_checked: '2026-11-17'
-  follow_up_date: '2026-11-24'
-  follow_up_source: https://www.cronica.com.mx/nacional/2026/11/15/en-dos-dias-profeco-recibe-72-quejas-durante-el-buen-fin-incumplir-promociones-y-precios-encabezan-reclamos/
-  closed_date: null
-  outcome_summary: null
+  last_checked: '2026-11-24'
+  follow_up_date: null
+  follow_up_source: https://vanguardia.com.mx/noticias/mexico/buen-fin-2026-profeco-resuelve-casi-todas-las-quejas-y-recupera-mas-de-15-millones-de-pesos-MH24898127
+  closed_date: '2026-11-24'
+  outcome_summary: 'Final Buen Fin tally (Nov 18): 243 complaints over Nov 13-17, 98.8% settled by conciliation, MXN 1,571,779.65 recovered; unhonoured promotions (30) and advertised prices not respected (25) among the top reasons; the microsite exposed price gaps but no sanction tied to it was reported'
   updates:
+  - date: '2026-11-18'
+    note: 'Final balance: 243 complaints and 11,737 consultations over Nov 13-17; 98.8% conciliated; MXN 1,571,779.65 recovered. Top reasons: promotions not honoured (30), refusal to deliver (29), offers not honoured (27), advertised prices not respected (25). Most complaints: Walmart (45), Sam''s Club (21), Liverpool (14), Soriana (13), Coppel (11)'
+    source: https://vanguardia.com.mx/noticias/mexico/buen-fin-2026-profeco-resuelve-casi-todas-las-quejas-y-recupera-mas-de-15-millones-de-pesos-MH24898127
   - date: '2026-11-15'
     note: 'Interim: 72 complaints in two days, led by promotions and prices not honoured; about MXN 400,000 recovered; 2,115 consultations and 70 store inspections. 2025 full event: 311 complaints'
     source: https://www.cronica.com.mx/nacional/2026/11/15/en-dos-dias-profeco-recibe-72-quejas-durante-el-buen-fin-incumplir-promociones-y-precios-encabezan-reclamos/
@@ -330,4 +339,5 @@
     note: Microsite tracks weekly prices for 490 products across about 400 stores; largest gap MXN 9,309
     source: https://particle.news/story/profeco-launches-pricecomparison-microsite-as-shoppers-rely-on-ai-ahead-of-el-buen-fin
   agent: meta
+  verification_note: 'Final tally read on 2026-11-24 from search-indexed text of Mexican press reports of Profeco''s Nov 18 release (Vanguardia, Marketing4eCommerce, El Congresista); direct page fetches were blocked (session network).'
   digest: '2026-11-15'

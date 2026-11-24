@@ -1,5 +1,25 @@
 # Tracker: essential_prices. Price changes for essentials: energy, tuition, healthcare, housing, food.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: dangote-petrol-nov-2026
+  mechanism_codes: [reference-price, motive-attribution]
+  date: '2026-11-20'
+  sector: Energy
+  firm_or_place: Nigeria (Dangote refinery gantry price and Abuja pump prices)
+  change: 'Refinery gantry price cut to ₦1,070 a litre from ₦1,130; Abuja pumps ₦1,300-1,385 after cuts of about ₦25-35'
+  magnitude_pct: null
+  magnitude_note: 'Gantry cut 60/1,130 = 5.3%; pump cuts of ₦25-35 on about ₦1,325-1,420 are roughly 2-2.5%; computed from reported prices, which outlets date differently'
+  who_pays: Nigerian motorists and transport users
+  explanation: 'Refinery returned to pricing linked to international gasoline benchmarks; stations cite stock bought at higher prices and transport costs'
+  reaction: null
+  outcome: Ongoing
+  outcome_note: 'Watch whether pump prices close the gap before December travel'
+  source: https://businessday.ng/energy/oilandgas/article/dangote-cuts-petrol-gantry-price-to-lowest-in-four-months/
+  related_source: https://www.penagencynews.com/dangote-cuts-petrol-gantry-price-to-naira1070-lowest-since-july/
+  digest: '2026-11-23'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-23 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. See the nonwestern_pricing entry for date and prior-price discrepancies.'
+  last_checked: '2026-11-24'
+  follow_up_date: '2026-12-24'
 - case_id: uk-energy-cap-jan-2027
   mechanism_codes: [reference-price]
   date: '2026-11-19'
@@ -38,7 +58,8 @@
   digest: '2026-11-22'
   agent: meta
   verification_note: 'Filed from Meta AI''s 2026-11-22 suggestion. Direct page fetches were blocked (session network); AFBF figures confirmed in search-indexed text (Feedstuffs, local TV); Groundwork figures not found in search.'
-  last_checked: '2026-11-23'
+  time_price_note: 'Meta AI 2026-11-23 via Omni Calculator: the $58.63 dinner equals about 1h47m of average production-worker wages vs about 3h11m in 1986 (Human Progress gives 1.76 vs 3.22 hours); about 8 hours at the federal minimum wage. Omni page not read; Human Progress and Cato figures agree roughly'
+  last_checked: '2026-11-24'
   follow_up_date: null
 - case_id: hawaii-tuition-freeze-2026
   mechanism_codes: [price-change-communication]

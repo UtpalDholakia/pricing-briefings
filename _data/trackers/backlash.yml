@@ -18,8 +18,8 @@
   digest: '2026-11-22'
   agent: claude
   verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The $200-to-$600 rise is a single fan account; face value vs resale not separated in coverage.'
-  last_checked: '2026-11-23'
-  follow_up_date: '2026-12-22'
+  last_checked: '2026-11-24'
+  follow_up_date: '2026-12-24'
 - case_id: valve-cs2-sticker-pricing-2026
   mechanism_codes: [reference-price, personalization-fairness, scarcity-urgency]
   date: '2026-05-22'
@@ -72,8 +72,8 @@
   reaction_volume: null
   source: https://www.ticketnews.com/2026/11/noah-kahan-presale-prices-resale-caps-2027/
   digest: '2026-11-11'
-  last_checked: '2026-11-23'
-  follow_up_date: '2026-12-22'
+  last_checked: '2026-11-24'
+  follow_up_date: '2026-12-24'
 - case_id: earls-admin-fee-2026
   date: '2026-11-09'
   firm: Earls Kitchen + Bar (Denver)
@@ -88,8 +88,8 @@
   reaction_volume: null
   source: https://www.wfmd.com/2026/11/09/restaurant-admin-fees-spark-backlash-as-diners-question-what-theyre-paying-for/
   digest: '2026-11-10'
-  last_checked: '2026-11-23'
-  follow_up_date: '2026-12-22'
+  last_checked: '2026-11-24'
+  follow_up_date: '2026-12-24'
 - case_id: duffys-operations-charge-2026
   date: '2026-11-09'
   firm: Duffy's (Florida)
@@ -152,8 +152,8 @@
   reaction_volume: null
   source: https://www.foxnews.com/travel/cruise-passengers-criticize-new-program-identifying-early-tippers-board
   digest: '2026-11-04'
-  last_checked: '2026-11-23'
-  follow_up_date: '2026-12-22'
+  last_checked: '2026-11-24'
+  follow_up_date: '2026-12-24'
 - case_id: car-feature-subscriptions-2026
   date: '2026-11-04'
   firm: Automakers (VW, Subaru)
@@ -268,8 +268,8 @@
   reaction_volume: null
   source: https://hoodline.com/2026/10/downtown-la-rooftop-spot-uca-terraza-slammed-over-surcharge-on-top-of-mandatory-tip
   digest: '2026-10-20'
-  last_checked: '2026-11-23'
-  follow_up_date: '2026-12-22'
+  last_checked: '2026-11-24'
+  follow_up_date: '2026-12-24'
 - case_id: uniqlo-socks-2026
   date: 2026-10
   firm: Uniqlo (Japan)
