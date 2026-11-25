@@ -1,4 +1,36 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: "lee-free-shipping-small-fee-2026"
+  date: "2026-05-13"
+  mechanism: "Shipping partition changes evaluation."
+  mechanism_codes: [partitioned-pricing, price-quality-inference]
+  comparison: "Free versus KRW2,000 shipping; fixed KRW50,000 total."
+  design: "Within-person lab task; N=38 analyzed."
+  setting: "South Korea; shoe images."
+  outcome: "Four-point purchase intention; intention/time composite (RIS)."
+  result_kind: "Context-dependent"
+  result: "Intent 2.57 versus 2.55; contrast not reported significant. RIS 3.06 versus 2.65, p=.012."
+  boundary: "No purchases. Quality beliefs unmeasured; mechanism untested."
+  source: "https://doi.org/10.1371/journal.pone.0349032"
+  related_source: "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0349032.s001&type=supplementary"
+  verification_note: "Read methods, results, limitations and supporting Table S1."
+  digest: "2026-11-25"
+  agent: "chatgpt"
+- id: "zhou-shipping-threshold-increase-2026"
+  date: "2026-03-13"
+  mechanism: "An old threshold anchors perceived attainability."
+  mechanism_codes: [reference-price]
+  comparison: "Free-shipping threshold increase from $80 to $100, versus the study's difference-in-differences counterfactual."
+  design: "Difference-in-differences using transactions and clickstream; working paper."
+  setting: "North American online grocer; continuing purchasers."
+  outcome: "Consumer spending."
+  result_kind: "Negative in this setting"
+  result: "Estimated 19.4% decline; larger among customers more accustomed to clearing the original threshold."
+  boundary: "One platform; excludes noncontinuing purchasers. Indexed abstract only: control construction, sample size and uncertainty not checked. Not a general threshold elasticity or a threshold-versus-cap test."
+  source: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6297139"
+  related_source: "https://www.bschool.cuhk.edu.hk/events/how-to-and-how-not-to-increase-free-shipping-thresholds-evidence-from-online-retail/"
+  verification_note: "First posted March 13; revised October 15, 2026. Current SSRN abstract read through search index; full paper inaccessible. CUHK seminar abstract corroborates core estimate, but does not state the continuing-purchaser restriction. Separate mechanism experiment not filed as a tested comparison without its design details."
+  digest: "2026-11-25"
+  agent: "chatgpt"
 - id: kim-amir-wilbur-tip-norms-2026
   case_id: tip-request-norms-2026
   date: '2026-10-30'
