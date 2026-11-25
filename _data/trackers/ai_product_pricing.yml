@@ -1,5 +1,32 @@
 # Tracker: ai_product_pricing. How AI products themselves are priced.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: llm-cold-start-pricing-2026
+  mechanism_codes: [reference-price]
+  date: '2026-11-02'
+  kind: AI product pricing
+  title: 'A preprint models pricing a new LLM service when users'' willingness to pay changes with use'
+  who: 'Du and Lu (arXiv 2611.03199)'
+  finding: 'Treats launch pricing of an LLM service as two-sided learning: the provider has no demand history and users learn what the service is worth as they use it. Derives matching upper and lower bounds on minimax regret, with two regimes depending on serving cost; simulations favour the proposed algorithms over standard online-learning baselines'
+  source: https://arxiv.org/abs/2611.03199
+  digest: '2026-11-25'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Read from the abstract; unreviewed preprint; theory and simulation, no field data. Submission date inferred from the search index (about Nov 2).'
+  last_checked: '2026-11-25'
+  follow_up_date: null
+- case_id: github-copilot-access-2026
+  mechanism_codes: [reference-price, usage-anxiety]
+  date: '2026-10-28'
+  kind: AI product pricing
+  title: GitHub's Copilot access removes the seat charge and meters usage from the first request
+  who: GitHub (Microsoft)
+  finding: 'For GitHub Enterprise Cloud licensees there is no Copilot seat charge; users without that licence pay $10 a month (Copilot Standalone); in both cases AI usage is metered from the first request against the enterprise budget, with no included allowance. An exhausted budget does not remove the seat. Voluntary; cannot be mixed with Business or Enterprise seats in the same enterprise; available first to enterprises working with an account team'
+  source: https://github.blog/changelog/2026-10-28-github-enterprise-now-includes-access-to-github-copilot
+  related_source: https://docs.github.com/en/copilot/get-started/whats-changing-with-github-enterprise-and-copilot
+  digest: '2026-11-24'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-24 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Seat, Standalone price and metering confirmed in GitHub docs and changelog text. GitHub docs confirm that Business ($19) and Enterprise ($39) seats include pooled AI credits and that overage is $0.01 a credit; Meta AI''s exact allowances (1,900 and 3,900 credits) were not confirmed in this run. GitHub is not one of the AI pricing database''s eight providers, so nothing is logged in price_changes.yml.'
+  last_checked: '2026-11-25'
+  follow_up_date: '2027-01-28'
 - case_id: mistral-pro-api-credits-2026
   mechanism_codes: [bundling, reference-price]
   date: '2026-11-20'

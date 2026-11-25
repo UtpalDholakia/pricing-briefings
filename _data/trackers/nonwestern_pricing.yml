@@ -1,5 +1,20 @@
 # Tracker: nonwestern_pricing. Pricing outside the US/UK/EU, preferably from local-language sources.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: norway-black-week-preraise-2026
+  mechanism_codes: [reference-price, transaction-utility]
+  date: '2026-11-23'
+  country: Norway
+  language: Norwegian
+  firm_or_place: Norwegian online retailers (Godpris and Prisjakt price data)
+  change: 'Three in ten tracked products still at least 5% dearer than in early September as Black Week began (about two in ten a year earlier); about one in four at least 5% cheaper, against more than half marked down during last year''s Black Week'
+  context: 'Norway is outside the EU, so the EU 30-day prior-price rule does not apply directly; Norwegian marketing law requires that a before-price was actually charged. Retailers deny the rises are linked to the sale'
+  source: https://kommunikasjon.ntb.no/pressemelding/19139360/black-week-i-gang-en-av-fire-varer-er-billigere-men-tre-av-ti-er-fortsatt-dyrere-enn-i-september?publisherId=17848964
+  related_source: https://www.tek.no/i/mKmPkq
+  digest: '2026-11-25'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The legal context is from general knowledge of Norway''s before-price rules and was not re-read today.'
+  last_checked: '2026-11-25'
+  follow_up_date: '2026-12-10'
 - case_id: dangote-petrol-nov-2026
   mechanism_codes: [reference-price, motive-attribution]
   date: '2026-11-20'

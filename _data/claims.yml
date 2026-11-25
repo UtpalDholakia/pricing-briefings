@@ -262,7 +262,7 @@
   - partitioned-pricing
   - drip-pricing
   created: '2026-11-17'
-  last_updated: '2026-11-18'
+  last_updated: '2026-11-25'
   evidence_for:
   - kind: evidence
     ref: partitioned-surcharge-magnitude
@@ -286,6 +286,9 @@
   - kind: evidence
     ref: lee-unexpected-surcharge-2026
     note: 'Boundary (unexpected charge vs no charge): a one-cent surcharge on a complimentary item cut fairness; not an itemised vs all-in comparison.'
+  - kind: evidence
+    ref: goenka-bagchi-sociomoral-partitioning-3c-2024
+    note: 'Boundary (itemised vs all-in at the same total; purpose varied, size not): separating a carbon-offset fee cut choice share from 40.1% to 27.6%, while separating a shipping fee left it at 40.1%. Purpose of the fee, not only its size, conditions the effect; suggested by ChatGPT, 2026-11-24.'
   related_questions: []
   related_dives: []
   status_history:
@@ -1153,7 +1156,7 @@
   - transaction-utility
   test: Repeat the price-history measurement in a second market and a second year.
   created: '2026-11-17'
-  last_updated: '2026-11-23'
+  last_updated: '2026-11-25'
   evidence_for:
   - kind: tracker
     ref: shoprime-black-friday-index-2026
@@ -1167,6 +1170,9 @@
   - kind: evidence
     ref: decodo-pre-black-friday-hikes-2026
     note: 'Context (vendor data, US 2026): about 1 in 8 products, and 1 in 3 electronics, rose in price between early September and late October; for 2025, 6 in 10 marked-up products were no cheaper on Black Friday than in September. A share of marked-up products, not of advertised deals, so not counted on A or B.'
+  - kind: evidence
+    ref: godpris-norway-black-week-2026
+    note: 'Context (vendor data, Norway 2026): early in Black Week, 29% of about 1,000 popular products were still at least 5% dearer than in early September and about 23% at least 5% cheaper. A share of tracked products, measured before most offers, not of advertised deals, so not counted on A or B.'
   - kind: evidence
     ref: which-black-friday-2025
     note: 'Direct test, measure B (matched or beaten outside the event): UK, 175 appliances, prices tracked 6 months either side; ties count. 83% same or cheaper at another time; 42% strictly cheaper; none at their year low on Black Friday.'

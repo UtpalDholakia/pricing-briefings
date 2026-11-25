@@ -18,7 +18,7 @@
   digest: '2026-11-22'
   agent: claude
   verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The $200-to-$600 rise is a single fan account; face value vs resale not separated in coverage.'
-  last_checked: '2026-11-24'
+  last_checked: '2026-11-25'
   follow_up_date: '2026-12-24'
 - case_id: valve-cs2-sticker-pricing-2026
   mechanism_codes: [reference-price, personalization-fairness, scarcity-urgency]
@@ -72,7 +72,7 @@
   reaction_volume: null
   source: https://www.ticketnews.com/2026/11/noah-kahan-presale-prices-resale-caps-2027/
   digest: '2026-11-11'
-  last_checked: '2026-11-24'
+  last_checked: '2026-11-25'
   follow_up_date: '2026-12-24'
 - case_id: earls-admin-fee-2026
   date: '2026-11-09'
@@ -88,7 +88,7 @@
   reaction_volume: null
   source: https://www.wfmd.com/2026/11/09/restaurant-admin-fees-spark-backlash-as-diners-question-what-theyre-paying-for/
   digest: '2026-11-10'
-  last_checked: '2026-11-24'
+  last_checked: '2026-11-25'
   follow_up_date: '2026-12-24'
 - case_id: duffys-operations-charge-2026
   date: '2026-11-09'
@@ -152,7 +152,7 @@
   reaction_volume: null
   source: https://www.foxnews.com/travel/cruise-passengers-criticize-new-program-identifying-early-tippers-board
   digest: '2026-11-04'
-  last_checked: '2026-11-24'
+  last_checked: '2026-11-25'
   follow_up_date: '2026-12-24'
 - case_id: car-feature-subscriptions-2026
   date: '2026-11-04'
@@ -227,16 +227,17 @@
   framing: Streaming exclusive
   backlash: 'Leafs fans revolt: what was included became an add-on'
   reversed: 'No'
-  reversal_note: null
+  reversal_note: '2026-11-25 check: no reversal or statement found; the Monday package is still C$12.99 a month for non-Rogers TV subscribers (free for Rogers TV customers with Sportsnet), and Toronto has 13 streaming-only Monday games this season'
   days_to_reversal: null
   outcome_date: null
   magnitude_pct: 30
   reaction_volume: null
   source: https://www.iphoneincanada.ca/2026/10/21/leafs-fans-sportsnet-plus-monday-night-hockey-cost/
+  follow_up_source: https://thehockeynews.com/nhl/toronto-maple-leafs/latest-news/watching-13-maple-leafs-games-just-got-more-expensive-for-non-rogers-subscribers
   digest: '2026-10-26'
   magnitude_note: ~30% earlier price increase; add-on C$12.99/month
-  last_checked: '2026-11-15'
-  follow_up_date: '2026-11-25'
+  last_checked: '2026-11-25'
+  follow_up_date: '2026-12-25'
 - case_id: sam-fender-tour-2026
   date: '2026-10-24'
   firm: Sam Fender
@@ -268,7 +269,7 @@
   reaction_volume: null
   source: https://hoodline.com/2026/10/downtown-la-rooftop-spot-uca-terraza-slammed-over-surcharge-on-top-of-mandatory-tip
   digest: '2026-10-20'
-  last_checked: '2026-11-24'
+  last_checked: '2026-11-25'
   follow_up_date: '2026-12-24'
 - case_id: uniqlo-socks-2026
   date: 2026-10

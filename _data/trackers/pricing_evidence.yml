@@ -1,4 +1,37 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: kim-amir-wilbur-tip-norms-2026
+  case_id: tip-request-norms-2026
+  date: '2026-10-30'
+  mechanism: 'An injunctive-norm tip request (tipping is customary here) raises tipping more than reciprocity appeals, without cutting later demand'
+  mechanism_codes: [social-norms]
+  comparison: Injunctive-norm message vs personalised reciprocity vs impersonal reciprocity tip requests
+  design: 'Randomised field experiments, 436,969 transactions (web and app)'
+  setting: A global freelance services marketplace
+  outcome: Tipping incidence; later orders and spending
+  result_kind: Positive in this setting
+  result: 'Norm message raised tipping by 11.8 points for new buyers and 6.8 for repeat buyers on the web; 2.5 and 1.4 points in the app. Effects grew with order price. Norm and personalised-reciprocity messages raised later orders and spending on the web; no significant change in app repatronage'
+  boundary: 'One platform, digital services bought remotely; abstract-level reading only, so baseline tip rates and effect sizes on spending are not recorded here'
+  source: https://pubsonline.informs.org/doi/10.1287/mksc.2025.0392
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Read from the abstract and metadata (Marketing Science, Articles in Advance, Oct 30, 2026); full text not read.'
+  digest: '2026-11-25'
+  agent: claude
+- id: godpris-norway-black-week-2026
+  case_id: norway-black-week-preraise-2026
+  date: '2026-11'
+  mechanism: 'Raising a price weeks before a sale so that the sale price is measured from a higher reference point'
+  mechanism_codes: [reference-price, transaction-utility]
+  comparison: Black Week prices vs early-September prices of the same products, 2026 vs 2025
+  design: Observational price-tracker panel (price-comparison service data)
+  setting: 'Norway, about 1,000 popular products (Godpris); about 2 million listings (Prisjakt), autumn 2026'
+  outcome: Share of products at least 5% dearer or at least 5% cheaper than in early September
+  result_kind: Inconclusive
+  result: '29% at least 5% dearer than early September (18-20% a year earlier); about 23% at least 5% cheaper early in Black Week, vs more than half marked down during Black Week 2025'
+  boundary: 'Vendor data; a share of popular products, not of advertised deals; measured early in Black Week, before most offers; does not separate cost-driven rises from reference-price building'
+  source: https://kommunikasjon.ntb.no/pressemelding/19139360/black-week-i-gang-en-av-fire-varer-er-billigere-men-tre-av-ti-er-fortsatt-dyrere-enn-i-september?publisherId=17848964
+  related_source: https://www.tek.no/i/mKmPkq
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages.'
+  digest: '2026-11-25'
+  agent: claude
 - id: "goenka-bagchi-sociomoral-partitioning-3c-2024"
   date: "2024-04-08"
   mechanism: "Surcharge purpose affects reactions to partitioning."

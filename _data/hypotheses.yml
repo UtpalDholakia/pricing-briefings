@@ -547,6 +547,35 @@
     new_status: Testing
     reason: 'Created from claim tariff-refund-entitlement, superseded in the audit: its pointers show the situation, not the predicted outcome. Leads (not evidence): tariff-refunds-2026.'
     source: null
+- hypothesis_id: zero-seat-meter-raises-ai-spend
+  hypothesis: 'Removing the prepaid AI seat and metering from the first request (GitHub Copilot access) raises total AI spend per developer, because the seat price no longer anchors the budget.'
+  predicts: Enterprises that move from Copilot Business or Enterprise seats to Copilot access spend more per developer in their first quarter after the move than they did on seats.
+  test: 'GitHub billing disclosures, customer case studies or analyst surveys comparing per-developer Copilot spend before and after the transition, for the same enterprises; vendor statements that the option is popular are not evidence.'
+  status: Testing
+  confidence: Low
+  lanes:
+  - B2B and enterprise pricing
+  - Primary documents instead of news
+  last_hunted: '2026-11-25'
+  hunt_count: 1
+  hunts:
+  - date: '2026-11-25'
+    agent: claude
+    outcome: miss
+    note: 'Searched GitHub billing docs, changelog and community sources for per-developer spend before and after moving to Copilot access; found only vendor documentation (Business $19 and Enterprise $39 include pooled credits, overage $0.01 per credit, budget is not a total cap) and no customer spend data. The option launched Oct 28 for account-team customers only, so no first-quarter data can exist yet. Next hunt after 2026-12-09.'
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions:
+  - zero-seat-ai-spend-2026
+  created: '2026-11-25'
+  agent: meta
+  history:
+  - date: '2026-11-25'
+    old_status: null
+    new_status: Testing
+    reason: 'Filed from Meta AI''s 2026-11-24 hypothesis proposal (states a test); 15 of 20 Testing slots now used. Lead (not evidence): github-copilot-access-2026.'
+    source: https://utpaldholakia.github.io/pricing-briefings/briefings/2026-11-24-meta/
 - hypothesis_id: less-accurate-ai-buyer-better-off
   hypothesis: A less accurate AI buyer can leave consumers better off than a fully accurate one, because sellers respond to how buyers process prices.
   predicts: Consumer surplus is higher in a market of less accurate AI buyers than of fully accurate ones.

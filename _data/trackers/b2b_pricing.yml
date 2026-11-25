@@ -2,6 +2,48 @@
 # Newest first. Common fields follow AGENTS.md section 6 (case_id, last_checked, follow_up_date, agent, verification_note).
 # mechanism: seat-based / usage-based / credits / flat / outcome-based. price_type: list / net / quote.
 # net_disclosed: false unless the source states what buyers actually pay after negotiation.
+- case_id: github-copilot-access-2026
+  related_case_id: null
+  date: '2026-10-28'
+  firm: GitHub
+  product: GitHub Copilot for GitHub Enterprise Cloud (new 'Copilot access' option)
+  change: 'Third purchase option beside Copilot Business and Enterprise: no seat charge for Enterprise Cloud licensees, $10 per user per month Copilot Standalone for others; all AI usage metered from the first request, no included allowance; voluntary; cannot be mixed with Business or Enterprise seats in one enterprise'
+  old_price: null
+  new_price: '$0 seat (Enterprise Cloud licensees) or $10 per user per month (Standalone), plus metered usage'
+  effective: '2026-10-28'
+  announced: '2026-10-28'
+  mechanism: usage-based
+  price_type: list
+  net_disclosed: false
+  magnitude_pct: null
+  source: https://github.blog/changelog/2026-10-28-github-enterprise-now-includes-access-to-github-copilot
+  related_source: https://docs.github.com/en/copilot/get-started/whats-changing-with-github-enterprise-and-copilot
+  digest: '2026-11-24'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-24 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Business/Enterprise seat prices and included credits not confirmed in this run.'
+  last_checked: '2026-11-25'
+  follow_up_date: '2027-01-28'
+- case_id: microsoft-ai-builder-credits-2026
+  related_case_id: microsoft-2027-prices
+  date: '2026-11-01'
+  firm: Microsoft
+  product: Power Platform and Dynamics 365 licences (seeded AI Builder credits)
+  change: 'Seeded AI Builder credits removed for new and existing customers from Nov 1, 2026 (honoured to the end of the current contract term); AI Builder then runs on Copilot Credits or remaining AI Builder add-ons; AI Builder trials discontinued; capacity add-ons only as renewals or true-ups'
+  old_price: 'AI Builder capacity included (seeded) with qualifying licences'
+  new_price: 'Copilot Credits bought separately (metered)'
+  effective: '2026-11-01'
+  announced: null
+  mechanism: credits
+  price_type: list
+  net_disclosed: false
+  magnitude_pct: null
+  source: https://learn.microsoft.com/en-us/ai-builder/endofaibcredits
+  related_source: https://erpsoftwareblog.com/2026/11/reduce-microsoft-licensing-costs-2027/
+  digest: '2026-11-24'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-24 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Removal date and contract-term carve-out confirmed in Microsoft Learn and message-center text (MC1526652). Not filed: Agent 365 ($15) and Microsoft 365 E7 ($99), which are list prices set at the May 1, 2026 launch, not Ignite changes; and the 5% cost-of-capital uplift on monthly-billed annual CSP terms, not confirmed today.'
+  last_checked: '2026-11-25'
+  follow_up_date: '2026-12-25'
 - case_id: clickup-ai-credits-2026
   related_case_id: null
   date: '2026-11-02'

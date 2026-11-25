@@ -32,14 +32,16 @@
   explanation: 'Forecaster attributes the rise to wholesale costs; timing described as coming in a cold winter'
   reaction: null
   outcome: Ongoing
-  outcome_note: 'Ofgem announces the actual cap on Nov 25, 2026'
+  outcome_note: 'Confirmed by Ofgem on Nov 25, 2026: £2,166 a year for a typical dual-fuel Direct Debit household from Jan 1 to Mar 31, 2027, up from £1,723 (26%; Octopus puts it at £443 a year). Ofgem attributes the rise to wholesale gas, which it says has roughly tripled since the Middle East conflict began, and stresses that the cap limits unit rates and standing charges, not total bills. Next cap (Apr-Jun 2027) by Feb 23, 2027'
+  outcome_date: '2026-11-25'
+  follow_up_source: https://www.ofgem.gov.uk/press-release/energy-price-cap-rise-26-january-2027
   source: https://www.cornwall-insight.com/press-releases/energy-bills-set-for-steep-rise-in-january/
   related_source: https://www.ibtimes.co.uk/great-britain-energy-bills-rise-january-2027-forecast-1833134
   digest: '2026-11-22'
   agent: meta
   verification_note: 'Filed from Meta AI''s 2026-11-22 suggestion. Direct page fetches were blocked (session network); £2,166, £443 and 26% confirmed in search-indexed text of secondary outlets reporting the release; the unit rates (32.54p/kWh, 10.90p/kWh) and the release date were not confirmed.'
-  last_checked: '2026-11-23'
-  follow_up_date: '2026-11-26'
+  last_checked: '2026-11-25'
+  follow_up_date: '2027-02-23'
 - case_id: thanksgiving-dinner-2026
   mechanism_codes: [reference-price, motive-attribution]
   date: '2026-11-18'

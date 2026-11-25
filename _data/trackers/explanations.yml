@@ -338,13 +338,14 @@
   category: Cost
   reaction: Reddit 'offenders list'
   outcome: Ongoing
-  outcome_note: 'Justification has drifted: surcharges kept while menu prices also rose'
+  outcome_note: 'Justification has drifted: surcharges kept while menu prices also rose. 2026-11-25 check: Axios Chicago (Oct 28) reports operators still defending surcharges by a 36% rise in operating costs since 2019; no new Chicago or Los Angeles rule found'
+  follow_up_source: https://www.axios.com/local/chicago/2026/10/28/chicago-restaurant-surcharges-annoy-consumers-
   outcome_date: null
   magnitude_pct: null
   source: https://kitgraham.substack.com/p/squeezed-increased-menu-prices-and
   digest: '2026-10-26'
-  last_checked: '2026-11-15'
-  follow_up_date: '2026-11-25'
+  last_checked: '2026-11-25'
+  follow_up_date: '2026-12-25'
 - case_id: united-middle-seat-2026
   date: '2026-10-22'
   firm: United Airlines

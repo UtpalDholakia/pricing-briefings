@@ -1,5 +1,39 @@
 # Tracker: hidden_increases. Shrinkflation, upsizing with a markup, unbundling, inflated reference prices and fees.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: norway-black-week-preraise-2026
+  mechanism_codes: [reference-price, transaction-utility]
+  date: '2026-11-23'
+  kind: Inflated reference price
+  product: Popular consumer products tracked by Norwegian price-comparison services during Black Week (Godpris, about 1,000 products; Prisjakt, about 2 million listings)
+  change: 'Early in Black Week, 29% of Godpris''s tracked products were still at least 5% dearer than in early September (about 20% a year earlier), and about one in four (23% by the Wednesday) were at least 5% cheaper; Godpris''s managing director said many deals simply return to the September price. Prisjakt''s Sept 12-Oct 12 data showed 29% of products at least 5% dearer than in early September, against 18% a year earlier'
+  unit_price_effect: null
+  magnitude_pct: null
+  magnitude_note: 'Shares of tracked products, not a price change; the year-earlier comparison is 18% (Prisjakt via Tek.no) or about 20% (Godpris), depending on source'
+  industry: Retail (consumer electronics and general merchandise)
+  geography: Norway
+  source: https://kommunikasjon.ntb.no/pressemelding/19139360/black-week-i-gang-en-av-fire-varer-er-billigere-men-tre-av-ti-er-fortsatt-dyrere-enn-i-september?publisherId=17848964
+  related_source: https://www.tek.no/i/mKmPkq
+  digest: '2026-11-25'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The NTB press release is dated Nov 11 in one search index but describes Black Week as under way; treated as Black Week reporting. Retailers (Elkjøp, Power, Komplett) told Tek.no the rises are unrelated to the sale; Power cited ended campaigns. The Forbrukerrådet view was read only in summary.'
+  last_checked: '2026-11-25'
+  follow_up_date: '2026-12-10'
+- case_id: uber-eats-3-pizza-2026
+  mechanism_codes: [partitioned-pricing, drip-pricing, reference-price]
+  date: '2026-11-09'
+  kind: Fee
+  product: Uber Eats restaurant promotion (pizza listed at $25 offered for $3)
+  change: 'A $3 promotional pizza required a $14 restaurant minimum; with breadsticks added and fees, the checkout total was $27.11 before tip. The poster abandoned the cart; commenters split between calling the fees deceptive and blaming the shopper''s arithmetic'
+  unit_price_effect: null
+  magnitude_pct: null
+  industry: Food delivery
+  geography: United States
+  source: https://www.thecooldown.com/green-business/uber-eats-pizza-delivery-hidden-fees/
+  digest: '2026-11-24'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-24 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The $27.11 total and $14 minimum are the Reddit poster''s account as relayed by The Cool Down; not confirmed with Uber Eats. A Slickdeals thread reports the same pattern for a $1 Domino''s offer ($27.78 after minimums and fees).'
+  last_checked: '2026-11-25'
+  follow_up_date: null
 - case_id: usps-fuel-surcharge-2027
   mechanism_codes: [partitioned-pricing, drip-pricing]
   date: '2026-11-12'

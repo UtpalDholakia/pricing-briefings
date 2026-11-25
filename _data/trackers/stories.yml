@@ -1,5 +1,26 @@
 # Tracker: stories. Ongoing stories; keep updates dated and close stories when they resolve.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: cma-meta-commercial-terms-2026
+  story: 'UK CMA investigates whether Meta''s commercial terms for businesses on Facebook and Instagram abuse a dominant position'
+  status: Open
+  started: '2026-10-30'
+  next_milestone: End of the CMA's initial information-gathering stage (indicative timetable)
+  milestone_date: '2027-01-31'
+  why_it_matters: 'A price paid in data rather than money: the proposed terms would have let Meta use businesses'' website content for its own products as a condition of access; a test of whether competition law treats non-monetary terms as a price'
+  last_checked: '2026-11-25'
+  follow_up_date: '2027-01-31'
+  closed_date: null
+  outcome_summary: null
+  updates:
+  - date: '2026-10-30'
+    note: 'Chapter II Competition Act investigation opened into Meta Platforms, Facebook UK and Facebook Ireland; Meta had delayed the new terms from Oct 30 to Nov 20 and on Oct 28 paused the roll-out; the CMA will examine existing terms and any revisions; Meta says there are no grounds; Meta One and link-posting concerns sit outside this case'
+    source: https://www.gov.uk/cma-cases/suspected-abuse-of-a-dominant-position-in-relation-to-metas-commercial-terms
+  - date: '2026-11-18'
+    note: 'ICLE commentary argues the holdup theory fits poorly and that the case would put the CMA in the business of setting what Meta can ask in return'
+    source: https://laweconcenter.org/resources/the-watchdog-and-the-web-crawler/
+  digest: '2026-11-24'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-24 suggestion. Direct page fetches were blocked in this run (session network); case details confirmed in search-indexed text of the CMA case page and ITV. Related: meta-one-link-limit-2026.'
 - case_id: black-friday-was-price-audit-2026
   story: 'An open audit of Black Friday ''was'' prices across 46,306 online stores in 49 countries'
   status: Open
