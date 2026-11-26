@@ -1,5 +1,31 @@
 # Tracker: questions. Open research questions with status and priority.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- date: '2026-11-26'
+  question_id: basket-guarantee-unverifiable-2026
+  question: 'Does a basket-level price guarantee against rivals whose baskets differ in contents (Lidl''s Never Beaten on Price Thanksgiving basket vs Walmart and Aldi) improve price image as much as an item-level match, even though shoppers cannot practically verify it?'
+  context: 'Lidl US Thanksgiving basket for Lidl Plus members, Nov 11-25, 2026 (lidl-never-beaten-basket-2026)'
+  digest: '2026-11-26'
+  status: Open
+  priority: Medium
+  answered_by: null
+- date: '2026-11-25'
+  question_id: creator-holds-price-black-friday-2026
+  question: 'When a small creator holds full prices through Black Friday week, does it cost sales or clarify demand, and which products still move without a discount?'
+  context: 'Nermin Yusufi, Checkout without a clock (single-creator account); suggested by Meta AI, 2026-11-25'
+  digest: '2026-11-25'
+  agent: meta
+  status: Open
+  priority: Medium
+  answered_by: null
+- date: '2026-11-25'
+  question_id: thin-paid-chart-signal-2026
+  question: 'When a paid-app chart has only four to six entries, what does a Top 5 Paid ranking signal to buyers about demand or price?'
+  context: 'DEV Community post on Google Play paid charts; suggested by Meta AI, 2026-11-25'
+  digest: '2026-11-25'
+  agent: meta
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-25'
   question_id: zero-seat-ai-spend-2026
   question: 'When an AI coding seat costs $0 and every request is metered from the first one (GitHub Copilot access), do teams spend more or less per developer than on prepaid seats with included credits, and who in the firm ends up owning that budget?'

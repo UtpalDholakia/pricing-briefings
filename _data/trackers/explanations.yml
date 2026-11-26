@@ -1,5 +1,24 @@
 # Tracker: explanations. How sellers explain price changes.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: openai-gpt-6-2-billing-fix-2026
+  mechanism_codes: [reference-price, price-change-communication, dual-entitlement]
+  date: '2026-11-26'
+  firm: OpenAI
+  change: 'ChatGPT plan users hit GPT-6.2 Astra limits about 40% sooner and Sol limits 25% sooner after a usage-accounting fix; prices unchanged'
+  explanation: 'Framed as correcting a launch billing mistake that had wrongly discounted usage, not as a cut; OpenAI says allowances still exceed the predecessors'' and adds one banked reset as a make-good, with no retroactive charge'
+  category: Apology
+  reaction: 'Coverage framed it as limits cut by up to 40%; user reaction not yet measured'
+  outcome: Ongoing
+  outcome_note: 'Category is the closest fit: the message pairs an error-correction frame with a concession (banked reset). Watch whether OpenAI restores any of the allowance, and how the December shared token allowance is sized'
+  outcome_date: null
+  magnitude_pct: null
+  source: https://www.notebookcheck.net/ChatGPT-users-hit-limits-up-to-40-sooner-after-OpenAI-billing-fix.1460643.0.html
+  related_source: https://www.neowin.net/news/paying-chatgpt-users-will-hit-gpt-62-limits-faster-after-openai-fixes-a-launch-mistake/
+  digest: '2026-11-26'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Quotes from the X post read only as reported by secondary outlets.'
+  last_checked: '2026-11-26'
+  follow_up_date: '2026-12-26'
 - case_id: walmart-rollbacks-diesel-2026
   mechanism_codes: [reference-price, dual-entitlement, price-change-communication]
   date: '2026-11-19'
@@ -323,13 +342,13 @@
   category: Cost
   reaction: Fan backlash after leak
   outcome: Partially reversed
-  outcome_note: 'Repriced: £85 standing, front-standing tier scrapped (old prices incl. fees, new excl.)'
+  outcome_note: 'Repriced: £85 standing, front-standing tier scrapped (old prices incl. fees, new excl.). 2026-11-26 check: no further price change found; seats reported at £95/£75/£55 with £85 standing (secondary sources only); a 10-date North American tour announced'
   outcome_date: null
   magnitude_pct: null
   source: https://faroutmagazine.co.uk/sam-fender-reveals-new-ticket-prices-for-2027-tour-condemning-own-prices/
   digest: '2026-10-27'
-  last_checked: '2026-11-15'
-  follow_up_date: '2026-11-26'
+  last_checked: '2026-11-26'
+  follow_up_date: '2026-12-26'
 - case_id: restaurant-surcharges-chicago-la-2026
   date: '2026-10-26'
   firm: Chicago/LA restaurants

@@ -1,4 +1,19 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: kim-ad-funded-discount-legitimacy-2026
+  date: '2026-10-16'
+  mechanism: 'Explaining a discount as advertising revenue returned to shoppers (a fair exchange) raises its perceived legitimacy, which raises purchase intention; inferences of manipulative intent matter more in some contexts'
+  mechanism_codes: [motive-attribution, transaction-utility]
+  comparison: Fair-exchange explanation of an advertising-funded discount vs a transactional (ordinary promotion) framing
+  design: Two online experiments (sample sizes not read)
+  setting: Advertising-funded price discounts
+  outcome: Perceived legitimacy, manipulative-intent inferences and purchase intention
+  result_kind: Positive
+  result: 'Fair-exchange framing increased perceived legitimacy, which in turn increased purchase intention; the legitimacy route was more consistent than the manipulative-intent route'
+  boundary: 'Stated intentions only; effect sizes, samples and stimuli not checked; author list differs across indexes (Kim H.-J. and Lee J.-M. in one)'
+  source: https://onlinelibrary.wiley.com/doi/10.1002/cb.70267
+  verification_note: 'Journal of Consumer Behaviour, first published online Oct 16, 2026. Read from the search-indexed abstract only (direct fetch blocked).'
+  digest: '2026-11-26'
+  agent: claude
 - id: "lee-free-shipping-small-fee-2026"
   date: "2026-05-13"
   mechanism: "Shipping partition changes evaluation."

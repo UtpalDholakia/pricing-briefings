@@ -41,6 +41,30 @@
     new_status: Graduated
     reason: 'Graduated into claim labour-cost-explanation-rated-fairer-online on the Goenka & Bagchi MSI working paper (ChatGPT audit of 3456647 (2026-11-18)). Narrow wording: stated fairness in online experiments only.'
     source: null
+- hypothesis_id: post-festival-roas-cut-loses-money
+  hypothesis: 'After a festival sale, lowering an ad campaign''s ROAS target buys extra sales below break-even, because the retargeting pool is already exhausted.'
+  predicts: In the week after a festival peak, campaigns whose ROAS target is lowered raise spend but deliver ROI below the brand's break-even, more than comparable campaigns whose target is unchanged.
+  test: 'Campaign-level spend, ROAS target and realised ROI before and after a target change in the post-festival week, for the same brand and channel (seller disclosures, agency case data or platform studies); a single seller''s anecdote is a lead, not a test.'
+  status: Testing
+  confidence: Low
+  lanes:
+  - Google-world and Asia
+  - Small business and creator economy
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  created: '2026-11-26'
+  agent: meta
+  history:
+  - date: '2026-11-26'
+    old_status: null
+    new_status: Testing
+    reason: 'Filed from Meta AI''s 2026-11-25 hypothesis proposal (states a test); 16 of 20 Testing slots now used.'
+    source: https://utpaldholakia.github.io/pricing-briefings/briefings/2026-11-25-meta/
 - hypothesis_id: fairness-judged-by-worst-hit
   hypothesis: The public judges personalised pricing by the worst-hit shopper, not by the median shopper.
   predicts: Fairness ratings of the same scheme fall more when the worst-case outcome is highlighted than when the median is.

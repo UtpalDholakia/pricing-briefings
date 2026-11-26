@@ -1,5 +1,24 @@
 # Tracker: essential_prices. Price changes for essentials: energy, tuition, healthcare, housing, food.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: japan-electricity-record-nov-2026
+  mechanism_codes: [reference-price]
+  date: '2026-10-29'
+  sector: Energy
+  firm_or_place: Japan (seven of ten major electric utilities, incl. TEPCO)
+  change: 'Standard household bills for November use at record highs at seven of the ten major utilities; TEPCO up 177 yen to 9,738 yen, Chubu Electric highest at 9,920 yen'
+  magnitude_pct: 1.85
+  magnitude_note: 'TEPCO only, computed from the reported 177-yen rise to 9,738 yen (from 9,561 yen)'
+  who_pays: Japanese households
+  explanation: Higher crude-oil procurement costs tied to Middle East turmoil, passed through the fuel-cost adjustment
+  reaction: null
+  outcome: Ongoing
+  source: https://www.nippon.com/en/articles/-/56597
+  related_source: https://selectra.jp/energy/news/electricity-bill-record-high-november-2026
+  digest: '2026-11-25'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-25 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Record bills and the TEPCO figure confirmed via Jiji Press on nippon.com and Selectra; Selectra notes the figure was estimated from preliminary trade statistics. Meta AI''s winter subsidy figure (about 7,000 yen per household) and its rice-price figures were not confirmed today and are not filed.'
+  last_checked: '2026-11-26'
+  follow_up_date: '2026-12-26'
 - case_id: dangote-petrol-nov-2026
   mechanism_codes: [reference-price, motive-attribution]
   date: '2026-11-20'
@@ -267,5 +286,6 @@
   source: https://energybee.co.za/news/nersa-municipal-tariff-review-solar-homes-2026
   digest: '2026-11-15'
   agent: meta
-  last_checked: '2026-11-15'
-  follow_up_date: '2026-11-26'
+  last_checked: '2026-11-26'
+  follow_up_date: '2026-12-03'
+  follow_up_note: 'NERSA''s decision on Eskom''s 8.83% FY2027/28 application was due Nov 26; no published outcome found at the 2026-11-26 check (early US morning). NERSA''s timetable gives notice to Eskom by Dec 3, so the next check is set to Dec 3 rather than 30 days out. Separately, AfriForum''s case over the settlement was struck off the urgent roll on Nov 24'

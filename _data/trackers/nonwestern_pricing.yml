@@ -1,5 +1,19 @@
 # Tracker: nonwestern_pricing. Pricing outside the US/UK/EU, preferably from local-language sources.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: sea-shopee-take-rate-2026
+  date: '2026-11-11'
+  country: Southeast Asia, Taiwan and Brazil (Shopee markets)
+  language: English
+  firm_or_place: Shopee (Sea Limited)
+  change: 'Q3 2026: Shopee GMV $39.7B (+23.3%), GAAP revenue $6.1B (+41.3%); revenue grew faster than GMV, so the share of GMV kept as revenue rose to about 15%; ad take rate up more than 80 basis points year on year'
+  context: 'Take rate computed from Sea''s reported figures ($6.1B / $39.7B = 15.4%; service revenue alone about 13.4%); Meta AI cited UOB Kay Hian''s 15% vs 13% a year earlier, not confirmed today. Seller fees and ads are the price merchants pay for festival-sale traffic'
+  source: https://finviz.com/news/419799/sea-limited-reports-third-quarter-2026-results
+  related_source: https://www.nasdaq.com/articles/sea-se-q3-2026-earnings-call-transcript
+  digest: '2026-11-25'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-25 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. GMV, revenue and ad take rate confirmed from Sea''s release and call coverage; the release date is approximate (mid-November).'
+  last_checked: '2026-11-26'
+  follow_up_date: '2027-03-15'
 - case_id: norway-black-week-preraise-2026
   mechanism_codes: [reference-price, transaction-utility]
   date: '2026-11-23'

@@ -189,8 +189,11 @@
   - mental-accounting
   - usage-anxiety
   created: '2026-11-17'
-  last_updated: '2026-11-23'
+  last_updated: '2026-11-26'
   evidence_for:
+  - kind: tracker
+    ref: openai-gpt-6-2-billing-fix-2026
+    note: 'Context: the vendor re-counted how much usage each GPT-6.2 request draws, so ChatGPT limits arrive 40% (Astra) or 25% (Sol) sooner at an unchanged price; shows the vendor controls the conversion rate, but measures nothing about whether buyers misjudge spend.'
   - kind: tracker
     ref: chatgpt-pro-allowance-2026
     note: Allowance cut announced at an unchanged price, framed as efficiency (later cancelled).
@@ -262,7 +265,7 @@
   - partitioned-pricing
   - drip-pricing
   created: '2026-11-17'
-  last_updated: '2026-11-25'
+  last_updated: '2026-11-26'
   evidence_for:
   - kind: evidence
     ref: partitioned-surcharge-magnitude
@@ -289,6 +292,9 @@
   - kind: evidence
     ref: goenka-bagchi-sociomoral-partitioning-3c-2024
     note: 'Boundary (itemised vs all-in at the same total; purpose varied, size not): separating a carbon-offset fee cut choice share from 40.1% to 27.6%, while separating a shipping fee left it at 40.1%. Purpose of the fee, not only its size, conditions the effect; suggested by ChatGPT, 2026-11-24.'
+  - kind: evidence
+    ref: lee-free-shipping-small-fee-2026
+    note: 'Boundary (free vs KRW2,000 shipping at a fixed KRW50,000 total; within-person lab task, N=38): purchase intention 2.57 vs 2.55, not significant, so a small partitioned fee did not raise intention here; the composite RIS measure did differ. Not a test of size, since size was not varied; suggested by ChatGPT, 2026-11-25.'
   related_questions: []
   related_dives: []
   status_history:

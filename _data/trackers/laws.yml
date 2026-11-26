@@ -149,13 +149,15 @@
   scope: Mandated 'price set by an algorithm using your personal data' notice; One Fair Price package awaited the governor
   carve_outs: null
   status: Under challenge
-  status_note: Label under Second Circuit challenge; sources disagree on the broader ban's status
+  status_note: 'Label under Second Circuit challenge. The One Fair Price Act (passed both chambers in June 2026) still awaits Governor Hochul, who has until Dec 31, 2026 to sign, veto or let it lapse into law; some trackers wrongly report it signed. In late November the Business Council of NYS and a trade coalition pressed for a veto or amendments, arguing it would sweep in personalised discounts and loyalty offers; the sponsor and the Attorney General say bona fide discounts are protected'
   effective: null
   enforcement: null
   source: https://www.courthousenews.com/retailers-slam-surveillance-pricing-warning-label-in-second-circuit-appeal/
   updated: '2026-10-31'
-  last_checked: '2026-11-15'
-  follow_up_date: '2026-12-15'
+  last_checked: '2026-11-26'
+  follow_up_date: '2027-01-02'
+  follow_up_source: https://spectrumlocalnews.com/nys/central-ny/ny-state-of-politics/2026/11/23/one-fair-price-act
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The Spectrum News page was identified in search results but its text was not indexed; the Business Council position is from its own memos (bcnys.org) and the veto-push coverage (CBS6 Albany, PYMNTS)'
 - case_id: us-surveillance-pricing-laws-2026
   jurisdiction: Michigan
   topic: Personalized pricing
@@ -290,12 +292,12 @@
   scope: Standardise 500+ municipal electricity charge types; separate network from retail charges; how rooftop solar, wheeling and grid defection are reflected in tariffs
   carve_outs: null
   status: Proposed
-  status_note: Consultation published Nov 6, 2026; comments close Dec 7, 2026; hearing Dec 14; Eskom 2027/28 retail tariff decision Nov 26, 2026
+  status_note: 'Consultation published Nov 6, 2026; comments close Dec 7, 2026; hearing Dec 14; Eskom 2027/28 retail tariff decision Nov 26, 2026. 2026-11-26 check: no published decision yet; next check Dec 3'
   effective: null
   enforcement: null
   source: https://energybee.co.za/news/nersa-municipal-tariff-review-solar-homes-2026
   updated: '2026-11-15'
   agent: meta
   digest: '2026-11-15'
-  last_checked: '2026-11-15'
-  follow_up_date: '2026-11-26'
+  last_checked: '2026-11-26'
+  follow_up_date: '2026-12-03'

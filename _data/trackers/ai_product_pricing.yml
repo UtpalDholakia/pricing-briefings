@@ -1,5 +1,33 @@
 # Tracker: ai_product_pricing. How AI products themselves are priced.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: openai-gpt-6-2-billing-fix-2026
+  mechanism_codes: [reference-price, usage-anxiety, price-change-communication]
+  date: '2026-11-26'
+  kind: AI product pricing
+  title: OpenAI corrects a GPT-6.2 billing error, so ChatGPT plan limits arrive 40% (Astra) and 25% (Sol) sooner
+  who: OpenAI (ChatGPT Go, Plus, Pro and Business)
+  finding: 'An OpenAI Codex/ChatGPT lead said a launch billing mistake had under-counted GPT-6.2 Astra and Sol usage for most users. After the fix, users reach their limits about 40% sooner on Astra and 25% sooner on Sol than the week before; OpenAI says allowances still go further than with GPT-6 Astra and GPT-6.1 Sol. No retroactive charge; one banked limit reset for Go, Plus, Pro and Business users as compensation. Plan prices unchanged; the shared ChatGPT-Codex token allowance still starts in December'
+  source: https://www.notebookcheck.net/ChatGPT-users-hit-limits-up-to-40-sooner-after-OpenAI-billing-fix.1460643.0.html
+  related_source: https://www.neowin.net/news/paying-chatgpt-users-will-hit-gpt-62-limits-faster-after-openai-fixes-a-launch-mistake/
+  digest: '2026-11-26'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The original post on X was not found in search; figures agree across Notebookcheck, Neowin, Trending Topics and RuntimeWire. Announcement date given as Nov 26 in coverage (possibly Nov 25 US time). No allowance sizes published, so the effective cut cannot be computed.'
+  last_checked: '2026-11-26'
+  follow_up_date: '2026-12-03'
+- case_id: google-ai-ultra-youtube-family-2026
+  mechanism_codes: [bundling, reference-price]
+  date: '2026-11-18'
+  kind: AI product pricing
+  title: Google AI Ultra swaps its bundled YouTube Premium Individual for Premium Family at no extra cost
+  who: Google (Google AI Ultra)
+  finding: 'All new and existing Google AI Ultra subscribers in eligible countries get YouTube Premium Family (up to five members) instead of the Individual plan, at an unchanged price; the Ultra subscriber must be the family group manager. Coverage values the standalone Family plan at $26.99 a month in the US. Google did not say whether every country with the perk gets the Family upgrade'
+  source: https://9to5google.com/2026/11/18/google-ai-ultra-youtube-premium-family/
+  related_source: https://www.androidcentral.com/apps-software/youtube/google-ai-ultra-includes-youtube-premium-family
+  digest: '2026-11-25'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-25 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Upgrade and family-manager rule confirmed across 9to5Google, Android Central, Tom''s Guide and Digital Trends; Meta AI''s Ultra tier prices ($99.99 and $199.99) were not re-confirmed today.'
+  last_checked: '2026-11-26'
+  follow_up_date: null
 - case_id: llm-cold-start-pricing-2026
   mechanism_codes: [reference-price]
   date: '2026-11-02'

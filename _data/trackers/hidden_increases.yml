@@ -1,5 +1,23 @@
 # Tracker: hidden_increases. Shrinkflation, upsizing with a markup, unbundling, inflated reference prices and fees.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: ryanair-random-seat-timing-2026
+  mechanism_codes: [partitioned-pricing, scarcity-urgency]
+  date: '2026-11-09'
+  kind: Unbundling
+  product: Ryanair free random seat allocation (passengers who do not buy a seat)
+  change: 'Free check-in window for random-seat passengers widened from 24 to 72 hours before departure, but the free seat is now allocated after check-in instead of at check-in; passengers report seeing their seat number about three hours before departure. Bag drop and airport check-in close 60 minutes before departure from Nov 10 (was 40). Paid-seat passengers can still check in up to 60 days ahead'
+  unit_price_effect: null
+  magnitude_pct: null
+  magnitude_note: 'No price changed; the free option is made less certain, which raises the relative value of buying a seat'
+  industry: Airlines
+  geography: Europe (Ryanair network)
+  source: https://www.travelerstoday.com/articles/61264/20261114/ryanair-free-check-extends-72-hours-your-seat-arrives-much-later.htm
+  related_source: https://alba24.ro/ryanair-schimba-regulile-pentru-pasagerii-care-nu-platesc-alegerea-locului-in-avion-cand-vor-afla-ce-scaun-au-primit-1166910.html
+  digest: '2026-11-26'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The 72-hour window is on Ryanair''s help pages; the three-hour seat timing rests on passenger reports, and a Romanian outlet says Ryanair has not confirmed it applies to all flights. Ryanair''s Nov 9 confirmation was to the Mirror, read only as reported.'
+  last_checked: '2026-11-26'
+  follow_up_date: '2026-12-26'
 - case_id: norway-black-week-preraise-2026
   mechanism_codes: [reference-price, transaction-utility]
   date: '2026-11-23'

@@ -28,11 +28,13 @@
   - chatgpt-wallet-2026
   - openai-shared-allowance-2026
   - openai-gpt-6-2-speed-tiers-2026
+  - openai-gpt-6-2-billing-fix-2026
   aliases:
   - OpenAI
   - OpenAI (ChatGPT Pro)
+  - OpenAI (ChatGPT Go, Plus, Pro and Business)
   first_seen: '2026-10-27'
-  notes: 'Cancelled the ChatGPT Pro allowance cut after backlash; backed off per-job pricing; ChatGPT Wallet for agent checkout; GPT-6.2 priced by speed tier.'
+  notes: 'Cancelled the ChatGPT Pro allowance cut after backlash; backed off per-job pricing; ChatGPT Wallet for agent checkout; GPT-6.2 priced by speed tier; GPT-6.2 billing fix cut effective limits (Nov 26).'
 - firm_id: starlink
   name: Starlink (SpaceX)
   sector: Telecom
@@ -94,8 +96,10 @@
   - google-play-fee-split-2026
   - google-one-pakistan-2027
   - gemini-neon-launch-2026
+  - google-ai-ultra-youtube-family-2026
   aliases:
   - Google
+  - Google (Google AI Ultra)
   - Google (Gemini API)
   - Google Play
   - Google One (30GB Lite plan)

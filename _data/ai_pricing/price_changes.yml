@@ -1,5 +1,43 @@
 # AI pricing database: change log. Newest first. One entry per price or structure change, logged when found with a source.
 # change_type values and rules: AGENTS.md section 8.
+- date: '2026-11-26'
+  provider: OpenAI
+  provider_slug: openai
+  product_or_model: ChatGPT Go, Plus, Pro and Business (GPT-6.2 Astra and Sol usage)
+  case_id: openai-gpt-6-2-billing-fix-2026
+  change_type: allowance-cut
+  what_changed: 'Billing correction: GPT-6.2 Astra and Sol usage had been under-counted since launch; after the fix, plan limits are reached about 40% sooner on Astra and 25% sooner on Sol than the week before. Prices unchanged; no retroactive charge; one banked limit reset for Go, Plus, Pro and Business'
+  old_value: Under-counted GPT-6.2 usage (launch accounting)
+  new_value: Corrected accounting; limits reached ~40% (Astra) / ~25% (Sol) sooner
+  magnitude_pct: null
+  magnitude_note: '"Reached 40% sooner" is a speed of exhaustion reported in coverage, not a stated allowance; allowance sizes are not published'
+  mechanism: flat-subscription
+  announced: true
+  announced_date: '2026-11-26'
+  source: https://www.notebookcheck.net/ChatGPT-users-hit-limits-up-to-40-sooner-after-OpenAI-billing-fix.1460643.0.html
+  related_source: https://www.neowin.net/news/paying-chatgpt-users-will-hit-gpt-62-limits-faster-after-openai-fixes-a-launch-mistake/
+  digest: '2026-11-26'
+  agent: claude
+  verification_note: 'Announced by an OpenAI staff member on X and reported consistently by several outlets; the post itself and OpenAI''s help pages were not read (direct fetch blocked). No subscription price changed, so no snapshot is affected.'
+- date: '2026-11-18'
+  provider: Google (Gemini)
+  provider_slug: google
+  product_or_model: Google AI Ultra (bundled YouTube Premium)
+  case_id: google-ai-ultra-youtube-family-2026
+  change_type: allowance-rise
+  what_changed: 'Bundled YouTube Premium upgraded from Individual to Family (up to five members) for new and existing Ultra subscribers in eligible countries, at no extra cost; Ultra subscriber must be the family group manager'
+  old_value: YouTube Premium Individual included
+  new_value: YouTube Premium Family included
+  magnitude_pct: null
+  magnitude_note: Bundle benefit change, not a price change
+  mechanism: flat-subscription
+  announced: true
+  announced_date: '2026-11-18'
+  source: https://9to5google.com/2026/11/18/google-ai-ultra-youtube-premium-family/
+  related_source: https://www.androidcentral.com/apps-software/youtube/google-ai-ultra-includes-youtube-premium-family
+  digest: '2026-11-25'
+  agent: meta
+  verification_note: 'Suggested by Meta AI on 2026-11-25; confirmed by Claude on 2026-11-26 in search-indexed text of 9to5Google, Android Central and Tom''s Guide (direct fetch blocked). Google''s own plan page not read; check at the Dec 1 snapshot.'
 - date: '2027-03-01'
   provider: OpenAI
   provider_slug: openai

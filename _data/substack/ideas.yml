@@ -714,6 +714,7 @@
   - hubspot-agent-credits-2026
   - github-copilot-access-2026
   - microsoft-ai-builder-credits-2026
+  - openai-gpt-6-2-billing-fix-2026
   status: drafting
   priority: High
   owner: claude
@@ -722,7 +723,7 @@
   published_url: null
   published_date: null
   revisit_date: null
-  notes: 'Seeded from the deep-dive backlog; first deep dive, draft awaiting Utpal''s approval. 2026-11-16: the ChatGPT Pro allowance cut turned out to have been cancelled around Oct 30 (draft corrected); added Lyft Go (discount replaced by expiring, captive credits) as a consumer case and per-resolution AI support pricing (the unit''s definition sets the price) as an auditability case. 2026-11-17: added Notion (two non-interchangeable credit balances, Standard and Select, from Nov 2) as a multiple-currency case. 2026-11-22: added Teamwork.com (account-level pooled credits that expire monthly, $0.01 top-ups lasting six months, features pause when the pool runs out) as a breakage and pooling case. 2026-11-23: added ClickUp (dollar-priced AI add-ons replaced by pooled plan credits with no published credits per action) and HubSpot (credits at $10 per 1,000, credits per agent action unpublished) as cases where the currency price disappears into an allowance. 2026-11-25: added GitHub Copilot access (seat charge removed, every request metered from the first, so the prepaid credit pool disappears) and Microsoft''s removal of seeded AI Builder credits at renewal (an included allowance turned into a metered purchase).'
+  notes: 'Seeded from the deep-dive backlog; first deep dive, draft awaiting Utpal''s approval. 2026-11-16: the ChatGPT Pro allowance cut turned out to have been cancelled around Oct 30 (draft corrected); added Lyft Go (discount replaced by expiring, captive credits) as a consumer case and per-resolution AI support pricing (the unit''s definition sets the price) as an auditability case. 2026-11-17: added Notion (two non-interchangeable credit balances, Standard and Select, from Nov 2) as a multiple-currency case. 2026-11-22: added Teamwork.com (account-level pooled credits that expire monthly, $0.01 top-ups lasting six months, features pause when the pool runs out) as a breakage and pooling case. 2026-11-23: added ClickUp (dollar-priced AI add-ons replaced by pooled plan credits with no published credits per action) and HubSpot (credits at $10 per 1,000, credits per agent action unpublished) as cases where the currency price disappears into an allowance. 2026-11-25: added GitHub Copilot access (seat charge removed, every request metered from the first, so the prepaid credit pool disappears) and Microsoft''s removal of seeded AI Builder credits at renewal (an included allowance turned into a metered purchase). 2026-11-26: added OpenAI''s GPT-6.2 billing fix (usage re-counted so limits arrive 40% sooner at the same price, framed as an error correction with a banked reset as make-good): the exchange rate between work and allowance moved without any price changing.'
 - created: '2026-11-15'
   idea: Why do sellers reverse?
   idea_slug: why-sellers-reverse
