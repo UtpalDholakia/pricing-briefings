@@ -1,6 +1,67 @@
 # Substack pipeline for The Pricing Conundrum. Newest first by created.
 # status: idea / outlining / drafting / ready / published / parked / dead. priority: High / Medium / Low (Utpal sets High).
 # 'published' only with a real Substack URL. Never delete a dead idea; give the reason in notes. See AGENTS.md section 10.
+- created: '2026-11-26'
+  idea: 'The missing number: what mandatory unit pricing would do to American retail'
+  idea_slug: eu-unit-pricing-us-retail
+  theme: Legal and regulation
+  source_type: utpal
+  source_ref: "Claude project 'Pricing pieces for my substack the Pricing Conundrum', chat 'Price Indication Directive and US retailers' (Nov 26); project doc 'claude/Price Indication Directive and US retailers - research brief.md'"
+  question: If US retailers had to post EU-style unit prices (fixed metric units, all products, online too), who would win and who would lose?
+  question_ref: null
+  case_ids:
+  - eu-digital-fairness-act-2026
+  - unit-rate-format-2026
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: 'Recommended lead of the EU-vs-US trio. EU has required unit prices since 1998 (Directive 98/6/EC); the US relies on a state patchwork (about 9-10 mandatory states). Evidence: Hossain & Bauner 2023 (movers; mandatory posting raises bulk buying, closes ~26% of the rich-poor gap), Rojas, Jaenicke & Page 2026 IJIO (more shrinkage where there are no unit-price rules), Lee 2024 FTC conference (small effect: counterweight), Whitley, Sevilla & Isaac 2025 JMR (unit format moves sales 12-24%), Villanova & Bagchi 2026 JM, GAO-25-107451. Comparators: Germany per-kg rule (May 2022), UK Price Marking Order (April 2026), Australia code review. AI-agent twist from Wadi & Ma (arXiv 2609.28372): agents skip weight under vague prompts, so unit price as machine-readable data matters. Experiments: US vs EU/UK online unit-price audit (presence, consistency, structured data); shopping-agent test. Verify working-paper sources before drafting.'
+- created: '2026-11-26'
+  idea: 'The tax is not included: a thought experiment on tax-inclusive shelf prices'
+  idea_slug: tax-inclusive-shelf-prices
+  theme: Legal and regulation
+  source_type: utpal
+  source_ref: "Claude project 'Pricing pieces for my substack the Pricing Conundrum', chat 'Price Indication Directive and US retailers' (Nov 26); project doc 'claude/Price Indication Directive and US retailers - research brief.md'"
+  question: What would EU-style tax-inclusive prices do to US retail, especially to charm prices and national price uniformity?
+  question_ref: null
+  case_ids:
+  - eu-digital-fairness-act-2026
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: 'Companion to the unit-pricing piece; could be short. EU selling prices must include VAT and all taxes; US shelf prices exclude sales tax, and the new state junk-fee laws (CO, OR, CT) exempt taxes. Evidence: Chetty, Looney & Kroft 2009 AER (-8% demand), Taubinsky & Rees-Jones 2018 REStud (tax treated as ~25% of its size), Kroft et al. 2024 REStud (incidence falls on consumers). Practical: ~12,500 tax jurisdictions and 401 distinct combined rates across ZIP codes. Possibly original angle: tax-inclusive pricing breaks 9-endings or national price uniformity. Experiment: desk simulation of ~100 weekly-ad prices taxed in the 50 largest cities; optional Prolific survey.'
+- created: '2026-11-26'
+  idea: Where America out-regulates Europe on personalized pricing
+  idea_slug: us-vs-eu-personalized-pricing
+  theme: Legal and regulation
+  source_type: utpal
+  source_ref: "Claude project 'Pricing pieces for my substack the Pricing Conundrum', chat 'Price Indication Directive and US retailers' (Nov 26); project doc 'claude/Price Indication Directive and US retailers - research brief.md'"
+  question: Why are US states banning surveillance pricing while the EU, usually the stricter regulator, settles for disclosure?
+  question_ref: null
+  case_ids:
+  - us-surveillance-pricing-laws-2026
+  - ny-algorithmic-pricing-label-2026
+  - ftc-6b-personalized-pricing-2026
+  - eu-digital-fairness-act-2026
+  status: idea
+  priority: Medium
+  owner: null
+  outline: null
+  draft_url: null
+  published_url: null
+  published_date: null
+  revisit_date: null
+  notes: 'Contrarian third piece. EU requires disclosure only (CRD Art. 6(1)(ea)); the DFA impact assessment dropped bans because evidence of widespread harm was ''not substantial'', banning only harm to minors and vulnerable consumers (Art. 13). US: NY disclosure law, bans in MD, CT and NJ (NJ with a private right of action), NY One Fair Price Act awaiting signature, FTC proposed policy statement (Aug 2026). Overlaps with the nyc-fairness-line idea; could merge.'
 - created: '2026-11-16'
   idea: Price change communication in the platform era (2008 to now)
   idea_slug: price-change-platform-era
