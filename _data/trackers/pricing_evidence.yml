@@ -1,4 +1,19 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: "bihari-public-payment-norms-2026"
+  date: "2026-09-11"
+  mechanism: "Social norms may influence publicly visible voluntary payments."
+  mechanism_codes: [social-norms]
+  comparison: "Descriptive-norm cue under publicly visible payment; comparator details unread."
+  design: "Study 3 of four empirical studies; abstract-level reading."
+  setting: "Pay-what-you-want pricing."
+  outcome: "Actual payment, distinct from willingness to pay."
+  result_kind: "Positive in this setting"
+  result: "Authors report increased actual payments when payments were publicly visible; magnitude unavailable."
+  boundary: "Sample, assignment, comparator, visibility manipulation and uncertainty not checked. Do not infer a public-versus-private treatment effect."
+  source: "https://doi.org/10.1108/MIP-12-2025-0939"
+  verification_note: "Read publisher abstract and metadata. No full-methods access used."
+  digest: "2026-11-26"
+  agent: "chatgpt"
 - id: kim-ad-funded-discount-legitimacy-2026
   date: '2026-10-16'
   mechanism: 'Explaining a discount as advertising revenue returned to shoppers (a fair exchange) raises its perceived legitimacy, which raises purchase intention; inferences of manipulative intent matter more in some contexts'
