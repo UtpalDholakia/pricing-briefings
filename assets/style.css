@@ -199,3 +199,22 @@ a.case:hover { color: var(--accent); }
 .hub-d { font-family: var(--ui); font-size: .78rem; color: var(--muted); line-height: 1.35; }
 .section-head { font-size: 1.3rem; margin: 8px 0 12px; }
 
+
+/* Decisions page: choice buttons and send bar (assets/decisions.js) */
+.dz-how { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 12px 16px; margin: 0 0 14px; font-family: var(--ui); font-size: .88rem; line-height: 1.5; }
+.dz-pending { font-family: var(--ui); font-size: .85rem; background: #eef6ee; border: 1px solid #b9d8b9; border-radius: 6px; padding: 8px 12px; }
+.decide { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; align-items: center; }
+.dz, .dz-note-toggle, .dz-accept-all, .dz-bar button { font-family: var(--ui); font-size: .78rem; border: 1px solid var(--line); background: #fff; color: var(--fg); border-radius: 4px; padding: 3px 8px; cursor: pointer; line-height: 1.4; }
+.dz:hover, .dz-accept-all:hover, .dz-bar button:hover { border-color: #9a9a9a; }
+.dz.star { border-color: var(--accent); }
+.dz.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+.dz-note-toggle { border-style: dashed; color: var(--muted); }
+.dz-note { flex: 1 1 100%; font-family: var(--ui); font-size: .8rem; padding: 4px 6px; border: 1px solid var(--line); border-radius: 4px; }
+.dz-note.need { border-color: #c0392b; background: #fff6f5; }
+.dz-accept-all { margin-left: 8px; vertical-align: middle; font-weight: 400; }
+tr.dz-chosen td { background: #f7fbf7; }
+tr.dz-sent td:first-child::after { content: "sent, waiting for Claude"; display: inline-block; margin-left: 6px; font-family: var(--ui); font-size: .7rem; color: #2e7d32; border: 1px solid #b9d8b9; border-radius: 3px; padding: 0 4px; }
+.dz-bar { position: sticky; bottom: 0; z-index: 5; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; background: #fff; border: 1px solid var(--accent); border-radius: 6px; padding: 10px 14px; margin: 16px 0 0; box-shadow: 0 -4px 16px rgba(0,0,0,.08); font-family: var(--ui); font-size: .9rem; }
+.dz-bar #dz-count { font-weight: 600; margin-right: auto; }
+.dz-bar .dz-primary { background: var(--accent); border-color: var(--accent); color: #fff; font-size: .85rem; padding: 5px 12px; }
+.dz-bar .dz-primary:disabled { opacity: .45; cursor: not-allowed; }

@@ -150,6 +150,7 @@
   priority: High
   answered_by: null
 - date: '2026-11-15'
+  question_id: max-price-disclosure-dynamic-tickets-2026
   question: Does a mandated maximum-price disclosure in dynamic ticketing dampen or inflate willingness to pay?
   context: EU Digital Fairness Act
   digest: '2026-11-15'
@@ -165,6 +166,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-14'
+  question_id: price-endings-fairness-small-plates-2026
   question: Do price-ending effects work mainly through fairness when a product already raises value concerns (small plates)?
   context: Yu, Liu, Kandampully & Huang
   digest: '2026-11-14'
@@ -196,6 +198,7 @@
   priority: High
   answered_by: null
 - date: '2026-11-11'
+  question_id: bnpl-justification-couples-spending-2026
   question: Does the BNPL justification effect inside couples change household spending, not just stated ease?
   context: Amozegar, Lynch & Barasch
   digest: '2026-11-11'
@@ -203,6 +206,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-11'
+  question_id: unlock-owned-hardware-fairness-2026
   question: Do drivers judge paying to unlock owned hardware as less fair than paying for new capability?
   context: Car feature subscriptions
   digest: '2026-11-11'
@@ -210,6 +214,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-10'
+  question_id: surcharges-tips-mental-account-2026
   question: Do restaurant surcharges and tips share one mental account, so that fees cannibalize tips? (Testable with POS data)
   context: Earls, Duffy's fee stories
   digest: '2026-11-13'
@@ -217,6 +222,7 @@
   priority: High
   answered_by: null
 - date: '2026-11-10'
+  question_id: esl-price-changes-trust-2026
   question: Does frequent shelf-price change via ESLs erode price trust or reference prices, absent any price increase?
   context: UFCW push to ban ESLs
   digest: '2026-11-10'
@@ -232,6 +238,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-09'
+  question_id: capacity-justification-near-monopoly-2026
   question: Do market/capacity justifications still cut churn when the seller is a near-monopoly (Starlink in rural areas)?
   context: Damavandi et al. + Starlink
   digest: '2026-11-09'
@@ -247,6 +254,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-06'
+  question_id: left-digit-hidden-fee-welfare-2026
   question: If left-digit bias is an attention threshold, how large are the hidden welfare costs of taxes and fees?
   context: Patel, arXiv 2611.05342
   digest: '2026-11-06'
@@ -254,6 +262,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-05'
+  question_id: blame-platform-or-price-setter-2026
   question: Do consumers blame the visible platform or the party that actually set the price (organisers vs Ticketmaster)?
   context: CHOICE Shonky awards
   digest: '2026-11-05'
@@ -269,6 +278,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-04'
+  question_id: visible-tipping-prepayment-reactance-2026
   question: Does making tipping visible (Carnival stickers) raise prepayment or cause reactance?
   context: Carnival 'Crew Love'
   digest: '2026-11-04'
@@ -292,6 +302,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-02'
+  question_id: dynamic-pricing-fairness-limits-2026
   question: Which product features (essentialness, risk, purchase frequency) set fairness limits for dynamic pricing?
   context: IRDAI on insurance pricing
   digest: '2026-11-02'
@@ -299,6 +310,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-11-01'
+  question_id: partitioning-fairness-vs-obfuscation-2026
   question: When does partitioning (tokens, line items) signal fairness rather than obfuscation?
   context: OpenAI per-job pricing reversal
   digest: '2026-11-01'
@@ -306,6 +318,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-10-31'
+  question_id: reference-price-after-cost-reversal-2026
   question: Do reference prices adjust downward when the cost story behind a price increase reverses (cocoa)?
   context: Hershey, Mondelez
   digest: '2026-10-31'
@@ -321,6 +334,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-10-30'
+  question_id: basic-economy-fences-bait-switch-2026
   question: Do growing basic-economy fences eventually make the anchor fare feel like bait-and-switch?
   context: Thrifty Traveler upgrade premiums
   digest: '2026-10-30'
@@ -352,6 +366,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-10-28'
+  question_id: honest-smaller-pack-vs-slack-fill-2026
   question: Is an honest-but-smaller pack read as a price change while a pack built to look full is read as deception?
   context: Macromill Japan survey
   digest: '2026-10-28'
@@ -367,6 +382,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-10-26'
+  question_id: price-cuts-unnoticed-dynamic-2026
   question: Why do people notice price increases but not the equally common price cuts in dynamic pricing?
   context: Decodo data via Fortune
   digest: '2026-10-26'
@@ -390,6 +406,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-10-21'
+  question_id: base-plus-fee-vs-hidden-markup-2026
   question: Do consumers prefer an honest base price plus a visible fee or a hidden markup with smaller fees?
   context: Olo delivery app
   digest: '2026-10-21'
@@ -405,6 +422,7 @@
   priority: Medium
   answered_by: null
 - date: '2026-10-20'
+  question_id: menu-price-threshold-jnd-or-fairness-2026
   question: Is the menu-price backlash threshold (~5%) a just-noticeable difference or a fairness threshold?
   context: Realytics US vs UK
   digest: '2026-10-20'

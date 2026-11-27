@@ -1,0 +1,11 @@
+{% comment %}
+  Decision buttons for one item on the Decisions page (AGENTS.md section 14).
+  Params: kind (claim / dive / idea / hypothesis / question), ref (the item's ID), title (short label),
+  opts (pipe-separated choices), star (the recommended choice, if any).
+  Choices that need a note: Change, Revise, Published. Optional note on every choice.
+{% endcomment %}{% assign opt_list = include.opts | split: "|" %}{% assign star = include.star | default: "" %}
+<div class="decide" data-kind="{{ include.kind }}" data-ref="{{ include.ref }}" data-title="{{ include.title | strip_html | strip_newlines | truncate: 90 | escape }}">
+  {% for o in opt_list %}<button type="button" class="dz{% if o == star %} star{% endif %}" data-v="{{ o }}"{% if o == "Change" or o == "Revise" or o == "Published" %} data-note="required"{% endif %} title="{% if o == star %}Recommended. {% endif %}{{ o }}">{% if o == star %}★ {% endif %}{{ o }}</button>{% endfor %}
+  <button type="button" class="dz-note-toggle" title="Add a note to this decision">+ note</button>
+  <input type="text" class="dz-note" placeholder="Note for Claude (optional)" hidden>
+</div>
