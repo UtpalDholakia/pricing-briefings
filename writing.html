@@ -1,0 +1,45 @@
+---
+layout: default
+title: Published pieces
+permalink: /writing/
+---
+{% assign P = site.data.substack.published %}
+{% assign originals = P | where_exp: "p", "p.version_of == nil" %}
+{% assign ideas = site.data.substack.ideas %}
+{% capture all_themes %}{% for p in originals %}{% for t in p.themes %}{{ t }}|{% endfor %}{% endfor %}{% for i in ideas %}{{ i.theme }}|{% endfor %}{% endcapture %}
+{% assign theme_list = all_themes | split: "|" | uniq | sort %}
+{% assign words = 0 %}{% for p in originals %}{% assign words = words | plus: p.word_count %}{% endfor %}
+{% assign paid = originals | where: "audience", "paid" | size %}
+
+<h1 class="page-title">Published pieces</h1>
+<p class="muted">Every piece published in <a href="{{ site.brand.substack }}">The Pricing Conundrum</a>, with links to Substack. The full text of each piece is kept in the repository (<code>substack/posts/</code>) so the agents can read what has already been argued before suggesting new pieces; it is not republished on this site. New pieces are added automatically each day. Rules: AGENTS.md section 16.</p>
+
+<div class="stat-row">
+  <div class="stat"><span class="big">{{ originals.size }}</span><span class="lbl">pieces ({{ P.size | minus: originals.size }} more are reposts, updated editions or previews)</span></div>
+  <div class="stat"><span class="big">{{ paid }}</span><span class="lbl">for paid subscribers</span></div>
+  <div class="stat"><span class="big">{{ words | divided_by: 1000 }}k</span><span class="lbl">words</span></div>
+  <div class="stat"><span class="big">{{ P.last.date | slice: 0, 4 }}–{{ P.first.date | slice: 0, 4 }}</span><span class="lbl">latest: {{ P.first.date }}</span></div>
+</div>
+
+<section class="tracker" id="coverage">
+  <h2>Coverage by theme</h2>
+  <p class="muted small">How much has been written on each theme, how recently, and how many pipeline ideas are waiting on it. Themes with ideas waiting but nothing written recently are candidates for the next piece; themes with many recent pieces and many waiting ideas risk repetition.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Theme</th><th>Pieces</th><th>Most recent</th><th>Pipeline ideas waiting</th></tr></thead>
+    <tbody>{% for t in theme_list %}{% if t != "" %}{% assign n = 0 %}{% assign recent = "" %}{% for p in originals %}{% if p.themes contains t %}{% assign n = n | plus: 1 %}{% if p.date > recent %}{% assign recent = p.date %}{% endif %}{% endif %}{% endfor %}{% assign waiting = 0 %}{% for i in ideas %}{% if i.theme == t and i.status != "published" and i.status != "dead" %}{% assign waiting = waiting | plus: 1 %}{% endif %}{% endfor %}
+      <tr><td>{{ t }}</td><td>{{ n }}</td><td class="small nowrap">{{ recent }}</td><td>{{ waiting }}</td></tr>{% endif %}{% endfor %}</tbody>
+  </table></div>
+</section>
+
+<section class="tracker" id="all">
+  <h2>All pieces, newest first</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Date</th><th>Piece</th><th>Kind</th><th>Themes</th></tr></thead>
+    <tbody>{% for p in originals %}<tr>
+      <td class="small nowrap">{{ p.date }}</td>
+      <td><a href="{{ p.url }}"><strong>{{ p.title }}</strong></a>{% if p.audience == "paid" %} <span class="chip">paid</span>{% endif %}{% if p.subtitle != "" %}<div class="small muted">{{ p.subtitle }}</div>{% endif %}{% assign others = P | where: "version_of", p.slug %}{% if others.size > 0 %}<div class="small muted">Other versions: {% for o in others %}<a href="{{ o.url }}">{{ o.date }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</div>{% endif %}</td>
+      <td class="small">{{ p.kind | replace: "-", " " }}</td>
+      <td class="small">{% for t in p.themes %}{{ t }}{% unless forloop.last %}<br>{% endunless %}{% endfor %}</td>
+    </tr>{% endfor %}</tbody>
+  </table></div>
+</section>
