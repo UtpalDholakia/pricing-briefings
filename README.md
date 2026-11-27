@@ -19,7 +19,7 @@ Beyond the daily briefings, the repository is a research base for The Pricing Co
 - **[Firm dossiers](https://utpaldholakia.github.io/pricing-briefings/firms/)**: one section per major firm, with its timeline, counts, claims and what to watch, generated from the trackers each time the site builds (`_data/firms.yml`, AGENTS.md section 11).
 - **[Decisions](https://utpaldholakia.github.io/pricing-briefings/decisions/)**: everything waiting on Utpal (claim verdicts, deep dives, pipeline ideas, hypothesis slots, stale questions) in one queue, with agents' recommendations (`_data/decisions.yml`, AGENTS.md section 14).
 - **Earnings pricing watch**: what 150 companies say about their own prices on earnings calls, one row per company per quarter (`_data/earnings/companies.yml`, `_data/trackers/earnings_pricing.yml`, AGENTS.md section 15; kept by ChatGPT).
-- **Core price basket**: 27 everyday offers checked every month in the price panel, so price changes are measured, not just reported (`basket: core` in `price_panel.yml`, AGENTS.md section 7).
+- **Core price basket**: 26 everyday offers checked every month in the price panel, so price changes are measured, not just reported (`basket: core` in `price_panel.yml`, AGENTS.md section 7).
 - **Knowledge infrastructure**: a validator run on every commit (`scripts/validate.py`), a shared list of pricing-psychology mechanisms (`_data/mechanisms.yml`) and a firm registry for dossiers (`_data/firms.yml`) (AGENTS.md section 11).
 
 ## How it works

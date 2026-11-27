@@ -1,0 +1,38 @@
+---
+layout: default
+title: Earnings watch
+permalink: /earnings/
+---
+{% assign CO = site.data.earnings.companies %}
+{% assign ER = site.data.trackers.earnings_pricing %}
+{% assign sectors = CO | group_by: "sector" | sort: "name" %}
+{% assign t1 = CO | where: "tier", 1 %}
+
+<h1 class="page-title">Earnings watch</h1>
+<p class="muted">What companies say about their own prices on earnings calls, quarter after quarter: whether they are raising, holding or cutting, by how much (in their own measure), why, and how customers responded. Read from public earnings materials by ChatGPT. Rules: AGENTS.md section 15. The calls read so far are in the <a href="{{ '/trackers/' | relative_url }}#earnings">earnings section of the trackers page</a>.</p>
+
+<div class="stat-row">
+  <div class="stat"><span class="big">{{ CO.size }}</span><span class="lbl">companies watched</span></div>
+  <div class="stat"><span class="big">{{ t1.size }}</span><span class="lbl">tier 1, read every quarter</span></div>
+  <div class="stat"><span class="big">{{ sectors.size }}</span><span class="lbl">sectors</span></div>
+  <div class="stat"><span class="big">{{ ER | size }}</span><span class="lbl">calls read so far</span></div>
+</div>
+
+<p class="small muted">The <em>usual measure</em> is a hint for where each company reports its price effect. Each call records the measure the company actually used, grouped into families (price only, price and mix, ticket, per customer, unit revenue, take rate, commodity price, rate change) so that only like measures are compared.</p>
+
+{% for s in sectors %}
+<section class="tracker" id="{{ s.name | slugify }}">
+  <h2>{{ s.name }} <small class="muted">{{ s.items.size }}</small></h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Company</th><th>Tier</th><th>Usual measure</th><th>Why it is watched</th><th>Calls read</th></tr></thead>
+    <tbody>{% assign rows = s.items | sort: "tier" %}{% for c in rows %}{% assign mine = ER | where: "ticker", c.ticker %}
+    <tr>
+      <td><strong>{{ c.company }}</strong><div class="small muted">{{ c.ticker }} · {{ c.country }}</div></td>
+      <td><span class="chip {% if c.tier == 1 %}open{% endif %}">{{ c.tier }}</span></td>
+      <td class="small">{{ c.metric }}</td>
+      <td class="small">{{ c.why }}</td>
+      <td class="small">{% if mine.size > 0 %}{% for r in mine limit: 4 %}<a href="{{ '/trackers/' | relative_url }}#earn-{{ r.id }}">{{ r.period }}</a> <span class="muted">{{ r.price_signal }}</span><br>{% endfor %}{% else %}<span class="muted">none yet</span>{% endif %}</td>
+    </tr>{% endfor %}</tbody>
+  </table></div>
+</section>
+{% endfor %}

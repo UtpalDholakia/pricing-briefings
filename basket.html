@@ -1,0 +1,35 @@
+---
+layout: default
+title: Price basket
+permalink: /basket/
+---
+{% assign basket = site.data.trackers.price_panel | where: "basket", "core" %}
+{% assign priced = 0 %}{% assign moved = 0 %}{% assign failed = 0 %}
+{% for p in basket %}{% assign h = p.observations | sort: 'date' | reverse %}{% assign l = h | first %}{% assign pr = h[1] %}
+  {% if l %}{% assign priced = priced | plus: 1 %}{% else %}{% assign failed = failed | plus: 1 %}{% endif %}
+  {% if l.amount != nil and pr.amount != nil and l.amount != pr.amount %}{% assign moved = moved | plus: 1 %}{% endif %}
+{% endfor %}
+
+<h1 class="page-title">Price basket</h1>
+<p class="muted">A fixed set of {{ basket.size }} everyday offers, checked every month and logged even when nothing changes, so price changes are measured rather than only reported. Each one was chosen to test something in the claims register. Rules: AGENTS.md section 7 and the <a href="{{ '/tracker-methods/' | relative_url }}#basket">tracker methods</a>. Full detail for every check is in the <a href="{{ '/trackers/' | relative_url }}#price-panel">price panel</a>.</p>
+
+<div class="stat-row">
+  <div class="stat"><span class="big">{{ basket.size }}</span><span class="lbl">offers in the basket</span></div>
+  <div class="stat"><span class="big">{{ priced }}</span><span class="lbl">with a recorded price</span></div>
+  <div class="stat"><span class="big">{{ moved }}</span><span class="lbl">changed since their previous check</span></div>
+  <div class="stat"><span class="big">{{ failed }}</span><span class="lbl">awaiting a first successful check</span></div>
+</div>
+
+<div class="table-wrap"><table>
+  <thead><tr><th>Offer</th><th>Latest price</th><th>Previous</th><th>Change</th><th>Checked</th><th>What it tests</th></tr></thead>
+  <tbody>{% for p in basket %}{% assign h = p.observations | sort: 'date' | reverse %}{% assign l = h | first %}{% assign pr = h[1] %}
+  <tr>
+    <td><a href="{{ '/trackers/' | relative_url }}#panel-{{ p.id }}"><strong>{{ p.offer }}</strong></a><div class="small muted">{{ p.market }} · {{ p.unit }}</div></td>
+    <td class="nowrap">{% if l.amount != nil %}<strong>{{ p.currency }} {{ l.amount }}</strong>{% if l.basis contains "reported" %}<div class="small muted">as reported</div>{% endif %}{% elsif l %}<span class="muted">not comparable</span>{% else %}<span class="small warn">{{ p.note | default: "No check yet" }}</span>{% endif %}</td>
+    <td class="nowrap small">{% if pr.amount != nil %}{{ p.currency }} {{ pr.amount }}<div class="muted">{{ pr.date }}</div>{% else %}<span class="muted">—</span>{% endif %}</td>
+    <td class="nowrap">{% if l.amount != nil and pr.amount != nil and pr.amount != 0 %}{% assign pct = l.amount | times: 100.0 | divided_by: pr.amount | minus: 100 | round: 1 %}{% if pct > 0 %}<span class="chip no">+{{ pct }}%</span>{% elsif pct < 0 %}<span class="chip yes">{{ pct }}%</span>{% else %}<span class="chip">no change</span>{% endif %}{% else %}<span class="muted">—</span>{% endif %}</td>
+    <td class="nowrap small">{% if l %}{{ l.date }}{% endif %}<div class="muted">next {{ p.next_check }}</div></td>
+    <td class="small">{{ p.why }}</td>
+  </tr>{% endfor %}</tbody>
+</table></div>
+<p class="small muted">Change compares the latest price with the previous recorded one for the same buyer profile. Prices marked "as reported" come from coverage because the provider's own page could not be read; the source is on the price panel.</p>

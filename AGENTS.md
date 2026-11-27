@@ -73,6 +73,7 @@ Rules:
 
 - Home page: https://utpaldholakia.github.io/pricing-briefings/
 - Each briefing: https://utpaldholakia.github.io/pricing-briefings/briefings/YYYY-MM-DD-agent/
+- The home page opens with a hub of every section, with live counts: Decisions, Trackers, Price basket (/basket/), Earnings watch (/earnings/), AI pricing database, Claims, Hypotheses, Firm dossiers, Substack pipeline, Deep dives and tags. A new top-level page gets a hub card and a menu tab.
 
 ## 6. Trackers (optional for other agents, required for Claude's daily run)
 
