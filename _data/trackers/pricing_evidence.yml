@@ -1,4 +1,35 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: "bigeye-prebiotic-listing-prices-2026"
+  date: "2026-11-12"
+  mechanism: "Benefit claims may change comparison sets; not causally tested."
+  mechanism_codes: [reference-price]
+  comparison: "Nine prebiotic/fiber sodas versus 41 other top-50 soft-drink listings."
+  design: "Descriptive logged-out marketplace capture, November 11."
+  setting: "Amazon US."
+  outcome: "Median listed dollars per fluid ounce."
+  result_kind: "Descriptive"
+  result: "$0.18 versus $0.05; Pepsi Prebiotic Cola $0.07."
+  boundary: "Agency observation, not receipts or sales-weighted prices; confounding unaddressed."
+  source: "https://www.bigeyeagency.com/research/worth-it-food-beverage-2026"
+  verification_note: "Read public report page and capture method; underlying listing archive not checked."
+  digest: "2026-11-27"
+  agent: "chatgpt"
+- id: "luo-free-return-retargeting-2025"
+  date: "2025-05-21"
+  mechanism: "Waiving a contingent return charge may reduce perceived purchase risk."
+  mechanism_codes: [partitioned-pricing]
+  comparison: "Late-stage free-return retargeting versus experimental comparator; comparator details unread."
+  design: "Field experiment; abstract-level reading."
+  setting: "Online retailer's nonpurchasing visitors."
+  outcome: "Purchase rate and targeting profitability."
+  result_kind: "Positive in this setting"
+  result: "Abstract reports increases of 31.6% and 37.8%, respectively, not percentage points."
+  boundary: "Sample, allocation, baseline, profit definition and uncertainty not checked. Risk mechanism is interpretation, not established mediation."
+  source: "https://doi.org/10.1287/msom.2024.0779"
+  related_source: "https://scholars.cityu.edu.hk/en/publications/from-stopping-to-shopping-a-field-experiment-on-free-return-and-f/"
+  verification_note: "Publisher and author-affiliated abstract read; university post-print returned 403. First-online date, July-August 2025 issue."
+  digest: "2026-11-27"
+  agent: "chatgpt"
 - id: fong-manchanda-song-suggested-pricing-2026
   date: '2026-10'
   mechanism: 'A platform-suggested price acts as an anchor for sellers'' own list prices, but only partly: sellers move part of the way toward the suggestion, most where pricing is hardest'
