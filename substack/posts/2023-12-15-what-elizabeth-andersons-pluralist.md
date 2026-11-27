@@ -1,0 +1,100 @@
+---
+title: "What Elizabeth Anderson’s Pluralist Theory of Value Tells Us About Economic Valuation"
+subtitle: "Anderson's theory generates sharp insights into what economic valuation means, how buyers value and evaluate, and why willingness-to-pay responses should be used cautiously."
+date: "2023-12-15"
+slug: "what-elizabeth-andersons-pluralist"
+url: "https://thepricingconundrum.substack.com/p/what-elizabeth-andersons-pluralist"
+audience: "paid"
+post_id: 139682962
+word_count: 2972
+full_text: true
+imported_from: "export"
+---
+
+On the r/Rolex and the r/Watches subreddits, there is a [recurring conflict](https://www.reddit.com/r/rolex/comments/12rkae4/honest_question_why_do_you_spend_thousands_of/). Every so often, a Redditor will ask what type of person buys an expensive watch from a brand like Rolex, Patek Philippe, or Audemars Piguet, costing tens of thousands of dollars and why. Someone will explain that they own and wear such a watch on their wrist every day even as the rest of their lifestyle is rather ordinary, and their annual income is five figures instead of six or seven that you’d associate with a Rolex or an AP watch owner. As to why, they typically use some version of “I love watches, and wearing the ultra-luxury watch daily makes me feel good.” Some of these posters admit to living frugally solely to be able to buy and wear an ultra-luxury watch or even [incur debt to do so](https://www.reddit.com/r/rolex/comments/vy4hn4/prove_me_wrongowning_a_rolex_does_not_mean_you/?rdt=52584).
+
+When such a post appears, other Redditors push back, arguing that there are many unique, interesting watches available from less well-known brands to behave this way. They are of equivalent quality and cost a fraction of the major brands, something valued more by watch aficionados than [the holy trinity](https://www.bobswatches.com/rolex-blog/resources/holy-trinity-watches.html) (Patek Philippe, Audemars Piguet, and Vacheron Constantin plus Rolex). The main point of these posts is no one should buy a watch beyond their means.
+
+This particular argument about which watch brands are valuable and why, like many others, goes to the heart of a core question in economic valuation: ***Why do people value the same object so differently?*** Philosophers, too, have concerned themselves with this question. The Reddit arguments bring to mind a classic line written by the philosopher Elizabeth Anderson back in 1993 when describing her *Rational Attitude Theory of Value*, also known as the *Pluralist Theory of Value*: “Our evaluating experiences, and the judgments based on them, are deeply pluralistic” (Anderson, 1993).
+
+While this may seem obvious on one level, especially to those of us who think about pricing strategies, Anderson’s theory has a lot of interesting ideas that build on this foundational concept of value plurality, explaining the reasons behind the plurality, the distinction between valuing and evaluating, and its implications. These ideas, and Anderson’s theory as a whole, offer pricing practitioners some sharp and useful insights to think about what economic valuation means, how buyers construct valuations and evaluations, and, ultimately, useful specific guidance for pricing decisions.
+
+In this post, I want to explore six key tenets of Anderson’s pluralist theory of value as they apply to our understanding of valuation and customer value in pricing strategy.
+
+#### Monistic vs. pluralistic perspectives on value
+
+Anderson’s essential point is that value has more than one terminal basis. As she puts it, “People experience the world as infused with many different values.” This idea is a counterpoint to many theories of value, including one that most pricing practitioners endorse, implicitly or explicitly, that value is monistic and can ultimately be boiled down to dollars and cents. Anderson contrasts the two perspectives as follows:
+
+> “The prevailing theories of value and rationality suppose that when people value or care about something, they are engaging only one basic attitude or response — desire, perhaps, or pleasure — which can vary quantitatively but not qualitatively. And this view, in turn, leads to a drastically reductionistic or monistic view of value. Being valuable becomes a matter of having a single property or arousing a single response in us. Goods differ in quantity, as they arouse more or less of the same response, but not of quality or in kind.” (xii)
+
+Thus, a Rolex watch inherited from a beloved grandfather with whom one has had a close relationship would be imbued with all his good (and bad) qualities. Owning it would mean being connected and having access to his character traits and the memories associated with him. Yet, the watch itself may be viewed as unappealing, gaudy, outdated, or broken and unworthy of being worn based solely on its physical characteristics. Furthermore, given its reference number, materials, and condition, the watch may command a certain price in the marketplace that is dissociated from the psychological properties of its previous owners or from one’s personal opinion about the watch. Paradoxically, compelling, unusual, and prominent stories associated with its history may burnish its provenance, adding to its value for some buyers to varying degrees.
+
+A monistic view of value implies that all these positive and negative aspects of the watch *can* be combined into a single evaluation that makes sense and is complete, which in turn can be converted into a monetary amount which then becomes a significant input into pricing decisions. In contrast, a pluralistic perspective acknowledges the impossibility of doing so, leaving emotional, functional, and economic valuations separate and even at odds with one another. For pricing, a pluralistic value perspective questions the validity of a single, static economic valuation for any object. Next, we will consider six tenets of Anderson’s pluralist theory of value in detail.
+
+#### 1. Economic valuation is just one piece of the overall valuation system. Often, it is not even the most significant part.
+
+The essence of pluralism is that value is derived from multiple sources. In pricing strategy, our conceptions of value are almost always monistic. We tend to believe that the buyer can ascertain all the benefits they will derive from an offering and convert them into dollars and cents using a reasonable mechanism of converting the tangible and the intangible into the economic. We see the seller as able to get inside the buyer’s head and accurately determine their calculus, resulting in understanding the buyer’s willingness-to-pay. The willingness-to-pay number monistically encapsulates the value derived by the buyer.
+
+Anderson asserts that “to value something is to have a complex of positive attitudes towards it, governed by distinct standards for perception, emotion, deliberation, desire, and conduct” (p. 2). Her pluralistic approach forces us to acknowledge that economic value is only one component of the overall value of an object. As she puts it:
+
+> “We don’t respond to what we value merely with desire or pleasure, but with love, admiration, honor, respect, affection, and awe as well. This allows us to see how goods can be plural, how they differ in kind or quality; they differ not only in *how much* we should value them but in *how* we should value them.” (xiii, emphases in original).
+
+Thus, valuing involves the mustering of complex emotions, social responses and ties, personal and social norms, and other contextual factors; together, they comprise a more valid form of valuation than valuing the object solely in terms of money. The corollary to this tenet is that financial valuing can be fraught with errors and grounded within one’s unique constellation of meanings for the object. Simply put, value is far more than economic value, and most of it is non-quantifiable and non-monetizable.
+
+#### 2. Valuation does not require experience.
+
+Anderson sees the valuation of an object as “having a complex of positive attitudes towards it, governed by distinct standards of perception, emotion, deliberation, desire, and conduct” (p. 2) and has a lot to say about the sources that lead to an object’s valuation. According to her:
+
+> “Valuing or caring about things is more fundamental to understanding values than are experiences of value, for many things can be good which are not directly encountered in experience, but are known only through theory or description.” (p. 2).
+
+To marketing practitioners, this is a fundamental point that is well-understood. Indeed, it is a key weapon in our arsenal. One of our core concerns as marketers is to generate an understanding of value through “description,” i.e., vicariously, by simulation, whether it is through conveying vivid imagery about the qualities and meanings of an object, an understanding of the personal and social rewards stemming from its possession, use, and display, by associating positive qualities to the object indirectly, and so on.
+
+There’s a reason why the Rolex brand is worth \$7.9 billion as of 2023, [according to Kantar](https://www.kantar.com/north-america/inspiration/brands/louis-vuitton-reigns-as-the-worlds-most-valuable-luxury-brand-for-the-18th-year), more than any other watch brand and within the top ten luxury brands, even though the company sells only [about a million watches](https://www.chrono24.com/magazine/why-are-rolex-watches-so-hard-to-come-by-p_106027/#gref) each year. The universe of global consumers coveting a Rolex watch is far bigger than those who own one. Yet, the valuation of non-owners matters just as much, is credible, and contributes to generating an enormous storehouse of goodwill for the brand. Moreover, the bases of valuation of the owners and non-owners differ considerably, meaning that prices and the logic behind them will also mean different things to these groups.
+
+#### 3. The *experience* of value is distinct and not always consistent with the *judgment* of value.
+
+This next point in Anderson’s theory is important for pricing strategy. Specifically, she distinguishes between the *enactment of value* or what she calls experiencing value (i.e., behaving in accordance with one’s valuation) and the *appreciation of value* called judgment of value (recognizing that the object has a certain value). This distinction is similar to the [gap between attitudes and behavior](https://www.jstor.org/stable/2786945?casa_token=fjmEgsJ3LlIAAAAA%3ApGizAA0fQJermCmxeUrf1fLoJDUz99VLElMa55oDvW6mbuTdBtYhg3RjAZ1JsKMUZis60whZZ2OgMaRcFdluU1R590Ltkos6lxgoNiNBETfXJJYZi-BT3w) that we find [throughout the consumer behavior](https://journals.sagepub.com/doi/pdf/10.1177/00222429990634s104?casa_token=ePgnRwVskbYAAAAA:1IW4BRTdGFMZYc4ev_M5JQpQl4hZCTFMHmPJa5_mOtGIAiAQv2yHnA5YD85dAtJCha0AAJH4ZFoZGaEhttps://journals.sagepub.com/doi/full/10.1177/00222429990634s104?casa_token=287ct8Zd3NQAAAAA%3AZGzYwBh1Z-hW1Pd_rKyDZL7m9vfhkjDk_PcTyax7eEzAWuS5Qit0Vu53IM8wB93zeYefTfUEEvMOrG0) domain. In Anderson’s words:
+
+> “To experience something as valuable and to value it are not to judge that it is valuable. A person may laugh at a racist joke, but be embarrassed at her laughter. Her embarrassment reflects a judgment that her amusement was not an appropriate response to the joke. The joke was not genuinely good or funny: it did not merit laughter. A person could also judge that a joke is funny, but be so depressed that she can’t bring herself to laugh at it. Such a judgment could be the occasion of further depression, because it makes her aware of her own deficient state of mind, too miserable even to appreciate a good joke.”
+
+The experience of value in this theory corresponds to the enactment of behavior, and the judgment of value corresponds to attitudes and, to a lesser degree, intentions. The core insight provided by Anderson is that an object’s valuation by the potential buyer needs to be separated from the behavior stemming from the valuation, which may or may not be consistent with the judgment.
+
+When eliciting customer valuation in pricing, we rarely make this distinction, considering the two concepts that Anderson disentangles under the single umbrella of willingness-to-pay. In reality, willingness-to-pay may reflect aspects of attitudes, intentions, and behavioral tendencies without capturing the buyer’s actual behavior. To apply this idea to pricing, the two relevant constructs that map onto Anderson’s experience-judgment dichotomy could be called *buying propensity* and *appraisal of economic worth*.
+
+Returning to Rolex watches, a watch enthusiast may use price trackers like Watchcharts, calls to grey market dealers, and other sources of information to learn that the current market value of the John Mayer Rolex Daytona watch (Reference 116508) is approximately \$64,000. This is their appraisal of its economic worth. However, when asked whether they are willing to spend that money now if such a watch becomes available, their buying propensity would point to a much lower dollar value, corresponding to personal affordability, budget constraints, a personal preference for this particular watch versus others, and so on.
+
+#### 4. Valuations are self-expressive states.
+
+Another key insight provided by Anderson’s theory is a richer understanding of the psychological content of valuations. An integral part of valuation, according to Anderson, is a consideration of the question, “What does my value judgment say about me?” To value something is to find self-understanding in the process of valuation. She asserts:
+
+> “Reflective value judgments commit one to certain forms of self-assessment which are embodied in second-order attitudes, or attitudes about other attitudes…. One may be embarrassed or depressed by one’s failure to respond appropriately to what one judges to be good. One may be pleased by or proud of one’s appropriate valuations.. When we wonder whether something is appropriately valued, we wonder whether we would be making sense in valuing it. On my view, the investigation into what is worth our caring about is a quest for self-understanding, an attempt to make sense of our own valuation responses to the world.” (p. 3).
+
+In pricing strategy, this self-expressive aspect of customer value is given little, if any, attention, even though personal, self-expressive judgments may play a significant role in determining the economic value of an object to a buyer. For instance, one person may be overcome with a sense of guilt and embarrassment when purchasing a Rolex watch, whereas another may be full of pride and joy at having overcome many life obstacles and reached a personal milestone.
+
+These self-evaluative responses will affect the price that these two individuals deem as reasonable for the watch when buying it, as well as its current economic value as a possession for them. Since marketers are interested in processes of influence and persuasion, this means that triggering or supporting certain self-expressive states during valuation, i.e., by helping the buyer make sense of their own reactions, and eschewing others, i.e., staying away from negative emotions, will be a key part of the valuation and value communication process.
+
+#### 5. Values are bearers of socially constructed meanings.
+
+In addition to being self-expressive, valuations contain meanings that are generated and maintained socially. The buyer relies on explaining their valuation to others, and when a coherent explanation is exchanged, it reinforces and solidifies the valuation. According to Anderson:
+
+> “The link between self-understanding and \[social practices of\] justification is provided by the fact that valuations are expressive states. They are bearers of meanings and subject to interpretation. Since meanings are public, I can understand by own attitudes only in terms that make sense to others… People interpret and justify their valuations by exchanging reasons for them with the aim of reaching a common point of view from which others can achieve and reflectively endorse one another’s valuations.” (p. 3).
+
+This tenet is particularly relevant to pricing strategy, where for an increasing number of products and services, the social construction of value is playing a greater and greater role, mainly through social media venues but also through physical spaces. I began this post with an example of the r/Rolex subreddit, which currently has 203,000 members. The discussions in this forum, and others like it (e.g., Rolex Forums, Hodinkee, etc.), are where individuals contribute their opinions, having to justify them and form and change their minds about Rolex watches. A commonly accepted hierarchy of desirability (and price levels) emerges for the Rolex product lines in each venue, indicating which watches should cost more, which ones should cost less, and why. A common point of view may or may not be achieved in one thread, but over the course of months and years, and thousands of threads, a [surprising degree of consensus](https://ojs.aaai.org/index.php/ICWSM/article/view/19363) emerges about the meaning and value of Rolex watches.
+
+#### 6. Valuing and evaluating are distinct activities.
+
+The final principle of Anderson’s pluralist theory of value I want to consider in this post is her distinction between *valuing* and *evaluating*. According to her, valuing is more nuanced than evaluating, accessing modes of caring that go far beyond the consideration of money and which, in fact, cannot be converted into money. This is what she says:
+
+> “The term in which we make sense of our valuations are given by our evaluative concepts… through which we describe evaluative experiences and express value judgments. Call a person’s values whatever standards she accepts for evaluating persons, actions, and things. Evaluation is the process by which a person judges how far and in what ways different things meet her standards. An object’s values consist of whatever properties it has, in virtue of which it meets various standards of value.” (p. 3)
+
+Evaluating is deliberate and volitional, whereas valuing may occur without the aid of either psychological mechanism. In pricing strategy considerations of customer value, we rarely make the distinction between the inherent value of the object to the buyer and the decision making process by which its evaluation occurs and leads to a strictly economic assessment. For both valuing and evaluating, the economic value is a subset, and often a very small one at that, of the overall value in play. The price of the Rolex watch and its acceptability to a buyer only covers a very small domain of the meanings and values delivered by the watch, and these will be different for each buyer. Anderson goes on to say that:
+
+> “Valuing and evaluation are distinct activities. In evaluation, people determine how far something meets the particular standards they set for it. In valuing something, people meet certain standards for caring about it, although they may be unaware of, not endorse, and may not try to govern their actions by those standards… Because the standards of value people set for objects are the standards of rationality they set for their valuations, every evaluation of an object implies an evaluation of the valuing subject. In bringing their evaluations and valuations into harmony, people judge themselves worthy of positive valuation, or at least not worthy of negative valuations.” (p. 5-6).
+
+Valuing and evaluating are both personal in the sense that they enlist the buyer’s self-expressive identity and involve social construction. The main lesson for pricing strategists from this distinction, and from Anderson’s theory as a whole, is that the real value of products and services goes far beyond willingness-to-pay measures, involving personalized, social, and contextualized forces that need to be considered seriously.
+
+------------------------------------------------------------------------
+
+#### References
+
+Anderson, Elizabeth (1993). *Value in Ethics and Economics*, Harvard University Press.

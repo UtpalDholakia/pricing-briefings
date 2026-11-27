@@ -1,0 +1,30 @@
+name: Import new Pricing Conundrum pieces
+# Daily: reads the public RSS feed and adds any new piece to substack/posts/ and _data/substack/published.yml
+# (AGENTS.md section 16). Paid pieces arrive as previews; a later Substack export fills in their full text.
+on:
+  schedule:
+    - cron: '17 12 * * *'   # 12:17 UTC, about 6 a.m. US Central
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq pandoc
+      - run: pip install pyyaml beautifulsoup4
+      - run: python3 scripts/substack_import.py --feed
+      - run: python3 scripts/validate.py
+      - name: Commit new pieces
+        run: |
+          git config user.name "pricing-briefings-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add substack/posts _data/substack/published.yml
+          if git diff --cached --quiet; then echo "No new pieces"; exit 0; fi
+          git commit -m "Import new Pricing Conundrum pieces from the feed"
+          git pull --rebase origin main
+          git push

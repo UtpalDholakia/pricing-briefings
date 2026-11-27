@@ -73,7 +73,7 @@ Rules:
 
 - Home page: https://utpaldholakia.github.io/pricing-briefings/
 - Each briefing: https://utpaldholakia.github.io/pricing-briefings/briefings/YYYY-MM-DD-agent/
-- The home page opens with a hub of every section, with live counts: Decisions, Trackers, Price basket (/basket/), Earnings watch (/earnings/), AI pricing database, Claims, Hypotheses, Firm dossiers, Substack pipeline, Deep dives and tags. A new top-level page gets a hub card and a menu tab.
+- The home page opens with a hub of every section, with live counts: Decisions, Trackers, Price basket (/basket/), Earnings watch (/earnings/), AI pricing database, Claims, Hypotheses, Firm dossiers, Published pieces (/writing/), Substack pipeline, Deep dives and tags. A new top-level page gets a hub card and a menu tab.
 
 ## 6. Trackers (optional for other agents, required for Claude's daily run)
 
@@ -307,4 +307,15 @@ What companies say about their own prices on earnings calls, quarter after quart
 - **Comparability across companies** goes through `metric_family`: a `price-only` number and a `ticket` number are never averaged or ranked together. The `metric` in `companies.yml` is only a hint; when a company reports something else, record what it actually reported.
 - **Feeding other trackers.** A concrete price change, a stated explanation or a shrink/fee move found on a call goes into ChatGPT's briefing as a tracker suggestion; Claude files it in the section 6 tracker with the same `case_id`.
 - **Season synthesis.** When most tier 1 companies have reported for a season, ChatGPT's briefing that day carries a cross-company summary (section in EARNINGS_INSTRUCTIONS.md). Claude adds its headline counts to the next monthly tracker digest.
+
+## 16. The Pricing Conundrum archive
+
+Everything Utpal has published, so agents build on it instead of repeating it. Full text: `substack/posts/YYYY-MM-DD-<slug>.md` (one file per piece; readable on GitHub, excluded from the website). Catalogue: `_data/substack/published.yml` (title, date, URL, `audience`, `kind`, `themes`, `word_count`, `version_of`). Page: https://utpaldholakia.github.io/pricing-briefings/writing/, with coverage by theme.
+
+- **Read before you suggest.** Before proposing a Substack idea, a deep dive or a hypothesis, check the catalogue's themes and titles, and read the relevant pieces in full. Every suggestion says how it relates to what is already published: *builds on* (cite the piece and say what is new), *revisits* (cite it and say what has changed since), *answers a question it left open*, or *new ground* (say which themes were checked). A suggestion that repeats a published argument without saying so is not useful.
+- **Use Utpal's frameworks and vocabulary.** Many pieces define frameworks the briefings should reuse by name and link (for example the Value Pricing Framework, the SALVE framework of price image, the four pricing decision inputs, price level versus price structure, the price-change communication series). When a news item fits one, say so and link the piece.
+- **Link evidence to pieces.** When a tracker case, claim or hypothesis bears on a published argument, Claude may add the piece's slug to `related_claims` or `related_ideas` in the catalogue (the only hand-edited fields; the import keeps them). A new fact that challenges a published argument is worth a line in the briefing: "Challenges <piece>: …".
+- **Quoting.** The archive is Utpal's own writing: agents may quote it to him, but keep quotes short and cite the piece's URL. Public briefings link to the piece instead of reproducing paid text.
+- **Keeping it current.** `.github/workflows/substack.yml` imports new pieces from the public feed every morning (paid pieces arrive as previews, `full_text: false`). A Substack export, uploaded by Utpal every few months, fills in full text: `python3 scripts/substack_import.py --export <folder>`. Never edit post files by hand; never import drafts or the subscriber list.
+- **Pipeline link.** When an idea in `ideas.yml` is published, set `published_url` (section 10) to the catalogue's `url` for that piece. In the monthly pipeline review, Claude uses the coverage table on /writing/ to point out themes with ideas waiting and nothing published recently.
 

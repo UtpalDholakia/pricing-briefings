@@ -182,7 +182,7 @@ records_by_file = {}
 for path, d in data.items():
     if path in ("_data/tags.yml", "_data/mechanisms.yml", "_data/firms.yml", "_data/claims.yml",
                 "_data/hypotheses.yml", "_data/research/bibliography.yml", "_data/decisions.yml",
-                "_data/earnings/companies.yml"):
+                "_data/earnings/companies.yml", "_data/substack/published.yml"):
         continue
     recs = as_list(d)
     records_by_file[path] = recs
@@ -602,6 +602,31 @@ for i, r in enumerate(as_list(data.get("_data/trackers/earnings_pricing.yml"))):
             err(where, f"each source needs type in {sorted(SOURCE_TYPES)} and a url")
     if r.get("quote") and len(str(r["quote"]).split()) > 20:
         err(where, "quote is longer than 20 words")
+
+# ---------------------------------------------------------------- 9. Pricing Conundrum archive (AGENTS.md section 16)
+PUB_KINDS = {"essay", "case-study", "teaching-case", "teaching-note", "concept", "book-excerpt", "talk", "publication-note"}
+published = data.get("_data/substack/published.yml")
+if published is not None:
+    slugs = {r.get("slug") for r in published if isinstance(r, dict)}
+    for i, r in enumerate(published if isinstance(published, list) else []):
+        where = f"_data/substack/published.yml[{i}] {r.get('slug')}"
+        for k in ("slug", "title", "date", "url", "audience", "kind", "themes", "file"):
+            if not r.get(k):
+                err(where, f"missing {k}")
+        if r.get("audience") not in ("free", "paid"):
+            err(where, "audience must be free or paid")
+        if r.get("kind") not in PUB_KINDS:
+            err(where, f"kind {r.get('kind')!r} not in {sorted(PUB_KINDS)}")
+        if r.get("file") and not os.path.exists(r["file"]):
+            err(where, f"file {r['file']} does not exist")
+        if r.get("version_of") and r["version_of"] not in slugs:
+            err(where, f"version_of {r['version_of']!r} is not a catalogued slug")
+        for c in r.get("related_claims") or []:
+            if c not in claim_ids:
+                err(where, f"related_claims {c!r} is not a claim_id")
+        for c in r.get("related_ideas") or []:
+            if c not in {x.get("idea_slug") for x in as_list(data.get("_data/substack/ideas.yml")) if isinstance(x, dict)}:
+                err(where, f"related_ideas {c!r} is not an idea_slug")
 
 # ---------------------------------------------------------------- 7. decisions (AGENTS.md section 14)
 DECISION_KINDS = {
