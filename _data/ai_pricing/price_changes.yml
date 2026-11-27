@@ -1,5 +1,43 @@
 # AI pricing database: change log. Newest first. One entry per price or structure change, logged when found with a source.
 # change_type values and rules: AGENTS.md section 8.
+- date: '2026-11-01'
+  provider: xAI
+  provider_slug: xai
+  product_or_model: Grok Bot (within The X Subscription)
+  case_id: xai-grok-bot-limits-2026
+  change_type: allowance-cut
+  what_changed: 'Weekly Grok Bot usage limits tightened at unchanged prices without notice; Musk said serving costs were unsustainably high relative to revenue. One reset of weekly limits for all users on Nov 9, with no stated change to the limits'
+  old_value: Earlier weekly Grok Bot limits (sizes not published)
+  new_value: Tighter weekly limits (sizes not published)
+  magnitude_pct: null
+  magnitude_note: 'Users report meters jumping from about 50% to 100% overnight; no pool sizes published, so the cut cannot be computed'
+  mechanism: usage-tier
+  announced: false
+  announced_date: null
+  source: https://www.forbes.com/sites/siladityaray/2026/11/02/musk-says-grok-bots-costs-were-unsustainably-high-weeks-after-touting-rapid-growth/
+  related_source: https://cryptobriefing.com/musk-grok-bot-usage-limits-high-costs/
+  digest: '2026-11-27'
+  agent: claude
+  verification_note: 'Confirmed after the fact by Musk on X and reported by Forbes and others; xAI''s docs not read (direct fetch blocked). No subscription price changed.'
+- date: '2026-10-12'
+  provider: xAI
+  provider_slug: xai
+  product_or_model: The X Subscription (Grok, Grok Bot, Cursor, X Premium); Cursor third-party model usage
+  case_id: xai-x-subscription-2026
+  change_type: mechanism-change
+  what_changed: 'Grok, Grok Bot, Cursor and X Premium bundled into five tiers (Free, Plus $8, Premium $30, Super $100, Ultra $200 a month) sharing one weekly usage pool, prepaid by default. In Cursor, Claude, GPT and Gemini leave every plan''s included usage and bill at API list price from prepaid credit (Premium and above only); Teams and Enterprise add $0.25 per million tokens on third-party requests. Legacy Cursor plans closed to new sign-ups'
+  old_value: 'Cursor plans with included usage covering third-party models (e.g. legacy Pro $20)'
+  new_value: 'Shared weekly pool for xAI and Cursor models; third-party models at API list price from prepaid credit'
+  magnitude_pct: null
+  magnitude_note: 'Structure change; the cost effect depends on each user''s model mix'
+  mechanism: usage-tier
+  announced: true
+  announced_date: '2026-10-12'
+  source: https://www.technobezz.com/news/xai-launches-the-x-subscription-premium-plan
+  related_source: https://cursor.com/docs/models-and-pricing
+  digest: '2026-11-27'
+  agent: claude
+  verification_note: 'Tier prices and launch date consistent across Technobezz, Storyboard18 and Digital Today; Cursor terms read from search text of its docs page and secondary guides (direct fetch blocked). Not a snapshot price; check xAI''s and Cursor''s own pages at the Dec 1 snapshot.'
 - date: '2026-11-26'
   provider: OpenAI
   provider_slug: openai

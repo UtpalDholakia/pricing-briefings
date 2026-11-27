@@ -1,5 +1,23 @@
 # Tracker: hidden_increases. Shrinkflation, upsizing with a markup, unbundling, inflated reference prices and fees.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: zoom-quiet-repricing-2026
+  mechanism_codes: [reference-price, bundling]
+  date: '2026-10-23'
+  kind: Unbundling
+  product: Zoom Scheduler Basic (booking-page tool formerly included in Zoom Workplace Basic and Pro)
+  change: 'Scheduler Basic no longer included with Workplace Basic and Pro plans from Oct 23, 2026; users onboarded before Sept 4, 2026 keep access, others need a paid Scheduler add-on or a higher plan (30-day trial for existing users, 14 days for new). Meeting scheduling itself unaffected'
+  unit_price_effect: null
+  magnitude_pct: null
+  magnitude_note: 'A free feature moved behind a paywall at an unchanged plan price; add-on price not read'
+  industry: SaaS (video meetings and scheduling)
+  geography: Global
+  source: https://community.zoom.com/customer-success-forum-23/heads-up-zoom-scheduler-basic-changes-coming-october-23-2026-82456
+  related_source: https://community.zoom.com/scheduler-6/withdrawal-of-free-basic-scheduler-82215
+  digest: '2026-11-26'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-26 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Terms from Zoom''s pinned community post (Oct 2, 2026).'
+  last_checked: '2026-11-27'
+  follow_up_date: '2026-12-27'
 - case_id: ryanair-random-seat-timing-2026
   mechanism_codes: [partitioned-pricing, scarcity-urgency]
   date: '2026-11-09'

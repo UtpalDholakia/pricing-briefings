@@ -1,5 +1,24 @@
 # Tracker: laws. Pricing laws and rules by jurisdiction.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: au-supermarket-excessive-pricing-2026
+  mechanism_codes: [dual-entitlement, motive-attribution]
+  jurisdiction: Australia
+  topic: Supermarket excessive pricing (price gouging)
+  approach: 'Conduct prohibition in the Food and Grocery Code: a price is unlawful only if significantly excessive relative to supply cost plus a reasonable margin; no fixed threshold'
+  scope: 'Supermarkets with Australian supermarket revenue above A$30 billion in the previous financial year (currently Coles and Woolworths only)'
+  carve_outs: null
+  status: In force
+  status_note: 'In force from July 1, 2026. On Nov 13 (release 126/26) the ACCC named eight focus product groups for margin monitoring, covering more than 1,000 items: potatoes, limes, bone-in chicken, unflavoured fresh milk, bread rolls, chocolate blocks and snack bars, coffee, and kitchen sponges and scourers. Chosen from consumer and supplier reports, essential vs discretionary status, and 2024-25 and 2025-26 price, margin and revenue data. The ACCC says the list is not a finding of wrongdoing and monitoring is not limited to it; first monitoring report due early 2027'
+  effective: '2026-07-01'
+  enforcement: ACCC (monitoring; compliance or enforcement action where appropriate; does not resolve individual complaints)
+  source: https://www.accc.gov.au/media-release/accc-to-monitor-supermarket-compliance-with-new-excessive-pricing-prohibition
+  related_source: https://insidefmcg.com.au/2026/11/13/accc-to-monitor-grocery-price-gouging-across-eight-product-groups/
+  updated: '2026-11-27'
+  agent: claude
+  digest: '2026-11-27'
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Focus groups and criteria from Inside FMCG, PPC Land, The Nightly and Yahoo Finance coverage of release 126/26; the release itself not opened. Penalty regime not confirmed.'
+  last_checked: '2026-11-27'
+  follow_up_date: '2027-02-15'
 - case_id: kenya-internet-metering-bill-2026
   mechanism_codes: [usage-anxiety, pain-of-paying]
   jurisdiction: Kenya

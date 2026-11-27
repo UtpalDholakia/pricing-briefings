@@ -1,5 +1,19 @@
 # Tracker: ai_agents. AI shopping agents and pricing agents: research, firm policy, surveys, opinion.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: visa-holiday-ai-trust-2026
+  mechanism_codes: [algorithm-attribution, pain-of-paying]
+  date: '2026-11'
+  kind: Survey
+  title: Shoppers will let AI compare prices and find discounts, but few will let it pay
+  who: Visa (2026 Holiday Spending Shift Survey, by Morning Consult)
+  finding: '54% of US adults have used AI for at least one shopping task (47% a year earlier). 61% would let AI compare prices and 57% would let it find discounts, but only 23% would trust generative AI to make payments on their behalf; 61% would trust Visa to secure an AI-powered payment (68% of 18-34s, 71% of frequent AI users). 41% would not tell a recipient that AI helped choose a gift. Online survey of 1,016 US adults, Sept 26-Oct 2, 2026'
+  source: https://usa.visa.com/about-visa/newsroom/press-releases.releaseId.22886.html
+  related_source: https://corporate.visa.com/en/sites/visa-perspectives/newsroom/secret-santai-visa-survey-finds-americans-turning-to-ai-for-holiday-help.html
+  digest: '2026-11-27'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Commissioned by a payment network that sells agent-payment infrastructure, so the trust-in-Visa figure is self-interested. Release date not read exactly (November 2026). Secondary write-ups differ slightly on some shares (e.g. 65% vs two-thirds open to AI help).'
+  last_checked: '2026-11-27'
+  follow_up_date: null
 - case_id: drip-assistant-experiment-2025
   mechanism_codes: [drip-pricing, algorithm-attribution]
   date: '2025-10'

@@ -1,5 +1,23 @@
 # Tracker: stories. Ongoing stories; keep updates dated and close stories when they resolve.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: mta-fare-toll-2027
+  story: New York MTA's next fare and toll increase (4% yield target for March 2027)
+  status: Open
+  started: '2026-11-18'
+  next_milestone: MTA board vote on the 2027 budget, then a specific fare proposal and public hearings
+  milestone_date: null
+  why_it_matters: 'The budget books the revenue before any fare is proposed; the eventual fare structure (base fare vs caps and discounts) decides who pays the 4%, with about one in five riders saying they cannot afford the current $3 fare'
+  last_checked: '2026-11-27'
+  follow_up_date: '2026-12-18'
+  closed_date: null
+  outcome_summary: null
+  updates:
+  - date: '2026-11-18'
+    note: 'November Financial Plan proposes fare and toll changes in March 2027 and March 2029, each designed to yield a 4% increase in farebox and toll revenue; no specific fare proposed; projected gaps of $160M (2027), $243M (2028) and $306M (2029) even with the increases'
+    source: https://www.mta.info/document/192536
+  digest: '2026-11-26'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-26 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The 4% yield plan and gap figures confirmed via La Voce di New York, Secret NYC and Railway Age; the Dec 14/16 board vote dates in Meta AI''s note were not confirmed. The Community Service Society affordability survey (Nov 13) read only as Meta AI reported it.'
 - case_id: cma-meta-commercial-terms-2026
   story: 'UK CMA investigates whether Meta''s commercial terms for businesses on Facebook and Instagram abuse a dominant position'
   status: Open
@@ -69,7 +87,7 @@
   next_milestone: FTC response to the senators' Nov 11 letter; Logitech class action (N.D. Cal.)
   milestone_date: null
   why_it_matters: A cost-based justification turned into an implied promise; tests whether consumers expect prices to fall when the cited cost is refunded
-  last_checked: '2026-11-24'
+  last_checked: '2026-11-27'
   follow_up_date: '2026-12-17'
   closed_date: null
   outcome_summary: null
@@ -89,6 +107,9 @@
   - date: '2026-11-19'
     note: 'Walmart Q3 FY27: rollbacks down to about 7,700 from more than 11,000 at the end of Q2 (historical range 5,000-5,500); CEO John Furner tells CNBC tariff refunds helped offset higher-than-expected diesel costs and maintain lower prices; executives expect over $2B in incremental diesel and transport costs this year'
     source: https://www.cnbc.com/2026/11/19/walmart-wmt-q3-2026-earnings.html
+  - date: '2026-11-18'
+    note: 'Target Q3 8-K: $301M pretax tariff refund benefit inside gross margin ($228M after tax, $0.50 EPS); gross margin rate 30.5%, up 2.3 points, of which 1.1 points from refunds; full-year EPS guidance includes about $2.14 of refund benefits to date. Fortune (Nov 27) totals $387M across Target, Kohl''s ($45M) and Best Buy ($41M) in their latest quarters, with no direct customer reimbursement announced'
+    source: https://www.sec.gov/Archives/edgar/data/0000027419/000002741926000051/a2026q3ex-99.htm
   digest: '2026-11-17'
   verification_note: 'Direct page fetches were blocked in this run (session network); details read from search-indexed text of the cited pages. Recheck at follow-up.'
 - case_id: ftc-6b-personalized-pricing-2026

@@ -189,7 +189,7 @@
   - mental-accounting
   - usage-anxiety
   created: '2026-11-17'
-  last_updated: '2026-11-26'
+  last_updated: '2026-11-27'
   evidence_for:
   - kind: tracker
     ref: openai-gpt-6-2-billing-fix-2026
@@ -227,6 +227,9 @@
   - kind: tracker
     ref: hubspot-agent-credits-2026
     note: 'Context: credits priced at $10 per 1,000 but credits per agent action unpublished, so the dollar cost of agent work is not knowable in advance. An instance, not a test.'
+  - kind: tracker
+    ref: xai-x-subscription-2026
+    note: 'Context: xAI''s X Subscription puts Grok, Grok Bot and Cursor on one weekly pool with unpublished sizes, then tightened Grok Bot limits at unchanged prices (xai-grok-bot-limits-2026); shows the vendor setting the exchange rate between work and allowance, but measures nothing about buyer misjudgement.'
   evidence_against:
   - kind: tracker
     ref: openai-per-job-pricing-2026
@@ -1570,7 +1573,7 @@
   - reference-price
   test: Net and list prices for matched deals in a second software category or from a second source.
   created: '2026-11-18'
-  last_updated: '2026-11-21'
+  last_updated: '2026-11-27'
   evidence_for:
   - kind: tracker
     ref: tropic-ai-renewal-uplift-2026
@@ -1584,6 +1587,9 @@
   - kind: evidence
     ref: zhao-listing-vs-transaction-dispersion-2015
     note: Listing-price dispersion three times transaction-price dispersion; consumer online market, adjacent.
+  - kind: tracker
+    ref: salesforce-core-first-5000-2026
+    note: 'Context: Meta AI reports a $115 promotional Core seat against a $195 list for the first 5,000 SMB buyers (promotion unconfirmed by Claude); a posted promotional price, not a negotiated net price, so it does not measure the list-net gap.'
   evidence_against: []
   related_questions: []
   related_dives: []

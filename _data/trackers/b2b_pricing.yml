@@ -2,6 +2,50 @@
 # Newest first. Common fields follow AGENTS.md section 6 (case_id, last_checked, follow_up_date, agent, verification_note).
 # mechanism: seat-based / usage-based / credits / flat / outcome-based. price_type: list / net / quote.
 # net_disclosed: false unless the source states what buyers actually pay after negotiation.
+- case_id: zoom-quiet-repricing-2026
+  related_case_id: null
+  date: '2026-03-02'
+  firm: Zoom
+  product: Zoom Workplace Pro (annual billing) and Zoom Scheduler Basic
+  change: 'Pro annual price rose from $13.33 to $14.16 per user per month (week of Mar 2, 2026) as the annual-billing discount shrank from up to 21% to up to 16%; Scheduler Basic removed from Workplace Basic and Pro plans from Oct 23, 2026 (users onboarded before Sept 4, 2026 keep access; paid Scheduler add-on or upgrade otherwise)'
+  old_price: '$13.33 per user per month, billed annually'
+  new_price: '$14.16 per user per month, billed annually'
+  effective: '2026-03-02'
+  announced: null
+  mechanism: seat-based
+  price_type: list
+  net_disclosed: false
+  magnitude_pct: 6.2
+  magnitude_note: 'Computed from $13.33 to $14.16 (annual Pro list price only); the Scheduler withdrawal is not priced in'
+  source: https://pricingsaas.com/companies/zoom/diffs/2026W10
+  related_source: https://community.zoom.com/customer-success-forum-23/heads-up-zoom-scheduler-basic-changes-coming-october-23-2026-82456
+  digest: '2026-11-26'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-26 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Pro annual figures and discount change from PricingSaaS''s tracker; Scheduler withdrawal and the Sept 4 grandfathering from Zoom''s own community post (Oct 2). The $16.99 monthly Pro price dates from mid-2025, not 2026. ZoomMate ($20 with AI credits), the Custom AI Companion rise ($12 to $20) and the 30%-off first-year offer were not confirmed today and are not filed. Meta AI''s main source is a forum post by the head of a vendor-migration firm.'
+  last_checked: '2026-11-27'
+  follow_up_date: '2027-01-27'
+- case_id: salesforce-core-first-5000-2026
+  related_case_id: null
+  date: '2026-11'
+  firm: Salesforce
+  product: Sales Cloud Core Edition (promotion for first 5,000 eligible SMB customers)
+  change: 'Reported promotion: $115 per user per month billed annually for the first 5,000 eligible small and midsize customers signing by Nov 30, 2026, against a Core list price of $195 (Core replaced Enterprise, listed at $175, on Sept 3, 2026)'
+  old_price: '$195 per user per month (Core list)'
+  new_price: '$115 per user per month (promotional, capped quantity, deadline Nov 30, 2026)'
+  effective: null
+  announced: null
+  mechanism: seat-based
+  price_type: list
+  net_disclosed: false
+  magnitude_pct: -41.0
+  magnitude_note: 'Promotional price vs list: (115-195)/195 = -41.0%, computed from Meta AI''s figures; the promotion itself is unconfirmed'
+  source: https://activator.salesforce.com/proposals/core-bundle-first-5-000/
+  related_source: https://www.salesforce.com/editions-pricing/sales-cloud/
+  digest: '2026-11-26'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-26 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The $195 Core list price is confirmed on Salesforce''s pricing pages; the $115 offer, the 5,000 cap and the Nov 30 deadline could not be confirmed in any search-indexed source (the activator page was not indexed). Treat the promotion as unverified until rechecked.'
+  last_checked: '2026-11-27'
+  follow_up_date: '2026-12-02'
 - case_id: github-copilot-access-2026
   related_case_id: null
   date: '2026-10-28'

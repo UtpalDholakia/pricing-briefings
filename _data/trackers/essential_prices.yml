@@ -1,5 +1,24 @@
 # Tracker: essential_prices. Price changes for essentials: energy, tuition, healthcare, housing, food.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: college-board-trends-2026
+  mechanism_codes: [reference-price]
+  date: '2026-11'
+  sector: Tuition
+  firm_or_place: US colleges (College Board, Trends in College Pricing and Student Aid 2026)
+  change: 'Published (sticker) tuition and fees for 2026-27 rose about 2.4-3.7% by sector before inflation (Meta AI: public four-year in-state $12,290, +2.9%; private nonprofit four-year $46,350, +3.7%). Inflation-adjusted net tuition and fees paid by first-time full-time in-state students at public four-year colleges an estimated $1,920 in 2026-27, down from a 2012-13 peak of $4,600'
+  magnitude_pct: null
+  magnitude_note: 'Sticker rises are the report''s own percentages per Meta AI (not independently confirmed); the net-price fall is 58% in real terms, computed from $4,600 to $1,920'
+  who_pays: US students and families
+  explanation: 'Grant aid grew faster than published prices, so net price fell while sticker price rose'
+  reaction: null
+  outcome: Ongoing
+  source: https://research.collegeboard.org/trends/college-pricing/highlights
+  related_source: https://www.insidehighered.com/node/223046
+  digest: '2026-11-26'
+  agent: meta
+  verification_note: 'Filed from Meta AI''s 2026-11-26 suggestion. Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The $1,920 and $4,600 net-price figures confirmed via Inside Higher Ed; the sticker figures ($12,290, $46,350 and sector percentages) were not found in an independent search-indexed source today.'
+  last_checked: '2026-11-27'
+  follow_up_date: null
 - case_id: japan-electricity-record-nov-2026
   mechanism_codes: [reference-price]
   date: '2026-10-29'

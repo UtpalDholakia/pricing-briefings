@@ -81,6 +81,7 @@
   case_ids:
   - salesforce-agentforce-coworker-2027
   - slack-slackbot-cap-2026
+  - salesforce-core-first-5000-2026
   aliases:
   - Salesforce
   - Slack (Salesforce)
@@ -105,3 +106,15 @@
   - Google One (30GB Lite plan)
   first_seen: '2026-11-10'
   notes: 'Gemini API introductory rates ending (Argon Dec 1; Flash reportedly Jan 1, 2027), Play fee split rolling out by region, and a Google One lite plan outside the US/UK/EU.'
+- firm_id: xai
+  name: xAI
+  sector: AI products
+  case_ids:
+  - xai-x-subscription-2026
+  - xai-grok-bot-limits-2026
+  aliases:
+  - xAI
+  - xAI (Grok Bot, within The X Subscription)
+  - xAI (The X Subscription; Cursor)
+  first_seen: '2026-10-12'
+  notes: 'Bundles Grok, Grok Bot, Cursor and X Premium in one weekly usage pool; cut Grok Bot limits in November citing serving costs.'

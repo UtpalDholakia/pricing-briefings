@@ -1,5 +1,24 @@
 # Tracker: explanations. How sellers explain price changes.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: xai-grok-bot-limits-2026
+  mechanism_codes: [dual-entitlement, motive-attribution, price-change-communication]
+  date: '2026-11-01'
+  firm: xAI
+  change: 'Grok Bot weekly usage limits tightened at unchanged subscription prices, without advance notice'
+  explanation: 'Musk, replying on X to a user who asked for a reset: the cost of serving Grok Bot was unsustainably high relative to revenue. Came days after he called it the fastest-growing product he had seen; no cost or margin figures given. A one-off reset of weekly limits followed on Nov 9'
+  category: Cost
+  reaction: 'Coverage (Forbes, Yahoo Finance, Tech Times) framed it as a switch after touting growth; users complained of meters jumping overnight. No measured reaction'
+  outcome: Ongoing
+  outcome_note: 'A cost explanation given after the fact, to an individual, with no number attached; the Nov 9 reset is a one-off concession. Watch whether xAI publishes pool sizes or restores limits'
+  outcome_date: null
+  magnitude_pct: null
+  source: https://www.forbes.com/sites/siladityaray/2026/11/02/musk-says-grok-bots-costs-were-unsustainably-high-weeks-after-touting-rapid-growth/
+  related_source: https://finance.yahoo.com/technology/article/musk-is-throttling-grok-because-its-cost-is-unsustainably-high-162959909.html
+  digest: '2026-11-27'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. The X reply read only as quoted by Forbes and others.'
+  last_checked: '2026-11-27'
+  follow_up_date: '2026-12-27'
 - case_id: openai-gpt-6-2-billing-fix-2026
   mechanism_codes: [reference-price, price-change-communication, dual-entitlement]
   date: '2026-11-26'

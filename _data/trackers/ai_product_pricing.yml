@@ -1,5 +1,33 @@
 # Tracker: ai_product_pricing. How AI products themselves are priced.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: xai-grok-bot-limits-2026
+  mechanism_codes: [usage-anxiety, dual-entitlement, price-change-communication]
+  date: '2026-11-01'
+  kind: AI product pricing
+  title: xAI tightens Grok Bot weekly limits at unchanged prices; Musk says serving costs were unsustainably high relative to revenue
+  who: xAI (Grok Bot, within The X Subscription)
+  finding: 'Around Nov 1, subscribers saw weekly usage meters jump (reports of about 50% to 100% overnight) without advance notice. Replying on X to a user asking for a reset, Musk confirmed the change was deliberate: the cost of serving Grok Bot was unsustainably high relative to revenue. No cost, margin or new pool sizes were disclosed. On Nov 9 the official account reset weekly limits for all users, with no change to the limits announced. Plan prices unchanged'
+  source: https://www.forbes.com/sites/siladityaray/2026/11/02/musk-says-grok-bots-costs-were-unsustainably-high-weeks-after-touting-rapid-growth/
+  related_source: https://cryptobriefing.com/musk-grok-bot-usage-limits-high-costs/
+  digest: '2026-11-27'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Musk''s reply and the Nov 9 reset post read only as reported (Forbes, Crypto Briefing, Yahoo Finance, an X repost). Pool multipliers by tier conflict across sources and are not recorded. A forum claim of a ~50% Cursor quota cut is unconfirmed and not filed.'
+  last_checked: '2026-11-27'
+  follow_up_date: '2026-12-27'
+- case_id: xai-x-subscription-2026
+  mechanism_codes: [bundling, mental-accounting, reference-price]
+  date: '2026-10-12'
+  kind: AI product pricing
+  title: The X Subscription bundles Grok, Grok Bot, Cursor and X Premium in five tiers, with one weekly usage pool, and moves third-party models in Cursor to API list price
+  who: xAI (The X Subscription; Cursor)
+  finding: 'Tiers Free, Plus $8, Premium $30, Super $100 and Ultra $200 a month; every paid tier draws on one weekly pool shared by Grok, Grok Bot and Cursor, prepaid by default, with usage beyond the pool billed by token cost. In Cursor, Claude, GPT and Gemini are no longer in any plan''s included usage: on Premium and above they bill at the model''s API list price from prepaid credit, Plus and Free cannot use them, and Teams/Enterprise pay an extra $0.25 per million tokens (Cursor Token Rate) on third-party requests, BYOK included. Legacy Cursor plans continue for existing subscribers but are closed to new sign-ups'
+  source: https://cursor.com/docs/models-and-pricing
+  related_source: https://www.technobezz.com/news/xai-launches-the-x-subscription-premium-plan
+  digest: '2026-11-27'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Cursor''s docs page could not be opened (host blocked); its terms read via search text and several secondary guides, which disagree on some dates and on Plus/Premium details. Launch date Oct 12 per Storyboard18, Technobezz and Digital Today. Not previously filed; ChatGPT mentioned the launch on Oct 24.'
+  last_checked: '2026-11-27'
+  follow_up_date: '2026-12-27'
 - case_id: openai-gpt-6-2-billing-fix-2026
   mechanism_codes: [reference-price, usage-anxiety, price-change-communication]
   date: '2026-11-26'

@@ -1,4 +1,20 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: fong-manchanda-song-suggested-pricing-2026
+  date: '2026-10'
+  mechanism: 'A platform-suggested price acts as an anchor for sellers'' own list prices, but only partly: sellers move part of the way toward the suggestion, most where pricing is hardest'
+  mechanism_codes: [reference-price]
+  comparison: Sellers shown a suggested price vs none, and suggested prices shifted up or down, on the same peer-to-peer marketplace
+  design: Randomised field experiment on Mercari (US), plus a follow-up experiment on equilibrium effects
+  setting: Peer-to-peer resale marketplace (Mercari)
+  outcome: Seller listing prices, probability of sale and seller revenue (actual behaviour)
+  result_kind: Positive
+  result: 'A 30% change in the suggested price moved listing prices about 5% in the same direction; lower suggestions raised the chance of sale and seller revenue; effects were largest for new sellers and used items. Mercari then rolled out the revenue-maximising suggestion level, which also lowered prices for buyers'
+  boundary: 'One platform; the suggestion comes from the platform, which also benefits from faster sales; partial pass-through (about one-sixth) means sellers discount the anchor heavily. Effect sizes beyond the headline elasticity and sample sizes not read'
+  source: https://journals.sagepub.com/doi/10.1177/00222437261432198
+  related_source: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4993457
+  verification_note: 'Journal of Marketing Research 63(5), October 2026 issue. Read from search-indexed abstract text of the journal page and SSRN (direct fetch blocked). The roll-out detail comes from a co-author''s LinkedIn post, read in search text only.'
+  digest: '2026-11-27'
+  agent: claude
 - id: "bihari-public-payment-norms-2026"
   date: "2026-09-11"
   mechanism: "Social norms may influence publicly visible voluntary payments."

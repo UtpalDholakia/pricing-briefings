@@ -50,9 +50,13 @@
   lanes:
   - Google-world and Asia
   - Small business and creator economy
-  last_hunted: null
-  hunt_count: 0
-  hunts: []
+  last_hunted: '2026-11-26'
+  hunt_count: 1
+  hunts:
+  - date: '2026-11-26'
+    agent: chatgpt
+    outcome: miss
+    note: 'Searched post-sale target changes, retargeting and incremental profit; Sellforte''s Nov 4 examples use simulated data, not an observed test. No qualifying comparison. Next hunt after 2026-12-10 (logged by Claude from ChatGPT''s 2026-11-26 briefing).'
   evidence_for: []
   evidence_against: []
   related_claim: null
@@ -425,13 +429,17 @@
   lanes:
   - Outside the US/UK/EU
   - Primary documents instead of news
-  last_hunted: '2026-11-19'
-  hunt_count: 1
+  last_hunted: '2026-11-26'
+  hunt_count: 2
   hunts:
   - date: '2026-11-19'
     agent: meta
     outcome: miss
     note: 'Searched NERSA developments before the Nov 26 Eskom decision; consultation and Eskom fixed-charge proposal (R535.80 to R660.90) still undecided; the Nov 12 unlawful-tariffs concession is a separate matter (filed as nersa-unlawful-metro-tariffs-2026). Next hunt after 2026-11-26.'
+  - date: '2026-11-26'
+    agent: meta
+    outcome: miss
+    note: 'Searched for NERSA''s decision on Eskom''s 2027/28 tariffs (8.83% average proposed; Homepower 4 fixed charge R535.80 to R660.90, +23.3%); no decision published as of the morning check; NERSA''s notice to Eskom due Dec 3. Next hunt after 2026-12-03 (logged by Claude from Meta AI''s 2026-11-26 briefing).'
   evidence_for:
   - kind: evidence
     ref: sims-solar-cost-shift-2025
@@ -600,6 +608,34 @@
     new_status: Testing
     reason: 'Filed from Meta AI''s 2026-11-24 hypothesis proposal (states a test); 15 of 20 Testing slots now used. Lead (not evidence): github-copilot-access-2026.'
     source: https://utpaldholakia.github.io/pricing-briefings/briefings/2026-11-24-meta/
+- hypothesis_id: feature-withdrawal-louder-than-price-rise
+  hypothesis: Removing a free feature raises the effective price more visibly than a list-price rise of the same size, because buyers code the lost feature as a loss of something they own.
+  predicts: Complaint and downgrade mentions spike more after a feature withdrawal than after a matched list-price rise at the same vendor.
+  test: 'Counts of community complaint threads and downgrade or cancellation mentions after Zoom''s October 23, 2026 Scheduler Basic withdrawal versus after its March 2026 Pro price rise (same vendor, same forum, same window length); a second vendor pair or a vignette experiment matching the money value of the feature to the price rise would strengthen it. Grandfathered users must be separated out.'
+  status: Testing
+  confidence: Low
+  lanes:
+  - B2B and enterprise pricing
+  - Small business and creator economy
+  last_hunted: '2026-11-27'
+  hunt_count: 1
+  hunts:
+  - date: '2026-11-27'
+    agent: claude
+    outcome: miss
+    note: 'Searched Zoom community threads on the Scheduler Basic withdrawal (Zoom post of Oct 2 says Scheduler Basic leaves Basic and Pro plans from Oct 23; users onboarded before Sept 4 keep access) and on the March 2026 Pro rise, plus studies of feature removal vs price rises. Found only a handful of threads on each, no counts, and one vendor blog (painhunt.dev) asserting removals draw more anger, from complaint scores without a matched price-rise comparison: a lead, not a test. The grandfathering exemption also blunts the Zoom comparison. Next hunt after 2026-12-11.'
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  created: '2026-11-27'
+  agent: meta
+  history:
+  - date: '2026-11-27'
+    old_status: null
+    new_status: Testing
+    reason: 'Filed from Meta AI''s 2026-11-26 Hypothesis proposal (states a test); 17 of 20 Testing slots in use after filing.'
+    source: null
 - hypothesis_id: less-accurate-ai-buyer-better-off
   hypothesis: A less accurate AI buyer can leave consumers better off than a fully accurate one, because sellers respond to how buyers process prices.
   predicts: Consumer surplus is higher in a market of less accurate AI buyers than of fully accurate ones.

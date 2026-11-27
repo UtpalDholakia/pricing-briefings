@@ -1,6 +1,24 @@
 # Tracker: questions. Open research questions with status and priority.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
 - date: '2026-11-26'
+  question_id: sticker-vs-net-tuition-2026
+  question: 'When sticker tuition rises while the net price students pay falls in real terms, which number do families use as the reference price when deciding whether and where to apply?'
+  context: 'College Board Trends in College Pricing 2026 (college-board-trends-2026); suggested by Meta AI, 2026-11-26'
+  digest: '2026-11-26'
+  agent: meta
+  status: Open
+  priority: Medium
+  answered_by: null
+- date: '2026-11-26'
+  question_id: ad-measurement-change-cost-comparability-2026
+  question: 'When an ad platform changes how it counts conversions (Meta''s on-device measurement default from Nov 12, 2026), how long before advertisers notice that cost per result is no longer comparable with earlier periods?'
+  context: 'Suggested by Meta AI, 2026-11-26 (Falia and PPC Land reporting); the measurement change itself was not confirmed by Claude today'
+  digest: '2026-11-26'
+  agent: meta
+  status: Open
+  priority: Medium
+  answered_by: null
+- date: '2026-11-26'
   question_id: basket-guarantee-unverifiable-2026
   question: 'Does a basket-level price guarantee against rivals whose baskets differ in contents (Lidl''s Never Beaten on Price Thanksgiving basket vs Walmart and Aldi) improve price image as much as an item-level match, even though shoppers cannot practically verify it?'
   context: 'Lidl US Thanksgiving basket for Lidl Plus members, Nov 11-25, 2026 (lidl-never-beaten-basket-2026)'
