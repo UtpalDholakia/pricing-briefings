@@ -83,7 +83,7 @@ The site keeps eleven running case trackers in `_data/trackers/` (this section) 
 | File | What goes in it | Key fields |
 |---|---|---|
 | `explanations.yml` | A seller explains, justifies or apologizes for a price change | case_id, date, firm, change, explanation, category, reaction, outcome, outcome_note, outcome_date, magnitude_pct, source, digest |
-| `backlash.yml` | A price controversy, and whether the seller backed down | case_id, date, firm, change, framing, backlash, reversed, reversal_note, days_to_reversal, outcome_date, magnitude_pct, reaction_volume, source, digest |
+| `backlash.yml` | A price controversy, and whether the seller backed down | case_id, date, firm, change, framing, backlash, reversed, reversal_note, days_to_reversal, outcome_date, magnitude_pct, reaction_count, reaction_measure, reaction_source, source, digest |
 | `stories.yml` | A story that will recur; add to its `updates` list | case_id, story, status, status_note, started, next_milestone, milestone_date, why_it_matters, updates[date, note, source], closed_date, outcome_summary |
 | `essential_prices.yml` | Price changes for essentials | case_id, date, sector, firm_or_place, change, magnitude_pct, who_pays, explanation, reaction, outcome, source, digest |
 | `nonwestern_pricing.yml` | Pricing outside the US/UK/EU (prefer local-language sources) | case_id, date, country, language, firm_or_place, change, context, source, digest |
@@ -103,6 +103,7 @@ Use only these values. Detail goes in the matching `_note` field, never in the v
 | Field | Allowed values | Detail goes in |
 |---|---|---|
 | `backlash.reversed` | `Yes` / `No` / `Partial` / `Pending` / `Unknown` | `reversal_note` |
+| `backlash.reaction_measure` | `petition-signatures` / `news-articles-7d` / `complaints-filed` / `app-reviews` / `social-posts` / `cancellations-reported` / `other` | `reversal_note` |
 | `backlash.days_to_reversal` | integer days from `date` to the reversal, only when both dates are known; otherwise `null` | `reversal_note` (e.g. "within days") |
 | `explanations.category` | `Apology` / `Cost` / `Capacity / market` / `Pledge` / `Deflect to third party` / `Refusal to cut` / `Restraint` / `Screening` / `Lower list price` / `Efficiency` / `Auditability` / `Reference-point reframing` / `Value / quality` / `Evidence` | `reaction` or `outcome_note` |
 | `explanations.outcome`, `essential_prices.outcome` | `Ongoing` / `Reversed` / `Partially reversed` / `Held` / `Mitigated` / `Unknown` | `outcome_note` |
@@ -128,7 +129,9 @@ Use only these values. Detail goes in the matching `_note` field, never in the v
 
 ### 6.5 Rules
 
-- **Never invent numbers.** `days_to_reversal`, `magnitude_pct`, `reaction_volume` and `unit_price_effect` stay `null` unless the source states them or they can be computed exactly from the source's numbers. A missing value is data; a guessed value is corruption.
+- **Never invent numbers.** `days_to_reversal`, `magnitude_pct`, `reaction_count` and `unit_price_effect` stay `null` unless the source states them or they can be computed exactly from the source's numbers. A missing value is data; a guessed value is corruption.
+- **Record the raw figures, then compute the percentage.** In `backlash`, `explanations`, `essential_prices`, `hidden_increases` and `b2b_pricing`, whenever the source states the before and after amounts, record them as plain numbers: `price_before` and `price_after` with `currency` (ISO code: USD, EUR, INR, ZAR…), and for size changes `qty_before` and `qty_after` with `qty_unit` (g, ml, oz, count, sheets, GB…). Add `price_basis`, one short phrase saying what the price is ("shelf price, one 92 oz jug", "per-order fee before GST", "one seat, monthly, billed annually"). Then `magnitude_pct` = (after ÷ before − 1) × 100 for a price, or the change in price per unit when both price and quantity are recorded, rounded to one decimal. Ranges, averages and "about" figures are not raw figures: leave them in the text. A size change with no stated shelf price gets the quantities only and no percentage. `scripts/validate.py` checks the arithmetic and lists entries where the percentage can be computed but is missing (`--gaps`).
+- **Reaction size is a count, not an impression.** `reaction_volume` is retired. Fill `reaction_count` (an integer) only with something countable and dated, plus `reaction_measure`: `petition-signatures` / `news-articles-7d` (articles in the first 7 days, from one stated search) / `complaints-filed` / `app-reviews` / `social-posts` / `cancellations-reported` / `other` (say what in `reversal_note`), and `reaction_source` (the URL the count came from). No count, no field.
 - **Never delete entries**, including other agents'. Correct mistakes in place with a note; merge duplicates under one `case_id`, keeping all source URLs.
 - If a source couldn't be opened or checked, say so in `verification_note`.
 - New entries go at the **top** of each list (newest first). Quote any string that contains a colon. Keep entries short.
@@ -139,7 +142,7 @@ Use only these values. Detail goes in the matching `_note` field, never in the v
 
 On the first Claude digest of each month, add a `## Monthly tracker digest` section at the end of that day's briefing, with exactly these six points:
 1. Counts by tracker and by kind/category, this month vs last month.
-2. Reversal rate: (Yes + Partial) ÷ (Yes + Partial + No) backlash cases, with the counts shown, not just the percentage.
+2. Reversal rate: (Yes + Partial) ÷ (Yes + Partial + No) backlash cases, with the counts shown, not just the percentage. Add the raw-figure coverage line from `python3 scripts/validate.py --gaps` (entries still missing both raw figures and `magnitude_pct`), this month vs last.
 3. New laws and status changes, with any fines or enforcement.
 4. Biggest `magnitude_pct` moves in `hidden_increases.yml` and `essential_prices.yml` that month.
 5. Questions answered that month, with links, and the 3 highest-priority open questions.
@@ -156,6 +159,8 @@ The three longitudinal trackers use the [tracker methods](tracker-methods.md). K
 | `model_migrations.yml` | One transition and its follow-ups | Check announcement, effective date, and first affected bill. Link the price panel where comparable. |
 
 For additions, follow the existing field names, use quoted ISO dates (or a quoted year and month when only those are known), and validate the YAML as above. Claude's daily run checks every `price_panel.yml` profile and `model_migrations.yml` record whose `next_check` date has arrived, following the tracker methods, and logs a new observation (including "no change"). Where a longitudinal record concerns the same case as a section 6 tracker, add the same `case_id` to it.
+
+**Core basket.** `price_panel.yml` profiles with `basket: core` are a fixed monthly basket of everyday offers (see [tracker methods](tracker-methods.md#basket)). Every basket profile is checked every month and logged even when unchanged; a failed check is noted, not skipped. Earlier prices may be filled in from archives and dated reports following the [backfill rules](tracker-methods.md#backfill). Only Utpal adds, retires or redefines basket profiles.
 
 ## 8. AI pricing database
 
@@ -260,3 +265,43 @@ What the daily briefings go looking for. File: `_data/hypotheses.yml`; page: htt
 ### 13.4 Ownership and reporting
 
 Claude owns `hypotheses.yml`, the page, the validator checks and graduation reviews. ChatGPT and Meta AI hunt hypotheses in their lanes and propose new ones in their briefings; neither edits the file. Utpal picks the pool. The monthly tracker digest (6.6) adds one line: hunts that month, hits and misses (the hit rate), graduations and deaths. The first quarterly synthesis (January 2027) reviews whether the hunt produces claims or only activity.
+
+## 14. Decisions for Utpal
+
+Everything waiting on Utpal, in one place: https://utpaldholakia.github.io/pricing-briefings/decisions/ (`decisions.html`). The queue is generated at every build from the data files, never kept by hand: claim verdicts with `confirmed_by: null`, deep dives at `draft` or `review`, pipeline ideas that are `ready`, High-priority ideas not yet started, parked ideas past `revisit_date`, free hypothesis slots and hypotheses due a 3-hunt review, Open questions already pursued by a hypothesis or claim, and Open questions three weeks old that nothing pursues.
+
+- **Recommendations** live in `_data/decisions.yml`: `kind` (`claim` / `question` / `idea` / `dive` / `hypothesis`), `ref` (that item's ID), `recommendation` (`Confirm` / `Change` / `Approve` / `Revise` / `Promote` / `Start` / `Park` / `Kill` / `Keep` / `Mark in progress` / `Dead end` / `Open slot` / `Defer`), a one- or two-sentence `note` giving the reason, `date`, `agent`, and `decided` / `decision` (both `null` until Utpal decides). One open recommendation per item. Claude writes them; other agents suggest them in their briefings.
+- **Weekly review.** In the Friday digest, Claude adds a recommendation for every new item in the queue that lacks one, and one line at the end of the briefing: `Decisions waiting: N (link)`. Recommend the specific action, not "review this".
+- **Applying a decision.** Utpal decides in chat, item by item or in batches ("accept all recommendations except …"). The same day Claude makes the change in the data file (for example `confirmed_by: utpal` on the claim's last `status_history` entry, or `status: In progress` on a question), then sets `decided` to the date and `decision` to Utpal's words, shortened. The row stays as the record; never delete one.
+- **The rule that must not be broken: a recommendation is not a decision.** Nothing in the data files changes because a recommendation exists; only Utpal's reply in chat moves an item.
+
+## 15. Earnings pricing watch
+
+What companies say about their own prices on earnings calls, quarter after quarter. Companies: `_data/earnings/companies.yml` (109 companies; tier 1 read every quarter, tier 2 when time allows). Rows: `_data/trackers/earnings_pricing.yml`, shown on the trackers page. **Owner: ChatGPT**, following [EARNINGS_INSTRUCTIONS.md](EARNINGS_INSTRUCTIONS.md); Claude checks rows when it uses them and links them to cases. Only Utpal adds or removes companies.
+
+| Field | What goes in it |
+|---|---|
+| `id` | `<ticker in lowercase>-<period>`, e.g. `pg-fy2027-q2`, `mcd-2026-q4` (a lowercase slug, unique) |
+| `ticker`, `company` | as in `companies.yml` |
+| `period`, `period_end`, `call_date` | the company's own period label ("FY2027 Q2"), the period's last day, the call date (quoted ISO dates) |
+| `price_metric_label` | the company's exact label for its price effect that quarter ("pricing", "price/mix", "average check", "ARPU", "TRASM") |
+| `price_effect_pct`, `volume_effect_pct`, `organic_growth_pct` | numbers in percentage points exactly as stated; `null` if not stated. Never derive one from another |
+| `metric_note` | what the metric includes (e.g. "price and mix combined", "check includes mix shift") |
+| `price_signal` | `raising` / `holding` / `cutting` / `mixed` / `not-discussed` (what the company did or said it will do to prices) |
+| `price_actions` | list of short strings: each concrete action, with where, when and size as stated |
+| `guidance` | the pricing outlook given for coming periods, or `null` |
+| `explanation_category`, `explanation` | why management says prices moved: a category from 6.2 (`explanations.category`) and one paraphrased sentence |
+| `quote`, `quote_speaker` | optional: one verbatim quote of at most 20 words, and who said it |
+| `elasticity_signal`, `elasticity_note` | `none-seen` / `some` / `significant` / `not-discussed`: what management says about how buyers responded to prices |
+| `promo_signal` | `increasing` / `stable` / `decreasing` / `not-discussed` |
+| `hidden_signals` | list, from: `pack-size`, `pack-price-architecture`, `fees`, `surcharge`, `unbundling`, `membership`, `credits`, `personalized-pricing`, `dynamic-pricing`, `tariff-pass-through`, `price-lock` |
+| `pricing_questions` | number of analyst questions in the Q&A about price, pricing power, elasticity or promotions; `null` if no transcript was read |
+| `case_id`, `mechanism_codes` | as elsewhere; reuse an existing `case_id` when the call discusses a tracked case |
+| `sources` | list of `type` (`transcript` / `prepared-remarks` / `press-release` / `filing` / `presentation`) and `url`; public sources only |
+| `verification_note`, `digest`, `agent`, `last_checked` | as in section 6 |
+
+- **Never invent numbers** (6.5 applies). A price effect not stated as a number stays `null`, with the words in `metric_note`.
+- **Comparability over time** is the point: use the same label the company used in earlier quarters where it did, and note in `metric_note` when the company changes its definition.
+- **Feeding other trackers.** A concrete price change, a stated explanation or a shrink/fee move found on a call goes into ChatGPT's briefing as a tracker suggestion; Claude files it in the section 6 tracker with the same `case_id`.
+- **Season synthesis.** When most tier 1 companies have reported for a season, ChatGPT's briefing that day carries a cross-company summary (section in EARNINGS_INSTRUCTIONS.md). Claude adds its headline counts to the next monthly tracker digest.
+

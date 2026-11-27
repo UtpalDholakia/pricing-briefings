@@ -5,6 +5,7 @@ Usage:
     python3 scripts/validate.py            # errors fail (exit 1); warnings are printed
     python3 scripts/validate.py --firms    # also print the firm registry report
     python3 scripts/validate.py --hypotheses   # also print the hypothesis hunt report
+    python3 scripts/validate.py --gaps     # also print the raw-figure gap report (AGENTS.md 6.5)
 
 Checks (AGENTS.md sections 2, 6, 8, 10, 11):
   * every YAML file under _data/ parses
@@ -19,6 +20,11 @@ Checks (AGENTS.md sections 2, 6, 8, 10, 11):
     at most 20 Testing, Deferred entries say what would reopen them, every evidence ref / related_claim / related question resolves, hunts consistent
     with hunt_count and last_hunted (never in the future), Graduated entries name a claim, history consistent,
     hypothesis_ids unique and never equal to a claim_id
+  * raw figures (AGENTS.md 6.5): price/qty before-after come in pairs with currency/qty_unit, and magnitude_pct
+    matches them; reaction_volume is retired in favour of reaction_count + reaction_measure + reaction_source
+  * decisions (_data/decisions.yml, AGENTS.md section 14): kinds, refs resolve, recommendations allowed
+  * earnings pricing watch (AGENTS.md section 15): company registry complete, rows use registered tickers and
+    allowed values, numbers are numbers, sources typed, quotes at most 20 words
 Needs only Python 3 and PyYAML.
 """
 import datetime
@@ -47,7 +53,11 @@ def warn(where, msg):
 # ---------------------------------------------------------------- vocabularies
 OUTCOME = {"Ongoing", "Reversed", "Partially reversed", "Held", "Mitigated", "Unknown"}
 VOCAB = {
-    "_data/trackers/backlash.yml": {"reversed": {"Yes", "No", "Partial", "Pending", "Unknown"}},
+    "_data/trackers/backlash.yml": {
+        "reversed": {"Yes", "No", "Partial", "Pending", "Unknown"},
+        "reaction_measure": {"petition-signatures", "news-articles-7d", "complaints-filed", "app-reviews",
+                             "social-posts", "cancellations-reported", "other"},
+    },
     "_data/trackers/explanations.yml": {
         "category": {"Apology", "Cost", "Capacity / market", "Pledge", "Deflect to third party",
                      "Refusal to cut", "Restraint", "Screening", "Lower list price", "Efficiency",
@@ -106,6 +116,47 @@ def as_list(data):
     return []
 
 
+BASKETS = {"core"}
+RAW_TRACKERS = ("backlash", "explanations", "essential_prices", "hidden_increases", "b2b_pricing")
+raw_report = {"computable": [], "missing": []}
+
+
+def _num(v):
+    return isinstance(v, (int, float)) and not isinstance(v, bool)
+
+
+def check_raw_figures(where, r):
+    """AGENTS.md 6.5: magnitude_pct is computed from the raw before/after figures when they are recorded."""
+    pb, pa, qb, qa = (r.get(k) for k in ("price_before", "price_after", "qty_before", "qty_after"))
+    if all(v is None for v in (pb, pa, qb, qa)):
+        if r.get("magnitude_pct") is None and r.get("_tracker") in RAW_TRACKERS:
+            raw_report["missing"].append(where)
+        return
+    for k, v in (("price_before", pb), ("price_after", pa), ("qty_before", qb), ("qty_after", qa)):
+        if v is not None and not _num(v):
+            err(where, f"{k} must be a plain number (put currency in currency, units in qty_unit)")
+            return
+    if (pb is None) != (pa is None) or (qb is None) != (qa is None):
+        err(where, "raw figures come in pairs: price_before with price_after, qty_before with qty_after")
+        return
+    if pb is not None and not r.get("currency"):
+        err(where, "price_before/price_after need currency")
+    if qb is not None and not r.get("qty_unit"):
+        err(where, "qty_before/qty_after need qty_unit")
+    if pb is None or pb == 0 or (qb is not None and (qb == 0 or qa == 0)):
+        return  # quantity alone, or zero base: no percentage can be computed
+    if qb is not None:
+        expected = round(((pa / qa) / (pb / qb) - 1) * 100, 1)
+    else:
+        expected = round((pa / pb - 1) * 100, 1)
+    m = r.get("magnitude_pct")
+    if m is None:
+        raw_report["computable"].append((where, expected))
+        warn(where, f"magnitude_pct is null but the raw figures give {expected}: set it")
+    elif not _num(m) or abs(m - expected) > 0.15:
+        err(where, f"magnitude_pct {m!r} does not match the raw figures ({expected})")
+
+
 # ---------------------------------------------------------------- 1. YAML parses
 data = {}
 for path in sorted(glob.glob("_data/**/*.yml", recursive=True)):
@@ -130,7 +181,8 @@ all_case_ids = defaultdict(list)       # case_id -> [file]
 records_by_file = {}
 for path, d in data.items():
     if path in ("_data/tags.yml", "_data/mechanisms.yml", "_data/firms.yml", "_data/claims.yml",
-                "_data/hypotheses.yml", "_data/research/bibliography.yml"):
+                "_data/hypotheses.yml", "_data/research/bibliography.yml", "_data/decisions.yml",
+                "_data/earnings/companies.yml"):
         continue
     recs = as_list(d)
     records_by_file[path] = recs
@@ -140,6 +192,7 @@ for path, d in data.items():
         if not isinstance(r, dict):
             continue
         where = f"{path}[{i}] {r.get('case_id') or r.get('id') or r.get('idea') or ''}".strip()
+        r = dict(r, _tracker=short)
         for field, allowed in vocab.items():
             if field in r and r[field] is not None and str(r[field]) not in allowed:
                 err(where, f"{field}={r[field]!r} not in allowed values")
@@ -157,6 +210,13 @@ for path, d in data.items():
             v = r.get(k)
             if v is not None and not isinstance(v, datetime.date) and not DATEISH.match(str(v)):
                 warn(where, f"{k}={v!r} is not an ISO date")
+        check_raw_figures(where, r)
+        if "reaction_volume" in r:
+            err(where, "reaction_volume is retired: use reaction_count, reaction_measure and reaction_source (AGENTS.md 6.5)")
+        if r.get("reaction_count") is not None and not (r.get("reaction_measure") and r.get("reaction_source")):
+            err(where, "reaction_count needs reaction_measure and reaction_source")
+        if short == "price_panel" and r.get("basket") is not None and r.get("basket") not in BASKETS:
+            err(where, f"basket {r.get('basket')!r} not in {sorted(BASKETS)}")
         if short in CASE_TRACKERS:
             for k in ("last_checked", "follow_up_date"):
                 if k not in r:
@@ -483,7 +543,101 @@ if hyps is not None:
     if hyp_report["testing"] > TESTING_CAP:
         err("_data/hypotheses.yml", f"{hyp_report['testing']} hypotheses in Testing (cap is {TESTING_CAP})")
 
+# ---------------------------------------------------------------- 8. earnings pricing watch (AGENTS.md section 15)
+EARN_VOCAB = {
+    "price_signal": {"raising", "holding", "cutting", "mixed", "not-discussed"},
+    "elasticity_signal": {"none-seen", "some", "significant", "not-discussed"},
+    "promo_signal": {"increasing", "stable", "decreasing", "not-discussed"},
+    "explanation_category": set(VOCAB["_data/trackers/explanations.yml"]["category"]),
+}
+HIDDEN_SIGNALS = {"pack-size", "pack-price-architecture", "fees", "surcharge", "unbundling", "membership", "credits",
+                  "personalized-pricing", "dynamic-pricing", "tariff-pass-through", "price-lock"}
+SOURCE_TYPES = {"transcript", "prepared-remarks", "press-release", "filing", "presentation"}
+companies = data.get("_data/earnings/companies.yml")
+tickers = set()
+if companies is not None:
+    for i, c in enumerate(companies if isinstance(companies, list) else []):
+        where = f"_data/earnings/companies.yml[{i}] {c.get('ticker')}"
+        for k in ("company", "ticker", "country", "sector", "tier", "metric", "why"):
+            if c.get(k) in (None, ""):
+                err(where, f"missing {k}")
+        if str(c.get("ticker")) in tickers:
+            err(where, "duplicate ticker")
+        tickers.add(str(c.get("ticker")))
+        if c.get("tier") not in (1, 2):
+            err(where, "tier must be 1 or 2")
+        if c.get("firm_id") and c["firm_id"] not in {f.get("firm_id") for f in (firms or [])}:
+            err(where, f"firm_id {c['firm_id']!r} not in _data/firms.yml")
+seen_earn = set()
+for i, r in enumerate(as_list(data.get("_data/trackers/earnings_pricing.yml"))):
+    if not isinstance(r, dict):
+        continue
+    where = f"_data/trackers/earnings_pricing.yml[{i}] {r.get('id')}"
+    rid = r.get("id")
+    if not rid or not SLUG.match(str(rid)):
+        err(where, "id must be a lowercase slug")
+    if rid in seen_earn:
+        err(where, "duplicate id")
+    seen_earn.add(rid)
+    if str(r.get("ticker")) not in tickers:
+        err(where, f"ticker {r.get('ticker')!r} is not in _data/earnings/companies.yml")
+    for k in ("company", "period", "call_date", "price_signal", "sources", "agent"):
+        if r.get(k) in (None, "", []):
+            err(where, f"missing {k}")
+    for k, allowed in EARN_VOCAB.items():
+        if r.get(k) is not None and r[k] not in allowed:
+            err(where, f"{k}={r[k]!r} not in allowed values")
+    for h in r.get("hidden_signals") or []:
+        if h not in HIDDEN_SIGNALS:
+            err(where, f"hidden_signal {h!r} not in allowed values")
+    for k in ("price_effect_pct", "volume_effect_pct", "organic_growth_pct", "pricing_questions"):
+        if r.get(k) is not None and not _num(r[k]):
+            err(where, f"{k} must be a number or null")
+    for src in r.get("sources") or []:
+        if not isinstance(src, dict) or src.get("type") not in SOURCE_TYPES or not src.get("url"):
+            err(where, f"each source needs type in {sorted(SOURCE_TYPES)} and a url")
+    if r.get("quote") and len(str(r["quote"]).split()) > 20:
+        err(where, "quote is longer than 20 words")
+
+# ---------------------------------------------------------------- 7. decisions (AGENTS.md section 14)
+DECISION_KINDS = {
+    "claim": claim_ids,
+    "question": question_ids,
+    "idea": {i.get("idea_slug") for i in as_list(data.get("_data/substack/ideas.yml")) if isinstance(i, dict)},
+    "dive": case_slugs,
+    "hypothesis": {h.get("hypothesis_id") for h in (hyps or []) if isinstance(h, dict)},
+}
+RECOMMENDATIONS = {"Confirm", "Change", "Approve", "Revise", "Promote", "Start", "Park", "Kill", "Keep",
+                   "Mark in progress", "Dead end", "Open slot", "Defer"}
+decisions = data.get("_data/decisions.yml")
+if decisions is not None:
+    open_refs = set()
+    for i, d in enumerate(decisions if isinstance(decisions, list) else []):
+        where = f"_data/decisions.yml[{i}] {d.get('kind')}:{d.get('ref')}"
+        kind = d.get("kind")
+        if kind not in DECISION_KINDS:
+            err(where, f"kind {kind!r} not in {sorted(DECISION_KINDS)}")
+        elif d.get("ref") not in DECISION_KINDS[kind]:
+            err(where, f"ref {d.get('ref')!r} does not resolve")
+        if d.get("recommendation") not in RECOMMENDATIONS:
+            err(where, f"recommendation {d.get('recommendation')!r} not in allowed values")
+        for k in ("note", "date", "agent"):
+            if not d.get(k):
+                err(where, f"missing {k}")
+        if (d.get("decided") is None) != (d.get("decision") is None):
+            err(where, "decided and decision are set together")
+        if d.get("decided") is None:
+            key = (kind, d.get("ref"))
+            if key in open_refs:
+                err(where, "two open recommendations for the same item")
+            open_refs.add(key)
+
 # ---------------------------------------------------------------- output
+if "--gaps" in sys.argv:
+    print(f"Raw figures: {len(raw_report['computable'])} entries can have magnitude_pct computed now; "
+          f"{len(raw_report['missing'])} entries in {', '.join(RAW_TRACKERS)} have neither raw figures nor magnitude_pct")
+    for w, e in raw_report["computable"]:
+        print("   computable:", w, "->", e)
 if "--firms" in sys.argv:
     print("Firm registry report (firm_id, entries, cases, first_seen, files):")
     for row in sorted(firm_report, key=lambda x: -x[1]):
