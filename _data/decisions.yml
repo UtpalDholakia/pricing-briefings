@@ -1,0 +1,132 @@
+# Decisions for Utpal: recommendations on items waiting for a decision. AGENTS.md section 14.
+# The /decisions/ page builds the queue from the data files; this file only adds a recommendation to an item.
+# kind: claim / question / idea / dive / hypothesis. ref: the item's claim_id, question_id, idea_slug, _cases slug or hypothesis_id.
+# recommendation: Confirm / Change / Approve / Revise / Promote / Start / Park / Kill / Keep / Mark in progress / Dead end / Open slot / Defer
+# When Utpal decides, Claude applies it in the data file the same day, sets decided (date) and decision (his words, short),
+# and leaves the row here as the record. Never delete a row. Newest first.
+
+# ---- Claim verdicts (claims.yml): 2026-11-27 review by Claude
+- kind: claim
+  ref: divisible-multipacks-sell-better
+  recommendation: Confirm
+  note: 'Refuted: four direct replications failed. The confidence note already limits the verdict to the multipack result.'
+  date: '2026-11-27'
+  agent: claude
+  decided: null
+  decision: null
+- kind: claim
+  ref: sellers-reverse-under-public-backlash
+  recommendation: Confirm
+  note: 'Contested fits the rule: direct rollbacks for (Uniqlo, ChatGPT Pro allowance) and widely covered holds against (Starlink, Sony, Netflix 2011). Keep Low confidence until the backlash tracker codes coverage for every case.'
+  date: '2026-11-27'
+  agent: claude
+  decided: null
+  decision: null
+- kind: claim
+  ref: cost-naming-reduces-backlash
+  recommendation: Confirm
+  note: 'Contested fits the rule: lab and vignette studies for, one field experiment (Damavandi) and two attribution studies against. The boundary (cost outside the seller''s control) is a good candidate for a split claim later.'
+  date: '2026-11-27'
+  agent: claude
+  decided: null
+  decision: null
+- kind: claim
+  ref: credits-obscure-true-price
+  recommendation: Change
+  note: 'Keep Open, not Contested. Under the pointer-role rule only direct tests count, and no study yet measures whether credit buyers misjudge their bills; the pointers for are boundary or context, and the only one against is a disclosed-rate null with N=21. State the lean (for) in confidence_note.'
+  date: '2026-11-27'
+  agent: claude
+  decided: null
+  decision: null
+- kind: claim
+  ref: surcharges-persist-after-cost-falls
+  recommendation: Confirm
+  note: 'Confirm Contested, then split: discretionary surcharges persist (Virgin YQ, CMA CGM, ONE), index-linked ones fall with the cost (ANA, JAL). Two narrower claims would each be close to Supported.'
+  date: '2026-11-27'
+  agent: claude
+  decided: null
+  decision: null
+- kind: claim
+  ref: small-surcharge-partitioning-helps
+  recommendation: Confirm
+  note: 'Withdrawal back to Open after ChatGPT''s audit: the pointers mix three different tests. Confirming only records the withdrawal.'
+  date: '2026-11-27'
+  agent: claude
+  decided: null
+  decision: null
+- kind: claim
+  ref: most-black-friday-deals-not-discounts
+  recommendation: Confirm
+  note: 'Withdrawal back to Open after the audit: the pointers measure three different benchmarks. Worth rechecking after this Black Friday with one benchmark.'
+  date: '2026-11-27'
+  agent: claude
+  decided: null
+  decision: null
+- kind: claim
+  ref: early-tuition-announcement-sells-certainty
+  recommendation: Confirm
+  note: 'Withdrawal from Supported to Open: the experiments test an unconditional guarantee, now its own claim (unconditional-tuition-guarantee-raises-enrollment).'
+  date: '2026-11-27'
+  agent: claude
+  decided: null
+  decision: null
+- kind: claim
+  ref: ai-attribution-changes-fairness-judgement
+  recommendation: Confirm
+  note: 'Open seed. Confirming an Open verdict only accepts the claim''s wording; it asserts nothing.'
+  date: '2026-11-27'
+  agent: claude
+  decided: null
+  decision: null
+- kind: claim
+  ref: list-price-overstates-net-price
+  recommendation: Confirm
+  note: 'Open, graduated from a hypothesis with direct evidence. Likely the next claim to reach Supported; the b2b tracker''s net_disclosed field is the test.'
+  date: '2026-11-27'
+  agent: claude
+  decided: null
+  decision: null
+- kind: claim
+  ref: downsizing-loses-fewer-sales-than-price-rise
+  recommendation: Confirm
+  note: 'Open, from the audit split of shrinkflation-draws-less-backlash. Confirming the split also confirms known-downsizing-judged-less-fair.'
+  date: '2026-11-27'
+  agent: claude
+  decided: null
+  decision: null
+- kind: claim
+  ref: known-downsizing-judged-less-fair
+  recommendation: Confirm
+  note: 'Open, the other half of the shrinkflation split.'
+  date: '2026-11-27'
+  agent: claude
+  decided: null
+  decision: null
+- kind: claim
+  ref: unconditional-tuition-guarantee-raises-enrollment
+  recommendation: Confirm
+  note: 'Open, created by the audit to hold the guarantee experiments separately.'
+  date: '2026-11-27'
+  agent: claude
+  decided: null
+  decision: null
+
+# ---- Pipeline (ideas.yml)
+- kind: idea
+  ref: why-sellers-reverse
+  recommendation: Start
+  note: 'The best-evidenced High idea: its claim (sellers-reverse-under-public-backlash) already has 11 pointers for and 3 against. Move to outlining; it would be the January deep dive.'
+  date: '2026-11-27'
+  agent: claude
+  decided: null
+  decision: null
+
+# ---- Hypothesis slots (hypotheses.yml): 3 of 20 Testing slots free
+- kind: hypothesis
+  ref: pledge-reassures-shoppers
+  recommendation: Open slot
+  note: 'Its reopen trigger is due now: FTC 6(b) responses on surveillance pricing are expected in December 2026. Leave the other two slots free.'
+  date: '2026-11-27'
+  agent: claude
+  decided: null
+  decision: null
