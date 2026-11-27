@@ -795,3 +795,298 @@
   tier: 2
   metric: 'membership fee and pricing commentary'
   why: 'Rocket WOW membership fee rise in Korea; a membership-pricing comparison with Prime.'
+
+# ---------------------------------------------------------------- Oil and gas (B2B: realised prices, contract formulas, service pricing)
+- company: 'ExxonMobil'
+  ticker: 'XOM'
+  country: United States
+  sector: Oil and gas
+  tier: 2
+  metric: 'realized prices and refining margins'
+  why: 'Commodity-driven prices: a baseline for how firms explain prices they do not set.'
+- company: 'Chevron'
+  ticker: 'CVX'
+  country: United States
+  sector: Oil and gas
+  tier: 2
+  metric: 'realized prices and downstream margins'
+  why: 'Same as ExxonMobil; pairs with it for comparison.'
+- company: 'Shell'
+  ticker: 'SHEL'
+  country: United Kingdom
+  sector: Oil and gas
+  tier: 2
+  metric: 'realised prices and marketing margins'
+  why: 'Retail fuel and lubricant margins as well as upstream prices.'
+- company: 'BP'
+  ticker: 'BP'
+  country: United Kingdom
+  sector: Oil and gas
+  tier: 2
+  metric: 'realised prices and customer and products margins'
+  why: 'Retail fuel margins, which UK regulators have examined for rocket-and-feather pricing.'
+- company: 'TotalEnergies'
+  ticker: 'TTE'
+  country: France
+  sector: Oil and gas
+  tier: 2
+  metric: 'realised prices and marketing margins'
+  why: 'European fuel retailing and electricity supply.'
+- company: 'ConocoPhillips'
+  ticker: 'COP'
+  country: United States
+  sector: Oil and gas
+  tier: 2
+  metric: 'realized prices'
+  why: 'Pure upstream producer: what managers say when the price is set by the market.'
+- company: 'SLB'
+  ticker: 'SLB'
+  country: United States
+  sector: Oil and gas
+  tier: 1
+  metric: 'pricing commentary for oilfield services'
+  why: 'B2B service pricing: whether suppliers hold price when customers cut spending.'
+- company: 'Halliburton'
+  ticker: 'HAL'
+  country: United States
+  sector: Oil and gas
+  tier: 2
+  metric: 'pricing commentary for North America services'
+  why: 'Pressure-pumping price concessions; a clean B2B pricing-power signal.'
+- company: 'Valero Energy'
+  ticker: 'VLO'
+  country: United States
+  sector: Oil and gas
+  tier: 2
+  metric: 'refining margin per barrel'
+  why: 'Asymmetric pass-through of crude costs to fuel prices.'
+- company: 'Cheniere Energy'
+  ticker: 'LNG'
+  country: United States
+  sector: Oil and gas
+  tier: 1
+  metric: 'contract pricing formula (Henry Hub-linked fees)'
+  why: 'Index-linked B2B contracts: the counter-case for surcharges-persist-after-cost-falls.'
+- company: 'Petrobras'
+  ticker: 'PETR4'
+  country: Brazil
+  sector: Oil and gas
+  tier: 1
+  metric: 'diesel and gasoline price policy relative to import parity'
+  why: 'State-influenced fuel pricing; a non-Western case of political limits on pass-through.'
+- company: 'Saudi Aramco'
+  ticker: '2222'
+  country: Saudi Arabia
+  sector: Oil and gas
+  tier: 2
+  metric: 'realized crude price and official selling prices'
+  why: 'Official selling prices are set monthly by formula; a B2B reference-price benchmark.'
+
+# ---------------------------------------------------------------- Manufacturing and materials (B2B: price realisation and list-price increases)
+- company: 'Caterpillar'
+  ticker: 'CAT'
+  country: United States
+  sector: Manufacturing and materials
+  tier: 1
+  metric: 'price realization'
+  why: 'Reports price realization every quarter; tariff and steel pass-through on machinery.'
+- company: 'Deere & Company'
+  ticker: 'DE'
+  country: United States
+  sector: Manufacturing and materials
+  tier: 1
+  metric: 'price realization'
+  why: 'Reports price realization; farm-equipment pricing when farm incomes fall.'
+- company: '3M'
+  ticker: 'MMM'
+  country: United States
+  sector: Manufacturing and materials
+  tier: 2
+  metric: 'selling price contribution to organic sales'
+  why: 'Industrial and consumer products; separates price from volume.'
+- company: 'Honeywell'
+  ticker: 'HON'
+  country: United States
+  sector: Manufacturing and materials
+  tier: 2
+  metric: 'price contribution to organic growth'
+  why: 'Industrial pricing power and price-cost spread commentary.'
+- company: 'Eaton'
+  ticker: 'ETN'
+  country: Ireland
+  sector: Manufacturing and materials
+  tier: 2
+  metric: 'pricing commentary'
+  why: 'Electrical equipment pricing during the data-centre build-out.'
+- company: 'Siemens'
+  ticker: 'SIE'
+  country: Germany
+  sector: Manufacturing and materials
+  tier: 2
+  metric: 'pricing commentary (no standard split)'
+  why: 'European industrial pricing and order backlogs.'
+- company: 'Schneider Electric'
+  ticker: 'SU'
+  country: France
+  sector: Manufacturing and materials
+  tier: 2
+  metric: 'price contribution to organic growth'
+  why: 'Reports price effect separately; electrical equipment pricing.'
+- company: 'Dow'
+  ticker: 'DOW'
+  country: United States
+  sector: Manufacturing and materials
+  tier: 1
+  metric: 'local price vs volume'
+  why: 'Reports local price and volume by segment; chemical price cycles.'
+- company: 'BASF'
+  ticker: 'BAS'
+  country: Germany
+  sector: Manufacturing and materials
+  tier: 2
+  metric: 'price and volume effects'
+  why: 'European chemicals; energy-cost pass-through after gas price shocks.'
+- company: 'Sherwin-Williams'
+  ticker: 'SHW'
+  country: United States
+  sector: Manufacturing and materials
+  tier: 1
+  metric: 'selling price increases'
+  why: 'Announces list-price increases to contractors and reports their effect.'
+- company: 'Nucor'
+  ticker: 'NUE'
+  country: United States
+  sector: Manufacturing and materials
+  tier: 1
+  metric: 'average sales price per ton'
+  why: 'Steel prices under tariffs; a published per-ton price series.'
+- company: 'Vulcan Materials'
+  ticker: 'VMC'
+  country: United States
+  sector: Manufacturing and materials
+  tier: 1
+  metric: 'aggregates price per ton'
+  why: 'Local-monopoly pricing: steady price rises with falling volume.'
+- company: 'Fastenal'
+  ticker: 'FAST'
+  country: United States
+  sector: Manufacturing and materials
+  tier: 1
+  metric: 'pricing contribution to sales'
+  why: 'Reports the pricing contribution to sales each quarter; tariff pass-through to small manufacturers.'
+- company: 'W.W. Grainger'
+  ticker: 'GWW'
+  country: United States
+  sector: Manufacturing and materials
+  tier: 2
+  metric: 'price contribution to sales'
+  why: 'Distributor pricing to small and large business customers.'
+
+# ---------------------------------------------------------------- Consumer brands and discretionary
+- company: 'Apple'
+  ticker: 'AAPL'
+  country: United States
+  sector: Consumer discretionary
+  tier: 2
+  metric: 'average selling price and services commentary'
+  why: 'iPhone price points, App Store fees and services price rises.'
+- company: 'Samsung Electronics'
+  ticker: '005930'
+  country: South Korea
+  sector: Consumer discretionary
+  tier: 2
+  metric: 'average selling price commentary (memory and devices)'
+  why: 'Memory-chip price cycles (B2B) and phone price points.'
+- company: 'Whirlpool'
+  ticker: 'WHR'
+  country: United States
+  sector: Consumer discretionary
+  tier: 1
+  metric: 'price/mix'
+  why: 'Appliance price increases tied to tariffs; reports price/mix.'
+- company: 'Mattel'
+  ticker: 'MAT'
+  country: United States
+  sector: Consumer discretionary
+  tier: 2
+  metric: 'pricing commentary'
+  why: 'Toy price increases blamed on tariffs; holiday price points.'
+- company: 'Planet Fitness'
+  ticker: 'PLNT'
+  country: United States
+  sector: Consumer discretionary
+  tier: 1
+  metric: 'average dues per member and membership price changes'
+  why: 'Raised its base membership price; a test of churn after a membership price rise.'
+- company: 'Chewy'
+  ticker: 'CHWY'
+  country: United States
+  sector: Consumer discretionary
+  tier: 1
+  metric: 'Chewy+ membership and net sales per active customer'
+  why: 'Basket profiles track Chewy+; membership fee and rewards changes.'
+- company: 'eBay'
+  ticker: 'EBAY'
+  country: United States
+  sector: Consumer discretionary
+  tier: 2
+  metric: 'take rate and seller-fee commentary'
+  why: 'Seller fees and buyer protection fees.'
+- company: 'Best Buy'
+  ticker: 'BBY'
+  country: United States
+  sector: Consumer discretionary
+  tier: 2
+  metric: 'comparable sales with pricing commentary'
+  why: 'Electronics price points and tariff pass-through.'
+- company: 'Philip Morris International'
+  ticker: 'PM'
+  country: United States
+  sector: Consumer staples
+  tier: 1
+  metric: 'pricing variance'
+  why: 'Reports its pricing variance each quarter; the textbook case of pricing power with falling volume.'
+- company: 'Diageo'
+  ticker: 'DGE'
+  country: United Kingdom
+  sector: Consumer staples
+  tier: 2
+  metric: 'price/mix and volume'
+  why: 'Spirits premiumisation and price-led growth.'
+
+# ---------------------------------------------------------------- Apparel, retail and brands (additions)
+- company: 'adidas'
+  ticker: 'ADS'
+  country: Germany
+  sector: Apparel and luxury
+  tier: 2
+  metric: 'pricing commentary'
+  why: 'Tariff price rises and pricing against Nike.'
+- company: 'Levi Strauss'
+  ticker: 'LEVI'
+  country: United States
+  sector: Apparel and luxury
+  tier: 2
+  metric: 'pricing and average unit retail commentary'
+  why: 'Full-price selling and price increases on a heritage product.'
+- company: 'Ralph Lauren'
+  ticker: 'RL'
+  country: United States
+  sector: Apparel and luxury
+  tier: 1
+  metric: 'average unit retail (AUR) growth'
+  why: 'Reports AUR growth from less discounting; brand elevation through price.'
+- company: 'TJX Companies'
+  ticker: 'TJX'
+  country: United States
+  sector: Retail
+  tier: 2
+  metric: 'comparable sales, ticket vs transactions'
+  why: 'Off-price: the reference-price business model (compare-at prices).'
+- company: 'Ulta Beauty'
+  ticker: 'ULTA'
+  country: United States
+  sector: Retail
+  tier: 2
+  metric: 'average ticket vs transactions'
+  why: 'Beauty price points and promotions.'

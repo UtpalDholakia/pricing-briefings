@@ -548,6 +548,8 @@ EARN_VOCAB = {
     "price_signal": {"raising", "holding", "cutting", "mixed", "not-discussed"},
     "elasticity_signal": {"none-seen", "some", "significant", "not-discussed"},
     "promo_signal": {"increasing", "stable", "decreasing", "not-discussed"},
+    "metric_family": {"price-only", "price-mix", "ticket", "per-customer", "unit-revenue", "take-rate",
+                      "commodity-realized", "rate-change", "none"},
     "explanation_category": set(VOCAB["_data/trackers/explanations.yml"]["category"]),
 }
 HIDDEN_SIGNALS = {"pack-size", "pack-price-architecture", "fees", "surcharge", "unbundling", "membership", "credits",
@@ -581,7 +583,7 @@ for i, r in enumerate(as_list(data.get("_data/trackers/earnings_pricing.yml"))):
     seen_earn.add(rid)
     if str(r.get("ticker")) not in tickers:
         err(where, f"ticker {r.get('ticker')!r} is not in _data/earnings/companies.yml")
-    for k in ("company", "period", "call_date", "price_signal", "sources", "agent"):
+    for k in ("company", "period", "call_date", "price_signal", "metric_family", "sources", "agent"):
         if r.get(k) in (None, "", []):
             err(where, f"missing {k}")
     for k, allowed in EARN_VOCAB.items():
@@ -593,6 +595,8 @@ for i, r in enumerate(as_list(data.get("_data/trackers/earnings_pricing.yml"))):
     for k in ("price_effect_pct", "volume_effect_pct", "organic_growth_pct", "pricing_questions"):
         if r.get(k) is not None and not _num(r[k]):
             err(where, f"{k} must be a number or null")
+    if r.get("metric_family") == "none" and r.get("price_effect_pct") is not None:
+        err(where, "metric_family none cannot carry a price_effect_pct")
     for src in r.get("sources") or []:
         if not isinstance(src, dict) or src.get("type") not in SOURCE_TYPES or not src.get("url"):
             err(where, f"each source needs type in {sorted(SOURCE_TYPES)} and a url")

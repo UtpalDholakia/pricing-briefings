@@ -277,7 +277,7 @@ Everything waiting on Utpal, in one place: https://utpaldholakia.github.io/prici
 
 ## 15. Earnings pricing watch
 
-What companies say about their own prices on earnings calls, quarter after quarter. Companies: `_data/earnings/companies.yml` (109 companies; tier 1 read every quarter, tier 2 when time allows). Rows: `_data/trackers/earnings_pricing.yml`, shown on the trackers page. **Owner: ChatGPT**, following [EARNINGS_INSTRUCTIONS.md](EARNINGS_INSTRUCTIONS.md); Claude checks rows when it uses them and links them to cases. Only Utpal adds or removes companies.
+What companies say about their own prices on earnings calls, quarter after quarter. Companies: `_data/earnings/companies.yml` (150 companies; tier 1 read every quarter, tier 2 when time allows). Rows: `_data/trackers/earnings_pricing.yml`, shown on the trackers page. **Owner: ChatGPT**, following [EARNINGS_INSTRUCTIONS.md](EARNINGS_INSTRUCTIONS.md); Claude checks rows when it uses them and links them to cases. Only Utpal adds or removes companies.
 
 | Field | What goes in it |
 |---|---|
@@ -285,6 +285,7 @@ What companies say about their own prices on earnings calls, quarter after quart
 | `ticker`, `company` | as in `companies.yml` |
 | `period`, `period_end`, `call_date` | the company's own period label ("FY2027 Q2"), the period's last day, the call date (quoted ISO dates) |
 | `price_metric_label` | the company's exact label for its price effect that quarter ("pricing", "price/mix", "average check", "ARPU", "TRASM") |
+| `metric_family` | which kind of measure the label is, so different companies' measures are compared only with like: `price-only` / `price-mix` / `ticket` / `per-customer` / `unit-revenue` / `take-rate` / `commodity-realized` / `rate-change` / `none` (definitions in EARNINGS_INSTRUCTIONS.md, step 3) |
 | `price_effect_pct`, `volume_effect_pct`, `organic_growth_pct` | numbers in percentage points exactly as stated; `null` if not stated. Never derive one from another |
 | `metric_note` | what the metric includes (e.g. "price and mix combined", "check includes mix shift") |
 | `price_signal` | `raising` / `holding` / `cutting` / `mixed` / `not-discussed` (what the company did or said it will do to prices) |
@@ -302,6 +303,7 @@ What companies say about their own prices on earnings calls, quarter after quart
 
 - **Never invent numbers** (6.5 applies). A price effect not stated as a number stays `null`, with the words in `metric_note`.
 - **Comparability over time** is the point: use the same label the company used in earlier quarters where it did, and note in `metric_note` when the company changes its definition.
+- **Comparability across companies** goes through `metric_family`: a `price-only` number and a `ticket` number are never averaged or ranked together. The `metric` in `companies.yml` is only a hint; when a company reports something else, record what it actually reported.
 - **Feeding other trackers.** A concrete price change, a stated explanation or a shrink/fee move found on a call goes into ChatGPT's briefing as a tracker suggestion; Claude files it in the section 6 tracker with the same `case_id`.
 - **Season synthesis.** When most tier 1 companies have reported for a season, ChatGPT's briefing that day carries a cross-company summary (section in EARNINGS_INSTRUCTIONS.md). Claude adds its headline counts to the next monthly tracker digest.
 

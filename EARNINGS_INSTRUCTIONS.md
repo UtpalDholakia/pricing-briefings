@@ -1,6 +1,6 @@
 # Earnings pricing watch: instructions for ChatGPT
 
-This is a second scheduled task for ChatGPT, separate from its daily briefing. It reads companies' earnings calls for what they say about their own prices and records one row per company per quarter in `_data/trackers/earnings_pricing.yml`. Over time this becomes a quarter-by-quarter record of pricing power, price cuts, pushback from buyers and how managers explain their prices, across 109 companies. Rules: AGENTS.md section 15.
+This is a second scheduled task for ChatGPT, separate from its daily briefing. It reads companies' earnings calls for what they say about their own prices and records one row per company per quarter in `_data/trackers/earnings_pricing.yml`. Over time this becomes a quarter-by-quarter record of pricing power, price cuts, pushback from buyers and how managers explain their prices, across 150 companies. Rules: AGENTS.md section 15.
 
 ## How to set it up
 
@@ -14,7 +14,7 @@ This is a second scheduled task for ChatGPT, separate from its daily briefing. I
 >
 > **Before you start, read these files in the repository:**
 > - `AGENTS.md`, sections 6.5 (never invent numbers) and 15 (this tracker, its fields and allowed values).
-> - `_data/earnings/companies.yml`: the 109 companies, each with a `tier`, the `metric` the company usually uses for its price effect, and `why` it is on the list.
+> - `_data/earnings/companies.yml`: the 150 companies, each with a `tier`, the `metric` the company usually uses for its price effect, and `why` it is on the list.
 > - `_data/trackers/earnings_pricing.yml`: the rows filed so far (so you don't duplicate one and so you reuse each company's earlier label).
 > - The `case_id` values in `_data/trackers/*.yml` for any company you read (search the files for the company name).
 >
@@ -35,6 +35,18 @@ This is a second scheduled task for ChatGPT, separate from its daily briefing. I
 >
 > **Step 3. Extract, field by field** (allowed values are in AGENTS.md section 15; use them exactly):
 > - **The price number.** Find the company's own price measure for the period: the `metric` in `companies.yml` is a hint, but record the label the company actually used that quarter in `price_metric_label` (for example "pricing", "price/mix", "effective net pricing", "average check", "ARPU", "TRASM", "net revenue per hectolitre"). Put the number in `price_effect_pct` in percentage points **only if the company states it**. Do the same for `volume_effect_pct` and `organic_growth_pct`. If a figure combines price with mix, say so in `metric_note`. Never back a number out of other numbers, and never convert a dollar figure into a percentage yourself.
+> - **The kind of measure** (`metric_family`). Companies measure price in different ways, and the numbers are only comparable within a family. Pick the one that matches what the company actually reported this quarter:
+>   - `price-only`: the contribution of price alone to sales or growth, with mix reported separately ("pricing", "price realization", "pricing variance", "local price", "underlying price growth").
+>   - `price-mix`: price and mix combined in one number ("price/mix", "net price realization including mix").
+>   - `ticket`: spend per visit or per item, which mixes price with what and how much people buy ("average check", "average ticket", "average unit retail").
+>   - `per-customer`: revenue per customer or account over a period ("ARPU", "ARPA", "average revenue per membership", "dues per member").
+>   - `unit-revenue`: revenue per unit of capacity or product ("TRASM", "yield", "RevPAR", "ADR", "price per ton", "revenue per hectolitre").
+>   - `take-rate`: a platform's revenue as a share of the value transacted.
+>   - `commodity-realized`: prices realised on a traded commodity, or refining margins, which the company does not set.
+>   - `rate-change`: an announced or implemented price change in percent (insurance rate changes, rent growth on new and renewing leases, an announced list-price increase).
+>   - `none`: no price measure was reported; only words. `price_effect_pct` must then be `null`.
+>
+>   **If the company used a different measure from the `metric` hint in `companies.yml`**, record what it actually used: its own label in `price_metric_label`, the matching family, and a note in `metric_note` ("reported price/mix this quarter instead of pricing alone"). If it reports two measures (for example pricing and price/mix), use the purer one (the one nearest `price-only`) and put the other in `metric_note` with its number. If it changes its definition from an earlier quarter, say so in `metric_note`, because that breaks the company's own series. Never convert one measure into another. If the hint itself looks wrong, add one line to your briefing so the list can be corrected.
 > - **What the company did to prices** (`price_signal`): raising, holding, cutting, mixed (for example raising in one region and cutting in another) or not-discussed. List each concrete action in `price_actions` as a short phrase with where, when and size as stated ("List prices up about 3% on most US snacks from February", "Price cuts on 400 grocery items in the US"). Record what the company says it *will* do in `guidance`.
 > - **Why** (`explanation_category`, `explanation`): how management justifies its prices, using the explanation categories from AGENTS.md 6.2 (for example Cost, Value / quality, Capacity / market, Restraint, Lower list price). Paraphrase in one sentence. Optionally add one verbatim `quote` of **at most 20 words** with `quote_speaker` (name and title); never more than one quote per row.
 > - **Buyer response** (`elasticity_signal`, `elasticity_note`): what management says about how customers responded to prices: none seen, some (trading down, smaller baskets, slower volume), significant (volume losses blamed on price, churn after a price rise), or not discussed. Record traffic or transaction figures they give alongside price.
@@ -54,6 +66,7 @@ This is a second scheduled task for ChatGPT, separate from its daily briefing. I
 >   call_date: '2027-01-22'
 >   case_id: null
 >   price_metric_label: pricing contribution to organic sales
+>   metric_family: price-only        # price-only / price-mix / ticket / per-customer / unit-revenue / take-rate / commodity-realized / rate-change / none
 >   price_effect_pct: null           # a number only if stated, e.g. 1.5
 >   volume_effect_pct: null
 >   organic_growth_pct: null
@@ -93,7 +106,7 @@ This is a second scheduled task for ChatGPT, separate from its daily briefing. I
 > - **Claim evidence** where a call bears on a claim in `_data/claims.yml`: `Claim evidence, <claim_id>, for/against: <what>, <source>`. Calls are especially relevant to `cost-naming-reduces-backlash`, `surcharges-persist-after-cost-falls`, `list-price-overstates-net-price` and the shrinkflation claims.
 > - Suggestions for companies to add to the watch list, with one line on why. Utpal decides.
 >
-> **Step 7. Season synthesis.** When at least 30 tier 1 companies have rows for the same season, write that day's daily briefing as an **earnings season pricing roundup**, built only from the rows: how many companies raised, held, cut or were mixed (counts, not just percentages); the median and range of stated price effects within each sector, with the number of companies behind each; how many reported significant buyer pushback; the most common explanation categories; the hidden-pricing tags that came up; the average number of analyst pricing questions per call compared with the previous season once there is one; and three companies whose pricing story changed most from the previous quarter. Hedge every conclusion to the counts, and say which sectors are thin.
+> **Step 7. Season synthesis.** When at least 40 tier 1 companies have rows for the same season, write that day's daily briefing as an **earnings season pricing roundup**, built only from the rows: how many companies raised, held, cut or were mixed (counts, not just percentages); the median and range of stated price effects within each sector, computed only within one `metric_family` at a time (never mix price-only with ticket or ARPU numbers), with the number of companies behind each; how many reported significant buyer pushback; the most common explanation categories; the hidden-pricing tags that came up; the average number of analyst pricing questions per call compared with the previous season once there is one; and three companies whose pricing story changed most from the previous quarter. Hedge every conclusion to the counts, and say which sectors are thin.
 >
 > **Rules that must never be broken.**
 > - Never invent, estimate or derive a number. A number not stated stays `null`.
@@ -108,6 +121,6 @@ This is a second scheduled task for ChatGPT, separate from its daily briefing. I
 
 ## Notes for Utpal
 
-- **Scale.** At up to 4 calls a weekday, the 46 tier 1 companies take about three weeks per season, with time left for tier 2. In quiet weeks the backfill builds each tier 1 company's last four quarters, so the first season roundup can compare with earlier quarters.
+- **Scale.** At up to 4 calls a weekday, the 61 tier 1 companies take about three to four weeks per season, with time left for tier 2. In quiet weeks the backfill builds each tier 1 company's last four quarters, so the first season roundup can compare with earlier quarters.
 - **Changing the list.** Edit `_data/earnings/companies.yml` or ask Claude to: add a company with its ticker, tier, metric and a one-line reason; to drop one, set `tier: 2` or remove it only if it has no rows yet (rows must keep a registered ticker).
 - **Where it shows up.** The trackers page has a new "Earnings calls" section. Claude uses the rows in the monthly tracker digest and links them to cases and claims.
