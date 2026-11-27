@@ -1,9 +1,7 @@
 name: Import new Pricing Conundrum pieces
-# Daily: reads the public RSS feed and adds any new piece to substack/posts/ and _data/substack/published.yml
-# (AGENTS.md section 16). Paid pieces arrive as previews; a later Substack export fills in their full text.
+# Manual only. Substack refused the feed request from GitHub's servers (HTTP 403, 2026-11-27), so the daily schedule
+# is off; new pieces are recorded by Claude's daily run instead (AGENTS.md section 16). Run by hand to retry the feed.
 on:
-  schedule:
-    - cron: '17 12 * * *'   # 12:17 UTC, about 6 a.m. US Central
   workflow_dispatch:
 permissions:
   contents: write
