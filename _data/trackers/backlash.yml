@@ -12,7 +12,6 @@
   days_to_reversal: null
   outcome_date: null
   magnitude_pct: null
-  reaction_volume: null
   source: https://www.yahoo.com/entertainment/music/concerts/articles/kpop-demon-hunters-world-tour-200347155.html
   related_source: https://parade.com/news/kpop-demon-hunters-world-tour-faces-backlash-over-ticket-prices
   digest: '2026-11-22'
@@ -32,7 +31,6 @@
   days_to_reversal: 179
   outcome_date: '2026-11-17'
   magnitude_pct: null
-  reaction_volume: null
   source: https://steamdb.com/en/cs2/cs2-major-stickers-fixed-price
   related_source: https://www.gamesradar.com/games/fps/thanks-valve-a-set-of-counter-strike-2-cologne-major-stickers-now-costs-nearly-usd20-000/
   digest: '2026-11-21'
@@ -51,7 +49,6 @@
   days_to_reversal: null
   outcome_date: '2026-11-10'
   magnitude_pct: null
-  reaction_volume: null
   source: https://www.instagram.com/reel/DfisKGdNShB/
   digest: '2026-11-15'
   agent: meta
@@ -69,7 +66,6 @@
   days_to_reversal: null
   outcome_date: null
   magnitude_pct: null
-  reaction_volume: null
   source: https://www.ticketnews.com/2026/11/noah-kahan-presale-prices-resale-caps-2027/
   digest: '2026-11-11'
   last_checked: '2026-11-25'
@@ -85,7 +81,6 @@
   days_to_reversal: null
   outcome_date: null
   magnitude_pct: null
-  reaction_volume: null
   source: https://www.wfmd.com/2026/11/09/restaurant-admin-fees-spark-backlash-as-diners-question-what-theyre-paying-for/
   digest: '2026-11-10'
   last_checked: '2026-11-25'
@@ -101,7 +96,6 @@
   days_to_reversal: null
   outcome_date: null
   magnitude_pct: null
-  reaction_volume: null
   source: https://www.wfmd.com/2026/11/09/restaurant-admin-fees-spark-backlash-as-diners-question-what-theyre-paying-for/
   digest: '2026-11-10'
   last_checked: '2026-11-15'
@@ -117,7 +111,6 @@
   days_to_reversal: null
   outcome_date: null
   magnitude_pct: null
-  reaction_volume: null
   source: https://teslanorth.com/2026/11/08/starlink-price-hikes-spread-us-backlash/
   digest: '2026-11-09'
   last_checked: '2026-11-15'
@@ -133,7 +126,6 @@
   days_to_reversal: null
   outcome_date: null
   magnitude_pct: null
-  reaction_volume: null
   source: https://www.pushsquare.com/news/2026/11/ps5-dynamic-pricing-impacts-new-ps-store-black-friday-offers-roughly-usd5-variations-in-prices
   digest: '2026-11-05'
   last_checked: '2026-11-15'
@@ -149,7 +141,6 @@
   days_to_reversal: null
   outcome_date: null
   magnitude_pct: null
-  reaction_volume: null
   source: https://www.foxnews.com/travel/cruise-passengers-criticize-new-program-identifying-early-tippers-board
   digest: '2026-11-04'
   last_checked: '2026-11-25'
@@ -165,7 +156,6 @@
   days_to_reversal: null
   outcome_date: null
   magnitude_pct: null
-  reaction_volume: null
   source: https://fortune.com/2026/11/04/car-subscriptions-automakers-drivers-pushback/
   digest: '2026-11-11'
   last_checked: '2026-11-15'
@@ -181,7 +171,6 @@
   days_to_reversal: null
   outcome_date: null
   magnitude_pct: null
-  reaction_volume: null
   source: https://thenewstack.io/openai-token-pricing-reversal
   digest: '2026-11-01'
   last_checked: '2026-11-15'
@@ -197,7 +186,6 @@
   days_to_reversal: null
   outcome_date: null
   magnitude_pct: 41
-  reaction_volume: null
   source: https://stocktwits.com/news-articles/markets/equity/michael-burry-cancels-substack-price-hike-plan-pushback-denies-money-grab/cZUdA8eRByd
   digest: '2026-10-29'
   magnitude_note: $49 to $69, new subscribers only
@@ -214,7 +202,6 @@
   days_to_reversal: 3
   outcome_date: '2026-10-30'
   magnitude_pct: null
-  reaction_volume: null
   source: https://thenewstack.io/openai-halves-200-plan/
   digest: '2026-10-29'
   follow_up_source: https://mixed-news.com/en/?p=39007
@@ -231,7 +218,6 @@
   days_to_reversal: null
   outcome_date: null
   magnitude_pct: 30
-  reaction_volume: null
   source: https://www.iphoneincanada.ca/2026/10/21/leafs-fans-sportsnet-plus-monday-night-hockey-cost/
   follow_up_source: https://thehockeynews.com/nhl/toronto-maple-leafs/latest-news/watching-13-maple-leafs-games-just-got-more-expensive-for-non-rogers-subscribers
   digest: '2026-10-26'
@@ -250,7 +236,6 @@
   days_to_reversal: null
   outcome_date: null
   magnitude_pct: null
-  reaction_volume: null
   source: https://britbrief.co.uk/entertainment/music/sam-fender-cuts-ticket-prices-and-removes-front-standing.html
   digest: '2026-10-27'
   last_checked: '2026-11-23'
@@ -266,7 +251,6 @@
   days_to_reversal: null
   outcome_date: null
   magnitude_pct: null
-  reaction_volume: null
   source: https://hoodline.com/2026/10/downtown-la-rooftop-spot-uca-terraza-slammed-over-surcharge-on-top-of-mandatory-tip
   digest: '2026-10-20'
   last_checked: '2026-11-25'
@@ -282,7 +266,6 @@
   days_to_reversal: null
   outcome_date: null
   magnitude_pct: null
-  reaction_volume: null
   source: https://www.malaymail.com/news/money/2026/11/09/in-japan-raising-prices-isnt-just-business-its-something-to-apologise-for/242444
   digest: '2026-11-10'
   last_checked: '2026-11-15'

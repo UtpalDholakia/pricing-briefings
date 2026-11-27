@@ -1,0 +1,33 @@
+{% comment %} Builds the Decisions queue (AGENTS.md section 14). Shared by decisions.html and the home page. {% endcomment %}
+{% assign C = site.data.claims %}
+{% assign H = site.data.hypotheses %}
+{% assign Q = site.data.trackers.questions %}
+{% assign I = site.data.substack.ideas %}
+{% assign D = site.data.decisions | where_exp: "d", "d.decided == nil" %}
+{% assign done = site.data.decisions | where_exp: "d", "d.decided != nil" | sort: "decided" | reverse %}
+{% capture claims_base %}{{ '/claims/' | relative_url }}{% endcapture %}
+{% capture hyp_base %}{{ '/hypotheses/' | relative_url }}{% endcapture %}
+{% capture now_s %}{{ 'now' | date: '%s' }}{% endcapture %}
+
+{% comment %} Questions already being pursued: referenced by a hypothesis or a claim. {% endcomment %}
+{% capture linked %},{% for h in H %}{% for q in h.related_questions %}{{ q }},{% endfor %}{% endfor %}{% for c in C %}{% for q in c.related_questions %}{{ q }},{% endfor %}{% endfor %}{% endcapture %}
+
+{% comment %} Build the queues. {% endcomment %}
+{% assign pending_claims = "" | split: "" %}
+{% for c in C %}{% assign last = c.status_history | last %}{% if last.confirmed_by == nil %}{% assign pending_claims = pending_claims | push: c %}{% endif %}{% endfor %}
+{% assign dives = "" | split: "" %}{% for d in site.cases %}{% unless d.title contains "<" %}{% if d.status == "draft" or d.status == "review" %}{% assign dives = dives | push: d %}{% endif %}{% endunless %}{% endfor %}
+{% assign ideas_ready = I | where: "status", "ready" %}
+{% assign ideas_high = I | where: "status", "idea" | where: "priority", "High" %}
+{% assign ideas_medium = I | where: "status", "idea" | where: "priority", "Medium" %}
+{% assign ideas_parked_due = "" | split: "" %}{% for i in I %}{% if i.status == "parked" and i.revisit_date %}{% capture r_s %}{{ i.revisit_date | date: '%s' }}{% endcapture %}{% if r_s <= now_s %}{% assign ideas_parked_due = ideas_parked_due | push: i %}{% endif %}{% endif %}{% endfor %}
+{% assign testing = H | where: "status", "Testing" %}
+{% assign free_slots = 20 | minus: testing.size %}
+{% assign hyp_review = "" | split: "" %}{% for h in testing %}{% if h.hunts.size >= 3 and h.evidence_for.size == 0 and h.evidence_against.size == 0 %}{% assign hyp_review = hyp_review | push: h %}{% endif %}{% endfor %}
+{% assign hyp_recs = D | where: "kind", "hypothesis" %}
+{% assign q_linked = "" | split: "" %}{% assign q_old = "" | split: "" %}
+{% for q in Q %}{% if q.status == "Open" %}
+  {% capture key %},{{ q.question_id }},{% endcapture %}
+  {% if q.question_id and linked contains key %}{% assign q_linked = q_linked | push: q %}
+  {% else %}{% capture q_s %}{{ q.date | date: '%s' }}{% endcapture %}{% assign age = now_s | minus: q_s | divided_by: 86400 %}{% if age >= 21 %}{% assign q_old = q_old | push: q %}{% endif %}{% endif %}
+{% endif %}{% endfor %}
+{% assign total = pending_claims.size | plus: dives.size | plus: ideas_ready.size | plus: ideas_high.size | plus: ideas_parked_due.size | plus: hyp_review.size | plus: hyp_recs.size | plus: q_linked.size | plus: q_old.size %}

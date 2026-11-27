@@ -39,6 +39,7 @@ permalink: /trackers/
     <a href="#ai">AI agents <small>{{ T.ai_agents | size }}</small></a>
     <a href="#aiprice">AI product pricing <small>{{ T.ai_product_pricing | size }}</small></a>
     <a href="#b2b">B2B pricing <small>{{ T.b2b_pricing | size }}</small></a>
+    <a href="#earnings">Earnings calls <small>{{ T.earnings_pricing | size }}</small></a>
     <a href="#questions">Questions <small>{{ T.questions | size }}</small></a>
     <a href="#price-panel">What customers pay <small>{{ T.price_panel | size }}</small></a>
     <a href="#pricing-evidence">Pricing evidence <small>{{ T.pricing_evidence | size }}</small></a>
@@ -79,7 +80,7 @@ permalink: /trackers/
     <tbody>{% for r in T.explanations %}<tr>
       <td class="nowrap">{{ r.date }}</td>
       <td><strong>{{ r.firm }}</strong> <a class="case" data-case="{{ r.case_id }}">{{ r.case_id }}</a></td>
-      <td>{{ r.change }}{% if r.magnitude_pct %} <span class="chip">{{ r.magnitude_pct }}%{% if r.magnitude_note %} · {{ r.magnitude_note }}{% endif %}</span>{% endif %}</td>
+      <td>{{ r.change }}{% if r.magnitude_pct %} <span class="chip">{{ r.magnitude_pct }}%{% if r.magnitude_note %} · {{ r.magnitude_note }}{% endif %}</span>{% endif %}{% include raw-figures.html r=r %}</td>
       <td>{{ r.explanation }}</td>
       <td><span class="chip">{{ r.category }}</span></td>
       <td>{% if r.outcome %}<span class="chip {% if r.outcome == 'Reversed' %}yes{% elsif r.outcome == 'Partially reversed' or r.outcome == 'Mitigated' %}partial{% elsif r.outcome == 'Held' %}no{% endif %}">{{ r.outcome }}</span>{% endif %} {{ r.outcome_note }}{% if r.reaction %}<div class="small muted">Reaction: {{ r.reaction }}</div>{% endif %}
@@ -96,7 +97,7 @@ permalink: /trackers/
     <tbody>{% for r in T.backlash %}<tr>
       <td class="nowrap">{{ r.date }}</td>
       <td><strong>{{ r.firm }}</strong> <a class="case" data-case="{{ r.case_id }}">{{ r.case_id }}</a></td>
-      <td>{{ r.change }}{% if r.magnitude_pct %} <span class="chip">{{ r.magnitude_pct }}%</span>{% endif %}</td>
+      <td>{{ r.change }}{% if r.magnitude_pct %} <span class="chip">{{ r.magnitude_pct }}%</span>{% endif %}{% include raw-figures.html r=r %}</td>
       <td>{{ r.framing }}</td>
       <td>{{ r.backlash }} <a class="src" href="{{ r.source }}">source</a>{% if r.agent %} · <span class="agent">{{ r.agent }}</span>{% endif %}{% if r.verification_note %}<div class="small warn">{{ r.verification_note }}</div>{% endif %}</td>
       <td><span class="chip {% if r.reversed == 'Yes' %}yes{% elsif r.reversed == 'Partial' %}partial{% elsif r.reversed == 'No' %}no{% endif %}">{{ r.reversed }}</span>{% if r.reversal_note %}<div class="small muted">{{ r.reversal_note }}</div>{% endif %}{% if r.days_to_reversal %}<div class="small">{{ r.days_to_reversal }} days</div>{% endif %}</td>
@@ -130,7 +131,7 @@ permalink: /trackers/
     <tbody>{% for r in T.essential_prices %}<tr>
       <td class="nowrap">{{ r.date }}</td><td><span class="chip">{{ r.sector }}</span></td>
       <td><strong>{{ r.firm_or_place }}</strong> <a class="case" data-case="{{ r.case_id }}">{{ r.case_id }}</a></td>
-      <td>{{ r.change }}{% if r.magnitude_pct %} <span class="chip">{{ r.magnitude_pct }}%{% if r.magnitude_note %} · {{ r.magnitude_note }}{% endif %}</span>{% endif %}</td>
+      <td>{{ r.change }}{% if r.magnitude_pct %} <span class="chip">{{ r.magnitude_pct }}%{% if r.magnitude_note %} · {{ r.magnitude_note }}{% endif %}</span>{% endif %}{% include raw-figures.html r=r %}</td>
       <td>{{ r.who_pays }}</td>
       <td>{{ r.explanation }} <a class="src" href="{{ r.source }}">source</a>{% if r.agent %} · <span class="agent">{{ r.agent }}</span>{% endif %}{% if r.verification_note %}<div class="small warn">{{ r.verification_note }}</div>{% endif %}</td>
     </tr>{% endfor %}</tbody>
@@ -160,7 +161,7 @@ permalink: /trackers/
       <td class="nowrap">{{ r.date }}</td><td><span class="chip">{{ r.kind }}</span></td>
       <td><strong>{{ r.product }}</strong> <a class="case" data-case="{{ r.case_id }}">{{ r.case_id }}</a></td>
       <td>{{ r.change }} <a class="src" href="{{ r.source }}">source</a>{% if r.agent %} · <span class="agent">{{ r.agent }}</span>{% endif %}{% if r.verification_note %}<div class="small warn">{{ r.verification_note }}</div>{% endif %}</td>
-      <td>{% if r.magnitude_pct %}<span class="chip">+{{ r.magnitude_pct }}%</span> {% endif %}{{ r.unit_price_effect }}{% if r.magnitude_note %}<div class="small muted">{{ r.magnitude_note }}</div>{% endif %}</td>
+      <td>{% if r.magnitude_pct %}<span class="chip">+{{ r.magnitude_pct }}%</span> {% endif %}{{ r.unit_price_effect }}{% if r.magnitude_note %}<div class="small muted">{{ r.magnitude_note }}</div>{% endif %}{% include raw-figures.html r=r %}</td>
       <td class="small">{{ r.industry }} · {{ r.geography }}</td>
     </tr>{% endfor %}</tbody>
   </table></div>
@@ -213,12 +214,32 @@ permalink: /trackers/
       <td class="nowrap">{{ r.date }}</td>
       <td><strong>{{ r.firm }}</strong> · {{ r.product }} <a class="case" data-case="{{ r.case_id }}">{{ r.case_id }}</a>{% if r.related_case_id %} <a class="case" data-case="{{ r.related_case_id }}">{{ r.related_case_id }}</a>{% endif %}</td>
       <td>{{ r.change }} <a class="src" href="{{ r.source }}">source</a>{% if r.agent %} · <span class="agent">{{ r.agent }}</span>{% endif %}{% if r.verification_note %}<div class="small warn">{{ r.verification_note }}</div>{% endif %}</td>
-      <td class="small">{% if r.old_price %}{{ r.old_price }} → {% endif %}{{ r.new_price }}{% if r.magnitude_pct %} <span class="chip">+{{ r.magnitude_pct }}%</span>{% endif %}{% if r.magnitude_note %}<div class="small muted">{{ r.magnitude_note }}</div>{% endif %}</td>
+      <td class="small">{% if r.old_price %}{{ r.old_price }} → {% endif %}{{ r.new_price }}{% if r.magnitude_pct %} <span class="chip">+{{ r.magnitude_pct }}%</span>{% endif %}{% if r.magnitude_note %}<div class="small muted">{{ r.magnitude_note }}</div>{% endif %}{% include raw-figures.html r=r %}</td>
       <td><span class="chip">{{ r.mechanism }}</span></td>
       <td><span class="chip">{{ r.price_type }}</span>{% unless r.net_disclosed %}<div class="small muted">net not disclosed</div>{% endunless %}</td>
       <td class="nowrap">{{ r.effective }}</td>
     </tr>{% endfor %}</tbody>
   </table></div>
+</section>
+
+<section class="tracker" id="earnings">
+  <h2>Earnings calls: what companies say about their prices</h2>
+  <p class="muted">One row per company per quarter, read from public earnings materials by ChatGPT. Price effects are the company's own numbers under its own label; nothing is derived. Companies watched: {{ site.data.earnings.companies | size }} ({{ site.data.earnings.companies | where: "tier", 1 | size }} every quarter). Rules: AGENTS.md section 15.</p>
+  {% assign ER = T.earnings_pricing %}
+  {% if ER == nil or ER.size == 0 %}<p class="small">No calls read yet. The first rows arrive with the December off-cycle reporters and the backfill of last quarter.</p>{% else %}
+  {% assign e_up = ER | where: "price_signal", "raising" | size %}{% assign e_hold = ER | where: "price_signal", "holding" | size %}{% assign e_cut = ER | where: "price_signal", "cutting" | size %}
+  {% assign e_el = ER | where: "elasticity_signal", "significant" | size %}
+  <p class="small">All rows: {{ e_up }} raising · {{ e_hold }} holding · {{ e_cut }} cutting · {{ e_el }} reporting significant buyer pushback.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Company · period</th><th>Price effect</th><th>Signals</th><th>What they did and why</th><th>Sources</th></tr></thead>
+    <tbody>{% for r in ER %}<tr id="earn-{{ r.id }}">
+      <td><strong>{{ r.company }}</strong><div class="small muted">{{ r.period }} · call {{ r.call_date }}</div>{% if r.case_id %}<a class="case" data-case="{{ r.case_id }}">{{ r.case_id }}</a>{% endif %}</td>
+      <td class="small">{% if r.price_effect_pct != nil %}<strong>{{ r.price_effect_pct }} pts</strong> {% endif %}{{ r.price_metric_label }} <span class="chip">{{ r.metric_family }}</span>{% if r.volume_effect_pct != nil %}<br>volume {{ r.volume_effect_pct }} pts{% endif %}{% if r.metric_note %}<div class="muted">{{ r.metric_note }}</div>{% endif %}</td>
+      <td class="small"><span class="chip {% if r.price_signal == 'cutting' %}yes{% elsif r.price_signal == 'raising' %}no{% endif %}">{{ r.price_signal }}</span>{% if r.elasticity_signal %}<br>pushback: {{ r.elasticity_signal }}{% endif %}{% if r.promo_signal %}<br>promotions: {{ r.promo_signal }}{% endif %}{% if r.hidden_signals.size > 0 %}<br>{{ r.hidden_signals | join: ", " }}{% endif %}{% if r.pricing_questions != nil %}<br>{{ r.pricing_questions }} analyst pricing questions{% endif %}</td>
+      <td class="small">{% if r.price_actions.size > 0 %}<ul>{% for a in r.price_actions %}<li>{{ a }}</li>{% endfor %}</ul>{% endif %}{% if r.explanation %}<div><span class="chip">{{ r.explanation_category }}</span> {{ r.explanation }}</div>{% endif %}{% if r.quote %}<div class="muted">"{{ r.quote }}" ({{ r.quote_speaker }})</div>{% endif %}{% if r.guidance %}<div>Outlook: {{ r.guidance }}</div>{% endif %}{% if r.elasticity_note %}<div class="muted">{{ r.elasticity_note }}</div>{% endif %}</td>
+      <td class="small">{% for src in r.sources %}<a class="src" href="{{ src.url }}">{{ src.type }}</a><br>{% endfor %}{% if r.verification_note %}<div class="warn">{{ r.verification_note }}</div>{% endif %}</td>
+    </tr>{% endfor %}</tbody>
+  </table></div>{% endif %}
 </section>
 
 <section class="tracker" id="questions">

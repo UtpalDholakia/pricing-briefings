@@ -1,0 +1,99 @@
+---
+layout: default
+title: Decisions
+permalink: /decisions/
+---
+{% include decisions-queue.html %}
+
+<h1 class="page-title">Decisions for Utpal</h1>
+<p class="muted">Everything in the research base that is waiting on you, in one place, with a recommendation where an agent has made one. The queue is rebuilt from the data files every time the site builds, so it is never out of date. To decide, reply to Claude in chat, for example <em>"Decisions: accept all recommendations"</em> or <em>"accept all except credits-obscure-true-price: keep Contested"</em>. Claude applies your decisions in the data files the same day and records them below. Rules: AGENTS.md section 14.</p>
+
+<div class="stat-row">
+  <div class="stat"><span class="big">{{ total }}</span><span class="lbl">items waiting</span></div>
+  <div class="stat"><span class="big">{{ pending_claims.size }}</span><span class="lbl">claim verdicts to confirm</span></div>
+  <div class="stat"><span class="big">{{ dives.size | plus: ideas_ready.size | plus: ideas_high.size | plus: ideas_parked_due.size }}</span><span class="lbl">deep dives and pipeline ideas</span></div>
+  <div class="stat"><span class="big">{{ q_linked.size | plus: q_old.size }}</span><span class="lbl">questions to tidy</span></div>
+  <div class="stat"><span class="big">{{ free_slots }}</span><span class="lbl">free hypothesis slots</span></div>
+</div>
+
+{% comment %} ---------------------------------------------------------- 1. claims {% endcomment %}
+<section class="tracker" id="claims">
+  <h2>1. Claim verdicts awaiting confirmation <small class="muted">{{ pending_claims.size }}</small></h2>
+  <p class="muted small">An Open verdict asserts nothing; confirming it only accepts the claim's wording. Contested, Supported and Refuted verdicts are the ones that need a real look.</p>
+  {% if pending_claims.size == 0 %}<p>Nothing waiting.</p>{% else %}
+  <div class="table-wrap"><table>
+    <thead><tr><th>Claim</th><th>Proposed verdict</th><th>Why</th><th>Recommendation</th></tr></thead>
+    <tbody>{% for c in pending_claims %}{% assign last = c.status_history | last %}{% assign rec = D | where: "kind", "claim" | where: "ref", c.claim_id | first %}
+    <tr>
+      <td><a href="{{ claims_base }}#{{ c.claim_id }}"><strong>{{ c.claim }}</strong></a><div class="small muted">{{ c.claim_id }} · {{ c.evidence_for.size }} for · {{ c.evidence_against.size }} against</div></td>
+      <td class="nowrap">{% if last.old_status %}{{ last.old_status }} → {% endif %}<strong>{{ last.new_status }}</strong><div class="small muted">{{ last.date }} · {{ last.proposed_by }}</div></td>
+      <td class="small">{{ last.reason | truncate: 260 }}</td>
+      <td class="small">{% if rec %}<span class="chip {% if rec.recommendation == 'Confirm' %}yes{% else %}partial{% endif %}">{{ rec.recommendation }}</span> {{ rec.note }}{% elsif last.new_status == "Open" and last.old_status == nil %}<span class="chip yes">Confirm</span> <span class="muted">Open seed; confirm as a batch.</span>{% else %}<span class="muted">No recommendation yet</span>{% endif %}</td>
+    </tr>{% endfor %}</tbody>
+  </table></div>{% endif %}
+</section>
+
+{% comment %} ---------------------------------------------------------- 2. dives and pipeline {% endcomment %}
+<section class="tracker" id="pipeline">
+  <h2>2. Deep dives and the Substack pipeline <small class="muted">{{ dives.size | plus: ideas_ready.size | plus: ideas_high.size | plus: ideas_parked_due.size }}</small></h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Item</th><th>State</th><th>Decision needed</th><th>Recommendation</th></tr></thead>
+    <tbody>
+    {% for d in dives %}{% assign slug = d.slug | default: d.name %}{% assign rec = D | where: "kind", "dive" | where: "ref", slug | first %}
+    <tr><td><a href="{{ d.url | relative_url }}"><strong>{{ d.title }}</strong></a><div class="small muted">deep dive</div></td><td><span class="chip">{{ d.status }}</span></td><td class="small">Approve for publication, request changes, or reject.</td><td class="small">{% if rec %}<span class="chip">{{ rec.recommendation }}</span> {{ rec.note }}{% else %}<span class="muted">Read it first</span>{% endif %}</td></tr>{% endfor %}
+    {% for i in ideas_ready %}{% assign rec = D | where: "kind", "idea" | where: "ref", i.idea_slug | first %}
+    <tr><td><strong>{{ i.idea }}</strong><div class="small muted">{{ i.theme }}</div></td><td><span class="chip">ready</span></td><td class="small">Publish on Substack and send Claude the URL.</td><td class="small">{% if rec %}<span class="chip">{{ rec.recommendation }}</span> {{ rec.note }}{% endif %}</td></tr>{% endfor %}
+    {% for i in ideas_high %}{% assign rec = D | where: "kind", "idea" | where: "ref", i.idea_slug | first %}
+    <tr><td><strong>{{ i.idea }}</strong><div class="small muted">{{ i.theme }} · created {{ i.created }}</div></td><td><span class="chip">idea · High</span></td><td class="small">Start outlining, or lower the priority.</td><td class="small">{% if rec %}<span class="chip yes">{{ rec.recommendation }}</span> {{ rec.note }}{% else %}<span class="muted">No recommendation yet</span>{% endif %}</td></tr>{% endfor %}
+    {% for i in ideas_parked_due %}
+    <tr><td><strong>{{ i.idea }}</strong><div class="small muted">{{ i.theme }}</div></td><td><span class="chip">parked</span></td><td class="small">Revisit date {{ i.revisit_date }} has passed: restart, park again or kill.</td><td></td></tr>{% endfor %}
+    <tr><td colspan="4" class="small muted">Plus {{ ideas_medium.size }} Medium-priority ideas at status <em>idea</em>. Promote at most three a month to High; the rest wait. Full list on the <a href="{{ '/pipeline/' | relative_url }}">pipeline page</a>.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+{% comment %} ---------------------------------------------------------- 3. hypotheses {% endcomment %}
+<section class="tracker" id="hypotheses">
+  <h2>3. Hypothesis slots and reviews <small class="muted">{{ free_slots }} free of 20</small></h2>
+  {% if hyp_recs.size == 0 and hyp_review.size == 0 %}<p>Nothing waiting. Free slots stay free until a good proposal arrives.</p>{% else %}
+  <div class="table-wrap"><table>
+    <thead><tr><th>Hypothesis</th><th>Status</th><th>Decision needed</th><th>Recommendation</th></tr></thead>
+    <tbody>
+    {% for r in hyp_recs %}{% assign h = H | where: "hypothesis_id", r.ref | first %}
+    <tr><td><a href="{{ hyp_base }}#{{ r.ref }}"><strong>{{ h.hypothesis }}</strong></a><div class="small muted">{{ r.ref }}</div></td><td><span class="chip">{{ h.status }}</span></td><td class="small">{% if h.status == "Deferred" %}Move into a free Testing slot?{% else %}Keep hunting or mark Dead?{% endif %}</td><td class="small"><span class="chip yes">{{ r.recommendation }}</span> {{ r.note }}</td></tr>{% endfor %}
+    {% for h in hyp_review %}{% assign done_rec = hyp_recs | where: "ref", h.hypothesis_id | first %}{% unless done_rec %}
+    <tr><td><a href="{{ hyp_base }}#{{ h.hypothesis_id }}"><strong>{{ h.hypothesis }}</strong></a><div class="small muted">{{ h.hypothesis_id }}</div></td><td><span class="chip">Testing</span></td><td class="small">{{ h.hunts.size }} hunts, no evidence: keep hunting (with a reason), defer or mark Dead.</td><td class="small muted">Claude flags these in the daily digest.</td></tr>{% endunless %}{% endfor %}
+    </tbody>
+  </table></div>{% endif %}
+</section>
+
+{% comment %} ---------------------------------------------------------- 4. questions {% endcomment %}
+<section class="tracker" id="questions">
+  <h2>4. Research questions to tidy <small class="muted">{{ q_linked.size | plus: q_old.size }}</small></h2>
+  <p class="muted small">Questions stay Open until someone decides otherwise, so the Open count overstates what is unanswered. Two kinds of tidying are needed.</p>
+  {% if q_linked.size > 0 %}
+  <h3>Already being pursued by a hypothesis or claim <small class="muted">{{ q_linked.size }}</small></h3>
+  <p class="small"><span class="chip yes">Mark in progress</span> Recommended for all of these as a batch: each already has a hypothesis or claim attached (some deferred until data appears), so the question itself is being handled there and its status should be In progress, not Open.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Question</th><th>Raised</th><th>Pursued by</th></tr></thead>
+    <tbody>{% for q in q_linked %}<tr><td>{{ q.question }}<div class="small muted">{{ q.question_id }}</div></td><td class="nowrap small">{{ q.date }}</td>
+      <td class="small">{% for h in H %}{% if h.related_questions contains q.question_id %}<a href="{{ hyp_base }}#{{ h.hypothesis_id }}">{{ h.hypothesis_id }}</a> <span class="muted">({{ h.status }})</span><br>{% endif %}{% endfor %}{% for c in C %}{% if c.related_questions contains q.question_id %}<a href="{{ claims_base }}#{{ c.claim_id }}">{{ c.claim_id }}</a> <span class="muted">(claim, {{ c.status }})</span><br>{% endif %}{% endfor %}</td></tr>{% endfor %}</tbody>
+  </table></div>{% endif %}
+  {% if q_old.size > 0 %}
+  <h3>Open three weeks or more, with nothing pursuing them <small class="muted">{{ q_old.size }}</small></h3>
+  <p class="small">For each: <strong>keep</strong> (it still matters), <strong>turn into a hypothesis</strong> (if a test can be stated), or <strong>dead end</strong> (no longer interesting or untestable).</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Question</th><th>Raised</th><th>Recommendation</th></tr></thead>
+    <tbody>{% for q in q_old %}{% assign rec = D | where: "kind", "question" | where: "ref", q.question_id | first %}<tr><td>{{ q.question }}{% if q.question_id %}<div class="small muted">{{ q.question_id }}</div>{% endif %}</td><td class="nowrap small">{{ q.date }}</td><td class="small">{% if rec %}<span class="chip">{{ rec.recommendation }}</span> {{ rec.note }}{% else %}<span class="muted">Your call</span>{% endif %}</td></tr>{% endfor %}</tbody>
+  </table></div>{% endif %}
+</section>
+
+{% if done.size > 0 %}
+<section class="tracker" id="decided">
+  <h2>Recently decided <small class="muted">{{ done.size }}</small></h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Decided</th><th>Item</th><th>Recommended</th><th>Decision</th></tr></thead>
+    <tbody>{% for d in done limit: 30 %}<tr><td class="nowrap small">{{ d.decided }}</td><td class="small">{{ d.kind }}: {{ d.ref }}</td><td class="small">{{ d.recommendation }}</td><td class="small">{{ d.decision }}</td></tr>{% endfor %}</tbody>
+  </table></div>
+</section>
+{% endif %}

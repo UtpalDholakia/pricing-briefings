@@ -17,6 +17,23 @@ Use `_data/trackers/price_panel.yml`. Keep the profile fixed: offer, market, eli
 - **Separate posted price, checkout and renewal.** Record unavoidable fees and applicable taxes only if verified. In `amount`, sum the required charge for the stated scenario and period. State any exclusions in `note`. Do not net uncertain credits or rewards against the charge. For benefits lost or added, record the original units. Only state a replacement cost if it is observable.
 - **Compare like with like.** Use `change: comparable` only when the previous and current observations use the same scenario, amount basis, currency, and boundary. A verified unchanged amount still gets a new row. Use `change: break` when comparison would be misleading and explain why. Use `change: baseline` for the first observation.
 
+### The core basket {#basket}
+
+Profiles marked `basket: core` are a fixed set of everyday offers (streaming and memberships, airline bag fees, bank and telecom prices, regulated prices such as the Ofgem cap and the Forever stamp, B2B seat prices, and Indian price points), chosen so the claims about subscription creep, fees and regulated prices can be tested on a series rather than on news. Each has a `why` line naming what it tests.
+
+- **Every profile is checked every month**, on or after `next_check`, and gets a new observation even when nothing changed. A basket with gaps cannot show that prices did not move.
+- **A failed check is recorded, not skipped.** If the page will not load, keep the profile, add a `note` saying what failed, and set `next_check` a few days out. After three failures, use a reported price with the provider page as `primary_terms`, and say so in the note.
+- **Reported prices are labeled.** Use `basis: "Posted terms, as reported"` when the figure comes from coverage rather than the provider's own page.
+- **Changing the basket** (adding, retiring or redefining a profile) is Utpal's decision. Retire a profile by setting `next_check: null` and a note; never delete it. AI subscriptions are not in the basket: they live in the AI pricing database (AGENTS.md section 8).
+
+### Filling in history from archives {#backfill}
+
+A new profile can start with a history rather than a single point. Look for earlier prices in, in order: the provider's own announcements, a dated archive copy of its price page (the Internet Archive's Wayback Machine, `web.archive.org/web/<date>/<url>`), then dated news reports of a change.
+
+- Record each earlier price as its own observation with `basis: "Prior schedule, reconstructed"`, the date the price took effect (or the archive capture date, if that is all that is known), and the archive or report URL as `source`.
+- Reconstruct only prices that were actually stated: a capture or report on a date. Never interpolate between two points or assume a price held in between.
+- The earliest reconstructed observation is `change: baseline`; later ones are `comparable` only if the profile (plan, market, billing period, what is included) was the same.
+
 ## Pricing evidence and boundary conditions {#evidence}
 
 Use `_data/trackers/pricing_evidence.yml`. Add one row per tested comparison and record the treatment, comparator, setting, design, outcome, and direction or size of the result. Cite the study or public data, not just reporting about it. Use the original study date or issue month rather than the day the briefing found it.

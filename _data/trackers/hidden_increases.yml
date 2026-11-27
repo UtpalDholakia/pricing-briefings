@@ -220,7 +220,11 @@
   product: Food-delivery platform fee (Zomato and Swiggy, India)
   change: 'Per-order platform fee introduced at Rs 2 (Aug 2023) and raised in steps to Rs 14.90 before GST (Rs 17.58 with GST) by March 2026, matched by Swiggy within days; charged on top of delivery and packaging fees, including to paying subscribers'
   unit_price_effect: null
-  magnitude_pct: null
+  magnitude_pct: 645.0
+  price_before: 2
+  price_after: 14.9
+  currency: INR
+  price_basis: 'Per-order platform fee before GST, Aug 2023 vs March 2026; the fee only, not the order total'
   magnitude_note: Per-order fee, not a share of the product price
   industry: Food delivery platforms
   geography: India
@@ -313,7 +317,11 @@
   product: Speaker system (South African retailer)
   change: R2,999 on Sep 28, raised to R6,499, then advertised on Black Friday at R2,999 with a claimed R3,500 saving
   unit_price_effect: 'Real saving vs. earlier price: zero'
-  magnitude_pct: null
+  magnitude_pct: 116.7
+  price_before: 2999
+  price_after: 6499
+  currency: ZAR
+  price_basis: 'Advertised price of one speaker, Sep 28 vs the pre-Black Friday raise (the reference later claimed)'
   industry: Consumer electronics
   geography: South Africa
   source: https://www.facebook.com/reel/2249822262255515/
@@ -504,6 +512,10 @@
   change: 92 oz to 81 oz; same cap and dosing instructions
   unit_price_effect: Fewer loads per jug
   magnitude_pct: null
+  qty_before: 92
+  qty_after: 81
+  qty_unit: oz
+  price_basis: 'Net contents of one jug; shelf price not stated in the source, so no unit-price change is computed'
   industry: Household goods
   geography: US
   source: https://www.mouseprint.org/2026/10/26/here-we-shrink-again-fall-2026-part-2/
@@ -517,6 +529,10 @@
   change: 3.3 oz to 3 oz
   unit_price_effect: null
   magnitude_pct: null
+  qty_before: 3.3
+  qty_after: 3
+  qty_unit: oz
+  price_basis: 'Net contents of one stick; shelf price not stated in the source'
   industry: Personal care
   geography: US
   source: https://www.mouseprint.org/2026/10/26/here-we-shrink-again-fall-2026-part-2/
@@ -634,6 +650,10 @@
   change: 10 oz to 8.7 oz
   unit_price_effect: null
   magnitude_pct: null
+  qty_before: 10
+  qty_after: 8.7
+  qty_unit: oz
+  price_basis: 'Net contents of one bag; shelf price not stated in the source'
   industry: Grocery
   geography: US
   source: https://www.mouseprint.org/2026/10/17/here-we-shrink-again-fall-2026-part-1/

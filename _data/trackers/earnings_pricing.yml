@@ -1,0 +1,11 @@
+# Tracker: earnings_pricing. What companies say about their own prices on earnings calls. AGENTS.md section 15.
+# One row per company per reporting period. Owner: ChatGPT (EARNINGS_INSTRUCTIONS.md). Newest first.
+# Companies: _data/earnings/companies.yml (ticker must match). Numbers only as the company states them; never computed from other figures
+# except where AGENTS.md 6.5 allows exact arithmetic. Allowed values:
+#   metric_family: price-only / price-mix / ticket / per-customer / unit-revenue / take-rate / commodity-realized / rate-change / none
+#   price_signal: raising / holding / cutting / mixed / not-discussed
+#   elasticity_signal: none-seen / some / significant / not-discussed
+#   promo_signal: increasing / stable / decreasing / not-discussed
+#   explanation_category: the explanations.yml categories (AGENTS.md 6.2), or null
+#   source_type: transcript / prepared-remarks / press-release / filing / presentation
+[]

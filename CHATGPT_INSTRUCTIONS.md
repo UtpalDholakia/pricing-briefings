@@ -48,6 +48,10 @@ Add this to ChatGPT's task: "When your briefing finds an AI price, allowance, ti
 
 Add this to ChatGPT's task: "Before researching, read `_data/hypotheses.yml`. Pick up to 2 hypotheses with `status: Testing` that fit today's theme, preferring the one hunted longest ago (`last_hunted: null` first). Skip any hypothesis that any agent hunted yesterday, and any whose last hunt was a miss less than 14 days ago. Run searches aimed at each hypothesis's `predicts` and `test`, not only at today's theme. At the end of the briefing, add one line per hypothesis you hunted, including misses: `Hypothesis hunt: <hypothesis_id> — hit: <what you found, with its source>` or `Hypothesis hunt: <hypothesis_id> — miss: <what you searched>; next hunt after <date 14 days on>`. A hit must be directly on point (a study or a case that is itself an instance), not a related anecdote. To propose a new hypothesis, add `Hypothesis proposal: <one sentence> — predicts: <observable result> — test: <how it would be checked> — lanes: <lanes>`; a proposal without a test is a question. Don't edit `hypotheses.yml` or `claims.yml`; Claude logs your hunts and files the evidence."
 
+## Earnings pricing watch (AGENTS.md section 15)
+
+A second scheduled task for ChatGPT reads earnings calls for pricing. Setup and the full prompt: [EARNINGS_INSTRUCTIONS.md](EARNINGS_INSTRUCTIONS.md).
+
 ## If ChatGPT says it can't write to GitHub
 
 Some plans or connector versions only allow reading. If so:

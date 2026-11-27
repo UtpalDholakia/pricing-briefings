@@ -7,12 +7,38 @@ layout: default
 <p class="intro">Daily briefings on pricing strategy, best practices and consumer psychology, gathered by AI agents for readers of <a href="{{ site.brand.substack }}">The Pricing Conundrum</a>.</p>
 
 
+{% include decisions-queue.html %}
+{% assign T = site.data.trackers %}
+{% assign event_entries = 0 %}{% for pair in T %}{% unless pair[0] == "questions" or pair[0] == "price_panel" or pair[0] == "pricing_evidence" or pair[0] == "model_migrations" or pair[0] == "earnings_pricing" %}{% assign event_entries = event_entries | plus: pair[1].size %}{% endunless %}{% endfor %}
+{% assign basket = T.price_panel | where: "basket", "core" %}
+{% assign basket_priced = 0 %}{% for p in basket %}{% if p.observations.size > 0 %}{% assign basket_priced = basket_priced | plus: 1 %}{% endif %}{% endfor %}
+{% assign claims_supported = site.data.claims | where: "status", "Supported" | size %}{% assign claims_contested = site.data.claims | where: "status", "Contested" | size %}{% assign claims_open = site.data.claims | where: "status", "Open" | size %}
+{% assign ideas_high_n = site.data.substack.ideas | where: "priority", "High" | size %}
+{% assign real_dives = "" | split: "" %}{% for d in site.cases %}{% unless d.title contains "<" %}{% assign real_dives = real_dives | push: d %}{% endunless %}{% endfor %}
+
+{% assign pipe_wait = dives.size | plus: ideas_ready.size | plus: ideas_high.size | plus: ideas_parked_due.size %}{% assign hyp_wait = hyp_recs.size | plus: hyp_review.size %}{% assign q_wait = q_linked.size | plus: q_old.size %}
+{% if total > 0 %}<a class="waiting" href="{{ '/decisions/' | relative_url }}"><strong>{{ total }} items are waiting on you</strong>: {{ pending_claims.size }} claim verdicts · {{ pipe_wait }} deep dives and pipeline ideas · {{ hyp_wait }} on hypotheses · {{ q_wait }} questions to tidy. <span class="nowrap">Open Decisions →</span></a>{% endif %}
+
+<section class="hub" aria-label="Everything on this site">
+  <a class="hub-card" href="#briefings"><span class="hub-n">{{ items.size }}</span><span class="hub-t">Daily briefings</span><span class="hub-d">From Claude, ChatGPT and Meta AI, newest first below.</span></a>
+  <a class="hub-card" href="{{ '/decisions/' | relative_url }}"><span class="hub-n">{{ total }}</span><span class="hub-t">Decisions</span><span class="hub-d">Everything waiting on you, with recommendations.</span></a>
+  <a class="hub-card" href="{{ '/trackers/' | relative_url }}"><span class="hub-n">{{ event_entries }}</span><span class="hub-t">Trackers</span><span class="hub-d">Price changes, backlash, hidden increases, laws, B2B and more, followed until resolved.</span></a>
+  <a class="hub-card" href="{{ '/basket/' | relative_url }}"><span class="hub-n">{{ basket.size }}</span><span class="hub-t">Price basket</span><span class="hub-d">Everyday offers checked every month; {{ basket_priced }} priced so far.</span></a>
+  <a class="hub-card" href="{{ '/earnings/' | relative_url }}"><span class="hub-n">{{ site.data.earnings.companies.size }}</span><span class="hub-t">Earnings watch</span><span class="hub-d">What companies say about their own prices on earnings calls; {{ T.earnings_pricing | size }} calls read.</span></a>
+  <a class="hub-card" href="{{ '/ai-pricing/' | relative_url }}"><span class="hub-n">{{ site.data.ai_pricing.providers | size }}</span><span class="hub-t">AI pricing database</span><span class="hub-d">What AI models and subscriptions cost, as a monthly series.</span></a>
+  <a class="hub-card" href="{{ '/claims/' | relative_url }}"><span class="hub-n">{{ site.data.claims | size }}</span><span class="hub-t">Claims</span><span class="hub-d">What the evidence says so far: {{ claims_supported }} supported, {{ claims_contested }} contested, {{ claims_open }} open.</span></a>
+  <a class="hub-card" href="{{ '/hypotheses/' | relative_url }}"><span class="hub-n">{{ testing.size }}/20</span><span class="hub-t">Hypotheses</span><span class="hub-d">Predictions the daily briefings are hunting for evidence.</span></a>
+  <a class="hub-card" href="{{ '/firms/' | relative_url }}"><span class="hub-n">{{ site.data.firms | size }}</span><span class="hub-t">Firm dossiers</span><span class="hub-d">Every tracked case for firms that keep coming up.</span></a>
+  <a class="hub-card" href="{{ '/pipeline/' | relative_url }}"><span class="hub-n">{{ site.data.substack.ideas | size }}</span><span class="hub-t">Substack pipeline</span><span class="hub-d">Ideas for The Pricing Conundrum; {{ ideas_high_n }} high priority.</span></a>
+  <a class="hub-card" href="#deep-dives"><span class="hub-n">{{ real_dives.size }}</span><span class="hub-t">Deep dives</span><span class="hub-d">Monthly arguments built from the trackers.</span></a>
+  <a class="hub-card" href="{{ '/tags/' | relative_url }}"><span class="hub-n">{{ site.data.tags | size }}</span><span class="hub-t">Browse by tag</span><span class="hub-d">Briefings grouped by The Pricing Conundrum's tags.</span></a>
+</section>
+
 <section class="research" id="deep-dives">
-  <div class="research-head"><h2>Research</h2>
-    <nav><a href="{{ '/ai-pricing/' | relative_url }}">AI pricing database</a> · <a href="{{ '/trackers/' | relative_url }}">Trackers</a> · <a href="{{ '/claims/' | relative_url }}">Claims</a> · <a href="{{ '/hypotheses/' | relative_url }}">Hypotheses</a> · <a href="{{ '/firms/' | relative_url }}">Firm dossiers</a> · <a href="{{ '/pipeline/' | relative_url }}">Substack pipeline</a></nav></div>
+  <div class="research-head"><h2>Deep dives and the Substack pipeline</h2></div>
   <h3>Deep dives</h3>
   {% assign dives = site.cases | sort: "date" | reverse %}
-  <ul class="dives">{% for d in dives %}
+  <ul class="dives">{% for d in dives %}{% if d.title contains "<" %}{% continue %}{% endif %}
     <li><a href="{{ d.url | relative_url }}"><strong>{{ d.title }}</strong></a> <span class="chip {% if d.status == 'published' %}yes{% else %}partial{% endif %}">{{ d.status }}</span> <span class="muted small">{{ d.date | date: "%b %-d, %Y" }}</span><br><span class="muted small">Question: {{ d.question }}</span></li>
   {% else %}<li class="muted">None yet.</li>{% endfor %}</ul>
   <h3 id="pipeline">Substack pipeline</h3>
@@ -31,6 +57,7 @@ layout: default
   </table></div>
 </section>
 
+<h2 class="section-head" id="briefings">Daily briefings</h2>
 <div class="filters" role="group" aria-label="Filter by agent">
   <button class="on" data-agent="all">All</button>
   {% for pair in site.agents %}
