@@ -4,7 +4,10 @@
 Two sources, one output:
 
     python3 scripts/substack_import.py --export /path/to/unzipped-export   # Substack export (all posts, full text)
-    python3 scripts/substack_import.py --feed                              # the public RSS feed (new posts)
+    python3 scripts/substack_import.py --add --title "..." --date YYYY-MM-DD --url URL [--subtitle "..."] [--paid]
+                                                                           # record a new piece seen on the public archive page
+    python3 scripts/substack_import.py --feed                              # the public RSS feed (Substack currently refuses
+                                                                           # automated requests from GitHub, so this may fail)
 
 Writes one Markdown file per published post to substack/posts/YYYY-MM-DD-<slug>.md and rebuilds the
 catalogue in _data/substack/published.yml. Existing files are never overwritten with shorter text, so a
@@ -155,7 +158,7 @@ def write_post(meta, body, source):
         old_words = int(re.search(r"^word_count: (\d+)", open(path, encoding="utf-8").read(), re.M).group(1))
         if old_words >= words:
             return False
-    fm = dict(meta, word_count=words, full_text=source == "export" or meta["audience"] == "free", imported_from=source)
+    fm = dict(meta, word_count=words, full_text=source == "export" or (source == "feed" and meta["audience"] == "free"), imported_from=source)
     head = "---\n" + "".join(f"{k}: {json.dumps(v, ensure_ascii=False)}\n" for k, v in fm.items()) + "---\n\n"
     open(path, "w", encoding="utf-8").write(head + body)
     return True
@@ -195,6 +198,22 @@ def from_feed():
                 "audience": "paid" if paid else "free", "post_id": None}
         n += write_post(meta, html_to_md(html), "feed")
     return n
+
+
+def add_stub(title, date, url, subtitle, paid):
+    """Record a piece seen on the public archive page: catalogue entry now, full text from the next export."""
+    m = re.search(r"/p/([^/?#]+)", url)
+    if not m or not re.match(r"\d{4}-\d{2}-\d{2}$", date):
+        sys.exit("--add needs a Substack post URL (…/p/<slug>) and --date YYYY-MM-DD")
+    slug = m.group(1)
+    if any(fn.endswith(f"-{slug}.md") for fn in os.listdir(POSTS)):
+        print(f"{slug} is already in the archive"); return 0
+    body = (f"{subtitle}\n\n" if subtitle else "") + (
+        "*Full text not yet imported: recorded from the public archive page. "
+        "The next Substack export fills it in (AGENTS.md section 16).*\n")
+    meta = {"title": title, "subtitle": subtitle, "date": date, "slug": slug, "url": f"{BASE}/p/{slug}",
+            "audience": "paid" if paid else "free", "post_id": None}
+    return int(write_post(meta, body, "archive-page"))
 
 
 def rebuild_catalog():
@@ -239,9 +258,19 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--export", help="folder of an unzipped Substack export")
     ap.add_argument("--feed", action="store_true", help="import new posts from the public RSS feed")
+    ap.add_argument("--add", action="store_true", help="record one new piece seen on the public archive page")
+    ap.add_argument("--title"); ap.add_argument("--date"); ap.add_argument("--url")
+    ap.add_argument("--subtitle", default=""); ap.add_argument("--paid", action="store_true")
     a = ap.parse_args()
-    if not a.export and not a.feed:
-        ap.error("give --export DIR or --feed")
-    written = from_export(a.export) if a.export else from_feed()
+    if a.export:
+        written = from_export(a.export)
+    elif a.feed:
+        written = from_feed()
+    elif a.add:
+        if not (a.title and a.date and a.url):
+            ap.error("--add needs --title, --date and --url")
+        written = add_stub(a.title.strip(), a.date, a.url, a.subtitle.strip(), a.paid)
+    else:
+        ap.error("give --export DIR, --add or --feed")
     total = rebuild_catalog()
     print(f"{written} post files written or updated; catalogue has {total} pieces")
