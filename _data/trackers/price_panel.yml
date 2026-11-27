@@ -152,3 +152,480 @@
       amount: 155.10
       note: Same trip and card assumptions under the September schedule.
       source: https://www.ttc.ca/news/2026/September/Back-to-school-on-the-TTC
+
+# ---- Core basket (basket: core), added 2026-11-27. AGENTS.md section 7 and tracker-methods.md#basket.
+# A fixed set of everyday offers chosen to test the claims register: subscription creep, fee inflation,
+# regulated prices, B2B seat prices and non-Western price levels. Recheck monthly even when nothing changes.
+# Profiles with no observation yet are due a first check on next_check; never seed a price from memory.
+- id: netflix-standard-ads-us
+  basket: core
+  offer: "Netflix Standard with ads"
+  market: "United States"
+  profile: "New subscriber, one account, monthly billing, no extra members, no bundle"
+  currency: "USD"
+  unit: "one month, before tax"
+  why: "Streaming subscription creep; Netflix raises prices most often of the large streamers"
+  next_check: "2026-12-27"
+  observations:
+    - date: "2026-11-27"
+      basis: "Posted terms"
+      change: "baseline"
+      posted: "USD 8.99 per month"
+      included: "Standard with ads; extra members not available on this plan"
+      amount: 8.99
+      note: "Standard (no ads) USD 19.99 and Premium USD 26.99 on the same page; Basic discontinued."
+      source: "https://help.netflix.com/en/node/24926"
+  agent: "claude"
+- id: spotify-premium-individual-us
+  basket: core
+  offer: "Spotify Premium Individual"
+  market: "United States"
+  profile: "One account, monthly billing, after any free trial, no bundle"
+  currency: "USD"
+  unit: "one month, before tax"
+  why: "Music subscription prices; a reference point for bundle and AI-feature pricing"
+  next_check: "2026-12-27"
+  observations:
+    - date: "2026-11-27"
+      basis: "Posted terms"
+      change: "baseline"
+      posted: "USD 12.99 per month after the trial"
+      first_payment: "Page showed 'Free for 2 months' for first-time Premium users, with an offer end date of November 1, 2026 still displayed"
+      amount: 12.99
+      note: "Duo USD 18.99, Family USD 21.99, Student USD 6.99 on the same page. The stale offer date suggests the trial terms are not current; recheck."
+      source: "https://www.spotify.com/us/premium/"
+  agent: "claude"
+- id: disney-plus-premium-us
+  basket: core
+  offer: "Disney+ Premium (no ads)"
+  market: "United States"
+  profile: "New subscriber, standalone Disney+ (no Hulu or ESPN bundle), monthly billing"
+  currency: "USD"
+  unit: "one month, before tax"
+  why: "Fourth US rise in four years; tests whether annual rises draw less backlash over time"
+  next_check: "2026-12-27"
+  observations:
+    - date: "2026-11-27"
+      basis: "Posted terms, as reported"
+      change: "baseline"
+      posted: "USD 21.49 per month from September 23, 2026 for new subscribers; existing monthly subscribers from their next bill"
+      amount: 21.49
+      note: "Disney's own price page did not render for the fetcher; figure from press reports of the September 2026 rise. Prior price USD 18.99; annual plan USD 214.99 (was USD 189.99)."
+      source: "https://www.wdwmagic.com/wdwmagic-plus/disneyplus/news/23sep2026-new-disney-pricing-what-you-ll-pay-and-how-much-more.htm"
+      primary_terms: "https://help.disneyplus.com/article/disneyplus-price"
+  agent: "claude"
+- id: youtube-premium-individual-us
+  basket: core
+  offer: "YouTube Premium Individual"
+  market: "United States"
+  profile: "One account, monthly billing, bought on the web or Android (not via Apple in-app purchase)"
+  currency: "USD"
+  unit: "one month, before tax"
+  why: "Channel-dependent pricing (higher through Apple) and the 2026 rise for existing subscribers"
+  next_check: "2026-12-27"
+  observations:
+    - date: "2026-11-27"
+      basis: "Posted terms, as reported"
+      change: "baseline"
+      posted: "USD 15.99 per month (new subscribers from April 10, 2026; existing subscribers from June 2026 billing dates)"
+      amount: 15.99
+      note: "YouTube's page did not render for the fetcher. Prior price USD 13.99 (since July 2023). Annual USD 159.99; reported USD 20.99 through Apple in-app purchase."
+      source: "https://9to5google.com/2026/04/10/youtube-premium-us-price-hike/"
+      primary_terms: "https://www.youtube.com/premium"
+  agent: "claude"
+- id: amazon-prime-monthly-us
+  basket: core
+  offer: "Amazon Prime (monthly)"
+  market: "United States"
+  profile: "Standard Prime, monthly billing, not Young Adult or Access, no Prime Video Ultra add-on"
+  currency: "USD"
+  unit: "one month, before tax"
+  why: "The largest US membership; held at the same price since February 2022 while add-ons rose"
+  next_check: "2026-12-27"
+  observations:
+    - date: "2026-11-27"
+      basis: "Posted terms, as reported"
+      change: "baseline"
+      posted: "USD 14.99 per month; USD 139 per year"
+      amount: 14.99
+      note: "Amazon's page was not opened. Price unchanged since February 2022; Prime Video ad-free add-on replaced by Prime Video Ultra at USD 4.99 a month from April 2026."
+      source: "https://www.lilachbullock.com/amazon-prime-cost/"
+      primary_terms: "https://www.amazon.com/amazonprime"
+  agent: "claude"
+- id: xbox-game-pass-ultimate-us
+  basket: core
+  offer: "Xbox Game Pass Ultimate"
+  market: "United States"
+  profile: "New subscriber, monthly billing, no introductory offer"
+  currency: "USD"
+  unit: "one month, before tax"
+  why: "Large 2025 rise and tier restructuring; a gaming reference for subscription creep"
+  next_check: "2026-11-30"
+  observations: []
+  note: "First check 2026-11-27 failed: Xbox's page showed '$XX.XX/month' placeholders to the fetcher."
+  agent: "claude"
+- id: ps-plus-essential-12m-us
+  basket: core
+  offer: "PlayStation Plus Essential (12 months)"
+  market: "United States"
+  profile: "New subscriber, 12-month plan, no sale price"
+  currency: "USD"
+  unit: "12 months, before tax"
+  why: "Annual-plan pricing in gaming; Sony also appears in the backlash tracker"
+  next_check: "2026-12-27"
+  observations:
+    - date: "2026-11-27"
+      basis: "Posted terms"
+      change: "baseline"
+      posted: "USD 79.99 for 12 months (1 month USD 10.99; 3 months USD 27.99)"
+      amount: 79.99
+      note: "Extra USD 134.99 and Premium USD 159.99 for 12 months on the same page. Black Friday sale prices, if any, not shown to the fetcher."
+      source: "https://www.playstation.com/en-us/ps-plus/"
+  agent: "claude"
+- id: m365-personal-us
+  basket: core
+  offer: "Microsoft 365 Personal"
+  market: "United States"
+  profile: "One person, annual billing, no Copilot add-on beyond what the plan includes"
+  currency: "USD"
+  unit: "one year, before tax"
+  why: "Consumer software repriced around bundled AI; links to the AI pricing database"
+  next_check: "2026-12-27"
+  observations:
+    - date: "2026-11-27"
+      basis: "Posted terms"
+      change: "baseline"
+      posted: "USD 99.99 per year or USD 9.99 per month"
+      included: "Copilot usage described as 'higher than free'; no credit count stated"
+      amount: 99.99
+      note: "Family USD 129.99 per year; Premium USD 199.99 per year."
+      source: "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products"
+  agent: "claude"
+- id: adobe-cc-pro-us
+  basket: core
+  offer: "Adobe Creative Cloud Pro (all apps)"
+  market: "United States"
+  profile: "Individual, annual plan billed monthly, regular price (not an introductory offer)"
+  currency: "USD"
+  unit: "one month, before tax"
+  why: "Annual-commitment-billed-monthly pricing and recurring intro offers"
+  next_check: "2026-11-30"
+  observations:
+    - date: "2026-11-27"
+      basis: "Posted terms"
+      change: "baseline"
+      posted: "USD 69.99 per month regular price; intro offer USD 29.99 per month for the first year, shown as ending November 27"
+      first_payment: "USD 29.99 under the intro offer"
+      renewal: "USD 69.99 per month after the first year (the 'Regularly at' price)"
+      amount: 69.99
+      note: "Rechecking on Nov 30 to see whether the intro offer ends or is extended."
+      source: "https://www.adobe.com/creativecloud/plans.html"
+  agent: "claude"
+- id: costco-gold-star-us
+  basket: core
+  offer: "Costco Gold Star membership"
+  market: "United States"
+  profile: "New Gold Star (basic) membership, one year"
+  currency: "USD"
+  unit: "one year, before tax"
+  why: "A membership fee raised rarely and openly; a contrast with frequent subscription rises"
+  next_check: "2026-12-27"
+  observations:
+    - date: "2026-11-27"
+      basis: "Posted terms"
+      change: "baseline"
+      posted: "USD 65 per year plus applicable sales tax"
+      amount: 65
+      note: "Executive USD 130 per year."
+      source: "https://www.costco.com/join-costco.html"
+  agent: "claude"
+- id: dashpass-monthly-us
+  basket: core
+  offer: "DoorDash DashPass"
+  market: "United States"
+  profile: "New member, monthly billing, after any trial"
+  currency: "USD"
+  unit: "one month, before tax"
+  why: "Delivery memberships against rising per-order fees"
+  next_check: "2026-11-30"
+  observations: []
+  note: "First check 2026-11-27 failed: DoorDash's page refused the fetcher."
+  agent: "claude"
+- id: uber-one-monthly-us
+  basket: core
+  offer: "Uber One"
+  market: "United States"
+  profile: "New member, monthly billing, after any trial"
+  currency: "USD"
+  unit: "one month, before tax"
+  why: "Delivery memberships against rising per-order fees"
+  next_check: "2026-12-27"
+  observations:
+    - date: "2026-11-27"
+      basis: "Posted terms"
+      change: "baseline"
+      posted: "USD 9.99 per month"
+      first_payment: "4-week free trial for eligible first-time members"
+      included: "USD 0 delivery fee on orders above each store's minimum subtotal (not stated as a single figure)"
+      amount: 9.99
+      note: "Annual price not shown on this page."
+      source: "https://www.uber.com/us/en/u/uber-one/"
+  agent: "claude"
+- id: united-first-bag-domestic
+  basket: core
+  offer: "United Airlines first checked bag"
+  market: "U.S. domestic"
+  profile: "Economy (not Basic Economy), no status or co-branded card, one standard bag one way, prepaid at least 24 hours before departure"
+  currency: "USD"
+  unit: "one bag, one way"
+  why: "Bag fees raised with a fuel-cost explanation in April 2026; pairs with the JetBlue profiles"
+  next_check: "2026-12-27"
+  observations:
+    - date: "2026-11-27"
+      basis: "Posted terms, as reported"
+      change: "comparable"
+      posted: "USD 45 prepaid; USD 50 within 24 hours; second bag USD 55 / USD 60 (tickets bought from April 3, 2026)"
+      amount: 45
+      note: "United's page did not render for the fetcher. Raised by USD 10 with an explicit fuel-cost explanation."
+      source: "https://www.goodmorningamerica.com/travel/story/united-airlines-raises-checked-bag-fees-travelers-131687092"
+      primary_terms: "https://www.united.com/en/us/fly/travel/baggage/checked-bag-policy.html"
+    - date: "2026-04-02"
+      basis: "Prior schedule, reconstructed"
+      change: "baseline"
+      posted: "USD 35 prepaid; USD 40 within 24 hours"
+      amount: 35
+      note: "Schedule in force before the April 3, 2026 rise, as reported."
+      source: "https://www.nerdwallet.com/article/travel/united-airlines-bag-fees-how-they-work-and-how-to-avoid-them"
+  agent: "claude"
+- id: southwest-first-bag
+  basket: core
+  offer: "Southwest Airlines first checked bag"
+  market: "U.S. domestic"
+  profile: "Lowest fare that allows a paid bag, no status or co-branded card, one standard bag one way"
+  currency: "USD"
+  unit: "one bag, one way"
+  why: "Southwest ended free bags in 2025; follow what the new fee becomes"
+  next_check: "2026-11-30"
+  observations: []
+  note: "First check 2026-11-27 failed: Southwest's page refused the fetcher."
+  agent: "claude"
+- id: bofa-overdraft-fee
+  basket: core
+  offer: "Bank of America overdraft fee"
+  market: "United States"
+  profile: "Consumer checking account with overdraft coverage on, one overdraft item above any no-fee threshold"
+  currency: "USD"
+  unit: "one item"
+  why: "Bank junk fees under regulatory pressure; a fee that has been cut, not raised"
+  next_check: "2026-11-30"
+  observations: []
+  note: "First check 2026-11-27 failed: Bank of America's page refused the fetcher."
+  agent: "claude"
+- id: verizon-cheapest-unlimited-1line
+  basket: core
+  offer: "Verizon cheapest unlimited plan, one line"
+  market: "United States"
+  profile: "New customer, one line, cheapest unlimited plan on the plans page, with AutoPay; taxes and fees excluded"
+  currency: "USD"
+  unit: "one month, one line"
+  why: "Wireless prices quoted net of discounts and before fees (partitioned pricing)"
+  next_check: "2026-12-27"
+  observations:
+    - date: "2026-11-27"
+      basis: "Posted terms"
+      change: "baseline"
+      posted: "Simplicity Plan USD 30 per month for one line, after AutoPay and a USD 15 per month switch discount, plus taxes and fees"
+      amount: 30
+      note: "The headline depends on a switch discount for new customers; without the switch discount the figure would be USD 45 with AutoPay. Other unlimited plans shown without one-line prices."
+      source: "https://www.verizon.com/plans/unlimited/"
+  agent: "claude"
+- id: tmobile-cheapest-postpaid-1line
+  basket: core
+  offer: "T-Mobile cheapest postpaid plan, one line"
+  market: "United States"
+  profile: "New customer, one line, cheapest plan with no age, military or responder discount; taxes and fees excluded"
+  currency: "USD"
+  unit: "one month, one line"
+  why: "Wireless prices quoted net of discounts and before fees (partitioned pricing)"
+  next_check: "2026-12-27"
+  observations:
+    - date: "2026-11-27"
+      basis: "Posted terms"
+      change: "baseline"
+      posted: "T-Mix Saver USD 55 per month for one line"
+      amount: 55
+      note: "Page lists fees and taxes separately; AutoPay treatment of this figure not stated clearly. 55+ version USD 40."
+      source: "https://www.t-mobile.com/cell-phone-plans"
+  agent: "claude"
+- id: ofgem-cap-typical-dd
+  case_id: "uk-energy-cap-jan-2027"
+  basket: core
+  offer: "Ofgem default tariff cap, typical dual-fuel household"
+  market: "Great Britain"
+  profile: "Typical consumption (Ofgem's current typical domestic consumption values), gas and electricity, Direct Debit, national average"
+  currency: "GBP"
+  unit: "one year at typical use, including VAT as applied in the period"
+  why: "A regulated essential price set quarterly with a published cost breakdown: the cleanest series in the basket"
+  next_check: "2027-01-02"
+  observations:
+    - date: "2026-11-27"
+      basis: "Posted terms"
+      change: "baseline"
+      posted: "GBP 1,723 a year for October to December 2026 (up 4% from GBP 1,663 for July to September 2026)"
+      amount: 1723
+      note: "Ofgem announced GBP 2,166 for January to March 2027 on November 25, 2026 (up 26%); read in secondary sources only, Ofgem's own letter not opened. VAT on electricity removed October 2026 to March 2027. Earlier caps (GBP 1,758 Jan-Mar 2026, GBP 1,641 Apr-Jun 2026) may be on older consumption values: check before treating them as comparable."
+      source: "https://www.ofgem.gov.uk/sites/default/files/2026-08/Summary-of-changes-to-energy-price-cap-1-October-to-31-December-2026.pdf"
+      primary_terms: "https://www.ofgem.gov.uk/energy-price-cap"
+  agent: "claude"
+- id: mta-subway-base-fare
+  case_id: "mta-fare-toll-2027"
+  basket: core
+  offer: "New York City subway and local bus base fare"
+  market: "New York City"
+  profile: "Full-fare adult, one ride, pay-per-ride with OMNY or MetroCard"
+  currency: "USD"
+  unit: "one ride"
+  why: "A public price with a scheduled 2027 rise; who bears it depends on base fare vs caps"
+  next_check: "2026-12-27"
+  observations:
+    - date: "2026-11-27"
+      basis: "Posted terms"
+      change: "baseline"
+      posted: "USD 3 per ride; express bus USD 7.25"
+      amount: 3
+      note: "The fares page did not state the OMNY weekly cap; record it at the next check."
+      source: "https://www.mta.info/fares-tolls"
+  agent: "claude"
+- id: usps-forever-stamp
+  basket: core
+  offer: "USPS First-Class Forever stamp"
+  market: "United States"
+  profile: "One Forever stamp (one-ounce First-Class letter)"
+  currency: "USD"
+  unit: "one stamp"
+  why: "A regulated price raised every year since 2021 with cost explanations"
+  next_check: "2027-01-17"
+  observations:
+    - date: "2026-11-27"
+      basis: "Posted terms"
+      change: "comparable"
+      posted: "82 cents (from July 12, 2026)"
+      amount: 0.82
+      source: "https://store.usps.com/store/product/us-flag-2026-stamps-S_130104"
+    - date: "2025-07-13"
+      basis: "Prior schedule, reconstructed"
+      change: "comparable"
+      posted: "78 cents (from July 13, 2025)"
+      amount: 0.78
+      source: "https://www.nbcwashington.com/news/national-international/forever-stamp-price-increases78-cents-usps/3956016/"
+    - date: "2024-07-14"
+      basis: "Prior schedule, reconstructed"
+      change: "baseline"
+      posted: "73 cents (from July 14, 2024)"
+      amount: 0.73
+      source: "https://www.aarp.org/money/budgeting-saving/info-2023/postage-stamp-prices-rise-again"
+  agent: "claude"
+- id: royal-mail-first-class
+  basket: core
+  offer: "Royal Mail First Class stamp"
+  market: "United Kingdom"
+  profile: "One First Class stamp, standard letter"
+  currency: "GBP"
+  unit: "one stamp"
+  why: "A UK counterpart to the USPS stamp; Royal Mail raises it with explicit cost explanations"
+  next_check: "2026-11-30"
+  observations: []
+  note: "First check 2026-11-27 failed: Royal Mail's page refused the fetcher."
+  agent: "claude"
+- id: netflix-mobile-india
+  basket: core
+  offer: "Netflix Mobile plan"
+  market: "India"
+  profile: "One phone or tablet, 480p, monthly billing, bought directly (not through a telecom bundle)"
+  currency: "INR"
+  unit: "one month"
+  why: "A non-Western price level that was cut, not raised (December 2021); tests whether cuts are noticed"
+  next_check: "2026-12-27"
+  observations:
+    - date: "2026-11-27"
+      basis: "Posted terms, as reported"
+      change: "comparable"
+      posted: "Rs 149 per month"
+      amount: 149
+      note: "Netflix's India page not opened (the fetcher sees US prices). Basic Rs 199, Standard Rs 499, Premium Rs 649."
+      source: "https://www.bajajfinserv.in/netflix-subscription-plans"
+      primary_terms: "https://www.netflix.com/in/"
+    - date: "2021-12-14"
+      basis: "Prior schedule, reconstructed"
+      change: "baseline"
+      posted: "Cut from Rs 199 to Rs 149 per month"
+      amount: 149
+      note: "Price cut announced December 14, 2021 ('happy new prices'); the Rs 199 price ran from the plan's July 2019 launch."
+      source: "https://www.gsmarena.com/netflix_india_plans_new_price_happy_new_prices-news-52278.php"
+  agent: "claude"
+- id: jio-cheapest-28-day-prepaid
+  basket: core
+  offer: "Jio cheapest 28-day prepaid plan with daily data"
+  market: "India"
+  profile: "Prepaid, 28-day validity, cheapest plan with unlimited calls and at least 1 GB a day"
+  currency: "INR"
+  unit: "one 28-day recharge"
+  why: "Indian telecom prices moved together in 2024 and are expected to rise again; pairs with the Airtel entry"
+  next_check: "2026-11-30"
+  observations: []
+  note: "First check 2026-11-27 failed: Jio's plans page listed no plans to the fetcher."
+  agent: "claude"
+- id: slack-pro-annual
+  basket: core
+  offer: "Slack Pro"
+  market: "United States"
+  profile: "One user, annual billing, list price, no promotion"
+  currency: "USD"
+  unit: "one user per month, billed annually"
+  why: "B2B seat price; Slack's AI features are being moved onto metered credits"
+  next_check: "2026-12-27"
+  observations:
+    - date: "2026-11-27"
+      basis: "Posted terms"
+      change: "baseline"
+      posted: "USD 7.25 per user per month billed annually; USD 8.75 billed monthly (promotion: USD 4.38 for the first 3 months)"
+      amount: 7.25
+      note: "Business+ USD 15 annual, USD 18 monthly."
+      source: "https://slack.com/pricing"
+  agent: "claude"
+- id: m365-business-standard-us
+  basket: core
+  offer: "Microsoft 365 Business Standard (with Copilot)"
+  market: "United States"
+  profile: "One user, annual commitment paid yearly, with Teams, list price"
+  currency: "USD"
+  unit: "one user per month, annual commitment"
+  why: "B2B seat price now sold only bundled with Copilot plus usage billing; links to the 2027 Microsoft price changes"
+  next_check: "2026-12-27"
+  observations:
+    - date: "2026-11-27"
+      basis: "Posted terms"
+      change: "baseline"
+      posted: "USD 23.50 per user per month, paid yearly; usage-based billing for select advanced AI features"
+      amount: 23.5
+      note: "Listed only as 'with Copilot'. Without Teams USD 20.30. Business Basic USD 7.00; Business Premium with Copilot USD 32.00."
+      source: "https://www.microsoft.com/en-us/microsoft-365/business/compare-all-microsoft-365-business-products"
+  agent: "claude"
+- id: zoom-workplace-pro-us
+  case_id: "zoom-quiet-repricing-2026"
+  basket: core
+  offer: "Zoom Workplace Pro"
+  market: "United States"
+  profile: "One user, monthly billing, list price"
+  currency: "USD"
+  unit: "one user per month"
+  why: "B2B seat price; Zoom unbundled Scheduler from this plan in October 2026"
+  next_check: "2026-12-27"
+  observations:
+    - date: "2026-11-27"
+      basis: "Posted terms"
+      change: "baseline"
+      posted: "USD 16.99 per user per month billed monthly; USD 14.16 billed annually"
+      amount: 16.99
+      source: "https://zoom.us/pricing"
+  agent: "claude"

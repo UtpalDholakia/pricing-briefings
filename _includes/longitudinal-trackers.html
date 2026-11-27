@@ -10,7 +10,7 @@
         {% assign latest = history | first %}
         {% assign previous = history[1] %}
         <tr id="panel-{{ p.id | escape }}">
-          <th scope="row">{{ p.offer | escape }}<br><span class="muted">{{ p.market | escape }} · {{ p.profile | escape }}</span></th>
+          <th scope="row">{{ p.offer | escape }}{% if p.basket == "core" %} <span class="chip">core basket</span>{% endif %}<br><span class="muted">{{ p.market | escape }} · {{ p.profile | escape }}</span>{% if p.why %}<br><span class="small muted">Tests: {{ p.why | escape }}</span>{% endif %}{% if latest == nil and p.note %}<br><span class="small warn">{{ p.note | escape }}</span>{% endif %}</th>
           <td>{% if latest %}<time datetime="{{ latest.date | escape }}">{{ latest.date | escape }}</time> · <span class="chip">{{ latest.basis | escape }}</span><br>
             {% if latest.posted %}<strong>Posted:</strong> {{ latest.posted | escape }}<br>{% endif %}
             {% if latest.first_payment %}<strong>First payment:</strong> {{ latest.first_payment | escape }}<br>{% endif %}
