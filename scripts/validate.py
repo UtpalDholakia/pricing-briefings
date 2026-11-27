@@ -648,8 +648,8 @@ if decisions is not None:
             err(where, f"kind {kind!r} not in {sorted(DECISION_KINDS)}")
         elif d.get("ref") not in DECISION_KINDS[kind]:
             err(where, f"ref {d.get('ref')!r} does not resolve")
-        if d.get("recommendation") not in RECOMMENDATIONS:
-            err(where, f"recommendation {d.get('recommendation')!r} not in allowed values")
+        if d.get("recommendation") not in RECOMMENDATIONS and not (d.get("recommendation") is None and d.get("decided")):
+            err(where, f"recommendation {d.get('recommendation')!r} not in allowed values (null only for a decided item)")
         for k in ("note", "date", "agent"):
             if not d.get(k):
                 err(where, f"missing {k}")
