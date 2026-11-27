@@ -1,0 +1,797 @@
+# Earnings pricing watch: the companies whose earnings calls are read for pricing. AGENTS.md section 15.
+# tier 1 = read every quarter; tier 2 = read when time allows, and always when the company makes pricing news.
+# metric = the label the company usually uses for its price effect. It is a hint for where to look:
+#   always record the label the company actually used that quarter, in earnings_pricing.yml.
+# firm_id links to _data/firms.yml where the firm is already registered.
+# Only Utpal adds or removes companies; agents may suggest additions in their briefings.
+
+# ---------------------------------------------------------------- Packaged consumer goods
+- company: 'Procter & Gamble'
+  ticker: PG
+  country: United States
+  sector: Consumer staples
+  tier: 1
+  metric: 'pricing contribution to organic sales'
+  why: 'Breaks organic growth into volume, pricing and mix every quarter; the benchmark for price-led growth.'
+- company: 'PepsiCo'
+  ticker: PEP
+  country: United States
+  sector: Consumer staples
+  tier: 1
+  metric: 'effective net pricing'
+  why: 'Snack price fatigue and falling volumes make it a test of elasticity at the shelf.'
+- company: 'Coca-Cola'
+  ticker: KO
+  country: United States
+  sector: Consumer staples
+  tier: 1
+  metric: 'price, product and geographic mix'
+  why: 'Global pricing power, including inflationary emerging markets.'
+- company: 'Unilever'
+  ticker: ULVR
+  country: United Kingdom
+  sector: Consumer staples
+  tier: 1
+  metric: 'underlying price growth (UPG) and underlying volume growth (UVG)'
+  why: 'Reports price and volume separately by region, including India and other emerging markets.'
+- company: 'Nestlé'
+  ticker: NESN
+  country: Switzerland
+  sector: Consumer staples
+  tier: 1
+  metric: 'pricing and real internal growth (RIG)'
+  why: 'Coffee and cocoa cost pass-through; separates pricing from volume.'
+- company: 'Mondelez International'
+  ticker: MDLZ
+  country: United States
+  sector: Consumer staples
+  tier: 1
+  metric: 'price/mix and vol/mix'
+  why: 'Cocoa-driven chocolate pricing and elasticity; ties to the cocoa reference-price question.'
+- company: 'Hershey'
+  ticker: HSY
+  country: United States
+  sector: Consumer staples
+  tier: 1
+  firm_id: hershey
+  metric: 'price realization and volume/mix'
+  why: 'Already a registered firm (Kisses downsizing); cocoa pass-through and pack-price architecture.'
+- company: 'Colgate-Palmolive'
+  ticker: CL
+  country: United States
+  sector: Consumer staples
+  tier: 2
+  metric: 'net selling prices'
+  why: 'Steady pricer in emerging markets; reports price and volume by division.'
+- company: 'Kimberly-Clark'
+  ticker: KMB
+  country: United States
+  sector: Consumer staples
+  tier: 2
+  metric: 'price and volume contribution to organic sales'
+  why: 'Diapers and tissue, where shrinkflation and count reductions are common.'
+- company: 'General Mills'
+  ticker: GIS
+  country: United States
+  sector: Consumer staples
+  tier: 1
+  metric: 'price/mix and pound volume'
+  why: 'Has said it is reinvesting in lower prices; off-calendar fiscal year gives a December data point.'
+- company: 'Kraft Heinz'
+  ticker: KHC
+  country: United States
+  sector: Consumer staples
+  tier: 2
+  metric: 'price and volume/mix'
+  why: 'Price-led growth with falling volume; check current corporate structure before filing.'
+- company: 'Conagra Brands'
+  ticker: CAG
+  country: United States
+  sector: Consumer staples
+  tier: 2
+  metric: 'price/mix and volume'
+  why: 'Frozen and shelf-stable food; tariff and steel-can cost pass-through.'
+- company: 'J.M. Smucker'
+  ticker: SJM
+  country: United States
+  sector: Consumer staples
+  tier: 2
+  metric: 'net price realization'
+  why: 'Coffee price pass-through at record green-coffee costs.'
+- company: 'Clorox'
+  ticker: CLX
+  country: United States
+  sector: Consumer staples
+  tier: 2
+  metric: 'price/mix and volume'
+  why: 'Household products; promotion and price-pack moves.'
+- company: 'Church & Dwight'
+  ticker: CHD
+  country: United States
+  sector: Consumer staples
+  tier: 2
+  metric: 'price/mix and volume'
+  why: 'Value brands; tests whether value positioning gains share when others raise prices.'
+- company: 'Estée Lauder'
+  ticker: EL
+  country: United States
+  sector: Consumer staples
+  tier: 2
+  metric: 'pricing commentary (no standard split)'
+  why: 'Prestige beauty pricing and China travel retail.'
+- company: 'L''Oréal'
+  ticker: OR
+  country: France
+  sector: Consumer staples
+  tier: 2
+  metric: 'like-for-like growth with price/mix commentary'
+  why: 'Beauty pricing power across mass and luxury.'
+- company: 'Reckitt'
+  ticker: RKT
+  country: United Kingdom
+  sector: Consumer staples
+  tier: 2
+  metric: 'price/mix and volume'
+  why: 'Health and hygiene brands; UK reference for pack-price moves.'
+- company: 'Danone'
+  ticker: BN
+  country: France
+  sector: Consumer staples
+  tier: 2
+  metric: 'price/mix and volume'
+  why: 'Dairy and infant formula, where price fairness is sensitive.'
+
+# ---------------------------------------------------------------- Grocery, mass and discount retail
+- company: 'Walmart'
+  ticker: WMT
+  country: United States
+  sector: Retail
+  tier: 1
+  metric: 'grocery inflation and average ticket vs transactions'
+  why: 'Talks openly about tariff pass-through, rollbacks and price gaps to competitors.'
+- company: 'Target'
+  ticker: TGT
+  country: United States
+  sector: Retail
+  tier: 1
+  metric: 'average ticket vs traffic'
+  why: 'Has cut prices on thousands of items to win back traffic; a test of lower list prices.'
+- company: 'Costco'
+  ticker: COST
+  country: United States
+  sector: Retail
+  tier: 1
+  metric: 'membership fee income and core-on-core margins'
+  why: 'Membership fee changes and its stated practice of holding prices down when costs rise.'
+- company: 'Kroger'
+  ticker: KR
+  country: United States
+  sector: Retail
+  tier: 2
+  metric: 'identical sales and price investment'
+  why: 'Grocery price investment and loyalty-program personalised pricing.'
+- company: 'Dollar General'
+  ticker: DG
+  country: United States
+  sector: Retail
+  tier: 1
+  metric: 'average ticket vs traffic'
+  why: 'Low-income shoppers; the earliest place pricing pressure shows up as trade-down.'
+- company: 'Dollar Tree'
+  ticker: DLTR
+  country: United States
+  sector: Retail
+  tier: 1
+  metric: 'average ticket and multi-price rollout'
+  why: 'Moving off a single price point; a live test of breaking a price anchor.'
+- company: 'Amazon'
+  ticker: AMZN
+  country: United States
+  sector: Retail
+  tier: 1
+  metric: 'Prime and third-party seller fee commentary'
+  why: 'Seller fees, Prime pricing and tariff pass-through by marketplace sellers.'
+- company: 'Home Depot'
+  ticker: HD
+  country: United States
+  sector: Retail
+  tier: 2
+  metric: 'average ticket vs transactions'
+  why: 'Tariff pass-through on imported goods.'
+- company: 'Ahold Delhaize'
+  ticker: AD
+  country: Netherlands
+  sector: Retail
+  tier: 2
+  metric: 'comparable sales with price-investment commentary'
+  why: 'US and European grocery; price investment against discounters.'
+- company: 'Tesco'
+  ticker: TSCO
+  country: United Kingdom
+  sector: Retail
+  tier: 2
+  metric: 'like-for-like sales and Clubcard Prices commentary'
+  why: 'Loyalty-only prices, which UK regulators have examined.'
+
+# ---------------------------------------------------------------- Restaurants
+- company: 'McDonald''s'
+  ticker: MCD
+  country: United States
+  sector: Restaurants
+  tier: 1
+  metric: 'average check vs guest counts in comparable sales'
+  why: 'Value menus and the affordability debate; reports check and traffic.'
+- company: 'Chipotle'
+  ticker: CMG
+  country: United States
+  sector: Restaurants
+  tier: 1
+  metric: 'average check and transactions; menu price increase percentage'
+  why: 'States its menu price increases in percent and their cost reasons.'
+- company: 'Starbucks'
+  ticker: SBUX
+  country: United States
+  sector: Restaurants
+  tier: 1
+  metric: 'average ticket and comparable transactions'
+  why: 'Coffee costs and its turnaround away from price-led growth.'
+- company: 'Yum! Brands'
+  ticker: YUM
+  country: United States
+  sector: Restaurants
+  tier: 2
+  metric: 'same-store sales with value and pricing commentary'
+  why: 'Taco Bell and KFC value tiers.'
+- company: 'Restaurant Brands International'
+  ticker: QSR
+  country: Canada
+  sector: Restaurants
+  tier: 2
+  metric: 'comparable sales with pricing commentary'
+  why: 'Burger King value strategy.'
+- company: 'Domino''s'
+  ticker: DPZ
+  country: United States
+  sector: Restaurants
+  tier: 2
+  metric: 'same-store sales and order counts'
+  why: 'Delivery fees and national price promotions.'
+- company: 'Wendy''s'
+  ticker: WEN
+  country: United States
+  sector: Restaurants
+  tier: 2
+  metric: 'same-restaurant sales with pricing commentary'
+  why: 'Already in the evidence file for the 2024 dynamic-pricing reversal.'
+- company: 'Darden Restaurants'
+  ticker: DRI
+  country: United States
+  sector: Restaurants
+  tier: 2
+  metric: 'pricing percentage vs inflation'
+  why: 'Says it prices below inflation on purpose; off-calendar fiscal year.'
+
+# ---------------------------------------------------------------- Apparel, footwear, luxury
+- company: 'Nike'
+  ticker: NKE
+  country: United States
+  sector: Apparel and luxury
+  tier: 1
+  metric: 'pricing and discount commentary; gross margin drivers'
+  why: 'Tariff-driven price rises and less discounting; off-calendar fiscal year.'
+- company: 'Fast Retailing (Uniqlo)'
+  ticker: "9983"
+  country: Japan
+  sector: Apparel and luxury
+  tier: 1
+  metric: 'pricing commentary (no standard split)'
+  why: 'Already in the backlash tracker (sock price reversal); pricing in Japan as inflation returns.'
+- company: 'LVMH'
+  ticker: MC
+  country: France
+  sector: Apparel and luxury
+  tier: 1
+  metric: 'organic growth with price commentary'
+  why: 'Luxury price rises against falling volumes: the limits of pricing power.'
+- company: 'Hermès'
+  ticker: RMS
+  country: France
+  sector: Apparel and luxury
+  tier: 2
+  metric: 'price increase percentage for the coming year'
+  why: 'Announces its annual price increase; a clean benchmark.'
+- company: 'Lululemon'
+  ticker: LULU
+  country: United States
+  sector: Apparel and luxury
+  tier: 2
+  metric: 'pricing and markdown commentary'
+  why: 'Tariff pass-through and markdowns.'
+
+# ---------------------------------------------------------------- Autos
+- company: 'General Motors'
+  ticker: GM
+  country: United States
+  sector: Autos
+  tier: 1
+  metric: 'pricing contribution to EBIT-adjusted'
+  why: 'Reports the dollar effect of pricing; tariff pass-through on vehicles.'
+- company: 'Ford'
+  ticker: F
+  country: United States
+  sector: Autos
+  tier: 1
+  metric: 'net pricing contribution'
+  why: 'Reports net pricing and the cost of incentives.'
+- company: 'Tesla'
+  ticker: TSLA
+  country: United States
+  sector: Autos
+  tier: 2
+  metric: 'average selling price commentary'
+  why: 'The most aggressive price cutter among automakers.'
+- company: 'Toyota'
+  ticker: "7203"
+  country: Japan
+  sector: Autos
+  tier: 2
+  metric: 'price-increase effect in operating income bridge'
+  why: 'Reports price effects in its profit bridge; Japanese pricing behaviour.'
+
+# ---------------------------------------------------------------- Airlines, travel, hospitality
+- company: 'Delta Air Lines'
+  ticker: DAL
+  country: United States
+  sector: Travel
+  tier: 1
+  metric: 'TRASM, yield and premium revenue'
+  why: 'Premium segmentation and its comments on AI-assisted fare setting.'
+- company: 'United Airlines'
+  ticker: UAL
+  country: United States
+  sector: Travel
+  tier: 1
+  metric: 'TRASM and ancillary revenue'
+  why: 'Basket profile for bag fees; raised bag fees with a fuel explanation in 2026.'
+- company: 'American Airlines'
+  ticker: AAL
+  country: United States
+  sector: Travel
+  tier: 2
+  metric: 'TRASM and yield'
+  why: 'Basic economy fences and bag fee changes.'
+- company: 'Southwest Airlines'
+  ticker: LUV
+  country: United States
+  sector: Travel
+  tier: 1
+  metric: 'RASM and ancillary revenue from bag fees and seats'
+  why: 'Ended free bags and open seating; reports what the new fees bring in.'
+- company: 'Ryanair'
+  ticker: RYA
+  country: Ireland
+  sector: Travel
+  tier: 2
+  metric: 'average fare and ancillary revenue per passenger'
+  why: 'Already in the hidden-increases tracker; the purest ancillary-revenue model.'
+- company: 'Marriott International'
+  ticker: MAR
+  country: United States
+  sector: Travel
+  tier: 2
+  metric: 'RevPAR and ADR'
+  why: 'Room rates and fee disclosure under all-in pricing rules.'
+- company: 'Hilton'
+  ticker: HLT
+  country: United States
+  sector: Travel
+  tier: 2
+  metric: 'RevPAR and ADR'
+  why: 'Room rates and fee disclosure under all-in pricing rules.'
+- company: 'Booking Holdings'
+  ticker: BKNG
+  country: United States
+  sector: Travel
+  tier: 2
+  metric: 'room nights and ADR'
+  why: 'Platform-wide price display and drip-pricing rules in Europe and the US.'
+- company: 'Airbnb'
+  ticker: ABNB
+  country: United States
+  sector: Travel
+  tier: 1
+  metric: 'ADR and fee-structure commentary'
+  why: 'Moving toward total-price display and host-only fees; a live all-in pricing case.'
+- company: 'Royal Caribbean'
+  ticker: RCL
+  country: United States
+  sector: Travel
+  tier: 2
+  metric: 'net yields'
+  why: 'Onboard pricing and prepaid add-ons.'
+
+# ---------------------------------------------------------------- Streaming, media, gaming, live events
+- company: 'Netflix'
+  ticker: NFLX
+  country: United States
+  sector: Media and entertainment
+  tier: 1
+  metric: 'average revenue per membership (ARM) and price changes by region'
+  why: 'Basket profiles in the US and India; says how price rises affect churn.'
+- company: 'Walt Disney'
+  ticker: DIS
+  country: United States
+  sector: Media and entertainment
+  tier: 1
+  metric: 'average monthly revenue per paid subscriber; parks per-capita spending'
+  why: 'Annual Disney+ rises and theme-park pricing, both recurring backlash topics.'
+- company: 'Spotify'
+  ticker: SPOT
+  country: Sweden
+  sector: Media and entertainment
+  tier: 1
+  metric: 'premium ARPU and price-rise commentary'
+  why: 'Basket profile; reports churn after price rises by market.'
+- company: 'Warner Bros. Discovery'
+  ticker: WBD
+  country: United States
+  sector: Media and entertainment
+  tier: 2
+  metric: 'streaming ARPU'
+  why: 'HBO Max pricing and password-sharing fees; check corporate structure before filing.'
+- company: 'Roku'
+  ticker: ROKU
+  country: United States
+  sector: Media and entertainment
+  tier: 2
+  metric: 'platform ARPU'
+  why: 'Advertising-funded TV; the price of free.'
+- company: 'Live Nation Entertainment'
+  ticker: LYV
+  country: United States
+  sector: Media and entertainment
+  tier: 1
+  metric: 'ticketing fee and deferred revenue commentary'
+  why: 'Ticketmaster is a registered firm; all-in pricing rules and fee regulation.'
+- company: 'Sony Group'
+  ticker: "6758"
+  country: Japan
+  sector: Media and entertainment
+  tier: 2
+  metric: 'game and network services pricing commentary'
+  why: 'Already in the backlash tracker (PlayStation Store); console price rises.'
+- company: 'Nintendo'
+  ticker: "7974"
+  country: Japan
+  sector: Media and entertainment
+  tier: 2
+  metric: 'hardware and software pricing commentary'
+  why: 'Switch 2 and game price points.'
+- company: 'Take-Two Interactive'
+  ticker: TTWO
+  country: United States
+  sector: Media and entertainment
+  tier: 2
+  metric: 'pricing commentary for new releases'
+  why: 'Price point of the biggest game launches, a test of the USD 70-80 anchor.'
+
+# ---------------------------------------------------------------- Telecom
+- company: 'Verizon'
+  ticker: VZ
+  country: United States
+  sector: Telecom
+  tier: 1
+  metric: 'ARPA and postpaid phone churn'
+  why: 'Basket profile; price locks, fee increases and churn after them.'
+- company: 'AT&T'
+  ticker: T
+  country: United States
+  sector: Telecom
+  tier: 2
+  metric: 'postpaid phone ARPU'
+  why: 'Fee increases on legacy plans.'
+- company: 'T-Mobile US'
+  ticker: TMUS
+  country: United States
+  sector: Telecom
+  tier: 1
+  metric: 'postpaid ARPA and churn'
+  why: 'Basket profile; price rises on plans sold with price-lock promises.'
+- company: 'Comcast'
+  ticker: CMCSA
+  country: United States
+  sector: Telecom
+  tier: 2
+  metric: 'broadband ARPU and price-guarantee commentary'
+  why: 'Moved to multi-year price guarantees to fight churn.'
+- company: 'Bharti Airtel'
+  ticker: BHARTIARTL
+  country: India
+  sector: Telecom
+  tier: 1
+  metric: 'ARPU'
+  why: 'Indian tariff rises move together; already in the hidden-increases tracker.'
+- company: 'Reliance Industries (Jio Platforms)'
+  ticker: RELIANCE
+  country: India
+  sector: Telecom
+  tier: 1
+  metric: 'Jio ARPU'
+  why: 'Basket profile; India''s price leader in mobile data.'
+
+# ---------------------------------------------------------------- Software and AI
+- company: 'Microsoft'
+  ticker: MSFT
+  country: United States
+  sector: Software and AI
+  tier: 1
+  firm_id: microsoft
+  metric: 'ARPU in Microsoft 365, Copilot seats and pricing commentary'
+  why: 'Registered firm; consumer and business price rises tied to Copilot bundling and metered credits.'
+- company: 'Alphabet'
+  ticker: GOOGL
+  country: United States
+  sector: Software and AI
+  tier: 1
+  firm_id: google
+  metric: 'subscriptions revenue and paid-subscriber commentary'
+  why: 'Registered firm; Google One AI tiers and YouTube Premium price rises.'
+- company: 'Meta Platforms'
+  ticker: META
+  country: United States
+  sector: Software and AI
+  tier: 2
+  metric: 'average price per ad and ad impressions'
+  why: 'Ad price per impression, plus Meta One and other paid tiers.'
+- company: 'Adobe'
+  ticker: ADBE
+  country: United States
+  sector: Software and AI
+  tier: 1
+  metric: 'ARR, ARPU and pricing-action commentary'
+  why: 'Basket profile; AI-credit bundling and plan restructuring; off-calendar fiscal year.'
+- company: 'Salesforce'
+  ticker: CRM
+  country: United States
+  sector: Software and AI
+  tier: 1
+  firm_id: salesforce
+  metric: 'pricing actions, Agentforce and Flex Credit commentary'
+  why: 'Registered firm; seat-to-credits migration and list price rises.'
+- company: 'ServiceNow'
+  ticker: NOW
+  country: United States
+  sector: Software and AI
+  tier: 2
+  metric: 'pricing commentary (Pro Plus, AI SKUs)'
+  why: 'AI add-on pricing for enterprises.'
+- company: 'Atlassian'
+  ticker: TEAM
+  country: Australia
+  sector: Software and AI
+  tier: 2
+  metric: 'pricing actions and usage-based billing commentary'
+  why: 'Already in the B2B tracker (usage billing from December 2026).'
+- company: 'Zoom Communications'
+  ticker: ZM
+  country: United States
+  sector: Software and AI
+  tier: 2
+  metric: 'ARPU and pricing commentary'
+  why: 'Basket profile; quiet unbundling of features from plans.'
+- company: 'Intuit'
+  ticker: INTU
+  country: United States
+  sector: Software and AI
+  tier: 2
+  metric: 'pricing and mix commentary'
+  why: 'TurboTax and QuickBooks price increases, often criticised.'
+- company: 'Oracle'
+  ticker: ORCL
+  country: United States
+  sector: Software and AI
+  tier: 2
+  metric: 'licence and cloud pricing commentary'
+  why: 'Already in the B2B tracker (Java per-employee pricing).'
+- company: 'Snowflake'
+  ticker: SNOW
+  country: United States
+  sector: Software and AI
+  tier: 2
+  metric: 'product revenue and consumption commentary'
+  why: 'Pure consumption pricing; how usage-based revenue responds to price changes.'
+
+# ---------------------------------------------------------------- Platforms, delivery and payments
+- company: 'Uber Technologies'
+  ticker: UBER
+  country: United States
+  sector: Platforms and payments
+  tier: 1
+  metric: 'take rate and Uber One membership commentary'
+  why: 'Basket profile; surge pricing, fees and membership.'
+- company: 'DoorDash'
+  ticker: DASH
+  country: United States
+  sector: Platforms and payments
+  tier: 1
+  metric: 'net revenue margin and DashPass commentary'
+  why: 'Basket profile; fee structure and membership.'
+- company: 'Maplebear (Instacart)'
+  ticker: CART
+  country: United States
+  sector: Platforms and payments
+  tier: 1
+  metric: 'transaction and advertising take rates'
+  why: 'Already in the evidence file (item price tests ended in 2025).'
+- company: 'Visa'
+  ticker: V
+  country: United States
+  sector: Platforms and payments
+  tier: 2
+  metric: 'pricing contribution to net revenue'
+  why: 'Card fees passed to merchants and then to shoppers as surcharges.'
+- company: 'Mastercard'
+  ticker: MA
+  country: United States
+  sector: Platforms and payments
+  tier: 2
+  metric: 'pricing contribution to net revenue'
+  why: 'Same as Visa; surcharge rules.'
+
+# ---------------------------------------------------------------- Health, insurance and housing
+- company: 'Eli Lilly'
+  ticker: LLY
+  country: United States
+  sector: Health and insurance
+  tier: 1
+  metric: 'price vs volume contribution to revenue'
+  why: 'Reports price and volume effects separately; GLP-1 list and cash-price cuts.'
+- company: 'Novo Nordisk'
+  ticker: NOVO-B
+  country: Denmark
+  sector: Health and insurance
+  tier: 1
+  metric: 'price and volume commentary on GLP-1 drugs'
+  why: 'Cash-pay price cuts and government price deals for GLP-1 drugs.'
+- company: 'Pfizer'
+  ticker: PFE
+  country: United States
+  sector: Health and insurance
+  tier: 2
+  metric: 'price vs volume contribution to revenue'
+  why: 'Reports price effects; government drug-price agreements.'
+- company: 'UnitedHealth Group'
+  ticker: UNH
+  country: United States
+  sector: Health and insurance
+  tier: 2
+  metric: 'premium pricing commentary'
+  why: 'Health insurance premium setting, including ACA plans in the essentials tracker.'
+- company: 'Progressive'
+  ticker: PGR
+  country: United States
+  sector: Health and insurance
+  tier: 1
+  metric: 'rate changes and policies in force (reports monthly)'
+  why: 'Auto insurance rate cuts and rises with policy counts; a rare monthly elasticity signal.'
+- company: 'Allstate'
+  ticker: ALL
+  country: United States
+  sector: Health and insurance
+  tier: 2
+  metric: 'implemented rate changes'
+  why: 'Reports approved rate increases by state.'
+- company: 'Invitation Homes'
+  ticker: INVH
+  country: United States
+  sector: Housing
+  tier: 2
+  metric: 'blended rent growth (new leases vs renewals)'
+  why: 'Single-family rent pricing and renewal increases; the essentials tracker has no housing entries yet.'
+- company: 'AvalonBay Communities'
+  ticker: AVB
+  country: United States
+  sector: Housing
+  tier: 2
+  metric: 'lease rate growth (new vs renewal)'
+  why: 'Apartment rents and the algorithmic rent-setting debate.'
+
+# ---------------------------------------------------------------- Outside the US, UK and EU
+- company: 'Hindustan Unilever'
+  ticker: HINDUNILVR
+  country: India
+  sector: Consumer staples
+  tier: 1
+  metric: 'underlying volume growth and price growth'
+  why: 'Grammage cuts at fixed price points (Rs 5, Rs 10 packs); feeds the non-Western tracker.'
+- company: 'Nestlé India'
+  ticker: NESTLEIND
+  country: India
+  sector: Consumer staples
+  tier: 2
+  metric: 'pricing and volume commentary'
+  why: 'Maggi and coffee pricing at magic price points.'
+- company: 'Eternal (Zomato)'
+  ticker: ETERNAL
+  country: India
+  sector: Platforms and payments
+  tier: 1
+  metric: 'take rate and platform-fee commentary'
+  why: 'Already in the hidden-increases tracker (per-order platform fee rises).'
+- company: 'Swiggy'
+  ticker: SWIGGY
+  country: India
+  sector: Platforms and payments
+  tier: 2
+  metric: 'take rate and platform-fee commentary'
+  why: 'Matches Zomato''s fee moves within days; a price-leadership test.'
+- company: 'Walmart de México (Walmex)'
+  ticker: WALMEX
+  country: Mexico
+  sector: Retail
+  tier: 2
+  metric: 'same-store sales with average ticket vs traffic'
+  why: 'Everyday low price in a higher-inflation market.'
+- company: 'FEMSA'
+  ticker: FEMSA
+  country: Mexico
+  sector: Retail
+  tier: 2
+  metric: 'OXXO same-store sales, ticket vs traffic'
+  why: 'Convenience-store pricing across Latin America.'
+- company: 'Ambev'
+  ticker: ABEV3
+  country: Brazil
+  sector: Consumer staples
+  tier: 2
+  metric: 'net revenue per hectolitre'
+  why: 'Beer pricing against inflation in Brazil and Argentina.'
+- company: 'MercadoLibre'
+  ticker: MELI
+  country: Argentina
+  sector: Platforms and payments
+  tier: 2
+  metric: 'take rate and shipping subsidy commentary'
+  why: 'Free-shipping thresholds and seller fees in Latin America.'
+- company: 'Shoprite Holdings'
+  ticker: SHP
+  country: South Africa
+  sector: Retail
+  tier: 2
+  metric: 'internal food inflation vs CPI'
+  why: 'States its own food inflation against official CPI; a clean gap measure.'
+- company: 'Alibaba Group'
+  ticker: BABA
+  country: China
+  sector: Platforms and payments
+  tier: 2
+  metric: 'customer management revenue and take-rate commentary'
+  why: 'Merchant fees and price wars in Chinese e-commerce.'
+- company: 'PDD Holdings'
+  ticker: PDD
+  country: China
+  sector: Platforms and payments
+  tier: 2
+  metric: 'merchant-support and fee commentary'
+  why: 'Temu de minimis and tariff pass-through to US shoppers.'
+- company: 'Meituan'
+  ticker: "3690"
+  country: China
+  sector: Platforms and payments
+  tier: 2
+  metric: 'food-delivery subsidy and take-rate commentary'
+  why: 'Subsidy price war in food delivery with JD and Alibaba.'
+- company: 'Sea Limited (Shopee)'
+  ticker: SE
+  country: Singapore
+  sector: Platforms and payments
+  tier: 2
+  metric: 'take rate and seller-fee commentary'
+  why: 'Already in the non-Western tracker (Shopee fee changes).'
+- company: 'Coupang'
+  ticker: CPNG
+  country: South Korea
+  sector: Retail
+  tier: 2
+  metric: 'membership fee and pricing commentary'
+  why: 'Rocket WOW membership fee rise in Korea; a membership-pricing comparison with Prime.'
