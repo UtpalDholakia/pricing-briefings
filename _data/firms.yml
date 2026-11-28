@@ -28,6 +28,7 @@
   - chatgpt-wallet-2026
   - openai-shared-allowance-2026
   - openai-gpt-6-2-speed-tiers-2026
+  - openai-gpt56-sol-promo-2026
   - openai-gpt-6-2-billing-fix-2026
   aliases:
   - OpenAI
@@ -82,6 +83,7 @@
   - salesforce-agentforce-coworker-2027
   - slack-slackbot-cap-2026
   - salesforce-core-first-5000-2026
+  - salesforce-cyber-week-ai-2026
   aliases:
   - Salesforce
   - Slack (Salesforce)

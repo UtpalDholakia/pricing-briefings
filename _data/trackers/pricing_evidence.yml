@@ -1,4 +1,38 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: li-warren-tip-amounts-2026
+  date: '2026'
+  case_id: li-warren-tip-amounts-2026
+  mechanism: 'Showing tip suggestions as dollar amounts beside percentages makes the size of the tip concrete and lowers the effort of choosing one; the shift persisted after amounts were removed, consistent with a new habit or norm'
+  mechanism_codes: [social-norms, context-effects]
+  comparison: 'Tip screen showing percentages only, then percentages with dollar amounts, then percentages only again'
+  design: Natural experiment (ABA reversal) on transaction-level point-of-sale data; research note
+  setting: One counter-service restaurant in a Nordic country with no counter-service tipping norm and low default suggestions (e.g. 5%); 5,169 card transactions over nine months
+  outcome: Share of transactions with a tip and average tip (actual behaviour)
+  result_kind: Positive
+  result: 'Adding amounts raised both the likelihood of tipping and the average tip; one summary gives the share tipping as 17.6%, then 39.6%, then 32.2% after the screen reverted, so most of the gain persisted'
+  boundary: 'One venue, one market without a tipping norm, no control venue; the persistence could reflect time trends or a changing clientele. The 17.6/39.6/32.2 figures come from a secondary summary, not the paper'
+  source: https://www.sciencedirect.com/science/article/pii/S0278431926001271
+  related_source: https://www.researchgate.net/publication/403983686_When_percentages_meet_amounts_Evidence_from_a_natural_experiment_on_digital_tipping_prompts
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Abstract-level reading only (Qingyi Li and Nathan Warren, International Journal of Hospitality Management, 2026; article number given as 104680 in most listings, 104706 in one). Exact online date not read.'
+  digest: '2026-11-28'
+  agent: claude
+- id: quan-ddpd-field-2026
+  date: '2026'
+  case_id: quan-ddpd-field-2026
+  mechanism: 'Data-driven price discrimination: a platform with more data on a shopper can price closer to that shopper''s willingness to pay, which shoppers judge unfair when they learn of it'
+  mechanism_codes: [personalization-fairness]
+  comparison: 'Customers on whom the platform holds more versus less data; and platform pricing before versus after China''s 2020 rule banning data-driven price discrimination'
+  design: Field experiment with a leading Chinese e-retail platform, plus a natural experiment around the 2020 regulation
+  setting: Chinese e-commerce platform
+  outcome: Level of price discrimination faced by customers; platform compliance after the ban
+  result_kind: Positive
+  result: 'Customers on whom the platform held more data faced a higher level of price discrimination. Compliance results after the 2020 ban were not read'
+  boundary: 'One platform in one country; effect sizes, sample sizes and the compliance findings not read. Measures what customers were charged, not how they perceived it'
+  source: https://journals.sagepub.com/doi/10.1177/10591478251408177
+  related_source: https://doi.org/10.1177/10591478251408177
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Abstract-level reading only (Quan, Zheng, Wang and Hu, Production and Operations Management, online 2025/2026; listings disagree on the year).'
+  digest: '2026-11-28'
+  agent: claude
 - id: "bigeye-prebiotic-listing-prices-2026"
   date: "2026-11-12"
   mechanism: "Benefit claims may change comparison sets; not causally tested."

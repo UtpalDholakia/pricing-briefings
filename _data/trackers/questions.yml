@@ -1,5 +1,14 @@
 # Tracker: questions. Open research questions with status and priority.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- date: '2026-11-28'
+  question_id: extended-temporary-surcharge-becomes-price-2026
+  question: 'When a "temporary" surcharge is extended again and again, at what point do buyers stop treating it as temporary and fold it into their reference price?'
+  context: 'Grab''s Singapore S$0.90 fuel surcharge, introduced Apr 7, 2026 and extended to Jul 31 and then Sep 30 (Meta AI reports a further extension to Feb 28, 2027, not confirmed by Claude); suggested by Meta AI, 2026-11-27'
+  digest: '2026-11-27'
+  agent: meta
+  status: Open
+  priority: Medium
+  answered_by: null
 - date: '2026-11-26'
   question_id: sticker-vs-net-tuition-2026
   question: 'When sticker tuition rises while the net price students pay falls in real terms, which number do families use as the reference price when deciding whether and where to apply?'

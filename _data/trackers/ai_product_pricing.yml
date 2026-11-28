@@ -1,5 +1,19 @@
 # Tracker: ai_product_pricing. How AI products themselves are priced.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: openai-gpt56-sol-promo-2026
+  mechanism_codes: [reference-price, scarcity-urgency]
+  date: '2026-11'
+  kind: AI product pricing
+  title: OpenAI extends GPT-5.6 Sol's promotional API price to Nov 30 without publishing what it costs afterwards
+  who: OpenAI (GPT-5.6 Sol API)
+  finding: 'GPT-5.6 Sol is listed at a promotional $4 per million input tokens and $20 per million output tokens, against $5/$30 before the promotion. The promotion was first stated as lasting at least to Nov 21, 2026 and now runs to Nov 30. As read, the model page gives no post-promotion price; one cost-tracking project''s code change notes that calls after Nov 21 would otherwise have gone unpriced'
+  source: https://developers.openai.com/api/docs/models/gpt-5.6-sol
+  related_source: https://github.com/honeybee-studio/honeybeepf-llm/pull/199
+  digest: '2026-11-28'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Promotional rate and end dates consistent across the model page''s search text, an OpenAI developer-forum post and the GitHub pull request; the date the extension was announced was not found, so no price_changes.yml entry is logged. Read the model page at the Dec 1 snapshot.'
+  last_checked: '2026-11-28'
+  follow_up_date: '2026-12-01'
 - case_id: xai-grok-bot-limits-2026
   mechanism_codes: [usage-anxiety, dual-entitlement, price-change-communication]
   date: '2026-11-01'

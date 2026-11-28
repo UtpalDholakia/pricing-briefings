@@ -41,6 +41,30 @@
     new_status: Graduated
     reason: 'Graduated into claim labour-cost-explanation-rated-fairer-online on the Goenka & Bagchi MSI working paper (ChatGPT audit of 3456647 (2026-11-18)). Narrow wording: stated fairness in online experiments only.'
     source: null
+- hypothesis_id: matched-price-deals-sell-like-lows
+  hypothesis: Shoppers buy a Black Friday deal at the same rate whether its price is the year's lowest or only matches an earlier price, because few check price history and the "was" price does the work.
+  predicts: Sell-through of matched-price deals is statistically indistinguishable from that of genuine year-low deals in the same category and retailer.
+  test: 'Compare unit sales (or sales rank changes) of matched-price versus genuine-low products in a price-history audit sample such as Which?''s Black Friday sample, holding category and retailer fixed; a retailer or marketplace dataset with deal badges and price histories would be stronger. A difference in favour of genuine lows would count against it.'
+  status: Testing
+  confidence: Low
+  lanes:
+  - Practitioner craft
+  - Meta-platform consumer voice
+  last_hunted: null
+  hunt_count: 0
+  hunts: []
+  evidence_for: []
+  evidence_against: []
+  related_claim: null
+  related_questions: []
+  created: '2026-11-28'
+  agent: meta
+  history:
+  - date: '2026-11-28'
+    old_status: null
+    new_status: Testing
+    reason: 'Filed from Meta AI''s 2026-11-27 Hypothesis proposal (states a test); 18 of 20 Testing slots in use after filing. The Which? figures it cites (756 products, 22% at their lowest) could not be confirmed by Claude today.'
+    source: null
 - hypothesis_id: post-festival-roas-cut-loses-money
   hypothesis: 'After a festival sale, lowering an ad campaign''s ROAS target buys extra sales below break-even, because the retargeting pool is already exhausted.'
   predicts: In the week after a festival peak, campaigns whose ROAS target is lowered raise spend but deliver ROI below the brand's break-even, more than comparable campaigns whose target is unchanged.

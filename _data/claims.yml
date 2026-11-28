@@ -4,7 +4,7 @@
 # Agents propose verdicts; a status_history entry is confirmed only when Utpal confirms it (confirmed_by: utpal). Never delete a claim or a history entry.
 # Seeded 2026-11-17 by Claude from Muse's Spec D; seeds 5 and 6 of the spec were replaced because no evidence for or against them exists in the repo yet (they remain questions: personalization-pledges-2026, fare-breakdown-trust-2026).
 - claim_id: ai-attribution-changes-fairness-judgement
-  claim: A dynamic price attributed to an AI is judged differently, on fairness and intent, from the same price attributed to a person.
+  claim: A dynamic price attributed to an AI will be judged differently, on fairness and intent, from the same price attributed to a person.
   status: Open
   confidence: Medium
   confidence_note: Both studies in the repo find a difference, in opposite directions (AI fairer vs AI more manipulative); two studies of one kind are not enough for Supported under the verdict rules, and no field case tests it yet.
@@ -13,7 +13,7 @@
   - motive-attribution
   - left-digit
   created: '2026-11-17'
-  last_updated: '2026-11-24'
+  last_updated: '2026-11-28'
   evidence_for:
   - kind: evidence
     ref: ai-vs-human-price-setter-fairness
@@ -48,6 +48,13 @@
     source: https://utpaldholakia.github.io/pricing-briefings/briefings/2026-11-17-claude/
     proposed_by: claude
     confirmed_by: null
+  - date: '2026-11-28'
+    old_status: Open
+    new_status: Open
+    reason: "Wording changed by Utpal (decisions issue #5, 2026-11-27): 'is judged' became 'will be judged'. Verdict unchanged."
+    source: https://github.com/UtpalDholakia/pricing-briefings/issues/5
+    proposed_by: utpal
+    confirmed_by: utpal
   agent: claude
 - claim_id: sellers-reverse-under-public-backlash
   claim: Sellers reverse a price rise at least partly when the backlash is public, attributable and covered beyond the seller's own channels.
@@ -112,7 +119,7 @@
     reason: Most resolved cases reversed, but two widely covered cases held, and the tracker cannot yet separate public from private backlash.
     source: https://utpaldholakia.github.io/pricing-briefings/trackers/#backlash
     proposed_by: claude
-    confirmed_by: null
+    confirmed_by: utpal
   agent: claude
 - claim_id: cost-naming-reduces-backlash
   claim: Naming a specific cost in a price-rise explanation reduces backlash compared with an unspecified or market-based explanation.
@@ -178,7 +185,7 @@
     reason: 'Proposed after the 2026-11-18 backfill and Claude''s sweep: vignette and lab studies find cost justifications raise fairness, while the one field test found cost justifications did not cut attrition, and attribution studies show a named cost helps only when it is outside the seller''s control (Vaidyanathan & Aggarwal 2003) and cost cues help only modestly (Bolton, Warlop & Alba 2003).'
     source: null
     proposed_by: claude
-    confirmed_by: null
+    confirmed_by: utpal
   agent: claude
 - claim_id: credits-obscure-true-price
   claim: When a vendor prices in credits rather than currency, buyers underestimate what they pay, because the vendor sets the exchange rate.
@@ -257,7 +264,7 @@
     reason: 'Proposed after the 2026-11-18 backfill and Claude''s sweep: lab and incentivised studies show intermediate currencies shift willingness to pay and choice (incl. Hsee et al. 2003), but with rates disclosed one study found no effect and field cases suggest buyers notice credit changes.'
     source: null
     proposed_by: claude
-    confirmed_by: null
+    confirmed_by: utpal
   agent: claude
 - claim_id: small-surcharge-partitioning-helps
   claim: Showing a surcharge separately from the base price raises purchase intention only while the surcharge is small relative to the base price.
@@ -328,7 +335,7 @@
     reason: 'Proposal withdrawn after ChatGPT audit of 3456647 (2026-11-18): the pointers mix three different tests (itemised vs all-in at the same total; early vs late disclosure; an unexpected charge vs none). Only the first tests the claim directly, and the one direct test supports it.'
     source: null
     proposed_by: claude
-    confirmed_by: null
+    confirmed_by: utpal
   agent: claude
 - claim_id: divisible-multipacks-sell-better
   claim: Multipack prices that divide easily (4 for $16) are chosen more often than equivalent prices that are hard to divide (4 for $15.30).
@@ -1747,7 +1754,7 @@
   - unit-price-processing
   test: Already tested in scanner data; a field test with the change made salient would bound it.
   created: '2026-11-18'
-  last_updated: '2026-11-18'
+  last_updated: '2026-11-28'
   evidence_for:
   - kind: evidence
     ref: janssen-kasinger-shrinkflation-demand-2026
@@ -1767,6 +1774,9 @@
   - kind: evidence
     ref: snir-levy-shrinking-goods-2011
     note: 'Context: model and data on why firms shrink; working paper.'
+  - kind: tracker
+    ref: ct-unit-pricing-2027
+    note: 'Context: Connecticut''s unit-pricing rule (from Jan 1, 2027) is built on the premise that shoppers miss size cuts; once in force, it is a chance to test whether the size-vs-price gap narrows when unit prices are consistent and prominent.'
   evidence_against: []
   related_questions: []
   related_dives: []

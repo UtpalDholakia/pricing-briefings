@@ -1,5 +1,24 @@
 # Tracker: laws. Pricing laws and rules by jurisdiction.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: ct-unit-pricing-2027
+  mechanism_codes: [unit-price-processing, quantity-insensitivity]
+  jurisdiction: Connecticut
+  topic: Unit pricing (shrinkflation)
+  approach: 'Mandatory, consistent unit-price labels: one unit of measure across similar products (dry bulk and aerosols per pound; most liquids per pint, quart or gallon, not litres), shown boldly in contrasting colours at least half the size of the selling price'
+  scope: Brick-and-mortar and online food retailers
+  carve_outs: Small, family-run stores
+  status: Enacted
+  status_note: 'Department of Consumer Protection regulation, drafted with the Attorney General''s office and approved by the legislature''s regulations review committee (reported late November 2026). It replaces Attorney General Tong''s 2025 bill requiring notice of package downsizing, which stalled after food-industry opposition. It requires no downsizing notice'
+  effective: '2027-01-01'
+  enforcement: Department of Consumer Protection
+  source: https://www.einpresswire.com/article/958772862/attorney-general-tong-and-dcp-commissioner-cafferelli-praise-passage-of-updated-regulations-to-combat-shrinkflation-by-equipping-consumers-with
+  related_source: https://wisevoter.com/world/us/ct/2026/11/27/connecticut-unit-price-labeling-shrinkflation
+  updated: '2026-11-28'
+  agent: claude
+  digest: '2026-11-28'
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Regulation text not read; terms from the AG/DCP release as reproduced by EIN Presswire and from Wisevoter, ByteWire and CT Insider coverage. Approval date and penalty regime not confirmed.'
+  last_checked: '2026-11-28'
+  follow_up_date: '2027-01-15'
 - case_id: au-supermarket-excessive-pricing-2026
   mechanism_codes: [dual-entitlement, motive-attribution]
   jurisdiction: Australia

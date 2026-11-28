@@ -20,24 +20,24 @@
   note: 'Contested fits the rule: direct rollbacks for (Uniqlo, ChatGPT Pro allowance) and widely covered holds against (Starlink, Sony, Netflix 2011). Keep Low confidence until the backlash tracker codes coverage for every case.'
   date: '2026-11-27'
   agent: claude
-  decided: null
-  decision: null
+  decided: '2026-11-28'
+  decision: "Confirm"
 - kind: claim
   ref: cost-naming-reduces-backlash
   recommendation: Confirm
   note: 'Contested fits the rule: lab and vignette studies for, one field experiment (Damavandi) and two attribution studies against. The boundary (cost outside the seller''s control) is a good candidate for a split claim later.'
   date: '2026-11-27'
   agent: claude
-  decided: null
-  decision: null
+  decided: '2026-11-28'
+  decision: "Confirm"
 - kind: claim
   ref: credits-obscure-true-price
   recommendation: Change
   note: 'Keep Open, not Contested. Under the pointer-role rule only direct tests count, and no study yet measures whether credit buyers misjudge their bills; the pointers for are boundary or context, and the only one against is a disclosed-rate null with N=21. State the lean (for) in confidence_note.'
   date: '2026-11-27'
   agent: claude
-  decided: null
-  decision: null
+  decided: '2026-11-28'
+  decision: "Confirm (kept Contested, against the recommendation to change it to Open)"
 - kind: claim
   ref: surcharges-persist-after-cost-falls
   recommendation: Confirm
@@ -52,8 +52,8 @@
   note: 'Withdrawal back to Open after ChatGPT''s audit: the pointers mix three different tests. Confirming only records the withdrawal.'
   date: '2026-11-27'
   agent: claude
-  decided: null
-  decision: null
+  decided: '2026-11-28'
+  decision: "Confirm"
 - kind: claim
   ref: most-black-friday-deals-not-discounts
   recommendation: Confirm
@@ -76,8 +76,8 @@
   note: 'Open seed. Confirming an Open verdict only accepts the claim''s wording; it asserts nothing.'
   date: '2026-11-27'
   agent: claude
-  decided: null
-  decision: null
+  decided: '2026-11-28'
+  decision: "Change: replace 'is' with 'will be' in the claim"
 - kind: claim
   ref: list-price-overstates-net-price
   recommendation: Confirm

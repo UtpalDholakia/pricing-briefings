@@ -304,8 +304,8 @@
   source: https://www.fool.com/earnings/call-transcripts/2026/10/29/chipotle-cmg-q3-2026-earnings-call-transcript/
   digest: '2026-10-29'
   magnitude_note: ~2% for 2026
-  last_checked: '2026-11-15'
-  follow_up_date: '2026-11-28'
+  last_checked: '2026-11-28'
+  follow_up_date: '2026-12-28'
 - case_id: burry-substack-2026
   date: '2026-10-29'
   firm: Michael Burry (Substack)
@@ -320,8 +320,8 @@
   source: https://stocktwits.com/news-articles/markets/equity/michael-burry-cancels-substack-price-hike-plan-pushback-denies-money-grab/cZUdA8eRByd
   digest: '2026-10-29'
   magnitude_note: $49 to $69
-  last_checked: '2026-11-15'
-  follow_up_date: '2026-11-28'
+  last_checked: '2026-11-28'
+  follow_up_date: null
 - case_id: nestle-minis-germany-2026
   date: '2026-10-29'
   firm: Nestlé (Germany)
@@ -335,8 +335,8 @@
   magnitude_pct: null
   source: https://www.t-online.de/leben/aktuelles/id_101468062/mogelpackung-des-monats-nestle-versteckt-preiserhoehung-hinter-design.html
   digest: '2026-10-29'
-  last_checked: '2026-11-15'
-  follow_up_date: '2026-11-28'
+  last_checked: '2026-11-28'
+  follow_up_date: '2026-12-28'
 - case_id: chatgpt-pro-allowance-2026
   date: '2026-10-27'
   firm: OpenAI (ChatGPT Pro)

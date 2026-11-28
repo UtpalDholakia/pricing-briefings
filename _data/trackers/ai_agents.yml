@@ -1,5 +1,47 @@
 # Tracker: ai_agents. AI shopping agents and pricing agents: research, firm policy, surveys, opinion.
 # Newest first. Field rules and allowed values: AGENTS.md section 6.
+- case_id: ai-pricing-tools-black-friday-2026
+  mechanism_codes: [reference-price, transaction-utility, algorithm-attribution]
+  date: '2026-11-23'
+  kind: Firm policy
+  title: AI pricing vendors say their tools are talking brands into shallower Black Friday discounts
+  who: Kapnova, First Insight and three other AI pricing vendors (Reuters interviews); brands including Gap and Under Armour named as users
+  finding: 'Reuters interviewed five vendors of AI pricing tools. Kapnova CEO James Sun said its tools advised an unnamed billion-dollar beauty brand to cut a planned Black Friday skincare discount from 40% to 30%; the vendors said the tools often conclude discounts can be reduced without hurting demand. Reuters says the scale of the price effect is unknown, though limited data suggest more targeted discounts. More than a dozen brands did not respond. Separately, Centric Market Intelligence (via LSEG Lipper Alpha, c. Nov 24) reports average Black Friday-week discounts down to 15% from 18% (department stores) and 23% from 31% (specialty retail), with luxury discount penetration flat at 29%'
+  source: https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/11/23/ai-tools-help-brands-curb-black-friday-deals-from-clothes-to-skincare/
+  related_source: https://lipperalpha.refinitiv.com/2026/11/black-friday-wary-consumers-strategic-promotions/
+  digest: '2026-11-28'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Reuters story read via syndicated copies (BNN Bloomberg, The Star, Globe and Mail); the 40%-to-30% example is a vendor claim about an unnamed client, not sales data. Centric figures read from search text of the Lipper Alpha summary and TalkMarkets; a 2025 Lipper Alpha piece put last year''s specialty average at 24%, not 31%, so the year-on-year comparison is uncertain.'
+  last_checked: '2026-11-28'
+  follow_up_date: '2026-12-28'
+- case_id: arslan-persistent-partners-2026
+  mechanism_codes: [algorithm-attribution]
+  date: '2026-09-28'
+  kind: Agent research
+  title: Pricing agents that keep the same rival learn higher prices, even when they cannot see or punish that rival
+  who: Paul-Peter Arslan, Yubin Kim and Xiao Xiao (arXiv 2609.35402, preprint under review)
+  finding: 'Pre-registered randomised experiment on Bertrand duopoly pricing with tabular Q-learning agents, randomising partner persistence, rival-price visibility and messaging. In all twenty paired runs, one permanent partner produced higher prices than rotating among about three; the effect persisted with the rival''s price hidden and no message channel, so it is not only learned retaliation. Untrained LLM extensions (Qwen2.5 7B/14B) showed the effect only in some prompt settings; two other model families showed none. The three-partner comparison is described as exploratory'
+  source: https://arxiv.org/abs/2609.35402
+  related_source: null
+  digest: '2026-11-28'
+  agent: claude
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Abstract and secondary summaries only (ScholarBro, ReputAgent); full paper not read. Unreviewed preprint; simulated agents, not consumers.'
+  last_checked: '2026-11-28'
+  follow_up_date: null
+- case_id: salesforce-cyber-week-ai-2026
+  mechanism_codes: [algorithm-attribution]
+  date: '2026-11-19'
+  kind: Survey
+  title: Salesforce forecasts that AI and agents will influence a fifth of Cyber Week online sales
+  who: Salesforce (Cyber Week 2026 forecast)
+  finding: 'Forecast for Nov 24-30, 2026: a record $357 billion in global online sales, $75.8 billion (21%) influenced by AI and agents, up from $67 billion in 2025 (actual); AI-driven traffic to retailer sites up 104% year on year; shoppers who engage a brand''s shopper agent spend 8% more per order. Salesforce''s 2025 forecast had been $73 billion against a $67 billion outcome'
+  source: https://www.salesforce.com/news/stories/cyber-week-ai-sales-2026/
+  related_source: https://agilebrandguide.com/salesforce-data-record-cyber-week-expected-to-deliver-75-8b-in-ai-driven-sales/
+  digest: '2026-11-27'
+  agent: meta
+  verification_note: 'Direct page fetches were blocked in this run (session network); read from search-indexed text of the cited pages. Headline forecast figures confirmed in search text of Salesforce''s page and Agile Brand Guide. The survey shares in Meta AI''s suggestion (31% tried a personal agent, 8% had one buy, 73% won''t give card details) were not found and are not recorded. "Influenced" is Salesforce''s own definition; vendor forecast.'
+  last_checked: '2026-11-28'
+  follow_up_date: '2026-12-10'
 - case_id: visa-holiday-ai-trust-2026
   mechanism_codes: [algorithm-attribution, pain-of-paying]
   date: '2026-11'
