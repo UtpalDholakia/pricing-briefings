@@ -1,4 +1,34 @@
 # One row per comparison. Keep null results and identify the outcome actually measured.
+- id: "tasse-amazon-ca-price-windows-2026"
+  date: "2026-11"
+  mechanism: "A buying window changes the historical comparison."
+  mechanism_codes: [reference-price]
+  comparison: "Black Friday versus other eleven-day windows."
+  design: "Observational historical audit."
+  setting: "Amazon.ca, 2020–2025; 3,847 products, 10,521 product-years."
+  outcome: "Frequency of prices among the cheapest quarter of days; ties adjusted."
+  result_kind: "Descriptive"
+  result: "41% versus 31%."
+  boundary: "Popular products; no demand test. Missing coupons possible. Not a sample of advertised deals."
+  source: "https://gabrieltasse.com/en/resources/black-friday-best-time-to-buy"
+  verification_note: "Read public methods; not reproduced. Sampling summary says 20 per category, technical note up to 100."
+  digest: "2026-11-28"
+  agent: "chatgpt"
+- id: "drechsler-natter-price-history-charts-2011"
+  date: "2011-05-01"
+  mechanism: "Historical trends can alter expected future prices."
+  mechanism_codes: [reference-price]
+  comparison: "Different price-history chart characteristics; full comparator details unread."
+  design: "Research article; abstract and appendix only."
+  setting: "Online comparison-shopping tasks involving notebooks."
+  outcome: "Price expectations and purchase-timing decisions, not verified sales."
+  result_kind: "Context-dependent"
+  result: "Authors report responses to trend, variance, range and visualization. No quantitative effect filed."
+  boundary: "Samples, assignment and uncertainty unread; no retail-sales inference."
+  source: "https://doi.org/10.1016/j.intmar.2011.02.001"
+  verification_note: "Read publisher abstract, metadata and appendix; full methods restricted."
+  digest: "2026-11-28"
+  agent: "chatgpt"
 - id: li-warren-tip-amounts-2026
   date: '2026'
   case_id: li-warren-tip-amounts-2026
